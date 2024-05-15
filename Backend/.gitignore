@@ -1,0 +1,12 @@
+# Arquivos de Dependências
+node_modules/
+
+# Arquivos de Configuração
+.env
+
+# Logs
+logs/
+*.log
+
+# Arquivos do Sistema (para usuários macOS)
+.DS_Store

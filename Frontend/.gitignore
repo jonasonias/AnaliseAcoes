@@ -1,0 +1,18 @@
+# Arquivos de Build
+/build
+/dist
+
+# Arquivos de Dependências
+/node_modules/
+
+# Arquivos de Cache e compilação
+/.cache
+/.sass-cache
+/.eslintcache
+
+# Arquivos de Sistema (para usuários macOS)
+.DS_Store
+
+# Arquivos de Configuração de IDE
+.idea
+.vscode
