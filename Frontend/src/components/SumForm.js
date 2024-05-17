@@ -9,7 +9,7 @@ const SumForm = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        const response = await fetch('http://localhost:3000/soma', {
+        const response = await fetch('http://localhost:3001/soma', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

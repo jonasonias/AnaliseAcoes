@@ -1,6 +1,9 @@
 const express = require('express');
+const cors = require('cors');
 
 const app = express();
+
+app.use(cors()); // Permite todas as origens
 
 app.use(express.json());
 
@@ -35,7 +38,7 @@ app.post('/soma', (req, res) => {
 });
 
 // Iniciar o servidor
-const PORT = process.env.PORT || 3000; // Porta padrão 3000
+const PORT = process.env.PORT || 3001; // Porta padrão 3000
 app.listen(PORT, () => {
     console.log(`Servidor Express rodando na porta ${PORT}`);
 });
