@@ -9,7 +9,7 @@ const SumForm = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        const response = await fetch('http://localhost:3001/soma', {
+        const response = await fetch('http://backend-dev2.sa-east-1.elasticbeanstalk.com/soma', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
