@@ -7,6 +7,3 @@ node_modules/
 # Logs
 logs/
 *.log
-
-# Arquivos do Sistema (para usuários macOS)
-.DS_Store

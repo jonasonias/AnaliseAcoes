@@ -10,9 +10,6 @@
 /.sass-cache
 /.eslintcache
 
-# Arquivos de Sistema (para usuários macOS)
-.DS_Store
-
 # Arquivos de Configuração de IDE
 .idea
 .vscode
