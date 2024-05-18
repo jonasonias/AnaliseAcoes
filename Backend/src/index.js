@@ -3,14 +3,7 @@ const cors = require('cors');
 
 const app = express();
 
-const allowedOrigins = ['https://main.d1cp8k4m9e7a1u.amplifyapp.com']; // Substitua pelo domínio do Amplify
-
-const corsOptions = {
-    origin: allowedOrigins,
-    optionsSuccessStatus: 200
-  };
-  
-app.use(cors(corsOptions));
+app.use(cors()); // Permite todas as origens
 
 app.use(express.json());
 
