@@ -1,0 +1,32 @@
+.navbar {
+    background-color: #333; /* Plano de fundo da navbar */
+    padding: 10px 20px; /* Espaçamento interno */
+    border-radius: 5px;
+  }
+  
+  .navbar-list {
+    list-style-type: none; /* Remove os marcadores das listas */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Exibe os itens horizontalmente */
+    justify-content: center; /* Centraliza os itens na navbar */
+  }
+  
+  .navbar-item {
+    margin: 0 2px; /* Espaçamento entre os itens */
+  }
+  
+  .navbar-link {
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px; /* Padding padrão */
+    border-radius: 8px; /* Borda arredondada padrão */
+    font-family: 'Roboto', sans-serif; /* Altere 'Roboto' para a fonte desejada */
+    font-size: 16px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .navbar-link:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Esbranquiçado ao redor do texto */
+    color: white; /* A cor do texto permanece branca */
+  }

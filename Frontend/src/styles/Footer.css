@@ -1,0 +1,25 @@
+/* Footer.css */
+
+.footer {
+    background-color: #333; /* Cor de fundo da navbar */
+    color: white;
+    padding: 8px;
+    text-align: center;
+    position: fixed; /* Fixar o footer na parte inferior */
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    width: 98%;
+    border-radius: 4px;
+    font-family: 'Roboto', sans-serif; /* Usar a mesma fonte da navbar */
+    font-size: 13px;
+  }
+
+  .footer a {
+    color: white; /* ou qualquer outra cor desejada */
+    
+  }
+
+  .footer a:hover {
+    color: rgb(155, 153, 153); /* A cor do texto permanece branca */ 
+  }
