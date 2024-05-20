@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "private": true,
-  
+  "homepage": "http://jonasonias.github.io/stocksSiteAWS",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
