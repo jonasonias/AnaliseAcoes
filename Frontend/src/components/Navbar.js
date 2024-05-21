@@ -7,9 +7,11 @@ const Navbar = () => {
     <nav className="navbar">
       <ul className="navbar-list">
         <li className="navbar-item">
-          <Link to="/" className="navbar-link">Home</Link>
+          <Link to="/" className="nav-icon">
+            <i className="fas fa-home"></i>
+          </Link>
         </li>
-        <li className="navbar-item">
+        <li className="navbar-item"> 
           <Link to="/about" className="navbar-link">About</Link>
         </li>
         <li className="navbar-item">
