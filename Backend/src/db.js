@@ -1,15 +1,18 @@
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb+srv://jonasonias:918069@cluster0.7plyyiv.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0', {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-});
+// Função para conectar a um banco de dados específico
+function connectToDatabase(dbName) {
+    const mongoUri = `mongodb+srv://jonasonias:918069@cluster0.7plyyiv.mongodb.net/${dbName}?retryWrites=true&w=majority&appName=Cluster0`;
 
-const db = mongoose.connection;
+    mongoose.connect(mongoUri, {
+        useNewUrlParser: true,
+        useUnifiedTopology: true
+    }).then(() => {
+        console.log(`Conectado ao MongoDB: ${dbName}`);
+    }).catch(err => {
+        console.error(`Erro ao conectar ao MongoDB: ${dbName}`, err);
+    });
+}
 
-db.on('error', console.error.bind(console, 'Erro de conexão com o MongoDB:'));
-db.once('open', () => {
-    console.log('Conectado ao MongoDB');
-});
+module.exports = { connectToDatabase };
 
-module.exports = db;

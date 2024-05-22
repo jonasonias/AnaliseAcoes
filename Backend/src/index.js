@@ -3,14 +3,15 @@ const cors = require('cors');
 const bcrypt = require('bcryptjs');
 const mongoose = require('mongoose');
 const User = require('./models/User'); // Importar modelo de usuário
+const { connectToDatabase } = require('./db'); // Importar função de conexão
 
 const app = express();
 
 app.use(cors()); // Permite todas as origens
 app.use(express.json());
 
-// Conectando ao MongoDB
-require('./db');
+// Conectando ao banco de dados
+connectToDatabase('Users');
 
 // Rota inicial
 app.get('/', (req, res) => {
