@@ -93,6 +93,16 @@ app.post('/login', async (req, res) => {
     }
 });
 
+// Rota de logout
+app.post('/logout', (req, res) => {
+    req.session.destroy((err) => {
+        if (err) {
+            return res.status(500).send('Erro ao fazer logout');
+        }
+        res.send('Logout bem-sucedido');
+    });
+});
+
 // Middleware de autenticação
 function verificarSessao(req, res, next) {
     if (!req.session.user) {
