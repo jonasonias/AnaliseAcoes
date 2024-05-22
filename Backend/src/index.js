@@ -1,7 +1,6 @@
 const express = require('express');
 const cors = require('cors');
 const bcrypt = require('bcryptjs');
-const jwt = require('jsonwebtoken');
 const mongoose = require('mongoose');
 const User = require('./models/User'); // Importar modelo de usuário
 
@@ -70,7 +69,8 @@ app.post('/login', async (req, res) => {
             return res.status(400).send('Credenciais inválidas');
         }
 
-        const token = jwt.sign({ id: user._id, name: user.name }, 'chave-secreta', { expiresIn: '1h' });
+        // Simulação de geração de token
+        const token = generateToken(user);
 
         res.json({ token });
     } catch (err) {
@@ -78,25 +78,30 @@ app.post('/login', async (req, res) => {
     }
 });
 
+// Simulação de geração de token
+function generateToken(user) {
+    // Gera um token de sessão com base no ID do usuário
+    return user._id.toString();
+}
+
 // Middleware de autenticação
 function verificarToken(req, res, next) {
     const token = req.headers['authorization'];
     if (!token) {
+        console.log('Token de autenticação não fornecido');
         return res.status(401).send('Token de autenticação não fornecido');
     }
 
-    jwt.verify(token, 'chave-secreta', (err, decoded) => {
-        if (err) {
-            return res.status(401).send('Token de autenticação inválido');
-        }
-        req.usuario = decoded;
-        next();
-    });
+    // Simulação de verificação do token
+    const userId = token; // Considera-se que o token é o ID do usuário
+    req.usuario = { _id: userId };
+    next();
 }
 
 // Rota protegida
 app.get('/rota-protegida', verificarToken, (req, res) => {
-    res.send(`Rota protegida acessada com sucesso por ${req.usuario.name}`);
+    // Simulação de acesso à rota protegida
+    res.send(`Rota protegida acessada com sucesso pelo usuário com ID: ${req.usuario._id}`);
 });
 
 // Iniciar o servidor
