@@ -116,6 +116,22 @@ app.get('/rota-protegida', verificarSessao, (req, res) => {
     res.send(`Rota protegida acessada com sucesso por ${req.session.user.name}`);
 });
 
+// Rota de exclusão de usuário
+app.delete('/delete-user', verificarSessao, async (req, res) => {
+    const userId = req.session.user.id;
+    try {
+        await User.findByIdAndDelete(userId);
+        req.session.destroy((err) => {
+            if (err) {
+                return res.status(500).send('Erro ao excluir usuário e fazer logout');
+            }
+            res.send('Usuário excluído e logout bem-sucedido');
+        });
+    } catch (err) {
+        res.status(500).send('Erro ao excluir usuário');
+    }
+});
+
 // Iniciar o servidor
 const PORT = process.env.PORT || 3001; // Porta padrão 3000
 app.listen(PORT, () => {
