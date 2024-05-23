@@ -9,18 +9,44 @@ const { connectToDatabase } = require('./db'); // Importar função de conexão
 
 const app = express();
 
-app.use(cors()); // Permite todas as origens
+// Lista de origens permitidas
+const allowedOrigins = [
+    'http://localhost:3000',
+    'https://main.d1cp8k4m9e7a1u.amplifyapp.com',
+    'https://jonasonias.github.io/stocksSiteAWS/'
+];
+
+const corsOptions = {
+    origin: function (origin, callback) {
+        // Permite a solicitação sem origem (como de Postman ou CURL)
+        if (!origin) return callback(null, true);
+        if (allowedOrigins.indexOf(origin) !== -1) {
+            callback(null, true);
+        } else {
+            callback(new Error('Not allowed by CORS'));
+        }
+    },
+    credentials: true // Permitir cookies e credenciais
+};
+
+app.use(cors(corsOptions)); // Configurar CORS
 app.use(express.json());
 
 // Gerar uma chave secreta segura
 const secret = crypto.randomBytes(64).toString('hex');
 
 // Configurar sessão
+// Configurar sessão
 app.use(session({
     secret: secret, // Usar a chave secreta segura gerada
     resave: false,
     saveUninitialized: false,
-    cookie: { maxAge: 60 * 60 * 1000 } // 1 hora
+    cookie: {
+        maxAge: 60 * 60 * 1000, // 1 hora
+        secure: process.env.NODE_ENV === 'production', // Definir secure como true em produção
+        httpOnly: true,
+        sameSite: 'lax' // Proteção CSRF
+    }
 }));
 
 // Conectando ao banco de dados
@@ -90,6 +116,27 @@ app.post('/login', async (req, res) => {
         res.json({ message: 'Login bem-sucedido', sessionId: req.session.id });
     } catch (err) {
         res.status(500).send('Erro ao fazer login');
+    }
+});
+
+// Rota para obter informações do usuário logado
+app.get('/user-info', async (req, res) => {
+    if (!req.session.user) {
+        return res.status(401).send('Não autorizado');
+    }
+
+    try {
+        const user = await User.findById(req.session.user.id).exec();
+        if (!user) {
+            return res.status(404).send('Usuário não encontrado');
+        }
+        res.json({
+            id: user._id,
+            name: user.name,
+            email: user.email
+        });
+    } catch (err) {
+        res.status(500).send('Erro ao recuperar informações do usuário');
     }
 });
 
