@@ -4,7 +4,7 @@ const bcrypt = require('bcryptjs');
 const mongoose = require('mongoose');
 const User = require('./models/User'); // Importar modelo de usuário
 const session = require('express-session');
-const crypto = require('crypto');
+const { v4: uuidv4 } = require('uuid');
 const { connectToDatabase } = require('./db'); // Importar função de conexão
 
 const app = express();
@@ -18,7 +18,6 @@ const allowedOrigins = [
 
 const corsOptions = {
     origin: function (origin, callback) {
-        // Permite a solicitação sem origem (como de Postman ou CURL)
         if (!origin) return callback(null, true);
         if (allowedOrigins.indexOf(origin) !== -1) {
             callback(null, true);
@@ -26,28 +25,31 @@ const corsOptions = {
             callback(new Error('Not allowed by CORS'));
         }
     },
-    credentials: true // Permitir cookies e credenciais
+    credentials: true
 };
 
-app.use(cors(corsOptions)); // Configurar CORS
+app.use(cors(corsOptions));
 app.use(express.json());
 
-// Gerar uma chave secreta segura
-const secret = crypto.randomBytes(64).toString('hex');
+// Sessão baseada em memória (substitua por uma solução persistente em produção)
+const sessions = {};
 
-// Configurar sessão
-// Configurar sessão
-app.use(session({
-    secret: secret, // Usar a chave secreta segura gerada
-    resave: false,
-    saveUninitialized: false,
-    cookie: {
-        maxAge: 60 * 60 * 1000, // 1 hora
-        secure: process.env.NODE_ENV === 'production', // Definir secure como true em produção
-        httpOnly: true,
-        sameSite: 'lax' // Proteção CSRF
+app.use((req, res, next) => {
+    const sessionId = req.header('X-Session-Id');
+    if (sessionId && sessions[sessionId]) {
+        req.session = sessions[sessionId];
+    } else {
+        req.session = null;
     }
-}));
+    next();
+});
+
+app.use((req, res, next) => {
+    if (req.session) {
+        req.session.touch();
+    }
+    next();
+});
 
 // Conectando ao banco de dados
 connectToDatabase('Users');
@@ -109,24 +111,31 @@ app.post('/login', async (req, res) => {
             return res.status(400).send('Credenciais inválidas');
         }
 
-        // Armazenar informações do usuário na sessão
-        req.session.user = { id: user._id, name: user.name };
+        // Criar nova sessão
+        const sessionId = uuidv4();
+        sessions[sessionId] = { userId: user._id, createdAt: new Date(), touch() {
+            this.createdAt = new Date();
+        } };
 
         // Retornar uma mensagem de sucesso e a sessão ID
-        res.json({ message: 'Login bem-sucedido', sessionId: req.session.id });
+        res.json({ message: 'Login bem-sucedido', sessionId });
     } catch (err) {
         res.status(500).send('Erro ao fazer login');
     }
 });
 
-// Rota para obter informações do usuário logado
-app.get('/user-info', async (req, res) => {
-    if (!req.session.user) {
-        return res.status(401).send('Não autorizado');
+// Middleware de autenticação
+async function verificarSessao(req, res, next) {
+    if (!req.session) {
+        return res.status(401).send('Não autenticado');
     }
+    next();
+}
 
+// Rota para obter informações do usuário logado
+app.get('/user-info', verificarSessao, async (req, res) => {
     try {
-        const user = await User.findById(req.session.user.id).exec();
+        const user = await User.findById(req.session.userId).exec();
         if (!user) {
             return res.status(404).send('Usuário não encontrado');
         }
@@ -141,46 +150,26 @@ app.get('/user-info', async (req, res) => {
 });
 
 // Rota de logout
-app.post('/logout', (req, res) => {
-    req.session.destroy((err) => {
-        if (err) {
-            return res.status(500).send('Erro ao fazer logout');
-        }
-        res.send('Logout bem-sucedido');
-    });
-});
-
-// Middleware de autenticação
-function verificarSessao(req, res, next) {
-    if (!req.session.user) {
-        return res.status(401).send('Não autenticado');
-    }
-    next();
-}
-
-// Rota protegida
-app.get('/rota-protegida', verificarSessao, (req, res) => {
-    res.send(`Rota protegida acessada com sucesso por ${req.session.user.name}`);
+app.post('/logout', verificarSessao, (req, res) => {
+    const sessionId = req.header('X-Session-Id');
+    delete sessions[sessionId];
+    res.send('Logout bem-sucedido');
 });
 
 // Rota de exclusão de usuário
 app.delete('/delete-user', verificarSessao, async (req, res) => {
-    const userId = req.session.user.id;
+    const userId = req.session.userId;
     try {
         await User.findByIdAndDelete(userId);
-        req.session.destroy((err) => {
-            if (err) {
-                return res.status(500).send('Erro ao excluir usuário e fazer logout');
-            }
-            res.send('Usuário excluído e logout bem-sucedido');
-        });
+        delete sessions[req.header('X-Session-Id')];
+        res.send('Usuário excluído com sucesso');
     } catch (err) {
         res.status(500).send('Erro ao excluir usuário');
     }
 });
 
 // Iniciar o servidor
-const PORT = process.env.PORT || 3001; // Porta padrão 3000
+const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
     console.log(`Servidor Express rodando na porta ${PORT}`);
 });

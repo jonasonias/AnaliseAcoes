@@ -17,8 +17,8 @@ const LoginForm = () => {
         email,
         password
       });
-      // Após o login bem-sucedido, defina o cookie de autenticação usando o contexto de autenticação
-      setAuthCookie(response.data.sessionId);
+      // Após o login bem-sucedido, defina o sessionId no LocalStorage
+      localStorage.setItem('sessionId', response.data.sessionId);
       setSuccessMessage(response.data.message);
       setEmail('');
       setPassword('');
