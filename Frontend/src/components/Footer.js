@@ -6,9 +6,9 @@ const Footer = () => {
   return (
     <footer className="footer">
       <p>
-        Link para site hospedado no AWS Amplify 
+        Link para site hospedado no GitHub Pages
         <span class="spacer"></span> 
-        <a href="https://main.d1cp8k4m9e7a1u.amplifyapp.com">Acesse Aqui</a>
+        <a href="https://jonasonias.github.io/stocksSiteAWS/">Acesse Aqui</a>
       </p>
       <p>
         Link para Localhost do Servidor 

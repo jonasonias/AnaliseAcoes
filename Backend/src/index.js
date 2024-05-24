@@ -12,8 +12,8 @@ const app = express();
 // Lista de origens permitidas
 const allowedOrigins = [
     'http://localhost:3000',
-    'https://main.d1cp8k4m9e7a1u.amplifyapp.com',
-    'https://jonasonias.github.io/stocksSiteAWS/'
+    'http://localhost:3001',
+    'https://jonasonias.github.io' // Removendo a parte da rota específica
 ];
 
 const corsOptions = {
