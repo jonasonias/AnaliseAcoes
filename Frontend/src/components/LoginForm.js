@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { useAuth } from '../contexts/AuthContext'; // Importe o hook useAuth
 
 const LoginForm = () => {
-  const { setAuthCookie } = useAuth(); // Use o hook useAuth para acessar a função setAuthCookie
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [errorMessage, setErrorMessage] = useState('');

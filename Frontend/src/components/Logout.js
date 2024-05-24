@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
 
 const Logout = () => {
+  const [errorMessage, setErrorMessage] = useState('');
+  const [successMessage, setSuccessMessage] = useState('');
+
   const handleLogout = async () => {
     const sessionId = localStorage.getItem('sessionId');
 
@@ -12,14 +15,19 @@ const Logout = () => {
         }
       });
       localStorage.removeItem('sessionId');
-      console.log('Logout bem-sucedido');
+      setSuccessMessage('Logout bem-sucedido');
+      setErrorMessage('');
     } catch (error) {
-      console.error('Erro ao fazer logout:', error.response ? error.response.data : error.message);
+      setErrorMessage(error.response ? error.response.data : 'Erro ao fazer logout');
+      setSuccessMessage('');
     }
   };
 
   return (
     <div>
+      <h2>Logout</h2>
+      {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
+      {successMessage && <p style={{ color: 'green' }}>{successMessage}</p>}
       <button onClick={handleLogout}>Logout</button>
     </div>
   );

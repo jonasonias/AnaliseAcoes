@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
 
 const DeleteAccount = () => {
+  const [errorMessage, setErrorMessage] = useState('');
+  const [successMessage, setSuccessMessage] = useState('');
+
   const handleDeleteAccount = async () => {
     const sessionId = localStorage.getItem('sessionId');
 
@@ -12,14 +15,19 @@ const DeleteAccount = () => {
         }
       });
       localStorage.removeItem('sessionId');
-      console.log('Conta excluída com sucesso');
+      setSuccessMessage('Conta excluída com sucesso');
+      setErrorMessage('');
     } catch (error) {
-      console.error('Erro ao excluir conta:', error.response ? error.response.data : error.message);
+      setErrorMessage(error.response ? error.response.data : 'Erro ao excluir conta');
+      setSuccessMessage('');
     }
   };
 
   return (
     <div>
+      <h2>Deletar Conta</h2>
+      {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
+      {successMessage && <p style={{ color: 'green' }}>{successMessage}</p>}
       <button onClick={handleDeleteAccount}>Deletar Conta</button>
     </div>
   );
