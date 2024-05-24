@@ -11,9 +11,9 @@ const Footer = () => {
         <a href="https://main.d1cp8k4m9e7a1u.amplifyapp.com">Acesse Aqui</a>
       </p>
       <p>
-        Link para site hospedado no AWS Elastic Beanstalk 
+        Link para Localhost do Servidor 
         <span class="spacer"></span> 
-        <a href="http://backend-dev2.sa-east-1.elasticbeanstalk.com">Acesse Aqui</a>
+        <a href="http://localhost:3001/">Acesse Aqui</a>
       </p>
     </footer>
   );

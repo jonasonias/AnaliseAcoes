@@ -12,7 +12,7 @@ const RegisterForm = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post('http://backend-dev2.sa-east-1.elasticbeanstalk.com/register', {
+      const response = await axios.post('http://localhost:3001/register', {
         name,
         email,
         password

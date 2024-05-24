@@ -9,7 +9,7 @@ const DeleteAccount = () => {
 
   const handleDeleteAccount = async () => {
     try {
-      await axios.delete('http://backend-dev2.sa-east-1.elasticbeanstalk.com/delete-user', {
+      await axios.delete('http://localhost:3001/delete-user', {
         headers: {
           'X-Session-Id': authCookie
         }

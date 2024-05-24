@@ -9,7 +9,7 @@ const UserInfo = () => {
 
   const fetchUserInfo = async () => {
     try {
-      const response = await axios.get('http://backend-dev2.sa-east-1.elasticbeanstalk.com/user-info', {
+      const response = await axios.get('http://localhost:3001/user-info', {
         headers: {
           'X-Session-Id': authCookie // Envie o cookie de autenticação no cabeçalho da requisição
         }

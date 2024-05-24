@@ -9,7 +9,7 @@ const Logout = () => {
 
   const handleLogout = async () => {
     try {
-      await axios.post('http://backend-dev2.sa-east-1.elasticbeanstalk.com/logout', {}, {
+      await axios.post('http://localhost:3001/logout', {}, {
         headers: {
           'X-Session-Id': authCookie
         }

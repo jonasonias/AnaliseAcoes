@@ -13,7 +13,7 @@ const LoginForm = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post('http://backend-dev2.sa-east-1.elasticbeanstalk.com/login', {
+      const response = await axios.post('http://localhost:3001/login', {
         email,
         password
       });
