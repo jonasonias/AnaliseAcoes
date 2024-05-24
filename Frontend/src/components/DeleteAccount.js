@@ -1,20 +1,21 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { useAuth } from '../contexts/AuthContext'; // Importe o hook useAuth
 
 const DeleteAccount = () => {
+  const { authCookie, setAuthCookie } = useAuth(); // Use o hook useAuth para acessar e definir o cookie de autenticação
   const [errorMessage, setErrorMessage] = useState('');
   const [successMessage, setSuccessMessage] = useState('');
 
   const handleDeleteAccount = async () => {
-    const sessionId = localStorage.getItem('sessionId');
-
     try {
       await axios.delete('http://backend-dev2.sa-east-1.elasticbeanstalk.com/delete-user', {
         headers: {
-          'X-Session-Id': sessionId
+          'X-Session-Id': authCookie
         }
       });
       localStorage.removeItem('sessionId');
+      setAuthCookie(null); // Limpar o cookie de autenticação no contexto
       setSuccessMessage('Conta excluída com sucesso');
       setErrorMessage('');
     } catch (error) {

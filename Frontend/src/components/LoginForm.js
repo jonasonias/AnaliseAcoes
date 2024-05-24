@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { useAuth } from '../contexts/AuthContext'; // Importe o hook useAuth
 
 const LoginForm = () => {
+  const { setAuthCookie } = useAuth(); // Use o hook useAuth para acessar a função setAuthCookie
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
@@ -15,8 +17,7 @@ const LoginForm = () => {
         email,
         password
       });
-      // Após o login bem-sucedido, defina o sessionId no LocalStorage
-      localStorage.setItem('sessionId', response.data.sessionId);
+      setAuthCookie(response.data.sessionId); // Usar setAuthCookie do contexto
       setSuccessMessage(response.data.message);
       setEmail('');
       setPassword('');
