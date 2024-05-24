@@ -8,7 +8,7 @@ const Footer = () => {
       <p>
         Link para site hospedado no GitHub Pages
         <span class="spacer"></span> 
-        <a href="https://jonasonias.github.io/stocksSiteAWS/">Acesse Aqui</a>
+        <a href="https://jonasonias.github.io/fundamentalistacoes/">Acesse Aqui</a>
       </p>
       <p>
         Link para Localhost do Servidor 
