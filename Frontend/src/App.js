@@ -16,9 +16,9 @@ const App = () => {
         <div>
           <Header />
           <Routes>
-            <Route exact path="/" element={<HomePage/>}/>
-            <Route path="/about" element={<AboutPage/>}/>
-            <Route path="/login" element={<LoginPage/>}/>
+            <Route exact path="stocksSiteAWS/" element={<HomePage/>}/>
+            <Route path="stocksSiteAWS/about" element={<AboutPage/>}/>
+            <Route path="stocksSiteAWS/login" element={<LoginPage/>}/>
           </Routes>
           <Footer />
         </div>
