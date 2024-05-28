@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useAuth } from '../contexts/AuthContext'; // Importe o hook useAuth
+import API_BASE_URL from '../apiConfig';
 
 const Logout = () => {
   const { authCookie, setAuthCookie } = useAuth(); // Use o hook useAuth para acessar e definir o cookie de autenticação
@@ -9,7 +10,7 @@ const Logout = () => {
 
   const handleLogout = async () => {
     try {
-      await axios.post('http://localhost:3001/logout', {}, {
+      await axios.post(`${API_BASE_URL}/logout`, {}, {
         headers: {
           'X-Session-Id': authCookie
         }

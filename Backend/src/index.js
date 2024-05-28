@@ -6,29 +6,11 @@ const User = require('./models/User'); // Importar modelo de usuário
 const session = require('express-session');
 const { v4: uuidv4 } = require('uuid');
 const { connectToDatabase } = require('./db'); // Importar função de conexão
+const serveFavicon = require('serve-favicon');
 
 const app = express();
 
-// Lista de origens permitidas
-const allowedOrigins = [
-    'http://localhost:3000',
-    'http://localhost:3001',
-    'https://jonasonias.github.io' // Removendo a parte da rota específica
-];
-
-const corsOptions = {
-    origin: function (origin, callback) {
-        if (!origin) return callback(null, true);
-        if (allowedOrigins.indexOf(origin) !== -1) {
-            callback(null, true);
-        } else {
-            callback(new Error('Not allowed by CORS'));
-        }
-    },
-    credentials: true
-};
-
-app.use(cors(corsOptions));
+app.use(cors({ origin: true, credentials: true }));
 app.use(express.json());
 
 // Sessão baseada em memória (substitua por uma solução persistente em produção)
@@ -53,6 +35,9 @@ app.use((req, res, next) => {
 
 // Conectando ao banco de dados
 connectToDatabase('Users');
+
+// Configurando o favicon
+app.use(serveFavicon('C:\\Users\\jonas\\Documents\\stocksSiteAWS\\Backend\\public\\favicon.ico'));
 
 // Rota inicial
 app.get('/', (req, res) => {

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useAuth } from '../contexts/AuthContext'; // Importe o hook useAuth
+import API_BASE_URL from '../apiConfig';
 
 const DeleteAccount = () => {
   const { authCookie, setAuthCookie } = useAuth(); // Use o hook useAuth para acessar e definir o cookie de autenticação
@@ -9,7 +10,7 @@ const DeleteAccount = () => {
 
   const handleDeleteAccount = async () => {
     try {
-      await axios.delete('http://localhost:3001/delete-user', {
+      await axios.delete(`${API_BASE_URL}/delete-user`, {
         headers: {
           'X-Session-Id': authCookie
         }

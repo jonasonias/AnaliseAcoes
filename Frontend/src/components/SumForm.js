@@ -1,5 +1,5 @@
-// frontend/src/components/SumForm.js
 import React, { useState } from 'react';
+import API_BASE_URL from '../apiConfig';
 
 const SumForm = () => {
     const [num1, setNum1] = useState('');
@@ -9,7 +9,7 @@ const SumForm = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        const response = await fetch('http://localhost:3001/soma', {
+        const response = await fetch(`${API_BASE_URL}/soma`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -26,22 +26,28 @@ const SumForm = () => {
             <h1>Somar Números</h1>
             <form onSubmit={handleSubmit}>
                 <div>
-                    <label>
+                    <label htmlFor="num1">
                         Número 1:
                         <input
                             type="number"
+                            id="num1"
+                            name="num1"
                             value={num1}
                             onChange={(e) => setNum1(e.target.value)}
+                            autoComplete="off"
                         />
                     </label>
                 </div>
                 <div>
-                    <label>
+                    <label htmlFor="num2">
                         Número 2:
                         <input
                             type="number"
+                            id="num2"
+                            name="num2"
                             value={num2}
                             onChange={(e) => setNum2(e.target.value)}
+                            autoComplete="off"
                         />
                     </label>
                 </div>

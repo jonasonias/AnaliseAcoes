@@ -1,11 +1,17 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client'; // Importe createRoot
 import App from './App';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
-ReactDOM.render(
+// Pegue o elemento raiz
+const container = document.getElementById('root');
+
+// Crie um root
+const root = createRoot(container);
+
+// Renderize sua aplicação no root
+root.render(
   <React.StrictMode>
     <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+  </React.StrictMode>
 );
