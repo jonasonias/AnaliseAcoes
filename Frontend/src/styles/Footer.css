@@ -5,11 +5,11 @@
     color: white;
     padding: 8px;
     text-align: center;
-    position: fixed; /* Fixar o footer na parte inferior */
+    position: static; /* Fixar o footer na parte inferior */
     left: 5px;
     right: 5px;
     bottom: 5px;
-    width: 98%;
+    width: 99%;
     border-radius: 4px;
     font-family: 'Roboto', sans-serif; /* Usar a mesma fonte da navbar */
     font-size: 13px;

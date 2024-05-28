@@ -4,19 +4,21 @@ import LoginForm from '../components/LoginForm';
 import UserInfo from '../components/UserInfo';
 import Logout from '../components/Logout';
 import DeleteAccount from '../components/DeleteAccount';
-import '../styles/General.css';
 
 const LoginPage = () => {
     return (
-        <div className="inicio-pagina">
+        <div className="page-container">
+
             <h1>Login Page</h1>
-            <div className="inicio-content">
-                <RegisterForm />
-                <LoginForm />
-                <UserInfo />
-                <Logout />
-                <DeleteAccount />
-            </div>
+
+            <p>This is the Login page content.</p>
+
+            <RegisterForm />
+            <LoginForm />
+            <UserInfo />
+            <Logout />
+            <DeleteAccount />
+
         </div>
     );
 };

@@ -1,15 +1,16 @@
-// AboutPage.js
 import React from 'react';
-import SumForm from '../components/SumForm'; // Importe o componente SumForm
+import SumForm from '../components/SumForm';
 
 const AboutPage = () => {
   return (
-    <div>
+    <div className="page-container">
+
       <h1>About Page</h1>
+
       <p>This is the About page content.</p>
-      
-      {/* Renderize o componente SumForm dentro do conteúdo da página About */}
+
       <SumForm />
+
     </div>
   );
 };

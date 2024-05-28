@@ -1,19 +1,12 @@
-/* Estilo para o espaçador */
-.spacer {
-    margin-right: 10px; /* Adiciona margem à direita para criar espaço entre as palavras */
-  }
-
-.inicio-pagina {
+.page-container {
+  min-height: 100vh; /* Defina uma altura mínima para a Page */
   display: flex;
   flex-direction: column;
   align-items: left;
-  justify-content: flex-start; /* Alinhe o conteúdo no topo do contêiner */
-  height: 160vh; /* Defina a altura da página para preencher toda a altura da janela */
-  padding-top: 10px; /* Adicione um espaçamento superior para empurrar o conteúdo para baixo */
-  margin-top: 0;/* Remova a margem superior padrão do título */
+  margin-left: 5px;
+  margin-bottom: 30px;
 }
 
-.inicio-content {
-  max-height: 140vh; /* Defina a altura máxima do conteúdo para 80% da altura da janela */
-  overflow-y: auto; /* Adicione rolagem vertical quando o conteúdo exceder a altura máxima */
-}
+.spacer {
+    margin-right: 10px; /* Adiciona margem à direita para criar espaço entre as palavras */
+  }

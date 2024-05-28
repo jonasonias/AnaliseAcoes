@@ -8,6 +8,7 @@ import AboutPage from './pages/AboutPage';
 import LoginPage from './pages/LoginPage';
 import Footer from './components/Footer';
 import { AuthProvider } from './contexts/AuthContext'; // Importe o provedor de contexto de autenticação
+import './styles/General.css';
 
 const App = () => {
   return (

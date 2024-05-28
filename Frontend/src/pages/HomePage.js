@@ -1,11 +1,13 @@
-// HomePage.js
 import React from 'react';
 
 const HomePage = () => {
   return (
-    <div>
+    <div className="page-container">
+      
       <h1>Home Page</h1>
-      {/* Inclua aqui o SumForm ou qualquer outro conteúdo */}
+
+      <p>This is the Home page content.</p>
+
     </div>
   );
 };
