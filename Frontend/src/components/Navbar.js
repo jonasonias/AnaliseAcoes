@@ -1,8 +1,12 @@
+// src/components/Navbar.js
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useAuth } from '../contexts/AuthContext';
 import '../styles/Navbar.css';
 
 const Navbar = ({ togglePopup }) => {
+  const { userInfo } = useAuth();
+
   return (
     <nav className="navbar">
       <ul className="navbar-list">
@@ -11,14 +15,15 @@ const Navbar = ({ togglePopup }) => {
             <i className="fas fa-home"></i>
           </Link>
         </li>
-        <li className="navbar-item"> 
+        <li className="navbar-item">
           <Link to="/about" className="navbar-link">About</Link>
         </li>
         <li className="navbar-item">
-          <Link to="/profile" className="navbar-link">Profile</Link>
-        </li>
-        <li className="navbar-item">
-          <Link to="#" className="navbar-link" onClick={togglePopup}>Cadastrar / Logar</Link>
+          {userInfo ? (
+            <Link to="/profile" className="navbar-link">{userInfo.name}</Link>
+          ) : (
+            <Link to="#" className="navbar-link" onClick={togglePopup}>Cadastrar / Logar</Link>
+          )}
         </li>
       </ul>
     </nav>

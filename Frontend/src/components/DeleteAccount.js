@@ -1,10 +1,11 @@
+// src/components/DeleteAccount.js
 import React, { useState } from 'react';
 import axios from 'axios';
-import { useAuth } from '../contexts/AuthContext'; // Importe o hook useAuth
+import { useAuth } from '../contexts/AuthContext';
 import API_BASE_URL from '../apiConfig';
 
 const DeleteAccount = () => {
-  const { authCookie, setAuthCookie } = useAuth(); // Use o hook useAuth para acessar e definir o cookie de autenticação
+  const { authCookie, setAuthCookie, setUserInfo } = useAuth();
   const [errorMessage, setErrorMessage] = useState('');
   const [successMessage, setSuccessMessage] = useState('');
 
@@ -12,11 +13,11 @@ const DeleteAccount = () => {
     try {
       await axios.delete(`${API_BASE_URL}/delete-user`, {
         headers: {
-          'X-Session-Id': authCookie
-        }
+          'X-Session-Id': authCookie,
+        },
       });
-      localStorage.removeItem('sessionId');
-      setAuthCookie(null); // Limpar o cookie de autenticação no contexto
+      setAuthCookie(null);
+      setUserInfo(null);
       setSuccessMessage('Conta excluída com sucesso');
       setErrorMessage('');
     } catch (error) {
