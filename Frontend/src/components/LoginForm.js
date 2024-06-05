@@ -34,8 +34,10 @@ const LoginForm = () => {
             {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
             {successMessage && <p style={{ color: 'green' }}>{successMessage}</p>}
             <form onSubmit={handleSubmit}>
-                <label htmlFor="loginemail">
-                    Email:
+                <div style={{ marginBottom: '5px' }}>
+                    <label htmlFor="loginemail" style={{ minWidth: '60px', display: 'inline-block' }}>
+                        Email:
+                    </label>
                     <input
                         type="email"
                         id="loginemail"
@@ -43,11 +45,13 @@ const LoginForm = () => {
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                         autoComplete="email"
+                        style={{ marginBottom: '10px' }}
                     />
-                </label>
-                <br />
-                <label htmlFor="loginpassword">
-                    Password:
+                </div>
+                <div style={{ marginBottom: '10px' }}>
+                    <label htmlFor="loginpassword" style={{ minWidth: '60px', display: 'inline-block' }}>
+                        Senha:
+                    </label>
                     <input
                         type="password"
                         id="loginpassword"
@@ -55,10 +59,10 @@ const LoginForm = () => {
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
                         autoComplete="current-password"
+                        style={{ marginBottom: '10px' }}
                     />
-                </label>
-                <br />
-                <button type="submit">Login</button>
+                </div>
+                <button type="submit" style={{ marginTop: '10px' }}>Login</button>
             </form>
         </div>
     );

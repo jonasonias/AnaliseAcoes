@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/Navbar.css';
 
-const Navbar = () => {
+const Navbar = ({ togglePopup }) => {
   return (
     <nav className="navbar">
       <ul className="navbar-list">
@@ -15,7 +15,10 @@ const Navbar = () => {
           <Link to="/about" className="navbar-link">About</Link>
         </li>
         <li className="navbar-item">
-          <Link to="/login" className="navbar-link">Log In</Link>
+          <Link to="/profile" className="navbar-link">Profile</Link>
+        </li>
+        <li className="navbar-item">
+          <Link to="#" className="navbar-link" onClick={togglePopup}>Cadastrar / Logar</Link>
         </li>
       </ul>
     </nav>
