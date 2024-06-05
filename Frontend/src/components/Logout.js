@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { useAuth } from '../contexts/AuthContext'; // Importe o hook useAuth
+import { useAuth } from '../contexts/AuthContext'; 
 import API_BASE_URL from '../apiConfig';
 
-const Logout = () => {
-  const { authCookie, setAuthCookie } = useAuth(); // Use o hook useAuth para acessar e definir o cookie de autenticação
+const Logout = ({ onLogout }) => {
+  const { authCookie, setAuthCookie } = useAuth();
   const [errorMessage, setErrorMessage] = useState('');
   const [successMessage, setSuccessMessage] = useState('');
 
@@ -16,9 +16,10 @@ const Logout = () => {
         }
       });
       localStorage.removeItem('sessionId');
-      setAuthCookie(null); // Limpar o cookie de autenticação no contexto
+      setAuthCookie(null); 
       setSuccessMessage('Logout bem-sucedido');
       setErrorMessage('');
+      onLogout(); // Chama a função de callback para atualizar o estado de logout
     } catch (error) {
       setErrorMessage(error.response ? error.response.data : 'Erro ao fazer logout');
       setSuccessMessage('');
