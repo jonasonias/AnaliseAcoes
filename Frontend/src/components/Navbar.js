@@ -19,6 +19,9 @@ const Navbar = ({ togglePopup }) => {
           <Link to="/about" className="navbar-link">About</Link>
         </li>
         <li className="navbar-item">
+          <Link to="/acoes" className="navbar-link">Ações</Link> {/* Adicione o novo link para Ações */}
+        </li>
+        <li className="navbar-item">
           {userInfo ? (
             <Link to="/profile" className="navbar-link">{userInfo.name}</Link>
           ) : (

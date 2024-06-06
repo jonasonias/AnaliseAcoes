@@ -3,6 +3,7 @@ const cors = require('cors');
 const bcrypt = require('bcryptjs');
 const mongoose = require('mongoose');
 const User = require('./models/User'); // Importar modelo de usuário
+const Action = require('./models/Action'); // Importar modelo de ações
 const session = require('express-session');
 const { v4: uuidv4 } = require('uuid');
 const { connectToDatabase } = require('./db'); // Importar função de conexão
@@ -34,7 +35,7 @@ app.use((req, res, next) => {
 });
 
 // Conectando ao banco de dados
-connectToDatabase('Users');
+connectToDatabase('Site');
 
 // Configurando o favicon
 app.use(serveFavicon('C:\\Users\\jonas\\Documents\\stocksSiteAWS\\Backend\\public\\favicon.ico'));
@@ -150,6 +151,77 @@ app.delete('/delete-user', verificarSessao, async (req, res) => {
         res.send('Usuário excluído com sucesso');
     } catch (err) {
         res.status(500).send('Erro ao excluir usuário');
+    }
+});
+
+// Rota para obter todas as ações
+app.get('/acoes', async (req, res) => {
+    try {
+      const actions = await Action.find({});
+      // Garantir que todos os campos estejam definidos
+      const validActions = actions.map(action => ({
+        code: action.code || 'Código indisponível',
+        name: action.name || 'Nome indisponível',
+        price: action.price != null ? action.price : null,
+      }));
+      res.json(validActions);
+    } catch (err) {
+      res.status(500).send('Erro ao obter ações');
+    }
+  });
+
+// Rota para obter uma ação específica
+app.get('/acoes/:code', async (req, res) => {
+    const { code } = req.params;
+    try {
+        const action = await Action.findOne({ code });
+        if (!action) {
+            return res.status(404).send('Ação não encontrada');
+        }
+        res.json(action);
+    } catch (err) {
+        res.status(500).send('Erro ao obter ação');
+    }
+});
+
+// Rota para criar uma nova ação
+app.post('/acoes', async (req, res) => {
+    const { code, name, price } = req.body;
+    try {
+        const newAction = new Action({ code, name, price });
+        await newAction.save();
+        res.status(201).send('Ação criada com sucesso');
+    } catch (err) {
+        res.status(500).send('Erro ao criar ação');
+    }
+});
+
+// Rota para atualizar uma ação
+app.put('/acoes/:code', async (req, res) => {
+    const { code } = req.params;
+    const { name, price } = req.body;
+    try {
+        const updatedAction = await Action.findOneAndUpdate({ code }, { name, price }, { new: true });
+        if (!updatedAction) {
+            return res.status(404).send('Ação não encontrada');
+        }
+        res.send('Ação atualizada com sucesso');
+    } catch (err) {
+        res.status(500).send('Erro ao atualizar ação');
+    }
+});
+
+// Rota para deletar uma ação
+app.delete('/acoes/:code', async (req, res) => {
+    const { code } = req.params;
+    try {
+        const deletedAction = await Action.findOneAndDelete({ code });
+        if (!deletedAction) {
+            return res.status(404).send('Ação não encontrada');
+        }
+        res.send('Ação deletada com sucesso');
+    } catch (err) {
+        res.status(500).send('Erro ao deletar ação');
     }
 });
 
