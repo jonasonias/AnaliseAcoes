@@ -1,9 +1,8 @@
 const express = require('express');
 const cors = require('cors');
 const bcrypt = require('bcryptjs');
-const mongoose = require('mongoose');
 const User = require('./models/User'); // Importar modelo de usuário
-const Action = require('./models/Action'); // Importar modelo de ações
+const Acoes = require('./models/Acoes'); // Importar modelo de ações
 const session = require('express-session');
 const { v4: uuidv4 } = require('uuid');
 const { connectToDatabase } = require('./db'); // Importar função de conexão
@@ -157,28 +156,22 @@ app.delete('/delete-user', verificarSessao, async (req, res) => {
 // Rota para obter todas as ações
 app.get('/acoes', async (req, res) => {
     try {
-      const actions = await Action.find({});
-      // Garantir que todos os campos estejam definidos
-      const validActions = actions.map(action => ({
-        code: action.code || 'Código indisponível',
-        name: action.name || 'Nome indisponível',
-        price: action.price != null ? action.price : null,
-      }));
-      res.json(validActions);
+        const acoes = await Acoes.find({});
+        res.json(acoes);
     } catch (err) {
-      res.status(500).send('Erro ao obter ações');
+        res.status(500).send('Erro ao obter ações');
     }
-  });
+});
 
 // Rota para obter uma ação específica
-app.get('/acoes/:code', async (req, res) => {
-    const { code } = req.params;
+app.get('/acoes/:ticker', async (req, res) => {
+    const { ticker } = req.params;
     try {
-        const action = await Action.findOne({ code });
-        if (!action) {
+        const acao = await Acoes.findOne({ ticker });
+        if (!acao) {
             return res.status(404).send('Ação não encontrada');
         }
-        res.json(action);
+        res.json(acao);
     } catch (err) {
         res.status(500).send('Erro ao obter ação');
     }
@@ -186,10 +179,15 @@ app.get('/acoes/:code', async (req, res) => {
 
 // Rota para criar uma nova ação
 app.post('/acoes', async (req, res) => {
-    const { code, name, price } = req.body;
+    const { ticker, nome, setorDeAtuacao, subsetorDeAtuacao, segmentoDeAtuacao, valorDeMercado } = req.body;
     try {
-        const newAction = new Action({ code, name, price });
-        await newAction.save();
+        const existingAcao = await Acoes.findOne({ ticker });
+        if (existingAcao) {
+            return res.status(400).send('Ticker já existe');
+        }
+
+        const newAcao = new Acoes({ ticker, nome, setorDeAtuacao, subsetorDeAtuacao, segmentoDeAtuacao, valorDeMercado });
+        await newAcao.save();
         res.status(201).send('Ação criada com sucesso');
     } catch (err) {
         res.status(500).send('Erro ao criar ação');
@@ -197,12 +195,12 @@ app.post('/acoes', async (req, res) => {
 });
 
 // Rota para atualizar uma ação
-app.put('/acoes/:code', async (req, res) => {
-    const { code } = req.params;
-    const { name, price } = req.body;
+app.put('/acoes/:ticker', async (req, res) => {
+    const { ticker } = req.params;
+    const { nome, setorDeAtuacao, subsetorDeAtuacao, segmentoDeAtuacao, valorDeMercado } = req.body;
     try {
-        const updatedAction = await Action.findOneAndUpdate({ code }, { name, price }, { new: true });
-        if (!updatedAction) {
+        const updatedAcao = await Acoes.findOneAndUpdate({ ticker }, { nome, setorDeAtuacao, subsetorDeAtuacao, segmentoDeAtuacao, valorDeMercado }, { new: true });
+        if (!updatedAcao) {
             return res.status(404).send('Ação não encontrada');
         }
         res.send('Ação atualizada com sucesso');
@@ -212,11 +210,11 @@ app.put('/acoes/:code', async (req, res) => {
 });
 
 // Rota para deletar uma ação
-app.delete('/acoes/:code', async (req, res) => {
-    const { code } = req.params;
+app.delete('/acoes/:ticker', async (req, res) => {
+    const { ticker } = req.params;
     try {
-        const deletedAction = await Action.findOneAndDelete({ code });
-        if (!deletedAction) {
+        const deletedAcao = await Acoes.findOneAndDelete({ ticker });
+        if (!deletedAcao) {
             return res.status(404).send('Ação não encontrada');
         }
         res.send('Ação deletada com sucesso');

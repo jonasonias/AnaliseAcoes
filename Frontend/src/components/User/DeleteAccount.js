@@ -1,10 +1,11 @@
 // src/components/DeleteAccount.js
 import React, { useState } from 'react';
 import axios from 'axios';
-import { useAuth } from '../contexts/AuthContext';
-import API_BASE_URL from '../apiConfig';
+import { useAuth } from '../../contexts/AuthContext';
+import API_BASE_URL from '../../apiConfig';
+import CustomAlert from '../CustomAlert'; // Importe o componente CustomAlert
 
-const DeleteAccount = () => {
+const DeleteAccount = ({ onDelete }) => {
   const { authCookie, setAuthCookie, setUserInfo } = useAuth();
   const [errorMessage, setErrorMessage] = useState('');
   const [successMessage, setSuccessMessage] = useState('');
@@ -20,6 +21,7 @@ const DeleteAccount = () => {
       setUserInfo(null);
       setSuccessMessage('Conta excluída com sucesso');
       setErrorMessage('');
+      onDelete(); // Chama a função de callback para indicar que a conta foi excluída com sucesso
     } catch (error) {
       setErrorMessage(error.response ? error.response.data : 'Erro ao excluir conta');
       setSuccessMessage('');
@@ -29,8 +31,8 @@ const DeleteAccount = () => {
   return (
     <div>
       <h2>Deletar Conta</h2>
-      {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
-      {successMessage && <p style={{ color: 'green' }}>{successMessage}</p>}
+      {errorMessage && <CustomAlert message={errorMessage} type="error" />}
+      {successMessage && <CustomAlert message={successMessage} type="success" />}
       <button onClick={handleDeleteAccount}>Deletar Conta</button>
     </div>
   );

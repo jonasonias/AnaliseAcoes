@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import API_BASE_URL from '../apiConfig';
+import CustomAlert from '../CustomAlert'; // Importe o componente CustomAlert
+import API_BASE_URL from '../../apiConfig';
 
 const RegisterForm = () => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [errorMessage, setErrorMessage] = useState('');
-    const [successMessage, setSuccessMessage] = useState('');
+    const [alertMessage, setAlertMessage] = useState('');
+    const [alertType, setAlertType] = useState('');
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -18,21 +19,20 @@ const RegisterForm = () => {
                 email,
                 password
             });
-            setSuccessMessage(response.data);
+            setAlertMessage(response.data);
+            setAlertType('success');
             setName('');
             setEmail('');
             setPassword('');
-            setErrorMessage('');
         } catch (error) {
-            setErrorMessage(error.response.data);
+            setAlertMessage(error.response.data);
+            setAlertType('error');
         }
     };
 
     return (
         <div>
             <h2>Cadastrar</h2>
-            {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
-            {successMessage && <p style={{ color: 'green' }}>{successMessage}</p>}
             <form onSubmit={handleSubmit}>
                 <label htmlFor="name" style={{ minWidth: '60px', display: 'inline-block', marginBottom: '10px' }}>
                     Nome:
@@ -65,7 +65,7 @@ const RegisterForm = () => {
                 </label>
                 <div style={{ position: 'relative', display: 'inline-block', marginBottom: '10px' }}>
                     <input
-                        type= "password"
+                        type="password"
                         id="registerpassword"
                         name="registerpassword"
                         value={password}
@@ -77,6 +77,18 @@ const RegisterForm = () => {
                 <br />
                 <button type="submit" style={{ marginTop: '10px' }}>Register</button>
             </form>
+
+            {/* Renderize o CustomAlert se houver uma mensagem de alerta */}
+            {alertMessage && (
+                <CustomAlert
+                    message={alertMessage}
+                    type={alertType}
+                    onClose={() => {
+                        setAlertMessage('');
+                        setAlertType('');
+                    }}
+                />
+            )}
         </div>
     );
 };

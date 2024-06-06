@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import Navbar from './Navbar';
-import RegisterForm from './RegisterForm';
-import LoginForm from './LoginForm';
+import Navbar from '../components/Navbar';
+import RegisterForm from '../components/User/RegisterForm';
+import LoginForm from '../components/User/LoginForm';
 import '../styles/Header.css';
 
 const Header = () => {

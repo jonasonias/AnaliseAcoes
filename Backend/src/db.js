@@ -5,8 +5,6 @@ function connectToDatabase(dbName) {
     const mongoUri = `mongodb+srv://jonasonias:918069@cluster0.7plyyiv.mongodb.net/${dbName}?retryWrites=true&w=majority&appName=Cluster0`;
 
     mongoose.connect(mongoUri, {
-        useNewUrlParser: true,
-        useUnifiedTopology: true
     }).then(() => {
         console.log(`Conectado ao MongoDB: ${dbName}`);
     }).catch(err => {

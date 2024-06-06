@@ -1,8 +1,9 @@
 // src/components/Logout.js
 import React, { useState } from 'react';
 import axios from 'axios';
-import { useAuth } from '../contexts/AuthContext';
-import API_BASE_URL from '../apiConfig';
+import { useAuth } from '../../contexts/AuthContext';
+import API_BASE_URL from '../../apiConfig';
+import CustomAlert from '../CustomAlert'; // Importe o componente CustomAlert
 
 const Logout = ({ onLogout }) => {
   const { authCookie, setAuthCookie, setUserInfo } = useAuth();
@@ -30,8 +31,8 @@ const Logout = ({ onLogout }) => {
   return (
     <div>
       <h2>Logout</h2>
-      {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
-      {successMessage && <p style={{ color: 'green' }}>{successMessage}</p>}
+      {errorMessage && <CustomAlert message={errorMessage} type="error" />}
+      {successMessage && <CustomAlert message={successMessage} type="success" />}
       <button onClick={handleLogout}>Logout</button>
     </div>
   );

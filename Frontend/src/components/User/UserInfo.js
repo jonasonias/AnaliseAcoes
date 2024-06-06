@@ -1,8 +1,8 @@
 // src/components/UserInfo.js
 import React, { useState, useEffect, useCallback } from 'react';
 import axios from 'axios';
-import { useAuth } from '../contexts/AuthContext';
-import API_BASE_URL from '../apiConfig';
+import { useAuth } from '../../contexts/AuthContext';
+import API_BASE_URL from '../../apiConfig';
 
 const UserInfo = ({ isLoggedOut }) => {
   const { authCookie, setUserInfo } = useAuth();
