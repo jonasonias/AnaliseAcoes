@@ -21,7 +21,8 @@ const UpdateAcao = () => {
         if (valorDeMercado) acao.valorDeMercado = parseFloat(valorDeMercado);
 
         try {
-            const response = await fetch(`http://localhost:3001/acoes/${ticker}`, {
+            // Converte o ticker para maiúsculas antes de fazer a requisição
+            const response = await fetch(`http://localhost:3001/acoes/${ticker.toUpperCase()}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json'

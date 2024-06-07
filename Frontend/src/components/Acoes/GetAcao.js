@@ -8,7 +8,8 @@ const GetAcao = () => {
 
     const fetchAcao = async () => {
         try {
-            const response = await fetch(`http://localhost:3001/acoes/${ticker}`);
+            // Converte o ticker para maiúsculas antes de fazer a requisição
+            const response = await fetch(`http://localhost:3001/acoes/${ticker.toUpperCase()}`);
             if (!response.ok) {
                 throw new Error('Ação não encontrada');
             }

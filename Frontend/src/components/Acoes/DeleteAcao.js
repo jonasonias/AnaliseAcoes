@@ -8,7 +8,8 @@ const DeleteAcao = () => {
 
     const handleDelete = async () => {
         try {
-            const response = await fetch(`http://localhost:3001/acoes/${ticker}`, {
+            // Converte o ticker para maiúsculas antes de fazer a requisição
+            const response = await fetch(`http://localhost:3001/acoes/${ticker.toUpperCase()}`, {
                 method: 'DELETE'
             });
             if (response.ok) {

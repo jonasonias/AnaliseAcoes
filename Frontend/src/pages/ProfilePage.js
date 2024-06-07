@@ -27,7 +27,7 @@ const ProfilePage = () => {
       {!authCookie && (
         <div style={{ textAlign: 'center' }}>
           <p style={{ color: 'black', fontWeight: 'bold' }}>
-            <FaLock style={{ marginRight: '5px' }} /> Esta área é permitida apenas para usuários.
+            <FaLock style={{ marginTop: '10%' }} /> Esta área é permitida apenas para usuários.
           </p>
         </div>
       )}

@@ -13,7 +13,7 @@ const AddAcao = () => {
 
     const handleSubmit = async () => {
         const acao = {
-            ticker,
+            ticker: ticker.toUpperCase(),
             nome,
             setorDeAtuacao,
             subsetorDeAtuacao,
