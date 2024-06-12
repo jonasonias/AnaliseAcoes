@@ -1,51 +1,60 @@
-import React, { useState } from 'react';
-import CustomAlert from '../CustomAlert'; // Importe o componente CustomAlert
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import { FaTools } from 'react-icons/fa'; // Importe o ícone FaTools do Font Awesome
 
-const GetAcao = () => {
-    const [ticker, setTicker] = useState('');
-    const [acao, setAcao] = useState(null);
-    const [error, setError] = useState(null); // Novo estado para armazenar mensagens de erro
+const GetAcao = ({ code }) => {
+  const [acao, setAcao] = useState(null);
+  const [error, setError] = useState(null); // Novo estado para armazenar mensagens de erro
 
+  useEffect(() => {
     const fetchAcao = async () => {
-        try {
-            // Converte o ticker para maiúsculas antes de fazer a requisição
-            const response = await fetch(`http://localhost:3001/acoes/${ticker.toUpperCase()}`);
-            if (!response.ok) {
-                throw new Error('Ação não encontrada');
-            }
-            const data = await response.json();
-            setAcao(data);
-            setError(null); // Limpa o erro anterior
-        } catch (error) {
-            setError(error.message); // Define a mensagem de erro no estado
-            setAcao(null); // Limpa os dados anteriores
-        }
-    };
-
-    const formatCurrency = (value) => {
-        return value.toLocaleString('pt-BR', {
+      try {
+        const response = await axios.get(`http://localhost:3001/acoes/${code}`);
+        if (response.data) {
+          const data = response.data;
+          // Formata o valor de mercado para reais (R$) com pontos e vírgulas
+          const valorFormatado = new Intl.NumberFormat('pt-BR', {
             style: 'currency',
             currency: 'BRL',
-        });
+          }).format(data.valordemercado);
+          data.valordemercado = valorFormatado;
+          setAcao(data); // Define os dados da ação no estado 'acao'
+          setError(null); // Limpa o erro em caso de sucesso
+        } else {
+          setError('Ação não encontrada'); // Define a mensagem de erro quando não houver dados
+          setAcao(null); // Limpa os dados da ação em caso de erro
+        }
+      } catch (error) {
+        console.error('Erro ao obter ação:', error);
+        setError('Ação não encontrada'); // Define a mensagem de erro
+        setAcao(null); // Limpa os dados da ação em caso de erro
+      }
     };
 
-    return (
+    fetchAcao(); // Executa a busca da ação ao montar o componente
+  }, [code]); // Executa o efeito sempre que 'code' mudar
+
+  return (
+    <div>
+      {acao && (
         <div>
-            <input
-                type="text"
-                value={ticker}
-                onChange={(e) => setTicker(e.target.value)}
-                placeholder="Digite o ticker"
-            />
-            <button onClick={fetchAcao}>Buscar Ação</button>
-            {acao && (
-                <div>
-                    <p>{acao.ticker} - {acao.nome} - {acao.setorDeAtuacao} - {acao.subsetorDeAtuacao} - {acao.segmentoDeAtuacao} - {formatCurrency(acao.valorDeMercado)}</p>
-                </div>
-            )}
-            {error && <CustomAlert message={error} onClose={() => setError(null)} />} {/* Renderize o CustomAlert quando houver um erro */}
+          <p><strong>Ticker:</strong> {acao.ticker}</p>
+          <p><strong>Nome:</strong> {acao.nome}</p>
+          <p><strong>Setor de Atuação:</strong> {acao.setordeatuacao}</p>
+          <p><strong>Subsetor de Atuação:</strong> {acao.subsetordeatuacao}</p>
+          <p><strong>Segmento de Atuação:</strong> {acao.segmentodeatuacao}</p>
+          <p><strong>Valor de Mercado:</strong> {acao.valordemercado}</p>
         </div>
-    );
+      )}
+      {error && (
+        <div style={{ textAlign: 'center' }}>
+          <p style={{ color: 'black', fontWeight: 'bold' }}>
+            <FaTools style={{ marginTop: '10%' }} /> {error}
+          </p>
+        </div>
+      )}
+    </div>
+  );
 };
 
 export default GetAcao;

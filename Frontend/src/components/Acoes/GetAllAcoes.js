@@ -8,15 +8,23 @@ const GetAllAcoes = () => {
     const [alertType, setAlertType] = useState('');
     const navigate = useNavigate();
 
+    // Função para buscar as ações na API
     const fetchAcoes = async () => {
         try {
             const response = await fetch('http://localhost:3001/acoes');
-            const data = await response.json();
             if (response.ok) {
-                setAcoes(data);
+                const data = await response.json();
+                // Formata o valor de mercado para reais (R$) com pontos e vírgulas
+                const acoesFormatadas = data.map(acao => ({
+                    ...acao,
+                    valordemercado: new Intl.NumberFormat('pt-BR', {
+                      style: 'currency',
+                      currency: 'BRL',
+                    }).format(acao.valordemercado),
+                }));
+                setAcoes(acoesFormatadas);
             } else {
-                setAlertMessage('Erro ao buscar ações');
-                setAlertType('error');
+                throw new Error('Erro ao buscar ações');
             }
         } catch (error) {
             console.error('Erro ao buscar ações:', error);
@@ -25,23 +33,19 @@ const GetAllAcoes = () => {
         }
     };
 
-    const formatCurrency = (value) => {
-        return value.toLocaleString('pt-BR', {
-            style: 'currency',
-            currency: 'BRL',
-        });
-    };
-
+    // Função para lidar com o clique no ticker
     const handleTickerClick = (ticker) => {
         navigate(`/acoes/${ticker}`);
     };
 
+    // Hook useEffect para buscar as ações ao montar o componente
     useEffect(() => {
-        fetchAcoes(); // Chama fetchAcoes ao montar o componente
-    }, []); // O segundo argumento [] indica que useEffect só será executado uma vez
+        fetchAcoes();
+    }, []);
 
     return (
         <div>
+            <h2>Lista de Ações</h2>
             <table style={{ width: '100%', borderCollapse: 'collapse', marginTop: '20px' }}>
                 <thead>
                     <tr>
@@ -54,7 +58,7 @@ const GetAllAcoes = () => {
                     </tr>
                 </thead>
                 <tbody>
-                    {acoes.map(acao => (
+                    {acoes.map((acao) => (
                         <tr key={acao.ticker}>
                             <td
                                 style={{ border: '1px solid black', padding: '8px', cursor: 'pointer', color: 'blue' }}
@@ -63,16 +67,16 @@ const GetAllAcoes = () => {
                                 {acao.ticker}
                             </td>
                             <td style={{ border: '1px solid black', padding: '8px' }}>{acao.nome}</td>
-                            <td style={{ border: '1px solid black', padding: '8px' }}>{acao.setorDeAtuacao}</td>
-                            <td style={{ border: '1px solid black', padding: '8px' }}>{acao.subsetorDeAtuacao}</td>
-                            <td style={{ border: '1px solid black', padding: '8px' }}>{acao.segmentoDeAtuacao}</td>
-                            <td style={{ border: '1px solid black', padding: '8px' }}>{formatCurrency(acao.valorDeMercado)}</td>
+                            <td style={{ border: '1px solid black', padding: '8px' }}>{acao.setordeatuacao}</td>
+                            <td style={{ border: '1px solid black', padding: '8px' }}>{acao.subsetordeatuacao}</td>
+                            <td style={{ border: '1px solid black', padding: '8px' }}>{acao.segmentodeatuacao}</td>
+                            <td style={{ border: '1px solid black', padding: '8px' }}>{acao.valordemercado}</td>
                         </tr>
                     ))}
                 </tbody>
             </table>
 
-            { /* Renderize o CustomAlert se houver uma mensagem de alerta */ }
+            {/* Renderizar o CustomAlert se houver uma mensagem de alerta */}
             {alertMessage && (
                 <CustomAlert
                     message={alertMessage}
