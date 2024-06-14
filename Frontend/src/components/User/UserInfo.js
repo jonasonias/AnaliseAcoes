@@ -11,7 +11,7 @@ const UserInfo = ({ isLoggedOut }) => {
 
   const fetchUserInfo = useCallback(async () => {
     try {
-      const response = await axios.get(`${API_BASE_URL}/user-info`, {
+      const response = await axios.get(`${API_BASE_URL}/user/userinfo`, {
         headers: {
           'X-Session-Id': authCookie
         }

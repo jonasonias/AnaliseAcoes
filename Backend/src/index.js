@@ -3,6 +3,7 @@ const cors = require('cors');
 const serveFavicon = require('serve-favicon');
 const userRoutes = require('./modules/userRoutes');
 const acoesRoutes = require('./modules/acoesRoutes');
+const multiplosRoutes = require('./modules/multiplosRoutes');
 
 const app = express();
 
@@ -15,8 +16,9 @@ app.get('/', (req, res) => {
     res.send('Servidor Express está funcionando!');
 });
 
-app.use('', userRoutes);
-app.use('', acoesRoutes);
+app.use('/user', userRoutes);
+app.use('/acoes', acoesRoutes);
+app.use('/multiplos', multiplosRoutes);
 
 const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {

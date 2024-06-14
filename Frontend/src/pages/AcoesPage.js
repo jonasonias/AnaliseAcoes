@@ -1,6 +1,5 @@
 import React from 'react';
 import GetAllAcoes from '../components/Acoes/GetAllAcoes';
-import AddAcao from '../components/Acoes/AddAcao';
 import UpdateAcao from '../components/Acoes/UpdateAcao';
 import DeleteAcao from '../components/Acoes/DeleteAcao';
 
@@ -12,9 +11,6 @@ const AcoesPage = () => {
       
       <h2>Listar Todas as Ações</h2>
       <GetAllAcoes />
-
-      <h2>Adicionar Nova Ação</h2>
-      <AddAcao />
 
       <h2>Atualizar Ação Existente</h2>
       <UpdateAcao />

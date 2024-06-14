@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import API_BASE_URL from '../../apiConfig';
 import CustomAlert from '../CustomAlert'; // Importe o componente CustomAlert
 
 const AddAcao = () => {
@@ -22,7 +23,7 @@ const AddAcao = () => {
         };
 
         try {
-            const response = await fetch('http://localhost:3001/acoes', {
+            const response = await fetch(`${API_BASE_URL}/acoes`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

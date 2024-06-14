@@ -12,7 +12,7 @@ const Logout = ({ onLogout }) => {
 
   const handleLogout = async () => {
     try {
-      await axios.post(`${API_BASE_URL}/logout`, {}, {
+      await axios.post(`${API_BASE_URL}/user/logout`, {}, {
         headers: {
           'X-Session-Id': authCookie,
         },

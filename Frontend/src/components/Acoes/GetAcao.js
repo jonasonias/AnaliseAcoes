@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import API_BASE_URL from '../../apiConfig';
 import { FaTools } from 'react-icons/fa'; // Importe o ícone FaTools do Font Awesome
 
 const GetAcao = ({ code }) => {
@@ -9,7 +10,7 @@ const GetAcao = ({ code }) => {
   useEffect(() => {
     const fetchAcao = async () => {
       try {
-        const response = await axios.get(`http://localhost:3001/acoes/${code}`);
+        const response = await axios.get(`${API_BASE_URL}/acoes/${code}`);
         if (response.data) {
           const data = response.data;
           // Formata o valor de mercado para reais (R$) com pontos e vírgulas

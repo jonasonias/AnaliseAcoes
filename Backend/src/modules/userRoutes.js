@@ -88,7 +88,7 @@ async function verificarSessao(req, res, next) {
     next();
 }
 
-router.get('/user-info', verificarSessao, async (req, res) => {
+router.get('/userinfo', verificarSessao, async (req, res) => {
     try {
         const user = await User.findById(req.session.userId);
         if (!user) {
@@ -110,7 +110,7 @@ router.post('/logout', verificarSessao, (req, res) => {
     res.send('Logout bem-sucedido');
 });
 
-router.delete('/delete-user', verificarSessao, async (req, res) => {
+router.delete('/deleteuser', verificarSessao, async (req, res) => {
     const userId = req.session.userId;
     try {
         await User.delete(userId);

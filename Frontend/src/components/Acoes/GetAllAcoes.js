@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import API_BASE_URL from '../../apiConfig';
 import CustomAlert from '../CustomAlert'; // Importe o componente CustomAlert
 
 const GetAllAcoes = () => {
@@ -13,7 +14,7 @@ const GetAllAcoes = () => {
     // Função para buscar as ações na API
     const fetchAcoes = async () => {
         try {
-            const response = await fetch('http://localhost:3001/acoes');
+            const response = await fetch(`${API_BASE_URL}/acoes`);
             if (response.ok) {
                 const data = await response.json();
                 // Formata o valor de mercado para reais (R$) com pontos e vírgulas

@@ -1,4 +1,3 @@
-// src/contexts/AuthContext.js
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import axios from 'axios';
 import API_BASE_URL from '../apiConfig';
@@ -17,7 +16,7 @@ export const AuthProvider = ({ children }) => {
     const fetchUserInfo = async () => {
       if (authCookie) {
         try {
-          const response = await axios.get(`${API_BASE_URL}/user-info`, {
+          const response = await axios.get(`${API_BASE_URL}/user/userinfo`, {
             headers: {
               'X-Session-Id': authCookie,
             },
@@ -34,22 +33,17 @@ export const AuthProvider = ({ children }) => {
     fetchUserInfo();
   }, [authCookie]);
 
-  const value = {
-    authCookie,
-    setAuthCookie: (sessionId) => {
-      if (sessionId) {
-        localStorage.setItem('sessionId', sessionId);
-      } else {
-        localStorage.removeItem('sessionId');
-      }
-      setAuthCookie(sessionId);
-    },
-    userInfo,
-    setUserInfo,
+  const updateAuthCookie = (sessionId) => {
+    if (sessionId) {
+      localStorage.setItem('sessionId', sessionId);
+    } else {
+      localStorage.removeItem('sessionId');
+    }
+    setAuthCookie(sessionId);
   };
 
   return (
-    <AuthContext.Provider value={value}>
+    <AuthContext.Provider value={{ authCookie, setAuthCookie: updateAuthCookie, userInfo, setUserInfo }}>
       {children}
     </AuthContext.Provider>
   );

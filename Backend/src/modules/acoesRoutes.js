@@ -3,7 +3,7 @@ const Acoes = require('../models/Acoes');
 
 const router = express.Router();
 
-router.get('/acoes', async (req, res) => {
+router.get('/', async (req, res) => {
     try {
         const acoes = await Acoes.findAll();
         res.json(acoes);
@@ -12,7 +12,7 @@ router.get('/acoes', async (req, res) => {
     }
 });
 
-router.get('/acoes/:ticker', async (req, res) => {
+router.get('/:ticker', async (req, res) => {
     const { ticker } = req.params;
     try {
         const acao = await Acoes.findOne(ticker);
@@ -25,7 +25,7 @@ router.get('/acoes/:ticker', async (req, res) => {
     }
 });
 
-router.post('/acoes', async (req, res) => {
+router.post('/', async (req, res) => {
     const { ticker, nome, setorDeAtuacao, subsetorDeAtuacao, segmentoDeAtuacao, valorDeMercado } = req.body;
     try {
         const existingAcao = await Acoes.findOne(ticker);
@@ -40,7 +40,7 @@ router.post('/acoes', async (req, res) => {
     }
 });
 
-router.put('/acoes/:ticker', async (req, res) => {
+router.put('/:ticker', async (req, res) => {
     const { ticker } = req.params;
     const { nome, setorDeAtuacao, subsetorDeAtuacao, segmentoDeAtuacao, valorDeMercado } = req.body;
     try {
@@ -54,7 +54,7 @@ router.put('/acoes/:ticker', async (req, res) => {
     }
 });
 
-router.delete('/acoes/:ticker', async (req, res) => {
+router.delete('/:ticker', async (req, res) => {
     const { ticker } = req.params;
     try {
         const success = await Acoes.delete(ticker);

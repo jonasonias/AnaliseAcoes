@@ -1,4 +1,3 @@
-// src/components/Navbar.js
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
@@ -19,7 +18,7 @@ const Navbar = ({ togglePopup }) => {
           <Link to="/about" className="navbar-link">About</Link>
         </li>
         <li className="navbar-item">
-          <Link to="/acoes" className="navbar-link">Ações</Link> {/* Adicione o novo link para Ações */}
+          <Link to="/acoes" className="navbar-link">Ações</Link>
         </li>
         <li className="navbar-item">
           {userInfo ? (

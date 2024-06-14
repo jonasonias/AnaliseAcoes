@@ -12,7 +12,7 @@ const DeleteAccount = ({ onDelete }) => {
 
   const handleDeleteAccount = async () => {
     try {
-      await axios.delete(`${API_BASE_URL}/delete-user`, {
+      await axios.delete(`${API_BASE_URL}/user/deleteuser`, {
         headers: {
           'X-Session-Id': authCookie,
         },

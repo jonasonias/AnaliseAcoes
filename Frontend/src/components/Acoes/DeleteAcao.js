@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import API_BASE_URL from '../../apiConfig';
 import CustomAlert from '../CustomAlert'; // Importe o componente CustomAlert
 
 const DeleteAcao = () => {
@@ -9,7 +10,7 @@ const DeleteAcao = () => {
     const handleDelete = async () => {
         try {
             // Converte o ticker para maiúsculas antes de fazer a requisição
-            const response = await fetch(`http://localhost:3001/acoes/${ticker.toUpperCase()}`, {
+            const response = await fetch(`${API_BASE_URL}/acoes/${ticker.toUpperCase()}`, {
                 method: 'DELETE'
             });
             if (response.ok) {
