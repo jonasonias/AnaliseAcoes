@@ -29,4 +29,17 @@ router.get('/pl/:ticker', async (req, res) => {
     }
 });
 
+router.get('/peg_ratio/:ticker', async (req, res) => {
+    const { ticker } = req.params;
+    try {
+        const plData = await Mult.findOne(ticker, 'peg_ratio');
+        if (!plData) {
+            return res.status(404).send('Dados não encontrados');
+        }
+        res.json(plData);
+    } catch (err) {
+        res.status(500).send('Erro ao obter dados históricos');
+    }
+});
+
 module.exports = router;

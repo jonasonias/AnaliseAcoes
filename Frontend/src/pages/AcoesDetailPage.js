@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import GetAcao from '../components/Acoes/GetAcao';
 import DY from '../components/Multiplos/DY';
 import PL from '../components/Multiplos/PL';
+import PegRatio from '../components/Multiplos/PegRatio';
 
 const AcoesDetailPage = () => {
   const { code } = useParams(); // Obtém o parâmetro 'code' da URL
@@ -16,6 +17,8 @@ const AcoesDetailPage = () => {
       <DY ticker={code} />
       
       <PL ticker={code} /> 
+
+      <PegRatio ticker={code} />
 
     </div>
   );
