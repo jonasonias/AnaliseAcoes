@@ -37,6 +37,50 @@ CREATE TABLE public.acoes (
 ALTER TABLE public.acoes OWNER TO postgres;
 
 --
+-- Name: acoes_atual; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE public.acoes_atual (
+    ticker character varying NOT NULL,
+    price numeric,
+    companyname character varying,
+    p_l numeric,
+    p_vp numeric,
+    p_ebit numeric,
+    p_ativo numeric,
+    ev_ebit numeric,
+    margembruta numeric,
+    margemebit numeric,
+    margemliquida numeric,
+    p_sr numeric,
+    p_capitalgiro numeric,
+    p_ativocirculante numeric,
+    giroativos numeric,
+    roe numeric,
+    roa numeric,
+    roic numeric,
+    dividaliquidapatrimonioliquido numeric,
+    dividaliquidaebit numeric,
+    pl_ativo numeric,
+    passivo_ativo numeric,
+    liquidezcorrente numeric,
+    peg_ratio numeric,
+    receitas_cagr5 numeric,
+    liquidezmediadiaria numeric,
+    vpa numeric,
+    lpa numeric,
+    valormercado numeric,
+    sectorname character varying,
+    subsectorname character varying,
+    segmentname character varying,
+    lucros_cagr5 numeric,
+    dy numeric
+);
+
+
+ALTER TABLE public.acoes_atual OWNER TO postgres;
+
+--
 -- Name: cagr_lucros5anos; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -894,626 +938,1254 @@ ALTER TABLE ONLY public.users ALTER COLUMN id SET DEFAULT nextval('public.users_
 --
 
 COPY public.acoes (ticker, nome, setordeatuacao, subsetordeatuacao, segmentodeatuacao, valordemercado) FROM stdin;
-ABCB4	Banco ABC Brasil SA	Financeiro e Outros	Intermediários Financeiros	Bancos	4322843056.00
-AALR3	Allianca Saude e Participacoes SA	Saúde	Serv.Méd.Hospit..Análises e Diagnósticos	Serv.Méd.Hospit..Análises e Diagnósticos	1117867111
-AMBP3	Ambipar Participacoes e Empreendmnts SA	Utilidade Pública	Água e Saneamento	Água e Saneamento	1620625688
-ABEV3	Ambev SA	Consumo não Cíclico	Bebidas	Cervejas e Refrigerantes	204957371025
-ADHM3	Advanced Digital Health Medicina Preventiva	Saúde	Serv.Méd.Hospit..Análises e Diagnósticos	Serv.Méd.Hospit..Análises e Diagnósticos	25439770
-AERI3	Aeris ndstr  Cmrc d qpmnts pr Grc d nrg	Bens Industriais	Máquinas e Equipamentos	Máq. e Equip. Industriais	635957168.00
-AESB3	Aes Brasil Energia SA	Utilidade Pública	Energia Elétrica	Energia Elétrica	6115581480.00
-AFLT3	Afluente Transmissao de Energia Eltrc SA	Utilidade Pública	Energia Elétrica	Energia Elétrica	485752190.00
-AGRO3	BrasilAgro Braziln Agrclturl Real Est Co	Consumo não Cíclico	Agropecuária	Agricultura	2520878550.00
-AGXY3	Agrogalaxy Participacoes SA	Consumo não Cíclico	Agropecuária	Agricultura	666217457.00
-AHEB3	Sao Paulo Turismo SA	Consumo Cíclico	Viagens e Lazer	Produção de Eventos e Shows	136782554.00
-AHEB5	Sao Paulo Turismo SA Preference Shares Class A	Consumo Cíclico	Viagens e Lazer	Produção de Eventos e Shows	136782554.00
-AHEB6	Sao Paulo Turismo SA Preference Shares Class B	Consumo Cíclico	Viagens e Lazer	Produção de Eventos e Shows	136782554.00
-ALLD3	Allied Tecnologia SA	Consumo Cíclico	Comércio	Eletrodomésticos	545340405.00
-ALOS3	Allos SA	Financeiro e Outros	Exploração de Imóveis	Exploração de Imóveis	13275160705.00
-ALPA3	Alpargatas SA	Consumo Cíclico	Tecidos. Vestuário e Calçados	Calçados	5870899594.00
-ALPA4	Alpargatas SA Preference Shares	Consumo Cíclico	Tecidos. Vestuário e Calçados	Calçados	5870899594.00
-ALPK3	Allpark Empreendimentos Prtcpcs Srvcs SA	Bens Industriais	Serviços	Serviços Diversos	907024192.00
 ALSC3	Aliansce Shopping Centers	Financeiro e Outros	Exploração de Imóveis	Exploração de Imóveis	5694242308.00
-ALUP11	Alupar Investimento SA Unit	Utilidade Pública	Energia Elétrica	Energia Elétrica	8606381960.00
-ALUP3	Alupar Investimento SA	Utilidade Pública	Energia Elétrica	Energia Elétrica	8606381960.00
-ALUP4	Alupar Investimento SA Preference Shares	Utilidade Pública	Energia Elétrica	Energia Elétrica	8606381960.00
-AMAR3	Marisa Lojas SA	Consumo Cíclico	Comércio	Tecidos. Vestuário e Calçados	170735769.00
-AMER3	Americanas SA - Em Recuperacao Judicial	Consumo Cíclico	Comércio	Produtos Diversos	749099487.00
 ANDG3B	Andrade Gutierrez Concessoes	Financeiro e Outros	Holdings Diversificadas	Holdings Diversificadas	1651867986.00
 ANDG4B	Andrade Gutierrez Concessoes	Financeiro e Outros	Holdings Diversificadas	Holdings Diversificadas	1651867986.00
-ANIM3	Anima Holding SA	Consumo Cíclico	Diversos	Serviços Educacionais	1078329709.00
-APER3	Alper Consultoria e Corretora deSegursSA	Financeiro e Outros	Previdência e Seguros	Corretoras de Seguros	377696409.00
-APTI3	Siderurgica JL Aliperti SA	Consumo não Cíclico	Agropecuária	Agricultura	44442750.00
-APTI4	Siderurgica JL Aliperti SA Preference Shares	Consumo não Cíclico	Agropecuária	Agricultura	44442750.00
-ARML3	Armac Locacao Logistica e Servicos SA	Bens Industriais	Máquinas e Equipamentos	Máq. e Equip. Industriais	4342501315.00
-ARZZ3	Arezzo Industria E Comercio SA	Consumo Cíclico	Comércio	Tecidos. Vestuário e Calçados	6468450926.00
-ASAI3	Sendas Distribuidora SA	Consumo não Cíclico	Comércio e Distribuição	Alimentos	15098232090.00
-ATMP3	ATMA Participacoes SA - em Recuprc Jdcl	Bens Industriais	Serviços	Serviços Diversos	85473139.00
-ATOM3	ATOM Empreendimentos e Participacoes SA	Financeiro e Outros	Outros	Outros	46419551.00
-AURA33	Aura Minerals Bdr	Materiais Básicos	Mineração	Minerais Metálicos	2274370089.00
-AURE3	Auren Energia SA	Utilidade Pública	Energia Elétrica	Energia Elétrica	13480000000.00
-AVLL3	Alphaville SA	Consumo Cíclico	Construção Civil	Incorporações	117322373.00
-AZEV3	Azevedo & Travassos SA	Bens Industriais	Construção e Engenharia	Construção Pesada	170478110.00
-AZEV4	Azevedo & Travassos SA Preference Shares	Bens Industriais	Construção e Engenharia	Construção Pesada	170478110.00
-AZUL4	Azul SA	Bens Industriais	Transporte	Transporte Aéreo	4528567750.00
-B3SA3	B3 SA Brasil Bolsa Balcao	Financeiro e Outros	Serviços Financeiros Diversos	Serviços Financeiros Diversos	672676
-BAHI3	Bahema Educacao SA	Consumo Cíclico	Diversos	Serviços Educacionais	237515238.00
-BALM3	Baumer SA	Saúde	Equipamentos	Equipamentos	98588000.00
-BALM4	Baumer SA Preference Shares	Saúde	Equipamentos	Equipamentos	98588000.00
-BAUH4	Excelsior Alimentos SA Preference Shares	Consumo não Cíclico	Alimentos Processados	Carnes e Derivados	370255540.00
-BAZA3	Banco da Amazonia SA	Financeiro e Outros	Intermediários Financeiros	Bancos	4427485719.00
-BBAS3	Banco do Brasil SA	Financeiro e Outros	Intermediários Financeiros	Bancos	139345229683.00
-BBDC3	Banco Bradesco SA	Financeiro e Outros	Intermediários Financeiros	Bancos	141685468692.00
-BBDC4	Banco Bradesco SA Preference Shares	Financeiro e Outros	Intermediários Financeiros	Bancos	141685468692.00
-BBML3	BBM Logistica SA	Bens Industriais	Serviços	Serviços Diversos	160451699192.00
-BBSE3	BB Seguridade Participacoes SA	Financeiro e Outros	Previdência e Seguros	Seguradoras	62600000000.00
-BDLL3	Bardella SA Industrias Mecanicas	Bens Industriais	Máquinas e Equipamentos	Máq. e Equip. Industriais	14510788.00
-BDLL4	Bardella SA Industrias Mecanicas Preference Shares	Bens Industriais	Máquinas e Equipamentos	Máq. e Equip. Industriais	14510788.00
-BEEF11	Minerva SA	Consumo não Cíclico	Alimentos Processados	Carnes e Derivados	4627499561.00
-BEEF3	Minerva SA	Consumo não Cíclico	Alimentos Processados	Carnes e Derivados	4627499561.00
-BEES3	Banestes SA Banco do Estado Esprt Santo	Financeiro e Outros	Intermediários Financeiros	Bancos	2743944558.00
-BEES4	Banestes SA Banco do Estado Esprt Santo Preference Shares	Financeiro e Outros	Intermediários Financeiros	Bancos	2743944558.00
 BFRE11	Brazilian Finance e Real Estate	Financeiro e Outros	Serviços Financeiros Diversos	Gestão de Recursos e Investimentos	0.00
 BFRE12	Brazilian Finance e Real Estate	Financeiro e Outros	Serviços Financeiros Diversos	Gestão de Recursos e Investimentos	0.00
-BGIP3	Banco do Estado de Sergipe SA	Financeiro e Outros	Intermediários Financeiros	Bancos	414703689.00
-BGIP4	Banco do Estado de Sergipe SA Preference Shares	Financeiro e Outros	Intermediários Financeiros	Bancos	414703689.00
-BHIA3	Grupo Casas Bahia SA	Consumo Cíclico	Comércio	Eletrodomésticos	1093457063.00
-BIDI11	Banco Inter	Financeiro e Outros	Intermediários Financeiros	Bancos	8991139765.00
-BIDI3	Banco Inter	Financeiro e Outros	Intermediários Financeiros	Bancos	8991139765.00
-BIDI4	Banco Inter	Financeiro e Outros	Intermediários Financeiros	Bancos	8991139765.00
-BIOM3	Biomm SA	Saúde	Comércio e Distribuição	Medicamentos e Outros Produtos	417880520.00
-BLAU3	Blau Farmaceutica SA	Saúde	Medicamentos e Outros Produtos	Medicamentos e Outros Produtos	2816484842.00
-BLUT3	Blue Tech Solutions	Financeiro e Outros	Holdings Diversificadas	Holdings Diversificadas	14115600.00
-BLUT4	Blue Tech Solutions	Financeiro e Outros	Holdings Diversificadas	Holdings Diversificadas	14115600.00
-BMEB3	Banco Mercantil do Brasil SA	Financeiro e Outros	Intermediários Financeiros	Bancos	1361157991.00
-BMEB4	Banco Mercantil do Brasil SA Preference Shares	Financeiro e Outros	Intermediários Financeiros	Bancos	1361157991.00
-BMGB4	Banco BMG Sa	Financeiro e Outros	Intermediários Financeiros	Bancos	1341434545.00
-BMIN3	Banco Mercantil de Investimentos SA	Financeiro e Outros	Intermediários Financeiros	Bancos	109787350.00
-BMIN4	Banco Mercantil de Investimentos SA Preference Shares	Financeiro e Outros	Intermediários Financeiros	Bancos	109787350.00
-BMKS3	Bicicletas Monark SA	Consumo Cíclico	Viagens e Lazer	Bicicletas	140108475.00
-BMOB3	Bemobi Mobile Tech SA	Tecnologia da Informação	Programas e Serviços	Programas e Serviços	1070145412.00
-BNBR3	Banco do Nordeste do Brasil SA	Financeiro e Outros	Intermediários Financeiros	Bancos	7954811834.00
-BOAS3	Boa Vista Serviços SA	Financeiro e Outros	Serviços Financeiros Diversos	Serviços Financeiros Diversos	4212250618.00
-BOBR3	Bombril SA	Consumo não Cíclico	Produtos de Uso Pessoal e de Limpeza	Produtos de Limpeza	195402195.00
-BOBR4	Bombril SA Preference Shares	Consumo não Cíclico	Produtos de Uso Pessoal e de Limpeza	Produtos de Limpeza	195402195.00
-BPAC11	Banco BTG Pactual SA Unit	Financeiro e Outros	Intermediários Financeiros	Bancos	114102355953.00
-BPAC3	Banco BTG Pactual SA	Financeiro e Outros	Intermediários Financeiros	Bancos	114102355953.00
-BPAC5	Banco BTG Pactual SA Preference Shares Class A	Financeiro e Outros	Intermediários Financeiros	Bancos	114102355953.00
-BPAN4	Banco Pan SA	Financeiro e Outros	Intermediários Financeiros	Bancos	9154302744.00
-BPAR3	Banco do Estado do Para SA	Financeiro e Outros	Intermediários Financeiros	Bancos	1733606633.00
-BPAT33	Banco Patagonia	Financeiro e Outros	Intermediários Financeiros	Bancos	1533769021.00
-BPHA3	Brasil Pharma	Saúde	Comércio e Distribuição	Medicamentos e Outros Produtos	70110299.00
-BRAP3	Bradespar SA	Materiais Básicos	Mineração	Minerais Metálicos	8981317856.00
-BRAP4	Bradespar SA Preference Shares	Materiais Básicos	Mineração	Minerais Metálicos	8981317856.00
-BRBI11	BR Advisory Partners Participacoes SA	Financeiro e Outros	Intermediários Financeiros	Bancos	1228449737.00
-BRBI3	BR Advisory Partners Participacoes SA	Financeiro e Outros	Intermediários Financeiros	Bancos	1228449737.00
-BRBI4	BR Advisory Partners Participacoes SA	Financeiro e Outros	Intermediários Financeiros	Bancos	1228449737.00
-BRFS3	BRF SA	Consumo não Cíclico	Alimentos Processados	Carnes e Derivados	18843700355.00
-BRGE11	Consorcio Alfa de Administracao SA Preference Shares Series E	Financeiro e Outros	Previdência e Seguros	Seguradoras	810799956.00
-BRGE12	Consorcio Alfa de Administracao SA Preference Shares Series F	Financeiro e Outros	Previdência e Seguros	Seguradoras	810799956.00
-BRGE3	Consorcio Alfa de Administracao SA	Financeiro e Outros	Previdência e Seguros	Seguradoras	810799956.00
-BRGE5	Consorcio Alfa de Administracao SA Preference Shares Series A	Financeiro e Outros	Previdência e Seguros	Seguradoras	810799956.00
-BRGE6	Consorcio Alfa De Administracao Series B Pref Shs	Financeiro e Outros	Previdência e Seguros	Seguradoras	810799956.00
-BRGE7	Consorcio Alfa De Administracao Series C Pref Shs	Financeiro e Outros	Previdência e Seguros	Seguradoras	810799956.00
-BRGE8	Consorcio Alfa De Administracao Series D Pref Shs	Financeiro e Outros	Previdência e Seguros	Seguradoras	810799956.00
-CEPE6	CELPE	Utilidade Pública	Energia Elétrica	Energia Elétrica	8662392210.00
 BRIN3	BR Insurance	Financeiro e Outros	Previdência e Seguros	Corretoras de Seguros	765840712.00
-BRIT3	Brisanet Participacoes SA	Comunicações	Telecomunicações	Telecomunicações	1387703290.00
-BRIV3	Banco Alfa de Investimento SA	Financeiro e Outros	Intermediários Financeiros	Bancos	930538036.00
-BRIV4	Banco Alfa de Investimento SA Preference Shares	Financeiro e Outros	Intermediários Financeiros	Bancos	930538036.00
-BRKM3	Braskem SA	Materiais Básicos	Químicos	Petroquímicos	13615594226.00
-BRKM5	Braskem SA Preference Shares Series A	Materiais Básicos	Químicos	Petroquímicos	13615594226.00
-BRKM6	Braskem SA Preference Shares Series B	Materiais Básicos	Químicos	Petroquímicos	13615594226.00
-BRML3	BR Malls	Financeiro e Outros	Exploração de Imóveis	Exploração de Imóveis	6841542282.00
-BRPR3	BR Properties	Financeiro e Outros	Exploração de Imóveis	Exploração de Imóveis	60919545.00
-BRQB3	BRQ Solucoes em Informatica SA	Tecnologia da Informação	Programas e Serviços	Programas e Serviços	0.00
-BRSR3	Banco do Estado do Rio Grande do Sul SA	Financeiro e Outros	Intermediários Financeiros	Bancos	4676975482.00
-BRSR5	Banco do Estado do Rio Grande do Sul A Pref Shs	Financeiro e Outros	Intermediários Financeiros	Bancos	4676975482.00
-BRSR6	Banco do Estado do Rio Grande do Sul B Pref Shs	Financeiro e Outros	Intermediários Financeiros	Bancos	4676975482.00
-BSEV3	Biosev	Consumo não Cíclico	Alimentos Processados	Açucar e Alcool	9183864834.00
-BSLI3	BRB-Banco de Brasilia SA	Financeiro e Outros	Intermediários Financeiros	Bancos	4746762400.00
-BSLI4	BRB-Banco de Brasilia SA Preference Shares	Financeiro e Outros	Intermediários Financeiros	Bancos	4746762400.00
-BTTL4	Embpar Participações SA	Financeiro e Outros	Holdings Diversificadas	Holdings Diversificadas	227961113.00
-CALI3	Construtora Adolpho Lindenberg SA	Consumo Cíclico	Construção Civil	Incorporações	61023924.00
-CALI4	Construtora Adolpho Lindenberg SA	Consumo Cíclico	Construção Civil	Incorporações	61023924.00
-CAMB3	Cambuci Ord Shs	Consumo Cíclico	Tecidos. Vestuário e Calçados	Calçados	422750800.00
-CAMB4	Cambuci Ord Shs	Consumo Cíclico	Tecidos. Vestuário e Calçados	Calçados	422750800.00
-CAML3	Camil Alimentos SA	Consumo não Cíclico	Alimentos Processados	Alimentos Diversos	2583000000.00
-CASH3	Meliuz SA	Tecnologia da Informação	Programas e Serviços	Programas e Serviços	649203885.00
-CASN3	Companhia Catarinense d Ags e Smnt CASAN	Utilidade Pública	Água e Saneamento	Água e Saneamento	9343450887.00
-CASN4	Companhia Catarinense d Ags e Smnt CASAN Preference Shares	Utilidade Pública	Água e Saneamento	Água e Saneamento	9343450887.00
-CATA3	Companhia Industrial Cataguases	Consumo Cíclico	Tecidos. Vestuário e Calçados	Fios e Tecidos	14940355.00
-CATA4	Companhia Industrial Cataguases Preference Shares	Consumo Cíclico	Tecidos. Vestuário e Calçados	Fios e Tecidos	14940355.00
-CBAV3	Companhia Brasileira de Aluminio	Materiais Básicos	Mineração	Minerais Metálicos	2502499999.00
-CBEE3	Ampla Energia e Servicos SA	Utilidade Pública	Energia Elétrica	Energia Elétrica	3603148815.00
-CCRO3	CCR SA	Bens Industriais	Transporte	Exploração de Rodovias	25209600000.00
-CCXC3	CCX	Financeiro e Outros	Outros	Outros	1973426.00
-CEAB3	C&A Modas SA	Consumo Cíclico	Comércio	Tecidos. Vestuário e Calçados	1781656493.00
-CEBR3	Companhia Energetica de Brasilia CEB	Utilidade Pública	Energia Elétrica	Energia Elétrica	1096789973.00
-CEBR5	Companhia Energetica de Brasilia CEB Preference Shares Series A	Utilidade Pública	Energia Elétrica	Energia Elétrica	1096789973.00
-CEBR6	Companhia Energetica de Brasilia CEB Preference Shares Series B	Utilidade Pública	Energia Elétrica	Energia Elétrica	1096789973.00
-CEDO3	Companhia de Fc  Tcds Cdr Cchr	Consumo Cíclico	Tecidos. Vestuário e Calçados	Fios e Tecidos	174419235.00
-CEDO4	Companhia de Fc  Tcds Cdr Cchr Preference Shares	Consumo Cíclico	Tecidos. Vestuário e Calçados	Fios e Tecidos	174419235.00
-CEEB3	Companhia de ltrcdd d std d Bh Clb	Utilidade Pública	Energia Elétrica	Energia Elétrica	12228688374.00
-CEEB5	Companhia de Eletrecidade do Estado da Bahia COELBA Pref Shs	Utilidade Pública	Energia Elétrica	Energia Elétrica	12228688374.00
-CEEB6	Companhia de Eletrecidade do Estado da Bahia COELBA Pref Shs	Utilidade Pública	Energia Elétrica	Energia Elétrica	12228688374.00
-CEED3	Companhia Estadual de Distribuicao	Utilidade Pública	Energia Elétrica	Energia Elétrica	2522243225.00
-CEED4	Companhia Estadual de Distribuicao Preference Shares	Utilidade Pública	Energia Elétrica	Energia Elétrica	2522243225.00
-CEGR3	Companhia Distribuidora d Gs d RdJnr CEG	Utilidade Pública	Gás	Gás	22931204490.00
-CEPE3	CELPE	Utilidade Pública	Energia Elétrica	Energia Elétrica	8662392210.00
-CEPE5	CELPE	Utilidade Pública	Energia Elétrica	Energia Elétrica	8662392210.00
-CESP3	CESP	Utilidade Pública	Energia Elétrica	Energia Elétrica	8302192834.00
-CESP5	CESP	Utilidade Pública	Energia Elétrica	Energia Elétrica	8302192834.00
-CESP6	CESP	Utilidade Pública	Energia Elétrica	Energia Elétrica	8302192834.00
-CGAS3	Companhia de Gas de Sao Paulo - COMGAS	Utilidade Pública	Gás	Gás	15866689882.00
-CGAS5	Companhia de Gas de Sao Paulo - COMGAS Preference Shares	Utilidade Pública	Gás	Gás	15866689882.00
-CGRA3	Grazziotin SA	Consumo Cíclico	Comércio	Tecidos. Vestuário e Calçados	519340641.00
-CGRA4	Grazziotin SA Preference Shares	Consumo Cíclico	Comércio	Tecidos. Vestuário e Calçados	519340641.00
-CIEL3	CIELO SA Instituicao de Pagamento	Financeiro e Outros	Serviços Financeiros Diversos	Serviços Financeiros Diversos	10242392780.00
-CLSA3	Clear Sale SA	Tecnologia da Informação	Programas e Serviços	Programas e Serviços	742307937.00
-CLSC3	Centrais Eletricas d Snt Ctrn S Clsc	Utilidade Pública	Energia Elétrica	Energia Elétrica	2348313899.00
-CLSC4	Centrais Eletricas d Snt Ctrn S Clsc Preference Shares	Utilidade Pública	Energia Elétrica	Energia Elétrica	2348313899.00
-CMIG3	Energy of Minas Gerais Co	Utilidade Pública	Energia Elétrica	Energia Elétrica	31231497612.00
-CMIG4	Energy of Minas Gerais Co Preference Shares	Utilidade Pública	Energia Elétrica	Energia Elétrica	31231497612.00
-CMIN3	CSN Mineracao SA	Materiais Básicos	Mineração	Minerais Metálicos	31650405095.00
-CMSA3	Cims SA	Financeiro e Outros	Outros	Outros	0.00
-CMSA4	Cims SA Preference Shares	Financeiro e Outros	Outros	Outros	0.00
-CNSY3	Cinesystem SA	Consumo Cíclico	Mídia	Produção e Difusão de Filmes e Programas	935885084.00
-COCE3	Companhia Energetica do Ceara	Utilidade Pública	Energia Elétrica	Energia Elétrica	2974901259.00
-COCE5	Companhia Energetica do Ceara Preference Shares Series A	Utilidade Pública	Energia Elétrica	Energia Elétrica	2974901259.00
-COCE6	Companhia Energetica do Ceara Preference Shares Series B	Utilidade Pública	Energia Elétrica	Energia Elétrica	2974901259.00
-COGN3	Cogna Educacao SA	Consumo Cíclico	Diversos	Serviços Educacionais	4897942208.00
-CORR3	Correa Ribeiro SA Comercio e Industria	Financeiro e Outros	Exploração de Imóveis	Exploração de Imóveis	1278895.00
-CORR4	Correa Ribeiro SA Comercio e Industria Preference Shares	Financeiro e Outros	Exploração de Imóveis	Exploração de Imóveis	1278895.00
-CPFE3	CPFL Energia SA	Utilidade Pública	Energia Elétrica	Energia Elétrica	40455653388.00
-CPLE11	Companhia Paranaense de Energia	Utilidade Pública	Energia Elétrica	Energia Elétrica	26320320655.00
-CPLE3	Companhia Paranaense de Energia	Utilidade Pública	Energia Elétrica	Energia Elétrica	26320320655.00
-CPLE5	Companhia Paranaense de Energia Preference Shares	Utilidade Pública	Energia Elétrica	Energia Elétrica	26320320655.00
-CPLE6	Cia Paranaense De Energia Copel Pref Shs	Utilidade Pública	Energia Elétrica	Energia Elétrica	26320320655.00
-CPRE3	CPFL Energias Renováveis	Utilidade Pública	Energia Elétrica	Energia Elétrica	10824655048.00
-CREM3	Cremer	Saúde	Comércio e Distribuição	Medicamentos e Outros Produtos	465122474.00
-CRFB3	Atacadao SA	Consumo não Cíclico	Comércio e Distribuição	Alimentos	22658469783.00
-CRIV3	Financeira Alfa SA CFI	Financeiro e Outros	Intermediários Financeiros	Soc. Crédito e Financiamento	580722825.00
-CRIV4	Financeira Alfa SA CFI Preference Shares	Financeiro e Outros	Intermediários Financeiros	Soc. Crédito e Financiamento	580722825.00
-CRPG3	Tronox Pigmentos do Brasil SA	Materiais Básicos	Químicos	Químicos Diversos	1217778880.00
-CRPG5	Tronox Pigmentos do Brasil SA Preference Shares Series A	Materiais Básicos	Químicos	Químicos Diversos	1217778880.00
-CRPG6	Tronox Pigmentos do Brasil SA Preference Shares Series B	Materiais Básicos	Químicos	Químicos Diversos	1217778880.00
-CSAB3	Cia Seguros Aliança da Bahia	Financeiro e Outros	Previdência e Seguros	Seguradoras	301440000.00
-CSAB4	Cia Seguros Aliança da Bahia	Financeiro e Outros	Previdência e Seguros	Seguradoras	301440000.00
-CSAN3	Cosan SA	Petróleo. Gás e Biocombustíveis	Petróleo. Gás e Biocombustíveis	Exploração. Refino e Distribuição	32871204147.00
-CSED3	Cruzeiro do Sul Educacional SA	Consumo Cíclico	Diversos	Serviços Educacionais	1523252321.00
-CSMG3	Companhia de Saneamento d Mns Grs CPS MG	Utilidade Pública	Água e Saneamento	Água e Saneamento	6897790672.00
-CSNA3	Companhia Siderurgica Nacional SA	Materiais Básicos	Siderurgia e Metalurgia	Siderurgia	16841393127.00
-CSRN3	Companhia Enrgtca do Ro Grnd do Nrt Csrn	Utilidade Pública	Energia Elétrica	Energia Elétrica	4446580346.00
-CSRN5	Companhia Enrgtca do Ro Grnd do Nrt Csrn Preference Shares Series A	Utilidade Pública	Energia Elétrica	Energia Elétrica	4446580346.00
-CSRN6	Companhia Enrgtca do Ro Grnd do Nrt Csrn Preference Shares Series B	Utilidade Pública	Energia Elétrica	Energia Elétrica	4446580346.00
-CSUD3	CSU Digital SA	Bens Industriais	Serviços	Serviços Diversos	714362000.00
-CTCA3	CTC Centro de Tecnologia Canavieira SA	Consumo não Cíclico	Agropecuária	Agricultura	0.00
-CTKA3	Karsten SA	Consumo Cíclico	Tecidos. Vestuário e Calçados	Fios e Tecidos	106706294.00
-CTKA4	Karsten SA Preference Shares	Consumo Cíclico	Tecidos. Vestuário e Calçados	Fios e Tecidos	106706294.00
-CTNM3	Companhia de Tecidos Nrt d Mns COTEMINAS	Consumo Cíclico	Tecidos. Vestuário e Calçados	Fios e Tecidos	146849179.00
-CTNM4	Companhia de Tecidos Nrt d Mns COTEMINAS Preference Shares	Consumo Cíclico	Tecidos. Vestuário e Calçados	Fios e Tecidos	146849179.00
-CTSA3	Companhia Tecidos Santanense	Consumo Cíclico	Tecidos. Vestuário e Calçados	Fios e Tecidos	62605757.00
-CTSA4	Companhia Tecidos Santanense Preference Shares	Consumo Cíclico	Tecidos. Vestuário e Calçados	Fios e Tecidos	62605757.00
-CTSA8	Companhia Tecidos Santanense	Consumo Cíclico	Tecidos. Vestuário e Calçados	Fios e Tecidos	62605757.00
-CURY3	Cury Construtora E Incorporadora SA	Consumo Cíclico	Construção Civil	Incorporações	4769238938.00
-CVCB3	CVC Brasil Operadora e Agencia d Vgns SA	Consumo Cíclico	Viagens e Lazer	Viagens e Turismo	1398329021.00
-CXSE3	Caixa Seguridade Participacoes SA	Financeiro e Outros	Previdência e Seguros	Corretoras de Seguros	33540000000.00
-CYRE3	Cyrela Brazil Realty SA Emprdts e Prtpcs	Consumo Cíclico	Construção Civil	Incorporações	8062812256.00
-DASA3	Diagnosticos da America SA	Saúde	Serv.Méd.Hospit..Análises e Diagnósticos	Serv.Méd.Hospit..Análises e Diagnósticos	7896870364.00
-DESK3	Desktop SA	Comunicações	Telecomunicações	Telecomunicações	1824650411.00
-DEXP3	Dexxos Participacoes SA	Materiais Básicos	Químicos	Petroquímicos	930800583.00
-DEXP4	Dexxos Participacoes SA Preference Shares	Materiais Básicos	Químicos	Petroquímicos	930800583.00
-DIRR3	Direcional Engenharia SA	Consumo Cíclico	Construção Civil	Incorporações	3348550000.00
-DMMO11	Dommo Energia	Petróleo. Gás e Biocombustíveis	Petróleo. Gás e Biocombustíveis	Exploração. Refino e Distribuição	949254731
-DMMO3	Dommo Energia	Petróleo. Gás e Biocombustíveis	Petróleo. Gás e Biocombustíveis	Exploração. Refino e Distribuição	949254731
-DMVF3	D1000 Varejo Farma Participacoes SA	Saúde	Comércio e Distribuição	Medicamentos e Outros Produtos	222652505
-DOHL3	Dohler SA	Consumo Cíclico	Tecidos. Vestuário e Calçados	Fios e Tecidos	500927417
-DOHL4	Dohler SA Preference Shares	Consumo Cíclico	Tecidos. Vestuário e Calçados	Fios e Tecidos	500927417
-DOTZ3	Dotz SA	Tecnologia da Informação	Programas e Serviços	Programas e Serviços	138671770
-DTCY3	Dtcom Direct to Company S/A	Bens Industriais	Serviços	Serviços Diversos	82254212
-DTCY4	Dtcom Direct to Company S/A Preference Shares	Bens Industriais	Serviços	Serviços Diversos	82254212
-DXCO3	Dexco SA	Materiais Básicos	Madeira e Papel	Madeira	5784992034
-EALT3	Electro Aco Altona SA	Bens Industriais	Máquinas e Equipamentos	Máq. e Equip. Industriais	177232500
-EALT4	Electro Aco Altona SA Preference Shares	Bens Industriais	Máquinas e Equipamentos	Máq. e Equip. Industriais	177232500
-ECOR3	Ecorodovias Infraestrutura e Logistca SA	Bens Industriais	Transporte	Exploração de Rodovias	5514967054
-ECPR3	Encorpar	Consumo Cíclico	Tecidos. Vestuário e Calçados	Fios e Tecidos	171908947
-ECPR4	Encorpar	Consumo Cíclico	Tecidos. Vestuário e Calçados	Fios e Tecidos	171908947
-EEEL3	CEEE-GT	Utilidade Pública	Energia Elétrica	Energia Elétrica	2840511500
-EEEL4	CEEE-GT	Utilidade Pública	Energia Elétrica	Energia Elétrica	2840511500
-EGIE3	Engie Brasil Energia SA	Utilidade Pública	Energia Elétrica	Energia Elétrica	33453037340
-EKTR3	Elektro Redes SA	Utilidade Pública	Energia Elétrica	Energia Elétrica	6772119466
-EKTR4	Elektro Redes SA Preference Shares	Utilidade Pública	Energia Elétrica	Energia Elétrica	6772119466
-ELEK3	Elekeiroz	Materiais Básicos	Químicos	Petroquímicos	905051916
-ELEK4	Elekeiroz	Materiais Básicos	Químicos	Petroquímicos	905051916
-ELET3	Brazilian Electric Power Co	Utilidade Pública	Energia Elétrica	Energia Elétrica	89193411461
-ELET5	Brazilian Electric Power Co Preference Shares Series A	Utilidade Pública	Energia Elétrica	Energia Elétrica	89193411461
-ELET6	Brazilian Electric Power Co Preference Shares Series B	Utilidade Pública	Energia Elétrica	Energia Elétrica	89193411461
-ELMD3	Eletromidia SA	Comunicações	Mídia	Publicidade	2238340210
-ELPL3	Eletropaulo	Utilidade Pública	Energia Elétrica	Energia Elétrica	1640949623
-EMAE3	EMAE Empresa Metropltn de Agus e Enrg SA	Utilidade Pública	Energia Elétrica	Energia Elétrica	1685042256
-EMAE4	EMAE Empresa Metropltn de Agus e Enrg SA Preference Shares	Utilidade Pública	Energia Elétrica	Energia Elétrica	1685042256
-EMBR3	Embraer SA	Bens Industriais	Material de Transporte	Material Aeronáutico e de Defesa	13868910274
-ENAT3	Enauta Participacoes SA	Petróleo. Gás e Biocombustíveis	Petróleo. Gás e Biocombustíveis	Exploração. Refino e Distribuição	4367207449
-ENBR3	EDP Brasil	Utilidade Pública	Energia Elétrica	Energia Elétrica	13994459653
-ENEV3	Eneva SA	Utilidade Pública	Energia Elétrica	Energia Elétrica	18729645508
-ENGI11	Energisa SA Unit	Utilidade Pública	Energia Elétrica	Energia Elétrica	19632325207
-ENGI3	Energisa SA	Utilidade Pública	Energia Elétrica	Energia Elétrica	19632325207
-ENGI4	Energisa SA Preference Shares	Utilidade Pública	Energia Elétrica	Energia Elétrica	19632325207
-ENJU3	Enjoei SA	Tecnologia da Informação	Programas e Serviços	Programas e Serviços	328261553
+BRIT3	BRISANET PARTICIPAÇÕES S.A.	Comunicações	Telecomunicações	Telecomunicações	1877216748.88
+BRIV3	BCO ALFA DE INVESTIMENTO S.A.	Financeiro e Outros	Intermediários Financeiros	Bancos	1128165604.64
+BRIV4	BCO ALFA DE INVESTIMENTO S.A.	Financeiro e Outros	Intermediários Financeiros	Bancos	1128165604.64
+BRKM3	BRASKEM S.A	Materiais Básicos	Químicos	Petroquímicos	14414035917.98
+BRKM5	BRASKEM S.A	Materiais Básicos	Químicos	Petroquímicos	14414035917.98
+BRKM6	BRASKEM S.A	Materiais Básicos	Químicos	Petroquímicos	14414035917.98
+BRML3	BR MALLS PARTICIPACOES S.A.	Financeiro e Outros	Exploração de Imóveis	Exploração de Imóveis	6841542281.84
+BRPR3	BR PROPERTIES S.A.	Financeiro e Outros	Exploração de Imóveis	Exploração de Imóveis	60919545.44
+BRQB3	BRQ SOLUCOES EM INFORMATICA S.A.	Tecnologia da Informação	Programas e Serviços	Programas e Serviços	0
+BRSR3	BCO ESTADO DO RIO GRANDE DO SUL S.A	Financeiro e Outros	Intermediários Financeiros	Bancos	4654418349.51
+BRSR5	BCO ESTADO DO RIO GRANDE DO SUL S.A	Financeiro e Outros	Intermediários Financeiros	Bancos	4654418349.51
+BRSR6	BCO ESTADO DO RIO GRANDE DO SUL S.A	Financeiro e Outros	Intermediários Financeiros	Bancos	4654418349.51
+BSEV3	BIOSEV S.A.	Consumo não Cíclico	Alimentos Processados	Açucar e Alcool	9183864834
+BSLI3	BRB BCO DE BRASILIA S.A.	Financeiro e Outros	Intermediários Financeiros	Bancos	3523637425
 ENMA3B	CEMAR	Utilidade Pública	Energia Elétrica	Energia Elétrica	0
 ENMA6B	CEMAR	Utilidade Pública	Energia Elétrica	Energia Elétrica	0
-ENMT3	Energisa Mato Grosso Distrbdr de Enrg SA	Utilidade Pública	Energia Elétrica	Energia Elétrica	13900711520
-ENMT4	Energisa Mato Grosso Distrbdr de Enrg SA Preference Shares	Utilidade Pública	Energia Elétrica	Energia Elétrica	13900711520
-EPAR3	Embpar Participacoes SA	Financeiro e Outros	Holdings Diversificadas	Holdings Diversificadas	227663902
-EQPA3	Equatorial Para Dist De Energia Ord Shs	Utilidade Pública	Energia Elétrica	Energia Elétrica	14141191051
-EQPA5	Equatorial Para Distribuidra de Enrga SA	Utilidade Pública	Energia Elétrica	Energia Elétrica	14141191051
-EQPA6	Equatorial Para Dist Energia Prf Shs B	Utilidade Pública	Energia Elétrica	Energia Elétrica	14141191051
-EQPA7	Equatorial Para Dist Energia Prf Shs C	Utilidade Pública	Energia Elétrica	Energia Elétrica	14141191051.00
-EQTL3	Equatorial Energia SA	Utilidade Pública	Energia Elétrica	Energia Elétrica	38346223921.00
-ESPA3	MPM Corporeos SA	Consumo não Cíclico	Produtos de Uso Pessoal e de Limpeza	Produtos de Uso Pessoal	459007294.00
-ESTR3	Manufatura de Brinquedos Estrela SA	Consumo Cíclico	Viagens e Lazer	Brinquedos e Jogos	64668000.00
-ESTR4	Manufatura de Brinquedos Estrela SA Preference Shares	Consumo Cíclico	Viagens e Lazer	Brinquedos e Jogos	64668000.00
-ETER3	Eternit SA em Recuperacao Judicial	Bens Industriais	Construção e Engenharia	Produtos para Construção	543633860.00
-EUCA3	Eucatex SA Industria e Comercio	Materiais Básicos	Madeira e Papel	Madeira	1236650644.00
-EUCA4	Eucatex SA Industria e Comercio Preference Shares	Materiais Básicos	Madeira e Papel	Madeira	1236650644.00
-EVEN3	Even Construtora e Incorporadora S/A	Consumo Cíclico	Construção Civil	Incorporações	1402000000.00
-EZTC3	EZ TEC Empreendimentos e Participaces SA	Consumo Cíclico	Construção Civil	Incorporações	3668419110.00
-FBMC3	FIBAM	Materiais Básicos	Siderurgia e Metalurgia	Artefatos de Ferro e Aço	904254.00
-FBMC4	FIBAM	Materiais Básicos	Siderurgia e Metalurgia	Artefatos de Ferro e Aço	904254.00
-FESA3	Companhia de Ferro Ligas da Bah Frbs	Materiais Básicos	Siderurgia e Metalurgia	Siderurgia	4686259200.00
-FESA4	Companhia de Ferro Ligas da Bah Frbs Preference Shares	Materiais Básicos	Siderurgia e Metalurgia	Siderurgia	4686259200.00
-FHER3	Fertilizantes Heringer SA	Materiais Básicos	Químicos	Fertilizantes e Defensivos	407161067.00
 FIBR3	Fibria Celulose	Materiais Básicos	Madeira e Papel	Papel e Celulose	36712556310.00
-FIEI3	FICA Empreendimentos Imobiliarios SA	Consumo Cíclico	Construção Civil	Incorporações	34370351.00
-FIGE3	Investimentos Bemge SA	Financeiro e Outros	Outros	Outros	9497567.00
-FIGE4	Investimentos Bemge SA Preference Shares	Financeiro e Outros	Outros	Outros	9497567.00
-FIQE3	Unifique Telecomunicacoes S/A	Comunicações	Telecomunicações	Telecomunicações	1285276112.00
-FLEX3	Flex Relacionamentos Inteligentes	Bens Industriais	Serviços	Serviços Diversos	0
-FLRY3	Fleury SA	Saúde	Serv.Méd.Hospit..Análises e Diagnósticos	Serv.Méd.Hospit..Análises e Diagnósticos	9066955301.00
-FNCN3	Finansinos SA  credito financ e invest	Financeiro e Outros	Intermediários Financeiros	Soc. Crédito e Financiamento	13021337.00
-FRAS3	Fras Le SA	Bens Industriais	Material de Transporte	Material Rodoviário	4341862795.00
-FRIO3	Metalfrio Solutions SA	Bens Industriais	Máquinas e Equipamentos	Máq. e Equip. Industriais	209444454.00
-FRTA3	Pomi Frutas SA - em Recuperacao Judicial	Consumo não Cíclico	Agropecuária	Agricultura	4476861.00
-FTRT3B	Futuretel	Financeiro e Outros	Outros	Outros	0.00
-G2DI33	G2D Investments Ltd	Financeiro e Outros	Serviços Financeiros Diversos	Gestão de Recursos e Investimentos	219757701.00
-GBIO33	Biotoscana	Saúde	Comércio e Distribuição	Medicamentos e Outros Produtos	1108871982.00
-GEPA3	Rio Paranapanema Energia SA	Utilidade Pública	Energia Elétrica	Energia Elétrica	2433545703.00
-GEPA4	Rio Paranapanema Energia SA Preference Shares	Utilidade Pública	Energia Elétrica	Energia Elétrica	2433545703.00
 GETT11	GETNET	Financeiro e Outros	Serviços Financeiros Diversos	Serviços Financeiros Diversos	0
 GETT3	GETNET	Financeiro e Outros	Serviços Financeiros Diversos	Serviços Financeiros Diversos	0
 GETT4	GETNET	Financeiro e Outros	Serviços Financeiros Diversos	Serviços Financeiros Diversos	0
-GFSA3	Gafisa SA	Consumo Cíclico	Construção Civil	Incorporações	342870170.00
-GGBR3	Gerdau SA	Materiais Básicos	Siderurgia e Metalurgia	Siderurgia	38855851083.00
-GGBR4	Gerdau SA Preference Shares	Materiais Básicos	Siderurgia e Metalurgia	Siderurgia	38855851083.00
-GGPS3	GPS Participacoes e Empreendimentos SA	Bens Industriais	Transporte	Logística	11520998376.00
-GMAT3	Grupo Mateus SA	Consumo não Cíclico	Comércio e Distribuição	Alimentos	14095627984.00
-GNDI3	Notre Dame Intermedica	Saúde	Serv.Méd.Hospit..Análises e Diagnósticos	Serv.Méd.Hospit..Análises e Diagnósticos	41526443086.00
-GOAU3	Metalurgica Gerdau SA	Materiais Básicos	Siderurgia e Metalurgia	Siderurgia	11459222148.00
-GOAU4	Metalurgica Gerdau SA Preference Shares	Materiais Básicos	Siderurgia e Metalurgia	Siderurgia	11459222148.00
-GOLL4	Gol Linhas Aereas Inteligentes SA Preference Shares	Bens Industriais	Transporte	Transporte Aéreo	3450408569.00
-GPAR3	Companhia Celg de Participacoes Celgpar	Utilidade Pública	Energia Elétrica	Energia Elétrica	3983825100.00
-GPIV33	GP Investments Limited	Financeiro e Outros	Serviços Financeiros Diversos	Gestão de Recursos e Investimentos	127575390.00
-GRAO3	Humberg Agribrasil Cmrc E Exp De Grs Sa	Consumo não Cíclico	Agropecuária	Agricultura	0.00
-GRND3	Grendene SA	Consumo Cíclico	Tecidos. Vestuário e Calçados	Calçados	6125666400.00
-GSHP3	General Shopping e Outlets do Brasil SA	Financeiro e Outros	Exploração de Imóveis	Exploração de Imóveis	29895920.00
-GUAR3	Guararapes Confeccoes SA	Consumo Cíclico	Comércio	Tecidos. Vestuário e Calçados	2780544000.00
-GUAR4	Guararapes Confeccoes SA	Consumo Cíclico	Comércio	Tecidos. Vestuário e Calçados	2780544000.00
-HAGA3	Haga SA Industria e Comercio	Bens Industriais	Construção e Engenharia	Produtos para Construção	21102667.00
-HAGA4	Haga SA Industria e Comercio Preference Shares	Bens Industriais	Construção e Engenharia	Produtos para Construção	21102667.00
-HAPV3	Hapvida Participacoes e Investimentos SA	Saúde	Serv.Méd.Hospit..Análises e Diagnósticos	Serv.Méd.Hospit..Análises e Diagnósticos	32721270561.00
-HBOR3	Helbor Empreendimentos SA	Consumo Cíclico	Construção Civil	Incorporações	368090448.00
-HBRE3	HBR Realty Empreendimentos Imobiliars SA	Financeiro e Outros	Exploração de Imóveis	Exploração de Imóveis	515944905.00
-HBSA3	Hidrovias do Brasil SA	Bens Industriais	Transporte	Transporte Hidroviário	2904661696.00
-HBTS5	Companhia Habitasul de Participacoes Preference Shares	Financeiro e Outros	Exploração de Imóveis	Exploração de Imóveis	474951724.00
-HETA3	Hercules SA - Fabrica de Talheres	Consumo Cíclico	Utilidades Domésticas	Utensílios Domésticos	18532186.00
-HETA4	Hercules SA - Fabrica de Talheres Preference Shares	Consumo Cíclico	Utilidades Domésticas	Utensílios Domésticos	18532186.00
-HGTX3	CIA Hering	Consumo Cíclico	Tecidos. Vestuário e Calçados	Vestuário	6095022638.00
-HOOT3	Hoteis Othon SA -em Recuperacao Judicial	Consumo Cíclico	Hoteis e Restaurantes	Hotelaria	22104583.00
-HOOT4	Hoteis Othon SA -em Recuperacao Judicial Preference Shares	Consumo Cíclico	Hoteis e Restaurantes	Hotelaria	22104583.00
-HYPE3	Hypera SA	Saúde	Comércio e Distribuição	Medicamentos e Outros Produtos	20738197745.00
-IDVL3	Banco Indusval	Financeiro e Outros	Intermediários Financeiros	Bancos	224007574.00
-IDVL4	Banco Indusval	Financeiro e Outros	Intermediários Financeiros	Bancos	224007574.00
-IFCM3	Infracommerce CXaaS SA	Tecnologia da Informação	Programas e Serviços	Programas e Serviços	557763139.00
-IGBR3	IGB Eletrônica	Financeiro e Outros	Exploração de Imóveis	Exploração de Imóveis	220074791.00
-IGSN3	Igua Saneamento SA	Utilidade Pública	Água e Saneamento	Água e Saneamento	0.00
-IGTA3	Iguatemi Empresa de Shopping Centers	Financeiro e Outros	Exploração de Imóveis	Exploração de Imóveis	5758073079.00
-PATI3	Panatlantica SA	Materiais Básicos	Siderurgia e Metalurgia	Artefatos de Ferro e Aço	698139845.00
-IGTI11	Iguatemi SA Unit	Financeiro e Outros	Exploração de Imóveis	Exploração de Imóveis	5538366359.00
-IGTI3	Iguatemi SA	Financeiro e Outros	Exploração de Imóveis	Exploração de Imóveis	5538366359.00
-IGTI4	Iguatemi SA Preference Shares	Financeiro e Outros	Exploração de Imóveis	Exploração de Imóveis	5538366359.00
-INEP3	Inepr SA Indstr e Constrs em Rcprco Jdcl	Bens Industriais	Máquinas e Equipamentos	Máq. e Equip. Industriais	167401753.00
-INEP4	Inepr SA Indstr e Constrs em Rcprco Jdcl Preference Shares	Bens Industriais	Máquinas e Equipamentos	Máq. e Equip. Industriais	167401753.00
-INNT3	Inter Construtora e Incorporadora SA	Consumo Cíclico	Construção Civil	Incorporações	0.00
-INTB3	Intelbras SA IndustrdTlcmnccEltrncBrslr	Tecnologia da Informação	Computadores e Equipamentos	Computadores e Equipamentos	6398244978.00
-IRBR3	IRB-Brasil Resseguros SA	Financeiro e Outros	Previdência e Seguros	Seguradoras	3532373735.00
-ITEC3	Itautec	Tecnologia da Informação	Computadores e Equipamentos	Computadores e Equipamentos	443994659.00
-ITSA3	Itausa SA	Financeiro e Outros	Intermediários Financeiros	Bancos	90944558848.00
-ITSA4	Itausa SA Preference Shares	Financeiro e Outros	Intermediários Financeiros	Bancos	90944558848.00
-ITUB3	Itau Unibanco Holding SA	Financeiro e Outros	Intermediários Financeiros	Bancos	263435402597.00
-ITUB4	Itau Unibanco Holding SA Preference Shares	Financeiro e Outros	Intermediários Financeiros	Bancos	263435402597.00
-JALL3	Jalles Machado SA	Consumo não Cíclico	Alimentos Processados	Açucar e Alcool	2570999588.00
-JBSS3	JBS SA	Consumo não Cíclico	Alimentos Processados	Carnes e Derivados	47600777300.00
-JFEN3	Joao Fortes Engenharia S.A.	Consumo Cíclico	Construção Civil	Incorporações	44606418.00
-JHSF3	JHS F Participacoes SA	Consumo Cíclico	Construção Civil	Incorporações	3131704574.00
-JOPA3	Josapar Joaquim Oliveira SA Prtcpcs	Consumo não Cíclico	Alimentos Processados	Alimentos Diversos	223911091.00
-JOPA4	Josapar Joaquim Oliveira SA Prtcpcs Preference Shares	Consumo não Cíclico	Alimentos Processados	Alimentos Diversos	223911091.00
-JSLG3	JSL SA	Bens Industriais	Transporte	Transporte Rodoviário	2563558148.00
-KEPL3	Kepler Weber SA	Bens Industriais	Máquinas e Equipamentos	Máq. e Equip. Industriais	1894250170.00
-KLBN11	Klabin SA Unit	Materiais Básicos	Madeira e Papel	Papel e Celulose	25729948822.00
-KLBN3	Klabin SA	Materiais Básicos	Madeira e Papel	Papel e Celulose	25729948822.00
-KLBN4	Klabin SA Preference Shares	Materiais Básicos	Madeira e Papel	Papel e Celulose	25729948822.00
-KRSA3	Kora Saude Participacoes SA	Saúde	Serv.Méd.Hospit..Análises e Diagnósticos	Serv.Méd.Hospit..Análises e Diagnósticos	696013260.00
-LAME3	Lojas Americanas	Consumo Cíclico	Comércio	Produtos Diversos	12391135397.00
-LAME4	Lojas Americanas	Consumo Cíclico	Comércio	Produtos Diversos	12391135397.00
-LAND3	Terra Santa Propriedades Agricolas SA	Consumo não Cíclico	Agropecuária	Agricultura	1617575231.00
-LAVV3	Lavvi Empreendimentos Imobiliarios S/A	Consumo Cíclico	Construção Civil	Incorporações	1434651991.00
-LCAM3	Locamerica	Consumo Cíclico	Diversos	Aluguel de carros	12285815276.00
-LEVE3	Mahle Metal Leve SA	Consumo Cíclico	Automóveis e Motocicletas	Automóveis e Motocicletas	4216618290.00
-LHER3	Lojas Hering	Financeiro e Outros	Exploração de Imóveis	Exploração de Imóveis	0.00
-LHER4	Lojas Hering	Financeiro e Outros	Exploração de Imóveis	Exploração de Imóveis	0.00
-LIGT3	Light SA	Utilidade Pública	Energia Elétrica	Energia Elétrica	2052779835.00
-LINX3	Linx	Tecnologia da Informação	Programas e Serviços	Programas e Serviços	7083895104.00
-LIPR3	Eletrobras Participacoes S/A	Utilidade Pública	Energia Elétrica	Energia Elétrica	824954017.00
-LJQQ3	Lojas Quero-Quero SA	Consumo Cíclico	Comércio	Produtos Diversos	872772654.00
-LOGG3	Log Commercial Prprts  Prtcpcs S	Financeiro e Outros	Exploração de Imóveis	Exploração de Imóveis	2448754921.00
-LOGN3	Log-in Logistica Intermodal SA	Bens Industriais	Transporte	Transporte Hidroviário	4587470351.00
-LPSB3	LPS Brasil Consultoria de Imoveis SA	Financeiro e Outros	Exploração de Imóveis	Intermediação Imobiliária	293633716.00
-LREN3	Lojas Renner SA	Consumo Cíclico	Comércio	Tecidos. Vestuário e Calçados	12945770786.00
-LTEL3B	Litel Participacoes S/A	Materiais Básicos	Mineração	Minerais Metálicos	18664056854.00
-LUPA3	Lupatch S/A Em Rcprco Jdcl Em Rcprc Jdcl	Petróleo. Gás e Biocombustíveis	Petróleo. Gás e Biocombustíveis	Equipamentos e Serviços	93530728.00
-LUXM3	Trevisa Investimentos SA	Bens Industriais	Transporte	Transporte Hidroviário	202048560.00
-LUXM4	Trevisa Investimentos SA Preference Shares	Bens Industriais	Transporte	Transporte Hidroviário	202048560.00
-LVTC3	Livetech da Bahia Industria e Cmrc SA	Tecnologia da Informação	Programas e Serviços	Programas e Serviços	278697802.00
-LWSA3	LocaWeb Servicos de Internet SA	Tecnologia da Informação	Programas e Serviços	Programas e Serviços	4057153916.00
 MAGG3	Magnesita Refratários	Materiais Básicos	Materiais Diversos	Materiais Diversos	2972404571.00
-MAPT3	Cemepe Investimentos SA	Financeiro e Outros	Outros	Outros	18765213.00
-MAPT4	Cemepe Investimentos SA Preference Shares	Financeiro e Outros	Outros	Outros	18765213.00
-MATD3	Hospital Mater Dei Sa	Saúde	Serv.Méd.Hospit..Análises e Diagnósticos	Serv.Méd.Hospit..Análises e Diagnósticos	2871296956.00
-MBLY3	Mobly SA	Consumo Cíclico	Comércio	Produtos Diversos	425959616.00
-MDIA3	M Dias Brnc S ndstr  Cmrc d lmnts	Consumo não Cíclico	Alimentos Processados	Alimentos Diversos	11678550000.00
-MDNE3	Moura Dubeux Engenharia SA	Consumo Cíclico	Construção Civil	Incorporações	914473969.00
-MEAL3	International Meal Company Alimentcao SA	Consumo Cíclico	Hoteis e Restaurantes	Restaurante e Similares	504010373.00
 MEGA3	Serena Energia SA	Utilidade Pública	Energia Elétrica	Energia Elétrica	5797621476.00
-MELK3	Melnick Desenvolvimento Imobiliario SA	Consumo Cíclico	Construção Civil	Incorporações	829202751.00
-MERC3	Creditq Fncr SA - Crdt Fncmnt e Invstmnt	Financeiro e Outros	Intermediários Financeiros	Soc. Crédito e Financiamento	210356798.00
-MERC4	Creditq Fncr SA - Crdt Fncmnt e Invstmnt Preference Shares	Financeiro e Outros	Intermediários Financeiros	Soc. Crédito e Financiamento	210356798.00
-MGEL3	Mangels Industrial SA	Materiais Básicos	Siderurgia e Metalurgia	Artefatos de Ferro e Aço	101565881.00
-MGEL4	Mangels Industrial SA Preference Shares	Materiais Básicos	Siderurgia e Metalurgia	Artefatos de Ferro e Aço	101565881.00
-MGLU3	Magazine Luiza SA	Consumo Cíclico	Comércio	Eletrodomésticos	12485514669.00
-MILS3	Mills Locacao Servicos E Logistica SA	Bens Industriais	Serviços	Serviços Diversos	2672451088.00
-MLAS3	Multilaser Industrial SA	Tecnologia da Informação	Computadores e Equipamentos	Computadores e Equipamentos	1583640704.00
 MMAQ3	Minasmaquinas SA	Bens Industriais	Comércio	Material de Transporte	1115195.00
 MMAQ4	Minasmaquinas SA Preference Shares	Bens Industriais	Comércio	Material de Transporte	1115195.00
-MMXM3	MMX Mineração e Metálicos	Materiais Básicos	Mineração	Minerais Metálicos	90834562.00
-MNDL3	Mundial SA Produtos de Consumo	Consumo Cíclico	Tecidos. Vestuário e Calçados	Acessórios	105510260.00
-MNPR3	Minupar Participacoes SA	Consumo não Cíclico	Alimentos Processados	Carnes e Derivados	124251750.00
-MOAR3	Monteiro Aranha SA	Financeiro e Outros	Holdings Diversificadas	Holdings Diversificadas	4888114667.00
-MODL11	Banco Modal SA	Financeiro e Outros	Intermediários Financeiros	Bancos	1985844000.00
-MODL3	Banco Modal SA	Financeiro e Outros	Intermediários Financeiros	Bancos	1985844000.00
-MODL4	Banco Modal SA	Financeiro e Outros	Intermediários Financeiros	Bancos	1985844000.00
-MOSI3	Mosaico Tecnologia ao Consumidor SA	Tecnologia da Informação	Programas e Serviços	Programas e Serviços	1043149227.00
-MOVI3	Movida Participacoes SA	Consumo Cíclico	Diversos	Aluguel de carros	3673743152.00
 MPLU3	Multiplus	Consumo Cíclico	Diversos	Programas de Fidelização	4348208156.00
-MRFG3	Marfrig Global Foods SA	Consumo não Cíclico	Alimentos Processados	Carnes e Derivados	7180800000.00
-MRSA3B	MRS Logistica S/A	Bens Industriais	Transporte	Transporte Ferroviário	8292899031.00
-MRSA5B	MRS Logística	Bens Industriais	Transporte	Transporte Ferroviário	8292899031.00
-MRSA6B	MRS Logística	Bens Industriais	Transporte	Transporte Ferroviário	8292899031.00
-MRVE3	MRV Engenharia e Participacoes SA	Consumo Cíclico	Construção Civil	Incorporações	5349959703.00
-MSPA3	Companhia Melhoramentos de Sao Paulo	Consumo Cíclico	Mídia	Jornais. Livros e Revistas	291394491.00
-MSPA4	Companhia Melhoramentos de Sao Paulo Preference Shares	Consumo Cíclico	Mídia	Jornais. Livros e Revistas	291394491.00
-MSRO3	Maestro Locadora de Veiculos SA	Consumo Cíclico	Diversos	Aluguel de carros	18271898550.00
-MTIG3	Metalgrafica Iguaçu	Materiais Básicos	Embalagens	Embalagens	3700608.00
-MTIG4	Metalgrafica Iguaçu	Materiais Básicos	Embalagens	Embalagens	3700608.00
-MTRE3	Mitre Realty Emprndmnts e Prtcpcs SA	Consumo Cíclico	Construção Civil	Incorporações	426272525.00
-MTSA3	Metisa Metalurgica Timboense SA	Bens Industriais	Máquinas e Equipamentos	Máq. e Equip. Construção e Agrícolas	545171950.00
-MTSA4	Metisa Metalurgica Timboense SA Preference Shares	Bens Industriais	Máquinas e Equipamentos	Máq. e Equip. Construção e Agrícolas	545171950.00
-MULT3	Multiplan Empreendimentos Imobiliaris SA	Financeiro e Outros	Exploração de Imóveis	Exploração de Imóveis	15800011013.00
-MWET3	Wetzel SA	Bens Industriais	Material de Transporte	Material Rodoviário	20086109.00
-MWET4	Wetzel SA Preference Shares	Bens Industriais	Material de Transporte	Material Rodoviário	20086109.00
-MYPK3	Iochpe Maxion SA	Consumo Cíclico	Automóveis e Motocicletas	Automóveis e Motocicletas	1832337644.00
-NAFG3	Nadir Figueiredo	Consumo Cíclico	Utilidades Domésticas	Utensílios Domésticos	508315292.00
-NAFG4	Nadir Figueiredo	Consumo Cíclico	Utilidades Domésticas	Utensílios Domésticos	508315292.00
-NEMO3	Suzano Holding SA	Materiais Básicos	Madeira e Papel	Papel e Celulose	0.00
-NEMO5	Suzano Holding A Pref Shs	Materiais Básicos	Madeira e Papel	Papel e Celulose	0.00
-NEMO6	Suzano Holding B Pref Shs	Materiais Básicos	Madeira e Papel	Papel e Celulose	0.00
-NEOE3	Neoenergia SA	Utilidade Pública	Energia Elétrica	Energia Elétrica	21678418849.00
-NEXP3	Nexpe Participacoes SA	Financeiro e Outros	Exploração de Imóveis	Intermediação Imobiliária	14260406.00
-NGRD3	Neogrid Participacoes SA	Tecnologia da Informação	Programas e Serviços	Programas e Serviços	329354015.00
-NINJ3	Getninjas SA	Tecnologia da Informação	Programas e Serviços	Programas e Serviços	230110487.00
-NORD3	Nordon Industrias Metalurgicas SA	Bens Industriais	Máquinas e Equipamentos	Máq. e Equip. Industriais	36351958.00
-NRTQ3	Nortec Quimica SA	Saúde	Medicamentos e Outros Produtos	Medicamentos e Outros Produtos	0.00
-NTCO3	Natura &Co Holding SA	Consumo não Cíclico	Produtos de Uso Pessoal e de Limpeza	Produtos de Uso Pessoal	18861133698.00
-NUTR3	Nutriplant Industria e Comercio S/A	Materiais Básicos	Químicos	Fertilizantes e Defensivos	51918048.00
-ODER4	Conservas Oderich SA Preference Shares	Consumo não Cíclico	Alimentos Processados	Alimentos Diversos	1116407654.00
-ODPV3	Odontoprev SA	Saúde	Serv.Méd.Hospit..Análises e Diagnósticos	Serv.Méd.Hospit..Análises e Diagnósticos	6663097696.00
-OFSA3	Ouro Fino Saude Animal Participacoes SA	Saúde	Comércio e Distribuição	Medicamentos e Outros Produtos	1088151451.00
-OGXP3	Óleo e Gás Participações	Petróleo. Gás e Biocombustíveis	Petróleo. Gás e Biocombustíveis	Exploração. Refino e Distribuição	52747074.00
-OIBR3	Oi SA - em Recuperacao Judicial	Comunicações	Telecomunicações	Telecomunicações	458491688.00
-OIBR4	Oi SA - em Recuperacao Judicial Preference Shares	Comunicações	Telecomunicações	Telecomunicações	458491688.00
-OMGE3	Omega Geração	Utilidade Pública	Energia Elétrica	Energia Elétrica	5521562589.00
-ONCO3	Oncoclinicas do Brasil Srvcs Mdcs SA	Saúde	Serv.Méd.Hospit..Análises e Diagnósticos	Serv.Méd.Hospit..Análises e Diagnósticos	5433060459.00
-OPCT3	Oceanpact Servicos Maritimos Sa	Bens Industriais	Transporte	Transporte Hidroviário	1007796152.00
-ORVR3	Orizon Valorizacao de Residuos SA	Utilidade Pública	Água e Saneamento	Água e Saneamento	2940609015.00
-OSXB3	OSX BRASIL SA	Petróleo. Gás e Biocombustíveis	Petróleo. Gás e Biocombustíveis	Equipamentos e Serviços	18919708.00
-PARD3	Instituto Hermes Pardini	Saúde	Serv.Méd.Hospit..Análises e Diagnósticos	Serv.Méd.Hospit..Análises e Diagnósticos	5403493010.00
-PATI4	Panatlantica SA Preference Shares	Materiais Básicos	Siderurgia e Metalurgia	Artefatos de Ferro e Aço	698139845.00
-PCAR3	Companhia Brasileira de Distribuicao SA	Consumo não Cíclico	Comércio e Distribuição	Alimentos	1042736806.00
-PCAR4	Companhia Brasileira de Distribuicao SA	Consumo não Cíclico	Comércio e Distribuição	Alimentos	1042736806.00
-PDGR3	PDG Realty SA Emprendmnts e Prtcpacs	Consumo Cíclico	Construção Civil	Incorporações	8634596.00
-PDTC3	Padtec Holding SA	Financeiro e Outros	Serviços Financeiros Diversos	Serviços Financeiros Diversos	199620953.00
-PEAB3	Companhia de Participacoes Alianca Bahia	Financeiro e Outros	Holdings Diversificadas	Holdings Diversificadas	691152202.00
-PEAB4	Companhia de Participacoes Alianca Bahia Preference Shares	Financeiro e Outros	Holdings Diversificadas	Holdings Diversificadas	691152202.00
-PETR3	Petroleo Brasileiro SA Petrobras	Petróleo. Gás e Biocombustíveis	Petróleo. Gás e Biocombustíveis	Exploração. Refino e Distribuição	465099244981.00
-PETR4	Petroleo Brasileiro SA Petrobras Preference Shares	Petróleo. Gás e Biocombustíveis	Petróleo. Gás e Biocombustíveis	Exploração. Refino e Distribuição	465099244981.00
-PETZ3	Pet Center Comercio e Participacoes SA	Consumo Cíclico	Comércio	Produtos Diversos	1803841658.00
-PFRM3	Profarma Distribuidora de Produts Frm SA	Saúde	Comércio e Distribuição	Medicamentos e Outros Produtos	494012964.00
-PGMN3	Empreendimentos Pague Menos SA	Saúde	Comércio e Distribuição	Medicamentos e Outros Produtos	1706608449.00
-PINE3	Banco Pine SA	Financeiro e Outros	Intermediários Financeiros	Bancos	757459602.00
-PINE4	Banco Pine SA Preference Shares	Financeiro e Outros	Intermediários Financeiros	Bancos	757459602.00
-PLAS3	Plascar Participacoes Industriais SA	Consumo Cíclico	Automóveis e Motocicletas	Automóveis e Motocicletas	90705551.00
-PLPL3	Plano & Plano Desenvolvimento Imblr SA	Consumo Cíclico	Construção Civil	Incorporações	2077283520.00
-PMAM3	Paranapanema SA Em Recuperacao Judicial	Materiais Básicos	Siderurgia e Metalurgia	Artefatos de Cobre	185768474.00
-PNVL3	Dimed SA Distribuidora de Medicamentos	Saúde	Comércio e Distribuição	Medicamentos e Outros Produtos	1675205138.00
-PNVL4	Dimed SA Distribuidora de Medicamentos	Saúde	Comércio e Distribuição	Medicamentos e Outros Produtos	1675205138.00
-POMO3	Marcopolo SA	Bens Industriais	Material de Transporte	Material Rodoviário	5047865248.00
-POMO4	Marcopolo SA Preference Shares	Bens Industriais	Material de Transporte	Material Rodoviário	5047865248.00
-PORT3	Wilson Sons SA	Bens Industriais	Transporte	Serviços de Apoio e Armazenagem	6151044822.00
-POSI3	Positivo Tecnologia SA	Tecnologia da Informação	Computadores e Equipamentos	Computadores e Equipamentos	985510000.00
-POWE3	Focus Energia Holding SA	Utilidade Pública	Energia Elétrica	Energia Elétrica	977237930.00
-PPAR3	Polpar SA	Financeiro e Outros	Outros	Outros	2160800.00
-PPLA11	PPLA Participations Ltd Unit	Financeiro e Outros	Serviços Financeiros Diversos	Gestão de Recursos e Investimentos	10189091.00
-PRIO3	Prio SA	Petróleo. Gás e Biocombustíveis	Petróleo. Gás e Biocombustíveis	Exploração. Refino e Distribuição	40306820148.00
-PRNR3	Priner Servicos Industriais SA	Bens Industriais	Serviços	Serviços Diversos	430325322.00
-PSSA3	Porto Seguro SA	Financeiro e Outros	Previdência e Seguros	Seguradoras	17386699153.00
-PTBL3	PBG SA	Bens Industriais	Construção e Engenharia	Produtos para Construção	738771283.00
-PTCA11	Pratica Klimaquip Industria e ComercioSA	Bens Industriais	Máquinas e Equipamentos	Máq. e Equip. Industriais	0.00
-PTCA3	Pratica Klimaquip Industria e ComercioSA	Bens Industriais	Máquinas e Equipamentos	Máq. e Equip. Industriais	0.00
-PTNT3	Pettenati SA Industria Textil	Consumo Cíclico	Tecidos. Vestuário e Calçados	Fios e Tecidos	470539528.00
-PTNT4	Pettenati SA Industria Textil Preference Shares	Consumo Cíclico	Tecidos. Vestuário e Calçados	Fios e Tecidos	470539528.00
 QGEP3	QGEP Participações	Petróleo. Gás e Biocombustíveis	Petróleo. Gás e Biocombustíveis	Exploração. Refino e Distribuição	3864832399.00
-QUAL3	Qualicorp Consultoria e Cra de Ses SA	Saúde	Serv.Méd.Hospit..Análises e Diagnósticos	Serv.Méd.Hospit..Análises e Diagnósticos	880444408.00
-QUSW3	Quality Software SA	Tecnologia da Informação	Programas e Serviços	Programas e Serviços	0.00
-QVQP3B	524 Participações	Financeiro e Outros	Outros	Outros	0.00
-RADL3	Raia Drogasil S/A	Saúde	Comércio e Distribuição	Medicamentos e Outros Produtos	44977428496.00
-RAIL3	Rumo SA	Bens Industriais	Transporte	Transporte Ferroviário	41623259216.00
-RAIZ4	Raizen SA	Petróleo. Gás e Biocombustíveis	Petróleo. Gás e Biocombustíveis	Exploração. Refino e Distribuição	39650111324.00
-RANI3	Irani Papel e Embalagem SA	Materiais Básicos	Embalagens	Embalagens	2638508306.00
-RANI4	Irani Papel e Embalagem SA	Materiais Básicos	Embalagens	Embalagens	2638508306.00
-RAPT3	Randon SA Implementos e Participacoes	Bens Industriais	Material de Transporte	Material Rodoviário	3619423155.00
-RAPT4	Randon SA Implementos e Participacoes Preference Shares	Bens Industriais	Material de Transporte	Material Rodoviário	3619423155.00
-RCSL3	Recrusul SA	Bens Industriais	Material de Transporte	Material Rodoviário	150350242.00
-RCSL4	Recrusul SA Preference Shares	Bens Industriais	Material de Transporte	Material Rodoviário	150350242.00
-RDNI3	RNI Negocios Imobiliarios SA	Consumo Cíclico	Construção Civil	Incorporações	196088740.00
-RDOR3	Rede D'Or Sao Luiz SA	Saúde	Serv.Méd.Hospit..Análises e Diagnósticos	Serv.Méd.Hospit..Análises e Diagnósticos	56728670380.00
-RECV3	Petroreconcavo SA	Petróleo. Gás e Biocombustíveis	Petróleo. Gás e Biocombustíveis	Exploração. Refino e Distribuição	5994666215.00
-REDE3	Rede Energia Participacoes SA	Utilidade Pública	Energia Elétrica	Energia Elétrica	12303185270.00
-RENT3	Localiza Rent a Car SA	Consumo Cíclico	Diversos	Aluguel de carros	59009066722.00
-RLOG3	Cosan	Bens Industriais	Transporte	Transporte Ferroviário	10691215482.00
-RNEW11	Renova Energia SA Em Recuperaco Judicial Unit	Utilidade Pública	Energia Elétrica	Energia Elétrica	278590418.00
-RNEW3	Renova Energia SA Em Recuperaco Judicial	Utilidade Pública	Energia Elétrica	Energia Elétrica	278590418.00
-RNEW4	Renova Energia SA Em Recuperaco Judicial Preference Shares	Utilidade Pública	Energia Elétrica	Energia Elétrica	278590418.00
-ROMI3	Romi SA	Bens Industriais	Máquinas e Equipamentos	Máq. e Equip. Industriais	1102076839.00
-RPAD3	Alfa Holdings SA	Financeiro e Outros	Intermediários Financeiros	Bancos	657741344.00
-RPAD5	Alfa Holdings SA Preference Shares Series A	Financeiro e Outros	Intermediários Financeiros	Bancos	657741344.00
-RPAD6	Alfa Holdings SA Preference Shares Series B	Financeiro e Outros	Intermediários Financeiros	Bancos	657741344.00
-RPMG3	Refinaria de Petroleos d Mng S em Rcp Jd	Petróleo. Gás e Biocombustíveis	Petróleo. Gás e Biocombustíveis	Exploração. Refino e Distribuição	149598500.00
-RRRP3	3R Petroleum Oleo e Gas SA	Petróleo. Gás e Biocombustíveis	Petróleo. Gás e Biocombustíveis	Exploração. Refino e Distribuição	7825908469.00
-RSID3	Rossi Residencal SA - em Recuprco Judicl	Consumo Cíclico	Construção Civil	Incorporações	88000000.00
-RSUL3	Metalurgica Riosulense SA	Bens Industriais	Material de Transporte	Material Rodoviário	195201452.00
-RSUL4	Metalurgica Riosulense SA Preference Shares	Bens Industriais	Material de Transporte	Material Rodoviário	195201452.00
-SANB11	Banco Santander Brasil SA Unit	Financeiro e Outros	Intermediários Financeiros	Bancos	110265899105.00
-SANB3	Banco Santander Brasil SA	Financeiro e Outros	Intermediários Financeiros	Bancos	110265899105.00
-SANB4	Banco Santander Brasil SA Preference Shares	Financeiro e Outros	Intermediários Financeiros	Bancos	110265899105.00
-SAPR11	Companhia de Saneamento Parana SANEPAR Unit	Utilidade Pública	Água e Saneamento	Água e Saneamento	7084531473.00
-SAPR3	Companhia de Saneamento Parana SANEPAR	Utilidade Pública	Água e Saneamento	Água e Saneamento	7084531473.00
-SAPR4	Companhia de Saneamento Parana SANEPAR Preference Shares	Utilidade Pública	Água e Saneamento	Água e Saneamento	7084531473.00
-SBFG3	Grupo SBF SA	Consumo Cíclico	Comércio	Produtos Diversos	1944638060.00
-SBSP3	Companhia d Snmnt Bsc d std d S Pl SBSP	Utilidade Pública	Água e Saneamento	Água e Saneamento	41639421219.00
-SCAR3	Sao Carlos Empreendimentos e Part. SA	Financeiro e Outros	Exploração de Imóveis	Exploração de Imóveis	1327958337.00
-SEDU3	Somos Educação	Consumo Cíclico	Diversos	Serviços Educacionais	6238667820.00
-SEER3	Ser Educacional SA	Consumo Cíclico	Diversos	Serviços Educacionais	765893282.00
-SEQL3	Sequoia Logistica e Transportes SA	Bens Industriais	Transporte	Logística	111772134.00
-SGPS3	Springs Global Participacoes S A	Consumo Cíclico	Tecidos. Vestuário e Calçados	Fios e Tecidos	61500000.00
-SHOW3	T4f Entretenimento SA	Consumo Cíclico	Viagens e Lazer	Produção de Eventos e Shows	166509194.00
-SHUL3	Schulz SA	Bens Industriais	Máquinas e Equipamentos	Motores . Compressores e Outros	18546222958.00
-SHUL4	Schulz SA Preference Shares	Bens Industriais	Máquinas e Equipamentos	Motores . Compressores e Outros	18546222958.00
-SIMH3	Simpar SA	Financeiro e Outros	Holdings Diversificadas	Holdings Diversificadas	6556349848.00
-SLCE3	SLC Agricola SA	Consumo não Cíclico	Agropecuária	Agricultura	8712997142.00
-SLED3	Saraiva	Consumo Cíclico	Comércio	Produtos Diversos	16497693.00
-SLED4	Saraiva	Consumo Cíclico	Comércio	Produtos Diversos	16497693.00
-SMFT3	Smartfit Escola de Ginastica e Danca SA	Consumo Cíclico	Viagens e Lazer	Atividades Esportivas	12170389920.00
-SMLS3	Smiles	Consumo Cíclico	Diversos	Programas de Fidelização	2781160547.00
-SMTO3	Sao Martinho SA	Consumo não Cíclico	Alimentos Processados	Açucar e Alcool	12436417988.00
-SNSY3	Sansuy SA Industria d Plstc Em Rcpr Jdcl	Materiais Básicos	Materiais Diversos	Materiais Diversos	82048098.00
-SNSY5	Sansuy Industria de Plasticos A Pref Shs	Materiais Básicos	Materiais Diversos	Materiais Diversos	82048098.00
-SNSY6	Sansuy Industria de Plasticos B Pref Shs	Materiais Básicos	Materiais Diversos	Materiais Diversos	82048098.00
-SOJA3	Boa Safra Sementes SA	Consumo não Cíclico	Agropecuária	Agricultura	1579051594.00
-SOMA3	Grupo de Moda SOMA SA	Consumo Cíclico	Comércio	Tecidos. Vestuário e Calçados	4559382237.00
-SOND3	Sondotecnica Engenharia de Solos SA	Bens Industriais	Construção e Engenharia	Engenharia Consultiva	127489060.00
-SOND5	Sondotenica Engenharia de Solos A Pref Shs	Bens Industriais	Construção e Engenharia	Engenharia Consultiva	127489060.00
-SOND6	Sondotenica Engenharia de Solos B Pref Shs	Bens Industriais	Construção e Engenharia	Engenharia Consultiva	127489060.00
 SPRI3	Springer	Financeiro e Outros	Holdings Diversificadas	Holdings Diversificadas	48073732.00
 SPRI5	Springer	Financeiro e Outros	Holdings Diversificadas	Holdings Diversificadas	48073732.00
 SPRI6	Springer	Financeiro e Outros	Holdings Diversificadas	Holdings Diversificadas	48073732.00
-SPRT3B	Longdis	Financeiro e Outros	Outros	Outros	370531749.00
-SQIA3	Sinqia	Tecnologia da Informação	Programas e Serviços	Programas e Serviços	2406971774.00
-STBP3	Santos Brasil Participacoes SA	Bens Industriais	Transporte	Serviços de Apoio e Armazenagem	6835587619.00
-STKF3	Statkraft Energias Renováveis SA	Consumo Cíclico	Viagens e Lazer	Atividades Esportivas	0.00
-STTR3	Stara	Bens Industriais	Máquinas e Equipamentos	Máq. e Equip. Construção e Agrícolas	0.00
-SULA11	Sul America	Financeiro e Outros	Previdência e Seguros	Seguradoras	9475042424.00
-SULA3	Sul America	Financeiro e Outros	Previdência e Seguros	Seguradoras	9475042424.00
-SULA4	Sul America	Financeiro e Outros	Previdência e Seguros	Seguradoras	9475042424.00
-SUZB3	Suzano SA	Materiais Básicos	Madeira e Papel	Papel e Celulose	71078633573.00
-SYNE3	SYN prop e tech SA	Financeiro e Outros	Exploração de Imóveis	Exploração de Imóveis	576996002.00
-TAEE11	Transmissora Alianca de Enrga Eltrca S/A Unit	Utilidade Pública	Energia Elétrica	Energia Elétrica	12305500958.00
-TAEE3	Transmissora Alianca de Enrga Eltrca S/A	Utilidade Pública	Energia Elétrica	Energia Elétrica	12305500958.00
-TAEE4	Transmissora Alianca de Enrga Eltrca S/A Preference Shares	Utilidade Pública	Energia Elétrica	Energia Elétrica	12305500958.00
-TASA3	Taurus Armas SA	Bens Industriais	Máquinas e Equipamentos	Armas e Munições	1801587150.00
-TASA4	Taurus Armas SA Preference Shares	Bens Industriais	Máquinas e Equipamentos	Armas e Munições	1801587150.00
-TCNO3	Tecnosolo	Bens Industriais	Construção e Engenharia	Engenharia Consultiva	6451073.00
-TCNO4	Tecnosolo	Bens Industriais	Construção e Engenharia	Engenharia Consultiva	6451073.00
-TCSA3	Tecnisa SA	Consumo Cíclico	Construção Civil	Incorporações	210550998.00
-TECN3	Technos SA	Consumo Cíclico	Tecidos. Vestuário e Calçados	Acessórios	251717063.00
-TEKA3	Teka Tecelagem Kuehnrich SA	Consumo Cíclico	Tecidos. Vestuário e Calçados	Fios e Tecidos	5019294.00
-TEKA4	Teka Tecelagem Kuehnrich SA Preference Shares	Consumo Cíclico	Tecidos. Vestuário e Calçados	Fios e Tecidos	5019294.00
-TELB3	Telecomunicacoes Brasileiras SA - TELBRS	Comunicações	Telecomunicações	Telecomunicações	1299295731.00
-TELB4	Telecomunicacoes Brasileiras SA - TELBRS Preference Shares	Comunicações	Telecomunicações	Telecomunicações	1299295731.00
-TEND3	Construtora Tenda S/A	Consumo Cíclico	Construção Civil	Incorporações	1579299176.00
-TESA3	Terra Santa Agro	Consumo não Cíclico	Agropecuária	Agricultura	1389696672.00
-TFCO4	Track & Field SA Co	Consumo Cíclico	Comércio	Tecidos. Vestuário e Calçados	2218483041.00
-TGMA3	Tegma Gestao Logistica SA	Bens Industriais	Transporte	Transporte Rodoviário	1632912117.00
-TIET11	AES Tiete	Utilidade Pública	Energia Elétrica	Energia Elétrica	5004795801.00
-TIET3	AES Tiete	Utilidade Pública	Energia Elétrica	Energia Elétrica	5004795801.00
-TIET4	AES Tiete	Utilidade Pública	Energia Elétrica	Energia Elétrica	5004795801.00
-TIMS3	Tim SA	Comunicações	Telecomunicações	Telecomunicações	41734667822.00
-TKNO3	Tekno SA Industria e Comercio	Materiais Básicos	Siderurgia e Metalurgia	Artefatos de Ferro e Aço	192152383.00
-TKNO4	Tekno SA Industria e Comercio Preference Shares	Materiais Básicos	Siderurgia e Metalurgia	Artefatos de Ferro e Aço	192152383.00
-TOTS3	Totvs SA	Tecnologia da Informação	Programas e Serviços	Programas e Serviços	18706822216.00
-TOYB3	Tec Toy	Consumo Cíclico	Viagens e Lazer	Brinquedos e Jogos	71890222.00
-TOYB4	Tec Toy	Consumo Cíclico	Viagens e Lazer	Brinquedos e Jogos	71890222.00
-TPIS3	TPI Triunfo Participacoes e Invstmnts SA	Bens Industriais	Transporte	Exploração de Rodovias	175560000.00
-TRAD3	Tc SA	Tecnologia da Informação	Programas e Serviços	Programas e Serviços	280147138.00
-TRIS3	Trisul SA	Consumo Cíclico	Construção Civil	Incorporações	933087690.00
-TRPL3	CTEEP Cmpnh d Trnsmss d nrg ltrc Plst	Utilidade Pública	Energia Elétrica	Energia Elétrica	17841993767.00
-TRPL4	CTEEP Cmpnh d Trnsmss d nrg ltrc Plst Preference Shares	Utilidade Pública	Energia Elétrica	Energia Elétrica	17841993767.00
 TRPN3	Tarpon Investimentos	Financeiro e Outros	Serviços Financeiros Diversos	Gestão de Recursos e Investimentos	32162716.00
-TTEN3	Tres Tentos Agroindustrial SA	Consumo não Cíclico	Agropecuária	Agricultura	5271989105.00
-TUPY3	Tupy SA	Bens Industriais	Material de Transporte	Material Rodoviário	3669317375.00
-TXRX3	Textil RenauxView S/A	Consumo Cíclico	Tecidos. Vestuário e Calçados	Fios e Tecidos	22862746.00
-TXRX4	Textil RenauxView S/A Preference Shares	Consumo Cíclico	Tecidos. Vestuário e Calçados	Fios e Tecidos	22862746.00
-UCAS3	Unicasa Industria de Moveis S/A	Consumo Cíclico	Utilidades Domésticas	Móveis	172485410.00
-UGPA3	Ultrapar Participacoes SA	Petróleo. Gás e Biocombustíveis	Petróleo. Gás e Biocombustíveis	Exploração. Refino e Distribuição	26319014764.00
-UNIP3	Unipar Carbocloro SA	Materiais Básicos	Químicos	Químicos Diversos	7456181858.00
-UNIP5	Unipar Participacoes A Pref Shs	Materiais Básicos	Químicos	Químicos Diversos	7456181858.00
-UNIP6	Unipar Participacoes B Pref Shs	Materiais Básicos	Químicos	Químicos Diversos	7456181858.00
-USIM3	Usinas Siderurgicas de Mins Grs SA USMNS	Materiais Básicos	Siderurgia e Metalurgia	Siderurgia	8547573939.00
-USIM5	Usinas Siderurgicas de Minas Gerais A Pref Shs	Materiais Básicos	Siderurgia e Metalurgia	Siderurgia	8547573939.00
-USIM6	Usinas Siderurgicas de Minas Gerais Pref Shs	Materiais Básicos	Siderurgia e Metalurgia	Siderurgia	8547573939.00
-VALE3	Vale SA	Materiais Básicos	Mineração	Minerais Metálicos	318320601585.00
-VAMO3	Vamos Locacao de Camhs Mqns e Eqpmnts SA	Bens Industriais	Máquinas e Equipamentos	Máq. e Equip. Construção e Agrícolas	10115613052.00
-VBBR3	Vibra Energia SA	Petróleo. Gás e Biocombustíveis	Petróleo. Gás e Biocombustíveis	Exploração. Refino e Distribuição	25478550000.00
-VITT3	Vittia SA	Materiais Básicos	Químicos	Fertilizantes e Defensivos	1343231115.00
-VIVA3	Vivara Participacoes SA	Consumo Cíclico	Tecidos. Vestuário e Calçados	Acessórios	6438751183.00
-VIVR3	Viver Incorporadora e Construtora SA	Consumo Cíclico	Construção Civil	Incorporações	81920839.00
-VIVT3	Telefonica Brasil SA	Comunicações	Telecomunicações	Telecomunicações	82462507156.00
-VIVT4	Telefonica Brasil SA	Comunicações	Telecomunicações	Telecomunicações	82462507156.00
-VLID3	Valid Solucoes SA	Bens Industriais	Serviços	Serviços Diversos	1356028734.00
-VSPT3	Ferrovia Centro-Atlantica SA	Bens Industriais	Transporte	Transporte Ferroviário	712610842.00
-VSPT4	Ferrovia Centro-Atlantica SA Preference Shares	Bens Industriais	Transporte	Transporte Ferroviário	712610842.00
-VSTE3	Veste SA Estilo	Consumo Cíclico	Comércio	Tecidos. Vestuário e Calçados	1404225319.00
-VULC3	Vulcabras SA	Consumo Cíclico	Tecidos. Vestuário e Calçados	Calçados	5132272012.00
-VVAR11	Grupo Casas Bahia SA	Consumo Cíclico	Comércio	Eletrodomésticos	1354935926.00
-VVAR4	Grupo Casas Bahia SA	Consumo Cíclico	Comércio	Eletrodomésticos	1354935926.00
-VVEO3	CM Hospitalar SA	Saúde	Serv.Méd.Hospit..Análises e Diagnósticos	Serv.Méd.Hospit..Análises e Diagnósticos	4858450150.00
-WEGE3	Weg SA	Bens Industriais	Máquinas e Equipamentos	Motores . Compressores e Outros	136202969035.00
-WEST3	Westwing Comercio Varejista SA	Consumo Cíclico	Comércio	Produtos Diversos	162694593.00
-WHRL3	Whirlpool SA	Consumo Cíclico	Comércio	Eletrodomésticos	6287191663.00
-WHRL4	Whirlpool SA Preference Shares	Consumo Cíclico	Comércio	Eletrodomésticos	6287191663.00
-WIZC3	Wiz Co Participacos e Cortgm de Sgurs SA	Financeiro e Outros	Previdência e Seguros	Corretoras de Seguros	865098396.00
-WLMM3	WLM Participacoes e Cmrc d Mqns e Vcs SA	Bens Industriais	Comércio	Material de Transporte	1125372470.00
-WLMM4	WLM Participacoes e Cmrc d Mqns e Vcs SA Preference Shares	Bens Industriais	Comércio	Material de Transporte	1125372470.00
-YDUQ3	YDUQS Participacoes SA	Consumo Cíclico	Diversos	Serviços Educacionais	5888142612.00
-ZAMP3	Zamp SA	Consumo Cíclico	Hoteis e Restaurantes	Restaurante e Similares	1872417040.00
+TCSA3	TECNISA S.A.	Consumo Cíclico	Construção Civil	Incorporações	145029883.1
+ABCB4	BCO ABC BRASIL S.A.	Financeiro e Outros	Intermediários Financeiros	Bancos	5125561154.15
+AALR3	ALLIANÇA SAÚDE E PARTICIPAÇÕES S.A.	Saúde	Serv.Méd.Hospit..Análises e Diagnósticos	Serv.Méd.Hospit..Análises e Diagnósticos	1199489154.24
+AMBP3	AMBIPAR PARTICIPACOES E EMPREENDIMENTOS S/A	Utilidade Pública	Água e Saneamento	Água e Saneamento	1520081007.9
+ABEV3	AMBEV S.A.	Consumo não Cíclico	Bebidas	Cervejas e Refrigerantes	178376681043.52
+ADHM3	ADVANCED DIGITAL HEALTH MEDICINA PREVENTIVA S.A.	Saúde	Serv.Méd.Hospit..Análises e Diagnósticos	Serv.Méd.Hospit..Análises e Diagnósticos	25439770.2
+AERI3	AERIS IND. E COM. DE EQUIP. GERACAO DE ENERGIA S.A	Bens Industriais	Máquinas e Equipamentos	Máq. e Equip. Industriais	319919009.4
+AESB3	AES BRASIL ENERGIA S.A.	Utilidade Pública	Energia Elétrica	Energia Elétrica	6837894252.96
+AFLT3	AFLUENTE TRANSMISSÃO DE ENERGIA ELÉTRICA S/A	Utilidade Pública	Energia Elétrica	Energia Elétrica	453578993
+AGRO3	BRASILAGRO - CIA BRAS DE PROP AGRICOLAS	Consumo não Cíclico	Agropecuária	Agricultura	2637937676.36
+AGXY3	AGROGALAXY PARTICIPAÇÕES S.A.	Consumo não Cíclico	Agropecuária	Agricultura	152034240.21
+AHEB3	SAO PAULO TURISMO S.A.	Consumo Cíclico	Viagens e Lazer	Produção de Eventos e Shows	233828143.9
+AHEB5	SAO PAULO TURISMO S.A.	Consumo Cíclico	Viagens e Lazer	Produção de Eventos e Shows	233828143.9
+AHEB6	SAO PAULO TURISMO S.A.	Consumo Cíclico	Viagens e Lazer	Produção de Eventos e Shows	233828143.9
+ALLD3	ALLIED TECNOLOGIA S.A.	Consumo Cíclico	Comércio	Eletrodomésticos	678952654.5
+ALOS3	ALIANSCE SONAE SHOPPING CENTERS S.A.	Financeiro e Outros	Exploração de Imóveis	Exploração de Imóveis	11184500325.4
+ALPA3	ALPARGATAS S.A.	Consumo Cíclico	Tecidos. Vestuário e Calçados	Calçados	6232437670.25
+ALPA4	ALPARGATAS S.A.	Consumo Cíclico	Tecidos. Vestuário e Calçados	Calçados	6232437670.25
+ALPK3	ALLPARK EMPREENDIMENTOS PARTICIPACOES SERVICOS S.A	Bens Industriais	Serviços	Serviços Diversos	661923276.25
+ALUP11	ALUPAR INVESTIMENTO S/A	Utilidade Pública	Energia Elétrica	Energia Elétrica	9502128341.79
+ALUP3	ALUPAR INVESTIMENTO S/A	Utilidade Pública	Energia Elétrica	Energia Elétrica	9502128341.79
+ALUP4	ALUPAR INVESTIMENTO S/A	Utilidade Pública	Energia Elétrica	Energia Elétrica	9502128341.79
+AMAR3	MARISA LOJAS S.A.	Consumo Cíclico	Comércio	Tecidos. Vestuário e Calçados	98738758.08
+AMER3	AMERICANAS S.A	Consumo Cíclico	Comércio	Produtos Diversos	361011801.2
+ANIM3	ANIMA HOLDING S.A.	Consumo Cíclico	Diversos	Serviços Educacionais	1231799855.25
+APER3	ALPER CONSULTORIA E CORRETORA DE SEGUROS S.A.	Financeiro e Outros	Previdência e Seguros	Corretoras de Seguros	491694139.22
+APTI3	SIDERURGICA J. L. ALIPERTI S.A.	Consumo não Cíclico	Agropecuária	Agricultura	44442750
+APTI4	SIDERURGICA J. L. ALIPERTI S.A.	Consumo não Cíclico	Agropecuária	Agricultura	44442750
+ARML3	ARMAC LOCAÇÃO. LOGÍSTICA E SERVIÇOS S.A.	Bens Industriais	Máquinas e Equipamentos	Máq. e Equip. Industriais	3385247327.69
+ARZZ3	AREZZO INDÚSTRIA E COMÉRCIO S.A.	Consumo Cíclico	Comércio	Tecidos. Vestuário e Calçados	5526152566.74
+ASAI3	SENDAS DISTRIBUIDORA S.A.	Consumo não Cíclico	Comércio e Distribuição	Alimentos	14680908552
+ATMP3	ATMA SA	Bens Industriais	Serviços	Serviços Diversos	59564093.88
+ATOM3	ATOM EMPREENDIMENTOS E PARTICIPAÇÕES S.A.	Financeiro e Outros	Outros	Outros	46181502.12
+AURA33	AURA MINERALS INC.	Materiais Básicos	Mineração	Minerais Metálicos	3710442027
+AURE3	AUREN ENERGIA S.A.	Utilidade Pública	Energia Elétrica	Energia Elétrica	12200000000
+AVLL3	ALPHAVILLE S.A.	Consumo Cíclico	Construção Civil	Incorporações	679748612.28
+AZEV3	AZEVEDO E TRAVASSOS S.A.	Bens Industriais	Construção e Engenharia	Construção Pesada	230488931.14
+AZEV4	AZEVEDO E TRAVASSOS S.A.	Bens Industriais	Construção e Engenharia	Construção Pesada	230488931.14
+AZUL4	AZUL S.A.	Bens Industriais	Transporte	Transporte Aéreo	2694580355.03
+B3SA3	B3 S.A. - BRASIL, BOLSA, BALCÃO	Financeiro e Outros	Serviços Financeiros Diversos	Serviços Financeiros Diversos	57239880000
+BAHI3	BAHEMA S.A.	Consumo Cíclico	Diversos	Serviços Educacionais	176816899.4
+BALM3	BAUMER S.A.	Saúde	Equipamentos	Equipamentos	97510000
+BALM4	BAUMER S.A.	Saúde	Equipamentos	Equipamentos	97510000
+BAUH4	EXCELSIOR ALIMENTOS S.A.	Consumo não Cíclico	Alimentos Processados	Carnes e Derivados	409892204.78
+BAZA3	BCO AMAZONIA S.A.	Financeiro e Outros	Intermediários Financeiros	Bancos	4826620921.5
+BBAS3	BCO BRASIL S.A.	Financeiro e Outros	Intermediários Financeiros	Bancos	151236710315.6
+BBDC3	BCO BRADESCO S.A.	Financeiro e Outros	Intermediários Financeiros	Bancos	125139752052.84
+BBDC4	BCO BRADESCO S.A.	Financeiro e Outros	Intermediários Financeiros	Bancos	125139752052.84
+BBML3	BBM LOGISTICA S.A.	Bens Industriais	Serviços	Serviços Diversos	160451699191.56
+BBSE3	BB SEGURIDADE PARTICIPAÇÕES S.A.	Financeiro e Outros	Previdência e Seguros	Seguradoras	65420000000
+BDLL3	BARDELLA S.A. INDUSTRIAS MECANICAS	Bens Industriais	Máquinas e Equipamentos	Máq. e Equip. Industriais	17629086.32
+BDLL4	BARDELLA S.A. INDUSTRIAS MECANICAS	Bens Industriais	Máquinas e Equipamentos	Máq. e Equip. Industriais	17629086.32
+BEEF11	MINERVA S.A.	Consumo não Cíclico	Alimentos Processados	Carnes e Derivados	3977706315.85
+BEEF3	MINERVA S.A.	Consumo não Cíclico	Alimentos Processados	Carnes e Derivados	3977706315.85
+BEES3	BANESTES S.A. - BCO EST ESPIRITO SANTO	Financeiro e Outros	Intermediários Financeiros	Bancos	2807264761.2
+BEES4	BANESTES S.A. - BCO EST ESPIRITO SANTO	Financeiro e Outros	Intermediários Financeiros	Bancos	2807264761.2
+BGIP3	BCO ESTADO DE SERGIPE S.A. - BANESE	Financeiro e Outros	Intermediários Financeiros	Bancos	468242409.42
+BGIP4	BCO ESTADO DE SERGIPE S.A. - BANESE	Financeiro e Outros	Intermediários Financeiros	Bancos	468242409.42
+BHIA3	GRUPO CASAS BAHIA S.A.	Consumo Cíclico	Comércio	Eletrodomésticos	546730694.25
+BIDI11	BANCO INTER S.A.	Financeiro e Outros	Intermediários Financeiros	Bancos	8991139764.53
+BIDI3	BANCO INTER S.A.	Financeiro e Outros	Intermediários Financeiros	Bancos	8991139764.53
+BIDI4	BANCO INTER S.A.	Financeiro e Outros	Intermediários Financeiros	Bancos	8991139764.53
+BIOM3	BIOMM S.A.	Saúde	Comércio e Distribuição	Medicamentos e Outros Produtos	1763096585.9
+BLAU3	BLAU FARMACÊUTICA S.A.	Saúde	Medicamentos e Outros Produtos	Medicamentos e Outros Produtos	1688096965.99
+BLUT3	BLUE TECH SOLUTIONS E.Q.I. S	Financeiro e Outros	Holdings Diversificadas	Holdings Diversificadas	14115600.06
+BLUT4	BLUE TECH SOLUTIONS E.Q.I. S	Financeiro e Outros	Holdings Diversificadas	Holdings Diversificadas	14115600.06
+BMEB3	BCO MERCANTIL DO BRASIL S.A.	Financeiro e Outros	Intermediários Financeiros	Bancos	2661593734
+BMEB4	BCO MERCANTIL DO BRASIL S.A.	Financeiro e Outros	Intermediários Financeiros	Bancos	2661593734
+BMGB4	BANCO BMG S.A.	Financeiro e Outros	Intermediários Financeiros	Bancos	1796355825.88
+BMIN3	BCO MERCANTIL DE INVESTIMENTOS S.A.	Financeiro e Outros	Intermediários Financeiros	Bancos	93527042.82
+BMIN4	BCO MERCANTIL DE INVESTIMENTOS S.A.	Financeiro e Outros	Intermediários Financeiros	Bancos	93527042.82
+BMKS3	BICICLETAS MONARK S.A.	Consumo Cíclico	Viagens e Lazer	Bicicletas	152341250
+BMOB3	BEMOBI MOBILE TECH S.A.	Tecnologia da Informação	Programas e Serviços	Programas e Serviços	1124087700.64
+BNBR3	BCO NORDESTE DO BRASIL S.A.	Financeiro e Outros	Intermediários Financeiros	Bancos	9846346896
+BOAS3	BOA VISTA SERVIÇOS S.A.	Financeiro e Outros	Serviços Financeiros Diversos	Serviços Financeiros Diversos	4212250617.75
+BOBR3	BOMBRIL S.A.	Consumo não Cíclico	Produtos de Uso Pessoal e de Limpeza	Produtos de Limpeza	249475757.86
+BOBR4	BOMBRIL S.A.	Consumo não Cíclico	Produtos de Uso Pessoal e de Limpeza	Produtos de Limpeza	249475757.86
+BPAC11	BCO BTG PACTUAL S.A.	Financeiro e Outros	Intermediários Financeiros	Bancos	122041578702.99
+BPAC3	BCO BTG PACTUAL S.A.	Financeiro e Outros	Intermediários Financeiros	Bancos	122041578702.99
+BPAC5	BCO BTG PACTUAL S.A.	Financeiro e Outros	Intermediários Financeiros	Bancos	122041578702.99
+BPAN4	BCO PAN S.A.	Financeiro e Outros	Intermediários Financeiros	Bancos	10380993336.2
+BPAR3	BCO ESTADO DO PARA S.A.	Financeiro e Outros	Intermediários Financeiros	Bancos	1733606633.43
+BPAT33	BCO PATAGONIA S.A.	Financeiro e Outros	Intermediários Financeiros	Bancos	1533769021
+BPHA3	BRASIL PHARMA S.A.	Saúde	Comércio e Distribuição	Medicamentos e Outros Produtos	70110298.74
+BRAP3	BRADESPAR S.A.	Materiais Básicos	Mineração	Minerais Metálicos	7056802936.1
+BRAP4	BRADESPAR S.A.	Materiais Básicos	Mineração	Minerais Metálicos	7056802936.1
+BRBI11	BR ADVISORY PARTNERS PARTICIPAÇÕES S.A.	Financeiro e Outros	Intermediários Financeiros	Bancos	1391193078
+BRBI3	BR ADVISORY PARTNERS PARTICIPAÇÕES S.A.	Financeiro e Outros	Intermediários Financeiros	Bancos	1391193078
+BRBI4	BR ADVISORY PARTNERS PARTICIPAÇÕES S.A.	Financeiro e Outros	Intermediários Financeiros	Bancos	1391193078
+BRFS3	BRF S.A.	Consumo não Cíclico	Alimentos Processados	Carnes e Derivados	34187856358.72
+BRGE11	CONSORCIO ALFA DE ADMINISTRACAO S.A.	Financeiro e Outros	Previdência e Seguros	Seguradoras	974940393.52
+BRGE12	CONSORCIO ALFA DE ADMINISTRACAO S.A.	Financeiro e Outros	Previdência e Seguros	Seguradoras	974940393.52
+BRGE3	CONSORCIO ALFA DE ADMINISTRACAO S.A.	Financeiro e Outros	Previdência e Seguros	Seguradoras	974940393.52
+BRGE5	CONSORCIO ALFA DE ADMINISTRACAO S.A.	Financeiro e Outros	Previdência e Seguros	Seguradoras	974940393.52
+BRGE6	CONSORCIO ALFA DE ADMINISTRACAO S.A.	Financeiro e Outros	Previdência e Seguros	Seguradoras	974940393.52
+BRGE7	CONSORCIO ALFA DE ADMINISTRACAO S.A.	Financeiro e Outros	Previdência e Seguros	Seguradoras	974940393.52
+BRGE8	CONSORCIO ALFA DE ADMINISTRACAO S.A.	Financeiro e Outros	Previdência e Seguros	Seguradoras	974940393.52
+CEPE6	CIA ENERGETICA DE PERNAMBUCO - CELPE	Utilidade Pública	Energia Elétrica	Energia Elétrica	8662392210.18
+BSLI4	BRB BCO DE BRASILIA S.A.	Financeiro e Outros	Intermediários Financeiros	Bancos	3523637425
+BTTL4	EMBPAR PARTICIPACOES S.A.	Financeiro e Outros	Holdings Diversificadas	Holdings Diversificadas	90500859.12
+CALI3	CONSTRUTORA ADOLPHO LINDENBERG S.A.	Consumo Cíclico	Construção Civil	Incorporações	96745246
+CALI4	CONSTRUTORA ADOLPHO LINDENBERG S.A.	Consumo Cíclico	Construção Civil	Incorporações	96745246
+CAMB3	CAMBUCI S.A.	Consumo Cíclico	Tecidos. Vestuário e Calçados	Calçados	434587822.4
+CAMB4	CAMBUCI S.A.	Consumo Cíclico	Tecidos. Vestuário e Calçados	Calçados	434587822.4
+CAML3	CAMIL ALIMENTOS S.A.	Consumo não Cíclico	Alimentos Processados	Alimentos Diversos	2968000000
+CASH3	MÉLIUZ S.A.	Tecnologia da Informação	Programas e Serviços	Programas e Serviços	465225048.55
+CASN3	CIA CATARINENSE DE AGUAS E SANEAM.-CASAN	Utilidade Pública	Água e Saneamento	Água e Saneamento	9343450886.5
+CASN4	CIA CATARINENSE DE AGUAS E SANEAM.-CASAN	Utilidade Pública	Água e Saneamento	Água e Saneamento	9343450886.5
+CATA3	CIA INDUSTRIAL CATAGUASES	Consumo Cíclico	Tecidos. Vestuário e Calçados	Fios e Tecidos	14940354.78
+CATA4	CIA INDUSTRIAL CATAGUASES	Consumo Cíclico	Tecidos. Vestuário e Calçados	Fios e Tecidos	14940354.78
+CBAV3	Companhia Brasileira de Alumínio	Materiais Básicos	Mineração	Minerais Metálicos	4082225810.19
+CBEE3	AMPLA ENERGIA E SERVICOS S.A.	Utilidade Pública	Energia Elétrica	Energia Elétrica	2286313254
+CCRO3	CCR S.A.	Bens Industriais	Transporte	Exploração de Rodovias	24159200000
+CCXC3	CCX CARVÃO DA COLÔMBIA S.A.	Financeiro e Outros	Outros	Outros	1973425.64
+CEAB3	CEA MODAS S.A.	Consumo Cíclico	Comércio	Tecidos. Vestuário e Calçados	2857431780.36
+CEBR3	CIA ENERGETICA DE BRASILIA	Utilidade Pública	Energia Elétrica	Energia Elétrica	1424592189.9
+CEBR5	CIA ENERGETICA DE BRASILIA	Utilidade Pública	Energia Elétrica	Energia Elétrica	1424592189.9
+CEBR6	CIA ENERGETICA DE BRASILIA	Utilidade Pública	Energia Elétrica	Energia Elétrica	1424592189.9
+CEDO3	CIA FIACAO TECIDOS CEDRO CACHOEIRA	Consumo Cíclico	Tecidos. Vestuário e Calçados	Fios e Tecidos	246638973.12
+CEDO4	CIA FIACAO TECIDOS CEDRO CACHOEIRA	Consumo Cíclico	Tecidos. Vestuário e Calçados	Fios e Tecidos	246638973.12
+CEEB3	CIA ELETRICIDADE EST. DA BAHIA - COELBA	Utilidade Pública	Energia Elétrica	Energia Elétrica	12633002013.48
+CEEB5	CIA ELETRICIDADE EST. DA BAHIA - COELBA	Utilidade Pública	Energia Elétrica	Energia Elétrica	12633002013.48
+CEEB6	CIA ELETRICIDADE EST. DA BAHIA - COELBA	Utilidade Pública	Energia Elétrica	Energia Elétrica	12633002013.48
+CEED3	CIA ESTADUAL DE DISTRIB ENER ELET-CEEE-D	Utilidade Pública	Energia Elétrica	Energia Elétrica	1039763182.36
+CEED4	CIA ESTADUAL DE DISTRIB ENER ELET-CEEE-D	Utilidade Pública	Energia Elétrica	Energia Elétrica	1039763182.36
+CEGR3	CIA DISTRIB DE GAS DO RIO DE JANEIRO-CEG	Utilidade Pública	Gás	Gás	17338607742.96
+CEPE3	CIA ENERGETICA DE PERNAMBUCO - CELPE	Utilidade Pública	Energia Elétrica	Energia Elétrica	8662392210.18
+CEPE5	CIA ENERGETICA DE PERNAMBUCO - CELPE	Utilidade Pública	Energia Elétrica	Energia Elétrica	8662392210.18
+CESP3	CESP - CIA ENERGETICA DE SAO PAULO	Utilidade Pública	Energia Elétrica	Energia Elétrica	8302192833.55
+CESP5	CESP - CIA ENERGETICA DE SAO PAULO	Utilidade Pública	Energia Elétrica	Energia Elétrica	8302192833.55
+CESP6	CESP - CIA ENERGETICA DE SAO PAULO	Utilidade Pública	Energia Elétrica	Energia Elétrica	8302192833.55
+CGAS3	CIA GAS DE SAO PAULO - COMGAS	Utilidade Pública	Gás	Gás	13922612870.22
+CGAS5	CIA GAS DE SAO PAULO - COMGAS	Utilidade Pública	Gás	Gás	13922612870.22
+CGRA3	GRAZZIOTIN S.A.	Consumo Cíclico	Comércio	Tecidos. Vestuário e Calçados	537692666.98
+CGRA4	GRAZZIOTIN S.A.	Consumo Cíclico	Comércio	Tecidos. Vestuário e Calçados	537692666.98
+CIEL3	CIELO S.A.	Financeiro e Outros	Serviços Financeiros Diversos	Serviços Financeiros Diversos	15295668793.43
+CLSA3	CLEAR SALE S.A.	Tecnologia da Informação	Programas e Serviços	Programas e Serviços	1279776468.6
+CLSC3	CENTRAIS ELET DE SANTA CATARINA S.A.	Utilidade Pública	Energia Elétrica	Energia Elétrica	2641008249.4
+CLSC4	CENTRAIS ELET DE SANTA CATARINA S.A.	Utilidade Pública	Energia Elétrica	Energia Elétrica	2641008249.4
+CMIG3	CIA ENERGETICA DE MINAS GERAIS - CEMIG	Utilidade Pública	Energia Elétrica	Energia Elétrica	31542613646.26
+CMIG4	CIA ENERGETICA DE MINAS GERAIS - CEMIG	Utilidade Pública	Energia Elétrica	Energia Elétrica	31542613646.26
+CMIN3	CSN MINERAÇÃO S.A.	Materiais Básicos	Mineração	Minerais Metálicos	28249495015.7
+CMSA3	CIMS S.A.	Financeiro e Outros	Outros	Outros	0
+CMSA4	CIMS S.A.	Financeiro e Outros	Outros	Outros	0
+CNSY3	CINESYSTEM S.A.	Consumo Cíclico	Mídia	Produção e Difusão de Filmes e Programas	935885083.86
+COCE3	CIA ENERGETICA DO CEARA - COELCE	Utilidade Pública	Energia Elétrica	Energia Elétrica	2265418508.79
+COCE5	CIA ENERGETICA DO CEARA - COELCE	Utilidade Pública	Energia Elétrica	Energia Elétrica	2265418508.79
+COCE6	CIA ENERGETICA DO CEARA - COELCE	Utilidade Pública	Energia Elétrica	Energia Elétrica	2265418508.79
+COGN3	KROTON EDUCACIONAL S.A.	Consumo Cíclico	Diversos	Serviços Educacionais	3021335998.1
+CORR3	CORREA RIBEIRO S.A. COMERCIO E INDUSTRIA	Financeiro e Outros	Exploração de Imóveis	Exploração de Imóveis	1278894.65
+CORR4	CORREA RIBEIRO S.A. COMERCIO E INDUSTRIA	Financeiro e Outros	Exploração de Imóveis	Exploração de Imóveis	1278894.65
+CPFE3	CPFL ENERGIA S.A.	Utilidade Pública	Energia Elétrica	Energia Elétrica	37621107466
+CPLE11	CIA PARANAENSE DE ENERGIA - COPEL	Utilidade Pública	Energia Elétrica	Energia Elétrica	29899693364.18
+CPLE3	CIA PARANAENSE DE ENERGIA - COPEL	Utilidade Pública	Energia Elétrica	Energia Elétrica	29899693364.18
+CPLE5	CIA PARANAENSE DE ENERGIA - COPEL	Utilidade Pública	Energia Elétrica	Energia Elétrica	29899693364.18
+CPLE6	CIA PARANAENSE DE ENERGIA - COPEL	Utilidade Pública	Energia Elétrica	Energia Elétrica	29899693364.18
+CPRE3	CPFL ENERGIAS RENOVÁVEIS S.A.	Utilidade Pública	Energia Elétrica	Energia Elétrica	10824655047.92
+CREM3	CREMER S.A.	Saúde	Comércio e Distribuição	Medicamentos e Outros Produtos	465122474
+CRFB3	ATACADÃO S.A.	Consumo não Cíclico	Comércio e Distribuição	Alimentos	18805986146.12
+CRIV3	FINANCEIRA ALFA S.A.- CRED FINANC E INVS	Financeiro e Outros	Intermediários Financeiros	Soc. Crédito e Financiamento	707929532
+CRIV4	FINANCEIRA ALFA S.A.- CRED FINANC E INVS	Financeiro e Outros	Intermediários Financeiros	Soc. Crédito e Financiamento	707929532
+CRPG3	TRONOX PIGMENTOS DO BRASIL S.A.	Materiais Básicos	Químicos	Químicos Diversos	893117726.66
+CRPG5	TRONOX PIGMENTOS DO BRASIL S.A.	Materiais Básicos	Químicos	Químicos Diversos	893117726.66
+CRPG6	TRONOX PIGMENTOS DO BRASIL S.A.	Materiais Básicos	Químicos	Químicos Diversos	893117726.66
+CSAB3	CIA SEGUROS ALIANCA DA BAHIA	Financeiro e Outros	Previdência e Seguros	Seguradoras	305164800
+CSAB4	CIA SEGUROS ALIANCA DA BAHIA	Financeiro e Outros	Previdência e Seguros	Seguradoras	305164800
+CSAN3	COSAN S.A.	Petróleo. Gás e Biocombustíveis	Petróleo. Gás e Biocombustíveis	Exploração. Refino e Distribuição	23838182255.04
+CSED3	CRUZEIRO DO SUL EDUCACIONAL S.A.	Consumo Cíclico	Diversos	Serviços Educacionais	1326934889.28
+CSMG3	CIA SANEAMENTO DE MINAS GERAIS-COPASA MG	Utilidade Pública	Água e Saneamento	Água e Saneamento	7578443665.17
+CSNA3	CIA SIDERURGICA NACIONAL	Materiais Básicos	Siderurgia e Metalurgia	Siderurgia	17225960371.53
+CSRN3	CIA ENERGETICA DO RIO GDE NORTE - COSERN	Utilidade Pública	Energia Elétrica	Energia Elétrica	3799532072.31
+CSRN5	CIA ENERGETICA DO RIO GDE NORTE - COSERN	Utilidade Pública	Energia Elétrica	Energia Elétrica	3799532072.31
+CSRN6	CIA ENERGETICA DO RIO GDE NORTE - COSERN	Utilidade Pública	Energia Elétrica	Energia Elétrica	3799532072.31
+CSUD3	CSU DIGITAL S.A.	Bens Industriais	Serviços	Serviços Diversos	751564000
+CTCA3	CTC - CENTRO DE TECNOLOGIA CANAVIEIRA S.A.	Consumo não Cíclico	Agropecuária	Agricultura	0
+CTKA3	KARSTEN S.A.	Consumo Cíclico	Tecidos. Vestuário e Calçados	Fios e Tecidos	111276967.04
+CTKA4	KARSTEN S.A.	Consumo Cíclico	Tecidos. Vestuário e Calçados	Fios e Tecidos	111276967.04
+CTNM3	CIA TECIDOS NORTE DE MINAS COTEMINAS	Consumo Cíclico	Tecidos. Vestuário e Calçados	Fios e Tecidos	132999482.18
+CTNM4	CIA TECIDOS NORTE DE MINAS COTEMINAS	Consumo Cíclico	Tecidos. Vestuário e Calçados	Fios e Tecidos	132999482.18
+CTSA3	CIA TECIDOS SANTANENSE	Consumo Cíclico	Tecidos. Vestuário e Calçados	Fios e Tecidos	60936270.39
+CTSA4	CIA TECIDOS SANTANENSE	Consumo Cíclico	Tecidos. Vestuário e Calçados	Fios e Tecidos	60936270.39
+CTSA8	CIA TECIDOS SANTANENSE	Consumo Cíclico	Tecidos. Vestuário e Calçados	Fios e Tecidos	60936270.39
+CURY3	CURY CONSTRUTORA E INCORPORADORA S.A.	Consumo Cíclico	Construção Civil	Incorporações	5493089156.16
+CVCB3	CVC BRASIL OPERADORA E AGÊNCIA DE VIAGENS S.A.	Consumo Cíclico	Viagens e Lazer	Viagens e Turismo	998623084.3
+CXSE3	CAIXA SEGURIDADE PARTICIPAÇÕES S.A.	Financeiro e Outros	Previdência e Seguros	Corretoras de Seguros	43050000000
+CYRE3	CYRELA BRAZIL REALTY S.A.EMPREEND E PART	Consumo Cíclico	Construção Civil	Incorporações	7435216061.4
+DASA3	DIAGNOSTICOS DA AMERICA S.A.	Saúde	Serv.Méd.Hospit..Análises e Diagnósticos	Serv.Méd.Hospit..Análises e Diagnósticos	2303567522.64
+DESK3	DESKTOP - SIGMANET COMUNICAÇÃO MULTIMÍDIA S.A.	Comunicações	Telecomunicações	Telecomunicações	1682842212.15
+DEXP3	DEXXOS PARTICIPACOES S.A.	Materiais Básicos	Químicos	Petroquímicos	930890504.1
+DEXP4	DEXXOS PARTICIPACOES S.A.	Materiais Básicos	Químicos	Petroquímicos	930890504.1
+DIRR3	DIRECIONAL ENGENHARIA S.A.	Consumo Cíclico	Construção Civil	Incorporações	4316680000
+DMMO11	DOMMO ENERGIA S.A.	Petróleo. Gás e Biocombustíveis	Petróleo. Gás e Biocombustíveis	Exploração. Refino e Distribuição	949254731.04
+DMMO3	DOMMO ENERGIA S.A.	Petróleo. Gás e Biocombustíveis	Petróleo. Gás e Biocombustíveis	Exploração. Refino e Distribuição	949254731.04
+DMVF3	D1000 VAREJO FARMA PARTICIPAÇÕES S.A.	Saúde	Comércio e Distribuição	Medicamentos e Outros Produtos	351689751.9
+DOHL3	DOHLER S.A.	Consumo Cíclico	Tecidos. Vestuário e Calçados	Fios e Tecidos	658739716.5
+DOHL4	DOHLER S.A.	Consumo Cíclico	Tecidos. Vestuário e Calçados	Fios e Tecidos	658739716.5
+DOTZ3	Dotz S.A.	Tecnologia da Informação	Programas e Serviços	Programas e Serviços	92323216.2
+DTCY3	DTCOM - DIRECT TO COMPANY S.A.	Bens Industriais	Serviços	Serviços Diversos	85885573.4
+DTCY4	DTCOM - DIRECT TO COMPANY S.A.	Bens Industriais	Serviços	Serviços Diversos	85885573.4
+DXCO3	DURATEX S.A.	Materiais Básicos	Madeira e Papel	Madeira	5473176860.82
+EALT3	ELECTRO ACO ALTONA S.A.	Bens Industriais	Máquinas e Equipamentos	Máq. e Equip. Industriais	250147500
+EALT4	ELECTRO ACO ALTONA S.A.	Bens Industriais	Máquinas e Equipamentos	Máq. e Equip. Industriais	250147500
+ECOR3	ECORODOVIAS INFRAESTRUTURA E LOGÍSTICA S.A.	Bens Industriais	Transporte	Exploração de Rodovias	4247638766.4
+ECPR3	EMPRESA NAC COM REDITO PART S.A.ENCORPAR	Consumo Cíclico	Tecidos. Vestuário e Calçados	Fios e Tecidos	171908947.31
+ECPR4	EMPRESA NAC COM REDITO PART S.A.ENCORPAR	Consumo Cíclico	Tecidos. Vestuário e Calçados	Fios e Tecidos	171908947.31
+EEEL3	CIA ESTADUAL GER.TRANS.ENER.ELET-CEEE-GT	Utilidade Pública	Energia Elétrica	Energia Elétrica	2840511499.76
+EEEL4	CIA ESTADUAL GER.TRANS.ENER.ELET-CEEE-GT	Utilidade Pública	Energia Elétrica	Energia Elétrica	2840511499.76
+EGIE3	ENGIE BRASIL ENERGIA S.A.	Utilidade Pública	Energia Elétrica	Energia Elétrica	35868183450.4
+EKTR3	ELEKTRO REDES S.A.	Utilidade Pública	Energia Elétrica	Energia Elétrica	7491452048.2
+EKTR4	ELEKTRO REDES S.A.	Utilidade Pública	Energia Elétrica	Energia Elétrica	7491452048.2
+ELEK3	ELEKEIROZ S.A.	Materiais Básicos	Químicos	Petroquímicos	905051916.3
+ELEK4	ELEKEIROZ S.A.	Materiais Básicos	Químicos	Petroquímicos	905051916.3
+ELET3	CENTRAIS ELET BRAS S.A. - ELETROBRAS	Utilidade Pública	Energia Elétrica	Energia Elétrica	80606352629.82
+ELET5	CENTRAIS ELET BRAS S.A. - ELETROBRAS	Utilidade Pública	Energia Elétrica	Energia Elétrica	80606352629.82
+ELET6	CENTRAIS ELET BRAS S.A. - ELETROBRAS	Utilidade Pública	Energia Elétrica	Energia Elétrica	80606352629.82
+ELMD3	ELETROMIDIA S.A.	Comunicações	Mídia	Publicidade	2379723801
+ELPL3	ELETROPAULO METROP. ELET. SAO PAULO S.A.	Utilidade Pública	Energia Elétrica	Energia Elétrica	2485315360.74
+EMAE3	EMAE - EMPRESA METROP.AGUAS ENERGIA S.A.	Utilidade Pública	Energia Elétrica	Energia Elétrica	2072822860.06
+EMAE4	EMAE - EMPRESA METROP.AGUAS ENERGIA S.A.	Utilidade Pública	Energia Elétrica	Energia Elétrica	2072822860.06
+EMBR3	EMBRAER S.A.	Bens Industriais	Material de Transporte	Material Aeronáutico e de Defesa	26864071796.32
+ENAT3	ENAUTA PARTICIPAÇÕES S.A.	Petróleo. Gás e Biocombustíveis	Petróleo. Gás e Biocombustíveis	Exploração. Refino e Distribuição	5419802792.95
+ENBR3	EDP - ENERGIAS DO BRASIL S.A.	Utilidade Pública	Energia Elétrica	Energia Elétrica	13994459653.44
+ENEV3	ENEVA S.A	Utilidade Pública	Energia Elétrica	Energia Elétrica	19491780123.3
+ENGI11	ENERGISA S.A.	Utilidade Pública	Energia Elétrica	Energia Elétrica	20156094733.05
+ENGI3	ENERGISA S.A.	Utilidade Pública	Energia Elétrica	Energia Elétrica	20156094733.05
+ENGI4	ENERGISA S.A.	Utilidade Pública	Energia Elétrica	Energia Elétrica	20156094733.05
+ENJU3	ENJOEI.COM.BR ATIVIDADES DE INTERNET S.A.	Tecnologia da Informação	Programas e Serviços	Programas e Serviços	427550540.68
+ENMT3	ENERGISA MATO GROSSO-DISTRIBUIDORA DE ENERGIA S/A	Utilidade Pública	Energia Elétrica	Energia Elétrica	15330726156.02
+ENMT4	ENERGISA MATO GROSSO-DISTRIBUIDORA DE ENERGIA S/A	Utilidade Pública	Energia Elétrica	Energia Elétrica	15330726156.02
+EPAR3	EMBPAR PARTICIPACOES S.A.	Financeiro e Outros	Holdings Diversificadas	Holdings Diversificadas	90500859.12
+EQPA3	EQUATORIAL PARA DISTRIBUIDORA DE ENERGIA S.A.	Utilidade Pública	Energia Elétrica	Energia Elétrica	14917885169.87
+EQPA5	EQUATORIAL PARA DISTRIBUIDORA DE ENERGIA S.A.	Utilidade Pública	Energia Elétrica	Energia Elétrica	14917885169.87
+EQPA6	EQUATORIAL PARA DISTRIBUIDORA DE ENERGIA S.A.	Utilidade Pública	Energia Elétrica	Energia Elétrica	14917885169.87
+EQPA7	EQUATORIAL PARA DISTRIBUIDORA DE ENERGIA S.A.	Utilidade Pública	Energia Elétrica	Energia Elétrica	14917885169.87
+EQTL3	EQUATORIAL ENERGIA S.A.	Utilidade Pública	Energia Elétrica	Energia Elétrica	33269455822.7
+ESPA3	MPM CORPÓREOS S.A.	Consumo não Cíclico	Produtos de Uso Pessoal e de Limpeza	Produtos de Uso Pessoal	365037296.66
+ESTR3	MANUFATURA DE BRINQUEDOS ESTRELA S.A.	Consumo Cíclico	Viagens e Lazer	Brinquedos e Jogos	30393960
+ESTR4	MANUFATURA DE BRINQUEDOS ESTRELA S.A.	Consumo Cíclico	Viagens e Lazer	Brinquedos e Jogos	30393960
+ETER3	ETERNIT S.A.	Bens Industriais	Construção e Engenharia	Produtos para Construção	353979774.75
+EUCA3	EUCATEX S.A. INDUSTRIA E COMERCIO	Materiais Básicos	Madeira e Papel	Madeira	1385156108.36
+EUCA4	EUCATEX S.A. INDUSTRIA E COMERCIO	Materiais Básicos	Madeira e Papel	Madeira	1385156108.36
+EVEN3	EVEN CONSTRUTORA E INCORPORADORA S.A.	Consumo Cíclico	Construção Civil	Incorporações	1240000000
+EZTC3	EZ TEC EMPREEND. E PARTICIPACOES S.A.	Consumo Cíclico	Construção Civil	Incorporações	2844129755.61
+FBMC3	FIBAM COMPANHIA INDUSTRIAL	Materiais Básicos	Siderurgia e Metalurgia	Artefatos de Ferro e Aço	904253.84
+FBMC4	FIBAM COMPANHIA INDUSTRIAL	Materiais Básicos	Siderurgia e Metalurgia	Artefatos de Ferro e Aço	904253.84
+FESA3	CIA FERRO LIGAS DA BAHIA - FERBASA	Materiais Básicos	Siderurgia e Metalurgia	Siderurgia	3513958400
+FESA4	CIA FERRO LIGAS DA BAHIA - FERBASA	Materiais Básicos	Siderurgia e Metalurgia	Siderurgia	3513958400
+FHER3	FERTILIZANTES HERINGER S.A.	Materiais Básicos	Químicos	Fertilizantes e Defensivos	204657679.2
+FIEI3	FICA EMPREENDIMENTOS IMOBILIÁRIOS S.A	Consumo Cíclico	Construção Civil	Incorporações	21823598.53
+FIGE3	INVESTIMENTOS BEMGE S.A.	Financeiro e Outros	Outros	Outros	9497566.76
+FIGE4	INVESTIMENTOS BEMGE S.A.	Financeiro e Outros	Outros	Outros	9497566.76
+FIQE3	UNIFIQUE TELECOMUNICAÇÕES S.A.	Comunicações	Telecomunicações	Telecomunicações	1212866190.15
+FLEX3	FLEX GESTÃO DE RELACIONAMENTOS S.A.	Bens Industriais	Serviços	Serviços Diversos	0
+FLRY3	FLEURY S.A.	Saúde	Serv.Méd.Hospit..Análises e Diagnósticos	Serv.Méd.Hospit..Análises e Diagnósticos	7704449646.08
+FNCN3	FINANSINOS S.A.- CREDITO FINANC E INVEST	Financeiro e Outros	Intermediários Financeiros	Soc. Crédito e Financiamento	13021336.5
+FRAS3	FRAS-LE S.A.	Bens Industriais	Material de Transporte	Material Rodoviário	4698284368.2
+FRIO3	METALFRIO SOLUTIONS S.A.	Bens Industriais	Máquinas e Equipamentos	Máq. e Equip. Industriais	1814664200.31
+FRTA3	POMIFRUTAS S/A	Consumo não Cíclico	Agropecuária	Agricultura	2690223.86
+FTRT3B	FUTURETEL S.A.	Financeiro e Outros	Outros	Outros	0
+G2DI33	G2D INVESTMENTS LTD	Financeiro e Outros	Serviços Financeiros Diversos	Gestão de Recursos e Investimentos	260027436.88
+GBIO33	BIOTOSCANA INVESTMENTS S.A.	Saúde	Comércio e Distribuição	Medicamentos e Outros Produtos	1108871982.4
+GEPA3	RIO PARANAPANEMA ENERGIA S.A.	Utilidade Pública	Energia Elétrica	Energia Elétrica	2392309836
+GEPA4	RIO PARANAPANEMA ENERGIA S.A.	Utilidade Pública	Energia Elétrica	Energia Elétrica	2392309836
+GFSA3	GAFISA S.A.	Consumo Cíclico	Construção Civil	Incorporações	306790488.13
+GGBR3	GERDAU S.A.	Materiais Básicos	Siderurgia e Metalurgia	Siderurgia	35453677303.8
+GGBR4	GERDAU S.A.	Materiais Básicos	Siderurgia e Metalurgia	Siderurgia	35453677303.8
+GGPS3	GPS PARTICIPACOES E EMPREENDIMENTOS S.A.	Bens Industriais	Transporte	Logística	11513021710.86
+GMAT3	GRUPO MATEUS S.A.	Consumo não Cíclico	Comércio e Distribuição	Alimentos	15730544082.48
+GNDI3	NOTRE DAME INTERMEDICA PARTICIPACOES SA	Saúde	Serv.Méd.Hospit..Análises e Diagnósticos	Serv.Méd.Hospit..Análises e Diagnósticos	41526443086.05
+GOAU3	METALURGICA GERDAU S.A.	Materiais Básicos	Siderurgia e Metalurgia	Siderurgia	10661907843.21
+GOAU4	METALURGICA GERDAU S.A.	Materiais Básicos	Siderurgia e Metalurgia	Siderurgia	10661907843.21
+GOLL4	GOL LINHAS AEREAS INTELIGENTES S.A.	Bens Industriais	Transporte	Transporte Aéreo	428822111.7
+GPAR3	CIA CELG DE PARTICIPACOES - CELGPAR	Utilidade Pública	Energia Elétrica	Energia Elétrica	3784633845
+GPIV33	GP INVESTMENTS, LTD.	Financeiro e Outros	Serviços Financeiros Diversos	Gestão de Recursos e Investimentos	239104151.11
+GRAO3	HUMBERG AGRIBRASIL COM. E EXPORT. DE GRÃOS S.A.	Consumo não Cíclico	Agropecuária	Agricultura	0
+GRND3	GRENDENE S.A.	Consumo Cíclico	Tecidos. Vestuário e Calçados	Calçados	5358830400
+GSHP3	GENERAL SHOPPING E OUTLETS DO BRASIL S.A.	Financeiro e Outros	Exploração de Imóveis	Exploração de Imóveis	20252074.5
+GUAR3	GUARARAPES CONFECCOES S.A.	Consumo Cíclico	Comércio	Tecidos. Vestuário e Calçados	3184896000
+GUAR4	GUARARAPES CONFECCOES S.A.	Consumo Cíclico	Comércio	Tecidos. Vestuário e Calçados	3184896000
+HAGA3	HAGA S.A. INDUSTRIA E COMERCIO	Bens Industriais	Construção e Engenharia	Produtos para Construção	20428333.87
+HAGA4	HAGA S.A. INDUSTRIA E COMERCIO	Bens Industriais	Construção e Engenharia	Produtos para Construção	20428333.87
+HAPV3	HAPVIDA PARTICIPACOES E INVESTIMENTOS SA	Saúde	Serv.Méd.Hospit..Análises e Diagnósticos	Serv.Méd.Hospit..Análises e Diagnósticos	27443646277.32
+HBOR3	HELBOR EMPREENDIMENTOS S.A.	Consumo Cíclico	Construção Civil	Incorporações	275733208.32
+HBRE3	HBR REALTY EMPREENDIMENTOS IMOBILIARIOS S/A	Financeiro e Outros	Exploração de Imóveis	Exploração de Imóveis	511817345.76
+HBSA3	HIDROVIAS DO BRASIL S.A.	Bens Industriais	Transporte	Transporte Hidroviário	2615716291.92
+HBTS5	CIA HABITASUL DE PARTICIPACOES	Financeiro e Outros	Exploração de Imóveis	Exploração de Imóveis	330639469.4
+HETA3	HERCULES S.A. FABRICA DE TALHERES	Consumo Cíclico	Utilidades Domésticas	Utensílios Domésticos	18281473.45
+HETA4	HERCULES S.A. FABRICA DE TALHERES	Consumo Cíclico	Utilidades Domésticas	Utensílios Domésticos	18281473.45
+HGTX3	CIA HERING	Consumo Cíclico	Tecidos. Vestuário e Calçados	Vestuário	6095022637.5
+HOOT3	HOTEIS OTHON S.A.	Consumo Cíclico	Hoteis e Restaurantes	Hotelaria	19815179.94
+HOOT4	HOTEIS OTHON S.A.	Consumo Cíclico	Hoteis e Restaurantes	Hotelaria	19815179.94
+HYPE3	HYPERA S.A.	Saúde	Comércio e Distribuição	Medicamentos e Outros Produtos	18204514453.02
+IDVL3	BCO INDUSVAL S.A.	Financeiro e Outros	Intermediários Financeiros	Bancos	224007574.38
+IDVL4	BCO INDUSVAL S.A.	Financeiro e Outros	Intermediários Financeiros	Bancos	224007574.38
+IFCM3	INFRACOMMERCE CXAAS S.A.	Tecnologia da Informação	Programas e Serviços	Programas e Serviços	210369511.44
+IGBR3	IGB ELETRÔNICA S/A	Financeiro e Outros	Exploração de Imóveis	Exploração de Imóveis	220074791.04
+IGSN3	IGUA SANEAMENTO S.A.	Utilidade Pública	Água e Saneamento	Água e Saneamento	0
+IGTA3	IGUATEMI EMPRESA DE SHOPPING CENTERS S.A	Financeiro e Outros	Exploração de Imóveis	Exploração de Imóveis	5758073079
+PATI3	PANATLANTICA S.A.	Materiais Básicos	Siderurgia e Metalurgia	Artefatos de Ferro e Aço	627255242.54
+IGTI11	JEREISSATI PARTICIPACOES S.A.	Financeiro e Outros	Exploração de Imóveis	Exploração de Imóveis	5139561723.8
+IGTI3	JEREISSATI PARTICIPACOES S.A.	Financeiro e Outros	Exploração de Imóveis	Exploração de Imóveis	5139561723.8
+IGTI4	JEREISSATI PARTICIPACOES S.A.	Financeiro e Outros	Exploração de Imóveis	Exploração de Imóveis	5139561723.8
+INEP3	INEPAR S.A. INDUSTRIA E CONSTRUCOES	Bens Industriais	Máquinas e Equipamentos	Máq. e Equip. Industriais	79964816.38
+INEP4	INEPAR S.A. INDUSTRIA E CONSTRUCOES	Bens Industriais	Máquinas e Equipamentos	Máq. e Equip. Industriais	79964816.38
+INNT3	INTER CONSTRUTORA E INCORPORADORA S.A.	Consumo Cíclico	Construção Civil	Incorporações	0
+INTB3	INTELBRAS S.A. IND DE TELEC ELETRONICA BRASILEIRA	Tecnologia da Informação	Computadores e Equipamentos	Computadores e Equipamentos	7230377197.7
+IRBR3	IRB - BRASIL RESSEGUROS S.A.	Financeiro e Outros	Previdência e Seguros	Seguradoras	2576477535.84
+ITEC3	ITAUTEC S.A. - GRUPO ITAUTEC	Tecnologia da Informação	Computadores e Equipamentos	Computadores e Equipamentos	443994658.6
+ITSA3	ITAUSA INVESTIMENTOS ITAU S.A.	Financeiro e Outros	Intermediários Financeiros	Bancos	101496611030.26
+ITSA4	ITAUSA INVESTIMENTOS ITAU S.A.	Financeiro e Outros	Intermediários Financeiros	Bancos	101496611030.26
+ITUB3	ITAU UNIBANCO HOLDING S.A.	Financeiro e Outros	Intermediários Financeiros	Bancos	293546467106.37
+ITUB4	ITAU UNIBANCO HOLDING S.A.	Financeiro e Outros	Intermediários Financeiros	Bancos	293546467106.37
+JALL3	JALLES MACHADO S.A.	Consumo não Cíclico	Alimentos Processados	Açucar e Alcool	1936597092.32
+JBSS3	JBS S.A.	Consumo não Cíclico	Alimentos Processados	Carnes e Derivados	65523157569.8
+JFEN3	JOAO FORTES ENGENHARIA S.A.	Consumo Cíclico	Construção Civil	Incorporações	271011859.8
+JHSF3	JHSF PARTICIPACOES S.A.	Consumo Cíclico	Construção Civil	Incorporações	2574655170.39
+JOPA3	JOSAPAR-JOAQUIM OLIVEIRA S.A. - PARTICIP	Consumo não Cíclico	Alimentos Processados	Alimentos Diversos	224066105.64
+JOPA4	JOSAPAR-JOAQUIM OLIVEIRA S.A. - PARTICIP	Consumo não Cíclico	Alimentos Processados	Alimentos Diversos	224066105.64
+JSLG3	JSL S.A.	Bens Industriais	Transporte	Transporte Rodoviário	2638030228.38
+KEPL3	KEPLER WEBER S.A.	Bens Industriais	Máquinas e Equipamentos	Máq. e Equip. Industriais	1626467176.5
+KLBN11	KLABIN S.A.	Materiais Básicos	Madeira e Papel	Papel e Celulose	25410852511.47
+KLBN3	KLABIN S.A.	Materiais Básicos	Madeira e Papel	Papel e Celulose	25410852511.47
+KLBN4	KLABIN S.A.	Materiais Básicos	Madeira e Papel	Papel e Celulose	25410852511.47
+KRSA3	KORA SAÚDE PARTICIPAÇÕES S.A	Saúde	Serv.Méd.Hospit..Análises e Diagnósticos	Serv.Méd.Hospit..Análises e Diagnósticos	425341436.85
+LAME3	LOJAS AMERICANAS S.A.	Consumo Cíclico	Comércio	Produtos Diversos	12391135396.59
+LAME4	LOJAS AMERICANAS S.A.	Consumo Cíclico	Comércio	Produtos Diversos	12391135396.59
+LAND3	Terra Santa Propriedades Agricolas S.A.	Consumo não Cíclico	Agropecuária	Agricultura	1491517911
+LAVV3	LAVVI EMPREENDIMENTOS IMOBILIÁRIOS S.A.	Consumo Cíclico	Construção Civil	Incorporações	1586298098.4
+LCAM3	CIA LOCAÇÃO DAS AMÉRICAS	Consumo Cíclico	Diversos	Aluguel de carros	12285815275.65
+LEVE3	MAHLE-METAL LEVE S.A.	Consumo Cíclico	Automóveis e Motocicletas	Automóveis e Motocicletas	4155625740
+LHER3	LOJAS HERING S.A.	Financeiro e Outros	Exploração de Imóveis	Exploração de Imóveis	0
+LHER4	LOJAS HERING S.A.	Financeiro e Outros	Exploração de Imóveis	Exploração de Imóveis	0
+LIGT3	LIGHT S.A.	Utilidade Pública	Energia Elétrica	Energia Elétrica	1877678832.96
+LINX3	LINX S.A.	Tecnologia da Informação	Programas e Serviços	Programas e Serviços	7083895104
+LIPR3	ELETROBRÁS PARTICIPAÇÕES S.A. - ELETROPAR	Utilidade Pública	Energia Elétrica	Energia Elétrica	574126583.2
+LJQQ3	LOJAS QUERO-QUERO S/A	Consumo Cíclico	Comércio	Produtos Diversos	725670484.92
+LOGG3	LOG COMMERCIAL PROPERTIES	Financeiro e Outros	Exploração de Imóveis	Exploração de Imóveis	2275084359.58
+LOGN3	LOG-IN LOGISTICA INTERMODAL S.A.	Bens Industriais	Transporte	Transporte Hidroviário	3734265712.8
+LPSB3	LPS BRASIL - CONSULTORIA DE IMOVEIS S.A.	Financeiro e Outros	Exploração de Imóveis	Intermediação Imobiliária	255269511.63
+LREN3	LOJAS RENNER S.A.	Consumo Cíclico	Comércio	Tecidos. Vestuário e Calçados	12069234222.29
+LTEL3B	LITEL PARTICIPACOES S.A.	Materiais Básicos	Mineração	Minerais Metálicos	18664056853.83
+LUPA3	LUPATECH S.A.	Petróleo. Gás e Biocombustíveis	Petróleo. Gás e Biocombustíveis	Equipamentos e Serviços	64288261.9
+LUXM3	TREVISA INVESTIMENTOS S.A.	Bens Industriais	Transporte	Transporte Hidroviário	162172080
+LUXM4	TREVISA INVESTIMENTOS S.A.	Bens Industriais	Transporte	Transporte Hidroviário	162172080
+LVTC3	LIVETECH DA BAHIA INDUSTRIA E COMERCIO S.A	Tecnologia da Informação	Programas e Serviços	Programas e Serviços	225674089.87
+LWSA3	LOCAWEB SERVIÇOS DE INTERNET S.A.	Tecnologia da Informação	Programas e Serviços	Programas e Serviços	2399483641.56
+MAPT3	CEMEPE INVESTIMENTOS S.A.	Financeiro e Outros	Outros	Outros	4151856.35
+MAPT4	CEMEPE INVESTIMENTOS S.A.	Financeiro e Outros	Outros	Outros	4151856.35
+MATD3	HOSPITAL MATER DEI SA	Saúde	Serv.Méd.Hospit..Análises e Diagnósticos	Serv.Méd.Hospit..Análises e Diagnósticos	1751070580.18
+MBLY3	Mobly S.A.	Consumo Cíclico	Comércio	Produtos Diversos	224693697.44
+MDIA3	M.DIAS BRANCO S.A. IND COM DE ALIMENTOS	Consumo não Cíclico	Alimentos Processados	Alimentos Diversos	10414080000
+MDNE3	MOURA DUBEUX ENGENHARIA S/A	Consumo Cíclico	Construção Civil	Incorporações	913624875
+MEAL3	INTERNATIONAL MEAL COMPANY ALIMENTACAO S.A.	Consumo Cíclico	Hoteis e Restaurantes	Restaurante e Similares	349370826.6
+MELK3	MELNICK EVEN DESENVOLVIMENTO IMOBILIÁRIO S.A.	Consumo Cíclico	Construção Civil	Incorporações	726068080.32
+MERC3	MERCANTIL BRASIL FINANC S.A. C.F.I.	Financeiro e Outros	Intermediários Financeiros	Soc. Crédito e Financiamento	232516929.25
+MERC4	MERCANTIL BRASIL FINANC S.A. C.F.I.	Financeiro e Outros	Intermediários Financeiros	Soc. Crédito e Financiamento	232516929.25
+MGEL3	MANGELS INDUSTRIAL S.A.	Materiais Básicos	Siderurgia e Metalurgia	Artefatos de Ferro e Aço	91458445.52
+MGEL4	MANGELS INDUSTRIAL S.A.	Materiais Básicos	Siderurgia e Metalurgia	Artefatos de Ferro e Aço	91458445.52
+MGLU3	MAGAZINE LUIZA S.A.	Consumo Cíclico	Comércio	Eletrodomésticos	7870299391.2
+MILS3	MILLS ESTRUTURAS E SERVIÇOS DE ENGENHARIA S.A.	Bens Industriais	Serviços	Serviços Diversos	2561141262.6
+MLAS3	MULTILASER INDUSTRIAL S.A.	Tecnologia da Informação	Computadores e Equipamentos	Computadores e Equipamentos	1567229919.75
+MMXM3	MMX MINERACAO E METALICOS S.A.	Materiais Básicos	Mineração	Minerais Metálicos	90834562
+MNDL3	MUNDIAL S.A. - PRODUTOS DE CONSUMO	Consumo Cíclico	Tecidos. Vestuário e Calçados	Acessórios	122624054.4
+MNPR3	MINUPAR PARTICIPACOES S.A.	Consumo não Cíclico	Alimentos Processados	Carnes e Derivados	85201200
+MOAR3	MONTEIRO ARANHA S.A.	Financeiro e Outros	Holdings Diversificadas	Holdings Diversificadas	4875985958
+MODL11	BANCO MODAL S.A	Financeiro e Outros	Intermediários Financeiros	Bancos	1985844000
+MODL3	BANCO MODAL S.A	Financeiro e Outros	Intermediários Financeiros	Bancos	1985844000
+MODL4	BANCO MODAL S.A	Financeiro e Outros	Intermediários Financeiros	Bancos	1985844000
+MOSI3	Mosaico Tecnologia ao Consumidor S.A.	Tecnologia da Informação	Programas e Serviços	Programas e Serviços	1043149227.2
+MOVI3	MOVIDA PARTICIPACOES SA	Consumo Cíclico	Diversos	Aluguel de carros	2159320432.56
+MRFG3	MARFRIG GLOBAL FOODS S.A.	Consumo não Cíclico	Alimentos Processados	Carnes e Derivados	10373160000
+MRSA3B	MRS LOGISTICA S.A.	Bens Industriais	Transporte	Transporte Ferroviário	9617527706.38
+MRSA5B	MRS LOGISTICA S.A.	Bens Industriais	Transporte	Transporte Ferroviário	9617527706.38
+MRSA6B	MRS LOGISTICA S.A.	Bens Industriais	Transporte	Transporte Ferroviário	9617527706.38
+MRVE3	MRV ENGENHARIA E PARTICIPACOES S.A.	Consumo Cíclico	Construção Civil	Incorporações	3709027761.89
+MSPA3	CIA MELHORAMENTOS DE SAO PAULO	Consumo Cíclico	Mídia	Jornais. Livros e Revistas	268891142.67
+MSPA4	CIA MELHORAMENTOS DE SAO PAULO	Consumo Cíclico	Mídia	Jornais. Livros e Revistas	268891142.67
+MSRO3	MAESTRO LOCADORA DE VEICULOS S.A.	Consumo Cíclico	Diversos	Aluguel de carros	18271898550
+MTIG3	METALGRAFICA IGUACU S.A.	Materiais Básicos	Embalagens	Embalagens	3700608
+MTIG4	METALGRAFICA IGUACU S.A.	Materiais Básicos	Embalagens	Embalagens	3700608
+MTRE3	MITRE REALTY EMPREENDIMENTOS E PARTICIPAÇÕES S.A.	Consumo Cíclico	Construção Civil	Incorporações	365980877.2
+MTSA3	METISA METALURGICA TIMBOENSE S.A.	Bens Industriais	Máquinas e Equipamentos	Máq. e Equip. Construção e Agrícolas	520252995.5
+MTSA4	METISA METALURGICA TIMBOENSE S.A.	Bens Industriais	Máquinas e Equipamentos	Máq. e Equip. Construção e Agrícolas	520252995.5
+MULT3	MULTIPLAN - EMPREEND IMOBILIARIOS S.A.	Financeiro e Outros	Exploração de Imóveis	Exploração de Imóveis	13342899033.75
+MWET3	WETZEL S.A.	Bens Industriais	Material de Transporte	Material Rodoviário	18041826.3
+MWET4	WETZEL S.A.	Bens Industriais	Material de Transporte	Material Rodoviário	18041826.3
+MYPK3	IOCHPE MAXION S.A.	Consumo Cíclico	Automóveis e Motocicletas	Automóveis e Motocicletas	1784684567.61
+NAFG3	NADIR FIGUEIREDO IND E COM S.A.	Consumo Cíclico	Utilidades Domésticas	Utensílios Domésticos	508315292.42
+NAFG4	NADIR FIGUEIREDO IND E COM S.A.	Consumo Cíclico	Utilidades Domésticas	Utensílios Domésticos	508315292.42
+NEMO3	SUZANO HOLDING S.A.	Materiais Básicos	Madeira e Papel	Papel e Celulose	0
+NEMO5	SUZANO HOLDING S.A.	Materiais Básicos	Madeira e Papel	Papel e Celulose	0
+NEMO6	SUZANO HOLDING S.A.	Materiais Básicos	Madeira e Papel	Papel e Celulose	0
+NEOE3	NEOENERGIA S.A.	Utilidade Pública	Energia Elétrica	Energia Elétrica	21629866959.36
+NEXP3	NEXPE PARTICIPAÇÕES S.A	Financeiro e Outros	Exploração de Imóveis	Intermediação Imobiliária	11020611.35
+NGRD3	NEOGRID PARTICIPACOES S.A.	Tecnologia da Informação	Programas e Serviços	Programas e Serviços	188543240.7
+NINJ3	GETNINJAS S.A.	Tecnologia da Informação	Programas e Serviços	Programas e Serviços	228850722
+NORD3	NORDON INDUSTRIAS METALURGICAS S.A.	Bens Industriais	Máquinas e Equipamentos	Máq. e Equip. Industriais	46416616.86
+NRTQ3	NORTEC QUÍMICA S.A.	Saúde	Medicamentos e Outros Produtos	Medicamentos e Outros Produtos	0
+NTCO3	NATURA &CO HOLDING S.A.	Consumo não Cíclico	Produtos de Uso Pessoal e de Limpeza	Produtos de Uso Pessoal	20622430741.42
+NUTR3	NUTRIPLANT INDUSTRIA E COMERCIO S.A.	Materiais Básicos	Químicos	Fertilizantes e Defensivos	71122428
+ODER4	CONSERVAS ODERICH S.A.	Consumo não Cíclico	Alimentos Processados	Alimentos Diversos	1106136388
+ODPV3	ODONTOPREV S.A.	Saúde	Serv.Méd.Hospit..Análises e Diagnósticos	Serv.Méd.Hospit..Análises e Diagnósticos	6215576208.75
+OFSA3	OURO FINO SAUDE ANIMAL PARTICIPACOES S.A.	Saúde	Comércio e Distribuição	Medicamentos e Outros Produtos	1008846412.2
+OGXP3	ÓLEO E GÁS PARTICIPAÇÕES S.A.	Petróleo. Gás e Biocombustíveis	Petróleo. Gás e Biocombustíveis	Exploração. Refino e Distribuição	52747073.84
+OIBR3	OI S.A.	Comunicações	Telecomunicações	Telecomunicações	309991449.8
+OIBR4	OI S.A.	Comunicações	Telecomunicações	Telecomunicações	309991449.8
+OMGE3	OMEGA GERAÇÃO S.A.	Utilidade Pública	Energia Elétrica	Energia Elétrica	5521562588.85
+ONCO3	ONCOCLINICAS DO BRASIL SERVICOS MEDICOS S.A.	Saúde	Serv.Méd.Hospit..Análises e Diagnósticos	Serv.Méd.Hospit..Análises e Diagnósticos	2959171764.78
+OPCT3	OCEANPACT SERVICOS MARITIMOS S.A.	Bens Industriais	Transporte	Transporte Hidroviário	1299737101
+ORVR3	ORIZON VALORIZACAO DE RESIDUOS S.A.	Utilidade Pública	Água e Saneamento	Água e Saneamento	3085773070.8
+OSXB3	OSX BRASIL S.A.	Petróleo. Gás e Biocombustíveis	Petróleo. Gás e Biocombustíveis	Equipamentos e Serviços	11962544.4
+PARD3	INSTITUTO HERMES PARDINI S.A.	Saúde	Serv.Méd.Hospit..Análises e Diagnósticos	Serv.Méd.Hospit..Análises e Diagnósticos	5403493010.25
+PATI4	PANATLANTICA S.A.	Materiais Básicos	Siderurgia e Metalurgia	Artefatos de Ferro e Aço	627255242.54
+PCAR3	CIA BRASILEIRA DE DISTRIBUICAO	Consumo não Cíclico	Comércio e Distribuição	Alimentos	1480328074.18
+PCAR4	CIA BRASILEIRA DE DISTRIBUICAO	Consumo não Cíclico	Comércio e Distribuição	Alimentos	1480328074.18
+PDGR3	PDG REALTY S.A. EMPREEND E PARTICIPACOES	Consumo Cíclico	Construção Civil	Incorporações	14001564.78
+PDTC3	PADTEC HOLDING S.A.	Financeiro e Outros	Serviços Financeiros Diversos	Serviços Financeiros Diversos	144634719.32
+PEAB3	CIA PARTICIPACOES ALIANCA DA BAHIA	Financeiro e Outros	Holdings Diversificadas	Holdings Diversificadas	852158060.28
+PEAB4	CIA PARTICIPACOES ALIANCA DA BAHIA	Financeiro e Outros	Holdings Diversificadas	Holdings Diversificadas	852158060.28
+PETR3	PETROLEO BRASILEIRO S.A. PETROBRAS	Petróleo. Gás e Biocombustíveis	Petróleo. Gás e Biocombustíveis	Exploração. Refino e Distribuição	490675347923.5
+PETR4	PETROLEO BRASILEIRO S.A. PETROBRAS	Petróleo. Gás e Biocombustíveis	Petróleo. Gás e Biocombustíveis	Exploração. Refino e Distribuição	490675347923.5
+PETZ3	PET CENTER COMERCIO E PARTICIPACOES S.A.	Consumo Cíclico	Comércio	Produtos Diversos	1591080846.88
+PFRM3	PROFARMA DISTRIB PROD FARMACEUTICOS S.A.	Saúde	Comércio e Distribuição	Medicamentos e Outros Produtos	638873908.68
+PGMN3	EMPREENDIMENTOS PAGUE MENOS S.A.	Saúde	Comércio e Distribuição	Medicamentos e Outros Produtos	1285591562.19
+PINE3	BCO PINE S.A.	Financeiro e Outros	Intermediários Financeiros	Bancos	1015526557.45
+PINE4	BCO PINE S.A.	Financeiro e Outros	Intermediários Financeiros	Bancos	1015526557.45
+PLAS3	PLASCAR PARTICIPACOES INDUSTRIAIS S.A.	Consumo Cíclico	Automóveis e Motocicletas	Automóveis e Motocicletas	63493885.98
+PLPL3	PLANO & PLANO DESENVOLVIMENTO IMOBILIÁRIO S.A.	Consumo Cíclico	Construção Civil	Incorporações	1901623360
+PMAM3	PARANAPANEMA S.A.	Materiais Básicos	Siderurgia e Metalurgia	Artefatos de Cobre	135292400.61
+PNVL3	DIMED S.A. DISTRIBUIDORA DE MEDICAMENTOS	Saúde	Comércio e Distribuição	Medicamentos e Outros Produtos	1436104943.55
+PNVL4	DIMED S.A. DISTRIBUIDORA DE MEDICAMENTOS	Saúde	Comércio e Distribuição	Medicamentos e Outros Produtos	1436104943.55
+POMO3	MARCOPOLO S.A.	Bens Industriais	Material de Transporte	Material Rodoviário	6628158169.1
+POMO4	MARCOPOLO S.A.	Bens Industriais	Material de Transporte	Material Rodoviário	6628158169.1
+PORT3	WILSON SONS HOLDINGS BRASIL S.A.	Bens Industriais	Transporte	Serviços de Apoio e Armazenagem	6384238939
+POSI3	POSITIVO TECNOLOGIA S.A.	Tecnologia da Informação	Computadores e Equipamentos	Computadores e Equipamentos	1168432000
+POWE3	FOCUS ENERGIA HOLDING PARTICIPAÇÕES S.A	Utilidade Pública	Energia Elétrica	Energia Elétrica	977237930.4
+PPAR3	POLPAR S.A.	Financeiro e Outros	Outros	Outros	2160800
+PPLA11	PPLA PARTICIPATIONS LTD.	Financeiro e Outros	Serviços Financeiros Diversos	Gestão de Recursos e Investimentos	10329824.22
+PRIO3	PETRO RIO S.A.	Petróleo. Gás e Biocombustíveis	Petróleo. Gás e Biocombustíveis	Exploração. Refino e Distribuição	36636901489.38
+PRNR3	PRINER SERVIÇOS INDUSTRIAIS S.A.	Bens Industriais	Serviços	Serviços Diversos	463469909.44
+PSSA3	PORTO SEGURO S.A.	Financeiro e Outros	Previdência e Seguros	Seguradoras	19074288770
+PTBL3	PBG S/A	Bens Industriais	Construção e Engenharia	Produtos para Construção	570996888.3
+PTCA11	PRATICA KLIMAQUIP INDUSTRIA E COMERCIO SA	Bens Industriais	Máquinas e Equipamentos	Máq. e Equip. Industriais	0
+PTCA3	PRATICA KLIMAQUIP INDUSTRIA E COMERCIO SA	Bens Industriais	Máquinas e Equipamentos	Máq. e Equip. Industriais	0
+PTNT3	PETTENATI S.A. INDUSTRIA TEXTIL	Consumo Cíclico	Tecidos. Vestuário e Calçados	Fios e Tecidos	345299434.48
+PTNT4	PETTENATI S.A. INDUSTRIA TEXTIL	Consumo Cíclico	Tecidos. Vestuário e Calçados	Fios e Tecidos	345299434.48
+QUAL3	QUALICORP CONSULTORIA E CORRETORA DE SEGUROS S.A.	Saúde	Serv.Méd.Hospit..Análises e Diagnósticos	Serv.Méd.Hospit..Análises e Diagnósticos	400460198.25
+QUSW3	QUALITY SOFTWARE S.A.	Tecnologia da Informação	Programas e Serviços	Programas e Serviços	0
+QVQP3B	524 PARTICIPACOES S.A.	Financeiro e Outros	Outros	Outros	0
+RADL3	RAIA DROGASIL S.A.	Saúde	Comércio e Distribuição	Medicamentos e Outros Produtos	42623758632
+RAIL3	RUMO S.A.	Bens Industriais	Transporte	Transporte Ferroviário	36522369605.81
+RAIZ4	RAIZEN S.A.	Petróleo. Gás e Biocombustíveis	Petróleo. Gás e Biocombustíveis	Exploração. Refino e Distribuição	28572926175.84
+RANI3	Irani Papel e Embalagem S.A.	Materiais Básicos	Embalagens	Embalagens	2014571319.6
+RANI4	Irani Papel e Embalagem S.A.	Materiais Básicos	Embalagens	Embalagens	2014571319.6
+RAPT3	RANDON S.A. IMPLEMENTOS E PARTICIPACOES	Bens Industriais	Material de Transporte	Material Rodoviário	3151012964.23
+RAPT4	RANDON S.A. IMPLEMENTOS E PARTICIPACOES	Bens Industriais	Material de Transporte	Material Rodoviário	3151012964.23
+RCSL3	RECRUSUL S.A.	Bens Industriais	Material de Transporte	Material Rodoviário	51763742.12
+RCSL4	RECRUSUL S.A.	Bens Industriais	Material de Transporte	Material Rodoviário	51763742.12
+RDNI3	RNI NEGÓCIOS IMOBILIÁRIOS S.A.	Consumo Cíclico	Construção Civil	Incorporações	136999499.04
+RDOR3	REDE D OR SÃO LUIZ S.A.	Saúde	Serv.Méd.Hospit..Análises e Diagnósticos	Serv.Méd.Hospit..Análises e Diagnósticos	58697462007.6
+RECV3	PETRORECÔNCAVO S.A.	Petróleo. Gás e Biocombustíveis	Petróleo. Gás e Biocombustíveis	Exploração. Refino e Distribuição	5507721005.02
+REDE3	REDE ENERGIA PARTICIPAÇÕES S.A.	Utilidade Pública	Energia Elétrica	Energia Elétrica	14012547203.36
+RENT3	LOCALIZA RENT A CAR S.A.	Consumo Cíclico	Diversos	Aluguel de carros	42135990317.98
+RLOG3	COSAN LOGISTICA S.A.	Bens Industriais	Transporte	Transporte Ferroviário	10691215482.28
+RNEW11	RENOVA ENERGIA S.A.	Utilidade Pública	Energia Elétrica	Energia Elétrica	228693626.33
+RNEW3	RENOVA ENERGIA S.A.	Utilidade Pública	Energia Elétrica	Energia Elétrica	228693626.33
+RNEW4	RENOVA ENERGIA S.A.	Utilidade Pública	Energia Elétrica	Energia Elétrica	228693626.33
+ROMI3	INDUSTRIAS ROMI S.A.	Bens Industriais	Máquinas e Equipamentos	Máq. e Equip. Industriais	947546496.99
+RPAD3	ALFA HOLDINGS S.A.	Financeiro e Outros	Intermediários Financeiros	Bancos	744009751.38
+RPAD5	ALFA HOLDINGS S.A.	Financeiro e Outros	Intermediários Financeiros	Bancos	744009751.38
+RPAD6	ALFA HOLDINGS S.A.	Financeiro e Outros	Intermediários Financeiros	Bancos	744009751.38
+RPMG3	REFINARIA DE PETROLEOS MANGUINHOS S.A.	Petróleo. Gás e Biocombustíveis	Petróleo. Gás e Biocombustíveis	Exploração. Refino e Distribuição	156367662.99
+RRRP3	3R PETROLEUM ÓLEO E GÁS S.A	Petróleo. Gás e Biocombustíveis	Petróleo. Gás e Biocombustíveis	Exploração. Refino e Distribuição	6140557758.22
+RSID3	ROSSI RESIDENCIAL S.A.	Consumo Cíclico	Construção Civil	Incorporações	98800000
+RSUL3	METALURGICA RIOSULENSE S.A.	Bens Industriais	Material de Transporte	Material Rodoviário	162189625
+RSUL4	METALURGICA RIOSULENSE S.A.	Bens Industriais	Material de Transporte	Material Rodoviário	162189625
+SANB11	BCO SANTANDER (BRASIL) S.A.	Financeiro e Outros	Intermediários Financeiros	Bancos	102992323985.49
+SANB3	BCO SANTANDER (BRASIL) S.A.	Financeiro e Outros	Intermediários Financeiros	Bancos	102992323985.49
+SANB4	BCO SANTANDER (BRASIL) S.A.	Financeiro e Outros	Intermediários Financeiros	Bancos	102992323985.49
+SAPR11	CIA SANEAMENTO DO PARANA - SANEPAR	Utilidade Pública	Água e Saneamento	Água e Saneamento	7894537631.26
+SAPR3	CIA SANEAMENTO DO PARANA - SANEPAR	Utilidade Pública	Água e Saneamento	Água e Saneamento	7894537631.26
+SAPR4	CIA SANEAMENTO DO PARANA - SANEPAR	Utilidade Pública	Água e Saneamento	Água e Saneamento	7894537631.26
+SBFG3	GRUPO SBF SA	Consumo Cíclico	Comércio	Produtos Diversos	2754229953.2
+SBSP3	CIA SANEAMENTO BASICO EST SAO PAULO	Utilidade Pública	Água e Saneamento	Água e Saneamento	49246886061.45
+SCAR3	SAO CARLOS EMPREEND E PARTICIPACOES S.A.	Financeiro e Outros	Exploração de Imóveis	Exploração de Imóveis	1235578626.6
+SEDU3	SOMOS EDUCAÇÃO S.A.	Consumo Cíclico	Diversos	Serviços Educacionais	6238667820
+SEER3	SER EDUCACIONAL S.A.	Consumo Cíclico	Diversos	Serviços Educacionais	661628818.4
+SEQL3	SEQUOIA LOGISTICA E TRANSPORTES S.A	Bens Industriais	Transporte	Logística	104205602.8
+SGPS3	SPRINGS GLOBAL PARTICIPACOES S.A.	Consumo Cíclico	Tecidos. Vestuário e Calçados	Fios e Tecidos	19000000
+SHOW3	T4F ENTRETENIMENTO S.A.	Consumo Cíclico	Viagens e Lazer	Produção de Eventos e Shows	100444817.21
+SHUL3	SCHULZ S.A.	Bens Industriais	Máquinas e Equipamentos	Motores . Compressores e Outros	18292417258.36
+SHUL4	SCHULZ S.A.	Bens Industriais	Máquinas e Equipamentos	Motores . Compressores e Outros	18292417258.36
+SIMH3	SIMPAR S.A.	Financeiro e Outros	Holdings Diversificadas	Holdings Diversificadas	4696958067.54
+SLCE3	SLC AGRICOLA S.A.	Consumo não Cíclico	Agropecuária	Agricultura	7846935973.2
+SLED3	SARAIVA S.A. LIVREIROS EDITORES	Consumo Cíclico	Comércio	Produtos Diversos	16497692.59
+SLED4	SARAIVA S.A. LIVREIROS EDITORES	Consumo Cíclico	Comércio	Produtos Diversos	16497692.59
+SMFT3	SMARTFIT ESCOLA DE GINÁSTICA E DANÇA S.A.	Consumo Cíclico	Viagens e Lazer	Atividades Esportivas	12621796482.17
+SMLS3	SMILES FIDELIDADE S.A.	Consumo Cíclico	Diversos	Programas de Fidelização	2781160547.2
+SMTO3	SAO MARTINHO S.A.	Consumo não Cíclico	Alimentos Processados	Açucar e Alcool	11395739671.4
+SNSY3	SANSUY S.A. INDUSTRIA DE PLASTICOS	Materiais Básicos	Materiais Diversos	Materiais Diversos	96932450.4
+SNSY5	SANSUY S.A. INDUSTRIA DE PLASTICOS	Materiais Básicos	Materiais Diversos	Materiais Diversos	96932450.4
+SNSY6	SANSUY S.A. INDUSTRIA DE PLASTICOS	Materiais Básicos	Materiais Diversos	Materiais Diversos	96932450.4
+SOJA3	BOA SAFRA SEMENTES S.A.	Consumo não Cíclico	Agropecuária	Agricultura	1952698537.92
+SOMA3	GRUPO DE MODA SOMA S.A.	Consumo Cíclico	Comércio	Tecidos. Vestuário e Calçados	4582924658.32
+SOND3	SONDOTECNICA ENGENHARIA SOLOS S.A.	Bens Industriais	Construção e Engenharia	Engenharia Consultiva	127408965
+SOND5	SONDOTECNICA ENGENHARIA SOLOS S.A.	Bens Industriais	Construção e Engenharia	Engenharia Consultiva	127408965
+SOND6	SONDOTECNICA ENGENHARIA SOLOS S.A.	Bens Industriais	Construção e Engenharia	Engenharia Consultiva	127408965
+SPRT3B	LONGDIS S.A.	Financeiro e Outros	Outros	Outros	370531748.8
+SQIA3	SINQIA S.A.	Tecnologia da Informação	Programas e Serviços	Programas e Serviços	2406971773.64
+STBP3	SANTOS BRASIL PARTICIPACOES S.A.	Bens Industriais	Transporte	Serviços de Apoio e Armazenagem	11320631833.9
+STKF3	STATKRAFT ENERGIAS RENOVAVEIS S.A.	Consumo Cíclico	Viagens e Lazer	Atividades Esportivas	0
+STTR3	STARA S.A. - INDÚSTRIA DE IMPLEMENTOS AGRÍCOLAS	Bens Industriais	Máquinas e Equipamentos	Máq. e Equip. Construção e Agrícolas	0
+SULA11	SUL AMERICA S.A.	Financeiro e Outros	Previdência e Seguros	Seguradoras	9475042424.17
+SULA3	SUL AMERICA S.A.	Financeiro e Outros	Previdência e Seguros	Seguradoras	9475042424.17
+SULA4	SUL AMERICA S.A.	Financeiro e Outros	Previdência e Seguros	Seguradoras	9475042424.17
+SUZB3	SUZANO S.A.	Materiais Básicos	Madeira e Papel	Papel e Celulose	62949757276.05
+SYNE3	SYN PROP E TECH S.A.	Financeiro e Outros	Exploração de Imóveis	Exploração de Imóveis	1335638893.75
+TAEE11	TRANSMISSORA ALIANÇA DE ENERGIA ELÉTRICA S.A.	Utilidade Pública	Energia Elétrica	Energia Elétrica	11547603362.64
+TAEE3	TRANSMISSORA ALIANÇA DE ENERGIA ELÉTRICA S.A.	Utilidade Pública	Energia Elétrica	Energia Elétrica	11547603362.64
+TAEE4	TRANSMISSORA ALIANÇA DE ENERGIA ELÉTRICA S.A.	Utilidade Pública	Energia Elétrica	Energia Elétrica	11547603362.64
+TASA3	TAURUS ARMAS S.A.	Bens Industriais	Máquinas e Equipamentos	Armas e Munições	1391168375.08
+TASA4	TAURUS ARMAS S.A.	Bens Industriais	Máquinas e Equipamentos	Armas e Munições	1391168375.08
+TCNO3	TECNOSOLO ENGENHARIA S.A.	Bens Industriais	Construção e Engenharia	Engenharia Consultiva	6451072.5
+TCNO4	TECNOSOLO ENGENHARIA S.A.	Bens Industriais	Construção e Engenharia	Engenharia Consultiva	6451072.5
+TECN3	TECHNOS S.A.	Consumo Cíclico	Tecidos. Vestuário e Calçados	Acessórios	319483899.75
+TEKA3	TEKA-TECELAGEM KUEHNRICH S.A.	Consumo Cíclico	Tecidos. Vestuário e Calçados	Fios e Tecidos	18754666
+TEKA4	TEKA-TECELAGEM KUEHNRICH S.A.	Consumo Cíclico	Tecidos. Vestuário e Calçados	Fios e Tecidos	18754666
+TELB3	TELEC BRASILEIRAS S.A. TELEBRAS	Comunicações	Telecomunicações	Telecomunicações	1067888924.83
+TELB4	TELEC BRASILEIRAS S.A. TELEBRAS	Comunicações	Telecomunicações	Telecomunicações	1067888924.83
+TEND3	CONSTRUTORA TENDA S.A.	Consumo Cíclico	Construção Civil	Incorporações	1307260892.52
+TESA3	TERRA SANTA AGRO S.A.	Consumo não Cíclico	Agropecuária	Agricultura	1389696672
+TFCO4	TRACK & FIELD CO S.A.	Consumo Cíclico	Comércio	Tecidos. Vestuário e Calçados	1600374375.03
+TGMA3	TEGMA GESTAO LOGISTICA S.A.	Bens Industriais	Transporte	Transporte Rodoviário	1554368648.25
+TIET11	AES TIETE ENERGIA SA	Utilidade Pública	Energia Elétrica	Energia Elétrica	5004795800.93
+TIET3	AES TIETE ENERGIA SA	Utilidade Pública	Energia Elétrica	Energia Elétrica	5004795800.93
+TIET4	AES TIETE ENERGIA SA	Utilidade Pública	Energia Elétrica	Energia Elétrica	5004795800.93
+TIMS3	TIM PARTICIPACOES S.A.	Comunicações	Telecomunicações	Telecomunicações	38006629048.6
+TKNO3	TEKNO S.A. - INDUSTRIA E COMERCIO	Materiais Básicos	Siderurgia e Metalurgia	Artefatos de Ferro e Aço	198955927.63
+TKNO4	TEKNO S.A. - INDUSTRIA E COMERCIO	Materiais Básicos	Siderurgia e Metalurgia	Artefatos de Ferro e Aço	198955927.63
+TOTS3	TOTVS S.A.	Tecnologia da Informação	Programas e Serviços	Programas e Serviços	18182216512.26
+TOYB3	TEC TOY S.A.	Consumo Cíclico	Viagens e Lazer	Brinquedos e Jogos	71890222.22
+TOYB4	TEC TOY S.A.	Consumo Cíclico	Viagens e Lazer	Brinquedos e Jogos	71890222.22
+TPIS3	TPI - TRIUNFO PARTICIP. E INVEST. S.A.	Bens Industriais	Transporte	Exploração de Rodovias	161040000
+TRAD3	TC TRADERS CLUB S.A.	Tecnologia da Informação	Programas e Serviços	Programas e Serviços	182095639.7
+TRIS3	TRISUL S.A.	Consumo Cíclico	Construção Civil	Incorporações	858440674.8
+TRPL3	CTEEP - CIA TRANSMISSÃO ENERGIA ELÉTRICA PAULISTA	Utilidade Pública	Energia Elétrica	Energia Elétrica	18877922994.6
+TRPL4	CTEEP - CIA TRANSMISSÃO ENERGIA ELÉTRICA PAULISTA	Utilidade Pública	Energia Elétrica	Energia Elétrica	18877922994.6
+TTEN3	TRÊS TENTOS AGROINDUSTRIAL SA	Consumo não Cíclico	Agropecuária	Agricultura	4938129681.77
+TUPY3	TUPY S.A.	Bens Industriais	Material de Transporte	Material Rodoviário	3190648075
+TXRX3	TEXTIL RENAUXVIEW S.A.	Consumo Cíclico	Tecidos. Vestuário e Calçados	Fios e Tecidos	20123661.57
+TXRX4	TEXTIL RENAUXVIEW S.A.	Consumo Cíclico	Tecidos. Vestuário e Calçados	Fios e Tecidos	20123661.57
+UCAS3	UNICASA INDÚSTRIA DE MÓVEIS S.A.	Consumo Cíclico	Utilidades Domésticas	Móveis	144729137.16
+UGPA3	ULTRAPAR PARTICIPACOES S.A.	Petróleo. Gás e Biocombustíveis	Petróleo. Gás e Biocombustíveis	Exploração. Refino e Distribuição	23992345804.68
+UNIP3	UNIPAR CARBOCLORO S.A.	Materiais Básicos	Químicos	Químicos Diversos	5481209197.59
+UNIP5	UNIPAR CARBOCLORO S.A.	Materiais Básicos	Químicos	Químicos Diversos	5481209197.59
+UNIP6	UNIPAR CARBOCLORO S.A.	Materiais Básicos	Químicos	Químicos Diversos	5481209197.59
+USIM3	USINAS SID DE MINAS GERAIS S.A.	Materiais Básicos	Siderurgia e Metalurgia	Siderurgia	9248349554.04
+USIM5	USINAS SID DE MINAS GERAIS S.A.	Materiais Básicos	Siderurgia e Metalurgia	Siderurgia	9248349554.04
+USIM6	USINAS SID DE MINAS GERAIS S.A.	Materiais Básicos	Siderurgia e Metalurgia	Siderurgia	9248349554.04
+VALE3	VALE S.A.	Materiais Básicos	Mineração	Minerais Metálicos	278876625715.2
+VAMO3	VAMOS LOCAÇÃO DE CAMINHÕES. MÁQUINAS E EQUIP. S.A.	Bens Industriais	Máquinas e Equipamentos	Máq. e Equip. Construção e Agrícolas	8149915319.22
+VBBR3	VIBRA ENERGIA S.A.	Petróleo. Gás e Biocombustíveis	Petróleo. Gás e Biocombustíveis	Exploração. Refino e Distribuição	22917120000
+VITT3	VITTIA FERTILIZANTES E BIOLOGICOS S.A.	Materiais Básicos	Químicos	Fertilizantes e Defensivos	871039921.34
+VIVA3	VIVARA PARTICIPAÇOES S.A	Consumo Cíclico	Tecidos. Vestuário e Calçados	Acessórios	4790090755.32
+VIVR3	VIVER INCORPORADORA E CONSTRUTORA S.A.	Consumo Cíclico	Construção Civil	Incorporações	66179326.18
+VIVT3	TELEFÔNICA BRASIL S.A	Comunicações	Telecomunicações	Telecomunicações	73655863205.2
+VIVT4	TELEFÔNICA BRASIL S.A	Comunicações	Telecomunicações	Telecomunicações	73655863205.2
+VLID3	VALID SOLUÇÕES S.A.	Bens Industriais	Serviços	Serviços Diversos	1246367991.25
+VSPT3	FERROVIA CENTRO-ATLANTICA S.A.	Bens Industriais	Transporte	Transporte Ferroviário	712610842.16
+VSPT4	FERROVIA CENTRO-ATLANTICA S.A.	Bens Industriais	Transporte	Transporte Ferroviário	712610842.16
+VSTE3	VESTE S.A. ESTILO	Consumo Cíclico	Comércio	Tecidos. Vestuário e Calçados	1943708695.5
+VULC3	VULCABRAS/AZALEIA S.A.	Consumo Cíclico	Tecidos. Vestuário e Calçados	Calçados	3971529288.24
+VVAR11	GRUPO CASAS BAHIA S.A.	Consumo Cíclico	Comércio	Eletrodomésticos	546730694.25
+VVAR4	GRUPO CASAS BAHIA S.A.	Consumo Cíclico	Comércio	Eletrodomésticos	546730694.25
+VVEO3	CM HOSPITALAR S.A.	Saúde	Serv.Méd.Hospit..Análises e Diagnósticos	Serv.Méd.Hospit..Análises e Diagnósticos	655325834.24
+WEGE3	WEG S.A.	Bens Industriais	Máquinas e Equipamentos	Motores . Compressores e Outros	171250574318.4
+WEST3	WESTWING COMERCIO VAREJISTA S.A.	Consumo Cíclico	Comércio	Produtos Diversos	100930965.59
+WHRL3	WHIRLPOOL S.A.	Consumo Cíclico	Comércio	Eletrodomésticos	6766472571.5
+WHRL4	WHIRLPOOL S.A.	Consumo Cíclico	Comércio	Eletrodomésticos	6766472571.5
+WIZC3	WIZ CO PARTICIPAÇÕES E CORRETAGEM DE SEGUROS S.A.	Financeiro e Outros	Previdência e Seguros	Corretoras de Seguros	905075216.12
+WLMM3	WLM PART. E COMÉRCIO DE MÁQUINAS E VEÍCULOS S.A.	Bens Industriais	Comércio	Material de Transporte	979557369.5
+WLMM4	WLM PART. E COMÉRCIO DE MÁQUINAS E VEÍCULOS S.A.	Bens Industriais	Comércio	Material de Transporte	979557369.5
+YDUQ3	ESTACIO PARTICIPACOES S.A.	Consumo Cíclico	Diversos	Serviços Educacionais	3393795583.98
+ZAMP3	ZAMP S.A.	Consumo Cíclico	Hoteis e Restaurantes	Restaurante e Similares	886644539.34
+\.
+
+
+--
+-- Data for Name: acoes_atual; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY public.acoes_atual (ticker, price, companyname, p_l, p_vp, p_ebit, p_ativo, ev_ebit, margembruta, margemebit, margemliquida, p_sr, p_capitalgiro, p_ativocirculante, giroativos, roe, roa, roic, dividaliquidapatrimonioliquido, dividaliquidaebit, pl_ativo, passivo_ativo, liquidezcorrente, peg_ratio, receitas_cagr5, liquidezmediadiaria, vpa, lpa, valormercado, sectorname, subsectorname, segmentname, lucros_cagr5, dy) FROM stdin;
+CBAV3	6.27	Companhia Brasileira de Alumínio	-3.96	0.94	-4.73	0.31	-8.31	1.32	-12.11	-14.47	0.57	1.61	-0.47	0.53	-23.8	-7.73	-11.36	0.71	-3.58	0.32	0.66	2.24	-0.02	\N	26990112.97	6.65	-1.58	4082225810.19	Materiais Básicos	Mineração	Minerais Metálicos	\N	\N
+BSEV3	9	BIOSEV S.A.	10.22	-10.84	3.17	0.78	5.46	26.77	17.92	5.55	0.57	-1.59	-1.13	1.37	-106.05	7.59	30.9	\N	2.3	-0.07	1.07	0.39	-0.06	10.88	\N	-0.83	0.88	9183864834	Consumo não Cíclico	Alimentos Processados	Açucar e Alcool	\N	\N
+BRIN3	39.15	BR INSURANCE CORRETORA DE SEGUROS S.A.	-32.48	1.7	36.67	0.89	37.6	100	6.44	-7.27	2.36	532.2	-1.17	0.38	-5.23	-2.73	3.63	0.04	0.94	0.52	0.48	1.01	0.15	29.52	\N	23.06	-1.21	798299859.15	\N	\N	\N	\N	\N
+BRBI4	0	BR ADVISORY PARTNERS PARTICIPAÇÕES S.A.	0	0	0	0	7.37	100	8.88	61.44	0	0	0	0.02	20.74	1.53	-0.2	-1.46	-48.8	0.07	0.93	1.07	0	-16.03	\N	2.62	0.54	1391193078	Financeiro e Outros	Intermediários Financeiros	Bancos	27.88	\N
+BALM4	10	BAUMER S.A.	9.58	0.65	4.66	0.38	2.67	61.16	12.55	6.11	0.58	0.83	-1.32	0.66	6.82	4	8.37	-0.28	-1.96	0.59	0.41	2.86	0.07	7.24	6955.19	15.3	1.04	97510000	Saúde	Equipamentos	Equipamentos	30.02	\N
+BEEF11	3.62	MINERVA S.A.	21.91	101.17	1.03	0.07	6.1	20.9	7.68	0.36	0.08	0.2	-0.2	0.85	461.76	0.31	8.32	413.94	4.23	0	0.98	2.02	-0.26	10.65	\N	0.04	0.17	3977706315.85	Consumo não Cíclico	Alimentos Processados	Carnes e Derivados	\N	\N
+CTCA3	0	CTC - CENTRO DE TECNOLOGIA CANAVIEIRA S.A.	0	0	0	0	-2.77	66.73	39.46	39.86	0	0	0	0.32	15.55	12.75	9.53	-0.43	-2.77	0.82	0.18	4.95	0	15.39	\N	3.05	0.47	0	Consumo não Cíclico	Agropecuária	Agricultura	45.2	\N
+BIDI4	3.41	BANCO INTER S.A.	-234.18	1.06	-89.72	0.23	-91.21	50.04	-13.62	-5.22	12.22	\N	-0.24	0.02	-0.45	-0.1	\N	\N	\N	0.22	0.78	\N	0.12	5.8	\N	3.22	-0.01	8991139764.53	Financeiro e Outros	Intermediários Financeiros	Bancos	\N	\N
+BRAP3	17.53	BRADESPAR S.A.	4.68	0.84	4.89	0.83	4.5	\N	\N	\N	\N	10.55	-0.91	0	17.91	17.78	17.15	-0.09	-0.5	0.99	0.01	12.26	-0.08	\N	1175741	20.9	3.74	7056802936.1	Materiais Básicos	Mineração	Minerais Metálicos	4.33	15.4
+ANIM3	3.05	ANIMA HOLDING S.A.	-8.51	0.48	1.82	0.12	7.72	62.49	17.75	-3.79	0.32	7.05	-0.15	0.38	-5.67	-1.46	8.34	1.57	5.9	0.26	0.7	1.1	-0.2	27.79	20077946.42	6.32	-0.36	1231799855.25	Consumo Cíclico	Diversos	Serviços Educacionais	\N	\N
+AMBP3	9.1	AMBIPAR PARTICIPACOES E EMPREENDIMENTOS S/A	-7.23	1.05	1.41	0.12	6.05	23.93	21.59	-4.21	0.3	0.43	-0.21	0.41	-14.5	-1.72	8.36	3.45	4.64	0.12	0.81	3.35	-0.05	66.18	15695812.34	8.68	-1.26	1520081007.9	Utilidade Pública	Água e Saneamento	Água e Saneamento	\N	\N
+BAZA3	86.1	BCO AMAZONIA S.A.	3.81	0.79	3.36	0.1	3.36	19.7	33.39	29.42	1.12	2.75	-0.1	0.09	20.69	2.63	\N	\N	\N	0.13	0.87	18.55	0.62	25.91	258241.54	109.06	22.57	4826620921.5	Financeiro e Outros	Intermediários Financeiros	Bancos	63.26	7.69
+BRGE11	13.18	CONSORCIO ALFA DE ADMINISTRACAO S.A.	33.11	0.73	-34.21	0.33	19.81	-4115.33	-798.17	824.67	273.04	0.87	-0.74	0	2.19	0.99	-2.79	-1.15	54.17	0.45	0.36	3.13	-0.51	-32.83	9295	18.16	0.4	974940393.52	Financeiro e Outros	Previdência e Seguros	Seguradoras	-11.18	\N
+CMSA3	0	CIMS S.A.	0	0	0	0	0.17	\N	\N	\N	\N	0	0	0	-555.26	-550.51	-549.5	-0.96	0.17	0.99	0.01	111.51	0	\N	\N	0	0	0	Financeiro e Outros	Outros	Outros	\N	\N
+CATA3	103.61	CIA INDUSTRIAL CATAGUASES	0.89	0.08	0.85	0.04	3.91	25.85	6.1	5.8	0.05	0.12	-0.1	0.73	9.26	4.25	4.24	0.3	3.07	0.46	0.54	1.93	-0.03	11.32	\N	1257.08	116.4	14940354.78	Consumo Cíclico	Tecidos. Vestuário e Calçados	Fios e Tecidos	\N	18.97
+BSLI3	9.45	BRB BCO DE BRASILIA S.A.	16.75	1.33	26.02	0.07	26.73	30.19	1.88	2.93	0.49	-0.26	-0.08	0.14	7.93	0.42	\N	\N	\N	0.05	0.95	0.26	0.03	25.16	42102.76	7.11	0.56	3523637425	Financeiro e Outros	Intermediários Financeiros	Bancos	-3.73	0.74
+BOBR4	2.03	BOMBRIL S.A.	5.49	-13.05	2.36	0.62	2.36	41.73	15.69	6.74	0.37	-9.15	-1.27	1.69	-237.6	11.37	69.17	\N	1.24	-0.05	1.05	0.88	0.12	6.3	25334.57	-0.16	0.37	249475757.86	Consumo não Cíclico	Produtos de Uso Pessoal e de Limpeza	Produtos de Limpeza	6.53	\N
+BAUH4	78.49	EXCELSIOR ALIMENTOS S.A.	33.54	4.15	33.18	2.51	31.39	23.33	5.62	5.56	1.86	29.11	-4.61	1.35	12.36	7.48	11.13	-0.22	-1.79	0.6	0.4	1.23	-0.03	3.33	26761.24	18.93	2.34	409892204.78	Consumo não Cíclico	Alimentos Processados	Carnes e Derivados	5.34	\N
+BRKM5	17.99	BRASKEM S.A	-2.35	4.65	-4.31	0.15	-11.69	4.7	-4.82	-8.85	0.21	1.25	-0.26	0.74	-198.12	-6.53	-11.57	7.95	-7.36	0.03	0.97	1.44	-0.05	4	55342434.74	3.87	-7.66	14414035917.98	Materiais Básicos	Químicos	Petroquímicos	\N	\N
+BLUT3	5.14	BLUE TECH SOLUTIONS E.Q.I. S	-5.63	0.46	-6.17	0.14	-4.91	\N	\N	\N	\N	-1.08	-0.14	0	-8.15	-2.46	-6.65	0.12	-1.59	0.3	0.7	0	0.2	\N	\N	11.21	-0.91	14115600.06	Financeiro e Outros	Holdings Diversificadas	Holdings Diversificadas	\N	\N
+ALPA4	9	ALPARGATAS S.A.	-3.74	1.63	-3.69	0.95	-3.92	40.73	-44.32	-43.64	1.63	2.69	-1.97	0.58	-43.42	-25.35	-33.22	0.08	-0.18	0.58	0.42	3.12	0	-0.89	27558375.86	5.54	-2.4	6232437670.25	Consumo Cíclico	Tecidos. Vestuário e Calçados	Calçados	\N	\N
+BIDI3	3.4	BANCO INTER S.A.	-233.49	1.06	-89.46	0.23	-91.21	50.04	-13.62	-5.22	12.19	\N	-0.24	0.02	-0.45	-0.1	\N	\N	\N	0.22	0.78	\N	0.12	5.8	\N	3.22	-0.01	8991139764.53	Financeiro e Outros	Intermediários Financeiros	Bancos	\N	\N
+AURA33	52.45	AURA MINERALS INC.	25.5	2.19	7.66	0.88	8.89	31.29	22.88	6.87	1.75	5.86	-1.43	0.5	8.57	3.45	11.8	0.35	1.24	0.4	0.6	1.64	-0.44	32.13	4749923.26	24	2.06	3710442027	Materiais Básicos	Mineração	Minerais Metálicos	50.72	7.16
+ANDG4B	0	ANDRADE GUTIERREZ CONCESSOES S.A.	0	0	0	0	8.6	47.12	179.06	45.82	0	0	0	0.07	3.71	3.14	12.68	0.13	0.93	0.85	0.15	0.26	0	10.22	\N	12.94	0.48	1651867985.68	\N	\N	\N	-38.09	\N
+CBEE3	9	AMPLA ENERGIA E SERVICOS S.A.	635.26	0.43	2.12	0.13	7.6	20.24	13.54	0.05	0.29	-0.42	-0.15	0.44	0.07	0.02	8.67	1.1	5.48	0.3	0.7	0.38	-6.14	7.38	1591	21.17	0.01	2286313254	Utilidade Pública	Energia Elétrica	Energia Elétrica	-53.81	\N
+ATMP3	2.23	ATMA SA	0.1	-3.55	-0.31	0.04	-1.13	-6.17	-62.08	201.27	0.19	-3.42	-0.05	0.2	-3701.55	40.69	-89.81	\N	-0.82	-0.01	1.01	0.96	0	-25.72	19384.46	-0.63	23.24	59564093.88	Bens Industriais	Serviços	Serviços Diversos	\N	\N
+NEMO6	0	SUZANO HOLDING S.A.	0	0	0	0	5.74	34.61	27.57	6.7	0	0	0	0.26	19.82	1.77	7.12	4.68	5.74	0.09	0.69	2.89	0	24.23	\N	18.54	3.67	0	Materiais Básicos	Madeira e Papel	Papel e Celulose	90.81	\N
+MSPA4	36.68	CIA MELHORAMENTOS DE SAO PAULO	25.8	0.28	6.29	0.16	10.24	43.07	22.38	5.46	1.41	4.34	-0.18	0.12	1.09	0.64	2.64	0.14	3.05	0.58	0.42	1.68	-0.09	5.07	32500	129.88	1.42	268891142.67	Consumo Cíclico	Mídia	Jornais. Livros e Revistas	14.21	0.87
+NEMO5	52.97	SUZANO HOLDING S.A.	14.42	2.86	3.5	0.26	5.74	34.61	27.57	6.7	0.97	1.56	-0.34	0.26	19.82	1.77	7.12	4.68	5.74	0.09	0.69	2.89	-0.29	24.23	\N	18.54	3.67	0	Materiais Básicos	Madeira e Papel	Papel e Celulose	90.81	2.33
+MOSI3	8.24	Mosaico Tecnologia ao Consumidor S.A.	32.29	1.56	76.45	1.46	36.94	89.47	6.23	14.75	4.76	1.91	-8.4	0.31	4.84	4.52	0.25	-0.81	-39.51	0.93	0.07	13.23	\N	\N	\N	5.27	0.26	1043149227.2	Tecnologia da Informação	Programas e Serviços	Programas e Serviços	\N	\N
+MAPT3	4.21	CEMEPE INVESTIMENTOS S.A.	-26.86	-0.61	-26.86	5	-28.83	\N	\N	\N	\N	-92.11	-5	0	-2.28	-18.63	2.28	\N	0	-8.17	9.17	0	1.7	\N	5473.25	-6.87	-0.16	4151856.35	Financeiro e Outros	Outros	Outros	\N	\N
+GRND3	5.94	GRENDENE S.A.	9.17	1.46	16.34	1.26	12.97	45.09	13.37	23.82	2.18	2.31	-3.9	0.58	15.92	13.73	7.66	-0.3	-3.37	0.86	0.14	5.09	2.79	0.84	6810803.43	4.07	0.65	5358830400	Consumo Cíclico	Tecidos. Vestuário e Calçados	Calçados	-0.04	5.42
+MODL11	8.46	BANCO MODAL S.A	-27.27	1.66	-29.26	0.27	-29.26	50.83	-5.11	-5.48	1.5	\N	-0.3	0.18	-6.1	-0.97	\N	\N	\N	0.16	0.84	\N	0.17	\N	\N	5.09	-0.31	1985844000	Financeiro e Outros	Intermediários Financeiros	Bancos	\N	\N
+MERC3	15.28	MERCANTIL BRASIL FINANC S.A. C.F.I.	39.88	1.12	31.98	0.71	27.02	71.93	19.45	15.6	6.22	160.09	-0.71	0.11	2.8	1.78	\N	\N	\N	0.64	0.36	\N	-0.16	-24.22	\N	13.67	0.38	232516929.25	Financeiro e Outros	Intermediários Financeiros	Soc. Crédito e Financiamento	-22.87	\N
+IDVL4	2.67	BCO INDUSVAL S.A.	-1.22	1.16	-4.71	0.07	-3.84	-18.91	-40.19	-154.6	1.89	0.59	-0.16	0.04	-94.38	-5.67	\N	\N	\N	0.06	0.94	1.26	0	-32.17	\N	2.31	-2.18	224007574.38	Financeiro e Outros	Intermediários Financeiros	Bancos	\N	\N
+ALPK3	3.05	ALLPARK EMPREENDIMENTOS PARTICIPACOES SERVICOS S.A	-11.38	1.88	3.62	0.27	10.46	32.23	12.89	-4.1	0.47	-2.05	-0.3	0.57	-16.54	-2.34	10.1	3.56	6.85	0.14	0.86	0.49	0.19	6.73	422224.97	1.62	-0.27	661923276.25	Bens Industriais	Serviços	Serviços Diversos	\N	\N
+JOPA3	21	JOSAPAR-JOAQUIM OLIVEIRA S.A. - PARTICIP	12.78	0.38	1.73	0.1	6.55	21.59	6.07	0.82	0.11	0.25	-0.36	0.94	2.97	0.77	5.87	1.05	4.81	0.26	0.66	2.18	-0.33	13.87	8050	55.36	1.64	224066105.64	Consumo não Cíclico	Alimentos Processados	Alimentos Diversos	-6.33	\N
+GGPS3	17.06	GPS PARTICIPACOES E EMPREENDIMENTOS S.A.	17.46	3.64	10.06	1.09	10.88	17.19	10.24	5.9	1.03	3.84	-2.3	1.06	20.83	6.26	14.27	0.3	0.82	0.3	0.7	2.19	0.83	26.58	36091103.34	4.69	0.98	11513021710.86	Bens Industriais	Transporte	Logística	26.81	1.87
+ESTR3	7.6	MANUFATURA DE BRINQUEDOS ESTRELA S.A.	-3.18	-0.11	-7.06	0.21	-11.8	42.52	-5.47	-12.15	0.39	-0.1	-0.36	0.56	-3.54	-6.74	1.85	\N	-8.31	-1.91	2.91	0.16	0.05	3.49	1520	-67.6	-2.39	30393960	Consumo Cíclico	Viagens e Lazer	Brinquedos e Jogos	\N	\N
+MNDL3	12.36	MUNDIAL S.A. - PRODUTOS DE CONSUMO	-15.75	0.81	1.15	0.09	5.1	38.35	12.36	-0.9	0.14	-0.73	-0.15	0.64	-5.13	-0.57	16.48	2.78	3.95	0.11	0.89	0.75	0.16	12.21	30385	15.31	-0.78	122624054.4	Consumo Cíclico	Tecidos. Vestuário e Calçados	Acessórios	\N	\N
+JALL3	6.38	JALLES MACHADO S.A.	3.66	0.93	2.95	0.29	7.38	16.34	34.3	27.58	1.01	1.03	-0.46	0.28	25.5	7.84	9.61	1.41	4.44	0.31	0.69	3.88	0.02	\N	3926515.49	6.83	1.74	1936597092.32	Consumo não Cíclico	Alimentos Processados	Açucar e Alcool	\N	6.94
+MGEL3	19.13	MANGELS INDUSTRIAL S.A.	5.57	3.28	1.45	0.15	8.67	12.54	8.32	2.16	0.12	0.66	-0.29	1.23	58.79	2.66	9.81	16.92	7.47	0.05	0.95	1.82	-0.06	14.25	\N	5.84	3.43	91458445.52	Materiais Básicos	Siderurgia e Metalurgia	Artefatos de Ferro e Aço	\N	\N
+HBSA3	3.44	HIDROVIAS DO BRASIL S.A.	-35.67	1.95	9.14	0.43	21.7	32.16	15.5	-3.97	1.42	-9.36	-0.53	0.3	-5.47	-1.2	3.68	2.68	12.56	0.22	0.78	0.81	-0.15	8.87	26293045.71	1.76	-0.1	2615716291.92	Bens Industriais	Transporte	Transporte Hidroviário	\N	\N
+ENMA3B	50.49	CIA ENERGETICA DO MARANHAO - CEMAR	10.75	2.12	8.18	0.89	\N	30.35	17.55	13.34	1.43	16.9	-1.18	0.62	19.69	8.28	13.34	0.59	2.28	0.42	0.58	1.27	0.77	8.35	\N	23.85	4.7	\N	Utilidade Pública	Energia Elétrica	Energia Elétrica	2.77	\N
+GUAR4	151	GUARARAPES CONFECCOES S.A.	3087.67	14.75	139.68	5.53	7.64	58.42	6.02	0.27	8.41	21.75	-14.97	0.66	0.48	0.18	5.55	0.18	1.74	0.37	0.63	1.68	-19.79	4.11	\N	10.23	0.05	3184896000	Consumo Cíclico	Comércio	Tecidos. Vestuário e Calçados	-54.38	\N
+LJQQ3	3.72	LOJAS QUERO-QUERO S/A	7.56	1.17	4.23	0.22	5.23	34.76	7.07	3.96	0.3	0.87	-0.61	0.74	15.46	2.93	14.81	0.28	1	0.19	0.81	1.67	-0.02	15.23	18471106.46	3.18	0.49	725670484.92	Consumo Cíclico	Comércio	Produtos Diversos	37.63	\N
+LHER4	0	LOJAS HERING S.A.	0	0	0	0	-3.77	63.41	22.35	10.99	0	0	0	0.06	1.95	0.67	3.94	-0.15	-3.77	0.34	0.66	6.36	0	4.31	\N	141.54	2.76	0	Financeiro e Outros	Exploração de Imóveis	Exploração de Imóveis	-51.59	\N
+HOOT3	0	HOTEIS OTHON S.A.	0	0	0	0	0.02	64.43	76.55	34.13	0	0	0	0.28	-39.2	9.72	-66.23	\N	-0.16	-0.25	1.31	0.31	0	13.48	\N	-7.02	2.75	19815179.94	Consumo Cíclico	Hoteis e Restaurantes	Hotelaria	\N	\N
+MEGA3	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+MMAQ3	0	MINASMAQUINAS S.A.	0	0	0	0	2.6	8.12	4.75	3.09	0	0	0	2.05	12.45	6.34	7.38	0.49	2.58	0.51	0.49	1.69	0	25.76	\N	5685.11	707.56	1115195.25	\N	\N	\N	24.18	\N
+CTSA4	0.85	CIA TECIDOS SANTANENSE	-0.48	0.1	-1.41	0.04	-14.15	-22.39	-15.56	-45.69	0.22	0.46	-0.05	0.17	-21.36	-7.79	-4.49	0.76	-10.51	0.36	0.64	1.37	-0.01	-0.42	29714.23	8.28	-1.77	60936270.39	Consumo Cíclico	Tecidos. Vestuário e Calçados	Fios e Tecidos	\N	\N
+QVQP3B	0	524 PARTICIPACOES S.A.	0	0	0	0	0.52	\N	\N	\N	\N	0	\N	0	-150.72	-150.72	-176.81	-0.93	0.52	1	0	\N	0	\N	\N	0	0	0	Financeiro e Outros	Outros	Outros	\N	\N
+APER3	42.83	ALPER CONSULTORIA E CORRETORA DE SEGUROS S.A.	-20	1.05	22.58	0.55	23.52	100	6.44	-7.27	1.45	327.8	-0.72	0.38	-5.23	-2.73	3.63	0.04	0.94	0.52	0.48	1.01	0.09	29.52	52355.9	40.96	-2.14	491694139.22	Financeiro e Outros	Previdência e Seguros	Corretoras de Seguros	\N	\N
+TCNO3	1.2	TECNOSOLO ENGENHARIA S.A.	-7.52	-8.4	-6.81	0.03	-34.51	\N	\N	\N	\N	-0.08	-0.04	0	-111.63	-0.45	-3.55	\N	-28.98	0	1	0.28	-0.28	\N	\N	-0.14	-0.16	6451072.5	Bens Industriais	Construção e Engenharia	Engenharia Consultiva	\N	\N
+RPAD3	8.69	ALFA HOLDINGS S.A.	45.25	0.68	77.3	0.67	72.54	\N	\N	\N	\N	14.33	-0.71	0	1.5	1.49	0.83	-0.05	-5.61	1	0	14.69	-0.6	\N	3999.67	12.84	0.19	744009751.38	Financeiro e Outros	Intermediários Financeiros	Bancos	-17.68	\N
+SULA11	22.25	SUL AMERICA S.A.	52.23	1.13	-12.92	0.31	6.54	4.25	-3.34	0.83	0.43	0.85	-0.91	0.73	2.17	0.6	-8.72	-1.71	19.47	0.28	0.72	2.29	-0.94	4.58	\N	19.64	0.43	9475042424.17	Financeiro e Outros	Previdência e Seguros	Seguradoras	-23.56	\N
+VLID3	15.23	VALID SOLUÇÕES S.A.	4.13	0.81	2.54	0.46	2.79	35.94	22.18	13.65	0.56	1.33	-0.98	0.81	19.6	11.04	18.86	0.08	0.25	0.56	0.43	2.82	0.02	5.4	6035707.49	18.8	3.69	1246367991.25	Bens Industriais	Serviços	Serviços Diversos	24.7	11.37
+VVAR4	95.68	GRUPO CASAS BAHIA S.A.	-3.51	2.84	-6.27	0.29	-5.2	27.46	-5.21	-9.3	0.33	-1.8	-0.48	0.89	-80.86	-8.26	-24.97	2.18	-4.82	0.1	0.9	0.71	-0.01	1.39	\N	33.68	-27.23	546730694.25	Consumo Cíclico	Comércio	Eletrodomésticos	\N	\N
+SOND3	46.01	SONDOTECNICA ENGENHARIA SOLOS S.A.	22.08	1.95	8.81	1.17	7.65	32.23	7.82	3.12	0.69	3.2	-3.35	1.7	8.83	5.31	7.43	-0.5	-2.28	0.6	0.4	2.29	-0.34	27.24	\N	23.6	2.08	127408965	Bens Industriais	Construção e Engenharia	Engenharia Consultiva	-5.98	\N
+AURE3	12.2	AUREN ENERGIA S.A.	-41.49	1	9.68	0.44	12.42	20.96	20.44	-4.77	1.98	5.64	-0.55	0.22	-2.41	-1.06	0.19	0.28	2.73	0.44	0.56	1.68	0.38	\N	70758073.11	12.22	-0.29	12200000000	Utilidade Pública	Energia Elétrica	Energia Elétrica	\N	15.57
+TIET4	3.51	AES TIETE ENERGIA SA	6.13	3.15	4.91	0.64	7.15	74.66	61.76	49.46	3.03	1443.59	-0.72	0.21	51.45	10.47	13.16	2.34	3.64	0.2	0.72	1	0.03	-5.19	\N	1.11	0.57	5004795800.93	Utilidade Pública	Energia Elétrica	Energia Elétrica	23.78	\N
+TKNO3	69.63	TEKNO S.A. - INDUSTRIA E COMERCIO	5.19	0.69	4.78	0.55	3.22	24.02	15.56	14.32	0.74	1.43	-1.24	0.74	13.38	10.57	11.78	-0.21	-1.41	0.79	0.21	3.23	1.54	19.94	\N	100.22	13.41	198955927.63	Materiais Básicos	Siderurgia e Metalurgia	Artefatos de Ferro e Aço	\N	\N
+TESA3	48	TERRA SANTA AGRO S.A.	-13.3	1.62	10.73	0.52	17.39	15.86	9.39	-7.58	1.01	-11.1	-0.74	0.52	-12.18	-3.94	3.93	1.01	6.66	0.32	0.68	0.86	0.83	7.32	\N	29.64	-3.61	1389696672	Consumo não Cíclico	Agropecuária	Agricultura	\N	\N
+CMIN3	5.15	CSN MINERAÇÃO S.A.	7.82	2.34	4.94	0.95	4.57	46.85	32.01	20.2	1.58	3.39	-1.69	0.6	29.88	12.15	22.07	-0.17	-0.37	0.41	0.59	2.79	0.24	21.15	53380220.09	2.2	0.66	28249495015.7	Materiais Básicos	Mineração	Minerais Metálicos	27.74	10
+TOYB4	2.5	TEC TOY S.A.	-47.96	-5.43	-49.12	4.4	-47.62	24.06	-10.7	-10.96	5.26	-6.47	-12.98	0.84	-11.31	-9.18	11.93	\N	-0.63	-0.81	1.81	0.49	0.52	-33.11	\N	-0.46	-0.05	71890222.22	Consumo Cíclico	Viagens e Lazer	Brinquedos e Jogos	\N	\N
+PTNT3	9.68	PETTENATI S.A. INDUSTRIA TEXTIL	12.88	1.2	7.19	0.55	7	16.9	8.44	4.71	0.61	1.79	-1.13	0.91	9.31	4.27	7.51	0.28	1.67	0.46	0.45	2.5	-0.66	11.78	6433.65	8.07	0.75	345299434.48	Consumo Cíclico	Tecidos. Vestuário e Calçados	Fios e Tecidos	7.9	2.19
+QGEP3	14.54	QGEP PARTICIPAÇÕES S.A.	40.15	1	15.37	0.47	17.89	31.48	14.15	5.41	2.17	3.73	-0.67	0.22	2.48	1.18	3.04	0.16	2.53	0.47	0.53	1.77	-0.54	34.1	\N	14.58	0.36	3864832398.7	\N	\N	\N	-23.08	\N
+TRAD3	0.65	TC TRADERS CLUB S.A.	-0.82	0.67	-0.95	0.61	-0.57	25.99	-368.73	-429.53	3.51	2.3	-0.92	0.17	-81.73	-74.12	-83.84	-0.27	0.38	0.91	0.09	4.36	-0.01	\N	328767.37	0.97	-0.8	182095639.7	Tecnologia da Informação	Programas e Serviços	Programas e Serviços	\N	\N
+COCE5	29.8	CIA ENERGETICA DO CEARA - COELCE	3.9	0.54	1.58	0.18	5.45	20.72	17.34	7.01	0.27	-0.76	-0.22	0.64	13.78	4.5	12.29	1.33	3.91	0.33	0.67	0.48	0.26	11.07	1353626.92	55.5	7.65	2265418508.79	Utilidade Pública	Energia Elétrica	Energia Elétrica	10.31	3.24
+RNEW3	0.91	RENOVA ENERGIA S.A.	-8.5	0.26	1.29	0.08	7.46	72.96	86.11	-13.07	1.11	-0.62	-0.08	0.07	-3.07	-0.91	5.93	1.24	6.16	0.3	0.7	0.23	0.08	-20.33	51477.2	3.49	-0.11	228693626.33	Utilidade Pública	Energia Elétrica	Energia Elétrica	\N	\N
+RAIL3	19.69	RUMO S.A.	35.97	2.28	9.36	0.72	12.53	39.65	33.35	8.68	3.12	5.9	-0.94	0.23	6.33	2.01	9.93	0.77	3.17	0.32	0.68	2.13	0.65	10.68	209502789.94	8.65	0.55	36522369605.81	Bens Industriais	Transporte	Transporte Ferroviário	30.88	0.47
+PRIO3	41.07	PETRO RIO S.A.	7.24	2.38	4.98	1.19	5.94	62.15	59.88	41.2	2.98	11.61	-1.53	0.4	32.89	16.45	22.83	0.46	0.96	0.5	0.5	1.87	0.18	69.58	435520512.31	17.26	5.68	36636901489.38	Petróleo. Gás e Biocombustíveis	Petróleo. Gás e Biocombustíveis	Exploração. Refino e Distribuição	89.93	0.18
+SHOW3	1.49	T4F ENTRETENIMENTO S.A.	2.38	0.57	1.6	0.23	0.98	21.38	12.76	8.59	0.2	2.71	-0.46	1.14	23.8	9.82	23.97	-0.22	-0.62	0.41	0.58	1.21	0	3.21	393175.6	2.63	0.63	100444817.21	Consumo Cíclico	Viagens e Lazer	Produção de Eventos e Shows	38.18	\N
+PPAR3	14.6	POLPAR S.A.	1.33	0.04	1.74	0.03	-3.48	\N	\N	\N	\N	0.33	-0.03	0	2.69	1.92	1.61	-0.11	-5.22	0.72	0.28	262.72	-0.03	\N	\N	409.93	11.01	2160800	Financeiro e Outros	Outros	Outros	39.08	25.9
+RCSL3	2.87	RECRUSUL S.A.	-12.57	377.4	-24	1.49	-13.6	11.6	-7.95	-15.18	1.91	12.82	-2.8	0.78	-3002.48	-11.87	-1592.05	-0.01	0	0	1	1.33	0.28	66.3	2567831.29	0.01	-0.23	51763742.12	Bens Industriais	Material de Transporte	Material Rodoviário	\N	\N
+ITUB3	27.88	ITAU UNIBANCO HOLDING S.A.	7.69	1.47	6.26	0.1	6.72	40.94	13.75	11.2	0.86	\N	-0.11	0.12	19.17	1.36	\N	\N	\N	0.07	0.93	\N	0.42	18.99	10118664.49	18.93	3.63	293546467106.37	Financeiro e Outros	Intermediários Financeiros	Bancos	7.38	8.42
+BEES4	9.42	BANESTES S.A. - BCO EST ESPIRITO SANTO	8.59	1.37	6.32	0.07	5.97	28.7	9.18	6.76	0.58	1.3	-0.07	0.12	15.94	0.81	\N	\N	\N	0.05	0.95	\N	0.98	18.84	28810.74	6.88	1.1	2807264761.2	Financeiro e Outros	Intermediários Financeiros	Bancos	17.64	5.09
+ORVR3	37.2	ORIZON VALORIZACAO DE RESIDUOS S.A.	27.87	4.22	12.41	1.34	15.9	37.91	31.22	13.9	3.87	9.64	-1.8	0.35	15.14	4.82	12.13	1.19	3.49	0.32	0.66	2.2	-0.17	21.27	14880604.43	8.82	1.33	3085773070.8	Utilidade Pública	Água e Saneamento	Água e Saneamento	115.31	\N
+CTNM4	0.74	CIA TECIDOS NORTE DE MINAS COTEMINAS	-0.05	0.09	-0.07	0.01	-3.82	14.02	-22.47	-29.57	0.02	-0.02	-0.01	0.43	-175.93	-12.81	-18.67	4.56	-3.41	0.07	0.86	0.49	0	-3.61	62416.74	7.84	-13.8	132999482.18	Consumo Cíclico	Tecidos. Vestuário e Calçados	Fios e Tecidos	\N	\N
+TUPY3	22.13	TUPY S.A.	6.71	0.92	3.96	0.3	6.89	16.98	7.21	4.26	0.29	0.93	-0.77	1.04	13.71	4.43	9.87	0.68	2.93	0.32	0.68	2.07	-0.39	18.68	15163015.89	24.08	3.3	3190648075	Bens Industriais	Material de Transporte	Material Rodoviário	11.85	1.88
+INEP4	1.69	INEPAR S.A. INDUSTRIA E CONSTRUCOES	0.15	-0.06	-0.81	0.06	-10.52	-55.74	-1307.53	6898.98	10.58	-0.07	-0.07	0.01	-41.29	42.28	285.92	\N	-9.66	-1.02	2.02	0.09	0	-33.23	104084	-26.69	11.02	79964816.38	Bens Industriais	Máquinas e Equipamentos	Máq. e Equip. Industriais	\N	3.54
+DEXP4	10.08	DEXXOS PARTICIPACOES S.A.	5.68	1.23	3.29	0.66	2.73	21.93	16.85	9.74	0.55	1.38	-1.94	1.19	21.7	11.57	18.01	-0.19	-0.5	0.53	0.37	3.57	0.51	34.1	21184.29	8.17	1.77	930890504.1	Materiais Básicos	Químicos	Petroquímicos	15.49	5.36
+SIMH3	5.38	SIMPAR S.A.	-9.13	1.46	0.92	0.06	8.09	25.28	15.28	-1.53	0.14	0.59	-0.09	0.45	-15.99	-0.69	8.63	11.43	7.17	0.04	0.91	1.47	0.03	31.57	23487330.11	3.68	-0.59	4696958067.54	Financeiro e Outros	Holdings Diversificadas	Holdings Diversificadas	\N	\N
+COCE3	35.25	CIA ENERGETICA DO CEARA - COELCE	4.61	0.64	1.87	0.21	5.45	20.72	17.34	7.01	0.32	-0.9	-0.26	0.64	13.78	4.5	12.29	1.33	3.91	0.33	0.67	0.48	0.31	11.07	7030	55.5	7.65	2265418508.79	Utilidade Pública	Energia Elétrica	Energia Elétrica	10.31	2.74
+DEXP3	9.89	DEXXOS PARTICIPACOES S.A.	5.58	1.21	3.23	0.65	2.73	21.93	16.85	9.74	0.54	1.36	-1.9	1.19	21.7	11.57	18.01	-0.19	-0.5	0.53	0.37	3.57	0.5	34.1	635703.31	8.17	1.77	930890504.1	Materiais Básicos	Químicos	Petroquímicos	15.49	5.17
+EUCA4	15.06	EUCATEX S.A. INDUSTRIA E COMERCIO	3.5	0.57	3.66	0.34	5.2	33.23	14.43	15.1	0.53	2.06	-0.52	0.63	16.18	9.58	9.67	0.24	1.56	0.59	0.41	1.83	0.06	16.23	1405530.83	26.6	4.3	1385156108.36	Materiais Básicos	Madeira e Papel	Madeira	68.94	4.32
+DXCO3	6.67	DURATEX S.A.	9.72	0.85	4.64	0.33	8.42	32.85	16.01	7.64	0.74	4.54	-0.46	0.45	8.78	3.41	8.78	0.7	3.78	0.39	0.61	1.34	-0.38	16.29	20003838.57	7.81	0.69	5473176860.82	Materiais Básicos	Madeira e Papel	Madeira	24.96	3.23
+MYPK3	11.61	IOCHPE MAXION S.A.	18.34	0.47	2.18	0.12	7.03	10.66	5.62	0.67	0.12	0.7	-0.25	1.01	2.57	0.68	6.43	1.05	4.85	0.26	0.71	1.54	-3.71	9.23	16537494.26	24.64	0.63	1784684567.61	Consumo Cíclico	Automóveis e Motocicletas	Automóveis e Motocicletas	-13.53	0.75
+PDTC3	1.82	PADTEC HOLDING S.A.	745.54	1.04	8.45	0.28	15.14	33.82	4.92	0.06	0.42	0.72	-0.96	0.66	0.14	0.04	5.92	0.82	6.69	0.26	0.74	2.17	-7.55	\N	102389.6	1.75	0	144634719.32	Financeiro e Outros	Serviços Financeiros Diversos	Serviços Financeiros Diversos	-55.65	2.54
+PFRM3	5.16	PROFARMA DISTRIB PROD FARMACEUTICOS S.A.	8.29	0.51	2.33	0.12	4.55	14.97	3.08	0.87	0.07	0.6	-0.45	1.69	6.15	1.47	11.08	0.49	2.22	0.24	0.71	1.38	-1.36	15.19	1057394.31	10.13	0.62	638873908.68	Saúde	Comércio e Distribuição	Medicamentos e Outros Produtos	\N	7.48
+MWET3	9.16	WETZEL S.A.	-0.76	-3.52	-3.38	0.06	-19.53	12.36	-2.14	-9.46	0.07	-1.54	-0.1	0.83	-460.79	-7.82	-15.9	\N	-16.3	-0.02	1.02	0.92	0	10.46	916	-2.61	-12	18041826.3	Bens Industriais	Material de Transporte	Material Rodoviário	\N	\N
+SANB11	27.47	BCO SANTANDER (BRASIL) S.A.	10.83	0.89	7.56	0.09	7.56	37.06	10.58	7.39	0.8	\N	-0.09	0.11	8.23	0.84	\N	\N	\N	0.1	0.9	\N	-0.43	12.73	147142346.31	30.82	2.54	102992323985.49	Financeiro e Outros	Intermediários Financeiros	Bancos	-5.44	5.87
+PLPL3	9.31	PLANO & PLANO DESENVOLVIMENTO IMOBILIÁRIO S.A.	7.06	3.05	5.78	0.94	6.04	33.41	15.08	12.34	0.87	1.66	-7.31	1.08	43.21	13.27	27.42	0.14	0.26	0.31	0.68	2.84	0.09	\N	7919239.26	3.05	1.32	1901623360	Consumo Cíclico	Construção Civil	Incorporações	\N	\N
+WIZC3	5.66	WIZ CO PARTICIPAÇÕES E CORRETAGEM DE SEGUROS S.A.	5.48	1.97	1.87	0.39	2.08	62	42.04	14.33	0.79	-15.53	-0.51	0.5	35.95	7.2	27.1	0.22	0.21	0.2	0.59	0.9	0.12	13.9	2562386.77	2.87	1.03	905075216.12	Financeiro e Outros	Previdência e Seguros	Corretoras de Seguros	-1.46	4.35
+MTRE3	3.46	MITRE REALTY EMPREENDIMENTOS E PARTICIPAÇÕES S.A.	5.04	0.37	4.1	0.18	8.61	19.59	9.09	7.4	0.37	0.37	-0.8	0.48	7.43	3.52	4.19	0.41	4.51	0.47	0.51	2.61	0.09	43.88	5527809.09	9.23	0.69	365980877.2	Consumo Cíclico	Construção Civil	Incorporações	36.05	16.96
+QUSW3	0	QUALITY SOFTWARE S.A.	0	0	0	0	1.17	91.7	55.49	28.75	0	0	0	0.3	24.67	8.75	21.5	0.56	1.17	0.35	0.65	1.54	0	-10.73	\N	103.27	25.47	0	Tecnologia da Informação	Programas e Serviços	Programas e Serviços	46.92	\N
+SPRI6	11	SPRINGER S.A.	-1.68	1.24	-1.52	1.2	-2.46	\N	\N	\N	\N	2.34	-2.49	0	-73.82	-71.18	-81.66	-0.14	0.17	0.96	0.04	66.47	0	\N	\N	8.86	-6.54	48073731.88	\N	\N	\N	\N	\N
+SPRI3	21.72	SPRINGER S.A.	-3.32	2.45	-3	2.36	-2.46	\N	\N	\N	\N	4.61	-4.93	0	-73.82	-71.18	-81.66	-0.14	0.17	0.96	0.04	66.47	-0.01	\N	\N	8.86	-6.54	48073731.88	\N	\N	\N	\N	\N
+LCAM3	24.15	CIA LOCAÇÃO DAS AMÉRICAS	14.85	0.7	6.29	0.6	4.98	30.75	23.77	10.07	1.49	2.99	-0.82	0.4	4.7	4.06	8.79	-0.15	-1.31	0.86	0.14	4.39	0.11	21.58	\N	34.64	1.63	12285815275.65	Consumo Cíclico	Diversos	Aluguel de carros	34.33	\N
+BMIN3	20.01	BCO MERCANTIL DE INVESTIMENTOS S.A.	12.25	0.71	7.4	0.36	7.17	59.53	38.47	23.23	2.85	44.51	-0.37	0.13	5.77	2.96	\N	\N	\N	0.51	0.49	\N	-0.71	19.32	8555.29	28.28	1.63	93527042.82	Financeiro e Outros	Intermediários Financeiros	Bancos	13.81	6.36
+MBLY3	2.11	Mobly S.A.	-2.68	0.5	-2.51	0.3	-3.15	44.08	-16.54	-15.53	0.42	0.9	-0.66	0.71	-18.64	-11.07	-14.39	0.13	-0.63	0.59	0.41	2.47	0.9	11.93	839369.09	4.23	-0.79	224693697.44	Consumo Cíclico	Comércio	Produtos Diversos	\N	\N
+TRIS3	4.6	TRISUL S.A.	6.78	0.62	5.32	0.3	9.51	23.52	14.59	11.44	0.78	0.63	-1.28	0.39	9.19	4.49	5.47	0.49	4.19	0.49	0.5	2.7	0.14	13.93	2297433.51	7.38	0.68	858440674.8	Consumo Cíclico	Construção Civil	Incorporações	11.96	4.3
+TKNO4	65	TEKNO S.A. - INDUSTRIA E COMERCIO	4.85	0.65	4.46	0.51	3.22	24.02	15.56	14.32	0.69	1.33	-1.16	0.74	13.38	10.57	11.78	-0.21	-1.41	0.79	0.21	3.23	1.43	19.94	10205	100.22	13.41	198955927.63	Materiais Básicos	Siderurgia e Metalurgia	Artefatos de Ferro e Aço	\N	\N
+PRNR3	9.92	PRINER SERVIÇOS INDUSTRIAIS S.A.	56.51	1.49	5.99	0.53	8.25	20.51	7.57	0.8	0.45	2.27	-1.13	1.17	2.64	0.94	9.87	0.56	2.26	0.36	0.63	1.79	-0.9	26.17	3700131.11	6.66	0.18	463469909.44	Bens Industriais	Serviços	Serviços Diversos	1.99	\N
+MODL4	2.72	BANCO MODAL S.A	-26.3	1.6	-28.22	0.26	-29.26	50.83	-5.11	-5.48	1.44	\N	-0.29	0.18	-6.1	-0.97	\N	\N	\N	0.16	0.84	\N	0.17	\N	\N	1.7	-0.1	1985844000	Financeiro e Outros	Intermediários Financeiros	Bancos	\N	\N
+NEOE3	17.82	NEOENERGIA S.A.	4.48	0.73	2.03	0.22	5.6	27.49	23.6	10.7	0.48	17.74	-0.29	0.46	16.36	4.95	12.66	1.29	3.57	0.3	0.7	1.06	0.49	15.85	18700503.51	24.28	3.97	21629866959.36	Utilidade Pública	Energia Elétrica	Energia Elétrica	64.04	5.52
+GETT11	4.81	GETNET ADQUIRENCIA E SERV PARA MEIOS DE PGTO S.A.	15.12	2.48	14.55	0.16	\N	41.43	18.41	17.71	2.68	6.28	-3.92	0.06	16.41	1.07	10.57	0.17	0.99	0.07	0.93	1.03	0.13	\N	\N	1.94	0.32	\N	Financeiro e Outros	Serviços Financeiros Diversos	Serviços Financeiros Diversos	\N	\N
+BRSR5	15	BCO ESTADO DO RIO GRANDE DO SUL S.A	6.11	0.61	4.9	0.05	3.72	32.23	8.31	6.67	0.41	7.51	-0.05	0.12	10.05	0.77	\N	\N	\N	0.08	0.92	1.54	0.62	12.01	2078.17	24.43	2.46	4654418349.51	Financeiro e Outros	Intermediários Financeiros	Bancos	2.04	4.07
+BRQB3	0	BRQ SOLUCOES EM INFORMATICA S.A.	0	0	0	0	-1.09	35.32	15.06	10.17	0	0	0	1.7	28.83	17.26	26.72	-0.47	-1.09	0.6	0.39	2.29	0	12.98	\N	1.64	0.47	0	Tecnologia da Informação	Programas e Serviços	Programas e Serviços	21.94	\N
+LOGN3	34.8	LOG-IN LOGISTICA INTERMODAL S.A.	124.43	3.92	11.63	1.03	15	17.49	13.39	1.25	1.56	11.01	-1.46	0.66	3.15	0.83	10.05	1.14	3.37	0.26	0.74	1.47	-1.35	19.06	931831.06	8.87	0.28	3734265712.8	Bens Industriais	Transporte	Transporte Hidroviário	37.97	\N
+REDE3	6.64	REDE ENERGIA PARTICIPAÇÕES S.A.	7.53	3.44	3.19	0.49	5.43	32.39	26.14	11.06	0.83	13.12	-0.69	0.59	45.71	6.56	19.54	2.42	2.24	0.14	0.79	1.15	0.19	9.88	12051.77	1.93	0.88	14012547203.36	Utilidade Pública	Energia Elétrica	Energia Elétrica	36.02	5.46
+HETA4	5.45	HERCULES S.A. FABRICA DE TALHERES	-3.29	-0.01	1.21	0.2	148.88	100	58.57	-21.46	0.71	-2.35	-0.27	0.28	-0.24	-6.11	-8.35	\N	140.94	-25.46	26.46	0.75	0.03	20.28	2059.29	-689.47	-1.65	18281473.45	Consumo Cíclico	Utilidades Domésticas	Utensílios Domésticos	\N	\N
+TELB3	13.4	TELEC BRASILEIRAS S.A. TELEBRAS	-5.48	0.86	-7.91	0.29	0.7	-57.23	-36.73	-53.05	2.91	0.87	-0.49	0.1	-15.73	-5.26	-10.19	-0.87	8	0.33	0.67	4.81	-0.02	15.86	14423.89	15.56	-2.45	1067888924.83	Comunicações	Telecomunicações	Telecomunicações	\N	\N
+SHUL3	111.89	SCHULZ S.A.	145.29	31.86	130.83	16.67	59.78	25.81	15.84	14.26	20.72	42.23	-48.65	0.8	21.93	11.47	14.16	-0.02	-0.07	0.52	0.48	2.5	74.94	24.97	\N	3.51	0.77	18292417258.36	Bens Industriais	Máquinas e Equipamentos	Motores . Compressores e Outros	46.98	0.19
+CSAB4	48.97	CIA SEGUROS ALIANCA DA BAHIA	19.89	1.78	30.28	0.91	24.57	-124	1656.27	2521.73	501.45	5.68	-1.15	0	8.94	4.57	\N	\N	\N	0.51	0.49	4.45	-0.03	-33.4	60668.75	27.56	2.46	305164800	Financeiro e Outros	Previdência e Seguros	Seguradoras	-1.31	\N
+CGAS3	105.06	CIA GAS DE SAO PAULO - COMGAS	5.52	16.16	4.98	0.93	6.96	21.09	18.83	16.98	0.94	509.44	-1.49	0.99	292.91	16.85	29.34	6.44	1.98	0.06	0.94	1	0.02	17.25	33454.16	6.5	19.05	13922612870.22	Utilidade Pública	Gás	Gás	13.51	10.45
+ECOR3	6.1	ECORODOVIAS INFRAESTRUTURA E LOGÍSTICA S.A.	6.17	1.43	1.4	0.15	6.12	37.76	32.31	7.35	0.45	-15.11	-0.2	0.34	23.18	2.5	10.04	4.8	4.71	0.11	0.88	0.96	0.06	22.79	29328789.83	4.26	0.99	4247638766.4	Bens Industriais	Transporte	Exploração de Rodovias	12.94	4.56
+EKTR3	38.69	ELEKTRO REDES S.A.	7.58	2.32	3.67	0.65	5.97	28.36	22.9	11.09	0.84	11.04	-0.95	0.77	30.57	8.53	17.63	1.46	2.31	0.28	0.72	1.23	-1.06	6.85	5734.5	16.7	5.1	7491452048.2	Utilidade Pública	Energia Elétrica	Energia Elétrica	19.01	25.82
+BFRE11	0	BRAZILIAN FINANCE E REAL ESTATE S.A.	0	0	0	0	\N	100	169.82	115.03	0	0	0	0.05	6.9	6.14	\N	\N	\N	0.89	0.1	\N	0	\N	\N	302450.49	20874.48	\N	Financeiro e Outros	Serviços Financeiros Diversos	Gestão de Recursos e Investimentos	6.73	\N
+MWET4	8.57	WETZEL S.A.	-0.71	-3.29	-3.16	0.06	-19.53	12.36	-2.14	-9.46	0.07	-1.44	-0.1	0.83	-460.79	-7.82	-15.9	\N	-16.3	-0.02	1.02	0.92	0	10.46	127952.57	-2.61	-12	18041826.3	Bens Industriais	Material de Transporte	Material Rodoviário	\N	\N
+SPRT3B	76.4	LONGDIS S.A.	-2026.68	30980.92	-2030.23	27379.87	-2030.16	\N	\N	\N	\N	30980.92	\N	0	-1528.65	-1350.97	-1525.98	-1.12	0.07	0.88	0.12	8.6	-0.54	\N	\N	0	-0.04	370531748.8	Financeiro e Outros	Outros	Outros	\N	\N
+MERC4	9.83	MERCANTIL BRASIL FINANC S.A. C.F.I.	25.66	0.72	20.58	0.46	27.02	71.93	19.45	15.6	4	102.99	-0.46	0.11	2.8	1.78	\N	\N	\N	0.64	0.36	\N	-0.1	-24.22	8484.3	13.67	0.38	232516929.25	Financeiro e Outros	Intermediários Financeiros	Soc. Crédito e Financiamento	-22.87	\N
+CSRN3	22.49	CIA ENERGETICA DO RIO GDE NORTE - COSERN	5.78	2.22	3.46	0.66	5.55	34.23	29.16	17.46	1.01	60.97	-0.86	0.66	38.4	11.44	21.48	1.33	2.07	0.3	0.7	1.05	0.23	8.58	21448.83	10.13	3.89	3799532072.31	Utilidade Pública	Energia Elétrica	Energia Elétrica	22.03	5.81
+CEPE3	125.26	CIA ENERGETICA DE PERNAMBUCO - CELPE	68.72	5.73	8.27	0.64	14.33	20.59	13.21	1.59	1.09	15.32	-0.91	0.59	8.33	0.94	10.35	4.61	6.66	0.11	0.89	1.17	1.08	8.57	\N	21.87	1.82	8662392210.18	Utilidade Pública	Energia Elétrica	Energia Elétrica	3.98	\N
+LIGT3	5.04	LIGHT S.A.	-8.97	0.69	1.52	0.08	8.47	17.25	8.96	-1.51	0.14	-0.19	-0.1	0.58	-7.64	-0.88	4.36	3.15	6.96	0.12	0.88	0.37	0.09	3.35	7398777.31	7.35	-0.56	1877678832.96	Utilidade Pública	Energia Elétrica	Energia Elétrica	\N	\N
+ABCB4	20.95	BCO ABC BRASIL S.A.	5.01	0.9	5.11	0.09	5.11	21.8	13.06	13.31	0.67	-2.5	-0.09	0.14	17.88	1.83	\N	\N	\N	0.1	0.91	0.05	-0.29	18.7	15366686.37	23.39	4.18	5125561154.15	Financeiro e Outros	Intermediários Financeiros	Bancos	19.07	7.53
+FRAS3	17.4	FRAS-LE S.A.	11.87	2.39	9.17	1.13	8.89	33.38	15.11	11.67	1.39	3.1	-2.89	0.81	20.1	9.5	11.36	-0.07	-0.28	0.47	0.52	2.48	0.24	24.32	4032354.14	7.29	1.47	4698284368.2	Bens Industriais	Material de Transporte	Material Rodoviário	33.49	3.48
+PETZ3	3.44	PET CENTER COMERCIO E PARTICIPACOES S.A.	163.96	0.88	12.93	0.41	13.01	46.55	3.86	0.3	0.5	2.54	-0.61	0.81	0.54	0.25	5.29	0.01	0.08	0.46	0.54	1.88	-2.03	32.81	35953900.89	3.91	0.02	1591080846.88	Consumo Cíclico	Comércio	Produtos Diversos	-20.68	0.08
+CREM3	14.5	CREMER S.A.	32.7	2.45	9.28	0.67	13.11	30.3	7.39	2.1	0.69	4.89	-1.69	0.98	7.5	2.05	9.29	1.01	3.84	0.27	0.73	1.29	22.14	1.09	\N	5.91	0.44	465122474	Saúde	Comércio e Distribuição	Medicamentos e Outros Produtos	\N	\N
+B3SA3	10.32	B3 S.A. - BRASIL, BOLSA, BALCÃO	14.34	2.88	11.19	1.19	10.63	90.08	51.54	40.21	5.77	6.43	-1.92	0.21	20.09	8.27	11.13	-0.14	-0.56	0.41	0.59	1.93	-2.72	15.48	512142231.34	3.58	0.72	57239880000	Financeiro e Outros	Serviços Financeiros Diversos	Serviços Financeiros Diversos	13.85	5.11
+CNSY3	30.22	CINESYSTEM S.A.	-86.19	-23.75	93.87	5.37	109.95	18.72	7.08	-7.71	6.65	-28.61	-6.18	0.81	-27.56	-6.23	4.37	\N	16.08	-0.23	1.23	0.41	0.14	2.97	\N	-1.27	-0.35	935885083.86	Consumo Cíclico	Mídia	Produção e Difusão de Filmes e Programas	\N	\N
+OSXB3	3.8	OSX BRASIL S.A.	-0.01	0	-0.03	0.01	-17.74	98.86	-673.92	-2287.78	0.23	-0.01	-0.01	0.02	-17	-50.22	58.35	\N	-17.7	-2.95	3.96	0.01	0	37.94	16588.49	-2221.13	-377.61	11962544.4	Petróleo. Gás e Biocombustíveis	Petróleo. Gás e Biocombustíveis	Equipamentos e Serviços	\N	\N
+CALI3	26	CONSTRUTORA ADOLPHO LINDENBERG S.A.	-83.69	3.98	12.7	0.43	18.46	37.03	10.6	-1.61	1.35	39.04	-0.53	0.32	-4.76	-0.52	7.11	1.81	5.76	0.11	0.89	1.07	0.77	69.63	5100	6.53	-0.31	96745246	Consumo Cíclico	Construção Civil	Incorporações	\N	2.38
+EALT3	11.18	ELECTRO ACO ALTONA S.A.	4.64	1	4.01	0.44	5.81	25.12	12.16	10.53	0.49	10.09	-0.74	0.9	21.53	9.5	14.81	0.45	1.82	0.44	0.56	1.12	0.08	14.94	10387.69	11.2	2.41	250147500	Bens Industriais	Máquinas e Equipamentos	Máq. e Equip. Industriais	34.67	6.05
+VBBR3	20.48	VIBRA ENERGIA S.A.	4.19	1.38	2.64	0.53	3.81	5.57	5.3	3.35	0.14	1.82	-1.14	3.79	33.06	12.68	20.53	0.61	1.17	0.38	0.62	2.2	0.01	10.76	169485676.57	14.8	4.89	22917120000	Petróleo. Gás e Biocombustíveis	Petróleo. Gás e Biocombustíveis	Exploração. Refino e Distribuição	11.38	7.03
+CXSE3	14.35	CAIXA SEGURIDADE PARTICIPAÇÕES S.A.	11.88	3.21	10.73	2.9	10.42	\N	\N	\N	\N	42.11	-3.47	0	26.98	24.38	26.3	-0.09	-0.32	0.9	0.1	1.71	11.4	\N	50257846.57	4.48	1.21	43050000000	Financeiro e Outros	Previdência e Seguros	Corretoras de Seguros	19.65	7.43
+RDOR3	25.64	REDE D OR SÃO LUIZ S.A.	23.05	2.53	9.58	0.64	10.03	17.29	12.91	5.37	1.24	2.05	-1.23	0.52	10.99	2.79	9.49	0.12	0.45	0.25	0.73	2.95	0.22	33.63	254693689.83	10.12	1.11	58697462007.6	Saúde	Serv.Méd.Hospit..Análises e Diagnósticos	Serv.Méd.Hospit..Análises e Diagnósticos	16.83	1.96
+SOJA3	14.43	BOA SAFRA SEMENTES S.A.	5.45	1.94	7.48	0.74	7.88	16.01	12.85	17.63	0.96	2.18	-2.41	0.77	35.57	13.6	7.99	0.1	0.4	0.38	0.44	1.97	0.05	46.18	7253557.57	7.44	2.65	1952698537.92	Consumo não Cíclico	Agropecuária	Agricultura	118.58	6.56
+TELB4	8.53	TELEC BRASILEIRAS S.A. TELEBRAS	-3.49	0.55	-5.04	0.18	0.7	-57.23	-36.73	-53.05	1.85	0.56	-0.31	0.1	-15.73	-5.26	-10.19	-0.87	8	0.33	0.67	4.81	-0.01	15.86	35148.61	15.56	-2.45	1067888924.83	Comunicações	Telecomunicações	Telecomunicações	\N	\N
+LAME4	6.57	LOJAS AMERICANAS S.A.	21.06	1.9	10.98	0.28	16.86	32.9	4.35	2.27	0.48	1.19	-0.65	0.59	9.02	1.34	2.89	1.01	5.87	0.15	0.63	1.72	-46.75	3.5	\N	3.46	0.31	12391135396.59	Consumo Cíclico	Comércio	Produtos Diversos	18.61	\N
+AMER3	0.4	AMERICANAS S.A	-0.02	-0.01	-0.03	0.01	-1.65	11.58	-63.41	-99.25	0.02	-0.01	-0.03	0.7	-58.06	-69.66	144.4	\N	-1.61	-1.2	2.2	0.24	0	32.64	7791288.37	-32.59	-18.92	361011801.2	Consumo Cíclico	Comércio	Produtos Diversos	\N	\N
+BALM3	9.9	BAUMER S.A.	9.48	0.65	4.61	0.38	2.67	61.16	12.55	6.11	0.58	0.82	-1.31	0.66	6.82	4	8.37	-0.28	-1.96	0.59	0.41	2.86	0.07	7.24	1406.5	15.3	1.04	97510000	Saúde	Equipamentos	Equipamentos	30.02	\N
+GEPA3	26	RIO PARANAPANEMA ENERGIA S.A.	7.19	1.16	4.96	0.69	5.77	38.61	35.54	24.54	1.76	-6.16	-0.8	0.39	16.09	9.62	13.28	0.22	0.93	0.6	0.4	0.54	0.18	1.08	9171.57	22.48	3.62	2392309836	Utilidade Pública	Energia Elétrica	Energia Elétrica	5.95	16.13
+TIET3	3.49	AES TIETE ENERGIA SA	6.09	3.13	4.88	0.64	7.15	74.66	61.76	49.46	3.01	1435.37	-0.72	0.21	51.45	10.47	13.16	2.34	3.64	0.2	0.72	1	0.03	-5.19	\N	1.11	0.57	5004795800.93	Utilidade Pública	Energia Elétrica	Energia Elétrica	23.78	\N
+HBTS5	36.2	CIA HABITASUL DE PARTICIPACOES	1.26	0.49	1.16	0.21	1.89	77.17	89.72	82.49	1.04	4.05	-0.24	0.2	38.57	16.42	28.78	0.3	0.73	0.43	0.57	1.59	0	38.16	9012.77	74.31	28.66	330639469.4	Financeiro e Outros	Exploração de Imóveis	Exploração de Imóveis	\N	3.54
+AHEB3	27.5	SAO PAULO TURISMO S.A.	2.21	2.07	1.7	0.46	0.9	31.24	21.73	16.68	0.37	1.41	-1.13	1.24	93.37	20.69	98.59	-0.96	-0.79	0.22	0.78	2.2	0.04	50.82	3872.25	13.32	12.43	233828143.9	Consumo Cíclico	Viagens e Lazer	Produção de Eventos e Shows	\N	\N
+PMAM3	2.39	PARANAPANEMA S.A.	-0.09	-0.03	-0.18	0.08	-5.4	-55.56	-122.1	-252.38	0.22	-0.04	-0.1	0.35	-34.21	-87.4	128.19	\N	-5.21	-2.55	3.55	0.09	0	-27.23	132075.6	-79.21	-27.1	135292400.61	Materiais Básicos	Siderurgia e Metalurgia	Artefatos de Cobre	\N	\N
+EQPA3	6.75	EQUATORIAL PARA DISTRIBUIDORA DE ENERGIA S.A.	6.68	2.94	5.09	1.02	6.33	34.97	28.06	21.37	1.43	10.35	-1.45	0.71	43.96	15.26	25.67	0.72	1.24	0.35	0.65	1.5	0.2	13.58	32772.79	2.3	1.01	14917885169.87	Utilidade Pública	Energia Elétrica	Energia Elétrica	37.41	\N
+HYPE3	28.74	HYPERA S.A.	10.7	1.55	7.11	0.72	10	62.47	31.85	21.16	2.26	4.71	-1.1	0.32	14.53	6.73	11.08	0.63	2.89	0.46	0.54	1.81	12.63	16.27	97950826.03	18.49	2.69	18204514453.02	Saúde	Comércio e Distribuição	Medicamentos e Outros Produtos	8.54	5.25
+CSNA3	12.99	CIA SIDERURGICA NACIONAL	931.69	1	3.32	0.19	9.09	24.89	11.84	0.04	0.39	2.34	-0.29	0.48	0.11	0.02	7.3	1.73	5.77	0.19	0.78	1.29	-9.03	14.62	92946052.71	13.04	0.01	17225960371.53	Materiais Básicos	Siderurgia e Metalurgia	Siderurgia	-67.47	11.23
+CSRN5	23	CIA ENERGETICA DO RIO GDE NORTE - COSERN	5.91	2.27	3.54	0.68	5.55	34.23	29.16	17.46	1.03	62.35	-0.88	0.66	38.4	11.44	21.48	1.33	2.07	0.3	0.7	1.05	0.24	8.58	6900	10.13	3.89	3799532072.31	Utilidade Pública	Energia Elétrica	Energia Elétrica	22.03	6.25
+CEPE6	43	CIA ENERGETICA DE PERNAMBUCO - CELPE	23.59	1.97	2.84	0.22	14.33	20.59	13.21	1.59	0.38	5.26	-0.31	0.59	8.33	0.94	10.35	4.61	6.66	0.11	0.89	1.17	0.37	8.57	\N	21.87	1.82	8662392210.18	Utilidade Pública	Energia Elétrica	Energia Elétrica	3.98	\N
+TEND3	10.62	CONSTRUTORA TENDA S.A.	493.49	1.51	20.36	0.29	26.9	24.54	8.62	0.36	1.76	1.1	-0.68	0.16	0.31	0.06	3.09	0.49	6.55	0.19	0.8	1.82	-4.92	11.54	25894983.97	7.02	0.02	1307260892.52	Consumo Cíclico	Construção Civil	Incorporações	-57.9	\N
+LUXM3	0	TREVISA INVESTIMENTOS S.A.	0	0	0	0	5.64	31.76	19.72	13.54	0	0	0	0.8	15.35	10.84	14.64	-0.09	-0.39	0.71	0.29	0.88	0	1.03	\N	5.8	0.89	162172080	Bens Industriais	Transporte	Transporte Hidroviário	24.3	\N
+PEAB3	42.5	CIA PARTICIPACOES ALIANCA DA BAHIA	41.15	0.92	134.04	0.63	116.33	79.97	10.92	35.56	14.64	2.97	-0.84	0.04	2.23	1.53	0.12	-0.18	-25.81	0.68	0.32	6.46	1.15	-33.28	12030.73	46.22	1.03	852158060.28	Financeiro e Outros	Holdings Diversificadas	Holdings Diversificadas	-11.17	2.38
+VVEO3	2.03	CM HOSPITALAR S.A.	2.01	0.2	1.19	0.06	5.75	15.13	4.9	2.9	0.06	0.17	-0.15	1.01	9.92	2.94	3.85	0.76	4.56	0.3	0.7	2.32	0.03	\N	7461612.49	10.18	1.01	655325834.24	Saúde	Serv.Méd.Hospit..Análises e Diagnósticos	Serv.Méd.Hospit..Análises e Diagnósticos	\N	6.73
+POMO4	6.36	MARCOPOLO S.A.	8.16	2.14	8.84	0.95	9.37	22.93	12.22	13.25	1.08	2.92	-2.41	0.88	26.29	11.64	13.77	0.31	1.26	0.44	0.55	2.16	0.16	9.75	46579560.83	2.97	0.78	6628158169.1	Bens Industriais	Material de Transporte	Material Rodoviário	36.53	5.35
+BRKM3	18.15	BRASKEM S.A	-2.37	4.69	-4.35	0.15	-11.69	4.7	-4.82	-8.85	0.21	1.26	-0.26	0.74	-198.12	-6.53	-11.57	7.95	-7.36	0.03	0.97	1.44	-0.05	4	311243.11	3.87	-7.66	14414035917.98	Materiais Básicos	Químicos	Petroquímicos	\N	\N
+BRSR6	11.13	BCO ESTADO DO RIO GRANDE DO SUL S.A	4.53	0.46	3.64	0.04	3.72	32.23	8.31	6.67	0.3	5.57	-0.04	0.12	10.05	0.77	\N	\N	\N	0.08	0.92	1.54	0.46	12.01	25175795.03	24.43	2.46	4654418349.51	Financeiro e Outros	Intermediários Financeiros	Bancos	2.04	5.22
+VITT3	5.63	VITTIA FERTILIZANTES E BIOLOGICOS S.A.	10.18	1.44	10.69	0.95	13.2	36.04	11.18	11.74	1.19	3.14	-2.46	0.79	14.15	9.33	9.12	0.34	2.51	0.66	0.34	1.97	-0.24	\N	3098910.17	3.91	0.55	871039921.34	Materiais Básicos	Químicos	Fertilizantes e Defensivos	\N	4.88
+BEEF3	6.55	MINERVA S.A.	39.64	183.05	1.87	0.12	6.1	20.9	7.68	0.36	0.14	0.36	-0.37	0.85	461.76	0.31	8.32	413.94	4.23	0	0.98	2.02	-0.47	10.65	60522928.09	0.04	0.17	3977706315.85	Consumo não Cíclico	Alimentos Processados	Carnes e Derivados	\N	2.97
+FIGE4	0	INVESTIMENTOS BEMGE S.A.	0	0	0	0	0.55	100	92.3	61.71	0	0	0	0.11	7.03	6.91	\N	\N	\N	0.98	0.02	\N	0	8.36	\N	68.86	4.84	9497566.76	Financeiro e Outros	Outros	Outros	1.66	\N
+DMMO11	0.34	DOMMO ENERGIA S.A.	-49.97	-0.36	6.75	0.53	32.11	54.54	8.16	-1.1	0.55	1.78	-1.29	0.97	-0.73	-1.07	-5.39	\N	-2.85	-1.47	2.47	2.04	0.49	-1.34	\N	-0.93	-0.01	949254731.04	Petróleo. Gás e Biocombustíveis	Petróleo. Gás e Biocombustíveis	Exploração. Refino e Distribuição	\N	\N
+BRIV3	12.86	BCO ALFA DE INVESTIMENTO S.A.	20.75	0.66	13.69	0.04	13.55	15.61	2.39	1.58	0.33	0.6	-0.05	0.14	3.2	0.22	\N	\N	\N	0.07	0.93	7.22	1.08	20.48	32430.73	19.39	0.62	1128165604.64	Financeiro e Outros	Intermediários Financeiros	Bancos	2.02	\N
+LAND3	15.5	Terra Santa Propriedades Agricolas S.A.	44.57	2.07	25.96	1.55	28.01	93.84	69.17	40.29	17.96	-59.77	-1.65	0.09	4.64	3.48	5.26	0.16	2.04	0.75	0.25	0.69	-0.58	\N	873341.43	7.49	0.35	1491517911	Consumo não Cíclico	Agropecuária	Agricultura	\N	0.56
+APTI4	3500	SIDERURGICA J. L. ALIPERTI S.A.	1.33	0.26	1.25	0.13	0.39	99.04	164.57	155.22	2.06	0.36	-0.23	0.06	19.51	9.91	15.35	-0.1	-0.47	0.51	0.49	8.39	0	1.52	\N	13488.14	2632.16	44442750	Consumo não Cíclico	Agropecuária	Agricultura	\N	1.38
+LWSA3	4.02	LOCAWEB SERVIÇOS DE INTERNET S.A.	-42.47	0.83	27.01	0.51	15.17	46.31	6.78	-4.31	1.83	4.63	-0.9	0.28	-1.95	-1.21	1.8	-0.36	-11.84	0.62	0.38	1.35	0.15	32.63	39866222.43	4.86	-0.09	2399483641.56	Tecnologia da Informação	Programas e Serviços	Programas e Serviços	\N	\N
+ELET5	96.56	CENTRAIS ELET BRAS S.A. - ELETROBRAS	50.75	1.98	16.67	0.84	9.24	47.75	36.45	11.97	6.08	13.55	-1.02	0.14	3.9	1.66	5.89	0.38	3.21	0.43	0.57	1.57	0.24	8.27	9900	48.8	1.9	80606352629.82	Utilidade Pública	Energia Elétrica	Energia Elétrica	-19.84	\N
+CMSA4	0	CIMS S.A.	0	0	0	0	0.17	\N	\N	\N	\N	0	0	0	-555.26	-550.51	-549.5	-0.96	0.17	0.99	0.01	111.51	0	\N	\N	0	0	0	Financeiro e Outros	Outros	Outros	\N	\N
+BPAC3	15.82	BCO BTG PACTUAL S.A.	17.23	3.5	14.62	0.37	9.8	20.34	25.92	22	3.79	41.07	-3.83	0.1	20.33	2.17	\N	\N	\N	0.11	0.89	1.01	0.55	43.9	145398.49	4.52	0.92	122041578702.99	Financeiro e Outros	Intermediários Financeiros	Bancos	52.56	1.64
+SHUL4	5.9	SCHULZ S.A.	7.66	1.68	6.9	0.88	59.78	25.81	15.84	14.26	1.09	2.23	-2.57	0.8	21.93	11.47	14.16	-0.02	-0.07	0.52	0.48	2.5	3.95	24.97	2557584.11	3.51	0.77	18292417258.36	Bens Industriais	Máquinas e Equipamentos	Motores . Compressores e Outros	46.98	5.08
+MDNE3	10.76	MOURA DUBEUX ENGENHARIA S/A	5.46	0.66	5.03	0.26	5.62	34.6	15.04	13.88	0.76	1.07	-0.46	0.34	12.1	4.77	8.3	0.08	0.59	0.39	0.61	2.28	0.11	26.18	5442095.31	16.3	1.97	913624875	Consumo Cíclico	Construção Civil	Incorporações	\N	\N
+STKF3	0	STATKRAFT ENERGIAS RENOVAVEIS S.A.	0	0	0	0	3.8	55.58	38.6	29.16	0	0	0	0.12	5.62	3.63	4.19	0.28	3.8	0.65	0.35	2.06	0	24.6	\N	7.97	0.45	0	Consumo Cíclico	Viagens e Lazer	Atividades Esportivas	30.23	\N
+MATD3	4.58	HOSPITAL MATER DEI SA	13.01	1.04	4.08	0.33	6.47	32.31	19.12	5.99	0.78	2.38	-0.44	0.43	8.01	2.56	11.83	0.61	2.39	0.32	0.66	2.34	0.44	28.41	3739175.97	4.4	0.35	1751070580.18	Saúde	Serv.Méd.Hospit..Análises e Diagnósticos	Serv.Méd.Hospit..Análises e Diagnósticos	1.59	1.63
+PINE3	5.55	BCO PINE S.A.	5.83	1.09	4.17	0.05	3.63	9.2	13.38	9.57	0.56	-0.1	-0.05	0.09	18.76	0.82	\N	\N	\N	0.04	0.9	0.03	0.03	21.9	6977.48	5.08	0.95	1015526557.45	Financeiro e Outros	Intermediários Financeiros	Bancos	\N	7
+SNSY3	11.1	SANSUY S.A. INDUSTRIA DE PLASTICOS	-0.61	-0.04	1.51	0.16	4.38	26.81	6.34	-15.81	0.1	10.02	-0.39	1.7	-7.13	-26.86	-3.04	\N	2.67	-3.77	4.81	1.03	0.01	15.95	15495.59	-257.12	-18.32	96932450.4	Materiais Básicos	Materiais Diversos	Materiais Diversos	\N	\N
+ESPA3	1.01	MPM CORPÓREOS S.A.	-15.19	0.42	2.76	0.16	8.04	37.8	13.08	-2.37	0.36	0.88	-0.28	0.45	-2.78	-1.06	5.74	0.81	5.29	0.38	0.62	1.75	0.29	24.51	949118.8	2.39	-0.07	365037296.66	Consumo não Cíclico	Produtos de Uso Pessoal e de Limpeza	Produtos de Uso Pessoal	\N	\N
+BGIP3	27	BCO ESTADO DE SERGIPE S.A. - BANESE	9.78	0.74	7.87	0.05	7.35	36.89	5.2	4.19	0.41	-0.37	-0.1	0.13	7.57	0.52	\N	\N	\N	0.07	0.93	0.78	-0.29	13.8	11309.43	36.47	2.76	468242409.42	Financeiro e Outros	Intermediários Financeiros	Bancos	-3.92	3.88
+RAPT3	8.45	RANDON S.A. IMPLEMENTOS E PARTICIPACOES	8.15	0.97	2.37	0.21	5.26	25.51	10.91	3.17	0.26	0.74	-0.5	0.79	11.87	2.52	8.64	1.05	2.58	0.21	0.7	1.89	-0.31	20.63	415725.63	8.73	1.04	3151012964.23	Bens Industriais	Material de Transporte	Material Rodoviário	17.61	6.88
+VULC3	14.46	VULCABRAS/AZALEIA S.A.	7.94	1.98	7.27	1.37	7	41.86	19.21	17.58	1.4	2.8	-5	0.98	24.97	17.2	20.75	-0.07	-0.27	0.69	0.31	3.04	86.45	17.67	9531450.6	7.29	1.82	3971529288.24	Consumo Cíclico	Tecidos. Vestuário e Calçados	Calçados	26.87	20.4
+CSAN3	12.72	COSAN S.A.	13.2	1.15	2.01	0.17	6.16	28.7	29.94	4.55	0.6	1.7	-0.21	0.28	8.74	1.26	9.71	2.39	4.16	0.14	0.64	1.79	-0.02	30.82	142242182.14	11.03	0.96	23838182255.04	Petróleo. Gás e Biocombustíveis	Petróleo. Gás e Biocombustíveis	Exploração. Refino e Distribuição	1.8	3.55
+KLBN11	20.56	KLABIN S.A.	13	2.25	7	0.45	12.96	34.78	20.6	11.1	1.44	2.2	-0.65	0.31	17.29	3.44	6.21	1.91	5.96	0.2	0.76	2.79	-0.22	12.47	92750315.29	9.15	1.58	25410852511.47	Materiais Básicos	Madeira e Papel	Papel e Celulose	70.07	5.64
+CSRN6	24.72	CIA ENERGETICA DO RIO GDE NORTE - COSERN	6.35	2.44	3.8	0.73	5.55	34.23	29.16	17.46	1.11	67.01	-0.94	0.66	38.4	11.44	21.48	1.33	2.07	0.3	0.7	1.05	0.25	8.58	4758.86	10.13	3.89	3799532072.31	Utilidade Pública	Energia Elétrica	Energia Elétrica	22.03	5.21
+LPSB3	1.73	LPS BRASIL - CONSULTORIA DE IMOVEIS S.A.	11.9	1.19	5.93	0.63	4.3	85.06	24.21	12.07	1.44	6.49	-0.88	0.44	10.02	5.33	14.06	-0.33	-1.63	0.53	0.47	1.53	0.24	10.78	203995.83	1.45	0.15	255269511.63	Financeiro e Outros	Exploração de Imóveis	Intermediação Imobiliária	\N	2.35
+GBIO33	10.4	BIOTOSCANA INVESTMENTS S.A.	-14.97	1.32	40.09	0.79	47.57	43.48	3.79	-10.14	1.52	7.57	-1.43	0.52	-8.83	-5.29	-0.1	0.25	7.48	0.6	0.4	1.31	0.06	12.83	\N	7.86	-0.69	1108871982.4	Saúde	Comércio e Distribuição	Medicamentos e Outros Produtos	\N	\N
+EQTL3	28.9	EQUATORIAL ENERGIA S.A.	19.79	1.55	4.23	0.33	8.71	30.27	19.84	4.24	0.84	5.36	-0.43	0.39	7.86	1.67	10.48	1.65	4.48	0.21	0.74	1.36	0.89	24.5	211690191.63	18.59	1.46	33269455822.7	Utilidade Pública	Energia Elétrica	Energia Elétrica	11.01	1.56
+BPAT33	44.05	BCO PATAGONIA S.A.	6.98	0.66	1.8	0.09	1.8	51.56	21.77	5.61	0.39	\N	-0.12	0.24	9.46	1.35	\N	\N	\N	0.14	0.86	\N	-0.11	14.99	\N	66.71	6.31	1533769021	Financeiro e Outros	Intermediários Financeiros	Bancos	-18.89	\N
+MMAQ4	49.73	MINASMAQUINAS S.A.	0.07	0.01	0.05	0	2.6	8.12	4.75	3.09	0	0.01	-0.02	2.05	12.45	6.34	7.38	0.49	2.58	0.51	0.49	1.69	0	25.76	\N	5685.11	707.56	1115195.25	\N	\N	\N	24.18	\N
+EEEL4	410	CIA ESTADUAL GER.TRANS.ENER.ELET-CEEE-GT	6.54	1.97	3.91	0.67	4.62	61.19	54.12	32.4	2.12	5.15	-0.85	0.32	30.08	10.23	19.55	0.9	1.8	0.34	0.66	2.49	-0.21	12.36	\N	208.5	62.71	2840511499.76	Utilidade Pública	Energia Elétrica	Energia Elétrica	28.25	\N
+CORR4	82	CORREA RIBEIRO S.A. COMERCIO E INDUSTRIA	0.26	0.41	0.21	0.12	-1.2	100	2689.16	2211.14	5.72	0.2	-0.48	0.02	157.36	45.49	138.37	-2.58	-1.35	0.29	0.71	4.25	0	-16.36	\N	201.49	317.06	1278894.65	Financeiro e Outros	Exploração de Imóveis	Exploração de Imóveis	\N	\N
+FRTA3	1.31	POMIFRUTAS S/A	-0.49	-0.04	-2.17	0.09	-56.86	16.57	-16.43	-72.29	0.36	-0.03	-0.1	0.25	-7.17	-17.77	17.57	\N	-54.68	-2.48	3.48	0.03	-0.11	7.62	5715.83	-36.95	-2.65	2690223.86	Consumo não Cíclico	Agropecuária	Agricultura	\N	\N
+CTSA3	2.19	CIA TECIDOS SANTANENSE	-1.24	0.26	-3.64	0.1	-14.15	-22.39	-15.56	-45.69	0.57	1.18	-0.14	0.17	-21.36	-7.79	-4.49	0.76	-10.51	0.36	0.64	1.37	-0.03	-0.42	12010.51	8.28	-1.77	60936270.39	Consumo Cíclico	Tecidos. Vestuário e Calçados	Fios e Tecidos	\N	\N
+CGRA3	25.45	GRAZZIOTIN S.A.	5.86	0.6	8.89	0.42	6.36	51.6	8.69	13.19	0.77	1.65	-0.76	0.55	10.19	7.24	5.28	-0.18	-2.65	0.71	0.29	2.4	-0.4	7.88	86940.63	42.66	4.35	537692666.98	Consumo Cíclico	Comércio	Tecidos. Vestuário e Calçados	11.01	10.62
+SANB3	13.07	BCO SANTANDER (BRASIL) S.A.	10.3	0.85	7.2	0.09	7.56	37.06	10.58	7.39	0.76	\N	-0.09	0.11	8.23	0.84	\N	\N	\N	0.1	0.9	\N	-0.41	12.73	1343226.06	15.41	1.27	102992323985.49	Financeiro e Outros	Intermediários Financeiros	Bancos	-5.44	5.87
+RADL3	24.81	RAIA DROGASIL S.A.	43.41	7.45	19.98	2.2	21.14	29.81	6.25	2.88	1.25	11.77	-5.28	1.76	17.16	5.07	21.73	0.43	1.16	0.3	0.7	1.47	-30.52	17.08	149190999.86	3.33	0.57	42623758632	Saúde	Comércio e Distribuição	Medicamentos e Outros Produtos	13.95	1.04
+TFCO4	10.02	TRACK & FIELD CO S.A.	82.2	21.88	62.96	13.66	10.73	57.74	21.45	16.43	13.51	28.07	-50.51	1.01	26.61	16.62	23.86	0.05	0.14	0.62	0.38	3	5.91	27.71	2220677.89	0.46	0.12	1600374375.03	Consumo Cíclico	Comércio	Tecidos. Vestuário e Calçados	40.88	1.22
+BSLI4	10.57	BRB BCO DE BRASILIA S.A.	18.73	1.49	29.11	0.08	26.73	30.19	1.88	2.93	0.55	-0.29	-0.09	0.14	7.93	0.42	\N	\N	\N	0.05	0.95	0.26	0.04	25.16	37801.52	7.11	0.56	3523637425	Financeiro e Outros	Intermediários Financeiros	Bancos	-3.73	0.72
+FNCN3	14.25	FINANSINOS S.A.- CREDITO FINANC E INVEST	12.98	0.91	7.98	0.15	7.98	51.88	22.78	14	1.82	0.82	-0.24	0.08	6.99	1.13	\N	\N	\N	0.16	0.84	1.82	-0.17	18.4	\N	15.71	1.1	13021336.5	Financeiro e Outros	Intermediários Financeiros	Soc. Crédito e Financiamento	\N	\N
+GFSA3	3.43	GAFISA S.A.	-2.17	0.17	32.43	0.06	195.06	-7.07	0.89	-13.29	0.29	0.22	-0.19	0.21	-7.95	-2.76	-0.98	0.87	162.63	0.35	0.65	1.69	-0.11	2.81	11072714.6	19.89	-1.58	306790488.13	Consumo Cíclico	Construção Civil	Incorporações	\N	\N
+RECV3	18.77	PETRORECÔNCAVO S.A.	8.89	1.18	8.49	0.8	8.78	31.33	22.83	21.81	1.94	100.19	-0.97	0.41	13.32	9	11.73	0.04	0.29	0.68	0.32	1.05	-0.26	56.51	46133578.33	15.85	2.11	5507721005.02	Petróleo. Gás e Biocombustíveis	Petróleo. Gás e Biocombustíveis	Exploração. Refino e Distribuição	53.39	10.68
+IGTI3	2.62	JEREISSATI PARTICIPACOES S.A.	9.44	0.75	4.98	0.41	10.74	65.27	54.82	28.88	2.73	3	-0.55	0.15	7.98	4.36	7.75	0.41	2.73	0.55	0.45	2.26	0.03	9.87	114365.23	3.48	0.28	5139561723.8	Financeiro e Outros	Exploração de Imóveis	Exploração de Imóveis	25.13	3.67
+ELET6	38.69	CENTRAIS ELET BRAS S.A. - ELETROBRAS	20.34	0.79	6.68	0.34	9.24	47.75	36.45	11.97	2.43	5.43	-0.41	0.14	3.9	1.66	5.89	0.38	3.21	0.43	0.57	1.57	0.1	8.27	67365986.34	48.8	1.9	80606352629.82	Utilidade Pública	Energia Elétrica	Energia Elétrica	-19.84	4.71
+SEDU3	23.8	SOMOS EDUCAÇÃO S.A.	-13.36	15	-21.89	1.53	-27.94	48.36	-15.73	-25.77	3.44	57.9	-2.27	0.44	-112.29	-11.46	-13.15	4.15	-6.05	0.1	0.9	1.09	0.01	12.49	\N	1.59	-1.78	6238667820	Consumo Cíclico	Diversos	Serviços Educacionais	\N	\N
+CVCB3	1.9	CVC BRASIL OPERADORA E AGÊNCIA DE VIAGENS S.A.	-2.75	1.73	-16.37	0.26	-20.48	88.21	-4.09	-24.37	0.67	-6.23	-0.59	0.39	-62.81	-9.54	-5.03	0.43	-4.11	0.15	0.85	0.93	0.35	-3.28	24974836.97	1.1	-0.69	998623084.3	Consumo Cíclico	Viagens e Lazer	Viagens e Turismo	\N	\N
+EZTC3	12.87	EZ TEC EMPREEND. E PARTICIPACOES S.A.	11.2	0.6	14.82	0.48	15.27	33.05	17.9	23.7	2.65	1.29	-0.84	0.18	5.4	4.32	2.94	0.02	0.44	0.8	0.19	9.13	-3.52	22.62	24956893.51	21.28	1.15	2844129755.61	Consumo Cíclico	Construção Civil	Incorporações	21.09	2.15
+CEDO4	23.22	CIA FIACAO TECIDOS CEDRO CACHOEIRA	2.91	1.09	1.28	0.27	3.29	30.85	17.17	7.54	0.22	1.96	-0.55	1.21	37.29	9.14	28.3	1.64	1.93	0.25	0.75	1.36	0	11.42	40230.1	21.39	7.97	246638973.12	Consumo Cíclico	Tecidos. Vestuário e Calçados	Fios e Tecidos	10.4	\N
+UNIP5	54.15	UNIPAR CARBOCLORO S.A.	10.46	2.44	9.32	0.87	8.82	31.49	14.76	13.16	1.38	2.76	-1.74	0.63	23.37	8.33	8.24	0.15	0.56	0.36	0.64	2.73	-0.22	7.14	17691.15	22.16	5.18	5481209197.59	Materiais Básicos	Químicos	Químicos Diversos	2.3	7.63
+JBSS3	29.54	JBS S.A.	32.16	1.48	6.9	0.32	15.25	11.93	2.59	0.56	0.18	2.15	-0.51	1.79	4.61	1	6.52	1.79	8.35	0.22	0.76	1.68	-0.42	14.9	216189647.11	19.93	0.92	65523157569.8	Consumo não Cíclico	Alimentos Processados	Carnes e Derivados	140.74	3.39
+NEXP3	4.15	NEXPE PARTICIPAÇÕES S.A	-0.25	-0.07	-0.46	0.1	-2.83	51.94	-21.4	-39.03	0.1	-0.18	-0.16	0.98	-28.85	-38.19	28.03	\N	-2.37	-1.32	2.32	0.42	0	0.72	6827.31	-56.56	-16.32	11020611.35	Financeiro e Outros	Exploração de Imóveis	Intermediação Imobiliária	\N	\N
+AHEB6	20	SAO PAULO TURISMO S.A.	1.61	1.5	1.23	0.33	0.9	31.24	21.73	16.68	0.27	1.02	-0.82	1.24	93.37	20.69	98.59	-0.96	-0.79	0.22	0.78	2.2	0.03	50.82	2000	13.32	12.43	233828143.9	Consumo Cíclico	Viagens e Lazer	Produção de Eventos e Shows	\N	\N
+HBRE3	4.96	HBR REALTY EMPREENDIMENTOS IMOBILIARIOS S/A	4.36	0.25	1.23	0.11	4.02	80.28	269.74	76.12	3.32	2.08	-0.12	0.03	5.78	2.44	8.37	0.57	2.79	0.42	0.43	1.85	0.06	21.77	2349528.51	19.67	1.14	511817345.76	Financeiro e Outros	Exploração de Imóveis	Exploração de Imóveis	-7.99	\N
+SAPR11	26.12	CIA SANEAMENTO DO PARANA - SANEPAR	5.05	0.78	3.23	0.4	5.07	60.04	37.33	23.91	1.21	5.71	-0.48	0.33	15.44	7.88	11.44	0.44	1.84	0.51	0.49	1.66	0.16	8.62	21834476.03	33.5	5.17	7894537631.26	Utilidade Pública	Água e Saneamento	Água e Saneamento	11.86	5.8
+TAEE4	11.22	TRANSMISSORA ALIANÇA DE ENERGIA ELÉTRICA S.A.	8.45	1.64	5.01	0.59	8.74	63.14	68.11	40.38	3.41	16.84	-0.71	0.17	19.46	7	13.55	1.23	3.75	0.36	0.64	1.26	0.92	15.51	2678041.26	6.83	1.33	11547603362.64	Utilidade Pública	Energia Elétrica	Energia Elétrica	5.09	11.05
+CTKA3	19.01	KARSTEN S.A.	2.7	-1.16	2.12	0.19	9.71	44.05	8.47	6.65	0.18	0.67	-0.61	1.03	-43.04	6.86	14.06	\N	7.71	-0.16	1.16	1.66	0	16.1	9261.67	-16.37	7.05	111276967.04	Consumo Cíclico	Tecidos. Vestuário e Calçados	Fios e Tecidos	\N	\N
+CPLE3	8.05	CIA PARANAENSE DE ENERGIA - COPEL	12.56	0.98	7	0.43	11.42	21.53	15.88	8.85	1.11	6.25	-0.57	0.39	7.83	3.45	7.72	0.38	2.7	0.44	0.55	1.39	0.17	9.35	57826124.46	8.19	0.64	29899693364.18	Utilidade Pública	Energia Elétrica	Energia Elétrica	13.08	4.29
+WEGE3	40.8	WEG S.A.	33.32	9.84	27.94	5.35	27.32	32.24	19.28	16.17	5.39	17.48	-16.31	0.99	29.52	16.07	24.67	-0.22	-0.63	0.54	0.44	1.84	1.04	22.11	267814611.06	4.15	1.22	171250574318.4	Bens Industriais	Máquinas e Equipamentos	Motores . Compressores e Outros	30.88	1.69
+FRIO3	288.67	METALFRIO SOLUTIONS S.A.	87.1	5.34	13.3	1	17.49	17.86	7.07	1.08	0.94	14.36	-3.3	1.06	6.14	1.15	10.48	1.69	4.19	0.19	0.77	1.11	-0.8	10.44	1142001.29	54.01	3.31	1814664200.31	Bens Industriais	Máquinas e Equipamentos	Máq. e Equip. Industriais	\N	\N
+ELEK4	36.99	ELEKEIROZ S.A.	47.34	5.15	42.48	2.07	38.76	11.39	2.82	2.53	1.2	7.26	-5.02	1.72	10.87	4.36	4.38	0.7	5.75	0.4	0.6	1.94	-0.68	1.48	\N	7.19	0.78	905051916.3	Materiais Básicos	Químicos	Petroquímicos	\N	\N
+CEBR5	18.47	CIA ENERGETICA DE BRASILIA	7.62	1.27	6.11	0.9	3.35	50.78	61.36	49.19	3.75	1.87	-1.99	0.24	16.6	11.78	11.87	-0.66	-3.19	0.71	0.11	8.05	-0.46	-32.89	55922.23	14.59	2.42	1424592189.9	Utilidade Pública	Energia Elétrica	Energia Elétrica	14.18	10.28
+EPAR3	6.09	EMBPAR PARTICIPACOES S.A.	-4.09	1.12	6.22	0.91	6.13	14.78	5.43	-8.26	0.34	4.2	-1.24	2.7	-27.49	-22.34	13.25	-0.02	-0.09	0.81	0.19	5.6	0.03	4.97	93131.54	5.42	-1.49	90500859.12	Financeiro e Outros	Holdings Diversificadas	Holdings Diversificadas	\N	47.18
+UNIP6	48.19	UNIPAR CARBOCLORO S.A.	9.31	2.17	8.3	0.78	8.82	31.49	14.76	13.16	1.23	2.45	-1.55	0.63	23.37	8.33	8.24	0.15	0.56	0.36	0.64	2.73	-0.19	7.14	8545818.94	22.16	5.18	5481209197.59	Materiais Básicos	Químicos	Químicos Diversos	2.3	6.32
+G2DI33	2.26	G2D INVESTMENTS LTD	-2.07	0.36	-2.22	0.32	-3.07	100	114.68	122.76	\N	-3.52	-0.32	-0.12	-17.42	-15.21	-14.28	0.14	-0.85	0.87	0.13	0.01	0.04	\N	889136.06	6.26	-1.09	260027436.88	Financeiro e Outros	Serviços Financeiros Diversos	Gestão de Recursos e Investimentos	\N	\N
+CLSA3	6.81	CLEAR SALE S.A.	-66.48	1.79	-17.49	1.47	-12.43	33.39	-14.9	-3.92	2.61	3.23	-3.84	0.56	-2.7	-2.21	-11.91	-0.52	5.06	0.82	0.18	3.83	-2.52	\N	16091910.94	3.8	-0.1	1279776468.6	Tecnologia da Informação	Programas e Serviços	Programas e Serviços	\N	\N
+AGXY3	0.89	AGROGALAXY PARTICIPAÇÕES S.A.	-0.25	0.18	-1.57	0.02	-13.29	7.73	-1.18	-7.38	0.02	-1.19	-0.07	1.03	-72.33	-7.59	-13.18	1.36	-11.72	0.1	0.89	0.98	0	\N	427566.23	4.91	-3.55	152034240.21	Consumo não Cíclico	Agropecuária	Agricultura	\N	\N
+INNT3	0	INTER CONSTRUTORA E INCORPORADORA S.A.	0	0	0	0	4.02	32.63	14.62	9.09	0	0	0	0.45	25.09	4.11	14.35	1.62	4.02	0.16	0.84	1.01	0	18.84	\N	1.96	0.49	0	Consumo Cíclico	Construção Civil	Incorporações	-2.19	\N
+CSMG3	19.93	CIA SANEAMENTO DE MINAS GERAIS-COPASA MG	5.44	0.98	4.19	0.54	6.3	41.34	23.99	18.49	1.01	18.66	-0.64	0.53	17.97	9.85	11.25	0.49	2.11	0.55	0.45	1.21	0.15	9.34	24234290.31	20.39	3.66	7578443665.17	Utilidade Pública	Água e Saneamento	Água e Saneamento	19.21	17.88
+IRBR3	31.32	IRB - BRASIL RESSEGUROS S.A.	18.73	0.58	-49.44	0.17	-49.44	-0.02	-0.93	2.46	0.46	13.99	-0.22	0.37	3.09	0.92	\N	\N	\N	0.3	0.7	1.06	-0.15	0.1	58100587.06	54.18	1.67	2576477535.84	Financeiro e Outros	Previdência e Seguros	Seguradoras	-35.36	\N
+CGAS5	111.95	CIA GAS DE SAO PAULO - COMGAS	5.88	17.22	5.3	0.99	6.96	21.09	18.83	16.98	1	542.85	-1.58	0.99	292.91	16.85	29.34	6.44	1.98	0.06	0.94	1	0.02	17.25	160052.52	6.5	19.05	13922612870.22	Utilidade Pública	Gás	Gás	13.51	10.79
+MSRO3	702.5	MAESTRO LOCADORA DE VEICULOS S.A.	2516.79	245.28	461.64	56.11	465.45	34.29	22.55	4.14	104.09	1908.69	-86.61	0.54	9.75	2.23	11.77	2.02	3.8	0.23	0.77	1.09	-76.51	22.78	\N	2.86	0.28	18271898550	Consumo Cíclico	Diversos	Aluguel de carros	\N	0.02
+GPAR3	47.5	CIA CELG DE PARTICIPACOES - CELGPAR	93.14	5	235.39	4.63	224.1	57.13	90.1	227.71	212.1	15.96	-6.64	0.02	5.37	4.97	1.66	-0.24	-11.29	0.93	0.07	23.85	-0.98	-9.31	8790.5	9.5	0.51	3784633845	Utilidade Pública	Energia Elétrica	Energia Elétrica	-51.04	\N
+SBSP3	72.05	CIA SANEAMENTO BASICO EST SAO PAULO	15.58	1.61	8.44	0.76	11.16	36.52	23.46	12.71	1.98	25.1	-0.9	0.38	10.3	4.86	7.98	0.52	2.71	0.47	0.53	1.23	12.38	8.59	292966537.43	44.89	4.62	49246886061.45	Utilidade Pública	Água e Saneamento	Água e Saneamento	4.64	\N
+ELET3	34.42	CENTRAIS ELET BRAS S.A. - ELETROBRAS	18.09	0.71	5.94	0.3	9.24	47.75	36.45	11.97	2.17	4.83	-0.36	0.14	3.9	1.66	5.89	0.38	3.21	0.43	0.57	1.57	0.09	8.27	255791161.37	48.8	1.9	80606352629.82	Utilidade Pública	Energia Elétrica	Energia Elétrica	-19.84	1.17
+RANI4	5.5	Irani Papel e Embalagem S.A.	3.87	1.03	2.65	0.38	6.1	41.24	31.72	21.71	0.84	1.59	-0.57	0.45	26.66	9.84	13.63	0.8	2.06	0.37	0.63	3.75	-1.71	11.31	\N	5.34	1.42	2014571319.6	Materiais Básicos	Embalagens	Embalagens	157.54	\N
+CTNM3	8.67	CIA TECIDOS NORTE DE MINAS COTEMINAS	-0.63	1.11	-0.83	0.08	-3.82	14.02	-22.47	-29.57	0.19	-0.26	-0.11	0.43	-175.93	-12.81	-18.67	4.56	-3.41	0.07	0.86	0.49	0	-3.61	4558.91	7.84	-13.8	132999482.18	Consumo Cíclico	Tecidos. Vestuário e Calçados	Fios e Tecidos	\N	\N
+GSHP3	10.5	GENERAL SHOPPING E OUTLETS DO BRASIL S.A.	-0.15	-0.02	0.57	0.01	50.48	69.23	22.39	-84.37	0.13	-0.33	-0.02	0.1	-15.83	-8.5	2.18	\N	49.91	-0.54	1.54	0.81	0	-9.39	3530	-435.81	-68.98	20252074.5	Financeiro e Outros	Exploração de Imóveis	Exploração de Imóveis	\N	\N
+RLOG3	23.08	COSAN LOGISTICA S.A.	82.76	4.26	5.17	0.23	12.09	34.71	29.67	1.85	1.53	1.49	-0.31	0.15	5.15	0.28	5.46	5.71	6.92	0.05	0.71	2.64	-2.42	50.58	\N	5.41	0.28	10691215482.28	Bens Industriais	Transporte	Transporte Ferroviário	4.37	\N
+USIM3	7.21	USINAS SID DE MINAS GERAIS S.A.	14.25	0.39	16.21	0.22	17.22	7.54	2.06	2.34	0.33	0.68	-0.42	0.67	2.7	1.58	1.73	0.01	0.63	0.58	0.35	3.43	-0.23	24.78	5294530.46	18.71	0.51	9248349554.04	Materiais Básicos	Siderurgia e Metalurgia	Siderurgia	22.16	3.57
+USIM6	14	USINAS SID DE MINAS GERAIS S.A.	27.68	0.75	31.48	0.44	17.22	7.54	2.06	2.34	0.65	1.31	-0.82	0.67	2.7	1.58	1.73	0.01	0.63	0.58	0.35	3.43	-0.46	24.78	2829	18.71	0.51	9248349554.04	Materiais Básicos	Siderurgia e Metalurgia	Siderurgia	22.16	2.02
+FESA4	7.99	CIA FERRO LIGAS DA BAHIA - FERBASA	7.65	0.87	8.78	0.69	9.58	24.84	13.38	15.35	1.17	2.52	-1.1	0.59	11.41	9.02	7.22	-0.13	-1.35	0.79	0.21	3.82	-0.12	23.14	6122818.03	9.15	1.04	3513958400	Materiais Básicos	Siderurgia e Metalurgia	Siderurgia	6.45	6.48
+MRFG3	11.13	MARFRIG GLOBAL FOODS S.A.	-12.63	1.42	4.74	0.08	20.99	10.98	1.64	-0.62	0.08	0.92	-0.13	1.01	-11.21	-0.63	1.35	4.86	16.25	0.06	0.81	1.27	0.1	34.79	83688189.91	7.86	-0.88	10373160000	Consumo não Cíclico	Alimentos Processados	Carnes e Derivados	\N	\N
+NTCO3	14.87	NATURA &CO HOLDING S.A.	7.66	0.93	-111	0.5	-112.78	64.02	-0.7	10.21	0.78	4.22	-0.78	0.63	12.19	6.46	-0.76	0.02	-1.78	0.53	0.47	1.47	-0.04	14.82	114974446.6	15.91	1.94	20622430741.42	Consumo não Cíclico	Produtos de Uso Pessoal e de Limpeza	Produtos de Uso Pessoal	37.46	4.77
+CEED3	15.21	CIA ESTADUAL DE DISTRIB ENER ELET-CEEE-D	-2.26	-0.31	4.36	0.14	18.39	22.22	4.98	-9.62	0.22	4.75	-0.22	0.62	-13.82	-5.98	16.33	\N	14.02	-0.43	1.43	1.08	-0.03	7.53	6745.25	-48.71	-6.73	1039763182.36	Utilidade Pública	Energia Elétrica	Energia Elétrica	\N	\N
+MELK3	3.52	MELNICK EVEN DESENVOLVIMENTO IMOBILIÁRIO S.A.	6.36	0.59	7.02	0.3	5.47	21.84	9.15	10.1	0.64	0.57	-1.41	0.46	9.23	4.65	4.46	-0.13	-1.55	0.5	0.44	2.94	0.16	14.88	1299190.97	6	0.55	726068080.32	Consumo Cíclico	Construção Civil	Incorporações	17.66	13.83
+SOMA3	5.84	GRUPO DE MODA SOMA S.A.	2.91	0.79	-1.83	0.48	-2.28	56.8	-46.46	29.33	0.85	1.98	-0.82	0.56	27.15	16.44	-46.41	0.19	-0.45	0.61	0.39	2.36	0.01	37.72	73407106.94	7.4	2.01	4582924658.32	Consumo Cíclico	Comércio	Tecidos. Vestuário e Calçados	80.87	1.51
+PATI3	26	PANATLANTICA S.A.	26.44	0.73	9.52	0.39	10.31	10.39	3.55	1.28	0.34	0.87	-1.53	1.15	2.75	1.47	3.36	0.05	0.71	0.54	0.46	2.52	-0.39	12.01	3525.33	35.74	0.98	627255242.54	Materiais Básicos	Siderurgia e Metalurgia	Artefatos de Ferro e Aço	-18.19	0.17
+ANDG3B	28.82	ANDRADE GUTIERREZ CONCESSOES S.A.	59.95	2.23	15.34	1.88	8.6	47.12	179.06	45.82	27.47	-25.32	-1.93	0.07	3.71	3.14	12.68	0.13	0.93	0.85	0.15	0.26	-0.78	10.22	\N	12.94	0.48	1651867985.68	\N	\N	\N	-38.09	\N
+BIOM3	13.9	BIOMM S.A.	-21.38	5.46	-23.61	3.26	-22.6	20.27	-60.97	-67.32	14.4	7.34	-8.23	0.23	-25.53	-15.23	-15.71	-0.23	1.01	0.6	0.4	3.77	2.71	137.44	3384500.51	2.55	-0.65	1763096585.9	Saúde	Comércio e Distribuição	Medicamentos e Outros Produtos	\N	\N
+BOBR3	0	BOMBRIL S.A.	0	0	0	0	2.36	41.73	15.69	6.74	0	0	0	1.69	-237.6	11.37	69.17	\N	1.24	-0.05	1.05	0.88	0	6.3	\N	-0.16	0.37	249475757.86	Consumo não Cíclico	Produtos de Uso Pessoal e de Limpeza	Produtos de Limpeza	6.53	\N
+CAML3	8.48	CAMIL ALIMENTOS S.A.	4.3	0.99	2.59	0.32	5.16	19.82	6.85	4.12	0.18	1.17	-0.72	1.82	23.03	7.5	14.28	0.98	2.57	0.33	0.67	1.99	0.01	18.83	7611416.91	8.57	1.97	2968000000	Consumo não Cíclico	Alimentos Processados	Alimentos Diversos	13.77	3.03
+GOLL4	1.02	GOL LINHAS AEREAS INTELIGENTES S.A.	1.68	-0.17	0.97	0.17	3.81	32.36	18.05	10.48	0.18	-0.27	-0.24	0.96	-10.06	10.07	-60.01	\N	3.68	-1	2	0.32	-0.01	10.47	9172409.77	-6.04	0.61	428822111.7	Bens Industriais	Transporte	Transporte Aéreo	\N	\N
+SAPR3	4.95	CIA SANEAMENTO DO PARANA - SANEPAR	4.79	0.74	3.07	0.38	5.07	60.04	37.33	23.91	1.14	5.41	-0.46	0.33	15.44	7.88	11.44	0.44	1.84	0.51	0.49	1.66	0.15	8.62	1068332.94	6.7	1.03	7894537631.26	Utilidade Pública	Água e Saneamento	Água e Saneamento	11.86	5.67
+LVTC3	3.49	LIVETECH DA BAHIA INDUSTRIA E COMERCIO S.A	-302.11	0.35	5.14	0.16	2.96	22.2	5.07	-0.09	0.26	0.67	-0.27	0.62	-0.12	-0.05	6.71	-0.15	-2.18	0.46	0.54	2.37	2.91	\N	92305.37	9.91	-0.01	225674089.87	Tecnologia da Informação	Programas e Serviços	Programas e Serviços	\N	\N
+FESA3	13.86	CIA FERRO LIGAS DA BAHIA - FERBASA	13.28	1.52	15.23	1.2	9.58	24.84	13.38	15.35	2.04	4.38	-1.9	0.59	11.41	9.02	7.22	-0.13	-1.35	0.79	0.21	3.82	-0.2	23.14	7608.17	9.15	1.04	3513958400	Materiais Básicos	Siderurgia e Metalurgia	Siderurgia	6.45	3.39
+HOOT4	2.51	HOTEIS OTHON S.A.	0.91	-0.36	0.41	0.09	0.02	64.43	76.55	34.13	0.31	-0.27	-0.1	0.28	-39.2	9.72	-66.23	\N	-0.16	-0.25	1.31	0.31	-0.01	13.48	7445.47	-7.02	2.75	19815179.94	Consumo Cíclico	Hoteis e Restaurantes	Hotelaria	\N	\N
+CORR3	2.71	CORREA RIBEIRO S.A. COMERCIO E INDUSTRIA	0.01	0.01	0.01	0	-1.2	100	2689.16	2211.14	0.19	0.01	-0.02	0.02	157.36	45.49	138.37	-2.58	-1.35	0.29	0.71	4.25	0	-16.36	\N	201.49	317.06	1278894.65	Financeiro e Outros	Exploração de Imóveis	Exploração de Imóveis	\N	\N
+ATOM3	1.94	ATOM EMPREENDIMENTOS E PARTICIPAÇÕES S.A.	2.39	1.17	-59.36	0.87	-48.62	91.76	-3.39	84.24	2.01	2.62	-1.43	0.43	49.23	36.6	-47.85	-0.21	10.74	0.74	0.21	7.1	0.01	31.18	26350	1.65	0.81	46181502.12	Financeiro e Outros	Outros	Outros	22.25	\N
+UCAS3	2.19	UNICASA INDÚSTRIA DE MÓVEIS S.A.	10.02	0.75	20.27	0.4	21.54	36.8	3.31	6.69	0.67	3.85	-0.63	0.6	7.48	3.99	2.35	0.05	1.27	0.53	0.47	1.4	-0.22	7.8	91147.23	2.92	0.22	144729137.16	Consumo Cíclico	Utilidades Domésticas	Móveis	33.6	9.17
+CEEB6	60.68	CIA ELETRICIDADE EST. DA BAHIA - COELBA	9	2.3	4.13	0.56	6.75	31.68	25.46	11.69	1.05	-18.64	-0.7	0.53	25.59	6.19	16.16	1.94	3.47	0.24	0.76	0.87	0.93	10.41	\N	26.34	6.74	12633002013.48	Utilidade Pública	Energia Elétrica	Energia Elétrica	22.58	8.59
+POMO3	4.9	MARCOPOLO S.A.	6.28	1.65	6.81	0.73	9.37	22.93	12.22	13.25	0.83	2.25	-1.86	0.88	26.29	11.64	13.77	0.31	1.26	0.44	0.55	2.16	0.13	9.75	1645563.91	2.97	0.78	6628158169.1	Bens Industriais	Material de Transporte	Material Rodoviário	36.53	6.94
+CEGR3	66.78	CIA DISTRIB DE GAS DO RIO DE JANEIRO-CEG	29.63	11.94	17.25	3.77	17.98	28.64	18.5	10.77	3.19	79.25	-5.13	1.18	40.29	12.73	27.08	0.51	0.73	0.32	0.68	1.22	0.28	6.17	20932	5.59	2.25	17338607742.96	Utilidade Pública	Gás	Gás	27.58	1.81
+PETR4	36.56	PETROLEO BRASILEIRO S.A. PETROBRAS	4.07	1.17	2.46	0.45	3.71	52.07	39.1	23.67	0.96	39.45	-0.53	0.46	28.77	10.99	19.56	0.56	1.17	0.38	0.62	1.08	-0.11	17.72	1510208602.97	31.25	8.99	490675347923.5	Petróleo. Gás e Biocombustíveis	Petróleo. Gás e Biocombustíveis	Exploração. Refino e Distribuição	\N	17.75
+BBSE3	32.71	BB SEGURIDADE PARTICIPAÇÕES S.A.	8.04	5.44	7.17	3.66	7.17	\N	\N	\N	\N	33.39	-4.95	0	67.7	45.59	\N	\N	\N	0.67	0.33	1.73	0.43	\N	153187220.49	6.01	4.07	65420000000	Financeiro e Outros	Previdência e Seguros	Seguradoras	18.12	8.77
+GPIV33	3.53	GP INVESTMENTS, LTD.	-0.89	0.16	-1	0.09	0.19	100	110.12	123.21	\N	0.89	-0.11	-0.08	-17.95	-10.44	-10.57	-0.19	1.18	0.58	0.14	2.97	0.02	\N	3063570.74	22.08	-3.96	239104151.11	Financeiro e Outros	Serviços Financeiros Diversos	Gestão de Recursos e Investimentos	\N	\N
+VSPT4	0	FERROVIA CENTRO-ATLANTICA S.A.	0	0	0	0	-3.68	19.23	-12.15	-19.77	0	0	0	0.65	-67.01	-12.92	-20.95	0.85	-2.07	0.19	0.81	0.55	0	7.66	\N	7.54	-5.05	712610842.16	Bens Industriais	Transporte	Transporte Ferroviário	\N	\N
+WLMM4	29.99	WLM PART. E COMÉRCIO DE MÁQUINAS E VEÍCULOS S.A.	9.3	1.5	6.28	1.24	5.46	11.5	6.34	4.28	0.4	2.64	-2.88	3.11	16.12	13.3	16.62	-0.04	-0.17	0.82	0.17	5.56	-2.21	25.9	23545.47	20	3.22	979557369.5	Bens Industriais	Comércio	Material de Transporte	48.84	2.43
+SEER3	5.14	SER EDUCACIONAL S.A.	-38.43	0.56	2.94	0.2	5.6	53.01	12.11	-0.93	0.36	13.06	-0.25	0.55	-1.44	-0.51	10.98	0.5	2.66	0.35	0.65	1.07	0.42	7.72	3505798.11	9.26	-0.13	661628818.4	Consumo Cíclico	Diversos	Serviços Educacionais	\N	\N
+CMIG4	10.3	CIA ENERGETICA DE MINAS GERAIS - CEMIG	5.34	1.16	4.18	0.51	5.49	22.34	18.93	14.81	0.79	15.05	-0.69	0.65	21.72	9.61	16.13	0.28	1.01	0.44	0.56	1.15	-0.32	10.6	130117296.09	8.88	1.93	31542613646.26	Utilidade Pública	Energia Elétrica	Energia Elétrica	26.55	15.08
+TXRX3	9.39	TEXTIL RENAUXVIEW S.A.	7.73	-0.11	1.01	0.19	8.08	8.47	34.9	4.58	0.35	-0.19	-0.35	0.53	-1.44	2.44	-64.83	\N	7.57	-1.7	2.7	0.32	0	8.73	933	-84.48	1.22	20123661.57	Consumo Cíclico	Tecidos. Vestuário e Calçados	Fios e Tecidos	\N	\N
+CAMB4	6.25	CAMBUCI S.A.	3.66	1.05	2.65	0.72	4.08	48.26	21.89	15.87	0.58	2.66	-1.41	1.24	28.58	19.76	34.86	-0.11	-0.28	0.69	0.31	2.27	0.89	13.16	\N	5.98	1.71	434587822.4	Consumo Cíclico	Tecidos. Vestuário e Calçados	Calçados	34.14	0.43
+BRGE6	12.92	CONSORCIO ALFA DE ADMINISTRACAO S.A.	32.46	0.71	-33.53	0.32	19.81	-4115.33	-798.17	824.67	267.65	0.85	-0.72	0	2.19	0.99	-2.79	-1.15	54.17	0.45	0.36	3.13	-0.5	-32.83	5375.5	18.16	0.4	974940393.52	Financeiro e Outros	Previdência e Seguros	Seguradoras	-11.18	\N
+LHER3	0	LOJAS HERING S.A.	0	0	0	0	-3.77	63.41	22.35	10.99	0	0	0	0.06	1.95	0.67	3.94	-0.15	-3.77	0.34	0.66	6.36	0	4.31	\N	141.54	2.76	0	Financeiro e Outros	Exploração de Imóveis	Exploração de Imóveis	-51.59	\N
+GOAU3	10.46	METALURGICA GERDAU S.A.	5.02	0.61	1.22	0.14	1.74	15.28	13.39	3.25	0.16	0.56	-0.23	0.86	12.16	2.78	12.35	0.27	0.54	0.23	0.32	2.82	-0.11	8.35	613336.06	17.13	2.08	10661907843.21	Materiais Básicos	Siderurgia e Metalurgia	Siderurgia	21.91	13.67
+NEMO3	0	SUZANO HOLDING S.A.	0	0	0	0	5.74	34.61	27.57	6.7	0	0	0	0.26	19.82	1.77	7.12	4.68	5.74	0.09	0.69	2.89	0	24.23	\N	18.54	3.67	0	Materiais Básicos	Madeira e Papel	Papel e Celulose	90.81	\N
+OGXP3	1.63	ÓLEO E GÁS PARTICIPAÇÕES S.A.	-2.15	-0.98	-9.26	0.92	-9.26	\N	\N	\N	\N	-0.98	\N	0	-45.53	-43.02	10.57	\N	0	-0.94	1.94	0.51	0.02	\N	\N	-1.67	-0.76	52747073.84	Petróleo. Gás e Biocombustíveis	Petróleo. Gás e Biocombustíveis	Exploração. Refino e Distribuição	\N	\N
+SANB4	14.44	BCO SANTANDER (BRASIL) S.A.	11.38	0.94	7.95	0.1	7.56	37.06	10.58	7.39	0.84	\N	-0.1	0.11	8.23	0.84	\N	\N	\N	0.1	0.9	\N	-0.45	12.73	1646529.37	15.41	1.27	102992323985.49	Financeiro e Outros	Intermediários Financeiros	Bancos	-5.44	5.85
+GGBR3	15.63	GERDAU S.A.	3.68	0.65	2.68	0.43	3.32	17.21	17.49	12.74	0.47	1.62	-0.72	0.92	17.72	11.74	16.75	0.11	0.44	0.66	0.34	2.93	-0.17	17.42	1254087.11	24	4.25	35453677303.8	Materiais Básicos	Siderurgia e Metalurgia	Siderurgia	\N	8.19
+BRGE8	13.17	CONSORCIO ALFA DE ADMINISTRACAO S.A.	33.08	0.73	-34.18	0.33	19.81	-4115.33	-798.17	824.67	272.83	0.87	-0.74	0	2.19	0.99	-2.79	-1.15	54.17	0.45	0.36	3.13	-0.51	-32.83	5268	18.16	0.4	974940393.52	Financeiro e Outros	Previdência e Seguros	Seguradoras	-11.18	\N
+DASA3	3.06	DIAGNOSTICOS DA AMERICA S.A.	-1.96	0.32	2.53	0.09	13.07	27.01	6.3	-8.14	0.16	1.01	-0.12	0.54	-16.37	-4.37	3.81	1.34	10.54	0.27	0.73	1.4	-0.02	29.37	8041782.77	9.54	-1.56	2303567522.64	Saúde	Serv.Méd.Hospit..Análises e Diagnósticos	Serv.Méd.Hospit..Análises e Diagnósticos	\N	\N
+BMEB3	25.2	BCO MERCANTIL DO BRASIL S.A.	5.42	1.58	4.19	0.13	4.22	55.98	12.65	9.78	0.53	0.89	-0.15	0.24	29.16	2.35	\N	\N	\N	0.08	0.92	\N	0.04	15.64	23936.93	15.96	4.65	2661593734	Financeiro e Outros	Intermediários Financeiros	Bancos	53.7	4.76
+BRGE5	13.18	CONSORCIO ALFA DE ADMINISTRACAO S.A.	33.11	0.73	-34.21	0.33	19.81	-4115.33	-798.17	824.67	273.04	0.87	-0.74	0	2.19	0.99	-2.79	-1.15	54.17	0.45	0.36	3.13	-0.51	-32.83	1960.25	18.16	0.4	974940393.52	Financeiro e Outros	Previdência e Seguros	Seguradoras	-11.18	\N
+CPFE3	32.65	CPFL ENERGIA S.A.	6.71	1.83	3.46	0.5	5.51	34.79	27.17	14	0.94	-24.21	-0.65	0.53	27.31	7.42	17.14	1.09	2.05	0.27	0.71	0.92	21.66	7.15	61674357	17.82	4.87	37621107466	Utilidade Pública	Energia Elétrica	Energia Elétrica	22.2	13.23
+JOPA4	34.98	JOSAPAR-JOAQUIM OLIVEIRA S.A. - PARTICIP	21.28	0.63	2.88	0.16	6.55	21.59	6.07	0.82	0.17	0.42	-0.59	0.94	2.97	0.77	5.87	1.05	4.81	0.26	0.66	2.18	-0.55	13.87	3498	55.36	1.64	224066105.64	Consumo não Cíclico	Alimentos Processados	Alimentos Diversos	-6.33	\N
+TRPL3	33.55	CTEEP - CIA TRANSMISSÃO ENERGIA ELÉTRICA PAULISTA	8.08	1.23	5.75	0.58	6.89	55.72	58.05	41.3	3.34	4.83	-0.71	0.17	15.18	7.21	12.57	0.42	1.98	0.47	0.51	3.08	0.75	14.31	58362.83	27.34	4.15	18877922994.6	Utilidade Pública	Energia Elétrica	Energia Elétrica	7.77	6.57
+WEST3	0.91	WESTWING COMERCIO VAREJISTA S.A.	-1.84	0.4	-1.35	0.29	0.3	39.33	-38.47	-28.21	0.52	0.74	-0.72	0.55	-21.48	-15.62	-28.25	-0.48	1.65	0.73	0.27	2.86	0.36	10.76	69513.31	2.3	-0.49	100930965.59	Consumo Cíclico	Comércio	Produtos Diversos	\N	\N
+ENMT4	62.46	ENERGISA MATO GROSSO-DISTRIBUIDORA DE ENERGIA S/A	8.95	3.59	5.87	1.02	8.45	35.23	29.57	19.41	1.74	22.82	-1.4	0.59	40.09	11.41	21.68	1.14	1.87	0.28	0.72	1.2	0.21	11.58	155388.69	17.41	6.98	15330726156.02	Utilidade Pública	Energia Elétrica	Energia Elétrica	29.05	\N
+DESK3	14.57	DESKTOP - SIGMANET COMUNICAÇÃO MULTIMÍDIA S.A.	16.31	1.33	4.94	0.57	6.96	63.41	33.01	9.99	1.63	-23.96	-0.66	0.35	8.18	3.51	14.89	0.55	2.02	0.43	0.56	0.84	0.21	\N	2894383.91	10.92	0.89	1682842212.15	Comunicações	Telecomunicações	Telecomunicações	\N	\N
+CURY3	18.82	CURY CONSTRUTORA E INCORPORADORA S.A.	10.34	5.46	8.5	1.61	7.87	38	20.66	16.98	1.76	4.31	-5.69	0.92	52.79	15.57	32.32	-0.41	-0.63	0.29	0.66	2.09	0.22	25.68	31995415.66	3.45	1.82	5493089156.16	Consumo Cíclico	Construção Civil	Incorporações	32.31	9.78
+BGIP4	23.46	BCO ESTADO DE SERGIPE S.A. - BANESE	8.5	0.64	6.84	0.04	7.35	36.89	5.2	4.19	0.36	-0.32	-0.09	0.13	7.57	0.52	\N	\N	\N	0.07	0.93	0.78	-0.25	13.8	16433.77	36.47	2.76	468242409.42	Financeiro e Outros	Intermediários Financeiros	Bancos	-3.92	4.91
+CALI4	50	CONSTRUTORA ADOLPHO LINDENBERG S.A.	-160.94	7.65	24.43	0.84	18.46	37.03	10.6	-1.61	2.59	75.08	-1.01	0.32	-4.76	-0.52	7.11	1.81	5.76	0.11	0.89	1.07	1.47	69.63	\N	6.53	-0.31	96745246	Consumo Cíclico	Construção Civil	Incorporações	\N	\N
+BHIA3	5.75	GRUPO CASAS BAHIA S.A.	-0.21	0.17	-0.38	0.02	-5.2	27.46	-5.21	-9.3	0.02	-0.11	-0.03	0.89	-80.86	-8.26	-24.97	2.18	-4.82	0.1	0.9	0.71	0	1.39	31395087.34	33.68	-27.23	546730694.25	Consumo Cíclico	Comércio	Eletrodomésticos	\N	\N
+OIBR4	12.65	OI S.A.	-0.12	-0.03	-0.39	0.03	-11.98	-0.82	-22.86	-74.09	0.09	-0.1	-0.05	0.36	-23.09	-26.56	123.09	\N	-11.83	-1.15	2.15	0.48	0	-15.12	74354.97	-455.93	-105.26	309991449.8	Comunicações	Telecomunicações	Telecomunicações	\N	\N
+QUAL3	1.41	QUALICORP CONSULTORIA E CORRETORA DE SEGUROS S.A.	-4.87	0.31	3.98	0.09	15.67	79.28	5.93	-4.85	0.24	0.97	-0.14	0.37	-6.38	-1.8	1.97	0.91	11.69	0.28	0.71	1.31	0.01	-1.96	7451282.81	4.54	-0.29	400460198.25	Saúde	Serv.Méd.Hospit..Análises e Diagnósticos	Serv.Méd.Hospit..Análises e Diagnósticos	\N	\N
+IGSN3	0	IGUA SANEAMENTO S.A.	0	0	0	0	16.47	32.43	16.27	-15.52	0	0	0	0.2	-14.61	-3.1	1.91	2.52	16.47	0.21	0.79	0.59	0	25.77	\N	5.98	-0.87	0	Utilidade Pública	Água e Saneamento	Água e Saneamento	\N	\N
+YDUQ3	10.98	ESTACIO PARTICIPACOES S.A.	22.04	1.06	4.28	0.35	9.79	60.35	14.97	2.91	0.64	4.57	-0.47	0.55	4.82	1.6	8.9	1.37	5.51	0.33	0.67	1.48	0.02	7.3	76231939.97	10.34	0.5	3393795583.98	Consumo Cíclico	Diversos	Serviços Educacionais	-24.9	5
+TECN3	4.65	TECHNOS S.A.	5.41	0.81	5.12	0.5	4.77	55.23	17.94	17	0.92	0.97	-1.41	0.54	14.89	9.24	10.32	-0.06	-0.36	0.62	0.38	4.94	0.23	2.29	891009.71	5.77	0.86	319483899.75	Consumo Cíclico	Tecidos. Vestuário e Calçados	Acessórios	32.68	3.28
+VSPT3	4.99	FERROVIA CENTRO-ATLANTICA S.A.	-0.99	0.66	-1.61	0.13	-3.68	19.23	-12.15	-19.77	0.2	-1.27	-0.15	0.65	-67.01	-12.92	-20.95	0.85	-2.07	0.19	0.81	0.55	0.01	7.66	\N	7.54	-5.05	712610842.16	Bens Industriais	Transporte	Transporte Ferroviário	\N	\N
+RSUL3	0	METALURGICA RIOSULENSE S.A.	0	0	0	0	1.22	42.74	24.47	15.7	0	0	0	0.9	26.89	14.15	26.27	-0.28	-0.68	0.53	0.47	2.23	0	18.65	\N	33.65	9.05	162189625	Bens Industriais	Material de Transporte	Material Rodoviário	35.49	\N
+SAPR4	5.34	CIA SANEAMENTO DO PARANA - SANEPAR	5.16	0.8	3.31	0.41	5.07	60.04	37.33	23.91	1.23	5.84	-0.49	0.33	15.44	7.88	11.44	0.44	1.84	0.51	0.49	1.66	0.16	8.62	6909740.43	6.7	1.03	7894537631.26	Utilidade Pública	Água e Saneamento	Água e Saneamento	11.86	5.78
+DTCY3	5.4	DTCOM - DIRECT TO COMPANY S.A.	-15.67	-13.7	-17.77	10.76	-25.78	-8.45	-61.19	-69.38	10.87	-26.26	-18.29	0.99	-87.42	-68.7	141.55	\N	-0.39	-0.79	1.79	0.5	0.02	-18.43	1594	-0.39	-0.34	85885573.4	Bens Industriais	Serviços	Serviços Diversos	\N	\N
+PNVL3	9.55	DIMED S.A. DISTRIBUIDORA DE MEDICAMENTOS	13.27	1.2	8.01	0.45	12.75	31.28	3.85	2.32	0.31	1.9	-1.14	1.45	9.04	3.38	7.47	0.71	4.74	0.37	0.63	1.64	0.46	12.9	3726125.91	7.96	0.72	1436104943.55	Saúde	Comércio e Distribuição	Medicamentos e Outros Produtos	7.62	3.45
+MOAR3	398	MONTEIRO ARANHA S.A.	6.32	3.2	4.63	1.51	4.09	\N	\N	\N	\N	3.85	-3.23	0	50.6	23.83	32.02	-0.37	-0.54	0.47	0.53	3.76	0.03	\N	112061.5	124.41	62.95	4875985958	Financeiro e Outros	Holdings Diversificadas	Holdings Diversificadas	40.43	6.45
+GMAT3	7.12	GRUPO MATEUS S.A.	14.65	1.9	10.17	1.04	11.82	21.85	5.81	4.03	0.59	2.58	-2.74	1.77	12.96	7.13	12.43	0.31	1.64	0.55	0.44	2.9	7.22	30.71	29904315.2	3.75	0.49	15730544082.48	Consumo não Cíclico	Comércio e Distribuição	Alimentos	46.48	2.08
+BPAR3	182.07	BCO ESTADO DO PARA S.A.	5.64	0.94	3.02	0.1	3.02	55.2	18.51	9.89	0.56	6.24	-0.11	0.19	16.66	1.85	\N	\N	\N	0.11	0.89	\N	0.1	13.1	\N	193.58	32.26	1733606633.43	Financeiro e Outros	Intermediários Financeiros	Bancos	-0.08	1.83
+ELPL3	8.31	ELETROPAULO METROP. ELET. SAO PAULO S.A.	1.59	1.04	0.63	0.09	2.16	25.99	20.06	7.97	0.13	-1.43	-0.11	0.67	65.14	5.35	34.15	2.51	1.53	0.08	0.92	0.81	0.08	5.85	\N	8.03	5.23	2485315360.74	Utilidade Pública	Energia Elétrica	Energia Elétrica	\N	\N
+ESTR4	1.84	MANUFATURA DE BRINQUEDOS ESTRELA S.A.	-0.77	-0.03	-1.71	0.05	-11.8	42.52	-5.47	-12.15	0.09	-0.02	-0.09	0.56	-3.54	-6.74	1.85	\N	-8.31	-1.91	2.91	0.16	0.01	3.49	2692.58	-67.6	-2.39	30393960	Consumo Cíclico	Viagens e Lazer	Brinquedos e Jogos	\N	\N
+MGEL4	13.97	MANGELS INDUSTRIAL S.A.	4.07	2.39	1.06	0.11	8.67	12.54	8.32	2.16	0.09	0.48	-0.21	1.23	58.79	2.66	9.81	16.92	7.47	0.05	0.95	1.82	-0.05	14.25	33998.46	5.84	3.43	91458445.52	Materiais Básicos	Siderurgia e Metalurgia	Artefatos de Ferro e Aço	\N	\N
+INEP3	1.85	INEPAR S.A. INDUSTRIA E CONSTRUCOES	0.17	-0.07	-0.89	0.07	-10.52	-55.74	-1307.53	6898.98	11.58	-0.08	-0.08	0.01	-41.29	42.28	285.92	\N	-9.66	-1.02	2.02	0.09	0	-33.23	163968.83	-26.69	11.02	79964816.38	Bens Industriais	Máquinas e Equipamentos	Máq. e Equip. Industriais	\N	\N
+ODER4	98	CONSERVAS ODERICH S.A.	12.16	2.18	8.88	1.21	10.3	30.26	16.02	11.7	1.42	2.21	-4.26	0.85	17.92	9.95	13.93	0.35	1.42	0.56	0.44	4.22	-0.57	16.31	\N	44.98	8.06	1106136388	Consumo não Cíclico	Alimentos Processados	Alimentos Diversos	41.72	1.09
+MTSA3	78.55	METISA METALURGICA TIMBOENSE S.A.	9.75	1.55	11.92	1.25	6.75	24.25	11.31	13.83	1.35	2.07	-5.59	0.93	15.85	12.82	8.68	-0.29	-2.23	0.81	0.19	4.52	-0.39	16.17	7895	50.82	8.06	520252995.5	Bens Industriais	Máquinas e Equipamentos	Máq. e Equip. Construção e Agrícolas	34.09	1.4
+MDIA3	30.72	M.DIAS BRANCO S.A. IND COM DE ALIMENTOS	10.7	1.34	8.87	0.84	8.76	35.3	11.19	9.28	0.99	2.97	-1.57	0.85	12.56	7.85	10.68	-0.02	-0.11	0.62	0.38	2.54	0.12	12.46	23368753.8	22.87	2.87	10414080000	Consumo não Cíclico	Alimentos Processados	Alimentos Diversos	6.12	2.12
+TGMA3	23.55	TEGMA GESTAO LOGISTICA S.A.	8.44	1.78	6.66	1.27	6.11	19.88	14.27	11.25	0.95	3.46	-2.61	1.34	21.11	15.07	16.71	-0.14	-0.54	0.71	0.28	3.55	1.62	4.78	5906732.8	13.22	2.79	1554368648.25	Bens Industriais	Transporte	Transporte Rodoviário	11.22	5.48
+TRPN3	0.71	TARPON INVESTIMENTOS S.A.	0.44	0.54	0.37	0.4	-0.36	100	71.7	59.29	0.26	0.59	-6.13	1.52	122.35	90	90.82	-1.07	-0.72	0.74	0.26	3.61	0	-0.48	\N	1.31	1.6	32162716	\N	\N	\N	-0.38	\N
+TCSA3	1.97	TECNISA S.A.	-1.79	0.28	-2.64	0.09	-12.86	-4.07	-14.28	-21.05	0.38	0.31	-0.2	0.24	-15.76	-5.1	-5.18	1.09	-10.22	0.32	0.68	2.25	0	19.96	244473.74	6.98	-1.1	145029883.1	Consumo Cíclico	Construção Civil	Incorporações	\N	\N
+RAPT4	10.18	RANDON S.A. IMPLEMENTOS E PARTICIPACOES	9.82	1.17	2.85	0.25	5.26	25.51	10.91	3.17	0.31	0.89	-0.61	0.79	11.87	2.52	8.64	1.05	2.58	0.21	0.7	1.89	-0.37	20.63	22984929.43	8.73	1.04	3151012964.23	Bens Industriais	Material de Transporte	Material Rodoviário	17.61	5.71
+MMXM3	14	MMX MINERACAO E METALICOS S.A.	-2.17	-0.11	-181.31	0.71	-719.57	\N	\N	\N	\N	-0.1	-0.75	0	-4.97	-32.75	0.28	\N	-538.27	-6.58	7.6	0.01	0.03	-6.95	\N	-129.88	-6.46	90834562	Materiais Básicos	Mineração	Minerais Metálicos	\N	\N
+AZEV3	1.38	AZEVEDO E TRAVASSOS S.A.	-4.87	0.77	-2.4	0.32	-2.75	11.67	-29.6	-14.63	0.71	-1.36	-0.41	0.44	-15.85	-6.48	-53.35	0.11	-0.35	0.41	0.59	0.5	0.08	54.36	531841.91	1.79	-0.28	230488931.14	Bens Industriais	Construção e Engenharia	Construção Pesada	\N	\N
+CPRE3	18.23	CPFL ENERGIAS RENOVÁVEIS S.A.	8.3	2.17	5.4	0.96	5.56	66.28	55.87	36.31	3.01	-3.82	-1.1	0.32	26.15	11.61	28.83	0.07	0.17	0.44	0.55	0.33	-1.29	13.45	\N	8.4	2.2	10824655047.92	Utilidade Pública	Energia Elétrica	Energia Elétrica	64.19	\N
+NRTQ3	0	NORTEC QUÍMICA S.A.	0	0	0	0	2.56	23	6.16	7.08	0	0	0	0.62	6.16	4.37	3.54	0.14	2.56	0.71	0.29	4.34	0	3.58	\N	19.47	1.2	0	Saúde	Medicamentos e Outros Produtos	Medicamentos e Outros Produtos	-9.08	\N
+BBDC4	12.42	BCO BRADESCO S.A.	9.99	0.8	16.05	0.07	15.2	30.48	3.75	6.02	0.6	0.74	-0.08	0.11	7.98	0.68	\N	\N	\N	0.08	0.91	7.77	-0.33	14.8	510272369.91	15.59	1.24	125139752052.84	Financeiro e Outros	Intermediários Financeiros	Bancos	-4.42	12.15
+CIEL3	5.63	CIELO S.A.	7.11	1.26	4.67	0.15	5.59	47.03	30.91	20.29	1.44	1.21	-1.38	0.1	17.64	2.09	13.53	0.25	0.92	0.12	0.86	1.16	0.25	-1.93	150106587.43	4.49	0.79	15295668793.43	Financeiro e Outros	Serviços Financeiros Diversos	Serviços Financeiros Diversos	-7.3	6.43
+LAME3	6.6	LOJAS AMERICANAS S.A.	21.15	1.91	11.03	0.28	16.86	32.9	4.35	2.27	0.48	1.2	-0.66	0.59	9.02	1.34	2.89	1.01	5.87	0.15	0.63	1.72	-46.97	3.5	\N	3.46	0.31	12391135396.59	Consumo Cíclico	Comércio	Produtos Diversos	18.61	\N
+BMGB4	3.08	BANCO BMG S.A.	5.5	0.43	7.64	0.04	7.64	39.95	3.15	4.37	0.24	\N	-0.04	0.16	7.76	0.71	\N	\N	\N	0.09	0.91	\N	0.02	20.44	1526345	7.21	0.56	1796355825.88	Financeiro e Outros	Intermediários Financeiros	Bancos	8.26	14.27
+CEBR3	20.21	CIA ENERGETICA DE BRASILIA	8.34	1.39	6.69	0.98	3.35	50.78	61.36	49.19	4.1	2.05	-2.18	0.24	16.6	11.78	11.87	-0.66	-3.19	0.71	0.11	8.05	-0.5	-32.89	164978.46	14.59	2.42	1424592189.9	Utilidade Pública	Energia Elétrica	Energia Elétrica	14.18	9.39
+ECPR4	90.74	EMPRESA NAC COM REDITO PART S.A.ENCORPAR	-9.92	1.22	-17.21	0.62	-17.09	\N	\N	\N	\N	175.57	-0.63	0	-12.28	-6.29	-7.36	-0.01	0.08	0.51	0.49	2.97	0.14	\N	\N	74.46	-9.14	171908947.31	Consumo Cíclico	Tecidos. Vestuário e Calçados	Fios e Tecidos	\N	\N
+BFRE12	0	BRAZILIAN FINANCE E REAL ESTATE S.A.	0	0	0	0	\N	100	169.82	115.03	0	0	0	0.05	6.9	6.14	\N	\N	\N	0.89	0.1	\N	0	\N	\N	302450.49	20874.48	\N	Financeiro e Outros	Serviços Financeiros Diversos	Gestão de Recursos e Investimentos	6.73	\N
+AFLT3	7.19	AFLUENTE TRANSMISSÃO DE ENERGIA ELÉTRICA S/A	16.21	1.73	14.16	1.52	13.73	60.86	49.28	43.04	6.98	8.87	-1.96	0.22	10.7	9.38	9.82	-0.05	-0.43	0.88	0.12	4.16	-0.21	14.85	4293.78	4.15	0.44	453578993	Utilidade Pública	Energia Elétrica	Energia Elétrica	4.35	\N
+ENGI11	44.02	ENERGISA S.A.	8.41	1.32	3.03	0.28	6.52	28.52	22.18	8	0.67	4.88	-0.39	0.42	15.71	3.38	10.7	1.52	3.49	0.21	0.73	1.28	0.47	12.56	136272306.34	33.3	5.23	20156094733.05	Utilidade Pública	Energia Elétrica	Energia Elétrica	15.85	3.86
+VIVA3	20.28	VIVARA PARTICIPAÇOES S.A	13.07	2.43	10.79	1.49	10.48	69.04	19.81	16.36	2.14	3.61	-3.97	0.7	18.6	11.42	19.04	-0.07	-0.31	0.61	0.39	2.96	3.56	\N	72581573.43	8.34	1.55	4790090755.32	Consumo Cíclico	Tecidos. Vestuário e Calçados	Acessórios	\N	1.84
+LUPA3	1.55	LUPATECH S.A.	1.16	0.42	-2.68	0.13	-8.61	23.01	-24.01	55.4	0.64	1.53	-0.19	0.2	35.85	11.26	-7.78	0.92	-5.93	0.31	0.69	1.36	0.01	-7.38	504076.46	3.72	1.33	64288261.9	Petróleo. Gás e Biocombustíveis	Petróleo. Gás e Biocombustíveis	Equipamentos e Serviços	\N	\N
+SLCE3	17.7	SLC AGRICOLA S.A.	13.54	1.59	5.37	0.51	7.5	25.92	18.03	7.16	0.97	2.64	-0.98	0.53	11.73	3.76	13.16	0.63	2.13	0.32	0.66	1.67	-0.3	26.43	35524979.6	11.15	1.31	7846935973.2	Consumo não Cíclico	Agropecuária	Agricultura	8.74	5
+CASN3	9.61	CIA CATARINENSE DE AGUAS E SANEAM.-CASAN	157.63	4.88	34.75	2.01	38.62	43.06	16.99	3.74	5.9	80.27	-2.41	0.34	3.1	1.28	6.09	0.86	6.13	0.41	0.59	1.18	34.35	8.52	\N	1.97	0.06	9343450886.5	Utilidade Pública	Água e Saneamento	Água e Saneamento	\N	0.12
+ALUP4	9.85	ALUPAR INVESTIMENTO S/A	13.04	1.23	3.99	0.32	7.78	75.41	71.12	21.74	2.83	4.17	-0.4	0.11	9.42	2.49	8.82	1.15	3.74	0.26	0.62	1.67	936.45	11.95	172043.49	8.02	0.76	9502128341.79	Utilidade Pública	Energia Elétrica	Energia Elétrica	13.18	4.16
+NINJ3	4.5	GETNINJAS S.A.	26.34	0.81	-8.74	0.76	1.83	87.66	-41.91	13.91	3.66	0.83	-24.31	0.21	3.07	2.89	-9.38	-0.98	10.57	0.94	0.06	17.48	-0.16	35.82	251984.46	5.57	0.17	228850722	Tecnologia da Informação	Programas e Serviços	Programas e Serviços	\N	\N
+AZUL4	7.74	AZUL S.A.	4.83	-0.44	4.27	0.47	12.62	21.52	12.23	10.81	0.52	-1.03	-0.61	0.9	-9.06	9.7	43.38	\N	11.44	-1.07	2.07	0.34	-0.03	15.18	115061746.83	-17.69	1.6	2694580355.03	Bens Industriais	Transporte	Transporte Aéreo	36.99	\N
+SEQL3	5.2	SEQUOIA LOGISTICA E TRANSPORTES S.A	-0.13	0.89	-0.15	0.07	-1.13	-11.65	-94.43	-110.4	0.14	-0.23	-0.08	0.48	-699.37	-52.67	-99.53	5.85	-0.98	0.08	0.92	0.42	0	15.49	1382881.09	5.87	-41.03	104205602.8	Bens Industriais	Transporte	Logística	\N	\N
+KLBN4	4.11	KLABIN S.A.	12.99	2.25	7	0.45	12.96	34.78	20.6	11.1	1.44	2.2	-0.65	0.31	17.29	3.44	6.21	1.91	5.96	0.2	0.76	2.79	-0.22	12.47	7511419.6	1.83	0.32	25410852511.47	Materiais Básicos	Madeira e Papel	Papel e Celulose	70.07	5.65
+BRIV4	12.54	BCO ALFA DE INVESTIMENTO S.A.	20.23	0.65	13.35	0.04	13.55	15.61	2.39	1.58	0.32	0.59	-0.05	0.14	3.2	0.22	\N	\N	\N	0.07	0.93	7.22	1.05	20.48	124732.29	19.39	0.62	1128165604.64	Financeiro e Outros	Intermediários Financeiros	Bancos	2.02	2.61
+MILS3	10.49	MILLS ESTRUTURAS E SERVIÇOS DE ENGENHARIA S.A.	9.18	1.69	5.42	0.84	6.39	63.36	33.63	19.85	1.82	3.49	-1.38	0.46	18.47	9.12	13.46	0.3	0.97	0.49	0.51	2.55	0.6	35.27	16820801.29	6.19	1.14	2561141262.6	Bens Industriais	Serviços	Serviços Diversos	\N	2.89
+CCRO3	11.96	CCR S.A.	16.19	1.88	4.16	0.43	8.3	43.39	33.39	8.57	1.39	6.11	-0.55	0.31	11.61	2.64	10.31	1.88	4.15	0.23	0.76	1.47	-0.25	12.68	101563010.09	6.36	0.74	24159200000	Bens Industriais	Transporte	Exploração de Rodovias	-3.66	3.53
+CEDO3	25.75	CIA FIACAO TECIDOS CEDRO CACHOEIRA	3.23	1.2	1.42	0.3	3.29	30.85	17.17	7.54	0.24	2.17	-0.6	1.21	37.29	9.14	28.3	1.64	1.93	0.25	0.75	1.36	0	11.42	12492.05	21.39	7.97	246638973.12	Consumo Cíclico	Tecidos. Vestuário e Calçados	Fios e Tecidos	10.4	\N
+SPRI5	8.52	SPRINGER S.A.	-1.3	0.96	-1.18	0.93	-2.46	\N	\N	\N	\N	1.81	-1.93	0	-73.82	-71.18	-81.66	-0.14	0.17	0.96	0.04	66.47	0	\N	\N	8.86	-6.54	48073731.88	\N	\N	\N	\N	\N
+TASA3	11.22	TAURUS ARMAS S.A.	10.42	1.26	6.52	0.65	7.66	33.77	12.27	7.67	0.8	3.83	-1.46	0.82	12.09	6.26	10.42	0.25	1.28	0.52	0.48	1.45	-0.17	16.08	188018.26	8.91	1.08	1391168375.08	Bens Industriais	Máquinas e Equipamentos	Armas e Munições	\N	3.6
+KEPL3	9.05	KEPLER WEBER S.A.	6.38	2.09	5.2	1.16	4.72	29.87	19.92	16.26	1.04	3.72	-3.32	1.12	32.72	18.15	25.77	-0.19	-0.48	0.55	0.45	1.92	-0.26	21.28	8560549.8	4.34	1.42	1626467176.5	Bens Industriais	Máquinas e Equipamentos	Máq. e Equip. Industriais	98.56	9.37
+DMMO3	1.76	DOMMO ENERGIA S.A.	-258.65	-1.88	34.96	2.76	32.11	54.54	8.16	-1.1	2.85	9.24	-6.66	0.97	-0.73	-1.07	-5.39	\N	-2.85	-1.47	2.47	2.04	2.52	-1.34	\N	-0.93	-0.01	949254731.04	Petróleo. Gás e Biocombustíveis	Petróleo. Gás e Biocombustíveis	Exploração. Refino e Distribuição	\N	\N
+BOAS3	7.95	BOA VISTA SERVIÇOS S.A.	15.22	1.83	25.6	1.7	18.69	56.53	19.25	32.39	4.93	3.34	-3.8	0.34	12.04	11.16	4.65	-0.5	-6.92	0.93	0.07	12.37	5.59	8.81	53310276.5	4.34	0.52	4212250617.75	Financeiro e Outros	Serviços Financeiros Diversos	Serviços Financeiros Diversos	74.34	\N
+CYRE3	18.6	CYRELA BRAZIL REALTY S.A.EMPREEND E PART	7.11	0.93	5.78	0.43	7.61	32.75	19.67	15.99	1.14	1.13	-0.95	0.37	13.1	5.99	8.21	0.3	1.84	0.46	0.5	3.14	0.25	14.72	103206981.97	19.98	2.62	7435216061.4	Consumo Cíclico	Construção Civil	Incorporações	\N	5
+UGPA3	21.51	ULTRAPAR PARTICIPACOES S.A.	13.54	1.74	6.45	0.66	9.24	6.76	3.02	1.44	0.2	3.58	-1.2	3.36	12.82	4.84	10.31	0.75	2.79	0.38	0.61	1.68	-8.53	12.42	110453807.94	12.4	1.59	23992345804.68	Petróleo. Gás e Biocombustíveis	Petróleo. Gás e Biocombustíveis	Exploração. Refino e Distribuição	2.4	1.16
+IGTI4	8.49	JEREISSATI PARTICIPACOES S.A.	30.6	2.44	16.12	1.33	10.74	65.27	54.82	28.88	8.84	9.71	-1.77	0.15	7.98	4.36	7.75	0.41	2.73	0.55	0.45	2.26	0.08	9.87	8335.68	3.48	0.28	5139561723.8	Financeiro e Outros	Exploração de Imóveis	Exploração de Imóveis	25.13	3.4
+FIGE3	11.99	INVESTIMENTOS BEMGE S.A.	2.48	0.17	1.66	0.17	0.55	100	92.3	61.71	1.53	14171.8	-0.17	0.11	7.03	6.91	\N	\N	\N	0.98	0.02	\N	0.18	8.36	\N	68.86	4.84	9497566.76	Financeiro e Outros	Outros	Outros	1.66	0.38
+MODL3	3.08	BANCO MODAL S.A	-29.78	1.82	-31.96	0.29	-29.26	50.83	-5.11	-5.48	1.63	\N	-0.32	0.18	-6.1	-0.97	\N	\N	\N	0.16	0.84	\N	0.19	\N	18194928.05	1.7	-0.1	1985844000	Financeiro e Outros	Intermediários Financeiros	Bancos	\N	\N
+OFSA3	18.7	OURO FINO SAUDE ANIMAL PARTICIPACOES S.A.	-29.92	1.44	8.94	0.78	9.57	46.34	11.83	-3.53	1.06	1.7	-2.19	0.74	-4.8	-2.61	-0.37	0.1	0.64	0.54	0.46	3.48	0.23	9.87	60309.68	13.03	-0.63	1008846412.2	Saúde	Comércio e Distribuição	Medicamentos e Outros Produtos	\N	1.8
+PCAR4	72.11	CIA BRASILEIRA DE DISTRIBUICAO	-10.69	7.05	-67.71	1.56	-7.26	-2.94	-307.06	-1944.12	207.92	18.56	-2.4	0.01	-65.89	-14.57	-10.45	0.46	-4.43	0.22	0.78	1.32	0.04	-17.17	\N	10.23	-6.74	1480328074.18	Consumo não Cíclico	Comércio e Distribuição	Alimentos	\N	\N
+FIQE3	3.35	UNIFIQUE TELECOMUNICAÇÕES S.A.	9.08	1.12	5.42	0.61	5.03	46.43	24.85	14.83	1.35	6.02	-0.87	0.46	12.38	6.77	11.91	-0.08	-0.38	0.55	0.45	1.53	3.51	\N	1054128.17	2.98	0.37	1212866190.15	Comunicações	Telecomunicações	Telecomunicações	\N	8.46
+CEEB5	39	CIA ELETRICIDADE EST. DA BAHIA - COELBA	5.78	1.48	2.66	0.36	6.75	31.68	25.46	11.69	0.68	-11.98	-0.45	0.53	25.59	6.19	16.16	1.94	3.47	0.24	0.76	0.87	0.6	10.41	9654.5	26.34	6.74	12633002013.48	Utilidade Pública	Energia Elétrica	Energia Elétrica	22.58	5.74
+MTSA4	41.37	METISA METALURGICA TIMBOENSE S.A.	5.13	0.81	6.28	0.66	6.75	24.25	11.31	13.83	0.71	1.09	-2.94	0.93	15.85	12.82	8.68	-0.29	-2.23	0.81	0.19	4.52	-0.2	16.17	493931.25	50.82	8.06	520252995.5	Bens Industriais	Máquinas e Equipamentos	Máq. e Equip. Construção e Agrícolas	34.09	2.92
+GUAR3	6.38	GUARARAPES CONFECCOES S.A.	130.46	0.62	5.9	0.23	7.64	58.42	6.02	0.27	0.36	0.92	-0.63	0.66	0.48	0.18	5.55	0.18	1.74	0.37	0.63	1.68	-0.84	4.11	14698802.71	10.23	0.05	3184896000	Consumo Cíclico	Comércio	Tecidos. Vestuário e Calçados	-54.38	1.88
+IGTA3	33	IGUATEMI EMPRESA DE SHOPPING CENTERS S.A	17.15	1.53	9.69	0.93	11.24	64.44	57.37	32.41	5.56	8.23	-1.24	0.17	8.94	5.44	8.67	0.25	1.55	0.61	0.39	1.85	0.02	7.57	\N	21.52	1.92	5758073079	Financeiro e Outros	Exploração de Imóveis	Exploração de Imóveis	5.54	\N
+ALLD3	7.25	ALLIED TECNOLOGIA S.A.	4.35	0.43	3.19	0.2	4.13	11.35	3.59	2.64	0.11	0.62	-0.6	1.7	9.87	4.5	7.72	0.13	0.94	0.46	0.54	1.89	0.04	16.54	858248.83	16.9	1.67	678952654.5	Consumo Cíclico	Comércio	Eletrodomésticos	20.16	21.41
+OIBR3	4.5	OI S.A.	-0.04	-0.01	-0.14	0.01	-11.98	-0.82	-22.86	-74.09	0.03	-0.04	-0.02	0.36	-23.09	-26.56	123.09	\N	-11.83	-1.15	2.15	0.48	0	-15.12	3308085.11	-455.93	-105.26	309991449.8	Comunicações	Telecomunicações	Telecomunicações	\N	\N
+BEES3	8.69	BANESTES S.A. - BCO EST ESPIRITO SANTO	7.92	1.26	5.83	0.06	5.97	28.7	9.18	6.76	0.54	1.2	-0.07	0.12	15.94	0.81	\N	\N	\N	0.05	0.95	\N	0.9	18.84	124234.37	6.88	1.1	2807264761.2	Financeiro e Outros	Intermediários Financeiros	Bancos	17.64	7.63
+JFEN3	1.1	JOAO FORTES ENGENHARIA S.A.	-2.44	-0.36	-3	0.27	-9.61	-40.82	-152.22	-186.99	4.56	-1.02	-1.56	0.06	-14.75	-10.93	42.78	\N	-6.61	-0.74	1.84	0.76	-0.02	-3.21	79790.86	-3.06	-0.45	271011859.8	Consumo Cíclico	Construção Civil	Incorporações	\N	\N
+CEEB3	39.16	CIA ELETRICIDADE EST. DA BAHIA - COELBA	5.81	1.49	2.67	0.36	6.75	31.68	25.46	11.69	0.68	-12.03	-0.45	0.53	25.59	6.19	16.16	1.94	3.47	0.24	0.76	0.87	0.6	10.41	18862.13	26.34	6.74	12633002013.48	Utilidade Pública	Energia Elétrica	Energia Elétrica	22.58	13.17
+RRRP3	25.54	3R PETROLEUM ÓLEO E GÁS S.A	39.13	1.16	3.61	0.3	8.64	31.26	24.1	2.22	0.87	8.21	-0.37	0.35	2.97	0.78	10.73	1.62	5.03	0.26	0.74	1.27	-0.6	178.26	131518875.49	21.96	0.65	6140557758.22	Petróleo. Gás e Biocombustíveis	Petróleo. Gás e Biocombustíveis	Exploração. Refino e Distribuição	\N	1.51
+MRSA3B	29.5	MRS LOGISTICA S.A.	7.28	1.49	3.59	0.56	4.76	48.65	40.56	20.01	1.46	7.77	-0.74	0.39	20.44	7.75	15.82	0.54	1.3	0.38	0.62	1.44	0.15	11.59	16504.78	19.83	4.05	9617527706.38	Bens Industriais	Transporte	Transporte Ferroviário	21.31	\N
+CPLE11	50.12	CIA PARANAENSE DE ENERGIA - COPEL	15.64	1.22	8.72	0.54	11.42	21.53	15.88	8.85	1.39	7.79	-0.72	0.39	7.83	3.45	7.72	0.38	2.7	0.44	0.55	1.39	0.22	9.35	12760068.47	40.93	3.2	29899693364.18	Utilidade Pública	Energia Elétrica	Energia Elétrica	13.08	3.28
+CEPE5	40.12	CIA ENERGETICA DE PERNAMBUCO - CELPE	22.01	1.83	2.65	0.21	14.33	20.59	13.21	1.59	0.35	4.91	-0.29	0.59	8.33	0.94	10.35	4.61	6.66	0.11	0.89	1.17	0.34	8.57	\N	21.87	1.82	8662392210.18	Utilidade Pública	Energia Elétrica	Energia Elétrica	3.98	\N
+CRPG5	29.3	TRONOX PIGMENTOS DO BRASIL S.A.	209.68	1.25	-20.75	0.88	-19	-0.97	-7.63	0.76	1.58	1.62	-2.8	0.56	0.6	0.42	-7.75	-0.17	2.79	0.71	0.29	4.9	-2.19	-1.98	75112.69	23.43	0.14	893117726.66	Materiais Básicos	Químicos	Químicos Diversos	-51.79	0.99
+STTR3	0	STARA S.A. - INDÚSTRIA DE IMPLEMENTOS AGRÍCOLAS	0	0	0	0	-0.22	31.37	17.25	14.11	0	0	0	1.27	32.1	17.86	25.38	-0.09	-0.22	0.56	0.44	2.46	0	22.02	\N	2.91	0.94	0	Bens Industriais	Máquinas e Equipamentos	Máq. e Equip. Construção e Agrícolas	\N	\N
+SMTO3	32.9	SAO MARTINHO S.A.	11.39	1.76	6.37	0.58	10.79	28.49	28.49	15.93	1.81	2.94	-0.86	0.32	15.45	5.13	10.75	1.22	4.42	0.33	0.67	2.6	-1.4	14.04	48939259.49	18.71	2.89	11395739671.4	Consumo não Cíclico	Alimentos Processados	Açucar e Alcool	15.27	3.77
+TIET11	12.54	AES TIETE ENERGIA SA	4.38	2.25	3.51	0.46	7.15	74.66	61.76	49.46	2.16	1031.49	-0.52	0.21	51.45	10.47	13.16	2.34	3.64	0.2	0.72	1	0.02	-5.19	\N	5.57	2.87	5004795800.93	Utilidade Pública	Energia Elétrica	Energia Elétrica	23.78	\N
+CSAB3	30.5	CIA SEGUROS ALIANCA DA BAHIA	12.39	1.11	18.86	0.57	24.57	-124	1656.27	2521.73	312.32	3.54	-0.71	0	8.94	4.57	\N	\N	\N	0.51	0.49	4.45	-0.02	-33.4	3075	27.56	2.46	305164800	Financeiro e Outros	Previdência e Seguros	Seguradoras	-1.31	\N
+KLBN3	4.13	KLABIN S.A.	13.05	2.26	7.03	0.45	12.96	34.78	20.6	11.1	1.45	2.21	-0.66	0.31	17.29	3.44	6.21	1.91	5.96	0.2	0.76	2.79	-0.23	12.47	1669090.91	1.83	0.32	25410852511.47	Materiais Básicos	Madeira e Papel	Papel e Celulose	70.07	5.62
+DOTZ3	6.95	Dotz S.A.	-1.67	-0.38	-2.15	0.38	-2.87	84.82	-29.7	-38.16	0.64	-0.47	-0.63	0.6	-22.96	-22.73	29.23	\N	-0.72	-0.99	1.99	0.33	0.04	1.78	106775.83	-18.07	-4.15	92323216.2	Tecnologia da Informação	Programas e Serviços	Programas e Serviços	\N	\N
+GNDI3	66.95	NOTRE DAME INTERMEDICA PARTICIPACOES SA	-3584.81	5.84	104.45	2.38	109.34	18.55	3.28	-0.1	3.42	79.65	-3.01	0.69	-0.16	-0.07	2.22	0.27	4.9	0.41	0.59	1.17	35.34	29.03	\N	11.47	-0.02	41526443086.05	Saúde	Serv.Méd.Hospit..Análises e Diagnósticos	Serv.Méd.Hospit..Análises e Diagnósticos	\N	\N
+BRBI11	13.25	BR ADVISORY PARTNERS PARTICIPAÇÕES S.A.	8.12	1.68	56.17	0.12	7.37	100	8.88	61.44	4.99	1.87	-16.7	0.02	20.74	1.53	-0.2	-1.46	-48.8	0.07	0.93	1.07	0.36	-16.03	3457446	7.87	1.63	1391193078	Financeiro e Outros	Intermediários Financeiros	Bancos	27.88	9.96
+MGLU3	10.65	MAGAZINE LUIZA S.A.	-14.06	0.72	-299.35	0.21	-464.41	28.28	-0.07	-1.52	0.21	1.9	-0.46	0.99	-5.14	-1.5	-5.33	0.4	-165.06	0.29	0.71	1.26	0.61	18.72	248134759.37	14.75	-0.76	7870299391.2	Consumo Cíclico	Comércio	Eletrodomésticos	\N	\N
+BRML3	8.26	BR MALLS PARTICIPACOES S.A.	2.81	0.52	1.83	0.33	2.23	89.21	238.54	155.2	4.36	-8.14	-0.35	0.08	18.61	11.7	17.24	0.12	0.41	0.63	0.37	0.65	0.01	5.4	\N	15.81	2.94	6841542281.84	Financeiro e Outros	Exploração de Imóveis	Exploração de Imóveis	19.17	\N
+RSUL4	65	METALURGICA RIOSULENSE S.A.	7.18	1.93	4.61	1.02	1.22	42.74	24.47	15.7	1.13	3.37	-2.25	0.9	26.89	14.15	26.27	-0.28	-0.68	0.53	0.47	2.23	-0.37	18.65	70343.41	33.65	9.05	162189625	Bens Industriais	Material de Transporte	Material Rodoviário	35.49	3.27
+SNSY6	13.33	SANSUY S.A. INDUSTRIA DE PLASTICOS	-0.73	-0.05	1.82	0.2	4.38	26.81	6.34	-15.81	0.12	12.03	-0.46	1.7	-7.13	-26.86	-3.04	\N	2.67	-3.77	4.81	1.03	0.01	15.95	\N	-257.12	-18.32	96932450.4	Materiais Básicos	Materiais Diversos	Materiais Diversos	\N	\N
+PCAR3	3.02	CIA BRASILEIRA DE DISTRIBUICAO	-0.45	0.3	-2.84	0.07	-7.26	-2.94	-307.06	-1944.12	8.71	0.78	-0.1	0.01	-65.89	-14.57	-10.45	0.46	-4.43	0.22	0.78	1.32	0	-17.17	36864255.31	10.23	-6.74	1480328074.18	Consumo não Cíclico	Comércio e Distribuição	Alimentos	\N	\N
+BTTL4	11091.73	EMBPAR PARTICIPACOES S.A.	-7449.92	2047.93	11329.26	1664.47	6.13	14.78	5.43	-8.26	615.64	7650.12	-2264.23	2.7	-27.49	-22.34	13.25	-0.02	-0.09	0.81	0.19	5.6	54.81	4.97	\N	5.42	-1.49	90500859.12	Financeiro e Outros	Holdings Diversificadas	Holdings Diversificadas	\N	\N
+VALE3	61.44	VALE S.A.	7.2	1.49	4.4	0.61	5.26	41.35	30.72	18.78	1.35	30.16	-0.75	0.45	20.68	8.45	18	0.29	0.86	0.41	0.57	1.12	-0.14	15.85	1098743604.69	41.24	8.53	278876625715.2	Materiais Básicos	Mineração	Minerais Metálicos	17.04	11.37
+ADHM3	1.56	ADVANCED DIGITAL HEALTH MEDICINA PREVENTIVA S.A.	-4.09	-1.29	-5.69	105.12	-5.69	100	-13548.48	-18860.61	770.9	-1.43	-116.16	0.14	-31.47	-2571.9	22.61	\N	0	-81.72	82.72	0	-0.58	\N	\N	-1.21	-0.38	25439770.2	Saúde	Serv.Méd.Hospit..Análises e Diagnósticos	Serv.Méd.Hospit..Análises e Diagnósticos	\N	\N
+BRAP4	18.18	BRADESPAR S.A.	4.86	0.87	5.07	0.86	4.5	\N	\N	\N	\N	10.94	-0.94	0	17.91	17.78	17.15	-0.09	-0.5	0.99	0.01	12.26	-0.08	\N	66284157.66	20.9	3.74	7056802936.1	Materiais Básicos	Mineração	Minerais Metálicos	4.33	16.36
+BRBI3	0	BR ADVISORY PARTNERS PARTICIPAÇÕES S.A.	0	0	0	0	7.37	100	8.88	61.44	0	0	0	0.02	20.74	1.53	-0.2	-1.46	-48.8	0.07	0.93	1.07	0	-16.03	\N	2.62	0.54	1391193078	Financeiro e Outros	Intermediários Financeiros	Bancos	27.88	\N
+SNSY5	6.15	SANSUY S.A. INDUSTRIA DE PLASTICOS	-0.34	-0.02	0.84	0.09	4.38	26.81	6.34	-15.81	0.05	5.55	-0.21	1.7	-7.13	-26.86	-3.04	\N	2.67	-3.77	4.81	1.03	0.01	15.95	14815.47	-257.12	-18.32	96932450.4	Materiais Básicos	Materiais Diversos	Materiais Diversos	\N	\N
+PDGR3	0.18	PDG REALTY S.A. EMPREEND E PARTICIPACOES	0.01	0	-0.03	0.02	-0.37	41.8	-555.54	1358.75	0.15	-0.02	-0.06	0.14	-38.19	193.42	19.97	\N	-0.34	-5.06	6.18	0.42	0	-15.54	643390.51	-42.64	16.28	14001564.78	Consumo Cíclico	Construção Civil	Incorporações	\N	\N
+FBMC3	0	FIBAM COMPANHIA INDUSTRIAL	0	0	0	0	-0.74	-60.76	-92.67	-101.97	0	0	0	0.36	-24.19	-36.57	25.82	\N	-0.67	-1.51	2.51	0.31	0	-18.14	\N	-87.48	-21.16	904253.84	Materiais Básicos	Siderurgia e Metalurgia	Artefatos de Ferro e Aço	\N	\N
+DOHL3	10.5	DOHLER S.A.	-59.96	1.14	-130.38	0.82	-121.18	21.7	-1.04	-2.26	1.36	1.8	-1.85	0.6	-1.9	-1.37	-1.54	0.11	-13.05	0.72	0.28	5.61	0.01	5.16	2264.5	9.23	-0.18	658739716.5	Consumo Cíclico	Tecidos. Vestuário e Calçados	Fios e Tecidos	\N	\N
+RAIZ4	2.76	RAIZEN S.A.	54.87	1.27	3.6	0.23	9.03	7.13	3.6	0.24	0.13	7.22	-0.43	1.76	2.32	0.41	9.35	1.92	5.43	0.18	0.82	1.07	-0.7	\N	43569068.06	2.17	0.05	28572926175.84	Petróleo. Gás e Biocombustíveis	Petróleo. Gás e Biocombustíveis	Exploração. Refino e Distribuição	\N	7.02
+SQIA3	27.37	SINQIA S.A.	-110.33	3.7	55.72	1.49	60.18	42.19	6.45	-3.26	3.59	25.87	-1.84	0.41	-3.35	-1.35	3.18	0.3	4.46	0.4	0.58	1.43	0.44	35.51	39651585	7.4	-0.25	2406971773.64	Tecnologia da Informação	Programas e Serviços	Programas e Serviços	\N	\N
+SOND5	54.95	SONDOTECNICA ENGENHARIA SOLOS S.A.	26.37	2.33	10.52	1.4	7.65	32.23	7.82	3.12	0.82	3.82	-4	1.7	8.83	5.31	7.43	-0.5	-2.28	0.6	0.4	2.29	-0.41	27.24	9809.6	23.6	2.08	127408965	Bens Industriais	Construção e Engenharia	Engenharia Consultiva	-5.98	\N
+LTEL3B	86.61	LITEL PARTICIPACOES S.A.	23.9	5.55	24.15	5.24	23.88	\N	\N	\N	\N	692.06	-5.6	0	23.23	21.92	22.97	-0.06	-0.27	0.94	0.06	1.13	-0.48	\N	\N	15.6	3.62	18664056853.83	Materiais Básicos	Mineração	Minerais Metálicos	-31.36	1.4
+PARD3	20.25	INSTITUTO HERMES PARDINI S.A.	36.76	5.3	19.27	2.1	19.93	26.45	13.31	6.98	2.57	-54.06	-3.28	0.82	14.42	5.7	14.8	0.18	0.66	0.4	0.6	0.9	-1.04	13.44	\N	3.82	0.55	5403493010.25	Saúde	Serv.Méd.Hospit..Análises e Diagnósticos	Serv.Méd.Hospit..Análises e Diagnósticos	2.56	\N
+ETER3	5.73	ETERNIT S.A.	3.36	0.5	7.31	0.28	9.5	23.89	4.4	9.59	0.32	1.13	-0.55	0.88	14.84	8.44	-2.27	0.15	2.19	0.57	0.43	2.07	-0.33	16.03	1297812.69	11.5	1.71	353979774.75	Bens Industriais	Construção e Engenharia	Produtos para Construção	\N	4.5
+VIVT3	44.57	TELEFÔNICA BRASIL S.A	17.02	1.07	9.61	0.59	11.14	43.43	14.73	8.32	1.42	308.32	-0.73	0.42	6.3	3.49	7.85	0.17	1.54	0.55	0.45	1.01	-0.75	3.69	130205310.86	41.55	2.62	73655863205.2	Comunicações	Telecomunicações	Telecomunicações	-13.48	3.46
+ENJU3	2.11	ENJOEI.COM.BR ATIVIDADES DE INTERNET S.A.	-7.95	1.29	-5.8	0.96	-2.69	51.91	-33.48	-24.42	1.94	2.26	-2.42	0.5	-16.2	-12.1	-22.39	-0.69	3.11	0.75	0.25	3.4	-0.38	37.91	3640687.43	1.64	-0.27	427550540.68	Tecnologia da Informação	Programas e Serviços	Programas e Serviços	\N	\N
+EKTR4	38.64	ELEKTRO REDES S.A.	7.57	2.31	3.67	0.65	5.97	28.36	22.9	11.09	0.84	11.03	-0.95	0.77	30.57	8.53	17.63	1.46	2.31	0.28	0.72	1.23	-1.06	6.85	39965.17	16.7	5.1	7491452048.2	Utilidade Pública	Energia Elétrica	Energia Elétrica	19.01	24.84
+TCNO4	0.85	TECNOSOLO ENGENHARIA S.A.	-5.33	-5.95	-4.82	0.02	-34.51	\N	\N	\N	\N	-0.06	-0.03	0	-111.63	-0.45	-3.55	\N	-28.98	0	1	0.28	-0.2	\N	\N	-0.14	-0.16	6451072.5	Bens Industriais	Construção e Engenharia	Engenharia Consultiva	\N	\N
+ARML3	9.77	ARMAC LOCAÇÃO. LOGÍSTICA E SERVIÇOS S.A.	17.8	2.66	6.83	0.72	9.94	45.75	33.99	13.05	2.32	3.06	-1.2	0.31	14.96	4.03	10.82	1.21	3.1	0.27	0.73	2.4	0.65	\N	8568138.09	3.67	0.55	3385247327.69	Bens Industriais	Máquinas e Equipamentos	Máq. e Equip. Industriais	\N	0.71
+SOND6	55	SONDOTECNICA ENGENHARIA SOLOS S.A.	26.4	2.33	10.53	1.4	7.65	32.23	7.82	3.12	0.82	3.82	-4	1.7	8.83	5.31	7.43	-0.5	-2.28	0.6	0.4	2.29	-0.41	27.24	5500	23.6	2.08	127408965	Bens Industriais	Construção e Engenharia	Engenharia Consultiva	-5.98	\N
+ECPR3	90.25	EMPRESA NAC COM REDITO PART S.A.ENCORPAR	-9.87	1.21	-17.12	0.62	-17.09	\N	\N	\N	\N	174.62	-0.62	0	-12.28	-6.29	-7.36	-0.01	0.08	0.51	0.49	2.97	0.14	\N	\N	74.46	-9.14	171908947.31	Consumo Cíclico	Tecidos. Vestuário e Calçados	Fios e Tecidos	\N	\N
+RNEW4	0.92	RENOVA ENERGIA S.A.	-8.59	0.26	1.3	0.08	7.46	72.96	86.11	-13.07	1.12	-0.63	-0.08	0.07	-3.07	-0.91	5.93	1.24	6.16	0.3	0.7	0.23	0.08	-20.33	102137.54	3.49	-0.11	228693626.33	Utilidade Pública	Energia Elétrica	Energia Elétrica	\N	\N
+IFCM3	0.33	INFRACOMMERCE CXAAS S.A.	-0.69	0.14	-3.85	0.07	-13.58	38.91	-5.07	-28.34	0.2	2.53	-0.09	0.34	-19.88	-9.55	-2.59	0.35	-9.73	0.48	0.52	1.1	-0.1	60.53	5518500.57	2.41	-0.48	210369511.44	Tecnologia da Informação	Programas e Serviços	Programas e Serviços	\N	\N
+AERI3	5.15	AERIS IND. E COM. DE EQUIP. GERACAO DE ENERGIA S.A	-1.96	0.29	2.08	0.09	7.1	10.43	5.72	-6.07	0.12	0.37	-0.25	0.78	-14.91	-4.71	4.85	0.71	5.03	0.32	0.68	1.64	-0.02	34.34	1854159	17.66	-2.63	319919009.4	Bens Industriais	Máquinas e Equipamentos	Máq. e Equip. Industriais	\N	\N
+HETA3	96	HERCULES S.A. FABRICA DE TALHERES	-58.01	-0.14	21.26	3.55	148.88	100	58.57	-21.46	12.45	-41.35	-4.74	0.28	-0.24	-6.11	-8.35	\N	140.94	-25.46	26.46	0.75	0.58	20.28	\N	-689.47	-1.65	18281473.45	Consumo Cíclico	Utilidades Domésticas	Utensílios Domésticos	\N	\N
+BMEB4	25.7	BCO MERCANTIL DO BRASIL S.A.	5.52	1.61	4.27	0.13	4.22	55.98	12.65	9.78	0.54	0.91	-0.15	0.24	29.16	2.35	\N	\N	\N	0.08	0.92	\N	0.04	15.64	477245.97	15.96	4.65	2661593734	Financeiro e Outros	Intermediários Financeiros	Bancos	53.7	5.13
+FIBR3	66.3	FIBRIA CELULOSE S.A.	12.03	2.59	5.46	0.9	7.63	45.77	36.8	16.71	2.01	9.59	-1.28	0.45	21.57	7.48	17.1	1.03	2.17	0.35	0.65	1.46	0.07	21.43	\N	25.55	5.51	36712556310.3	\N	\N	\N	\N	\N
+TAEE11	33.52	TRANSMISSORA ALIANÇA DE ENERGIA ELÉTRICA S.A.	8.41	1.64	4.99	0.59	8.74	63.14	68.11	40.38	3.4	16.77	-0.71	0.17	19.46	7	13.55	1.23	3.75	0.36	0.64	1.26	0.92	15.51	83416504.34	20.48	3.99	11547603362.64	Utilidade Pública	Energia Elétrica	Energia Elétrica	5.09	11.09
+ENGI3	13.14	ENERGISA S.A.	12.55	1.97	4.53	0.42	6.52	28.52	22.18	8	1	7.28	-0.58	0.42	15.71	3.38	10.7	1.52	3.49	0.21	0.73	1.28	0.69	12.56	85781.57	6.66	1.05	20156094733.05	Utilidade Pública	Energia Elétrica	Energia Elétrica	15.85	2.59
+NGRD3	0.79	NEOGRID PARTICIPACOES S.A.	-44.1	0.42	-141.44	0.29	-29.91	63.78	-0.5	-1.6	0.71	1.19	-0.48	0.41	-0.95	-0.66	-3.53	-0.33	111.53	0.69	0.31	2.6	0.34	8.67	667419.6	1.88	-0.02	188543240.7	Tecnologia da Informação	Programas e Serviços	Programas e Serviços	\N	0.69
+ENEV3	12.3	ENEVA S.A	-294.86	1.58	7.33	0.45	13.89	37.39	27.6	-0.69	2.02	17.65	-0.52	0.22	-0.54	-0.15	7.19	1.42	6.56	0.29	0.65	1.26	2.54	26.39	87817438.6	7.78	-0.04	19491780123.3	Utilidade Pública	Energia Elétrica	Energia Elétrica	\N	\N
+COGN3	1.61	KROTON EDUCACIONAL S.A.	-5.44	0.26	4.27	0.12	12.76	65.05	11.73	-9.22	0.5	2.53	-0.15	0.24	-4.77	-2.22	1.94	0.51	8.48	0.46	0.49	1.33	-0.27	-0.82	62148082.31	6.21	-0.3	3021335998.1	Consumo Cíclico	Diversos	Serviços Educacionais	\N	\N
+CASH3	5.35	MÉLIUZ S.A.	37.84	0.58	-13.23	0.48	5.99	-11.33	-11.33	3.96	1.5	0.74	-1.96	0.32	1.54	1.26	-4.54	-0.85	19.21	0.82	0.17	6.89	-0.31	48.96	12625980.72	9.18	0.14	465225048.55	Tecnologia da Informação	Programas e Serviços	Programas e Serviços	\N	\N
+MULT3	22.21	MULTIPLAN - EMPREEND IMOBILIARIOS S.A.	12.35	1.88	9.5	1.15	10.92	86.07	67.22	51.72	6.39	21.69	-1.38	0.18	15.24	9.34	12.46	0.28	1.42	0.61	0.39	1.48	0.36	10.55	96764592.17	11.8	1.8	13342899033.75	Financeiro e Outros	Exploração de Imóveis	Exploração de Imóveis	17.96	4.61
+WHRL3	4.49	WHIRLPOOL S.A.	17.41	3.01	5.28	0.75	4.91	16.37	11.01	3.34	0.58	25.98	-2.44	1.29	17.31	4.32	32.24	-0.22	-0.38	0.25	0.75	1.04	2.52	13.15	6854.45	1.49	0.26	6766472571.5	Consumo Cíclico	Comércio	Eletrodomésticos	16.5	7.58
+TRPL4	25.5	CTEEP - CIA TRANSMISSÃO ENERGIA ELÉTRICA PAULISTA	6.14	0.93	4.37	0.44	6.89	55.72	58.05	41.3	2.54	3.67	-0.54	0.17	15.18	7.21	12.57	0.42	1.98	0.47	0.51	3.08	0.57	14.31	83050453.17	27.34	4.15	18877922994.6	Utilidade Pública	Energia Elétrica	Energia Elétrica	7.77	8.64
+AVLL3	3.48	ALPHAVILLE S.A.	-1.43	-8.88	-3.48	0.5	-4.92	36.82	-40.09	-97.66	1.39	-3.62	-0.8	0.36	-621.81	-34.73	-50.61	\N	-1.44	-0.06	1.05	0.73	-0.06	55.58	11986.43	-0.39	-2.44	679748612.28	Consumo Cíclico	Construção Civil	Incorporações	\N	\N
+SBFG3	11.3	GRUPO SBF SA	13.41	1.06	4.98	0.35	9.28	47.18	7.89	2.93	0.39	1.47	-0.72	0.88	7.89	2.59	9.85	0.92	4.31	0.33	0.67	1.84	1.56	25.16	18843056.34	10.69	0.84	2754229953.2	Consumo Cíclico	Comércio	Produtos Diversos	6.91	1.54
+BRPR3	131.17	BR PROPERTIES S.A.	-0.56	0.05	-0.21	0.04	0.06	100	-336.36	-123.98	0.7	1.73	-0.05	0.06	-9.55	-6.86	-29.1	-0.07	0.27	0.72	0.28	1.12	0.01	-7.12	2066991.77	2447.95	-233.75	60919545.44	Financeiro e Outros	Exploração de Imóveis	Exploração de Imóveis	\N	\N
+ENMT3	84.38	ENERGISA MATO GROSSO-DISTRIBUIDORA DE ENERGIA S/A	12.09	4.85	7.94	1.38	8.45	35.23	29.57	19.41	2.35	30.82	-1.89	0.59	40.09	11.41	21.68	1.14	1.87	0.28	0.72	1.2	0.28	11.58	16624	17.41	6.98	15330726156.02	Utilidade Pública	Energia Elétrica	Energia Elétrica	29.05	\N
+CAMB3	10.28	CAMBUCI S.A.	6.01	1.72	4.36	1.19	4.08	48.26	21.89	15.87	0.95	4.37	-2.32	1.24	28.58	19.76	34.86	-0.11	-0.28	0.69	0.31	2.27	1.46	13.16	595577.26	5.98	1.71	434587822.4	Consumo Cíclico	Tecidos. Vestuário e Calçados	Calçados	34.14	1.43
+DMVF3	6.95	D1000 VAREJO FARMA PARTICIPAÇÕES S.A.	14.65	0.4	6.43	0.22	6.22	31.51	2.99	1.32	0.19	5.47	-0.32	1.15	2.75	1.51	5.4	-0.01	-0.21	0.55	0.45	1.15	0.35	332.1	1222014.63	17.23	0.47	351689751.9	Saúde	Comércio e Distribuição	Medicamentos e Outros Produtos	517.16	\N
+CLSC4	70	CENTRAIS ELET DE SANTA CATARINA S.A.	4.73	0.87	3.19	0.22	5.84	16.17	8.12	5.48	0.26	-20.48	-0.3	0.84	18.3	4.59	11.26	0.74	2.72	0.25	0.75	0.96	0.33	6.3	319088.89	80.9	14.8	2641008249.4	Utilidade Pública	Energia Elétrica	Energia Elétrica	28.18	8.81
+HBOR3	2.06	HELBOR EMPREENDIMENTOS S.A.	5.38	0.2	1.14	0.04	7.94	30.11	18.55	3.94	0.21	0.13	-0.11	0.2	3.63	0.81	4.74	1.16	6.8	0.22	0.62	2.35	0.56	15.03	1042702.89	10.56	0.38	275733208.32	Consumo Cíclico	Construção Civil	Incorporações	\N	4.42
+BAHI3	6.7	BAHEMA S.A.	-22.29	1.68	2.28	0.31	3.5	43.98	20.83	-2.13	0.48	-1.52	-0.34	0.66	-7.54	-1.41	32.32	0.9	1.22	0.19	0.81	0.24	0.24	53.65	34445.15	3.98	-0.3	176816899.4	Consumo Cíclico	Diversos	Serviços Educacionais	\N	\N
+PSSA3	29.5	PORTO SEGURO S.A.	7.41	1.53	6.07	0.43	2.28	100	9.4	7.7	0.57	5.47	-1.07	0.75	20.59	5.77	14.21	-0.95	-3.79	0.28	0.72	1.15	0.07	12.7	64679660.77	19.34	3.98	19074288770	Financeiro e Outros	Previdência e Seguros	Seguradoras	14.46	6.12
+SLED4	1.6	SARAIVA S.A. LIVREIROS EDITORES	0.22	-0.04	0.28	0.24	0.95	47.85	73.94	92.71	0.21	-0.1	-0.36	1.15	-18.07	107.04	-15.91	\N	0.65	-5.92	6.92	0.12	-0.01	-45.03	207054.67	-39.57	7.15	16497692.59	Consumo Cíclico	Comércio	Produtos Diversos	\N	\N
+POSI3	8.24	POSITIVO TECNOLOGIA S.A.	3.85	0.71	2.17	0.26	3.6	26.75	12.77	7.19	0.28	0.7	-1.13	0.95	18.4	6.83	17.65	0.47	1.43	0.37	0.63	1.96	0.53	15.01	11415958	11.62	2.14	1168432000	Tecnologia da Informação	Computadores e Equipamentos	Computadores e Equipamentos	\N	5.08
+FLRY3	14.08	FLEURY S.A.	15.09	1.49	7.29	0.67	10.22	28.55	15.85	7.65	1.15	8.37	-0.89	0.58	9.86	4.43	9.82	0.6	2.93	0.45	0.55	1.48	0.23	13.37	34712790.34	9.46	0.93	7704449646.08	Saúde	Serv.Méd.Hospit..Análises e Diagnósticos	Serv.Méd.Hospit..Análises e Diagnósticos	9.75	4.14
+ROMI3	10.17	INDUSTRIAS ROMI S.A.	6.49	0.8	6.35	0.42	9.23	29.1	12.69	12.41	0.81	1.23	-1.09	0.52	12.4	6.46	7.2	0.37	2.89	0.52	0.48	2.25	-0.19	10.54	2047211.09	12.64	1.57	947546496.99	Bens Industriais	Máquinas e Equipamentos	Máq. e Equip. Industriais	11.68	7.32
+RCSL4	1	RECRUSUL S.A.	-4.38	131.5	-8.36	0.52	-13.6	11.6	-7.95	-15.18	0.67	4.47	-0.97	0.78	-3002.48	-11.87	-1592.05	-0.01	0	0	1	1.33	0.1	66.3	544871.34	0.01	-0.23	51763742.12	Bens Industriais	Material de Transporte	Material Rodoviário	\N	\N
+TEKA3	50	TEKA-TECELAGEM KUEHNRICH S.A.	-0.16	-0.01	-3.06	0.02	-70.17	21.92	-2.76	-52.04	0.08	-0.01	-0.02	0.25	-7.35	-13.03	0.61	\N	-67.89	-1.77	2.77	0.04	0.13	14.82	5000	-4189.96	-307.77	18754666	Consumo Cíclico	Tecidos. Vestuário e Calçados	Fios e Tecidos	\N	\N
+TAEE3	11.15	TRANSMISSORA ALIANÇA DE ENERGIA ELÉTRICA S.A.	8.39	1.63	4.98	0.59	8.74	63.14	68.11	40.38	3.39	16.73	-0.71	0.17	19.46	7	13.55	1.23	3.75	0.36	0.64	1.26	0.92	15.51	1428409.91	6.83	1.33	11547603362.64	Utilidade Pública	Energia Elétrica	Energia Elétrica	5.09	11.12
+EEEL3	294.77	CIA ESTADUAL GER.TRANS.ENER.ELET-CEEE-GT	4.7	1.41	2.81	0.48	4.62	61.19	54.12	32.4	1.52	3.71	-0.61	0.32	30.08	10.23	19.55	0.9	1.8	0.34	0.66	2.49	-0.15	12.36	\N	208.5	62.71	2840511499.76	Utilidade Pública	Energia Elétrica	Energia Elétrica	28.25	\N
+EMBR3	36.28	EMBRAER S.A.	-1561.32	2.11	55.88	0.52	69.23	17.61	2.31	-0.08	1.29	2.31	-1.19	0.4	-0.13	-0.03	1.46	0.5	13.36	0.24	0.73	1.65	15.9	4.54	246799151.51	17.23	-0.02	26864071796.32	Bens Industriais	Material de Transporte	Material Aeronáutico e de Defesa	\N	\N
+CTSA8	0	CIA TECIDOS SANTANENSE	0	0	0	0	-14.15	-22.39	-15.56	-45.69	0	0	0	0.17	-21.36	-7.79	-4.49	0.76	-10.51	0.36	0.64	1.37	0	-0.42	\N	8.28	-1.77	60936270.39	Consumo Cíclico	Tecidos. Vestuário e Calçados	Fios e Tecidos	\N	\N
+MRSA5B	27.16	MRS LOGISTICA S.A.	6.7	1.37	3.3	0.52	4.76	48.65	40.56	20.01	1.34	7.15	-0.68	0.39	20.44	7.75	15.82	0.54	1.3	0.38	0.62	1.44	0.14	11.59	14815.33	19.83	4.05	9617527706.38	Bens Industriais	Transporte	Transporte Ferroviário	21.31	\N
+DOHL4	4.1	DOHLER S.A.	-23.41	0.44	-50.91	0.32	-121.18	21.7	-1.04	-2.26	0.53	0.7	-0.72	0.6	-1.9	-1.37	-1.54	0.11	-13.05	0.72	0.28	5.61	0	5.16	7284	9.23	-0.18	658739716.5	Consumo Cíclico	Tecidos. Vestuário e Calçados	Fios e Tecidos	\N	\N
+LIPR3	48.8	ELETROBRÁS PARTICIPAÇÕES S.A. - ELETROPAR	32.69	2.59	34.34	2.47	30.58	\N	\N	\N	\N	8.21	-3.67	0	7.91	7.56	5.6	-0.28	-3.77	0.96	0.04	12.53	-0.93	\N	4893.67	18.87	1.49	574126583.2	Utilidade Pública	Energia Elétrica	Energia Elétrica	5.92	0.79
+CPLE6	9.04	CIA PARANAENSE DE ENERGIA - COPEL	14.11	1.1	7.86	0.49	11.42	21.53	15.88	8.85	1.25	7.02	-0.65	0.39	7.83	3.45	7.72	0.38	2.7	0.44	0.55	1.39	0.2	9.35	144732659.74	8.19	0.64	29899693364.18	Utilidade Pública	Energia Elétrica	Energia Elétrica	13.08	4.2
+MNPR3	12	MINUPAR PARTICIPACOES S.A.	6.97	-0.26	1.86	0.26	1.86	24.76	12.54	3.34	0.23	-0.23	-0.6	1.1	-3.79	3.67	-13.8	\N	0	-0.97	1.97	0.34	-0.16	13.02	63454.77	-45.41	1.72	85201200	Consumo não Cíclico	Alimentos Processados	Carnes e Derivados	\N	\N
+BLUT4	1.52	BLUE TECH SOLUTIONS E.Q.I. S	-1.66	0.14	-1.82	0.04	-4.91	\N	\N	\N	\N	-0.32	-0.04	0	-8.15	-2.46	-6.65	0.12	-1.59	0.3	0.7	0	0.06	\N	\N	11.21	-0.91	14115600.06	Financeiro e Outros	Holdings Diversificadas	Holdings Diversificadas	\N	\N
+ALSC3	27.75	ALIANSCE SHOPPING CENTERS S.A.	38.57	2.2	16.41	1.2	14.85	75.71	65.32	27.78	10.72	9.41	-1.43	0.11	5.69	3.12	11.21	-0.21	-1.56	0.55	0.44	5.39	0.58	2.54	\N	12.64	0.72	5694242307.75	\N	\N	\N	19.34	\N
+DIRR3	24.88	DIRECIONAL ENGENHARIA S.A.	10.2	2.05	9.03	0.55	9.5	34.36	19.37	17.15	1.75	1.82	-0.95	0.31	20.1	5.37	11.62	0.11	0.47	0.27	0.71	3.39	0.11	15.1	46006029.23	12.13	2.44	4316680000	Consumo Cíclico	Construção Civil	Incorporações	\N	1.89
+EALT4	11.07	ELECTRO ACO ALTONA S.A.	4.59	0.99	3.98	0.44	5.81	25.12	12.16	10.53	0.48	9.99	-0.74	0.9	21.53	9.5	14.81	0.45	1.82	0.44	0.56	1.12	0.08	14.94	138856.94	11.2	2.41	250147500	Bens Industriais	Máquinas e Equipamentos	Máq. e Equip. Industriais	34.67	6.72
+VAMO3	7.38	VAMOS LOCAÇÃO DE CAMINHÕES. MÁQUINAS E EQUIP. S.A.	13.56	1.72	3.73	0.39	8.05	46.88	35.62	9.8	1.33	3.2	-0.55	0.29	12.69	2.89	12.97	1.99	4.32	0.23	0.77	1.75	-0.84	45.32	53767036.66	4.29	0.54	8149915319.22	Bens Industriais	Máquinas e Equipamentos	Máq. e Equip. Construção e Agrícolas	39.7	4.33
+ENGI4	7.65	ENERGISA S.A.	7.31	1.15	2.64	0.25	6.52	28.52	22.18	8	0.58	4.24	-0.34	0.42	15.71	3.38	10.7	1.52	3.49	0.21	0.73	1.28	0.4	12.56	82952.46	6.66	1.05	20156094733.05	Utilidade Pública	Energia Elétrica	Energia Elétrica	15.85	4.44
+AHEB5	19.2	SAO PAULO TURISMO S.A.	1.54	1.44	1.19	0.32	0.9	31.24	21.73	16.68	0.26	0.98	-0.79	1.24	93.37	20.69	98.59	-0.96	-0.79	0.22	0.78	2.2	0.03	50.82	3842	13.32	12.43	233828143.9	Consumo Cíclico	Viagens e Lazer	Produção de Eventos e Shows	\N	\N
+BPAC11	31.82	BCO BTG PACTUAL S.A.	11.55	2.35	9.8	0.25	9.8	20.34	25.92	22	2.54	27.54	-2.57	0.1	20.33	2.17	\N	\N	\N	0.11	0.89	1.01	0.37	43.9	321043463.09	13.55	2.75	122041578702.99	Financeiro e Outros	Intermediários Financeiros	Bancos	52.56	2.45
+INTB3	22.07	INTELBRAS S.A. IND DE TELEC ELETRONICA BRASILEIRA	12.77	2.72	13.38	1.41	12.62	31.7	13.16	13.79	1.76	3.16	-5.55	0.8	21.32	11.06	14.41	-0.16	-0.76	0.52	0.48	2.49	1.22	23.3	20963801.54	8.11	1.73	7230377197.7	Tecnologia da Informação	Computadores e Equipamentos	Computadores e Equipamentos	28.37	0.81
+PTNT4	5.94	PETTENATI S.A. INDUSTRIA TEXTIL	7.91	0.74	4.41	0.34	7	16.9	8.44	4.71	0.37	1.1	-0.69	0.91	9.31	4.27	7.51	0.28	1.67	0.46	0.45	2.5	-0.41	11.78	28058.86	8.07	0.75	345299434.48	Consumo Cíclico	Tecidos. Vestuário e Calçados	Fios e Tecidos	7.9	3.57
+BBAS3	26.39	BCO BRASIL S.A.	4.38	0.87	3.64	0.07	3.64	35.03	15.59	12.98	0.57	2.14	-0.07	0.12	19.77	1.51	\N	\N	\N	0.08	0.92	17.64	0.64	17.16	486511676.43	30.49	6.03	151236710315.6	Financeiro e Outros	Intermediários Financeiros	Bancos	20.11	9.22
+MRVE3	6.59	MRV ENGENHARIA E PARTICIPACOES S.A.	-16.15	0.56	21.22	0.14	64.08	23.9	2.29	-3	0.49	0.62	-0.27	0.29	-3.47	-0.89	0.42	1.13	42.86	0.26	0.71	1.92	2.8	6.52	71460395.89	11.76	-0.41	3709027761.89	Consumo Cíclico	Construção Civil	Incorporações	\N	\N
+MEAL3	1.22	INTERNATIONAL MEAL COMPANY ALIMENTACAO S.A.	-6.64	0.35	4.44	0.13	8.58	34.58	3.52	-2.35	0.16	19.62	-0.16	0.84	-5.23	-1.98	4.63	0.32	4.15	0.38	0.62	1.04	0.03	7.07	1107091.29	3.51	-0.18	349370826.6	Consumo Cíclico	Hoteis e Restaurantes	Restaurante e Similares	\N	\N
+PTBL3	4.05	PBG S/A	-14.01	1.54	3.72	0.18	10.05	38.55	6.89	-1.83	0.26	5.95	-0.28	0.68	-10.98	-1.25	8.04	2.62	6.33	0.11	0.89	1.08	0.1	15.75	3523628.17	2.63	-0.29	570996888.3	Bens Industriais	Construção e Engenharia	Produtos para Construção	\N	\N
+GRAO3	0	HUMBERG AGRIBRASIL COM. E EXPORT. DE GRÃOS S.A.	0	0	0	0	2.15	5.55	3.18	0.32	0	0	0	2.38	4.33	0.75	12.38	0.94	2.15	0.17	0.74	0.88	0	68.24	\N	1.41	0.06	0	Consumo não Cíclico	Agropecuária	Agricultura	\N	\N
+BRGE12	13.47	CONSORCIO ALFA DE ADMINISTRACAO S.A.	33.84	0.74	-34.96	0.34	19.81	-4115.33	-798.17	824.67	279.05	0.89	-0.75	0	2.19	0.99	-2.79	-1.15	54.17	0.45	0.36	3.13	-0.52	-32.83	8735.5	18.16	0.4	974940393.52	Financeiro e Outros	Previdência e Seguros	Seguradoras	-11.18	\N
+WHRL4	4.53	WHIRLPOOL S.A.	17.56	3.04	5.33	0.76	4.91	16.37	11.01	3.34	0.59	26.21	-2.46	1.29	17.31	4.32	32.24	-0.22	-0.38	0.25	0.75	1.04	2.54	13.15	27227.2	1.49	0.26	6766472571.5	Consumo Cíclico	Comércio	Eletrodomésticos	16.5	8.27
+LEVE3	30.66	MAHLE-METAL LEVE S.A.	5.23	2.65	4.39	1.32	4.37	30.46	21.81	18.29	0.96	4.28	-3.74	1.38	50.65	25.23	33.41	-0.01	-0.02	0.5	0.5	1.91	0.13	13.28	12037119.49	11.57	5.86	4155625740	Consumo Cíclico	Automóveis e Motocicletas	Automóveis e Motocicletas	27.34	26.07
+BRFS3	20.32	BRF S.A.	-69.84	2.25	15.08	0.6	19.4	19.3	4.21	-0.91	0.64	4.86	-1.09	0.94	-3.21	-0.85	6.26	0.64	4.32	0.27	0.72	1.37	0.86	12.17	237732000.63	9.05	-0.29	34187856358.72	Consumo não Cíclico	Alimentos Processados	Carnes e Derivados	\N	\N
+ENMA6B	83.99	CIA ENERGETICA DO MARANHAO - CEMAR	17.89	3.52	13.6	1.48	\N	30.35	17.55	13.34	2.39	28.12	-1.96	0.62	19.69	8.28	13.34	0.59	2.28	0.42	0.58	1.27	1.28	8.35	\N	23.85	4.7	\N	Utilidade Pública	Energia Elétrica	Energia Elétrica	2.77	\N
+SGPS3	0.38	SPRINGS GLOBAL PARTICIPACOES S.A.	-0.02	0.11	-0.05	0.01	-2.28	2.36	-39.02	-77.23	0.02	-0.02	-0.01	0.39	-470.13	-30.47	-33.93	5.3	-2.23	0.06	0.94	0.45	0	-2.95	166667.26	3.31	-15.56	19000000	Consumo Cíclico	Tecidos. Vestuário e Calçados	Fios e Tecidos	\N	\N
+PTCA3	0	PRATICA KLIMAQUIP INDUSTRIA E COMERCIO SA	0	0	0	0	1.25	47.28	15.29	9.17	0	0	0	1.34	35.59	12.27	20.49	0.74	1.25	0.34	0.66	1.71	0	23.19	\N	24.64	8.77	0	Bens Industriais	Máquinas e Equipamentos	Máq. e Equip. Industriais	38.5	\N
+PETR3	38.41	PETROLEO BRASILEIRO S.A. PETROBRAS	4.27	1.23	2.59	0.47	3.71	52.07	39.1	23.67	1.01	41.45	-0.56	0.46	28.77	10.99	19.56	0.56	1.17	0.38	0.62	1.08	-0.11	17.72	492691804.51	31.25	8.99	490675347923.5	Petróleo. Gás e Biocombustíveis	Petróleo. Gás e Biocombustíveis	Exploração. Refino e Distribuição	\N	17.09
+OMGE3	27.57	OMEGA GERAÇÃO S.A.	27.16	1175.11	7.11	433.11	7.11	29.87	28.22	7.38	2.01	7885.66	-509.49	216.02	4327.27	1594.91	6365.01	1.18	0.01	0.37	0.63	1.58	0.73	29.99	\N	0.02	1.02	5521562588.85	Utilidade Pública	Energia Elétrica	Energia Elétrica	37.16	\N
+CLSC3	66.2	CENTRAIS ELET DE SANTA CATARINA S.A.	4.47	0.82	3.02	0.21	5.84	16.17	8.12	5.48	0.24	-19.37	-0.29	0.84	18.3	4.59	11.26	0.74	2.72	0.25	0.75	0.96	0.31	6.3	55174.33	80.9	14.8	2641008249.4	Utilidade Pública	Energia Elétrica	Energia Elétrica	28.18	8.47
+HAPV3	3.64	HAPVIDA PARTICIPACOES E INVESTIMENTOS SA	-60.43	0.56	17.47	0.38	20.01	12.48	5.61	-1.62	0.98	10.38	-0.43	0.38	-0.92	-0.62	2.51	0.08	2.54	0.68	0.32	1.41	1.33	43.42	282406985.06	6.52	-0.06	27443646277.32	Saúde	Serv.Méd.Hospit..Análises e Diagnósticos	Serv.Méd.Hospit..Análises e Diagnósticos	\N	\N
+NORD3	7.01	NORDON INDUSTRIAS METALURGICAS S.A.	-5	-0.28	5157.4	2.42	9371.51	91.22	0.35	-360.37	18.03	-0.28	-2.67	0.13	-5.62	-48.41	-0.01	\N	4214.11	-8.62	9.62	0.01	-0.26	22.14	11299.56	-24.95	-1.4	46416616.86	Bens Industriais	Máquinas e Equipamentos	Máq. e Equip. Industriais	\N	\N
+VVAR11	14.58	GRUPO CASAS BAHIA S.A.	-0.54	0.43	-0.96	0.04	-5.2	27.46	-5.21	-9.3	0.05	-0.27	-0.07	0.89	-80.86	-8.26	-24.97	2.18	-4.82	0.1	0.9	0.71	0	1.39	\N	33.68	-27.23	546730694.25	Consumo Cíclico	Comércio	Eletrodomésticos	\N	\N
+OPCT3	6.5	OCEANPACT SERVICOS MARITIMOS S.A.	13	1.64	4.02	0.54	7.05	24.09	17.93	5.54	0.72	6.25	-0.76	0.75	12.59	4.13	12.91	1.23	3.03	0.33	0.67	1.41	-0.06	40.48	4665252.37	3.97	0.5	1299737101	Bens Industriais	Transporte	Transporte Hidroviário	\N	\N
+MPLU3	26.8	MULTIPLUS S.A.	12.2	17.37	10.37	2.68	7.73	95.29	66.35	56.37	6.88	50.65	-23.58	0.39	142.4	21.94	100.98	-4.42	-2.64	0.15	0.85	1.06	-0.39	-17.46	\N	1.54	2.2	4348208156.4	\N	\N	\N	8.96	\N
+ITUB4	32.05	ITAU UNIBANCO HOLDING S.A.	8.84	1.69	7.2	0.12	6.72	40.94	13.75	11.2	0.99	\N	-0.12	0.12	19.17	1.36	\N	\N	\N	0.07	0.93	\N	0.49	18.99	717691065.03	18.93	3.63	293546467106.37	Financeiro e Outros	Intermediários Financeiros	Bancos	7.38	7.32
+AGRO3	25.69	BRASILAGRO - CIA BRAS DE PROP AGRICOLAS	11.14	1.35	15.55	0.79	20.5	27.98	15.46	21.58	2.4	4.24	-1.24	0.33	12.09	7.08	5.06	0.43	4.95	0.59	0.41	2.04	0.04	27.22	5624935.66	19.06	2.31	2637937676.36	Consumo não Cíclico	Agropecuária	Agricultura	13.38	12.5
+TEKA4	30.9	TEKA-TECELAGEM KUEHNRICH S.A.	-0.1	-0.01	-1.89	0.01	-70.17	21.92	-2.76	-52.04	0.05	-0.01	-0.01	0.25	-7.35	-13.03	0.61	\N	-67.89	-1.77	2.77	0.04	0.08	14.82	13450.75	-4189.96	-307.77	18754666	Consumo Cíclico	Tecidos. Vestuário e Calçados	Fios e Tecidos	\N	\N
+BNBR3	114	BCO NORDESTE DO BRASIL S.A.	4.7	0.87	2.8	0.15	2.8	47.13	42.37	25.22	1.18	2.67	-0.16	0.12	18.55	3.14	\N	\N	\N	0.17	0.83	\N	-7.91	10.88	36436.45	130.82	24.27	9846346896	Financeiro e Outros	Intermediários Financeiros	Bancos	23.64	2.77
+TASA4	10.85	TAURUS ARMAS S.A.	10.08	1.22	6.3	0.63	7.66	33.77	12.27	7.67	0.77	3.7	-1.41	0.82	12.09	6.26	10.42	0.25	1.28	0.52	0.48	1.45	-0.16	16.08	4786806.11	8.91	1.08	1391168375.08	Bens Industriais	Máquinas e Equipamentos	Armas e Munições	\N	3.72
+CRFB3	8.92	ATACADÃO S.A.	38.86	0.97	4.46	0.2	8.67	19.35	3.87	0.44	0.17	-223.88	-0.39	1.17	2.51	0.52	7.88	0.92	4.2	0.21	0.77	1	-0.49	15.15	48791798.66	9.15	0.23	18805986146.12	Consumo não Cíclico	Comércio e Distribuição	Alimentos	-21.85	\N
+SUZB3	48.27	SUZANO S.A.	6.94	1.41	6.02	0.44	11.76	34.61	27.58	23.9	1.66	2.68	-0.59	0.26	20.33	6.32	7.13	1.35	5.74	0.31	0.69	2.89	-0.14	24.23	586734193.06	34.2	6.95	62949757276.05	Materiais Básicos	Madeira e Papel	Papel e Celulose	95.4	2.41
+BRKM6	13.75	BRASKEM S.A	-1.79	3.56	-3.29	0.12	-11.69	4.7	-4.82	-8.85	0.16	0.95	-0.2	0.74	-198.12	-6.53	-11.57	7.95	-7.36	0.03	0.97	1.44	-0.03	4	3124.8	3.87	-7.66	14414035917.98	Materiais Básicos	Químicos	Petroquímicos	\N	\N
+BRGE3	13.5	CONSORCIO ALFA DE ADMINISTRACAO S.A.	33.91	0.74	-35.04	0.34	19.81	-4115.33	-798.17	824.67	279.67	0.89	-0.75	0	2.19	0.99	-2.79	-1.15	54.17	0.45	0.36	3.13	-0.52	-32.83	39834.14	18.16	0.4	974940393.52	Financeiro e Outros	Previdência e Seguros	Seguradoras	-11.18	\N
+ALUP11	29.98	ALUPAR INVESTIMENTO S/A	13.23	1.25	4.04	0.33	7.78	75.41	71.12	21.74	2.88	4.23	-0.41	0.11	9.42	2.49	8.82	1.15	3.74	0.26	0.62	1.67	950.08	11.95	36927918.29	24.05	2.27	9502128341.79	Utilidade Pública	Energia Elétrica	Energia Elétrica	13.18	4.1
+RPMG3	2.31	REFINARIA DE PETROLEOS MANGUINHOS S.A.	-0.19	-0.03	-0.15	0.03	-0.16	-13.15	-20.51	-16.72	0.03	-0.03	-0.42	0.83	-16.32	-13.94	20.03	\N	0	-0.85	1.85	0.55	0.02	48.3	195192.57	-74.73	-12.19	156367662.99	Petróleo. Gás e Biocombustíveis	Petróleo. Gás e Biocombustíveis	Exploração. Refino e Distribuição	\N	\N
+LUXM4	13.99	TREVISA INVESTIMENTOS S.A.	15.73	2.41	10.8	1.71	5.64	31.76	19.72	13.54	2.13	-92.19	-1.98	0.8	15.35	10.84	14.64	-0.09	-0.39	0.71	0.29	0.88	0.24	1.03	5770	5.8	0.89	162172080	Bens Industriais	Transporte	Transporte Hidroviário	24.3	\N
+ENAT3	20.39	ENAUTA PARTICIPAÇÕES S.A.	56.31	1.3	21.55	0.62	25.87	31.48	14.15	5.41	3.05	3.89	-0.87	0.2	2.32	1.09	2.75	0.26	4.32	0.47	0.53	2.17	-0.75	34.1	50697167.26	15.63	0.36	5419802792.95	Petróleo. Gás e Biocombustíveis	Petróleo. Gás e Biocombustíveis	Exploração. Refino e Distribuição	-23.08	\N
+EQPA5	8.24	EQUATORIAL PARA DISTRIBUIDORA DE ENERGIA S.A.	8.16	3.59	6.21	1.25	6.33	34.97	28.06	21.37	1.74	12.64	-1.76	0.71	43.96	15.26	25.67	0.72	1.24	0.35	0.65	1.5	0.24	13.58	1800	2.3	1.01	14917885169.87	Utilidade Pública	Energia Elétrica	Energia Elétrica	37.41	\N
+EVEN3	6.2	EVEN CONSTRUTORA E INCORPORADORA S.A.	5.48	0.63	4.13	0.17	5.37	22.32	10.01	7.54	0.41	0.31	-0.67	0.4	11.42	3.05	5.05	0.19	1.23	0.27	0.58	3.55	0.1	15.06	5334698.67	9.9	1.13	1240000000	Consumo Cíclico	Construção Civil	Incorporações	\N	16.23
+PTCA11	0	PRATICA KLIMAQUIP INDUSTRIA E COMERCIO SA	0	0	0	0	1.25	47.28	15.29	9.17	0	0	0	1.34	35.59	12.27	20.49	0.74	1.25	0.34	0.66	1.71	0	23.19	\N	24.64	8.77	0	Bens Industriais	Máquinas e Equipamentos	Máq. e Equip. Industriais	38.5	\N
+CGRA4	26.01	GRAZZIOTIN S.A.	5.98	0.61	9.09	0.43	6.36	51.6	8.69	13.19	0.79	1.69	-0.77	0.55	10.19	7.24	5.28	-0.18	-2.65	0.71	0.29	2.4	-0.41	7.88	111220.49	42.66	4.35	537692666.98	Consumo Cíclico	Comércio	Tecidos. Vestuário e Calçados	11.01	10.39
+RSID3	4.94	ROSSI RESIDENCIAL S.A.	0.35	-0.11	-0.3	0.18	-1.2	1.33	-723.09	612.89	2.17	-0.19	-0.41	0.08	-31.75	51.27	118.36	\N	-0.9	-1.61	2.62	0.37	0	-41.82	426016.14	-43.91	13.94	98800000	Consumo Cíclico	Construção Civil	Incorporações	\N	\N
+EQPA7	8.24	EQUATORIAL PARA DISTRIBUIDORA DE ENERGIA S.A.	8.16	3.59	6.21	1.25	6.33	34.97	28.06	21.37	1.74	12.64	-1.76	0.71	43.96	15.26	25.67	0.72	1.24	0.35	0.65	1.5	0.24	13.58	9000	2.3	1.01	14917885169.87	Utilidade Pública	Energia Elétrica	Energia Elétrica	37.41	\N
+BLAU3	9.41	BLAU FARMACÊUTICA S.A.	7.09	0.84	5.16	0.53	5.64	34.09	22.18	16.14	1.15	1.41	-1.1	0.47	11.78	7.53	9.18	0.08	0.48	0.64	0.36	3.82	-0.22	11.91	2113137.03	11.26	1.33	1688096965.99	Saúde	Medicamentos e Outros Produtos	Medicamentos e Outros Produtos	14.06	3.47
+CESP5	25	CESP - CIA ENERGETICA DE SAO PAULO	-13.55	1.03	14.39	0.6	16.35	39.26	40.55	-43.06	5.84	6.06	-0.69	0.1	-7.57	-4.41	-4.27	0.13	1.76	0.58	0.42	3.77	0.11	-3.19	\N	24.36	-1.84	8302192833.55	Utilidade Pública	Energia Elétrica	Energia Elétrica	\N	\N
+GEPA4	25	RIO PARANAPANEMA ENERGIA S.A.	6.91	1.11	4.77	0.67	5.77	38.61	35.54	24.54	1.7	-5.92	-0.77	0.39	16.09	9.62	13.28	0.22	0.93	0.6	0.4	0.54	0.17	1.08	18541.03	22.48	3.62	2392309836	Utilidade Pública	Energia Elétrica	Energia Elétrica	5.95	16.77
+NAFG3	64.37	NADIR FIGUEIREDO IND E COM S.A.	11.8	2.76	6.68	1.15	5.06	41.15	16.49	9.34	1.1	3.2	-2.87	1.05	23.42	9.77	15.89	0.48	1.17	0.42	0.58	2.52	-1.14	7.87	\N	23.3	5.46	508315292.42	Consumo Cíclico	Utilidades Domésticas	Utensílios Domésticos	35.19	\N
+CRIV3	6.98	FINANCEIRA ALFA S.A.- CRED FINANC E INVS	38.68	0.66	81.37	0.04	80.16	20.26	0.43	0.9	0.35	0.07	-0.09	0.12	1.72	0.11	\N	\N	\N	0.06	0.94	131.56	-0.83	27.56	3478.75	10.5	0.18	707929532	Financeiro e Outros	Intermediários Financeiros	Soc. Crédito e Financiamento	-22.87	\N
+ARZZ3	49.79	AREZZO INDÚSTRIA E COMÉRCIO S.A.	15.76	1.91	10.78	0.98	11.65	53.38	11.41	7.8	1.23	10.82	-1.87	0.8	12.13	6.22	12.43	0.16	0.88	0.51	0.48	1.23	-0.9	25.49	112859392.57	26.05	3.16	5526152566.74	Consumo Cíclico	Comércio	Tecidos. Vestuário e Calçados	17.82	3.88
+VIVT4	45.34	TELEFÔNICA BRASIL S.A	17.31	1.09	9.78	0.6	11.14	43.43	14.73	8.32	1.44	313.65	-0.75	0.42	6.3	3.49	7.85	0.17	1.54	0.55	0.45	1.01	-0.77	3.69	\N	41.55	2.62	73655863205.2	Comunicações	Telecomunicações	Telecomunicações	-13.48	\N
+STBP3	13.1	SANTOS BRASIL PARTICIPACOES S.A.	18.67	5.1	12.03	2.32	12.13	54.02	40	25.76	4.81	-160.99	-2.79	0.48	27.33	12.4	25.39	0.04	0.1	0.45	0.55	0.92	0.3	18.3	59683269.46	2.57	0.7	11320631833.9	Bens Industriais	Transporte	Serviços de Apoio e Armazenagem	189.54	5.07
+RDNI3	3.13	RNI NEGÓCIOS IMOBILIÁRIOS S.A.	-0.56	0.38	-1.01	0.08	-4.96	8.58	-32.6	-58.87	0.33	0.42	-0.14	0.24	-68.5	-13.84	-15.25	1.5	-3.96	0.2	0.79	1.73	0	17.03	18516.2	8.2	-5.62	136999499.04	Consumo Cíclico	Construção Civil	Incorporações	\N	13.58
+SULA3	7.43	SUL AMERICA S.A.	52.32	1.13	-12.95	0.31	6.54	4.25	-3.34	0.83	0.43	0.85	-0.91	0.73	2.17	0.6	-8.72	-1.71	19.47	0.28	0.72	2.29	-0.95	4.58	\N	6.55	0.14	9475042424.17	Financeiro e Outros	Previdência e Seguros	Seguradoras	-23.56	\N
+BBDC3	11.1	BCO BRADESCO S.A.	8.93	0.71	14.35	0.06	15.2	30.48	3.75	6.02	0.54	0.66	-0.07	0.11	7.98	0.68	\N	\N	\N	0.08	0.91	7.77	-0.29	14.8	88973409.03	15.59	1.24	125139752052.84	Financeiro e Outros	Intermediários Financeiros	Bancos	-4.42	12.36
+CASN4	8.37	CIA CATARINENSE DE AGUAS E SANEAM.-CASAN	137.29	4.25	30.26	1.75	38.62	43.06	16.99	3.74	5.14	69.91	-2.1	0.34	3.1	1.28	6.09	0.86	6.13	0.41	0.59	1.18	29.92	8.52	\N	1.97	0.06	9343450886.5	Utilidade Pública	Água e Saneamento	Água e Saneamento	\N	\N
+BPHA3	0.62	BRASIL PHARMA S.A.	0.06	-0.24	0.8	0.99	1.66	98.02	1029.99	13896.67	8.28	-0.38	-1.18	0.12	-402.5	1669.02	-36.75	\N	0.85	-4.15	5.15	0.06	0	-68.85	\N	-2.58	10.4	70110298.74	Saúde	Comércio e Distribuição	Medicamentos e Outros Produtos	\N	\N
+PORT3	14.51	WILSON SONS HOLDINGS BRASIL S.A.	15.17	2.6	9.04	1.07	12.37	45.87	28.29	16.85	2.56	49.93	-1.3	0.42	17.14	7.08	10.54	0.96	3.34	0.41	0.59	1.14	0.27	7.67	12749315.56	5.58	0.96	6384238939	Bens Industriais	Transporte	Serviços de Apoio e Armazenagem	21.77	5.51
+AMAR3	1.44	MARISA LOJAS S.A.	-0.19	211.43	-0.34	0.04	-2.7	49.17	-17.54	-31.64	0.06	-0.15	-0.07	0.67	-111510.06	-21.22	-47.98	1458.18	-2.36	0	1	0.59	-0.01	-9.85	970272.31	0.01	-7.59	98738758.08	Consumo Cíclico	Comércio	Tecidos. Vestuário e Calçados	\N	\N
+TPIS3	3.66	TPI - TRIUNFO PARTICIP. E INVEST. S.A.	2.44	0.19	-15.85	0.06	-165.34	25.3	-0.92	5.95	0.15	-0.42	-0.06	0.39	7.68	2.32	-3.39	1.77	-149.49	0.3	0.7	0.27	-0.01	-2.92	251467.34	19.5	1.5	161040000	Bens Industriais	Transporte	Exploração de Rodovias	\N	\N
+CCXC3	1.16	CCX CARVÃO DA COLÔMBIA S.A.	-0.25	-0.03	-3.26	2.44	-3.2	\N	\N	\N	\N	-0.03	\N	0	-11.64	-986.26	0.88	\N	0.05	-84.7	85.81	0.01	0	\N	\N	-40.23	-4.68	1973425.64	Financeiro e Outros	Outros	Outros	\N	\N
+RNEW11	2.75	RENOVA ENERGIA S.A.	-8.56	0.26	1.3	0.08	7.46	72.96	86.11	-13.07	1.12	-0.62	-0.08	0.07	-3.07	-0.91	5.93	1.24	6.16	0.3	0.7	0.23	0.08	-20.33	22499.23	10.47	-0.32	228693626.33	Utilidade Pública	Energia Elétrica	Energia Elétrica	\N	\N
+MTIG4	23	METALGRAFICA IGUACU S.A.	-49.52	-359.15	-87.41	36.91	-1.28	-16.12	-64.07	-113.09	56	-50.93	-50.15	0.66	-725.28	-74.53	-104.33	\N	-1.17	-0.1	1.1	0.27	-0.09	-17.44	\N	-0.06	-0.46	3700608	Materiais Básicos	Embalagens	Embalagens	\N	\N
+ELEK3	19.11	ELEKEIROZ S.A.	24.46	2.66	21.94	1.07	38.76	11.39	2.82	2.53	0.62	3.75	-2.6	1.72	10.87	4.36	4.38	0.7	5.75	0.4	0.6	1.94	-0.35	1.48	\N	7.19	0.78	905051916.3	Materiais Básicos	Químicos	Petroquímicos	\N	\N
+CESP3	25.55	CESP - CIA ENERGETICA DE SAO PAULO	-13.85	1.05	14.71	0.61	16.35	39.26	40.55	-43.06	5.96	6.19	-0.71	0.1	-7.57	-4.41	-4.27	0.13	1.76	0.58	0.42	3.77	0.11	-3.19	\N	24.36	-1.84	8302192833.55	Utilidade Pública	Energia Elétrica	Energia Elétrica	\N	\N
+SLED3	3.21	SARAIVA S.A. LIVREIROS EDITORES	0.45	-0.08	0.56	0.48	0.95	47.85	73.94	92.71	0.42	-0.2	-0.72	1.15	-18.07	107.04	-15.91	\N	0.65	-5.92	6.92	0.12	-0.02	-45.03	4387.67	-39.57	7.15	16497692.59	Consumo Cíclico	Comércio	Produtos Diversos	\N	\N
+LINX3	37.4	LINX S.A.	-90.95	4.38	-164.48	2.74	-159.3	68.7	-4.79	-8.67	7.88	11.96	-4.82	0.35	-4.81	-3.02	-2.23	-0.14	5.18	0.63	0.37	2.14	0.13	14.3	\N	8.55	-0.41	7083895104	Tecnologia da Informação	Programas e Serviços	Programas e Serviços	\N	\N
+ITEC3	40.1	ITAUTEC S.A. - GRUPO ITAUTEC	-35.12	22.04	-13.85	9.22	-13.21	-121.18	-18852.94	-7435.88	2611.73	25.42	-16.7	0	-62.76	-26.24	-174.07	-1.02	0.64	0.42	0.58	5.23	1.36	-75.29	\N	1.82	-1.14	443994658.6	Tecnologia da Informação	Computadores e Equipamentos	Computadores e Equipamentos	\N	\N
+EMAE3	69.28	EMAE - EMPRESA METROP.AGUAS ENERGIA S.A.	16.61	2.3	28.26	1.21	18.06	27.62	14.64	24.9	4.14	3.33	-2.15	0.29	13.87	7.27	7.2	-0.39	-4.82	0.52	0.48	5.73	0.11	13.78	10643.67	30.07	4.17	2072822860.06	Utilidade Pública	Energia Elétrica	Energia Elétrica	8.7	2.75
+CSED3	3.64	CRUZEIRO DO SUL EDUCACIONAL S.A.	10.45	0.93	3.01	0.3	3.68	48.64	18.55	5.34	0.56	-7.73	-0.37	0.53	8.91	2.84	19.83	0.21	0.67	0.32	0.68	0.84	0.01	12.85	3581932.63	3.91	0.35	1326934889.28	Consumo Cíclico	Diversos	Serviços Educacionais	1.5	\N
+CEED4	25	CIA ESTADUAL DE DISTRIB ENER ELET-CEEE-D	-3.71	-0.51	7.17	0.22	18.39	22.22	4.98	-9.62	0.36	7.8	-0.36	0.62	-13.82	-5.98	16.33	\N	14.02	-0.43	1.43	1.08	-0.04	7.53	4166.67	-48.71	-6.73	1039763182.36	Utilidade Pública	Energia Elétrica	Energia Elétrica	\N	\N
+FTRT3B	0	FUTURETEL S.A.	0	0	0	0	0	\N	\N	\N	\N	0	0	0	-0.95	-0.9	-2.42	0	0	0.95	0.05	0	0	\N	\N	0.01	0	0	Financeiro e Outros	Outros	Outros	\N	\N
+USIM5	7.6	USINAS SID DE MINAS GERAIS S.A.	15.03	0.41	17.09	0.24	17.22	7.54	2.06	2.34	0.35	0.71	-0.45	0.67	2.7	1.58	1.73	0.01	0.63	0.58	0.35	3.43	-0.25	24.78	74989370.77	18.71	0.51	9248349554.04	Materiais Básicos	Siderurgia e Metalurgia	Siderurgia	22.16	3.72
+VSTE3	17.05	VESTE S.A. ESTILO	177.85	1.87	84.45	1.17	96.23	65.35	2.11	1	1.78	8.95	-1.71	0.66	1.05	0.66	-3.61	0.26	11.78	0.63	0.37	1.72	-1.96	-2.26	213047.21	9.1	0.1	1943708695.5	Consumo Cíclico	Comércio	Tecidos. Vestuário e Calçados	-36.21	0.28
+PGMN3	2.21	EMPREENDIMENTOS PAGUE MENOS S.A.	20.42	0.49	2.78	0.15	5.73	31.68	4.03	0.55	0.11	1.09	-0.29	1.31	2.42	0.72	5.18	0.52	2.95	0.3	0.7	1.38	-0.12	12.4	1392915.4	4.47	0.11	1285591562.19	Saúde	Comércio e Distribuição	Medicamentos e Outros Produtos	-7.5	13.38
+EGIE3	43.96	ENGIE BRASIL ENERGIA S.A.	8.48	3.33	4.82	0.79	6.96	54.98	71.27	40.52	3.43	12.34	-0.97	0.23	39.26	9.31	18.17	1.48	2.15	0.24	0.74	1.51	0.18	4.09	69901716.4	13.21	5.19	35868183450.4	Utilidade Pública	Energia Elétrica	Energia Elétrica	12.83	5.32
+FIEI3	9.01	FICA EMPREENDIMENTOS IMOBILIÁRIOS S.A	-1.89	0.26	-2.46	0.22	-2.05	39.67	-366.35	-475.92	9	-6.94	-0.24	0.02	-13.93	-11.72	-10.73	-0.04	0.4	0.84	0.16	0.73	0.01	-18.7	21301.27	34.21	-4.76	21823598.53	Consumo Cíclico	Construção Civil	Incorporações	\N	\N
+BDLL4	9.8	BARDELLA S.A. INDUSTRIAS MECANICAS	0.19	-0.08	-0.22	0.03	-2.56	-66.49	-341.69	389.28	0.75	-0.07	-0.05	0.04	-39.61	14.53	629.58	\N	-2.31	-0.37	1.37	0.55	0.01	-22.74	4528.71	-129.19	51.18	17629086.32	Bens Industriais	Máquinas e Equipamentos	Máq. e Equip. Industriais	\N	\N
+TTEN3	9.91	TRÊS TENTOS AGROINDUSTRIAL SA	7.86	1.44	9.55	0.66	10.19	15.06	5.24	6.36	0.5	2.93	-1.9	1.33	18.29	8.44	8.28	0.1	0.63	0.46	0.54	1.53	5.46	36.65	11375245.06	6.89	1.26	4938129681.77	Consumo não Cíclico	Agropecuária	Agricultura	38.06	1.19
+RANI3	8.4	Irani Papel e Embalagem S.A.	5.91	1.57	4.04	0.58	6.1	41.24	31.72	21.71	1.28	2.42	-0.86	0.45	26.66	9.84	13.63	0.8	2.06	0.37	0.63	3.75	-2.61	11.31	5773230.11	5.34	1.42	2014571319.6	Materiais Básicos	Embalagens	Embalagens	157.54	8.8
+SMLS3	22.4	SMILES FIDELIDADE S.A.	10.78	4.09	10.17	1.02	9.93	85.18	41.42	39.07	4.21	18.78	-2.54	0.24	37.96	9.43	24.47	-0.1	-0.24	0.25	0.75	1.1	-0.33	\N	\N	5.47	2.08	2781160547.2	Consumo Cíclico	Diversos	Programas de Fidelização	\N	\N
+NAFG4	19.02	NADIR FIGUEIREDO IND E COM S.A.	3.49	0.82	1.97	0.34	5.06	41.15	16.49	9.34	0.33	0.94	-0.85	1.05	23.42	9.77	15.89	0.48	1.17	0.42	0.58	2.52	-0.34	7.87	\N	23.3	5.46	508315292.42	Consumo Cíclico	Utilidades Domésticas	Utensílios Domésticos	35.19	\N
+IDVL3	2.16	BCO INDUSVAL S.A.	-0.99	0.93	-3.81	0.06	-3.84	-18.91	-40.19	-154.6	1.53	0.48	-0.13	0.04	-94.38	-5.67	\N	\N	\N	0.06	0.94	1.26	0	-32.17	\N	2.31	-2.18	224007574.38	Financeiro e Outros	Intermediários Financeiros	Bancos	\N	\N
+EMAE4	47.39	EMAE - EMPRESA METROP.AGUAS ENERGIA S.A.	11.36	1.58	19.33	0.83	18.06	27.62	14.64	24.9	2.83	2.28	-1.47	0.29	13.87	7.27	7.2	-0.39	-4.82	0.52	0.48	5.73	0.07	13.78	176340.69	30.07	4.17	2072822860.06	Utilidade Pública	Energia Elétrica	Energia Elétrica	8.7	4.42
+FLEX3	0	FLEX GESTÃO DE RELACIONAMENTOS S.A.	0	0	0	0	-0.44	22.25	-72.5	-102.95	0	0	0	2.17	-94.35	-223.42	100.17	\N	-0.44	-2.37	3.37	0.15	0	-5.08	\N	-112.78	-106.4	0	Bens Industriais	Serviços	Serviços Diversos	\N	\N
+EQPA6	7.01	EQUATORIAL PARA DISTRIBUIDORA DE ENERGIA S.A.	6.94	3.05	5.29	1.06	6.33	34.97	28.06	21.37	1.48	10.75	-1.5	0.71	43.96	15.26	25.67	0.72	1.24	0.35	0.65	1.5	0.21	13.58	701	2.3	1.01	14917885169.87	Utilidade Pública	Energia Elétrica	Energia Elétrica	37.41	\N
+RPAD6	8.66	ALFA HOLDINGS S.A.	45.09	0.67	77.03	0.67	72.54	\N	\N	\N	\N	14.28	-0.71	0	1.5	1.49	0.83	-0.05	-5.61	1	0	14.69	-0.6	\N	3644.88	12.84	0.19	744009751.38	Financeiro e Outros	Intermediários Financeiros	Bancos	-17.68	\N
+HGTX3	37.5	CIA HERING	101.99	3.57	-707.65	2.48	-713.65	40.58	-0.59	4.1	4.18	7.5	-5.59	0.59	3.51	2.43	-7.32	0.03	-5.99	0.69	0.31	2.47	-1.23	-7.54	\N	10.49	0.37	6095022637.5	Consumo Cíclico	Tecidos. Vestuário e Calçados	Vestuário	-26.63	\N
+BMIN4	15.75	BCO MERCANTIL DE INVESTIMENTOS S.A.	9.65	0.56	5.82	0.29	7.17	59.53	38.47	23.23	2.24	35.04	-0.29	0.13	5.77	2.96	\N	\N	\N	0.51	0.49	\N	-0.56	19.32	5513.5	28.28	1.63	93527042.82	Financeiro e Outros	Intermediários Financeiros	Bancos	13.81	8.89
+SCAR3	21.4	SAO CARLOS EMPREEND E PARTICIPACOES S.A.	4.42	0.73	2.48	0.36	4.79	48.51	38.39	21.5	0.95	2.45	-0.48	0.38	16.49	8.14	14.04	0.68	2.31	0.49	0.5	2.38	-0.01	30.55	300453.74	29.36	4.84	1235578626.6	Financeiro e Outros	Exploração de Imóveis	Exploração de Imóveis	77.96	\N
+ALUP3	9.94	ALUPAR INVESTIMENTO S/A	13.16	1.24	4.02	0.33	7.78	75.41	71.12	21.74	2.86	4.2	-0.41	0.11	9.42	2.49	8.82	1.15	3.74	0.26	0.62	1.67	945.01	11.95	113952.14	8.02	0.76	9502128341.79	Utilidade Pública	Energia Elétrica	Energia Elétrica	13.18	4.12
+SMFT3	21.53	SMARTFIT ESCOLA DE GINÁSTICA E DANÇA S.A.	12.05	2.4	11.33	0.86	12.89	40.51	24.64	23.15	2.79	12.48	-1.1	0.31	19.87	7.1	6.86	0.33	1.56	0.36	0.64	1.45	0.01	29.62	48581388.49	8.99	1.79	12621796482.17	Consumo Cíclico	Viagens e Lazer	Atividades Esportivas	24.4	2.5
+TXRX4	2.3	TEXTIL RENAUXVIEW S.A.	1.89	-0.03	0.25	0.05	8.08	8.47	34.9	4.58	0.09	-0.05	-0.09	0.53	-1.44	2.44	-64.83	\N	7.57	-1.7	2.7	0.32	0	8.73	10144.55	-84.48	1.22	20123661.57	Consumo Cíclico	Tecidos. Vestuário e Calçados	Fios e Tecidos	\N	\N
+CRIV4	6.74	FINANCEIRA ALFA S.A.- CRED FINANC E INVS	37.35	0.64	78.57	0.04	80.16	20.26	0.43	0.9	0.33	0.07	-0.09	0.12	1.72	0.11	\N	\N	\N	0.06	0.94	131.56	-0.8	27.56	574820.76	10.5	0.18	707929532	Financeiro e Outros	Intermediários Financeiros	Soc. Crédito e Financiamento	-22.87	\N
+CRPG6	29.49	TRONOX PIGMENTOS DO BRASIL S.A.	211.04	1.26	-20.88	0.89	-19	-0.97	-7.63	0.76	1.59	1.63	-2.82	0.56	0.6	0.42	-7.75	-0.17	2.79	0.71	0.29	4.9	-2.2	-1.98	19106.85	23.43	0.14	893117726.66	Materiais Básicos	Químicos	Químicos Diversos	-51.79	0.94
+ALPA3	9.25	ALPARGATAS S.A.	-3.85	1.67	-3.79	0.98	-3.92	40.73	-44.32	-43.64	1.68	2.77	-2.03	0.58	-43.42	-25.35	-33.22	0.08	-0.18	0.58	0.42	3.12	0	-0.89	34267.23	5.54	-2.4	6232437670.25	Consumo Cíclico	Tecidos. Vestuário e Calçados	Calçados	\N	\N
+ENBR3	24.08	EDP - ENERGIAS DO BRASIL S.A.	10.11	1.26	3.56	0.41	6.03	30.57	22.46	7.9	0.8	9.32	-0.55	0.51	12.44	4.05	12.53	0.88	2.47	0.33	0.64	1.21	-0.27	5.16	27666157.79	19.15	2.38	13994459653.44	Utilidade Pública	Energia Elétrica	Energia Elétrica	1.69	\N
+CEBR6	19.32	CIA ENERGETICA DE BRASILIA	7.97	1.32	6.39	0.94	3.35	50.78	61.36	49.19	3.92	1.96	-2.08	0.24	16.6	11.78	11.87	-0.66	-3.19	0.71	0.11	8.05	-0.48	-32.89	89126.63	14.59	2.42	1424592189.9	Utilidade Pública	Energia Elétrica	Energia Elétrica	14.18	10.81
+ITSA3	9.86	ITAUSA INVESTIMENTOS ITAU S.A.	7.2	1.27	7	0.98	7.24	29.75	191.18	185.92	13.39	12.6	-1.12	0.07	17.58	13.6	14.88	0.05	0.26	0.77	0.19	2.71	0.66	6.55	977198.09	7.79	1.37	101496611030.26	Financeiro e Outros	Intermediários Financeiros	Bancos	8.43	12.89
+BPAN4	8.18	BCO PAN S.A.	17.66	1.42	16.16	0.17	16.16	51.11	4.27	3.91	0.69	\N	-0.17	0.24	8.02	0.95	\N	\N	\N	0.12	0.88	\N	-11.25	16.74	13518088.23	5.78	0.46	10380993336.2	Financeiro e Outros	Intermediários Financeiros	Bancos	24.28	2.63
+MLAS3	1.91	MULTILASER INDUSTRIAL S.A.	-2.79	0.5	-3.39	0.3	-2.81	11.85	-13.4	-16.33	0.45	0.6	-1.09	0.66	-17.87	-10.76	-12.84	-0.09	0.58	0.6	0.4	3.18	-0.08	12.82	4672546.8	3.84	-0.69	1567229919.75	Tecnologia da Informação	Computadores e Equipamentos	Computadores e Equipamentos	\N	\N
+BRGE7	13.07	CONSORCIO ALFA DE ADMINISTRACAO S.A.	32.83	0.72	-33.92	0.33	19.81	-4115.33	-798.17	824.67	270.76	0.86	-0.73	0	2.19	0.99	-2.79	-1.15	54.17	0.45	0.36	3.13	-0.5	-32.83	6535	18.16	0.4	974940393.52	Financeiro e Outros	Previdência e Seguros	Seguradoras	-11.18	\N
+BMKS3	335	BICICLETAS MONARK S.A.	8.61	0.73	43.6	0.63	-4.28	29.68	23.81	120.58	10.38	0.87	-2.66	0.06	8.46	7.31	-1.07	-0.8	-47.89	0.86	0.14	19.87	-0.23	2.77	8606.88	460.02	38.9	152341250	Consumo Cíclico	Viagens e Lazer	Bicicletas	36.7	11.72
+ALOS3	20.6	ALIANSCE SONAE SHOPPING CENTERS S.A.	3.45	0.8	2.03	0.41	1.59	68.51	214.47	126.23	4.35	13.62	-0.47	0.09	23.3	11.89	25.69	-0.17	-0.44	0.51	0.45	1.29	0	25.65	94458750.54	25.63	5.97	11184500325.4	Financeiro e Outros	Exploração de Imóveis	Exploração de Imóveis	87.91	5.43
+GETT4	2.4	GETNET ADQUIRENCIA E SERV PARA MEIOS DE PGTO S.A.	7.55	1.24	7.26	0.08	\N	41.43	18.41	17.71	1.34	3.13	-1.96	0.06	16.41	1.07	10.57	0.17	0.99	0.07	0.93	1.03	0.07	\N	\N	1.94	0.32	\N	Financeiro e Outros	Serviços Financeiros Diversos	Serviços Financeiros Diversos	\N	\N
+BRSR3	11.63	BCO ESTADO DO RIO GRANDE DO SUL S.A	4.74	0.48	3.8	0.04	3.72	32.23	8.31	6.67	0.32	5.82	-0.04	0.12	10.05	0.77	\N	\N	\N	0.08	0.92	1.54	0.48	12.01	89870.09	24.43	2.46	4654418349.51	Financeiro e Outros	Intermediários Financeiros	Bancos	2.04	6.05
+LREN3	12.53	LOJAS RENNER S.A.	11.29	1.2	12.17	0.63	11.14	60.14	7.2	7.76	0.88	2.83	-1.47	0.72	10.58	5.61	7.97	-0.1	-1.03	0.53	0.47	1.65	-1.66	10.12	261083943.14	10.49	1.11	12069234222.29	Consumo Cíclico	Comércio	Tecidos. Vestuário e Calçados	0.94	5.44
+ELMD3	17	ELETROMIDIA S.A.	93.44	2.97	18.42	1.01	22.89	43.62	15.31	3.02	2.82	84.14	-1.38	0.36	3.18	1.08	5.25	0.72	4.47	0.34	0.58	1.05	-4.47	37.68	1148378.74	5.72	0.18	2379723801	Comunicações	Mídia	Publicidade	\N	0.13
+TIMS3	15.7	TIM PARTICIPACOES S.A.	13.39	1.46	8.06	0.69	7.79	51.76	19.79	11.9	1.59	-25.7	-0.87	0.43	10.91	5.13	14.67	-0.05	-0.27	0.47	0.53	0.89	0.19	7.02	122571295.69	10.75	1.17	38006629048.6	Comunicações	Telecomunicações	Telecomunicações	2.2	8.37
+ASAI3	10.86	SENDAS DISTRIBUIDORA S.A.	20.31	3.39	4.61	0.36	7.64	16.43	4.88	1.11	0.22	-4.3	-0.52	1.58	16.72	1.75	16.73	2.24	3.04	0.1	0.9	0.79	-0.44	\N	109546480.57	3.2	0.53	14680908552	Consumo não Cíclico	Comércio e Distribuição	Alimentos	\N	\N
+BBML3	3936.42	BBM LOGISTICA S.A.	-2560.51	-7089.59	7141.34	141.45	7161.6	5.41	1.44	-4.01	102.6	-774.57	-213.54	1.38	-276.88	-5.52	-17.06	\N	20.26	-0.02	1.02	0.65	12.66	25.94	\N	-0.56	-1.54	160451699191.56	Bens Industriais	Serviços	Serviços Diversos	\N	\N
+ONCO3	5.61	ONCOCLINICAS DO BRASIL SERVICOS MEDICOS S.A.	14.02	1.29	4.13	0.3	10.22	34.32	12.66	3.73	0.52	4.24	-0.45	0.58	9.17	2.16	8.42	1.9	6.09	0.24	0.73	1.28	0.11	\N	52619436.77	4.36	0.4	2959171764.78	Saúde	Serv.Méd.Hospit..Análises e Diagnósticos	Serv.Méd.Hospit..Análises e Diagnósticos	\N	\N
+GOAU4	10.25	METALURGICA GERDAU S.A.	4.92	0.6	1.19	0.14	1.74	15.28	13.39	3.25	0.16	0.54	-0.22	0.86	12.16	2.78	12.35	0.27	0.54	0.23	0.32	2.82	-0.11	8.35	92318708.69	17.13	2.08	10661907843.21	Materiais Básicos	Siderurgia e Metalurgia	Siderurgia	21.91	13.95
+ABEV3	11.32	AMBEV S.A.	12.3	1.98	9.56	1.29	8.82	50.66	23.47	18.25	2.24	48.12	-1.78	0.58	16.07	10.52	18.85	-0.15	-0.75	0.65	0.34	1.11	-7.49	9.68	365974692.6	5.73	0.92	178376681043.52	Consumo não Cíclico	Bebidas	Cervejas e Refrigerantes	5.69	6.45
+KRSA3	0.55	KORA SAÚDE PARTICIPAÇÕES S.A	-2.94	0.44	1.36	0.09	9.55	20.8	13.78	-6.37	0.19	0.71	-0.13	0.48	-15.07	-3.05	7.42	2.67	8.19	0.2	0.78	1.74	0.18	\N	958488.86	1.24	-0.19	425341436.85	Saúde	Serv.Méd.Hospit..Análises e Diagnósticos	Serv.Méd.Hospit..Análises e Diagnósticos	\N	\N
+MRSA6B	28.5	MRS LOGISTICA S.A.	7.03	1.44	3.47	0.55	4.76	48.65	40.56	20.01	1.41	7.51	-0.71	0.39	20.44	7.75	15.82	0.54	1.3	0.38	0.62	1.44	0.14	11.59	9946.33	19.83	4.05	9617527706.38	Bens Industriais	Transporte	Transporte Ferroviário	21.31	\N
+PATI4	30.89	PANATLANTICA S.A.	31.41	0.86	11.31	0.46	10.31	10.39	3.55	1.28	0.4	1.03	-1.82	1.15	2.75	1.47	3.36	0.05	0.71	0.54	0.46	2.52	-0.46	12.01	6550	35.74	0.98	627255242.54	Materiais Básicos	Siderurgia e Metalurgia	Artefatos de Ferro e Aço	-18.19	6.82
+JSLG3	9.21	JSL S.A.	7.36	1.55	1.98	0.19	6.27	18.17	16.45	4.44	0.33	0.77	-0.32	0.57	21.11	2.55	11.57	3.36	4.29	0.12	0.88	2.42	0.08	-1.27	4923030.89	5.93	1.25	2638030228.38	Bens Industriais	Transporte	Transporte Rodoviário	22.26	3.44
+EUCA3	14.75	EUCATEX S.A. INDUSTRIA E COMERCIO	3.43	0.55	3.59	0.33	5.2	33.23	14.43	15.1	0.52	2.02	-0.51	0.63	16.18	9.58	9.67	0.24	1.56	0.59	0.41	1.83	0.06	16.23	7756.35	26.6	4.3	1385156108.36	Materiais Básicos	Madeira e Papel	Madeira	68.94	4.01
+PNVL4	18.62	DIMED S.A. DISTRIBUIDORA DE MEDICAMENTOS	25.87	2.34	15.62	0.87	12.75	31.28	3.85	2.32	0.6	3.7	-2.23	1.45	9.04	3.38	7.47	0.71	4.74	0.37	0.63	1.64	0.89	12.9	\N	7.96	0.72	1436104943.55	Saúde	Comércio e Distribuição	Medicamentos e Outros Produtos	7.62	\N
+VIVR3	2.42	VIVER INCORPORADORA E CONSTRUTORA S.A.	-0.92	0.62	-0.93	0.24	-1.24	30.15	-113.79	-115.74	1.06	2.02	-0.42	0.22	-68.12	-25.68	-52.63	0.2	-0.3	0.38	0.62	1.37	0	-3.94	228624.94	3.88	-2.64	66179326.18	Consumo Cíclico	Construção Civil	Incorporações	\N	\N
+CPLE5	15.5	CIA PARANAENSE DE ENERGIA - COPEL	24.19	1.89	13.48	0.83	11.42	21.53	15.88	8.85	2.14	12.04	-1.11	0.39	7.83	3.45	7.72	0.38	2.7	0.44	0.55	1.39	0.34	9.35	4879.6	8.19	0.64	29899693364.18	Utilidade Pública	Energia Elétrica	Energia Elétrica	13.08	3.1
+WLMM3	23.2	WLM PART. E COMÉRCIO DE MÁQUINAS E VEÍCULOS S.A.	7.2	1.16	4.86	0.96	5.46	11.5	6.34	4.28	0.31	2.04	-2.23	3.11	16.12	13.3	16.62	-0.04	-0.17	0.82	0.17	5.56	-1.71	25.9	3137.83	20	3.22	979557369.5	Bens Industriais	Comércio	Material de Transporte	48.84	2.86
+PPLA11	3.67	PPLA PARTICIPATIONS LTD.	1.72	1147.76	1.72	39.88	1.72	\N	\N	\N	\N	\N	-1147.76	0	66622.22	2315.06	\N	\N	\N	0.03	0.97	1	0	\N	690.23	0	2.13	10329824.22	Financeiro e Outros	Serviços Financeiros Diversos	Gestão de Recursos e Investimentos	\N	\N
+GGBR4	17.43	GERDAU S.A.	4.1	0.73	2.98	0.48	3.32	17.21	17.49	12.74	0.52	1.81	-0.81	0.92	17.72	11.74	16.75	0.11	0.44	0.66	0.34	2.93	-0.19	17.42	232182493	24	4.25	35453677303.8	Materiais Básicos	Siderurgia e Metalurgia	Siderurgia	\N	7.34
+TOYB3	2.29	TEC TOY S.A.	-43.94	-4.97	-45	4.03	-47.62	24.06	-10.7	-10.96	4.81	-5.93	-11.89	0.84	-11.31	-9.18	11.93	\N	-0.63	-0.81	1.81	0.49	0.47	-33.11	\N	-0.46	-0.05	71890222.22	Consumo Cíclico	Viagens e Lazer	Brinquedos e Jogos	\N	\N
+PINE4	4.1	BCO PINE S.A.	4.31	0.81	3.08	0.04	3.63	9.2	13.38	9.57	0.41	-0.08	-0.04	0.09	18.76	0.82	\N	\N	\N	0.04	0.9	0.03	0.02	21.9	861290.66	5.08	0.95	1015526557.45	Financeiro e Outros	Intermediários Financeiros	Bancos	\N	9.48
+AALR3	10.14	ALLIANÇA SAÚDE E PARTICIPAÇÕES S.A.	-4.44	1.24	66.71	0.47	109.53	29.56	1.54	-23.1	1.02	-5.18	-0.56	0.45	-27.9	-10.51	-0.16	0.79	42.82	0.38	0.61	0.66	-0.48	1.84	698390.8	8.19	-2.29	1199489154.24	Saúde	Serv.Méd.Hospit..Análises e Diagnósticos	Serv.Méd.Hospit..Análises e Diagnósticos	\N	\N
+DTCY4	62.6	DTCOM - DIRECT TO COMPANY S.A.	-181.65	-158.8	-205.97	124.79	-25.78	-8.45	-61.19	-69.38	126.03	-304.42	-212.05	0.99	-87.42	-68.7	141.55	\N	-0.39	-0.79	1.79	0.5	0.18	-18.43	\N	-0.39	-0.34	85885573.4	Bens Industriais	Serviços	Serviços Diversos	\N	\N
+CATA4	0	CIA INDUSTRIAL CATAGUASES	0	0	0	0	3.91	25.85	6.1	5.8	0	0	0	0.73	9.26	4.25	4.24	0.3	3.07	0.46	0.54	1.93	0	11.32	\N	1257.08	116.4	14940354.78	Consumo Cíclico	Tecidos. Vestuário e Calçados	Fios e Tecidos	\N	\N
+BPAC5	8.2	BCO BTG PACTUAL S.A.	8.93	1.82	7.58	0.19	9.8	20.34	25.92	22	1.96	21.29	-1.99	0.1	20.33	2.17	\N	\N	\N	0.11	0.89	1.01	0.28	43.9	123853.11	4.52	0.92	122041578702.99	Financeiro e Outros	Intermediários Financeiros	Bancos	52.56	3.17
+MOVI3	5.96	MOVIDA PARTICIPACOES SA	-3.46	0.86	1.56	0.08	10.91	26.67	13.02	-5.85	0.2	-1.51	-0.11	0.41	-24.8	-2.38	6.61	5.16	9.35	0.1	0.9	0.82	0.01	32.43	27661990.69	6.94	-1.72	2159320432.56	Consumo Cíclico	Diversos	Aluguel de carros	\N	\N
+LOGG3	22.27	LOG COMMERCIAL PROPERTIES	10.35	0.61	8.11	0.36	14.41	97.85	135.57	106.21	10.99	7.46	-0.41	0.03	5.86	3.47	4.89	0.47	6.3	0.59	0.41	1.67	-0.47	16	5614029.29	36.75	2.15	2275084359.58	Financeiro e Outros	Exploração de Imóveis	Exploração de Imóveis	38.28	3.13
+CTKA4	17	KARSTEN S.A.	2.41	-1.04	1.9	0.17	9.71	44.05	8.47	6.65	0.16	0.6	-0.54	1.03	-43.04	6.86	14.06	\N	7.71	-0.16	1.16	1.66	0	16.1	7025.89	-16.37	7.05	111276967.04	Consumo Cíclico	Tecidos. Vestuário e Calçados	Fios e Tecidos	\N	\N
+AZEV4	1.37	AZEVEDO E TRAVASSOS S.A.	-4.83	0.77	-2.39	0.31	-2.75	11.67	-29.6	-14.63	0.71	-1.35	-0.41	0.44	-15.85	-6.48	-53.35	0.11	-0.35	0.41	0.59	0.5	0.08	54.36	4347571.94	1.79	-0.28	230488931.14	Bens Industriais	Construção e Engenharia	Construção Pesada	\N	\N
+RPAD5	8.9	ALFA HOLDINGS S.A.	46.34	0.69	79.17	0.69	72.54	\N	\N	\N	\N	14.68	-0.73	0	1.5	1.49	0.83	-0.05	-5.61	1	0	14.69	-0.62	\N	27934.44	12.84	0.19	744009751.38	Financeiro e Outros	Intermediários Financeiros	Bancos	-17.68	5.96
+RENT3	39.31	LOCALIZA RENT A CAR S.A.	20.89	1.62	6.9	0.53	12.04	28.13	19.86	6.56	1.37	17.22	-0.68	0.38	7.76	2.52	8.77	1.21	5.14	0.33	0.67	1.16	2.32	29.63	447873008.89	24.26	1.88	42135990317.98	Consumo Cíclico	Diversos	Aluguel de carros	25.06	4.91
+IGBR3	175.99	IGB ELETRÔNICA S/A	0.56	-0.34	0.5	1.04	1.06	100	6032.01	5379.32	30.26	-0.99	-2.15	0.03	-60.1	184.1	-146.75	\N	0.56	-3.06	4.06	0.33	0	-7.98	\N	-520.56	312.87	220074791.04	Financeiro e Outros	Exploração de Imóveis	Exploração de Imóveis	\N	\N
+CMIG3	12.46	CIA ENERGETICA DE MINAS GERAIS - CEMIG	6.46	1.4	5.06	0.62	5.49	22.34	18.93	14.81	0.96	18.21	-0.84	0.65	21.72	9.61	16.13	0.28	1.01	0.44	0.56	1.15	-0.39	10.6	3360748.31	8.88	1.93	31542613646.26	Utilidade Pública	Energia Elétrica	Energia Elétrica	26.55	12.46
+MAPT4	4.82	CEMEPE INVESTIMENTOS S.A.	-30.76	-0.7	-30.76	5.73	-28.83	\N	\N	\N	\N	-105.45	-5.73	0	-2.28	-18.63	2.28	\N	0	-8.17	9.17	0	1.95	\N	8062.57	-6.87	-0.16	4151856.35	Financeiro e Outros	Outros	Outros	\N	\N
+LAVV3	7.95	LAVVI EMPREENDIMENTOS IMOBILIÁRIOS S.A.	7.44	1.26	7.68	0.72	6.19	33.55	22.13	22.87	1.7	1.42	-2.54	0.42	16.91	9.7	11.76	-0.25	-1.5	0.57	0.39	3.44	0.09	122.69	6566921.43	6.32	1.07	1586298098.4	Consumo Cíclico	Construção Civil	Incorporações	\N	8.08
+BIDI11	10.4	BANCO INTER S.A.	-238.07	1.08	-91.21	0.23	-91.21	50.04	-13.62	-5.22	12.42	\N	-0.24	0.02	-0.45	-0.1	\N	\N	\N	0.22	0.78	\N	0.13	5.8	\N	9.67	-0.04	8991139764.53	Financeiro e Outros	Intermediários Financeiros	Bancos	\N	\N
+PLAS3	5.11	PLASCAR PARTICIPACOES INDUSTRIAIS S.A.	6.01	-0.14	1.02	0.09	5.61	13.92	6.41	1.09	0.07	-0.23	-0.14	1.38	-2.4	1.5	-3.01	\N	4.59	-0.62	1.62	0.47	-0.06	22.25	8162.05	-35.35	0.85	63493885.98	Consumo Cíclico	Automóveis e Motocicletas	Automóveis e Motocicletas	\N	\N
+CEAB3	9.27	CEA MODAS S.A.	14.32	0.93	5.26	0.32	6.16	52.92	7.84	2.88	0.41	2.31	-0.58	0.78	6.48	2.25	11.13	0.16	0.9	0.35	0.65	1.45	0.02	5.4	37771769.23	9.99	0.65	2857431780.36	Consumo Cíclico	Comércio	Tecidos. Vestuário e Calçados	2.82	\N
+ODPV3	11.25	ODONTOPREV S.A.	11.99	4.19	9.47	2.67	8.65	31.23	30.22	23.86	2.86	-107.35	-3.7	0.93	34.92	22.26	29.69	-0.36	-0.82	0.64	0.36	0.92	0.32	5.88	16053046.46	2.69	0.94	6215576208.75	Saúde	Serv.Méd.Hospit..Análises e Diagnósticos	Serv.Méd.Hospit..Análises e Diagnósticos	12.73	16.73
+IGTI11	19.46	JEREISSATI PARTICIPACOES S.A.	23.38	1.87	12.32	1.02	10.74	65.27	54.82	28.88	6.75	7.42	-1.35	0.15	7.98	4.36	7.75	0.41	2.73	0.55	0.45	2.26	0.06	9.87	72451624.4	10.43	0.83	5139561723.8	Financeiro e Outros	Exploração de Imóveis	Exploração de Imóveis	25.13	3.46
+HAGA4	1.18	HAGA S.A. INDUSTRIA E COMERCIO	3.76	-0.27	16.93	0.22	-4.24	25.6	3	13.51	0.51	0.46	-1.75	0.44	-7.09	5.93	3.35	\N	-28.87	-0.84	1.84	2.24	-0.1	4.66	18480.6	-4.43	0.31	20428333.87	Bens Industriais	Construção e Engenharia	Produtos para Construção	-8.93	\N
+BDLL3	13.01	BARDELLA S.A. INDUSTRIAS MECANICAS	0.25	-0.1	-0.29	0.04	-2.56	-66.49	-341.69	389.28	0.99	-0.1	-0.07	0.04	-39.61	14.53	629.58	\N	-2.31	-0.37	1.37	0.55	0.01	-22.74	3279.89	-129.19	51.18	17629086.32	Bens Industriais	Máquinas e Equipamentos	Máq. e Equip. Industriais	\N	\N
+UNIP3	47.56	UNIPAR CARBOCLORO S.A.	9.18	2.15	8.19	0.76	8.82	31.49	14.76	13.16	1.21	2.42	-1.53	0.63	23.37	8.33	8.24	0.15	0.56	0.36	0.64	2.73	-0.19	7.14	453374.46	22.16	5.18	5481209197.59	Materiais Básicos	Químicos	Químicos Diversos	2.3	5.82
+FHER3	3.8	FERTILIZANTES HERINGER S.A.	-0.55	-1.5	-0.72	0.07	-1	1.67	-5.78	-7.58	0.04	3.4	-0.24	1.78	-273.41	-13.52	4498.26	\N	-0.28	-0.05	1.05	1.03	0.06	7.66	25369.91	-2.54	-6.94	204657679.2	Materiais Básicos	Químicos	Fertilizantes e Defensivos	\N	\N
+POWE3	10.9	FOCUS ENERGIA HOLDING PARTICIPAÇÕES S.A	23.92	0.99	17.55	0.38	10.6	6.82	3.52	2.59	0.62	6.57	-0.74	0.61	4.13	1.58	3.81	-0.39	-6.96	0.38	0.62	1.13	-1.77	\N	\N	11.02	0.46	977237930.4	Utilidade Pública	Energia Elétrica	Energia Elétrica	\N	\N
+MSPA3	42.71	CIA MELHORAMENTOS DE SAO PAULO	30.04	0.33	7.32	0.19	10.24	43.07	22.38	5.46	1.64	5.06	-0.21	0.12	1.09	0.64	2.64	0.14	3.05	0.58	0.42	1.68	-0.11	5.07	4300	129.88	1.42	268891142.67	Consumo Cíclico	Mídia	Jornais. Livros e Revistas	14.21	0.68
+ITSA4	9.81	ITAUSA INVESTIMENTOS ITAU S.A.	7.16	1.26	6.97	0.97	7.24	29.75	191.18	185.92	13.32	12.53	-1.11	0.07	17.58	13.6	14.88	0.05	0.26	0.77	0.19	2.71	0.66	6.55	218925103.34	7.79	1.37	101496611030.26	Financeiro e Outros	Intermediários Financeiros	Bancos	8.43	9.91
+NUTR3	5.37	NUTRIPLANT INDUSTRIA E COMERCIO S.A.	12.98	1.92	5.93	0.63	6.47	15.87	5.92	2.7	0.35	2.24	-1.95	1.8	14.78	4.86	22.92	0.17	0.54	0.33	0.67	1.71	-0.67	28.54	41448.97	2.8	0.41	71122428	Materiais Básicos	Químicos	Fertilizantes e Defensivos	\N	\N
+HAGA3	2.79	HAGA S.A. INDUSTRIA E COMERCIO	8.88	-0.63	40.02	0.53	-4.24	25.6	3	13.51	1.2	1.09	-4.15	0.44	-7.09	5.93	3.35	\N	-28.87	-0.84	1.84	2.24	-0.23	4.66	16124.85	-4.43	0.31	20428333.87	Bens Industriais	Construção e Engenharia	Produtos para Construção	-8.93	\N
+BRIT3	4.18	BRISANET PARTICIPAÇÕES S.A.	11.84	1.23	7.96	0.58	11.48	45.24	18.58	12.48	1.48	10.51	-0.72	0.39	10.4	4.86	8.41	0.55	3.52	0.47	0.53	1.36	0.11	41.71	3161791.91	3.4	0.35	1877216748.88	Comunicações	Telecomunicações	Telecomunicações	44.43	2.09
+BMOB3	12.92	BEMOBI MOBILE TECH S.A.	12.26	1.02	11.23	0.78	5.81	23.22	7.45	6.82	0.84	1.73	-2.22	0.93	8.29	6.32	4.71	-0.49	-5.42	0.76	0.24	3.22	1	55.72	4944673.51	12.71	1.05	1124087700.64	Tecnologia da Informação	Programas e Serviços	Programas e Serviços	0.57	4.04
+COCE6	19.17	CIA ENERGETICA DO CEARA - COELCE	2.51	0.35	1.01	0.11	5.45	20.72	17.34	7.01	0.18	-0.49	-0.14	0.64	13.78	4.5	12.29	1.33	3.91	0.33	0.67	0.48	0.17	11.07	\N	55.5	7.65	2265418508.79	Utilidade Pública	Energia Elétrica	Energia Elétrica	10.31	5.03
+CSUD3	17.98	CSU DIGITAL S.A.	8.13	1.68	6.07	1.12	6.12	40.44	23.08	17.23	1.4	18.98	-1.56	0.8	20.67	13.75	17.14	0.01	0.05	0.67	0.33	1.26	0.45	4.78	883137.51	10.7	2.21	751564000	Bens Industriais	Serviços	Serviços Diversos	23.03	6.03
+FBMC4	1.96	FIBAM COMPANHIA INDUSTRIAL	-0.09	-0.02	-0.1	0.03	-0.74	-60.76	-92.67	-101.97	0.09	-0.04	-0.05	0.36	-24.19	-36.57	25.82	\N	-0.67	-1.51	2.51	0.31	0	-18.14	\N	-87.48	-21.16	904253.84	Materiais Básicos	Siderurgia e Metalurgia	Artefatos de Ferro e Aço	\N	\N
+APTI3	197.64	SIDERURGICA J. L. ALIPERTI S.A.	0.08	0.01	0.07	0.01	0.39	99.04	164.57	155.22	0.12	0.02	-0.01	0.06	19.51	9.91	15.35	-0.1	-0.47	0.51	0.49	8.39	0	1.52	\N	13488.14	2632.16	44442750	Consumo não Cíclico	Agropecuária	Agricultura	\N	22.22
+PEAB4	47.66	CIA PARTICIPACOES ALIANCA DA BAHIA	46.15	1.03	150.32	0.7	116.33	79.97	10.92	35.56	16.41	3.33	-0.94	0.04	2.23	1.53	0.12	-0.18	-25.81	0.68	0.32	6.46	1.29	-33.28	36039.8	46.22	1.03	852158060.28	Financeiro e Outros	Holdings Diversificadas	Holdings Diversificadas	-11.17	2.43
+MTIG3	0	METALGRAFICA IGUACU S.A.	0	0	0	0	-1.28	-16.12	-64.07	-113.09	0	0	0	0.66	-725.28	-74.53	-104.33	\N	-1.17	-0.1	1.1	0.27	0	-17.44	\N	-0.06	-0.46	3700608	Materiais Básicos	Embalagens	Embalagens	\N	\N
+AESB3	11.36	AES BRASIL ENERGIA S.A.	495.46	1.56	7.17	0.35	17.36	33.61	27.47	0.4	1.97	-2.7	-0.41	0.18	0.31	0.07	5.32	2.21	10.19	0.22	0.72	0.52	-5.56	\N	55898652.94	7.3	0.02	6837894252.96	Utilidade Pública	Energia Elétrica	Energia Elétrica	\N	0.66
+GETT3	2.4	GETNET ADQUIRENCIA E SERV PARA MEIOS DE PGTO S.A.	7.55	1.24	7.26	0.08	\N	41.43	18.41	17.71	1.34	3.13	-1.96	0.06	16.41	1.07	10.57	0.17	0.99	0.07	0.93	1.03	0.07	\N	\N	1.94	0.32	\N	Financeiro e Outros	Serviços Financeiros Diversos	Serviços Financeiros Diversos	\N	\N
+MAGG3	59.4	MAGNESITA REFRATARIOS S.A.	-119.99	1.32	7.17	0.44	11.3	33.56	9.54	-0.57	0.68	9.32	-0.71	0.64	-1.1	-0.37	7.17	0.76	4.13	0.33	0.67	1.14	1.04	8.44	\N	44.89	-0.5	2972404571.4	\N	\N	\N	\N	\N
+SULA4	7.63	SUL AMERICA S.A.	53.73	1.17	-13.3	0.32	6.54	4.25	-3.34	0.83	0.44	0.88	-0.93	0.73	2.17	0.6	-8.72	-1.71	19.47	0.28	0.72	2.29	-0.97	4.58	\N	6.55	0.14	9475042424.17	Financeiro e Outros	Previdência e Seguros	Seguradoras	-23.56	\N
+TOTS3	29.46	TOTVS S.A.	23.69	3.8	25.06	2.01	23.83	69.4	15.5	16.39	3.88	9.33	-3.22	0.52	16.03	8.5	8.36	-0.19	-1.22	0.53	0.44	2.36	0.48	14.15	120190191.97	7.76	1.24	18182216512.26	Tecnologia da Informação	Programas e Serviços	Programas e Serviços	66.73	1.49
+JHSF3	3.79	JHSF PARTICIPACOES S.A.	4.97	0.52	2.6	0.22	5.28	59.25	63.21	33.1	1.65	1.23	-0.31	0.13	10.44	4.32	8.1	0.53	2.67	0.41	0.55	2.33	-0.71	26.82	18600186.03	7.3	0.76	2574655170.39	Consumo Cíclico	Construção Civil	Incorporações	23.21	9.2
+ZAMP3	3.22	ZAMP S.A.	-6.65	0.68	12.95	0.19	24.97	66.34	1.72	-3.35	0.22	4.86	-0.28	0.87	-10.18	-2.91	1.31	0.63	12.02	0.29	0.71	1.15	-0.1	10.35	3432364.17	4.76	-0.48	886644539.34	Consumo Cíclico	Hoteis e Restaurantes	Restaurante e Similares	\N	\N
+CESP6	25.25	CESP - CIA ENERGETICA DE SAO PAULO	-13.69	1.04	14.54	0.6	16.35	39.26	40.55	-43.06	5.89	6.12	-0.7	0.1	-7.57	-4.41	-4.27	0.13	1.76	0.58	0.42	3.77	0.11	-3.19	\N	24.36	-1.84	8302192833.55	Utilidade Pública	Energia Elétrica	Energia Elétrica	\N	\N
+SYNE3	8.75	SYN PROP E TECH S.A.	115.89	0.88	7.13	0.32	9.27	57.56	42.78	2.63	3.05	7.4	-0.38	0.11	0.76	0.28	4.47	0.26	2.14	0.37	0.43	1.38	-0.97	-2.81	2308533.03	9.98	0.08	1335638893.75	Financeiro e Outros	Exploração de Imóveis	Exploração de Imóveis	\N	\N
+CRPG3	33.52	TRONOX PIGMENTOS DO BRASIL S.A.	239.88	1.43	-23.73	1.01	-19	-0.97	-7.63	0.76	1.81	1.85	-3.21	0.56	0.6	0.42	-7.75	-0.17	2.79	0.71	0.29	4.9	-2.5	-1.98	9216.67	23.43	0.14	893117726.66	Materiais Básicos	Químicos	Químicos Diversos	-51.79	0.83
 \.
 
 
@@ -20501,6 +21173,14 @@ ALTER TABLE ONLY public.m_ebitda
 
 ALTER TABLE ONLY public.m_liquida
     ADD CONSTRAINT m_liquida_pkey PRIMARY KEY (ticker);
+
+
+--
+-- Name: acoes_atual nova_tabela_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.acoes_atual
+    ADD CONSTRAINT nova_tabela_pkey PRIMARY KEY (ticker);
 
 
 --

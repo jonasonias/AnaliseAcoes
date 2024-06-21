@@ -9,7 +9,7 @@ const SumForm = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        const response = await fetch(`${API_BASE_URL}/soma`, {
+        const response = await fetch(`${API_BASE_URL}/user/soma`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
