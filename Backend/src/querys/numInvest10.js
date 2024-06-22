@@ -1,0 +1,708 @@
+const puppeteer = require('puppeteer');
+const { Client } = require('pg');
+
+// Configuração da conexão com o PostgreSQL
+const client = new Client({
+    user: 'postgres',
+    host: 'localhost',
+    database: 'Site',
+    password: 'senha123',
+    port: 5432,
+});
+
+async function fetchTickers() {
+    await client.connect();
+    const res = await client.query('SELECT ticker FROM acoes');
+    await client.end();
+    return res.rows.map(row => row.ticker);
+}
+
+(async () => {
+    // Fetch tickers from the database
+    const tickers = await fetchTickers();
+
+    // Launch the browser
+    const browser = await puppeteer.launch({
+        headless: true,
+        args: [
+            '--no-sandbox',
+            '--disable-setuid-sandbox',
+            '--disable-dev-shm-usage',
+            '--disable-accelerated-2d-canvas',
+            '--disable-gpu'
+        ]
+    });
+
+    for (const ticker of tickers) {
+        const page = await browser.newPage();
+
+        let found = false;
+
+        // Set up a listener to capture the specific request
+        page.on('request', request => {
+            const url = request.url();
+            if (url.includes('https://investidor10.com.br/api/historico-indicadores')) {
+                const tickerUrl = request.headers().referer;
+                const ticker = tickerUrl.split('/acoes/')[1].replace('/', '').toUpperCase();
+
+                const apiUrlParts = url.split('/');
+                const apiTickerNumber = apiUrlParts[apiUrlParts.length - 2];
+
+                console.log(`${ticker} ${apiTickerNumber}`);
+                found = true;
+            }
+        });
+
+        try {
+            // Go to the specified page
+            await page.goto(`https://investidor10.com.br/acoes/${ticker}/`, {
+                waitUntil: 'domcontentloaded',
+                timeout: 30000
+            });
+
+            // Wait for the specific request to be made
+            try {
+                await page.waitForRequest(
+                    request =>
+                        request.url().includes('https://investidor10.com.br/api/historico-indicadores'),
+                    { timeout: 30000 }
+                );
+            } catch (error) {
+                if (!found) {
+                    console.log(`${ticker} - Request not found`);
+                }
+            }
+        } catch (error) {
+            console.log(`${ticker} - Page not found`);
+        }
+
+        await page.close();
+    }
+
+    // Close the browser
+    await browser.close();
+})();
+
+/*
+ALSC3 - Request not found
+ANDG3B 512
+ANDG4B - Request not found
+BFRE11 535
+BFRE12 536
+BRIN3 - Request not found
+BRIT3 619
+BRIV3 245
+BRIV4 246
+BRKM3 118
+BRKM5 120
+BRKM6 119
+BRML3 112
+BRPR3 258
+BRQB3 439
+BRSR3 107
+BRSR5 108
+BRSR6 109
+BSEV3 255
+BSLI3 436
+ENMA3B 537
+ENMA6B 538
+FIBR3 - Request not found
+GETT11 629
+GETT3 627
+GETT4 628
+MAGG3 - Request not found
+MEGA3 295
+MMAQ3 - Request not found
+MMAQ4 483
+MPLU3 644
+QGEP3 - Request not found
+SPRI3 - Request not found
+SPRI5 - Request not found
+SPRI6 - Request not found
+TRPN3 - Request not found
+TCSA3 203
+ABCB4 100
+AALR3 243
+AMBP3 352
+ABEV3 64
+ADHM3 432
+AERI3 532
+AESB3 602
+AFLT3 254
+AGRO3 320
+AGXY3 583
+AHEB3 495
+AHEB5 496
+AHEB6 497
+ALLD3 584
+ALOS3 656
+ALPA3 226
+ALPA4 227
+ALPK3 353
+ALUP11 28
+ALUP3 26
+ALUP4 27
+AMAR3 175
+AMER3 622
+ANIM3 89
+APER3 253
+APTI3 498
+APTI4 499
+ARML3 621
+ARZZ3 101
+ASAI3 626
+ATMP3 510
+ATOM3 433
+AURA33 608
+AURE3 637
+AVLL3 529
+AZEV3 434
+AZEV4 435
+AZUL4 91
+B3SA3 66
+BAHI3 250
+BALM3 229
+BALM4 228
+BAUH4 290
+BAZA3 240
+BBAS3 42
+BBDC3 39
+BBDC4 40
+BBML3 - Request not found
+BBSE3 308
+BDLL3 546
+BDLL4 87
+BEEF11 - Request not found
+BEEF3 52
+BEES3 238
+BEES4 239
+BGIP3 241
+BGIP4 242
+BHIA3 655
+BIDI11 62
+BIDI3 60
+BIDI4 61
+BIOM3 221
+BLAU3 585
+BLUT3 477
+BLUT4 478
+BMEB3 233
+BMEB4 234
+BMGB4 103
+BMIN3 347
+BMIN4 348
+BMKS3 115
+BMOB3 572
+BNBR3 232
+BOAS3 555
+BOBR3 364
+BOBR4 365
+BPAC11 104
+BPAC3 105
+BPAC5 106
+BPAN4 82
+BPAR3 235
+BPAT33 511
+BPHA3 534
+BRAP3 116
+BRAP4 117
+BRBI11 614
+BRBI3 - Request not found
+BRBI4 - Request not found
+BRFS3 65
+BRGE11 337
+BRGE12 653
+BRGE3 339
+BRGE5 340
+BRGE6 342
+BRGE7 341
+BRGE8 338
+CEPE6 418
+BSLI4 437
+BTTL4 - Request not found
+CALI3 453
+CALI4 454
+CAMB3 440
+CAMB4 441
+CAML3 90
+CASH3 563
+CASN3 442
+CASN4 443
+CATA3 446
+CATA4 - Request not found
+CBAV3 611
+CBEE3 88
+CCRO3 257
+CCXC3 444
+CEAB3 121
+CEBR3 423
+CEBR5 424
+CEBR6 425
+CEDO3 421
+CEDO4 422
+CEEB3 316
+CEEB5 317
+CEEB6 318
+CEED3 325
+CEED4 326
+CEGR3 415
+CEPE3 416
+CEPE5 417
+CESP3 125
+CESP5 126
+CESP6 127
+CGAS3 55
+CGAS5 56
+CGRA3 159
+CGRA4 160
+CIEL3 41
+CLSA3 620
+CLSC3 122
+CLSC4 123
+CMIG3 46
+CMIG4 47
+CMIN3 576
+CMSA3 448
+CMSA4 449
+CNSY3 450
+COCE3 304
+COCE5 305
+COCE6 306
+COGN3 132
+CORR3 455
+CORR4 456
+CPFE3 268
+CPLE11 635
+CPLE3 263
+CPLE5 265
+CPLE6 264
+CPRE3 269
+CREM3 539
+CRFB3 251
+CRIV3 430
+CRIV4 431
+CRPG3 272
+CRPG5 271
+CRPG6 270
+CSAB3 426
+CSAB4 427
+CSAN3 48
+CSED3 573
+CSMG3 262
+CSNA3 131
+CSRN3 247
+CSRN5 248
+CSRN6 249
+CSUD3 273
+CTCA3 - Request not found
+CTKA3 368
+CTKA4 369
+CTNM3 267
+CTNM4 266
+CTSA3 396
+CTSA4 397
+CTSA8 398
+CURY3 552
+CVCB3 77
+CXSE3 590
+CYRE3 128
+DASA3 130
+DESK3 609
+DEXP3 464
+DEXP4 465
+DIRR3 276
+DMMO11 645
+DMMO3 279
+DMVF3 458
+DOHL3 278
+DOHL4 277
+DOTZ3 623
+DTCY3 459
+DTCY4 460
+DXCO3 134
+EALT3 136
+EALT4 137
+ECOR3 75
+ECPR3 283
+ECPR4 282
+EEEL3 327
+EEEL4 560
+EGIE3 143
+EKTR3 419
+EKTR4 420
+ELEK3 519
+ELEK4 520
+ELET3 138
+ELET5 139
+ELET6 140
+ELMD3 574
+ELPL3 332
+EMAE3 281
+EMAE4 280
+EMBR3 135
+ENAT3 141
+ENBR3 67
+ENEV3 142
+ENGI11 97
+ENGI3 99
+ENGI4 98
+ENJU3 527
+ENMT3 285
+ENMT4 284
+EPAR3 438
+EQPA3 286
+EQPA5 287
+EQPA6 288
+EQPA7 289
+EQTL3 150
+ESPA3 567
+ESTR3 153
+ESTR4 154
+ETER3 155
+EUCA3 334
+EUCA4 335
+EVEN3 144
+EZTC3 151
+FBMC3 540
+FBMC4 541
+FESA3 156
+FESA4 157
+FHER3 292
+FIEI3 - Request not found
+FIGE3 475
+FIGE4 476
+FIQE3 610
+FLEX3 561
+FLRY3 3
+FNCN3 463
+FRAS3 293
+FRIO3 376
+FRTA3 387
+FTRT3B 542
+G2DI33 601
+GBIO33 523
+GEPA3 191
+GEPA4 190
+GFSA3 152
+GGBR3 53
+GGBR4 54
+GGPS3 588
+GMAT3 525
+GNDI3 - Request not found
+GOAU3 31
+GOAU4 32
+GOLL4 76
+GPAR3 445
+GPIV33 - Request not found
+GRAO3 618
+GRND3 161
+GSHP3 158
+GUAR3 83
+GUAR4 636
+HAGA3 366
+HAGA4 367
+HAPV3 162
+HBOR3 344
+HBRE3 582
+HBSA3 553
+HBTS5 294
+HETA3 467
+HETA4 468
+HGTX3 124
+HOOT3 469
+HOOT4 470
+HYPE3 302
+IDVL3 236
+IDVL4 237
+IFCM3 596
+IGBR3 471
+IGSN3 472
+IGTA3 163
+PATI3 384
+IGTI11 639
+IGTI3 361
+IGTI4 638
+INEP3 473
+INEP4 474
+INNT3 - Request not found
+INTB3 566
+IRBR3 96
+ITEC3 543
+ITSA3 1
+ITSA4 5
+ITUB3 43
+ITUB4 44
+JALL3 571
+JBSS3 29
+JFEN3 479
+JHSF3 165
+JOPA3 362
+JOPA4 363
+JSLG3 166
+KEPL3 323
+KLBN11 8
+KLBN3 6
+KLBN4 7
+KRSA3 595
+LAME3 173
+LAME4 174
+LAND3 646
+LAVV3 355
+LCAM3 170
+LEVE3 145
+LHER3 - Request not found
+LHER4 - Request not found
+LIGT3 167
+LINX3 168
+LIPR3 - Request not found
+LJQQ3 558
+LOGG3 171
+LOGN3 172
+LPSB3 343
+LREN3 15
+LTEL3B 544
+LUPA3 315
+LUXM3 407
+LUXM4 408
+LVTC3 613
+LWSA3 71
+MAPT3 508
+MAPT4 509
+MATD3 592
+MBLY3 569
+MDIA3 79
+MDNE3 322
+MEAL3 164
+MELK3 554
+MERC3 374
+MERC4 375
+MGEL3 370
+MGEL4 371
+MGLU3 59
+MILS3 177
+MLAS3 612
+MMXM3 484
+MNDL3 380
+MNPR3 379
+MOAR3 485
+MODL11 593
+MODL3 624
+MODL4 625
+MOSI3 568
+MOVI3 80
+MRFG3 176
+MRSA3B 515
+MRSA5B 516
+MRSA6B 517
+MRVE3 74
+MSPA3 372
+MSPA4 373
+MSRO3 336
+MTIG3 480
+MTIG4 481
+MTRE3 222
+MTSA3 640
+MTSA4 314
+MULT3 51
+MWET3 409
+MWET4 410
+MYPK3 149
+NAFG3 381
+NAFG4 382
+NEMO3 505
+NEMO5 506
+NEMO6 - Request not found
+NEOE3 179
+NEXP3 647
+NGRD3 565
+NINJ3 599
+NORD3 486
+NRTQ3 487
+NTCO3 178
+NUTR3 383
+ODER4 451
+ODPV3 180
+OFSA3 310
+OGXP3 547
+OIBR3 20
+OIBR4 21
+OMGE3 - Request not found
+ONCO3 617
+OPCT3 578
+ORVR3 579
+OSXB3 181
+PARD3 30
+PATI4 385
+PCAR3 45
+PCAR4 - Request not found
+PDGR3 328
+PDTC3 488
+PEAB3 428
+PEAB4 429
+PETR3 2
+PETR4 4
+PETZ3 356
+PFRM3 225
+PGMN3 354
+PINE3 321
+PINE4 114
+PLAS3 386
+PLPL3 357
+PMAM3 182
+PNVL3 275
+PNVL4 274
+POMO3 224
+POMO4 223
+PORT3 514
+POSI3 187
+POWE3 570
+PPAR3 489
+PPLA11 518
+PRIO3 70
+PRNR3 388
+PSSA3 185
+PTBL3 333
+PTCA11 - Request not found
+PTCA3 - Request not found
+PTNT3 184
+PTNT4 183
+QUAL3 186
+QUSW3 - Request not found
+QVQP3B 521
+RADL3 78
+RAIL3 57
+RAIZ4 616
+RANI3 260
+RANI4 259
+RAPT3 188
+RAPT4 189
+RCSL3 389
+RCSL4 390
+RDNI3 313
+RDOR3 564
+RECV3 598
+REDE3 360
+RENT3 169
+RLOG3 49
+RNEW11 395
+RNEW3 393
+RNEW4 394
+ROMI3 303
+RPAD3 652
+RPAD5 651
+RPAD6 650
+RPMG3 392
+RRRP3 581
+RSID3 194
+RSUL3 377
+RSUL4 378
+SANB11 86
+SANB3 84
+SANB4 85
+SAPR11 25
+SAPR3 23
+SAPR4 24
+SBFG3 102
+SBSP3 296
+SCAR3 309
+SEDU3 548
+SEER3 298
+SEQL3 556
+SGPS3 345
+SHOW3 209
+SHUL3 197
+SHUL4 196
+SIMH3 559
+SLCE3 205
+SLED3 192
+SLED4 193
+SMFT3 562
+SMLS3 208
+SMTO3 297
+SNSY3 492
+SNSY5 493
+SNSY6 494
+SOJA3 597
+SOMA3 466
+SOND3 500
+SOND5 501
+SOND6 502
+SPRT3B 545
+SQIA3 58
+STBP3 195
+STKF3 504
+STTR3 503
+SULA11 146
+SULA3 147
+SULA4 148
+SUZB3 50
+SYNE3 129
+TAEE11 38
+TAEE3 36
+TAEE4 37
+TASA3 198
+TASA4 199
+TCNO3 399
+TCNO4 400
+TECN3 329
+TEKA3 401
+TEKA4 402
+TELB3 200
+TELB4 201
+TEND3 133
+TESA3 324
+TFCO4 526
+TGMA3 311
+TIET11 - Request not found
+TIET3 - Request not found
+TIET4 - Request not found
+TIMS3 202
+TKNO3 403
+TKNO4 404
+TOTS3 210
+TOYB3 549
+TOYB4 550
+TPIS3 330
+TRAD3 615
+TRIS3 312
+TRPL3 73
+TRPL4 72
+TTEN3 607
+TUPY3 211
+TXRX3 405
+TXRX4 406
+UCAS3 331
+UGPA3 212
+UNIP3 301
+UNIP5 300
+UNIP6 299
+USIM3 33
+USIM5 34
+USIM6 35
+VALE3 18
+VAMO3 575
+VBBR3 244
+VITT3 594
+VIVA3 214
+VIVR3 346
+VIVT3 207
+VIVT4 206
+VLID3 213
+VSPT3 461
+VSPT4 462
+VSTE3 351
+VULC3 215
+VVAR11 - Request not found
+VVAR4 - Request not found
+VVEO3 586
+WEGE3 22
+WEST3 577
+WHRL3 411
+WHRL4 412
+WIZC3 217
+WLMM3 413
+WLMM4 414
+YDUQ3 216
+ZAMP3 110
+*/
+
