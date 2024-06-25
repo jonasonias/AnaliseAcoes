@@ -33,6 +33,7 @@ const tickersMap = {
   "ARML3": 621,
   "ARZZ3": 101,
   "ASAI3": 626,
+  "ATMP3": 510,
   "ATOM3": 433,
   "AURA33": 608,
   "AURE3": 637,
@@ -274,6 +275,9 @@ const tickersMap = {
   "GBIO33": 523,
   "GEPA3": 191,
   "GEPA4": 190,
+  "GETT11": 629,
+  "GETT3": 627,
+  "GETT4": 628,
   "GFSA3": 152,
   "GGBR3": 53,
   "GGBR4": 54,
@@ -323,48 +327,67 @@ const tickersMap = {
   "JBSS3": 63,
   "JCPC3": 397,
   "JFEN3": 198,
-  "JHSF3": 69,
+  "JHSF3": 165,
+  "JOPA3": 362,
+  "JOPA4": 363,
   "JPSA3": 526,
-  "JSLG3": 95,
+  "JSLG3": 166,
   "KEPL3": 292,
   "KLBN11": 51,
   "KLBN3": 49,
   "KLBN4": 50,
+  "KRSA3": 595,
+  "LAME3": 173,
+  "LAME4": 174,
+  "LAND3": 646,
   "LAVV3": 542,
   "LCAM3": 145,
   "LEVE3": 146,
   "LIGT3": 70,
+  "LINX3": 168,
   "LIPR3": 516,
+  "LJQQ3": 558,
   "LOGG3": 575,
+  "LOGN3": 172,
   "LPSB3": 85,
   "LREN3": 73,
+  "LTEL3B": 544,
   "LUPA3": 625,
   "LUXM3": 478,
   "LUXM4": 479,
+  "LVTC3": 613,
+  "LWSA3": 71,
+  "MAPT3": 508,
+  "MAPT4": 71,
   "LVBI3": 559,
   "MAGA3": 428,
   "MANA3": 186,
   "MANA4": 185,
   "MATD3": 469,
   "MATD4": 470,
+  "MBLY3": 569,
   "MDIA3": 80,
   "MDNE3": 549,
   "MEAL3": 78,
+  "MEGA3": 295,
+  "MELK3": 554,
   "MELI34": 379,
   "MERC3": 274,
   "MERC4": 275,
   "MGEL3": 480,
   "MGEL4": 481,
   "MGLU3": 79,
+  "MILS3": 177,
+  "MLAS3": 612,
   "MMXM11": 599,
-  "MMXM3": 600,
+  "MMXM3": 484,
   "MNDL3": 87,
   "MNPR3": 362,
   "MOAR3": 617,
   "MODL11": 623,
   "MODL3": 621,
   "MODL4": 622,
-  "MOSI3": 524,
+  "MOSI3": 568,
   "MOVI3": 110,
   "MRFG3": 50,
   "MRSA3B": 476,
@@ -375,20 +398,28 @@ const tickersMap = {
   "MSAN4": 182,
   "MSPA3": 522,
   "MSPA4": 523,
+  "MSRO3": 336,
   "MTIG3": 181,
   "MTIG4": 180,
   "MTRE3": 598,
   "MTSA3": 185,
   "MTSA4": 186,
+  "MULT3": 51,
+  "MWET3": 409,
+  "MWET4": 410,
   "MYPK3": 174,
   "NAFG3": 437,
   "NAFG4": 438,
   "NEOE3": 35,
+  "NEXP3": 647,
+  "NGRD3": 565,
+  "NINJ3": 599,
   "NEMO3": 325,
   "NEMO5": 326,
   "NEMO6": 327,
   "NORD3": 519,
-  "NTCO3": 92,
+  "NRTQ3": 487,
+  "NTCO3": 178,
   "NUTR3": 360,
   "ODER3": 471,
   "ODER4": 472,
@@ -417,20 +448,20 @@ const tickersMap = {
   "POMO3": 177,
   "POMO4": 178,
   "POSI3": 120,
-  "PRIO3": 13,
+  "PRIO3": 70,
   "PRNR3": 579,
   "PSSA3": 20,
   "PTBL3": 183,
   "PTNT3": 392,
   "PTNT4": 393,
-  "QUAL3": 92,
+  "QUAL3": 186,
   "RADL3": 84,
   "RAIL3": 21,
-  "RANI3": 528,
+  "RANI3": 260,
   "RANI4": 529,
   "RDNI3": 178,
   "REDE3": 492,
-  "RENT3": 14,
+  "RENT3": 169,
   "RNEW11": 111,
   "RNEW3": 108,
   "RNEW4": 109,
@@ -451,7 +482,7 @@ const tickersMap = {
   "SEDU3": 620,
   "SEER3": 105,
   "SGPS3": 180,
-  "SHOW3": 547,
+  "SHOW3": 209,
   "SLCE3": 149,
   "SMFT3": 583,
   "SMLE3": 583,
@@ -479,8 +510,8 @@ const tickersMap = {
   "TCNO4": 431,
   "TCSA3": 168,
   "TECN3": 396,
-  "TEKA3": 358,
-  "TEKA4": 359,
+  "TEKA3": 401,
+  "TEKA4": 402,
   "TELB3": 28,
   "TELB4": 29,
   "TEND3": 130,
@@ -505,7 +536,7 @@ const tickersMap = {
   "TXRX4": 380,
   "UCAS3": 449,
   "UCAS4": 450,
-  "UGPA3": 69,
+  "UGPA3": 212,
   "UNIP3": 19,
   "UNIP5": 20,
   "UNIP6": 18,
@@ -541,11 +572,11 @@ const tickersMap = {
 };
 
 const pool = new Pool({
-    user: 'postgres',
-    host: 'localhost',
-    database: 'Site',
-    password: 'senha123',
-    port: 5432,
+  user: 'postgres',
+  host: 'localhost',
+  database: 'Site',
+  password: 'senha123',
+  port: 5432,
 });
 
 async function fetchData(ticker, number) {
@@ -563,13 +594,22 @@ async function fetchData(ticker, number) {
 
     // Filtrar e formatar os dados desejados apenas para o grupo "DIVIDEND YIELD (DY)"
     const data = responseData['DIVIDEND YIELD (DY)'].reduce((acc, item) => {
-      acc[item.year] = item.value;
+      let value = item.value;
 
-      console.log(item.year + ": " + item.value)
+      // Verifica se o valor é uma string e se contém "-"
+      if (typeof value === 'string') {
+        value = value === "-" ? null : parseFloat(value.replace(",", "."));
+      }
+
+      // Se o valor for um número, formate-o para 4 casas decimais, caso contrário, defina-o como null
+      value = typeof value === 'number' && !isNaN(value) ? parseFloat(value.toFixed(4)) : null;
+
+      if (item.year === "Atual" || item.year >= 2008) {
+        acc[item.year === "Atual" ? "Atual" : item.year] = value;
+      }
       return acc;
     }, { ticker });
 
-    
     return data;
 
   } catch (error) {
@@ -585,13 +625,13 @@ async function insertData(data) {
     '2009', '2008'
   ];
 
-  const values = columns.map(col => data[col] || null);
+  const values = columns.map(col => data[col] !== undefined ? data[col] : null);
 
   const query = `
-    INSERT INTO dyinvest (${columns.join(', ')})
+    INSERT INTO dyinvest (${columns.map(col => `"${col}"`).join(', ')})
     VALUES (${values.map((_, i) => `$${i + 1}`).join(', ')})
     ON CONFLICT (ticker) 
-    DO UPDATE SET ${columns.slice(1).map(col => `${col} = EXCLUDED.${col}`).join(', ')}
+    DO UPDATE SET ${columns.slice(1).map(col => `"${col}" = EXCLUDED."${col}"`).join(', ')}
   `;
 
   try {
