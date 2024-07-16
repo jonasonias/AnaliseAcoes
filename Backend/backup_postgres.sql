@@ -243,6 +243,126 @@ CREATE TABLE public.dy (
 ALTER TABLE public.dy OWNER TO postgres;
 
 --
+-- Name: dyfinal; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE public.dyfinal (
+    ticker character varying NOT NULL,
+    "2024" numeric,
+    "2023" numeric,
+    "2022" numeric,
+    "2021" numeric,
+    "2020" numeric,
+    "2019" numeric,
+    "2018" numeric,
+    "2017" numeric,
+    "2016" numeric,
+    "2015" numeric,
+    "2014" numeric,
+    "2013" numeric,
+    "2012" numeric,
+    "2011" numeric,
+    "2010" numeric,
+    "2009" numeric,
+    "2008" numeric
+);
+
+
+ALTER TABLE public.dyfinal OWNER TO postgres;
+
+--
+-- Name: dyinvest; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE public.dyinvest (
+    ticker character varying NOT NULL,
+    "Atual" numeric,
+    "2023" numeric,
+    "2022" numeric,
+    "2021" numeric,
+    "2020" numeric,
+    "2019" numeric,
+    "2018" numeric,
+    "2017" numeric,
+    "2016" numeric,
+    "2015" numeric,
+    "2014" numeric,
+    "2013" numeric,
+    "2012" numeric,
+    "2011" numeric,
+    "2010" numeric,
+    "2009" numeric,
+    "2008" numeric
+);
+
+
+ALTER TABLE public.dyinvest OWNER TO postgres;
+
+--
+-- Name: dyoceans; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE public.dyoceans (
+    ticker character varying NOT NULL,
+    "Hoje" numeric,
+    "2023" numeric,
+    "2022" numeric,
+    "2021" numeric,
+    "2020" numeric,
+    "2019" numeric,
+    "2018" numeric,
+    "2017" numeric,
+    "2016" numeric,
+    "2015" numeric,
+    "2014" numeric,
+    "2013" numeric,
+    "2012" numeric,
+    "2011" numeric,
+    "2010" numeric,
+    "2009" numeric,
+    "2008" numeric,
+    "2007" numeric,
+    "2006" numeric,
+    "2005" numeric,
+    "2004" numeric,
+    "2003" numeric,
+    "2002" numeric,
+    "2001" numeric,
+    "2000" numeric
+);
+
+
+ALTER TABLE public.dyoceans OWNER TO postgres;
+
+--
+-- Name: dystatus; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE public.dystatus (
+    ticker character varying NOT NULL,
+    "2024" numeric,
+    "2023" numeric,
+    "2022" numeric,
+    "2021" numeric,
+    "2020" numeric,
+    "2019" numeric,
+    "2018" numeric,
+    "2017" numeric,
+    "2016" numeric,
+    "2015" numeric,
+    "2014" numeric,
+    "2013" numeric,
+    "2012" numeric,
+    "2011" numeric,
+    "2010" numeric,
+    "2009" numeric,
+    "2008" numeric
+);
+
+
+ALTER TABLE public.dystatus OWNER TO postgres;
+
+--
 -- Name: ev_ebit; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -754,6 +874,34 @@ CREATE TABLE public.pl_ativos (
 
 
 ALTER TABLE public.pl_ativos OWNER TO postgres;
+
+--
+-- Name: plfinal; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE public.plfinal (
+    ticker character varying NOT NULL,
+    "2024" numeric,
+    "2023" numeric,
+    "2022" numeric,
+    "2021" numeric,
+    "2020" numeric,
+    "2019" numeric,
+    "2018" numeric,
+    "2017" numeric,
+    "2016" numeric,
+    "2015" numeric,
+    "2014" numeric,
+    "2013" numeric,
+    "2012" numeric,
+    "2011" numeric,
+    "2010" numeric,
+    "2009" numeric,
+    "2008" numeric
+);
+
+
+ALTER TABLE public.plfinal OWNER TO postgres;
 
 --
 -- Name: pvp; Type: TABLE; Schema: public; Owner: postgres
@@ -1566,513 +1714,471 @@ ZAMP3	ZAMP S.A.	Consumo Cíclico	Hoteis e Restaurantes	Restaurante e Similares	8
 --
 
 COPY public.acoes_atual (ticker, price, companyname, p_l, p_vp, p_ebit, p_ativo, ev_ebit, margembruta, margemebit, margemliquida, p_sr, p_capitalgiro, p_ativocirculante, giroativos, roe, roa, roic, dividaliquidapatrimonioliquido, dividaliquidaebit, pl_ativo, passivo_ativo, liquidezcorrente, peg_ratio, receitas_cagr5, liquidezmediadiaria, vpa, lpa, valormercado, sectorname, subsectorname, segmentname, lucros_cagr5, dy) FROM stdin;
-CBAV3	6.27	Companhia Brasileira de Alumínio	-3.96	0.94	-4.73	0.31	-8.31	1.32	-12.11	-14.47	0.57	1.61	-0.47	0.53	-23.8	-7.73	-11.36	0.71	-3.58	0.32	0.66	2.24	-0.02	\N	26990112.97	6.65	-1.58	4082225810.19	Materiais Básicos	Mineração	Minerais Metálicos	\N	\N
-BSEV3	9	BIOSEV S.A.	10.22	-10.84	3.17	0.78	5.46	26.77	17.92	5.55	0.57	-1.59	-1.13	1.37	-106.05	7.59	30.9	\N	2.3	-0.07	1.07	0.39	-0.06	10.88	\N	-0.83	0.88	9183864834	Consumo não Cíclico	Alimentos Processados	Açucar e Alcool	\N	\N
+ANIM3	3.96	ANIMA HOLDING S.A.	-10.72	0.61	2.29	0.16	8.19	62.49	17.75	-3.79	0.41	8.87	-0.19	0.38	-5.67	-1.46	8.34	1.57	5.9	0.26	0.7	1.1	-0.26	27.79	20884405.33	6.32	-0.36	1546817523.15	Consumo Cíclico	Diversos	Serviços Educacionais	\N	\N
 BRIN3	39.15	BR INSURANCE CORRETORA DE SEGUROS S.A.	-32.48	1.7	36.67	0.89	37.6	100	6.44	-7.27	2.36	532.2	-1.17	0.38	-5.23	-2.73	3.63	0.04	0.94	0.52	0.48	1.01	0.15	29.52	\N	23.06	-1.21	798299859.15	\N	\N	\N	\N	\N
-BRBI4	0	BR ADVISORY PARTNERS PARTICIPAÇÕES S.A.	0	0	0	0	7.37	100	8.88	61.44	0	0	0	0.02	20.74	1.53	-0.2	-1.46	-48.8	0.07	0.93	1.07	0	-16.03	\N	2.62	0.54	1391193078	Financeiro e Outros	Intermediários Financeiros	Bancos	27.88	\N
+BSEV3	9	BIOSEV S.A.	10.22	-10.84	3.17	0.78	5.46	26.77	17.92	5.55	0.57	-1.59	-1.13	1.37	-106.05	7.59	30.9	\N	2.3	-0.07	1.07	0.39	-0.06	10.88	\N	-0.83	0.88	9183864834	Consumo não Cíclico	Alimentos Processados	Açucar e Alcool	\N	\N
+BAZA3	98	BCO AMAZONIA S.A.	4.36	0.9	3.84	0.11	3.84	19.7	33.39	29.42	1.28	3.14	-0.12	0.09	20.69	2.63	\N	\N	\N	0.13	0.87	18.55	0.71	25.91	272047.07	109.06	22.57	5517819945.45	Financeiro e Outros	Intermediários Financeiros	Bancos	63.26	6.73
 BALM4	10	BAUMER S.A.	9.58	0.65	4.66	0.38	2.67	61.16	12.55	6.11	0.58	0.83	-1.32	0.66	6.82	4	8.37	-0.28	-1.96	0.59	0.41	2.86	0.07	7.24	6955.19	15.3	1.04	97510000	Saúde	Equipamentos	Equipamentos	30.02	\N
 BEEF11	3.62	MINERVA S.A.	21.91	101.17	1.03	0.07	6.1	20.9	7.68	0.36	0.08	0.2	-0.2	0.85	461.76	0.31	8.32	413.94	4.23	0	0.98	2.02	-0.26	10.65	\N	0.04	0.17	3977706315.85	Consumo não Cíclico	Alimentos Processados	Carnes e Derivados	\N	\N
-CTCA3	0	CTC - CENTRO DE TECNOLOGIA CANAVIEIRA S.A.	0	0	0	0	-2.77	66.73	39.46	39.86	0	0	0	0.32	15.55	12.75	9.53	-0.43	-2.77	0.82	0.18	4.95	0	15.39	\N	3.05	0.47	0	Consumo não Cíclico	Agropecuária	Agricultura	45.2	\N
-BIDI4	3.41	BANCO INTER S.A.	-234.18	1.06	-89.72	0.23	-91.21	50.04	-13.62	-5.22	12.22	\N	-0.24	0.02	-0.45	-0.1	\N	\N	\N	0.22	0.78	\N	0.12	5.8	\N	3.22	-0.01	8991139764.53	Financeiro e Outros	Intermediários Financeiros	Bancos	\N	\N
+BRKM5	19.53	BRASKEM S.A	-2.43	4.81	-4.46	0.16	-11.8	4.7	-4.82	-8.85	0.21	1.29	-0.26	0.74	-198.12	-6.53	-11.57	7.95	-7.36	0.03	0.97	1.44	-0.05	4	44142896.41	3.87	-7.66	14777320865.98	Materiais Básicos	Químicos	Petroquímicos	\N	\N
+CBAV3	7.28	Companhia Brasileira de Alumínio	-4.63	1.1	-5.54	0.36	-9.12	1.32	-12.11	-14.47	0.67	1.89	-0.55	0.53	-23.8	-7.73	-11.36	0.71	-3.58	0.32	0.66	2.24	-0.02	\N	21215013.1	6.65	-1.58	4778873595.98	Materiais Básicos	Mineração	Minerais Metálicos	\N	\N
 BRAP3	17.53	BRADESPAR S.A.	4.68	0.84	4.89	0.83	4.5	\N	\N	\N	\N	10.55	-0.91	0	17.91	17.78	17.15	-0.09	-0.5	0.99	0.01	12.26	-0.08	\N	1175741	20.9	3.74	7056802936.1	Materiais Básicos	Mineração	Minerais Metálicos	4.33	15.4
-ANIM3	3.05	ANIMA HOLDING S.A.	-8.51	0.48	1.82	0.12	7.72	62.49	17.75	-3.79	0.32	7.05	-0.15	0.38	-5.67	-1.46	8.34	1.57	5.9	0.26	0.7	1.1	-0.2	27.79	20077946.42	6.32	-0.36	1231799855.25	Consumo Cíclico	Diversos	Serviços Educacionais	\N	\N
-AMBP3	9.1	AMBIPAR PARTICIPACOES E EMPREENDIMENTOS S/A	-7.23	1.05	1.41	0.12	6.05	23.93	21.59	-4.21	0.3	0.43	-0.21	0.41	-14.5	-1.72	8.36	3.45	4.64	0.12	0.81	3.35	-0.05	66.18	15695812.34	8.68	-1.26	1520081007.9	Utilidade Pública	Água e Saneamento	Água e Saneamento	\N	\N
-BAZA3	86.1	BCO AMAZONIA S.A.	3.81	0.79	3.36	0.1	3.36	19.7	33.39	29.42	1.12	2.75	-0.1	0.09	20.69	2.63	\N	\N	\N	0.13	0.87	18.55	0.62	25.91	258241.54	109.06	22.57	4826620921.5	Financeiro e Outros	Intermediários Financeiros	Bancos	63.26	7.69
-BRGE11	13.18	CONSORCIO ALFA DE ADMINISTRACAO S.A.	33.11	0.73	-34.21	0.33	19.81	-4115.33	-798.17	824.67	273.04	0.87	-0.74	0	2.19	0.99	-2.79	-1.15	54.17	0.45	0.36	3.13	-0.51	-32.83	9295	18.16	0.4	974940393.52	Financeiro e Outros	Previdência e Seguros	Seguradoras	-11.18	\N
 CMSA3	0	CIMS S.A.	0	0	0	0	0.17	\N	\N	\N	\N	0	0	0	-555.26	-550.51	-549.5	-0.96	0.17	0.99	0.01	111.51	0	\N	\N	0	0	0	Financeiro e Outros	Outros	Outros	\N	\N
-CATA3	103.61	CIA INDUSTRIAL CATAGUASES	0.89	0.08	0.85	0.04	3.91	25.85	6.1	5.8	0.05	0.12	-0.1	0.73	9.26	4.25	4.24	0.3	3.07	0.46	0.54	1.93	-0.03	11.32	\N	1257.08	116.4	14940354.78	Consumo Cíclico	Tecidos. Vestuário e Calçados	Fios e Tecidos	\N	18.97
-BSLI3	9.45	BRB BCO DE BRASILIA S.A.	16.75	1.33	26.02	0.07	26.73	30.19	1.88	2.93	0.49	-0.26	-0.08	0.14	7.93	0.42	\N	\N	\N	0.05	0.95	0.26	0.03	25.16	42102.76	7.11	0.56	3523637425	Financeiro e Outros	Intermediários Financeiros	Bancos	-3.73	0.74
-BOBR4	2.03	BOMBRIL S.A.	5.49	-13.05	2.36	0.62	2.36	41.73	15.69	6.74	0.37	-9.15	-1.27	1.69	-237.6	11.37	69.17	\N	1.24	-0.05	1.05	0.88	0.12	6.3	25334.57	-0.16	0.37	249475757.86	Consumo não Cíclico	Produtos de Uso Pessoal e de Limpeza	Produtos de Limpeza	6.53	\N
-BAUH4	78.49	EXCELSIOR ALIMENTOS S.A.	33.54	4.15	33.18	2.51	31.39	23.33	5.62	5.56	1.86	29.11	-4.61	1.35	12.36	7.48	11.13	-0.22	-1.79	0.6	0.4	1.23	-0.03	3.33	26761.24	18.93	2.34	409892204.78	Consumo não Cíclico	Alimentos Processados	Carnes e Derivados	5.34	\N
-BRKM5	17.99	BRASKEM S.A	-2.35	4.65	-4.31	0.15	-11.69	4.7	-4.82	-8.85	0.21	1.25	-0.26	0.74	-198.12	-6.53	-11.57	7.95	-7.36	0.03	0.97	1.44	-0.05	4	55342434.74	3.87	-7.66	14414035917.98	Materiais Básicos	Químicos	Petroquímicos	\N	\N
-BLUT3	5.14	BLUE TECH SOLUTIONS E.Q.I. S	-5.63	0.46	-6.17	0.14	-4.91	\N	\N	\N	\N	-1.08	-0.14	0	-8.15	-2.46	-6.65	0.12	-1.59	0.3	0.7	0	0.2	\N	\N	11.21	-0.91	14115600.06	Financeiro e Outros	Holdings Diversificadas	Holdings Diversificadas	\N	\N
-ALPA4	9	ALPARGATAS S.A.	-3.74	1.63	-3.69	0.95	-3.92	40.73	-44.32	-43.64	1.63	2.69	-1.97	0.58	-43.42	-25.35	-33.22	0.08	-0.18	0.58	0.42	3.12	0	-0.89	27558375.86	5.54	-2.4	6232437670.25	Consumo Cíclico	Tecidos. Vestuário e Calçados	Calçados	\N	\N
-BIDI3	3.4	BANCO INTER S.A.	-233.49	1.06	-89.46	0.23	-91.21	50.04	-13.62	-5.22	12.19	\N	-0.24	0.02	-0.45	-0.1	\N	\N	\N	0.22	0.78	\N	0.12	5.8	\N	3.22	-0.01	8991139764.53	Financeiro e Outros	Intermediários Financeiros	Bancos	\N	\N
-AURA33	52.45	AURA MINERALS INC.	25.5	2.19	7.66	0.88	8.89	31.29	22.88	6.87	1.75	5.86	-1.43	0.5	8.57	3.45	11.8	0.35	1.24	0.4	0.6	1.64	-0.44	32.13	4749923.26	24	2.06	3710442027	Materiais Básicos	Mineração	Minerais Metálicos	50.72	7.16
+AMBP3	9.1	AMBIPAR PARTICIPACOES E EMPREENDIMENTOS S/A	-7.23	1.05	1.41	0.12	6.05	23.93	21.59	-4.21	0.3	0.43	-0.21	0.41	-14.5	-1.72	8.36	3.45	4.64	0.12	0.81	3.35	-0.05	66.18	15695812.34	8.68	-1.26	1520081007.9	Utilidade Pública	Água e Saneamento	Água e Saneamento	\N	\N
+BAUH4	79	EXCELSIOR ALIMENTOS S.A.	33.76	4.17	33.39	2.52	\N	23.33	5.62	5.56	1.88	29.3	-4.64	1.35	12.36	7.48	11.13	-0.22	-1.79	0.6	0.4	1.23	-0.04	3.33	22409.64	18.93	2.34	\N	Consumo não Cíclico	Alimentos Processados	Carnes e Derivados	5.34	\N
+AURA33	18.54	AURA MINERALS INC.	25.86	2.22	7.76	0.89	8.95	31.29	22.88	6.87	1.78	5.95	-1.45	0.5	8.57	3.45	11.8	0.35	1.24	0.4	0.6	1.64	-0.45	32.13	6181673.26	24	2.06	3735909312.6	Materiais Básicos	Mineração	Minerais Metálicos	50.72	5.77
+BRGE11	13.18	CONSORCIO ALFA DE ADMINISTRACAO S.A.	33.11	0.73	-34.21	0.33	19.81	-4115.33	-798.17	824.67	273.04	0.87	-0.74	0	2.19	0.99	-2.79	-1.15	54.17	0.45	0.36	3.13	-0.51	-32.83	9295	18.16	0.4	974940393.52	Financeiro e Outros	Previdência e Seguros	Seguradoras	-11.18	\N
 ANDG4B	0	ANDRADE GUTIERREZ CONCESSOES S.A.	0	0	0	0	8.6	47.12	179.06	45.82	0	0	0	0.07	3.71	3.14	12.68	0.13	0.93	0.85	0.15	0.26	0	10.22	\N	12.94	0.48	1651867985.68	\N	\N	\N	-38.09	\N
-CBEE3	9	AMPLA ENERGIA E SERVICOS S.A.	635.26	0.43	2.12	0.13	7.6	20.24	13.54	0.05	0.29	-0.42	-0.15	0.44	0.07	0.02	8.67	1.1	5.48	0.3	0.7	0.38	-6.14	7.38	1591	21.17	0.01	2286313254	Utilidade Pública	Energia Elétrica	Energia Elétrica	-53.81	\N
-ATMP3	2.23	ATMA SA	0.1	-3.55	-0.31	0.04	-1.13	-6.17	-62.08	201.27	0.19	-3.42	-0.05	0.2	-3701.55	40.69	-89.81	\N	-0.82	-0.01	1.01	0.96	0	-25.72	19384.46	-0.63	23.24	59564093.88	Bens Industriais	Serviços	Serviços Diversos	\N	\N
-NEMO6	0	SUZANO HOLDING S.A.	0	0	0	0	5.74	34.61	27.57	6.7	0	0	0	0.26	19.82	1.77	7.12	4.68	5.74	0.09	0.69	2.89	0	24.23	\N	18.54	3.67	0	Materiais Básicos	Madeira e Papel	Papel e Celulose	90.81	\N
-MSPA4	36.68	CIA MELHORAMENTOS DE SAO PAULO	25.8	0.28	6.29	0.16	10.24	43.07	22.38	5.46	1.41	4.34	-0.18	0.12	1.09	0.64	2.64	0.14	3.05	0.58	0.42	1.68	-0.09	5.07	32500	129.88	1.42	268891142.67	Consumo Cíclico	Mídia	Jornais. Livros e Revistas	14.21	0.87
-NEMO5	52.97	SUZANO HOLDING S.A.	14.42	2.86	3.5	0.26	5.74	34.61	27.57	6.7	0.97	1.56	-0.34	0.26	19.82	1.77	7.12	4.68	5.74	0.09	0.69	2.89	-0.29	24.23	\N	18.54	3.67	0	Materiais Básicos	Madeira e Papel	Papel e Celulose	90.81	2.33
+CBEE3	9.8	AMPLA ENERGIA E SERVICOS S.A.	691.73	0.46	2.31	0.14	7.79	20.24	13.54	0.05	0.31	-0.46	-0.17	0.44	0.07	0.02	8.67	1.1	5.48	0.3	0.7	0.38	-6.68	7.38	2353.09	21.17	0.01	2489541098.8	Utilidade Pública	Energia Elétrica	Energia Elétrica	-53.81	\N
+ATMP3	1.96	ATMA SA	0.08	-3.07	-0.27	0.03	-1.09	-6.17	-62.08	201.27	0.17	-2.96	-0.05	0.2	-3701.55	40.69	-89.81	\N	-0.82	-0.01	1.01	0.96	0	-25.72	27609.77	-0.63	23.24	53420712	Bens Industriais	Serviços	Serviços Diversos	\N	\N
+CATA3	103.61	CIA INDUSTRIAL CATAGUASES	0.89	0.08	0.85	0.04	3.91	25.85	6.1	5.8	0.05	0.12	-0.1	0.73	9.26	4.25	4.24	0.3	3.07	0.46	0.54	1.93	-0.03	11.32	\N	1257.08	116.4	14940354.78	Consumo Cíclico	Tecidos. Vestuário e Calçados	Fios e Tecidos	\N	18.97
+BSLI3	10	BRB BCO DE BRASILIA S.A.	17.76	1.41	27.59	0.07	27.83	30.19	1.88	2.93	0.52	-0.27	-0.08	0.14	7.93	0.42	\N	\N	\N	0.05	0.95	0.26	0.04	25.16	5539.26	7.11	0.56	3669227930	Financeiro e Outros	Intermediários Financeiros	Bancos	-3.73	0.69
+BOBR4	2.07	BOMBRIL S.A.	5.6	-13.31	2.41	0.64	2.38	41.73	15.69	6.74	0.38	-9.33	-1.3	1.69	-237.6	11.37	69.17	\N	1.24	-0.05	1.05	0.88	0.12	6.3	27962.84	-0.16	0.37	254391536.34	Consumo não Cíclico	Produtos de Uso Pessoal e de Limpeza	Produtos de Limpeza	6.53	\N
+ALPA4	9.31	ALPARGATAS S.A.	-3.94	1.71	-3.88	1	-4.06	40.73	-44.32	-43.64	1.72	2.83	-2.08	0.58	-43.42	-25.35	-33.22	0.08	-0.18	0.58	0.42	3.12	0	-0.89	21814564.26	5.54	-2.4	6468760876.1	Consumo Cíclico	Tecidos. Vestuário e Calçados	Calçados	\N	\N
+BLUT3	5.14	BLUE TECH SOLUTIONS E.Q.I. S	-5.63	0.46	-6.17	0.14	-4.91	\N	\N	\N	\N	-1.08	-0.14	0	-8.15	-2.46	-6.65	0.12	-1.59	0.3	0.7	0	0.2	\N	\N	11.21	-0.91	14115600.06	Financeiro e Outros	Holdings Diversificadas	Holdings Diversificadas	\N	\N
+BRBI4	0	BR ADVISORY PARTNERS PARTICIPAÇÕES S.A.	0	0	0	0	12.37	100	8.88	61.44	0	0	0	0.02	20.74	1.53	-0.2	-1.46	-48.8	0.07	0.93	1.07	0	-16.03	\N	2.62	0.54	1515088008.72	Financeiro e Outros	Intermediários Financeiros	Bancos	27.88	\N
+BIDI4	3.41	BANCO INTER S.A.	-234.18	1.06	-89.72	0.23	-91.21	50.04	-13.62	-5.22	12.22	\N	-0.24	0.02	-0.45	-0.1	\N	\N	\N	0.22	0.78	\N	0.12	5.8	\N	3.22	-0.01	8991139764.53	Financeiro e Outros	Intermediários Financeiros	Bancos	\N	\N
+CTCA3	0	CTC - CENTRO DE TECNOLOGIA CANAVIEIRA S.A.	0	0	0	0	-2.77	66.73	39.46	39.86	0	0	0	0.32	15.55	12.75	9.53	-0.43	-2.77	0.82	0.18	4.95	0	15.39	\N	3.05	0.47	0	Consumo não Cíclico	Agropecuária	Agricultura	45.2	\N
 MOSI3	8.24	Mosaico Tecnologia ao Consumidor S.A.	32.29	1.56	76.45	1.46	36.94	89.47	6.23	14.75	4.76	1.91	-8.4	0.31	4.84	4.52	0.25	-0.81	-39.51	0.93	0.07	13.23	\N	\N	\N	5.27	0.26	1043149227.2	Tecnologia da Informação	Programas e Serviços	Programas e Serviços	\N	\N
-MAPT3	4.21	CEMEPE INVESTIMENTOS S.A.	-26.86	-0.61	-26.86	5	-28.83	\N	\N	\N	\N	-92.11	-5	0	-2.28	-18.63	2.28	\N	0	-8.17	9.17	0	1.7	\N	5473.25	-6.87	-0.16	4151856.35	Financeiro e Outros	Outros	Outros	\N	\N
-GRND3	5.94	GRENDENE S.A.	9.17	1.46	16.34	1.26	12.97	45.09	13.37	23.82	2.18	2.31	-3.9	0.58	15.92	13.73	7.66	-0.3	-3.37	0.86	0.14	5.09	2.79	0.84	6810803.43	4.07	0.65	5358830400	Consumo Cíclico	Tecidos. Vestuário e Calçados	Calçados	-0.04	5.42
+NEMO6	0	SUZANO HOLDING S.A.	0	0	0	0	5.74	34.61	27.57	6.7	0	0	0	0.26	19.82	1.77	7.12	4.68	5.74	0.09	0.69	2.89	0	24.23	\N	18.54	3.67	0	Materiais Básicos	Madeira e Papel	Papel e Celulose	90.81	\N
+NEMO5	52.97	SUZANO HOLDING S.A.	14.42	2.86	3.5	0.26	5.74	34.61	27.57	6.7	0.97	1.56	-0.34	0.26	19.82	1.77	7.12	4.68	5.74	0.09	0.69	2.89	-0.29	24.23	\N	18.54	3.67	0	Materiais Básicos	Madeira e Papel	Papel e Celulose	90.81	2.33
+MAPT3	4.21	CEMEPE INVESTIMENTOS S.A.	-26.86	-0.61	-26.86	5	-32.32	\N	\N	\N	\N	-92.11	-5	0	-2.28	-18.63	2.28	\N	0	-8.17	9.17	0	1.7	\N	894.67	-6.87	-0.16	4653451.55	Financeiro e Outros	Outros	Outros	\N	\N
+GRND3	6.1	GRENDENE S.A.	9.43	1.5	16.81	1.3	13.5	45.09	13.37	23.82	2.25	2.38	-4.02	0.58	15.92	13.73	7.66	-0.3	-3.37	0.86	0.14	5.09	2.87	0.84	6019740.26	4.07	0.65	5530240800	Consumo Cíclico	Tecidos. Vestuário e Calçados	Calçados	-0.04	5.27
 MODL11	8.46	BANCO MODAL S.A	-27.27	1.66	-29.26	0.27	-29.26	50.83	-5.11	-5.48	1.5	\N	-0.3	0.18	-6.1	-0.97	\N	\N	\N	0.16	0.84	\N	0.17	\N	\N	5.09	-0.31	1985844000	Financeiro e Outros	Intermediários Financeiros	Bancos	\N	\N
+CESP5	25	CESP - CIA ENERGETICA DE SAO PAULO	-13.55	1.03	14.39	0.6	16.35	39.26	40.55	-43.06	5.84	6.06	-0.69	0.1	-7.57	-4.41	-4.27	0.13	1.76	0.58	0.42	3.77	0.11	-3.19	\N	24.36	-1.84	8302192833.55	Utilidade Pública	Energia Elétrica	Energia Elétrica	\N	\N
 MERC3	15.28	MERCANTIL BRASIL FINANC S.A. C.F.I.	39.88	1.12	31.98	0.71	27.02	71.93	19.45	15.6	6.22	160.09	-0.71	0.11	2.8	1.78	\N	\N	\N	0.64	0.36	\N	-0.16	-24.22	\N	13.67	0.38	232516929.25	Financeiro e Outros	Intermediários Financeiros	Soc. Crédito e Financiamento	-22.87	\N
 IDVL4	2.67	BCO INDUSVAL S.A.	-1.22	1.16	-4.71	0.07	-3.84	-18.91	-40.19	-154.6	1.89	0.59	-0.16	0.04	-94.38	-5.67	\N	\N	\N	0.06	0.94	1.26	0	-32.17	\N	2.31	-2.18	224007574.38	Financeiro e Outros	Intermediários Financeiros	Bancos	\N	\N
-ALPK3	3.05	ALLPARK EMPREENDIMENTOS PARTICIPACOES SERVICOS S.A	-11.38	1.88	3.62	0.27	10.46	32.23	12.89	-4.1	0.47	-2.05	-0.3	0.57	-16.54	-2.34	10.1	3.56	6.85	0.14	0.86	0.49	0.19	6.73	422224.97	1.62	-0.27	661923276.25	Bens Industriais	Serviços	Serviços Diversos	\N	\N
+MGEL3	0	MANGELS INDUSTRIAL S.A.	0	0	0	0	8.11	12.54	8.32	2.16	0	0	0	1.23	58.79	2.66	9.81	16.92	7.47	0.05	0.95	1.82	0	14.25	\N	5.84	3.43	48753513.28	Materiais Básicos	Siderurgia e Metalurgia	Artefatos de Ferro e Aço	\N	\N
 JOPA3	21	JOSAPAR-JOAQUIM OLIVEIRA S.A. - PARTICIP	12.78	0.38	1.73	0.1	6.55	21.59	6.07	0.82	0.11	0.25	-0.36	0.94	2.97	0.77	5.87	1.05	4.81	0.26	0.66	2.18	-0.33	13.87	8050	55.36	1.64	224066105.64	Consumo não Cíclico	Alimentos Processados	Alimentos Diversos	-6.33	\N
 GGPS3	17.06	GPS PARTICIPACOES E EMPREENDIMENTOS S.A.	17.46	3.64	10.06	1.09	10.88	17.19	10.24	5.9	1.03	3.84	-2.3	1.06	20.83	6.26	14.27	0.3	0.82	0.3	0.7	2.19	0.83	26.58	36091103.34	4.69	0.98	11513021710.86	Bens Industriais	Transporte	Logística	26.81	1.87
 ESTR3	7.6	MANUFATURA DE BRINQUEDOS ESTRELA S.A.	-3.18	-0.11	-7.06	0.21	-11.8	42.52	-5.47	-12.15	0.39	-0.1	-0.36	0.56	-3.54	-6.74	1.85	\N	-8.31	-1.91	2.91	0.16	0.05	3.49	1520	-67.6	-2.39	30393960	Consumo Cíclico	Viagens e Lazer	Brinquedos e Jogos	\N	\N
 MNDL3	12.36	MUNDIAL S.A. - PRODUTOS DE CONSUMO	-15.75	0.81	1.15	0.09	5.1	38.35	12.36	-0.9	0.14	-0.73	-0.15	0.64	-5.13	-0.57	16.48	2.78	3.95	0.11	0.89	0.75	0.16	12.21	30385	15.31	-0.78	122624054.4	Consumo Cíclico	Tecidos. Vestuário e Calçados	Acessórios	\N	\N
-JALL3	6.38	JALLES MACHADO S.A.	3.66	0.93	2.95	0.29	7.38	16.34	34.3	27.58	1.01	1.03	-0.46	0.28	25.5	7.84	9.61	1.41	4.44	0.31	0.69	3.88	0.02	\N	3926515.49	6.83	1.74	1936597092.32	Consumo não Cíclico	Alimentos Processados	Açucar e Alcool	\N	6.94
-MGEL3	19.13	MANGELS INDUSTRIAL S.A.	5.57	3.28	1.45	0.15	8.67	12.54	8.32	2.16	0.12	0.66	-0.29	1.23	58.79	2.66	9.81	16.92	7.47	0.05	0.95	1.82	-0.06	14.25	\N	5.84	3.43	91458445.52	Materiais Básicos	Siderurgia e Metalurgia	Artefatos de Ferro e Aço	\N	\N
-HBSA3	3.44	HIDROVIAS DO BRASIL S.A.	-35.67	1.95	9.14	0.43	21.7	32.16	15.5	-3.97	1.42	-9.36	-0.53	0.3	-5.47	-1.2	3.68	2.68	12.56	0.22	0.78	0.81	-0.15	8.87	26293045.71	1.76	-0.1	2615716291.92	Bens Industriais	Transporte	Transporte Hidroviário	\N	\N
-ENMA3B	50.49	CIA ENERGETICA DO MARANHAO - CEMAR	10.75	2.12	8.18	0.89	\N	30.35	17.55	13.34	1.43	16.9	-1.18	0.62	19.69	8.28	13.34	0.59	2.28	0.42	0.58	1.27	0.77	8.35	\N	23.85	4.7	\N	Utilidade Pública	Energia Elétrica	Energia Elétrica	2.77	\N
-GUAR4	151	GUARARAPES CONFECCOES S.A.	3087.67	14.75	139.68	5.53	7.64	58.42	6.02	0.27	8.41	21.75	-14.97	0.66	0.48	0.18	5.55	0.18	1.74	0.37	0.63	1.68	-19.79	4.11	\N	10.23	0.05	3184896000	Consumo Cíclico	Comércio	Tecidos. Vestuário e Calçados	-54.38	\N
-LJQQ3	3.72	LOJAS QUERO-QUERO S/A	7.56	1.17	4.23	0.22	5.23	34.76	7.07	3.96	0.3	0.87	-0.61	0.74	15.46	2.93	14.81	0.28	1	0.19	0.81	1.67	-0.02	15.23	18471106.46	3.18	0.49	725670484.92	Consumo Cíclico	Comércio	Produtos Diversos	37.63	\N
-LHER4	0	LOJAS HERING S.A.	0	0	0	0	-3.77	63.41	22.35	10.99	0	0	0	0.06	1.95	0.67	3.94	-0.15	-3.77	0.34	0.66	6.36	0	4.31	\N	141.54	2.76	0	Financeiro e Outros	Exploração de Imóveis	Exploração de Imóveis	-51.59	\N
-HOOT3	0	HOTEIS OTHON S.A.	0	0	0	0	0.02	64.43	76.55	34.13	0	0	0	0.28	-39.2	9.72	-66.23	\N	-0.16	-0.25	1.31	0.31	0	13.48	\N	-7.02	2.75	19815179.94	Consumo Cíclico	Hoteis e Restaurantes	Hotelaria	\N	\N
-MEGA3	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
 MMAQ3	0	MINASMAQUINAS S.A.	0	0	0	0	2.6	8.12	4.75	3.09	0	0	0	2.05	12.45	6.34	7.38	0.49	2.58	0.51	0.49	1.69	0	25.76	\N	5685.11	707.56	1115195.25	\N	\N	\N	24.18	\N
-CTSA4	0.85	CIA TECIDOS SANTANENSE	-0.48	0.1	-1.41	0.04	-14.15	-22.39	-15.56	-45.69	0.22	0.46	-0.05	0.17	-21.36	-7.79	-4.49	0.76	-10.51	0.36	0.64	1.37	-0.01	-0.42	29714.23	8.28	-1.77	60936270.39	Consumo Cíclico	Tecidos. Vestuário e Calçados	Fios e Tecidos	\N	\N
-QVQP3B	0	524 PARTICIPACOES S.A.	0	0	0	0	0.52	\N	\N	\N	\N	0	\N	0	-150.72	-150.72	-176.81	-0.93	0.52	1	0	\N	0	\N	\N	0	0	0	Financeiro e Outros	Outros	Outros	\N	\N
-APER3	42.83	ALPER CONSULTORIA E CORRETORA DE SEGUROS S.A.	-20	1.05	22.58	0.55	23.52	100	6.44	-7.27	1.45	327.8	-0.72	0.38	-5.23	-2.73	3.63	0.04	0.94	0.52	0.48	1.01	0.09	29.52	52355.9	40.96	-2.14	491694139.22	Financeiro e Outros	Previdência e Seguros	Corretoras de Seguros	\N	\N
-TCNO3	1.2	TECNOSOLO ENGENHARIA S.A.	-7.52	-8.4	-6.81	0.03	-34.51	\N	\N	\N	\N	-0.08	-0.04	0	-111.63	-0.45	-3.55	\N	-28.98	0	1	0.28	-0.28	\N	\N	-0.14	-0.16	6451072.5	Bens Industriais	Construção e Engenharia	Engenharia Consultiva	\N	\N
-RPAD3	8.69	ALFA HOLDINGS S.A.	45.25	0.68	77.3	0.67	72.54	\N	\N	\N	\N	14.33	-0.71	0	1.5	1.49	0.83	-0.05	-5.61	1	0	14.69	-0.6	\N	3999.67	12.84	0.19	744009751.38	Financeiro e Outros	Intermediários Financeiros	Bancos	-17.68	\N
+JALL3	7.71	JALLES MACHADO S.A.	4.35	1.11	3.5	0.34	7.92	16.34	34.3	27.58	1.2	1.23	-0.55	0.28	25.5	7.84	9.61	1.41	4.44	0.31	0.69	3.88	0.02	\N	5142664.13	6.83	1.74	2285670235.92	Consumo não Cíclico	Alimentos Processados	Açucar e Alcool	\N	5.84
+HOOT3	0	HOTEIS OTHON S.A.	0	0	0	0	0.02	64.43	76.55	34.13	0	0	0	0.28	-39.2	9.72	-66.23	\N	-0.16	-0.25	1.31	0.31	0	13.48	\N	-7.02	2.75	20209904.64	Consumo Cíclico	Hoteis e Restaurantes	Hotelaria	\N	\N
+LHER4	0	LOJAS HERING S.A.	0	0	0	0	-3.77	63.41	22.35	10.99	0	0	0	0.06	1.95	0.67	3.94	-0.15	-3.77	0.34	0.66	6.36	0	4.31	\N	141.54	2.76	0	Financeiro e Outros	Exploração de Imóveis	Exploração de Imóveis	-51.59	\N
+HBSA3	4	HIDROVIAS DO BRASIL S.A.	-41.27	2.26	10.57	0.49	23.11	32.16	15.5	-3.97	1.64	-10.83	-0.61	0.3	-5.47	-1.2	3.68	2.68	12.56	0.22	0.78	0.81	-0.17	8.87	13155671.06	1.76	-0.1	3018719092.71	Bens Industriais	Transporte	Transporte Hidroviário	\N	\N
+ENMA3B	50.49	CIA ENERGETICA DO MARANHAO - CEMAR	10.75	2.12	8.18	0.89	\N	30.35	17.55	13.34	1.43	16.9	-1.18	0.62	19.69	8.28	13.34	0.59	2.28	0.42	0.58	1.27	0.77	8.35	\N	23.85	4.7	\N	Utilidade Pública	Energia Elétrica	Energia Elétrica	2.77	\N
+LJQQ3	4.44	LOJAS QUERO-QUERO S/A	8.94	1.38	5	0.26	6	34.76	7.07	3.96	0.35	1.03	-0.72	0.74	15.46	2.93	14.81	0.28	1	0.19	0.81	1.67	-0.02	15.23	12609816.5	3.18	0.49	858319928.4	Consumo Cíclico	Comércio	Produtos Diversos	37.63	\N
+ALPK3	3.55	ALLPARK EMPREENDIMENTOS PARTICIPACOES SERVICOS S.A	-13.46	2.23	4.28	0.31	11.09	32.23	12.89	-4.1	0.55	-2.42	-0.36	0.57	-16.54	-2.34	10.1	3.56	6.85	0.14	0.86	0.49	0.22	6.73	479538.16	1.62	-0.27	776946009.5	Bens Industriais	Serviços	Serviços Diversos	\N	\N
+GUAR4	151	GUARARAPES CONFECCOES S.A.	3087.67	14.75	139.68	5.53	8.69	58.42	6.02	0.27	8.41	21.75	-14.97	0.66	0.48	0.18	5.55	0.18	1.74	0.37	0.63	1.68	-19.79	4.11	\N	10.23	0.05	3748992000	Consumo Cíclico	Comércio	Tecidos. Vestuário e Calçados	-54.38	\N
+MSPA4	36.68	CIA MELHORAMENTOS DE SAO PAULO	25.8	0.28	6.29	0.16	10.24	43.07	22.38	5.46	1.41	4.34	-0.18	0.12	1.09	0.64	2.64	0.14	3.05	0.58	0.42	1.68	-0.09	5.07	32500	129.88	1.42	268891142.67	Consumo Cíclico	Mídia	Jornais. Livros e Revistas	14.21	0.87
+MEGA3	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+AURE3	12.47	AUREN ENERGIA S.A.	-42.55	1.02	9.93	0.45	12.6	20.96	20.44	-4.77	2.03	5.78	-0.56	0.22	-2.41	-1.06	0.19	0.28	2.73	0.44	0.56	1.68	0.39	\N	41568771.61	12.22	-0.29	12430000000	Utilidade Pública	Energia Elétrica	Energia Elétrica	\N	15.19
+COCE5	30.75	CIA ENERGETICA DO CEARA - COELCE	3.97	0.55	1.61	0.18	5.36	20.72	17.34	7.01	0.28	-0.78	-0.23	0.64	13.78	4.5	12.29	1.33	3.91	0.33	0.67	0.48	0.27	11.07	918797.19	55.5	7.65	2135635078.89	Utilidade Pública	Energia Elétrica	Energia Elétrica	10.31	3.18
 SULA11	22.25	SUL AMERICA S.A.	52.23	1.13	-12.92	0.31	6.54	4.25	-3.34	0.83	0.43	0.85	-0.91	0.73	2.17	0.6	-8.72	-1.71	19.47	0.28	0.72	2.29	-0.94	4.58	\N	19.64	0.43	9475042424.17	Financeiro e Outros	Previdência e Seguros	Seguradoras	-23.56	\N
-VLID3	15.23	VALID SOLUÇÕES S.A.	4.13	0.81	2.54	0.46	2.79	35.94	22.18	13.65	0.56	1.33	-0.98	0.81	19.6	11.04	18.86	0.08	0.25	0.56	0.43	2.82	0.02	5.4	6035707.49	18.8	3.69	1246367991.25	Bens Industriais	Serviços	Serviços Diversos	24.7	11.37
-VVAR4	95.68	GRUPO CASAS BAHIA S.A.	-3.51	2.84	-6.27	0.29	-5.2	27.46	-5.21	-9.3	0.33	-1.8	-0.48	0.89	-80.86	-8.26	-24.97	2.18	-4.82	0.1	0.9	0.71	-0.01	1.39	\N	33.68	-27.23	546730694.25	Consumo Cíclico	Comércio	Eletrodomésticos	\N	\N
-SOND3	46.01	SONDOTECNICA ENGENHARIA SOLOS S.A.	22.08	1.95	8.81	1.17	7.65	32.23	7.82	3.12	0.69	3.2	-3.35	1.7	8.83	5.31	7.43	-0.5	-2.28	0.6	0.4	2.29	-0.34	27.24	\N	23.6	2.08	127408965	Bens Industriais	Construção e Engenharia	Engenharia Consultiva	-5.98	\N
-AURE3	12.2	AUREN ENERGIA S.A.	-41.49	1	9.68	0.44	12.42	20.96	20.44	-4.77	1.98	5.64	-0.55	0.22	-2.41	-1.06	0.19	0.28	2.73	0.44	0.56	1.68	0.38	\N	70758073.11	12.22	-0.29	12200000000	Utilidade Pública	Energia Elétrica	Energia Elétrica	\N	15.57
+VVAR4	95.68	GRUPO CASAS BAHIA S.A.	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	0	\N	\N	\N	\N	\N	\N
+VLID3	15.79	VALID SOLUÇÕES S.A.	4.27	0.84	2.63	0.47	2.88	35.94	22.18	13.65	0.58	1.37	-1.01	0.81	19.6	11.04	18.86	0.08	0.25	0.56	0.43	2.82	0.02	5.4	5804667.97	18.8	3.69	1288104542.5	Bens Industriais	Serviços	Serviços Diversos	24.7	10.99
+RPAD3	8.73	ALFA HOLDINGS S.A.	45.61	0.68	77.92	0.68	71.66	\N	\N	\N	\N	14.45	-0.72	0	1.5	1.49	0.83	-0.05	-5.61	1	0	14.69	-0.61	\N	1894	12.84	0.19	735629374.52	Financeiro e Outros	Intermediários Financeiros	Bancos	-17.68	\N
+TKNO3	52.42	TEKNO S.A. - INDUSTRIA E COMERCIO	3.91	0.52	3.6	0.41	2.74	24.02	15.56	14.32	0.56	1.07	-0.93	0.74	13.38	10.57	11.78	-0.21	-1.41	0.79	0.21	3.23	1.16	19.94	0	100.22	13.41	178445464.42	Materiais Básicos	Siderurgia e Metalurgia	Artefatos de Ferro e Aço	\N	5.6
+PPAR3	14.6	POLPAR S.A.	1.33	0.04	1.74	0.03	-3.48	\N	\N	\N	\N	0.33	-0.03	0	2.69	1.92	1.61	-0.11	-5.22	0.72	0.28	262.72	-0.03	\N	\N	409.93	11.01	2160800	Financeiro e Outros	Outros	Outros	39.08	25.9
 TIET4	3.51	AES TIETE ENERGIA SA	6.13	3.15	4.91	0.64	7.15	74.66	61.76	49.46	3.03	1443.59	-0.72	0.21	51.45	10.47	13.16	2.34	3.64	0.2	0.72	1	0.03	-5.19	\N	1.11	0.57	5004795800.93	Utilidade Pública	Energia Elétrica	Energia Elétrica	23.78	\N
-TKNO3	69.63	TEKNO S.A. - INDUSTRIA E COMERCIO	5.19	0.69	4.78	0.55	3.22	24.02	15.56	14.32	0.74	1.43	-1.24	0.74	13.38	10.57	11.78	-0.21	-1.41	0.79	0.21	3.23	1.54	19.94	\N	100.22	13.41	198955927.63	Materiais Básicos	Siderurgia e Metalurgia	Artefatos de Ferro e Aço	\N	\N
+QGEP3	14.54	QGEP PARTICIPAÇÕES S.A.	40.15	1	15.37	0.47	17.89	31.48	14.15	5.41	2.17	3.73	-0.67	0.22	2.48	1.18	3.04	0.16	2.53	0.47	0.53	1.77	-0.54	34.1	\N	14.58	0.36	3864832398.7	\N	\N	\N	-23.08	\N
 TESA3	48	TERRA SANTA AGRO S.A.	-13.3	1.62	10.73	0.52	17.39	15.86	9.39	-7.58	1.01	-11.1	-0.74	0.52	-12.18	-3.94	3.93	1.01	6.66	0.32	0.68	0.86	0.83	7.32	\N	29.64	-3.61	1389696672	Consumo não Cíclico	Agropecuária	Agricultura	\N	\N
-CMIN3	5.15	CSN MINERAÇÃO S.A.	7.82	2.34	4.94	0.95	4.57	46.85	32.01	20.2	1.58	3.39	-1.69	0.6	29.88	12.15	22.07	-0.17	-0.37	0.41	0.59	2.79	0.24	21.15	53380220.09	2.2	0.66	28249495015.7	Materiais Básicos	Mineração	Minerais Metálicos	27.74	10
+SOND3	46.01	SONDOTECNICA ENGENHARIA SOLOS S.A.	22.08	1.95	8.81	1.17	0.79	32.23	7.82	3.12	0.69	3.2	-3.35	1.7	8.83	5.31	7.43	-0.5	-2.28	0.6	0.4	2.29	-0.34	27.24	\N	23.6	2.08	39384560	Bens Industriais	Construção e Engenharia	Engenharia Consultiva	-5.98	\N
 TOYB4	2.5	TEC TOY S.A.	-47.96	-5.43	-49.12	4.4	-47.62	24.06	-10.7	-10.96	5.26	-6.47	-12.98	0.84	-11.31	-9.18	11.93	\N	-0.63	-0.81	1.81	0.49	0.52	-33.11	\N	-0.46	-0.05	71890222.22	Consumo Cíclico	Viagens e Lazer	Brinquedos e Jogos	\N	\N
 PTNT3	9.68	PETTENATI S.A. INDUSTRIA TEXTIL	12.88	1.2	7.19	0.55	7	16.9	8.44	4.71	0.61	1.79	-1.13	0.91	9.31	4.27	7.51	0.28	1.67	0.46	0.45	2.5	-0.66	11.78	6433.65	8.07	0.75	345299434.48	Consumo Cíclico	Tecidos. Vestuário e Calçados	Fios e Tecidos	7.9	2.19
-QGEP3	14.54	QGEP PARTICIPAÇÕES S.A.	40.15	1	15.37	0.47	17.89	31.48	14.15	5.41	2.17	3.73	-0.67	0.22	2.48	1.18	3.04	0.16	2.53	0.47	0.53	1.77	-0.54	34.1	\N	14.58	0.36	3864832398.7	\N	\N	\N	-23.08	\N
+QVQP3B	0	524 PARTICIPACOES S.A.	0	0	0	0	0.52	\N	\N	\N	\N	0	\N	0	-150.72	-150.72	-176.81	-0.93	0.52	1	0	\N	0	\N	\N	0	0	0	Financeiro e Outros	Outros	Outros	\N	\N
 TRAD3	0.65	TC TRADERS CLUB S.A.	-0.82	0.67	-0.95	0.61	-0.57	25.99	-368.73	-429.53	3.51	2.3	-0.92	0.17	-81.73	-74.12	-83.84	-0.27	0.38	0.91	0.09	4.36	-0.01	\N	328767.37	0.97	-0.8	182095639.7	Tecnologia da Informação	Programas e Serviços	Programas e Serviços	\N	\N
-COCE5	29.8	CIA ENERGETICA DO CEARA - COELCE	3.9	0.54	1.58	0.18	5.45	20.72	17.34	7.01	0.27	-0.76	-0.22	0.64	13.78	4.5	12.29	1.33	3.91	0.33	0.67	0.48	0.26	11.07	1353626.92	55.5	7.65	2265418508.79	Utilidade Pública	Energia Elétrica	Energia Elétrica	10.31	3.24
-RNEW3	0.91	RENOVA ENERGIA S.A.	-8.5	0.26	1.29	0.08	7.46	72.96	86.11	-13.07	1.11	-0.62	-0.08	0.07	-3.07	-0.91	5.93	1.24	6.16	0.3	0.7	0.23	0.08	-20.33	51477.2	3.49	-0.11	228693626.33	Utilidade Pública	Energia Elétrica	Energia Elétrica	\N	\N
-RAIL3	19.69	RUMO S.A.	35.97	2.28	9.36	0.72	12.53	39.65	33.35	8.68	3.12	5.9	-0.94	0.23	6.33	2.01	9.93	0.77	3.17	0.32	0.68	2.13	0.65	10.68	209502789.94	8.65	0.55	36522369605.81	Bens Industriais	Transporte	Transporte Ferroviário	30.88	0.47
-PRIO3	41.07	PETRO RIO S.A.	7.24	2.38	4.98	1.19	5.94	62.15	59.88	41.2	2.98	11.61	-1.53	0.4	32.89	16.45	22.83	0.46	0.96	0.5	0.5	1.87	0.18	69.58	435520512.31	17.26	5.68	36636901489.38	Petróleo. Gás e Biocombustíveis	Petróleo. Gás e Biocombustíveis	Exploração. Refino e Distribuição	89.93	0.18
-SHOW3	1.49	T4F ENTRETENIMENTO S.A.	2.38	0.57	1.6	0.23	0.98	21.38	12.76	8.59	0.2	2.71	-0.46	1.14	23.8	9.82	23.97	-0.22	-0.62	0.41	0.58	1.21	0	3.21	393175.6	2.63	0.63	100444817.21	Consumo Cíclico	Viagens e Lazer	Produção de Eventos e Shows	38.18	\N
-PPAR3	14.6	POLPAR S.A.	1.33	0.04	1.74	0.03	-3.48	\N	\N	\N	\N	0.33	-0.03	0	2.69	1.92	1.61	-0.11	-5.22	0.72	0.28	262.72	-0.03	\N	\N	409.93	11.01	2160800	Financeiro e Outros	Outros	Outros	39.08	25.9
-RCSL3	2.87	RECRUSUL S.A.	-12.57	377.4	-24	1.49	-13.6	11.6	-7.95	-15.18	1.91	12.82	-2.8	0.78	-3002.48	-11.87	-1592.05	-0.01	0	0	1	1.33	0.28	66.3	2567831.29	0.01	-0.23	51763742.12	Bens Industriais	Material de Transporte	Material Rodoviário	\N	\N
-ITUB3	27.88	ITAU UNIBANCO HOLDING S.A.	7.69	1.47	6.26	0.1	6.72	40.94	13.75	11.2	0.86	\N	-0.11	0.12	19.17	1.36	\N	\N	\N	0.07	0.93	\N	0.42	18.99	10118664.49	18.93	3.63	293546467106.37	Financeiro e Outros	Intermediários Financeiros	Bancos	7.38	8.42
-BEES4	9.42	BANESTES S.A. - BCO EST ESPIRITO SANTO	8.59	1.37	6.32	0.07	5.97	28.7	9.18	6.76	0.58	1.3	-0.07	0.12	15.94	0.81	\N	\N	\N	0.05	0.95	\N	0.98	18.84	28810.74	6.88	1.1	2807264761.2	Financeiro e Outros	Intermediários Financeiros	Bancos	17.64	5.09
-ORVR3	37.2	ORIZON VALORIZACAO DE RESIDUOS S.A.	27.87	4.22	12.41	1.34	15.9	37.91	31.22	13.9	3.87	9.64	-1.8	0.35	15.14	4.82	12.13	1.19	3.49	0.32	0.66	2.2	-0.17	21.27	14880604.43	8.82	1.33	3085773070.8	Utilidade Pública	Água e Saneamento	Água e Saneamento	115.31	\N
+APER3	45.89	ALPER CONSULTORIA E CORRETORA DE SEGUROS S.A.	-21.72	1.14	24.52	0.59	25.46	100	6.44	-7.27	1.58	355.96	-0.78	0.38	-5.23	-2.73	3.63	0.04	0.94	0.52	0.48	1.01	0.1	29.52	56421.08	40.96	-2.14	533941032.34	Financeiro e Outros	Previdência e Seguros	Corretoras de Seguros	\N	\N
+RAIL3	23.16	RUMO S.A.	40.82	2.58	10.62	0.82	13.75	39.65	33.35	8.68	3.54	6.69	-1.07	0.23	6.33	2.01	9.93	0.77	3.17	0.32	0.68	2.13	0.74	10.68	237198393.42	8.65	0.55	41307931494.23	Bens Industriais	Transporte	Transporte Ferroviário	30.88	0.41
+SHOW3	1.69	T4F ENTRETENIMENTO S.A.	2.73	0.65	1.84	0.27	1.23	21.38	12.76	8.59	0.23	3.1	-0.53	1.14	23.8	9.82	23.97	-0.22	-0.62	0.41	0.58	1.21	0	3.21	260331.26	2.63	0.63	115949721.88	Consumo Cíclico	Viagens e Lazer	Produção de Eventos e Shows	38.18	\N
+RNEW3	0.91	RENOVA ENERGIA S.A.	-8.5	0.26	1.29	0.08	7.45	72.96	86.11	-13.07	1.11	-0.62	-0.08	0.07	-3.07	-0.91	5.93	1.24	6.16	0.3	0.7	0.23	0.08	-20.33	42813.94	3.49	-0.11	227030399.96	Utilidade Pública	Energia Elétrica	Energia Elétrica	\N	\N
+RCSL3	2.99	RECRUSUL S.A.	-13.66	410.27	-26.09	1.62	-15.39	11.6	-7.95	-15.18	2.07	13.93	-3.04	0.78	-3002.48	-11.87	-1592.05	-0.01	0	0	1	1.33	0.3	66.3	1809096.48	0.01	-0.23	58556449.3	Bens Industriais	Material de Transporte	Material Rodoviário	\N	\N
+CMIN3	5.54	CSN MINERAÇÃO S.A.	8.01	2.39	5.05	0.97	4.68	46.85	32.01	20.2	1.62	3.47	-1.73	0.6	29.88	12.15	22.07	-0.17	-0.37	0.41	0.59	2.79	0.25	21.15	49651029.93	2.2	0.66	28907735676.26	Materiais Básicos	Mineração	Minerais Metálicos	27.74	9.77
+PRIO3	46.47	PETRO RIO S.A.	8.04	2.64	5.53	1.32	6.44	62.15	59.88	41.2	3.31	12.9	-1.7	0.4	32.89	16.45	22.83	0.46	0.96	0.5	0.5	1.87	0.21	69.58	366952936.68	17.26	5.68	40312188417.46	Petróleo. Gás e Biocombustíveis	Petróleo. Gás e Biocombustíveis	Exploração. Refino e Distribuição	89.93	0.16
+TCNO3	1.2	TECNOSOLO ENGENHARIA S.A.	-7.52	-8.4	-6.81	0.03	-34.51	\N	\N	\N	\N	-0.08	-0.04	0	-111.63	-0.45	-3.55	\N	-28.98	0	1	0.28	-0.28	\N	\N	-0.14	-0.16	6451072.5	Bens Industriais	Construção e Engenharia	Engenharia Consultiva	\N	\N
+BEES4	9.77	BANESTES S.A. - BCO EST ESPIRITO SANTO	8.82	1.41	6.49	0.07	6.23	28.7	9.18	6.76	0.6	1.33	-0.08	0.12	15.94	0.81	\N	\N	\N	0.05	0.95	\N	1	18.84	34844.26	6.88	1.1	2930608407.8	Financeiro e Outros	Intermediários Financeiros	Bancos	17.64	4.87
+DEXP4	10.23	DEXXOS PARTICIPACOES S.A.	5.74	1.24	3.32	0.66	2.82	21.93	16.85	9.74	0.56	1.39	-1.96	1.19	21.7	11.57	18.01	-0.19	-0.5	0.53	0.37	3.57	0.51	34.1	55419	8.17	1.77	957000068.25	Materiais Básicos	Químicos	Petroquímicos	15.49	5.31
 CTNM4	0.74	CIA TECIDOS NORTE DE MINAS COTEMINAS	-0.05	0.09	-0.07	0.01	-3.82	14.02	-22.47	-29.57	0.02	-0.02	-0.01	0.43	-175.93	-12.81	-18.67	4.56	-3.41	0.07	0.86	0.49	0	-3.61	62416.74	7.84	-13.8	132999482.18	Consumo Cíclico	Tecidos. Vestuário e Calçados	Fios e Tecidos	\N	\N
 TUPY3	22.13	TUPY S.A.	6.71	0.92	3.96	0.3	6.89	16.98	7.21	4.26	0.29	0.93	-0.77	1.04	13.71	4.43	9.87	0.68	2.93	0.32	0.68	2.07	-0.39	18.68	15163015.89	24.08	3.3	3190648075	Bens Industriais	Material de Transporte	Material Rodoviário	11.85	1.88
 INEP4	1.69	INEPAR S.A. INDUSTRIA E CONSTRUCOES	0.15	-0.06	-0.81	0.06	-10.52	-55.74	-1307.53	6898.98	10.58	-0.07	-0.07	0.01	-41.29	42.28	285.92	\N	-9.66	-1.02	2.02	0.09	0	-33.23	104084	-26.69	11.02	79964816.38	Bens Industriais	Máquinas e Equipamentos	Máq. e Equip. Industriais	\N	3.54
-DEXP4	10.08	DEXXOS PARTICIPACOES S.A.	5.68	1.23	3.29	0.66	2.73	21.93	16.85	9.74	0.55	1.38	-1.94	1.19	21.7	11.57	18.01	-0.19	-0.5	0.53	0.37	3.57	0.51	34.1	21184.29	8.17	1.77	930890504.1	Materiais Básicos	Químicos	Petroquímicos	15.49	5.36
-SIMH3	5.38	SIMPAR S.A.	-9.13	1.46	0.92	0.06	8.09	25.28	15.28	-1.53	0.14	0.59	-0.09	0.45	-15.99	-0.69	8.63	11.43	7.17	0.04	0.91	1.47	0.03	31.57	23487330.11	3.68	-0.59	4696958067.54	Financeiro e Outros	Holdings Diversificadas	Holdings Diversificadas	\N	\N
-COCE3	35.25	CIA ENERGETICA DO CEARA - COELCE	4.61	0.64	1.87	0.21	5.45	20.72	17.34	7.01	0.32	-0.9	-0.26	0.64	13.78	4.5	12.29	1.33	3.91	0.33	0.67	0.48	0.31	11.07	7030	55.5	7.65	2265418508.79	Utilidade Pública	Energia Elétrica	Energia Elétrica	10.31	2.74
-DEXP3	9.89	DEXXOS PARTICIPACOES S.A.	5.58	1.21	3.23	0.65	2.73	21.93	16.85	9.74	0.54	1.36	-1.9	1.19	21.7	11.57	18.01	-0.19	-0.5	0.53	0.37	3.57	0.5	34.1	635703.31	8.17	1.77	930890504.1	Materiais Básicos	Químicos	Petroquímicos	15.49	5.17
-EUCA4	15.06	EUCATEX S.A. INDUSTRIA E COMERCIO	3.5	0.57	3.66	0.34	5.2	33.23	14.43	15.1	0.53	2.06	-0.52	0.63	16.18	9.58	9.67	0.24	1.56	0.59	0.41	1.83	0.06	16.23	1405530.83	26.6	4.3	1385156108.36	Materiais Básicos	Madeira e Papel	Madeira	68.94	4.32
-DXCO3	6.67	DURATEX S.A.	9.72	0.85	4.64	0.33	8.42	32.85	16.01	7.64	0.74	4.54	-0.46	0.45	8.78	3.41	8.78	0.7	3.78	0.39	0.61	1.34	-0.38	16.29	20003838.57	7.81	0.69	5473176860.82	Materiais Básicos	Madeira e Papel	Madeira	24.96	3.23
-MYPK3	11.61	IOCHPE MAXION S.A.	18.34	0.47	2.18	0.12	7.03	10.66	5.62	0.67	0.12	0.7	-0.25	1.01	2.57	0.68	6.43	1.05	4.85	0.26	0.71	1.54	-3.71	9.23	16537494.26	24.64	0.63	1784684567.61	Consumo Cíclico	Automóveis e Motocicletas	Automóveis e Motocicletas	-13.53	0.75
-PDTC3	1.82	PADTEC HOLDING S.A.	745.54	1.04	8.45	0.28	15.14	33.82	4.92	0.06	0.42	0.72	-0.96	0.66	0.14	0.04	5.92	0.82	6.69	0.26	0.74	2.17	-7.55	\N	102389.6	1.75	0	144634719.32	Financeiro e Outros	Serviços Financeiros Diversos	Serviços Financeiros Diversos	-55.65	2.54
-PFRM3	5.16	PROFARMA DISTRIB PROD FARMACEUTICOS S.A.	8.29	0.51	2.33	0.12	4.55	14.97	3.08	0.87	0.07	0.6	-0.45	1.69	6.15	1.47	11.08	0.49	2.22	0.24	0.71	1.38	-1.36	15.19	1057394.31	10.13	0.62	638873908.68	Saúde	Comércio e Distribuição	Medicamentos e Outros Produtos	\N	7.48
-MWET3	9.16	WETZEL S.A.	-0.76	-3.52	-3.38	0.06	-19.53	12.36	-2.14	-9.46	0.07	-1.54	-0.1	0.83	-460.79	-7.82	-15.9	\N	-16.3	-0.02	1.02	0.92	0	10.46	916	-2.61	-12	18041826.3	Bens Industriais	Material de Transporte	Material Rodoviário	\N	\N
-SANB11	27.47	BCO SANTANDER (BRASIL) S.A.	10.83	0.89	7.56	0.09	7.56	37.06	10.58	7.39	0.8	\N	-0.09	0.11	8.23	0.84	\N	\N	\N	0.1	0.9	\N	-0.43	12.73	147142346.31	30.82	2.54	102992323985.49	Financeiro e Outros	Intermediários Financeiros	Bancos	-5.44	5.87
-PLPL3	9.31	PLANO & PLANO DESENVOLVIMENTO IMOBILIÁRIO S.A.	7.06	3.05	5.78	0.94	6.04	33.41	15.08	12.34	0.87	1.66	-7.31	1.08	43.21	13.27	27.42	0.14	0.26	0.31	0.68	2.84	0.09	\N	7919239.26	3.05	1.32	1901623360	Consumo Cíclico	Construção Civil	Incorporações	\N	\N
-WIZC3	5.66	WIZ CO PARTICIPAÇÕES E CORRETAGEM DE SEGUROS S.A.	5.48	1.97	1.87	0.39	2.08	62	42.04	14.33	0.79	-15.53	-0.51	0.5	35.95	7.2	27.1	0.22	0.21	0.2	0.59	0.9	0.12	13.9	2562386.77	2.87	1.03	905075216.12	Financeiro e Outros	Previdência e Seguros	Corretoras de Seguros	-1.46	4.35
-MTRE3	3.46	MITRE REALTY EMPREENDIMENTOS E PARTICIPAÇÕES S.A.	5.04	0.37	4.1	0.18	8.61	19.59	9.09	7.4	0.37	0.37	-0.8	0.48	7.43	3.52	4.19	0.41	4.51	0.47	0.51	2.61	0.09	43.88	5527809.09	9.23	0.69	365980877.2	Consumo Cíclico	Construção Civil	Incorporações	36.05	16.96
 QUSW3	0	QUALITY SOFTWARE S.A.	0	0	0	0	1.17	91.7	55.49	28.75	0	0	0	0.3	24.67	8.75	21.5	0.56	1.17	0.35	0.65	1.54	0	-10.73	\N	103.27	25.47	0	Tecnologia da Informação	Programas e Serviços	Programas e Serviços	46.92	\N
-SPRI6	11	SPRINGER S.A.	-1.68	1.24	-1.52	1.2	-2.46	\N	\N	\N	\N	2.34	-2.49	0	-73.82	-71.18	-81.66	-0.14	0.17	0.96	0.04	66.47	0	\N	\N	8.86	-6.54	48073731.88	\N	\N	\N	\N	\N
+SIMH3	6.75	SIMPAR S.A.	-11.9	1.9	1.19	0.08	8.35	25.28	15.28	-1.53	0.18	0.77	-0.12	0.45	-15.99	-0.69	8.63	11.43	7.17	0.04	0.91	1.47	0.04	31.57	21169277.23	3.68	-0.59	6041440488.36	Financeiro e Outros	Holdings Diversificadas	Holdings Diversificadas	\N	\N
 SPRI3	21.72	SPRINGER S.A.	-3.32	2.45	-3	2.36	-2.46	\N	\N	\N	\N	4.61	-4.93	0	-73.82	-71.18	-81.66	-0.14	0.17	0.96	0.04	66.47	-0.01	\N	\N	8.86	-6.54	48073731.88	\N	\N	\N	\N	\N
+COCE3	32.55	CIA ENERGETICA DO CEARA - COELCE	4.26	0.59	1.72	0.19	5.36	20.72	17.34	7.01	0.3	-0.83	-0.24	0.64	13.78	4.5	12.29	1.33	3.91	0.33	0.67	0.48	0.29	11.07	6079	55.5	7.65	2135635078.89	Utilidade Pública	Energia Elétrica	Energia Elétrica	10.31	2.96
+ORVR3	41.77	ORIZON VALORIZACAO DE RESIDUOS S.A.	31.46	4.76	14	1.52	17.54	37.91	31.22	13.9	4.37	10.88	-2.04	0.35	15.14	4.82	12.13	1.19	3.49	0.32	0.66	2.2	-0.19	21.27	14525026.65	8.82	1.33	3494720953.57	Utilidade Pública	Água e Saneamento	Água e Saneamento	115.31	\N
+DEXP3	10.44	DEXXOS PARTICIPACOES S.A.	5.74	1.25	3.32	0.66	2.82	21.93	16.85	9.74	0.56	1.39	-1.96	1.19	21.7	11.57	18.01	-0.19	-0.5	0.53	0.37	3.57	0.51	34.1	852363.57	8.17	1.77	957000068.25	Materiais Básicos	Químicos	Petroquímicos	15.49	5.02
+SPRI6	11	SPRINGER S.A.	-1.68	1.24	-1.52	1.2	-2.46	\N	\N	\N	\N	2.34	-2.49	0	-73.82	-71.18	-81.66	-0.14	0.17	0.96	0.04	66.47	0	\N	\N	8.86	-6.54	48073731.88	\N	\N	\N	\N	\N
+WIZC3	5.9	WIZ CO PARTICIPAÇÕES E CORRETAGEM DE SEGUROS S.A.	5.7	2.05	1.94	0.41	2.17	62	42.04	14.33	0.82	-16.17	-0.53	0.5	35.95	7.2	27.1	0.22	0.21	0.2	0.59	0.9	0.12	13.9	2008824.57	2.87	1.03	946651109.44	Financeiro e Outros	Previdência e Seguros	Corretoras de Seguros	-1.46	4.18
 LCAM3	24.15	CIA LOCAÇÃO DAS AMÉRICAS	14.85	0.7	6.29	0.6	4.98	30.75	23.77	10.07	1.49	2.99	-0.82	0.4	4.7	4.06	8.79	-0.15	-1.31	0.86	0.14	4.39	0.11	21.58	\N	34.64	1.63	12285815275.65	Consumo Cíclico	Diversos	Aluguel de carros	34.33	\N
-BMIN3	20.01	BCO MERCANTIL DE INVESTIMENTOS S.A.	12.25	0.71	7.4	0.36	7.17	59.53	38.47	23.23	2.85	44.51	-0.37	0.13	5.77	2.96	\N	\N	\N	0.51	0.49	\N	-0.71	19.32	8555.29	28.28	1.63	93527042.82	Financeiro e Outros	Intermediários Financeiros	Bancos	13.81	6.36
-MBLY3	2.11	Mobly S.A.	-2.68	0.5	-2.51	0.3	-3.15	44.08	-16.54	-15.53	0.42	0.9	-0.66	0.71	-18.64	-11.07	-14.39	0.13	-0.63	0.59	0.41	2.47	0.9	11.93	839369.09	4.23	-0.79	224693697.44	Consumo Cíclico	Comércio	Produtos Diversos	\N	\N
-TRIS3	4.6	TRISUL S.A.	6.78	0.62	5.32	0.3	9.51	23.52	14.59	11.44	0.78	0.63	-1.28	0.39	9.19	4.49	5.47	0.49	4.19	0.49	0.5	2.7	0.14	13.93	2297433.51	7.38	0.68	858440674.8	Consumo Cíclico	Construção Civil	Incorporações	11.96	4.3
-TKNO4	65	TEKNO S.A. - INDUSTRIA E COMERCIO	4.85	0.65	4.46	0.51	3.22	24.02	15.56	14.32	0.69	1.33	-1.16	0.74	13.38	10.57	11.78	-0.21	-1.41	0.79	0.21	3.23	1.43	19.94	10205	100.22	13.41	198955927.63	Materiais Básicos	Siderurgia e Metalurgia	Artefatos de Ferro e Aço	\N	\N
-PRNR3	9.92	PRINER SERVIÇOS INDUSTRIAIS S.A.	56.51	1.49	5.99	0.53	8.25	20.51	7.57	0.8	0.45	2.27	-1.13	1.17	2.64	0.94	9.87	0.56	2.26	0.36	0.63	1.79	-0.9	26.17	3700131.11	6.66	0.18	463469909.44	Bens Industriais	Serviços	Serviços Diversos	1.99	\N
+PFRM3	5.29	PROFARMA DISTRIB PROD FARMACEUTICOS S.A.	8.86	0.54	2.49	0.13	4.71	14.97	3.08	0.87	0.08	0.64	-0.48	1.69	6.15	1.47	11.08	0.49	2.22	0.24	0.71	1.38	-1.45	15.19	987853.9	10.13	0.62	680970251.5	Saúde	Comércio e Distribuição	Medicamentos e Outros Produtos	\N	6.99
+MWET3	0	WETZEL S.A.	0	0	0	0	-18.35	12.36	-2.14	-9.46	0	0	0	0.83	-460.79	-7.82	-15.9	\N	-16.3	-0.02	1.02	0.92	0	10.46	916	-2.61	-12	11483656.74	Bens Industriais	Material de Transporte	Material Rodoviário	\N	\N
+PLPL3	10.5	PLANO & PLANO DESENVOLVIMENTO IMOBILIÁRIO S.A.	7.67	3.31	6.27	1.02	6.55	33.41	15.08	12.34	0.95	1.8	-7.93	1.08	43.21	13.27	27.42	0.14	0.26	0.31	0.68	2.84	0.1	\N	9506684.19	3.05	1.32	2067070720	Consumo Cíclico	Construção Civil	Incorporações	\N	\N
+SANB11	28.42	BCO SANTANDER (BRASIL) S.A.	10.73	0.88	7.5	0.09	7.47	37.06	10.58	7.39	0.79	\N	-0.09	0.11	8.23	0.84	\N	\N	\N	0.1	0.9	\N	-0.43	12.73	88744480.68	30.82	2.54	101755066362.07	Financeiro e Outros	Intermediários Financeiros	Bancos	-5.44	5.92
+PDTC3	1.97	PADTEC HOLDING S.A.	798.79	1.11	9.06	0.29	15.89	33.82	4.92	0.06	0.45	0.77	-1.03	0.66	0.14	0.04	5.92	0.82	6.69	0.26	0.74	2.17	-8.09	\N	66751.03	1.75	0	157349859.48	Financeiro e Outros	Serviços Financeiros Diversos	Serviços Financeiros Diversos	-55.65	2.37
+EUCA4	16.18	EUCATEX S.A. INDUSTRIA E COMERCIO	3.65	0.59	3.82	0.35	5.54	33.23	14.43	15.1	0.55	2.16	-0.55	0.63	16.18	9.58	9.67	0.24	1.56	0.59	0.41	1.83	0.06	16.23	925385.29	26.6	4.3	1515910797.48	Materiais Básicos	Madeira e Papel	Madeira	68.94	4.13
+DXCO3	7.04	DURATEX S.A.	10.08	0.89	4.81	0.34	8.59	32.85	16.01	7.64	0.77	4.71	-0.48	0.45	8.78	3.41	8.78	0.7	3.78	0.39	0.61	1.34	-0.4	16.29	18703667.61	7.81	0.69	5678318422.32	Materiais Básicos	Madeira e Papel	Madeira	24.96	3.11
+MYPK3	11.82	IOCHPE MAXION S.A.	18.42	0.47	2.19	0.12	7.03	10.66	5.62	0.67	0.12	0.7	-0.25	1.01	2.57	0.68	6.43	1.05	4.85	0.26	0.71	1.54	-3.73	9.23	12693124.48	24.64	0.63	1781610175.59	Consumo Cíclico	Automóveis e Motocicletas	Automóveis e Motocicletas	-13.53	1.85
+ITUB3	28.73	ITAU UNIBANCO HOLDING S.A.	7.88	1.51	6.42	0.11	6.98	40.94	13.75	11.2	0.88	\N	-0.11	0.12	19.17	1.36	\N	\N	\N	0.07	0.93	\N	0.43	18.99	12332982.61	18.93	3.63	304649984971.8	Financeiro e Outros	Intermediários Financeiros	Bancos	7.38	8.21
+MBLY3	2.63	Mobly S.A.	-3.26	0.61	-3.06	0.36	-3.71	44.08	-16.54	-15.53	0.51	1.1	-0.81	0.71	-18.64	-11.07	-14.39	0.13	-0.63	0.59	0.41	2.47	1.09	11.93	972803.23	4.23	-0.79	274743952.32	Consumo Cíclico	Comércio	Produtos Diversos	\N	\N
+TRIS3	5.15	TRISUL S.A.	7.58	0.7	5.94	0.34	10.13	23.52	14.59	11.44	0.87	0.71	-1.43	0.39	9.19	4.49	5.47	0.49	4.19	0.49	0.5	2.7	0.16	13.93	2510905.55	7.38	0.68	959214145.32	Consumo Cíclico	Construção Civil	Incorporações	11.96	3.85
+TKNO4	70	TEKNO S.A. - INDUSTRIA E COMERCIO	5.22	0.7	4.8	0.55	2.74	24.02	15.56	14.32	0.75	1.43	-1.25	0.74	13.38	10.57	11.78	-0.21	-1.41	0.79	0.21	3.23	1.54	19.94	9233.33	100.22	13.41	178445464.42	Materiais Básicos	Siderurgia e Metalurgia	Artefatos de Ferro e Aço	\N	\N
+PRNR3	10.59	PRINER SERVIÇOS INDUSTRIAIS S.A.	61.06	1.61	6.48	0.57	8.75	20.51	7.57	0.8	0.49	2.45	-1.22	1.17	2.64	0.94	9.87	0.56	2.26	0.36	0.63	1.79	-0.97	26.17	3088396.03	6.66	0.18	502248137.75	Bens Industriais	Serviços	Serviços Diversos	1.99	\N
 MODL4	2.72	BANCO MODAL S.A	-26.3	1.6	-28.22	0.26	-29.26	50.83	-5.11	-5.48	1.44	\N	-0.29	0.18	-6.1	-0.97	\N	\N	\N	0.16	0.84	\N	0.17	\N	\N	1.7	-0.1	1985844000	Financeiro e Outros	Intermediários Financeiros	Bancos	\N	\N
-NEOE3	17.82	NEOENERGIA S.A.	4.48	0.73	2.03	0.22	5.6	27.49	23.6	10.7	0.48	17.74	-0.29	0.46	16.36	4.95	12.66	1.29	3.57	0.3	0.7	1.06	0.49	15.85	18700503.51	24.28	3.97	21629866959.36	Utilidade Pública	Energia Elétrica	Energia Elétrica	64.04	5.52
+NEOE3	18.57	NEOENERGIA S.A.	4.87	0.8	2.21	0.24	5.78	27.49	23.6	10.7	0.52	19.27	-0.31	0.46	16.36	4.95	12.66	1.29	3.57	0.3	0.7	1.06	0.53	15.85	17084064.71	24.28	3.97	23547666611.2	Utilidade Pública	Energia Elétrica	Energia Elétrica	64.04	4.29
 GETT11	4.81	GETNET ADQUIRENCIA E SERV PARA MEIOS DE PGTO S.A.	15.12	2.48	14.55	0.16	\N	41.43	18.41	17.71	2.68	6.28	-3.92	0.06	16.41	1.07	10.57	0.17	0.99	0.07	0.93	1.03	0.13	\N	\N	1.94	0.32	\N	Financeiro e Outros	Serviços Financeiros Diversos	Serviços Financeiros Diversos	\N	\N
-BRSR5	15	BCO ESTADO DO RIO GRANDE DO SUL S.A	6.11	0.61	4.9	0.05	3.72	32.23	8.31	6.67	0.41	7.51	-0.05	0.12	10.05	0.77	\N	\N	\N	0.08	0.92	1.54	0.62	12.01	2078.17	24.43	2.46	4654418349.51	Financeiro e Outros	Intermediários Financeiros	Bancos	2.04	4.07
+BRSR5	16.99	BCO ESTADO DO RIO GRANDE DO SUL S.A	6.07	0.61	4.87	0.05	3.96	32.23	8.31	6.67	0.4	7.46	-0.05	0.12	10.05	0.77	\N	\N	\N	0.08	0.92	1.54	0.62	12.01	1594.5	24.43	2.46	4953131446.42	Financeiro e Outros	Intermediários Financeiros	Bancos	2.04	4.22
 BRQB3	0	BRQ SOLUCOES EM INFORMATICA S.A.	0	0	0	0	-1.09	35.32	15.06	10.17	0	0	0	1.7	28.83	17.26	26.72	-0.47	-1.09	0.6	0.39	2.29	0	12.98	\N	1.64	0.47	0	Tecnologia da Informação	Programas e Serviços	Programas e Serviços	21.94	\N
-LOGN3	34.8	LOG-IN LOGISTICA INTERMODAL S.A.	124.43	3.92	11.63	1.03	15	17.49	13.39	1.25	1.56	11.01	-1.46	0.66	3.15	0.83	10.05	1.14	3.37	0.26	0.74	1.47	-1.35	19.06	931831.06	8.87	0.28	3734265712.8	Bens Industriais	Transporte	Transporte Hidroviário	37.97	\N
-REDE3	6.64	REDE ENERGIA PARTICIPAÇÕES S.A.	7.53	3.44	3.19	0.49	5.43	32.39	26.14	11.06	0.83	13.12	-0.69	0.59	45.71	6.56	19.54	2.42	2.24	0.14	0.79	1.15	0.19	9.88	12051.77	1.93	0.88	14012547203.36	Utilidade Pública	Energia Elétrica	Energia Elétrica	36.02	5.46
-HETA4	5.45	HERCULES S.A. FABRICA DE TALHERES	-3.29	-0.01	1.21	0.2	148.88	100	58.57	-21.46	0.71	-2.35	-0.27	0.28	-0.24	-6.11	-8.35	\N	140.94	-25.46	26.46	0.75	0.03	20.28	2059.29	-689.47	-1.65	18281473.45	Consumo Cíclico	Utilidades Domésticas	Utensílios Domésticos	\N	\N
-TELB3	13.4	TELEC BRASILEIRAS S.A. TELEBRAS	-5.48	0.86	-7.91	0.29	0.7	-57.23	-36.73	-53.05	2.91	0.87	-0.49	0.1	-15.73	-5.26	-10.19	-0.87	8	0.33	0.67	4.81	-0.02	15.86	14423.89	15.56	-2.45	1067888924.83	Comunicações	Telecomunicações	Telecomunicações	\N	\N
-SHUL3	111.89	SCHULZ S.A.	145.29	31.86	130.83	16.67	59.78	25.81	15.84	14.26	20.72	42.23	-48.65	0.8	21.93	11.47	14.16	-0.02	-0.07	0.52	0.48	2.5	74.94	24.97	\N	3.51	0.77	18292417258.36	Bens Industriais	Máquinas e Equipamentos	Motores . Compressores e Outros	46.98	0.19
+REDE3	6.99	REDE ENERGIA PARTICIPAÇÕES S.A.	8.06	3.69	3.41	0.53	5.59	32.39	26.14	11.06	0.89	14.05	-0.74	0.59	45.71	6.56	19.54	2.42	2.24	0.14	0.79	1.15	0.2	9.88	22620.39	1.93	0.88	14708953916.78	Utilidade Pública	Energia Elétrica	Energia Elétrica	36.02	5.1
+HETA4	5.45	HERCULES S.A. FABRICA DE TALHERES	-3.2	-0.01	1.17	0.2	148.85	100	58.57	-21.46	0.69	-2.28	-0.26	0.28	-0.24	-6.11	-8.35	\N	140.94	-25.46	26.46	0.75	0.03	20.28	1361.41	-689.47	-1.65	18227265.29	Consumo Cíclico	Utilidades Domésticas	Utensílios Domésticos	\N	\N
+TELB3	12.74	TELEC BRASILEIRAS S.A. TELEBRAS	-5.27	0.83	-7.62	0.28	0.87	-57.23	-36.73	-53.05	2.8	0.84	-0.48	0.1	-15.73	-5.26	-10.19	-0.87	8	0.33	0.67	4.81	-0.02	15.86	13625.11	15.56	-2.45	1042552646.1	Comunicações	Telecomunicações	Telecomunicações	\N	\N
 CSAB4	48.97	CIA SEGUROS ALIANCA DA BAHIA	19.89	1.78	30.28	0.91	24.57	-124	1656.27	2521.73	501.45	5.68	-1.15	0	8.94	4.57	\N	\N	\N	0.51	0.49	4.45	-0.03	-33.4	60668.75	27.56	2.46	305164800	Financeiro e Outros	Previdência e Seguros	Seguradoras	-1.31	\N
-CGAS3	105.06	CIA GAS DE SAO PAULO - COMGAS	5.52	16.16	4.98	0.93	6.96	21.09	18.83	16.98	0.94	509.44	-1.49	0.99	292.91	16.85	29.34	6.44	1.98	0.06	0.94	1	0.02	17.25	33454.16	6.5	19.05	13922612870.22	Utilidade Pública	Gás	Gás	13.51	10.45
-ECOR3	6.1	ECORODOVIAS INFRAESTRUTURA E LOGÍSTICA S.A.	6.17	1.43	1.4	0.15	6.12	37.76	32.31	7.35	0.45	-15.11	-0.2	0.34	23.18	2.5	10.04	4.8	4.71	0.11	0.88	0.96	0.06	22.79	29328789.83	4.26	0.99	4247638766.4	Bens Industriais	Transporte	Exploração de Rodovias	12.94	4.56
-EKTR3	38.69	ELEKTRO REDES S.A.	7.58	2.32	3.67	0.65	5.97	28.36	22.9	11.09	0.84	11.04	-0.95	0.77	30.57	8.53	17.63	1.46	2.31	0.28	0.72	1.23	-1.06	6.85	5734.5	16.7	5.1	7491452048.2	Utilidade Pública	Energia Elétrica	Energia Elétrica	19.01	25.82
+SHUL3	111.89	SCHULZ S.A.	145.29	31.86	130.83	16.67	60.2	25.81	15.84	14.26	20.72	42.23	-48.65	0.8	21.93	11.47	14.16	-0.02	-0.07	0.52	0.48	2.5	74.94	24.97	\N	3.51	0.77	18419320108.28	Bens Industriais	Máquinas e Equipamentos	Motores . Compressores e Outros	46.98	0.25
+CGAS3	109.71	CIA GAS DE SAO PAULO - COMGAS	5.57	16.32	5.03	0.94	7.01	21.09	18.83	16.98	0.95	514.63	-1.5	0.99	292.91	16.85	29.34	6.44	1.98	0.06	0.94	1	0.02	17.25	34598	6.5	19.05	14064409898.31	Utilidade Pública	Gás	Gás	13.51	10.35
+ECOR3	7.46	ECORODOVIAS INFRAESTRUTURA E LOGÍSTICA S.A.	7.66	1.78	1.74	0.19	6.45	37.76	32.31	7.35	0.56	-18.75	-0.25	0.34	23.18	2.5	10.04	4.8	4.71	0.11	0.88	0.96	0.08	22.79	29571320.73	4.26	0.99	5271250075.68	Bens Industriais	Transporte	Exploração de Rodovias	12.94	3.68
+EKTR3	38.69	ELEKTRO REDES S.A.	7.58	2.32	3.67	0.65	6.01	28.36	22.9	11.09	0.84	11.04	-0.95	0.77	30.57	8.53	17.63	1.46	2.31	0.28	0.72	1.23	-1.06	6.85	5734.5	16.7	5.1	7573973465.53	Utilidade Pública	Energia Elétrica	Energia Elétrica	19.01	26.11
 BFRE11	0	BRAZILIAN FINANCE E REAL ESTATE S.A.	0	0	0	0	\N	100	169.82	115.03	0	0	0	0.05	6.9	6.14	\N	\N	\N	0.89	0.1	\N	0	\N	\N	302450.49	20874.48	\N	Financeiro e Outros	Serviços Financeiros Diversos	Gestão de Recursos e Investimentos	6.73	\N
-MWET4	8.57	WETZEL S.A.	-0.71	-3.29	-3.16	0.06	-19.53	12.36	-2.14	-9.46	0.07	-1.44	-0.1	0.83	-460.79	-7.82	-15.9	\N	-16.3	-0.02	1.02	0.92	0	10.46	127952.57	-2.61	-12	18041826.3	Bens Industriais	Material de Transporte	Material Rodoviário	\N	\N
+MWET4	8.37	WETZEL S.A.	-0.7	-3.21	-3.09	0.05	-18.35	12.36	-2.14	-9.46	0.07	-1.41	-0.09	0.83	-460.79	-7.82	-15.9	\N	-16.3	-0.02	1.02	0.92	0	10.46	47682	-2.61	-12	11483656.74	Bens Industriais	Material de Transporte	Material Rodoviário	\N	\N
 SPRT3B	76.4	LONGDIS S.A.	-2026.68	30980.92	-2030.23	27379.87	-2030.16	\N	\N	\N	\N	30980.92	\N	0	-1528.65	-1350.97	-1525.98	-1.12	0.07	0.88	0.12	8.6	-0.54	\N	\N	0	-0.04	370531748.8	Financeiro e Outros	Outros	Outros	\N	\N
-MERC4	9.83	MERCANTIL BRASIL FINANC S.A. C.F.I.	25.66	0.72	20.58	0.46	27.02	71.93	19.45	15.6	4	102.99	-0.46	0.11	2.8	1.78	\N	\N	\N	0.64	0.36	\N	-0.1	-24.22	8484.3	13.67	0.38	232516929.25	Financeiro e Outros	Intermediários Financeiros	Soc. Crédito e Financiamento	-22.87	\N
-CSRN3	22.49	CIA ENERGETICA DO RIO GDE NORTE - COSERN	5.78	2.22	3.46	0.66	5.55	34.23	29.16	17.46	1.01	60.97	-0.86	0.66	38.4	11.44	21.48	1.33	2.07	0.3	0.7	1.05	0.23	8.58	21448.83	10.13	3.89	3799532072.31	Utilidade Pública	Energia Elétrica	Energia Elétrica	22.03	5.81
+CSRN3	22.5	CIA ENERGETICA DO RIO GDE NORTE - COSERN	5.78	2.22	3.46	0.66	5.49	34.23	29.16	17.46	1.01	60.99	-0.86	0.66	38.4	11.44	21.48	1.33	2.07	0.3	0.7	1.05	0.23	8.58	23823.64	10.13	3.89	3731839478.3	Utilidade Pública	Energia Elétrica	Energia Elétrica	22.03	6.19
+MERC4	9	MERCANTIL BRASIL FINANC S.A. C.F.I.	22.97	0.64	18.42	0.41	26.09	71.93	19.45	15.6	3.58	92.2	-0.41	0.11	2.8	1.78	\N	\N	\N	0.64	0.36	\N	-0.09	-24.22	7138.25	13.67	0.38	224451581.2	Financeiro e Outros	Intermediários Financeiros	Soc. Crédito e Financiamento	-22.87	\N
 CEPE3	125.26	CIA ENERGETICA DE PERNAMBUCO - CELPE	68.72	5.73	8.27	0.64	14.33	20.59	13.21	1.59	1.09	15.32	-0.91	0.59	8.33	0.94	10.35	4.61	6.66	0.11	0.89	1.17	1.08	8.57	\N	21.87	1.82	8662392210.18	Utilidade Pública	Energia Elétrica	Energia Elétrica	3.98	\N
-LIGT3	5.04	LIGHT S.A.	-8.97	0.69	1.52	0.08	8.47	17.25	8.96	-1.51	0.14	-0.19	-0.1	0.58	-7.64	-0.88	4.36	3.15	6.96	0.12	0.88	0.37	0.09	3.35	7398777.31	7.35	-0.56	1877678832.96	Utilidade Pública	Energia Elétrica	Energia Elétrica	\N	\N
-ABCB4	20.95	BCO ABC BRASIL S.A.	5.01	0.9	5.11	0.09	5.11	21.8	13.06	13.31	0.67	-2.5	-0.09	0.14	17.88	1.83	\N	\N	\N	0.1	0.91	0.05	-0.29	18.7	15366686.37	23.39	4.18	5125561154.15	Financeiro e Outros	Intermediários Financeiros	Bancos	19.07	7.53
-FRAS3	17.4	FRAS-LE S.A.	11.87	2.39	9.17	1.13	8.89	33.38	15.11	11.67	1.39	3.1	-2.89	0.81	20.1	9.5	11.36	-0.07	-0.28	0.47	0.52	2.48	0.24	24.32	4032354.14	7.29	1.47	4698284368.2	Bens Industriais	Material de Transporte	Material Rodoviário	33.49	3.48
-PETZ3	3.44	PET CENTER COMERCIO E PARTICIPACOES S.A.	163.96	0.88	12.93	0.41	13.01	46.55	3.86	0.3	0.5	2.54	-0.61	0.81	0.54	0.25	5.29	0.01	0.08	0.46	0.54	1.88	-2.03	32.81	35953900.89	3.91	0.02	1591080846.88	Consumo Cíclico	Comércio	Produtos Diversos	-20.68	0.08
+LIGT3	5.04	LIGHT S.A.	-9.04	0.69	1.53	0.08	8.48	17.25	8.96	-1.51	0.14	-0.19	-0.1	0.58	-7.64	-0.88	4.36	3.15	6.96	0.12	0.88	0.37	0.09	3.35	6069915.16	7.35	-0.56	1888855492.68	Utilidade Pública	Energia Elétrica	Energia Elétrica	\N	\N
+ABCB4	23.25	BCO ABC BRASIL S.A.	5.45	0.97	5.55	0.1	5.55	21.8	13.06	13.31	0.73	-2.72	-0.1	0.14	17.88	1.83	\N	\N	\N	0.1	0.91	0.05	-0.31	18.7	14091289.74	23.39	4.18	5570836633.89	Financeiro e Outros	Intermediários Financeiros	Bancos	19.07	6.7
 CREM3	14.5	CREMER S.A.	32.7	2.45	9.28	0.67	13.11	30.3	7.39	2.1	0.69	4.89	-1.69	0.98	7.5	2.05	9.29	1.01	3.84	0.27	0.73	1.29	22.14	1.09	\N	5.91	0.44	465122474	Saúde	Comércio e Distribuição	Medicamentos e Outros Produtos	\N	\N
-B3SA3	10.32	B3 S.A. - BRASIL, BOLSA, BALCÃO	14.34	2.88	11.19	1.19	10.63	90.08	51.54	40.21	5.77	6.43	-1.92	0.21	20.09	8.27	11.13	-0.14	-0.56	0.41	0.59	1.93	-2.72	15.48	512142231.34	3.58	0.72	57239880000	Financeiro e Outros	Serviços Financeiros Diversos	Serviços Financeiros Diversos	13.85	5.11
+PETZ3	4.24	PET CENTER COMERCIO E PARTICIPACOES S.A.	187.79	1.01	14.81	0.46	14.81	46.55	3.86	0.3	0.57	2.91	-0.7	0.81	0.54	0.25	5.29	0.01	0.08	0.46	0.54	1.88	-2.33	32.81	29168631	3.91	0.02	1813092127.84	Consumo Cíclico	Comércio	Produtos Diversos	-20.68	0.07
 CNSY3	30.22	CINESYSTEM S.A.	-86.19	-23.75	93.87	5.37	109.95	18.72	7.08	-7.71	6.65	-28.61	-6.18	0.81	-27.56	-6.23	4.37	\N	16.08	-0.23	1.23	0.41	0.14	2.97	\N	-1.27	-0.35	935885083.86	Consumo Cíclico	Mídia	Produção e Difusão de Filmes e Programas	\N	\N
-OSXB3	3.8	OSX BRASIL S.A.	-0.01	0	-0.03	0.01	-17.74	98.86	-673.92	-2287.78	0.23	-0.01	-0.01	0.02	-17	-50.22	58.35	\N	-17.7	-2.95	3.96	0.01	0	37.94	16588.49	-2221.13	-377.61	11962544.4	Petróleo. Gás e Biocombustíveis	Petróleo. Gás e Biocombustíveis	Equipamentos e Serviços	\N	\N
-CALI3	26	CONSTRUTORA ADOLPHO LINDENBERG S.A.	-83.69	3.98	12.7	0.43	18.46	37.03	10.6	-1.61	1.35	39.04	-0.53	0.32	-4.76	-0.52	7.11	1.81	5.76	0.11	0.89	1.07	0.77	69.63	5100	6.53	-0.31	96745246	Consumo Cíclico	Construção Civil	Incorporações	\N	2.38
-EALT3	11.18	ELECTRO ACO ALTONA S.A.	4.64	1	4.01	0.44	5.81	25.12	12.16	10.53	0.49	10.09	-0.74	0.9	21.53	9.5	14.81	0.45	1.82	0.44	0.56	1.12	0.08	14.94	10387.69	11.2	2.41	250147500	Bens Industriais	Máquinas e Equipamentos	Máq. e Equip. Industriais	34.67	6.05
-VBBR3	20.48	VIBRA ENERGIA S.A.	4.19	1.38	2.64	0.53	3.81	5.57	5.3	3.35	0.14	1.82	-1.14	3.79	33.06	12.68	20.53	0.61	1.17	0.38	0.62	2.2	0.01	10.76	169485676.57	14.8	4.89	22917120000	Petróleo. Gás e Biocombustíveis	Petróleo. Gás e Biocombustíveis	Exploração. Refino e Distribuição	11.38	7.03
-CXSE3	14.35	CAIXA SEGURIDADE PARTICIPAÇÕES S.A.	11.88	3.21	10.73	2.9	10.42	\N	\N	\N	\N	42.11	-3.47	0	26.98	24.38	26.3	-0.09	-0.32	0.9	0.1	1.71	11.4	\N	50257846.57	4.48	1.21	43050000000	Financeiro e Outros	Previdência e Seguros	Corretoras de Seguros	19.65	7.43
-RDOR3	25.64	REDE D OR SÃO LUIZ S.A.	23.05	2.53	9.58	0.64	10.03	17.29	12.91	5.37	1.24	2.05	-1.23	0.52	10.99	2.79	9.49	0.12	0.45	0.25	0.73	2.95	0.22	33.63	254693689.83	10.12	1.11	58697462007.6	Saúde	Serv.Méd.Hospit..Análises e Diagnósticos	Serv.Méd.Hospit..Análises e Diagnósticos	16.83	1.96
-SOJA3	14.43	BOA SAFRA SEMENTES S.A.	5.45	1.94	7.48	0.74	7.88	16.01	12.85	17.63	0.96	2.18	-2.41	0.77	35.57	13.6	7.99	0.1	0.4	0.38	0.44	1.97	0.05	46.18	7253557.57	7.44	2.65	1952698537.92	Consumo não Cíclico	Agropecuária	Agricultura	118.58	6.56
-TELB4	8.53	TELEC BRASILEIRAS S.A. TELEBRAS	-3.49	0.55	-5.04	0.18	0.7	-57.23	-36.73	-53.05	1.85	0.56	-0.31	0.1	-15.73	-5.26	-10.19	-0.87	8	0.33	0.67	4.81	-0.01	15.86	35148.61	15.56	-2.45	1067888924.83	Comunicações	Telecomunicações	Telecomunicações	\N	\N
+CALI3	26	CONSTRUTORA ADOLPHO LINDENBERG S.A.	-83.69	3.98	12.7	0.43	18.46	37.03	10.6	-1.61	1.35	39.04	-0.53	0.32	-4.76	-0.52	7.11	1.81	5.76	0.11	0.89	1.07	0.77	69.63	3850	6.53	-0.31	96745246	Consumo Cíclico	Construção Civil	Incorporações	\N	2.38
+OSXB3	3.93	OSX BRASIL S.A.	-0.01	0	-0.03	0.01	-17.74	98.86	-673.92	-2287.78	0.23	-0.01	-0.01	0.02	-17	-50.22	58.35	\N	-17.7	-2.95	3.96	0.01	0	37.94	14948.65	-2221.13	-377.61	12151426.68	Petróleo. Gás e Biocombustíveis	Petróleo. Gás e Biocombustíveis	Equipamentos e Serviços	\N	\N
+EALT3	10.8	ELECTRO ACO ALTONA S.A.	4.53	0.98	3.92	0.43	5.8	25.12	12.16	10.53	0.48	9.86	-0.73	0.9	21.53	9.5	14.81	0.45	1.82	0.44	0.56	1.12	0.08	14.94	5483.56	11.2	2.41	249622500	Bens Industriais	Máquinas e Equipamentos	Máq. e Equip. Industriais	34.67	4.22
+CXSE3	14.43	CAIXA SEGURIDADE PARTICIPAÇÕES S.A.	11.78	3.18	10.64	2.87	10.33	\N	\N	\N	\N	41.75	-3.44	0	26.98	24.38	26.3	-0.09	-0.32	0.9	0.1	1.71	11.3	\N	38975642.81	4.48	1.21	42690000000	Financeiro e Outros	Previdência e Seguros	Corretoras de Seguros	19.65	7.49
+VBBR3	22.68	VIBRA ENERGIA S.A.	4.56	1.51	2.88	0.58	4.07	5.57	5.3	3.35	0.15	1.98	-1.24	3.79	33.06	12.68	20.53	0.61	1.17	0.38	0.62	2.2	0.01	10.76	144130412.39	14.8	4.89	25110360000	Petróleo. Gás e Biocombustíveis	Petróleo. Gás e Biocombustíveis	Exploração. Refino e Distribuição	11.38	8.55
+RDOR3	29.56	REDE D OR SÃO LUIZ S.A.	25.72	2.83	10.69	0.72	11.13	17.29	12.91	5.37	1.38	2.28	-1.37	0.52	10.99	2.79	9.49	0.12	0.45	0.25	0.73	2.95	0.25	33.63	155349134.1	10.12	1.11	65450875148.1	Saúde	Serv.Méd.Hospit..Análises e Diagnósticos	Serv.Méd.Hospit..Análises e Diagnósticos	16.83	2.3
+SOJA3	15.62	BOA SAFRA SEMENTES S.A.	5.76	2.05	7.9	0.78	8.32	16.01	12.85	17.63	1.01	2.3	-2.55	0.77	35.57	13.6	7.99	0.1	0.4	0.38	0.44	1.97	0.05	46.18	7681606.77	7.44	2.65	2067722360.32	Consumo não Cíclico	Agropecuária	Agricultura	118.58	6.21
+TELB4	8.93	TELEC BRASILEIRAS S.A. TELEBRAS	-3.68	0.58	-5.31	0.19	0.87	-57.23	-36.73	-53.05	1.95	0.59	-0.33	0.1	-15.73	-5.26	-10.19	-0.87	8	0.33	0.67	4.81	-0.01	15.86	37831.83	15.56	-2.45	1042552646.1	Comunicações	Telecomunicações	Telecomunicações	\N	\N
 LAME4	6.57	LOJAS AMERICANAS S.A.	21.06	1.9	10.98	0.28	16.86	32.9	4.35	2.27	0.48	1.19	-0.65	0.59	9.02	1.34	2.89	1.01	5.87	0.15	0.63	1.72	-46.75	3.5	\N	3.46	0.31	12391135396.59	Consumo Cíclico	Comércio	Produtos Diversos	18.61	\N
-AMER3	0.4	AMERICANAS S.A	-0.02	-0.01	-0.03	0.01	-1.65	11.58	-63.41	-99.25	0.02	-0.01	-0.03	0.7	-58.06	-69.66	144.4	\N	-1.61	-1.2	2.2	0.24	0	32.64	7791288.37	-32.59	-18.92	361011801.2	Consumo Cíclico	Comércio	Produtos Diversos	\N	\N
-BALM3	9.9	BAUMER S.A.	9.48	0.65	4.61	0.38	2.67	61.16	12.55	6.11	0.58	0.82	-1.31	0.66	6.82	4	8.37	-0.28	-1.96	0.59	0.41	2.86	0.07	7.24	1406.5	15.3	1.04	97510000	Saúde	Equipamentos	Equipamentos	30.02	\N
-GEPA3	26	RIO PARANAPANEMA ENERGIA S.A.	7.19	1.16	4.96	0.69	5.77	38.61	35.54	24.54	1.76	-6.16	-0.8	0.39	16.09	9.62	13.28	0.22	0.93	0.6	0.4	0.54	0.18	1.08	9171.57	22.48	3.62	2392309836	Utilidade Pública	Energia Elétrica	Energia Elétrica	5.95	16.13
+AMER3	0.62	AMERICANAS S.A	-0.04	-0.02	-0.06	0.03	-1.68	11.58	-63.41	-99.25	0.04	-0.02	-0.05	0.7	-58.06	-69.66	144.4	\N	-1.61	-1.2	2.2	0.24	0	32.64	15415151.71	-32.59	-18.92	694947717.31	Consumo Cíclico	Comércio	Produtos Diversos	\N	\N
+BALM3	12.5	BAUMER S.A.	11.68	0.8	5.68	0.47	3.27	61.16	12.55	6.11	0.71	1.01	-1.61	0.66	6.82	4	8.37	-0.28	-1.96	0.59	0.41	2.86	0.09	7.24	1657.2	15.3	1.04	109956000	Saúde	Equipamentos	Equipamentos	30.02	\N
+GEPA3	26	RIO PARANAPANEMA ENERGIA S.A.	7.19	1.16	4.96	0.69	5.96	38.61	35.54	24.54	1.76	-6.16	-0.8	0.39	16.09	9.62	13.28	0.22	0.93	0.6	0.4	0.54	0.18	1.08	6203.63	22.48	3.62	2486743119	Utilidade Pública	Energia Elétrica	Energia Elétrica	5.95	16.13
 TIET3	3.49	AES TIETE ENERGIA SA	6.09	3.13	4.88	0.64	7.15	74.66	61.76	49.46	3.01	1435.37	-0.72	0.21	51.45	10.47	13.16	2.34	3.64	0.2	0.72	1	0.03	-5.19	\N	1.11	0.57	5004795800.93	Utilidade Pública	Energia Elétrica	Energia Elétrica	23.78	\N
-HBTS5	36.2	CIA HABITASUL DE PARTICIPACOES	1.26	0.49	1.16	0.21	1.89	77.17	89.72	82.49	1.04	4.05	-0.24	0.2	38.57	16.42	28.78	0.3	0.73	0.43	0.57	1.59	0	38.16	9012.77	74.31	28.66	330639469.4	Financeiro e Outros	Exploração de Imóveis	Exploração de Imóveis	\N	3.54
-AHEB3	27.5	SAO PAULO TURISMO S.A.	2.21	2.07	1.7	0.46	0.9	31.24	21.73	16.68	0.37	1.41	-1.13	1.24	93.37	20.69	98.59	-0.96	-0.79	0.22	0.78	2.2	0.04	50.82	3872.25	13.32	12.43	233828143.9	Consumo Cíclico	Viagens e Lazer	Produção de Eventos e Shows	\N	\N
-PMAM3	2.39	PARANAPANEMA S.A.	-0.09	-0.03	-0.18	0.08	-5.4	-55.56	-122.1	-252.38	0.22	-0.04	-0.1	0.35	-34.21	-87.4	128.19	\N	-5.21	-2.55	3.55	0.09	0	-27.23	132075.6	-79.21	-27.1	135292400.61	Materiais Básicos	Siderurgia e Metalurgia	Artefatos de Cobre	\N	\N
-EQPA3	6.75	EQUATORIAL PARA DISTRIBUIDORA DE ENERGIA S.A.	6.68	2.94	5.09	1.02	6.33	34.97	28.06	21.37	1.43	10.35	-1.45	0.71	43.96	15.26	25.67	0.72	1.24	0.35	0.65	1.5	0.2	13.58	32772.79	2.3	1.01	14917885169.87	Utilidade Pública	Energia Elétrica	Energia Elétrica	37.41	\N
-HYPE3	28.74	HYPERA S.A.	10.7	1.55	7.11	0.72	10	62.47	31.85	21.16	2.26	4.71	-1.1	0.32	14.53	6.73	11.08	0.63	2.89	0.46	0.54	1.81	12.63	16.27	97950826.03	18.49	2.69	18204514453.02	Saúde	Comércio e Distribuição	Medicamentos e Outros Produtos	8.54	5.25
-CSNA3	12.99	CIA SIDERURGICA NACIONAL	931.69	1	3.32	0.19	9.09	24.89	11.84	0.04	0.39	2.34	-0.29	0.48	0.11	0.02	7.3	1.73	5.77	0.19	0.78	1.29	-9.03	14.62	92946052.71	13.04	0.01	17225960371.53	Materiais Básicos	Siderurgia e Metalurgia	Siderurgia	-67.47	11.23
-CSRN5	23	CIA ENERGETICA DO RIO GDE NORTE - COSERN	5.91	2.27	3.54	0.68	5.55	34.23	29.16	17.46	1.03	62.35	-0.88	0.66	38.4	11.44	21.48	1.33	2.07	0.3	0.7	1.05	0.24	8.58	6900	10.13	3.89	3799532072.31	Utilidade Pública	Energia Elétrica	Energia Elétrica	22.03	6.25
+AHEB3	35	SAO PAULO TURISMO S.A.	2.81	2.63	2.16	0.58	1.36	31.24	21.73	16.68	0.47	1.79	-1.44	1.24	93.37	20.69	98.59	-0.96	-0.79	0.22	0.78	2.2	0.05	50.82	6359.13	13.32	12.43	296887221.4	Consumo Cíclico	Viagens e Lazer	Produção de Eventos e Shows	\N	\N
+HBTS5	40.96	CIA HABITASUL DE PARTICIPACOES	1.33	0.51	1.22	0.22	\N	77.17	89.72	82.49	1.1	4.26	-0.25	0.2	38.57	16.42	28.78	0.3	0.73	0.43	0.57	1.59	0	38.16	5223.7	74.31	28.66	\N	Financeiro e Outros	Exploração de Imóveis	Exploração de Imóveis	\N	3.36
+EQPA3	7.24	EQUATORIAL PARA DISTRIBUIDORA DE ENERGIA S.A.	6.98	3.07	5.32	1.07	6.56	34.97	28.06	21.37	1.49	10.81	-1.51	0.71	43.96	15.26	25.67	0.72	1.24	0.35	0.65	1.5	0.21	13.58	23892.67	2.3	1.01	15573749077.45	Utilidade Pública	Energia Elétrica	Energia Elétrica	37.41	\N
+PMAM3	2.4	PARANAPANEMA S.A.	-0.1	-0.03	-0.21	0.09	-5.42	-55.56	-122.1	-252.38	0.25	-0.04	-0.11	0.35	-34.21	-87.4	128.19	\N	-5.21	-2.55	3.55	0.09	0	-27.23	115924.87	-71.13	-24.34	153194655.24	Materiais Básicos	Siderurgia e Metalurgia	Artefatos de Cobre	\N	\N
+HYPE3	28.92	HYPERA S.A.	10.82	1.57	7.19	0.73	10.12	62.47	31.85	21.16	2.29	4.76	-1.11	0.32	14.53	6.73	11.08	0.63	2.89	0.46	0.54	1.81	12.77	16.27	88820752.35	18.49	2.69	18508556448.06	Saúde	Comércio e Distribuição	Medicamentos e Outros Produtos	8.54	4.13
+CSNA3	13.47	CIA SIDERURGICA NACIONAL	927.38	0.99	3.3	0.19	9.07	24.89	11.84	0.04	0.39	2.33	-0.29	0.48	0.11	0.02	7.3	1.73	5.77	0.19	0.78	1.29	-8.99	14.62	84419134.19	13.04	0.01	17146394734.71	Materiais Básicos	Siderurgia e Metalurgia	Siderurgia	-67.47	11.29
+CSRN5	21.2	CIA ENERGETICA DO RIO GDE NORTE - COSERN	5.45	2.09	3.26	0.62	5.49	34.23	29.16	17.46	0.95	57.47	-0.81	0.66	38.4	11.44	21.48	1.33	2.07	0.3	0.7	1.05	0.22	8.58	19405	10.13	3.89	3731839478.3	Utilidade Pública	Energia Elétrica	Energia Elétrica	22.03	7.23
 CEPE6	43	CIA ENERGETICA DE PERNAMBUCO - CELPE	23.59	1.97	2.84	0.22	14.33	20.59	13.21	1.59	0.38	5.26	-0.31	0.59	8.33	0.94	10.35	4.61	6.66	0.11	0.89	1.17	0.37	8.57	\N	21.87	1.82	8662392210.18	Utilidade Pública	Energia Elétrica	Energia Elétrica	3.98	\N
-TEND3	10.62	CONSTRUTORA TENDA S.A.	493.49	1.51	20.36	0.29	26.9	24.54	8.62	0.36	1.76	1.1	-0.68	0.16	0.31	0.06	3.09	0.49	6.55	0.19	0.8	1.82	-4.92	11.54	25894983.97	7.02	0.02	1307260892.52	Consumo Cíclico	Construção Civil	Incorporações	-57.9	\N
-LUXM3	0	TREVISA INVESTIMENTOS S.A.	0	0	0	0	5.64	31.76	19.72	13.54	0	0	0	0.8	15.35	10.84	14.64	-0.09	-0.39	0.71	0.29	0.88	0	1.03	\N	5.8	0.89	162172080	Bens Industriais	Transporte	Transporte Hidroviário	24.3	\N
-PEAB3	42.5	CIA PARTICIPACOES ALIANCA DA BAHIA	41.15	0.92	134.04	0.63	116.33	79.97	10.92	35.56	14.64	2.97	-0.84	0.04	2.23	1.53	0.12	-0.18	-25.81	0.68	0.32	6.46	1.15	-33.28	12030.73	46.22	1.03	852158060.28	Financeiro e Outros	Holdings Diversificadas	Holdings Diversificadas	-11.17	2.38
-VVEO3	2.03	CM HOSPITALAR S.A.	2.01	0.2	1.19	0.06	5.75	15.13	4.9	2.9	0.06	0.17	-0.15	1.01	9.92	2.94	3.85	0.76	4.56	0.3	0.7	2.32	0.03	\N	7461612.49	10.18	1.01	655325834.24	Saúde	Serv.Méd.Hospit..Análises e Diagnósticos	Serv.Méd.Hospit..Análises e Diagnósticos	\N	6.73
-POMO4	6.36	MARCOPOLO S.A.	8.16	2.14	8.84	0.95	9.37	22.93	12.22	13.25	1.08	2.92	-2.41	0.88	26.29	11.64	13.77	0.31	1.26	0.44	0.55	2.16	0.16	9.75	46579560.83	2.97	0.78	6628158169.1	Bens Industriais	Material de Transporte	Material Rodoviário	36.53	5.35
-BRKM3	18.15	BRASKEM S.A	-2.37	4.69	-4.35	0.15	-11.69	4.7	-4.82	-8.85	0.21	1.26	-0.26	0.74	-198.12	-6.53	-11.57	7.95	-7.36	0.03	0.97	1.44	-0.05	4	311243.11	3.87	-7.66	14414035917.98	Materiais Básicos	Químicos	Petroquímicos	\N	\N
-BRSR6	11.13	BCO ESTADO DO RIO GRANDE DO SUL S.A	4.53	0.46	3.64	0.04	3.72	32.23	8.31	6.67	0.3	5.57	-0.04	0.12	10.05	0.77	\N	\N	\N	0.08	0.92	1.54	0.46	12.01	25175795.03	24.43	2.46	4654418349.51	Financeiro e Outros	Intermediários Financeiros	Bancos	2.04	5.22
-VITT3	5.63	VITTIA FERTILIZANTES E BIOLOGICOS S.A.	10.18	1.44	10.69	0.95	13.2	36.04	11.18	11.74	1.19	3.14	-2.46	0.79	14.15	9.33	9.12	0.34	2.51	0.66	0.34	1.97	-0.24	\N	3098910.17	3.91	0.55	871039921.34	Materiais Básicos	Químicos	Fertilizantes e Defensivos	\N	4.88
-BEEF3	6.55	MINERVA S.A.	39.64	183.05	1.87	0.12	6.1	20.9	7.68	0.36	0.14	0.36	-0.37	0.85	461.76	0.31	8.32	413.94	4.23	0	0.98	2.02	-0.47	10.65	60522928.09	0.04	0.17	3977706315.85	Consumo não Cíclico	Alimentos Processados	Carnes e Derivados	\N	2.97
+LUXM3	0	TREVISA INVESTIMENTOS S.A.	0	0	0	0	-0.39	31.76	19.72	13.54	0	0	0	0.8	15.35	10.84	14.64	-0.09	-0.39	0.71	0.29	0.88	0	1.03	\N	5.8	0.89	0	Bens Industriais	Transporte	Transporte Hidroviário	24.3	\N
+POMO4	6.67	MARCOPOLO S.A.	8.34	2.19	9.04	0.97	9.63	22.93	12.22	13.25	1.1	2.98	-2.46	0.88	26.29	11.64	13.77	0.31	1.26	0.44	0.55	2.16	0.17	9.75	39642886.68	2.97	0.78	6838658164.89	Bens Industriais	Material de Transporte	Material Rodoviário	36.53	5.23
+VVEO3	2.56	CM HOSPITALAR S.A.	2.78	0.28	1.65	0.08	6.28	15.13	4.9	2.9	0.08	0.23	-0.21	1.01	9.92	2.94	3.85	0.76	4.56	0.3	0.7	2.32	0.04	\N	5785066.77	10.18	1.01	945864381.44	Saúde	Serv.Méd.Hospit..Análises e Diagnósticos	Serv.Méd.Hospit..Análises e Diagnósticos	\N	4.86
+BRKM3	19.35	BRASKEM S.A	-2.41	4.78	-4.43	0.16	-11.8	4.7	-4.82	-8.85	0.21	1.28	-0.26	0.74	-198.12	-6.53	-11.57	7.95	-7.36	0.03	0.97	1.44	-0.05	4	163633.32	3.87	-7.66	14777320865.98	Materiais Básicos	Químicos	Petroquímicos	\N	\N
+BRSR6	11.9	BCO ESTADO DO RIO GRANDE DO SUL S.A	4.77	0.48	3.83	0.04	3.96	32.23	8.31	6.67	0.32	5.87	-0.04	0.12	10.05	0.77	\N	\N	\N	0.08	0.92	1.54	0.49	12.01	19180315.74	24.43	2.46	4953131446.42	Financeiro e Outros	Intermediários Financeiros	Bancos	2.04	5.11
+BEEF3	6.82	MINERVA S.A.	40.73	188.08	1.92	0.13	6.15	20.9	7.68	0.36	0.15	0.37	-0.38	0.85	461.76	0.31	8.32	413.94	4.23	0	0.98	2.02	-0.48	10.65	43244071.55	0.04	0.17	4080944495.04	Consumo não Cíclico	Alimentos Processados	Carnes e Derivados	\N	2.89
+VITT3	6.25	VITTIA FERTILIZANTES E BIOLOGICOS S.A.	10.74	1.52	11.28	1	13.83	36.04	11.18	11.74	1.26	3.31	-2.59	0.79	14.15	9.33	9.12	0.34	2.51	0.66	0.34	1.97	-0.26	\N	3265335.58	3.91	0.55	922095547.28	Materiais Básicos	Químicos	Fertilizantes e Defensivos	\N	4.62
 FIGE4	0	INVESTIMENTOS BEMGE S.A.	0	0	0	0	0.55	100	92.3	61.71	0	0	0	0.11	7.03	6.91	\N	\N	\N	0.98	0.02	\N	0	8.36	\N	68.86	4.84	9497566.76	Financeiro e Outros	Outros	Outros	1.66	\N
 DMMO11	0.34	DOMMO ENERGIA S.A.	-49.97	-0.36	6.75	0.53	32.11	54.54	8.16	-1.1	0.55	1.78	-1.29	0.97	-0.73	-1.07	-5.39	\N	-2.85	-1.47	2.47	2.04	0.49	-1.34	\N	-0.93	-0.01	949254731.04	Petróleo. Gás e Biocombustíveis	Petróleo. Gás e Biocombustíveis	Exploração. Refino e Distribuição	\N	\N
 BRIV3	12.86	BCO ALFA DE INVESTIMENTO S.A.	20.75	0.66	13.69	0.04	13.55	15.61	2.39	1.58	0.33	0.6	-0.05	0.14	3.2	0.22	\N	\N	\N	0.07	0.93	7.22	1.08	20.48	32430.73	19.39	0.62	1128165604.64	Financeiro e Outros	Intermediários Financeiros	Bancos	2.02	\N
-LAND3	15.5	Terra Santa Propriedades Agricolas S.A.	44.57	2.07	25.96	1.55	28.01	93.84	69.17	40.29	17.96	-59.77	-1.65	0.09	4.64	3.48	5.26	0.16	2.04	0.75	0.25	0.69	-0.58	\N	873341.43	7.49	0.35	1491517911	Consumo não Cíclico	Agropecuária	Agricultura	\N	0.56
 APTI4	3500	SIDERURGICA J. L. ALIPERTI S.A.	1.33	0.26	1.25	0.13	0.39	99.04	164.57	155.22	2.06	0.36	-0.23	0.06	19.51	9.91	15.35	-0.1	-0.47	0.51	0.49	8.39	0	1.52	\N	13488.14	2632.16	44442750	Consumo não Cíclico	Agropecuária	Agricultura	\N	1.38
-LWSA3	4.02	LOCAWEB SERVIÇOS DE INTERNET S.A.	-42.47	0.83	27.01	0.51	15.17	46.31	6.78	-4.31	1.83	4.63	-0.9	0.28	-1.95	-1.21	1.8	-0.36	-11.84	0.62	0.38	1.35	0.15	32.63	39866222.43	4.86	-0.09	2399483641.56	Tecnologia da Informação	Programas e Serviços	Programas e Serviços	\N	\N
-ELET5	96.56	CENTRAIS ELET BRAS S.A. - ELETROBRAS	50.75	1.98	16.67	0.84	9.24	47.75	36.45	11.97	6.08	13.55	-1.02	0.14	3.9	1.66	5.89	0.38	3.21	0.43	0.57	1.57	0.24	8.27	9900	48.8	1.9	80606352629.82	Utilidade Pública	Energia Elétrica	Energia Elétrica	-19.84	\N
+LAND3	14.56	Terra Santa Propriedades Agricolas S.A.	40.83	1.9	23.79	1.42	25.83	93.84	69.17	40.29	16.45	-54.76	-1.51	0.09	4.64	3.48	5.26	0.16	2.04	0.75	0.25	0.69	-0.53	\N	1064544.61	7.49	0.35	1366422860.4	Consumo não Cíclico	Agropecuária	Agricultura	\N	0.61
+ELET5	96.57	CENTRAIS ELET BRAS S.A. - ELETROBRAS	50.76	1.98	16.67	0.84	9.94	47.75	36.45	11.97	6.08	13.56	-1.02	0.14	3.9	1.66	5.89	0.38	3.21	0.43	0.57	1.57	0.24	8.27	9657	48.8	1.9	89849420226.52	Utilidade Pública	Energia Elétrica	Energia Elétrica	-19.84	\N
+LWSA3	4.66	LOCAWEB SERVIÇOS DE INTERNET S.A.	-49.13	0.96	31.24	0.6	19.07	46.31	6.78	-4.31	2.12	5.35	-1.04	0.28	-1.95	-1.21	1.8	-0.36	-11.84	0.62	0.38	1.35	0.18	32.63	35933863	4.86	-0.09	2745677798.8	Tecnologia da Informação	Programas e Serviços	Programas e Serviços	\N	\N
 CMSA4	0	CIMS S.A.	0	0	0	0	0.17	\N	\N	\N	\N	0	0	0	-555.26	-550.51	-549.5	-0.96	0.17	0.99	0.01	111.51	0	\N	\N	0	0	0	Financeiro e Outros	Outros	Outros	\N	\N
-BPAC3	15.82	BCO BTG PACTUAL S.A.	17.23	3.5	14.62	0.37	9.8	20.34	25.92	22	3.79	41.07	-3.83	0.1	20.33	2.17	\N	\N	\N	0.11	0.89	1.01	0.55	43.9	145398.49	4.52	0.92	122041578702.99	Financeiro e Outros	Intermediários Financeiros	Bancos	52.56	1.64
-SHUL4	5.9	SCHULZ S.A.	7.66	1.68	6.9	0.88	59.78	25.81	15.84	14.26	1.09	2.23	-2.57	0.8	21.93	11.47	14.16	-0.02	-0.07	0.52	0.48	2.5	3.95	24.97	2557584.11	3.51	0.77	18292417258.36	Bens Industriais	Máquinas e Equipamentos	Motores . Compressores e Outros	46.98	5.08
-MDNE3	10.76	MOURA DUBEUX ENGENHARIA S/A	5.46	0.66	5.03	0.26	5.62	34.6	15.04	13.88	0.76	1.07	-0.46	0.34	12.1	4.77	8.3	0.08	0.59	0.39	0.61	2.28	0.11	26.18	5442095.31	16.3	1.97	913624875	Consumo Cíclico	Construção Civil	Incorporações	\N	\N
+BPAC3	15.63	BCO BTG PACTUAL S.A.	16.95	3.45	14.38	0.37	9.81	20.34	25.92	22	3.73	40.4	-3.77	0.1	20.33	2.17	\N	\N	\N	0.11	0.89	1.01	0.54	43.9	65016.06	4.52	0.92	122156639902.27	Financeiro e Outros	Intermediários Financeiros	Bancos	52.56	2.54
+SHUL4	6.77	SCHULZ S.A.	8.43	1.85	7.59	0.97	60.2	25.81	15.84	14.26	1.2	2.45	-2.82	0.8	21.93	11.47	14.16	-0.02	-0.07	0.52	0.48	2.5	4.35	24.97	2296871.06	3.51	0.77	18419320108.28	Bens Industriais	Máquinas e Equipamentos	Motores . Compressores e Outros	46.98	5.69
 STKF3	0	STATKRAFT ENERGIAS RENOVAVEIS S.A.	0	0	0	0	3.8	55.58	38.6	29.16	0	0	0	0.12	5.62	3.63	4.19	0.28	3.8	0.65	0.35	2.06	0	24.6	\N	7.97	0.45	0	Consumo Cíclico	Viagens e Lazer	Atividades Esportivas	30.23	\N
-MATD3	4.58	HOSPITAL MATER DEI SA	13.01	1.04	4.08	0.33	6.47	32.31	19.12	5.99	0.78	2.38	-0.44	0.43	8.01	2.56	11.83	0.61	2.39	0.32	0.66	2.34	0.44	28.41	3739175.97	4.4	0.35	1751070580.18	Saúde	Serv.Méd.Hospit..Análises e Diagnósticos	Serv.Méd.Hospit..Análises e Diagnósticos	1.59	1.63
-PINE3	5.55	BCO PINE S.A.	5.83	1.09	4.17	0.05	3.63	9.2	13.38	9.57	0.56	-0.1	-0.05	0.09	18.76	0.82	\N	\N	\N	0.04	0.9	0.03	0.03	21.9	6977.48	5.08	0.95	1015526557.45	Financeiro e Outros	Intermediários Financeiros	Bancos	\N	7
-SNSY3	11.1	SANSUY S.A. INDUSTRIA DE PLASTICOS	-0.61	-0.04	1.51	0.16	4.38	26.81	6.34	-15.81	0.1	10.02	-0.39	1.7	-7.13	-26.86	-3.04	\N	2.67	-3.77	4.81	1.03	0.01	15.95	15495.59	-257.12	-18.32	96932450.4	Materiais Básicos	Materiais Diversos	Materiais Diversos	\N	\N
-ESPA3	1.01	MPM CORPÓREOS S.A.	-15.19	0.42	2.76	0.16	8.04	37.8	13.08	-2.37	0.36	0.88	-0.28	0.45	-2.78	-1.06	5.74	0.81	5.29	0.38	0.62	1.75	0.29	24.51	949118.8	2.39	-0.07	365037296.66	Consumo não Cíclico	Produtos de Uso Pessoal e de Limpeza	Produtos de Uso Pessoal	\N	\N
-BGIP3	27	BCO ESTADO DE SERGIPE S.A. - BANESE	9.78	0.74	7.87	0.05	7.35	36.89	5.2	4.19	0.41	-0.37	-0.1	0.13	7.57	0.52	\N	\N	\N	0.07	0.93	0.78	-0.29	13.8	11309.43	36.47	2.76	468242409.42	Financeiro e Outros	Intermediários Financeiros	Bancos	-3.92	3.88
-RAPT3	8.45	RANDON S.A. IMPLEMENTOS E PARTICIPACOES	8.15	0.97	2.37	0.21	5.26	25.51	10.91	3.17	0.26	0.74	-0.5	0.79	11.87	2.52	8.64	1.05	2.58	0.21	0.7	1.89	-0.31	20.63	415725.63	8.73	1.04	3151012964.23	Bens Industriais	Material de Transporte	Material Rodoviário	17.61	6.88
-VULC3	14.46	VULCABRAS/AZALEIA S.A.	7.94	1.98	7.27	1.37	7	41.86	19.21	17.58	1.4	2.8	-5	0.98	24.97	17.2	20.75	-0.07	-0.27	0.69	0.31	3.04	86.45	17.67	9531450.6	7.29	1.82	3971529288.24	Consumo Cíclico	Tecidos. Vestuário e Calçados	Calçados	26.87	20.4
-CSAN3	12.72	COSAN S.A.	13.2	1.15	2.01	0.17	6.16	28.7	29.94	4.55	0.6	1.7	-0.21	0.28	8.74	1.26	9.71	2.39	4.16	0.14	0.64	1.79	-0.02	30.82	142242182.14	11.03	0.96	23838182255.04	Petróleo. Gás e Biocombustíveis	Petróleo. Gás e Biocombustíveis	Exploração. Refino e Distribuição	1.8	3.55
-KLBN11	20.56	KLABIN S.A.	13	2.25	7	0.45	12.96	34.78	20.6	11.1	1.44	2.2	-0.65	0.31	17.29	3.44	6.21	1.91	5.96	0.2	0.76	2.79	-0.22	12.47	92750315.29	9.15	1.58	25410852511.47	Materiais Básicos	Madeira e Papel	Papel e Celulose	70.07	5.64
-CSRN6	24.72	CIA ENERGETICA DO RIO GDE NORTE - COSERN	6.35	2.44	3.8	0.73	5.55	34.23	29.16	17.46	1.11	67.01	-0.94	0.66	38.4	11.44	21.48	1.33	2.07	0.3	0.7	1.05	0.25	8.58	4758.86	10.13	3.89	3799532072.31	Utilidade Pública	Energia Elétrica	Energia Elétrica	22.03	5.21
-LPSB3	1.73	LPS BRASIL - CONSULTORIA DE IMOVEIS S.A.	11.9	1.19	5.93	0.63	4.3	85.06	24.21	12.07	1.44	6.49	-0.88	0.44	10.02	5.33	14.06	-0.33	-1.63	0.53	0.47	1.53	0.24	10.78	203995.83	1.45	0.15	255269511.63	Financeiro e Outros	Exploração de Imóveis	Intermediação Imobiliária	\N	2.35
+MDNE3	13.34	MOURA DUBEUX ENGENHARIA S/A	6.85	0.83	6.32	0.33	6.93	34.6	15.04	13.88	0.95	1.34	-0.58	0.34	12.1	4.77	8.3	0.08	0.59	0.39	0.61	2.28	0.14	26.18	5972489.4	16.3	1.97	1151371125	Consumo Cíclico	Construção Civil	Incorporações	\N	\N
+PINE3	5.88	BCO PINE S.A.	6.09	1.14	4.36	0.05	3.82	9.2	13.38	9.57	0.58	-0.11	-0.05	0.09	18.76	0.82	\N	\N	\N	0.04	0.9	0.03	0.03	21.9	17152.2	5.07	0.95	1068626924.7	Financeiro e Outros	Intermediários Financeiros	Bancos	\N	8.11
+MATD3	4.85	HOSPITAL MATER DEI SA	14.4	1.15	4.51	0.37	6.93	32.31	19.12	5.99	0.86	2.63	-0.49	0.43	8.01	2.56	11.83	0.61	2.39	0.32	0.66	2.34	0.49	28.41	2734980.77	4.4	0.35	1949882087.1	Saúde	Serv.Méd.Hospit..Análises e Diagnósticos	Serv.Méd.Hospit..Análises e Diagnósticos	1.59	1.48
+SNSY3	12.4	SANSUY S.A. INDUSTRIA DE PLASTICOS	-0.69	-0.05	1.72	0.18	4.33	26.81	6.34	-15.81	0.11	11.38	-0.44	1.7	-7.13	-26.86	-3.04	\N	2.67	-3.77	4.81	1.03	0.01	15.95	22429.5	-257.12	-18.32	93839232.8	Materiais Básicos	Materiais Diversos	Materiais Diversos	\N	\N
+ESPA3	1.07	MPM CORPÓREOS S.A.	-16.1	0.45	2.92	0.17	8.15	37.8	13.08	-2.37	0.38	0.93	-0.3	0.45	-2.78	-1.06	5.74	0.81	5.29	0.38	0.62	1.75	0.3	24.51	448319.1	2.39	-0.07	379494219.3	Consumo não Cíclico	Produtos de Uso Pessoal e de Limpeza	Produtos de Uso Pessoal	\N	\N
+BGIP3	24.17	BCO ESTADO DE SERGIPE S.A. - BANESE	9.01	0.68	7.25	0.05	7	36.89	5.2	4.19	0.38	-0.34	-0.09	0.13	7.57	0.52	\N	\N	\N	0.07	0.93	0.78	-0.27	13.8	11654.69	36.47	2.76	445600485.54	Financeiro e Outros	Intermediários Financeiros	Bancos	-3.92	4.21
+RAPT3	10.31	RANDON S.A. IMPLEMENTOS E PARTICIPACOES	9.72	1.15	2.83	0.25	5.73	25.51	10.91	3.17	0.31	0.88	-0.6	0.79	11.87	2.52	8.64	1.05	2.58	0.21	0.7	1.89	-0.37	20.63	466871.77	8.73	1.04	3702314462.48	Bens Industriais	Material de Transporte	Material Rodoviário	17.61	5.77
+KLBN11	21.29	KLABIN S.A.	13.17	2.28	7.1	0.45	13.03	34.78	20.6	11.1	1.46	2.23	-0.66	0.31	17.29	3.44	6.21	1.91	5.96	0.2	0.76	2.79	-0.23	12.47	95289415.23	9.15	1.58	25670399156.77	Materiais Básicos	Madeira e Papel	Papel e Celulose	70.07	5.57
+CSAN3	14.34	COSAN S.A.	14.61	1.28	2.22	0.18	6.38	28.7	29.94	4.55	0.66	1.89	-0.24	0.28	8.74	1.26	9.71	2.39	4.16	0.14	0.64	1.79	-0.02	30.82	137666636.23	11.03	0.96	26386918722.56	Petróleo. Gás e Biocombustíveis	Petróleo. Gás e Biocombustíveis	Exploração. Refino e Distribuição	1.8	3.21
+CSRN6	24.72	CIA ENERGETICA DO RIO GDE NORTE - COSERN	6.35	2.44	3.8	0.73	5.49	34.23	29.16	17.46	1.11	67.01	-0.94	0.66	38.4	11.44	21.48	1.33	2.07	0.3	0.7	1.05	0.25	8.58	4758.86	10.13	3.89	3731839478.3	Utilidade Pública	Energia Elétrica	Energia Elétrica	22.03	5.21
+LPSB3	1.93	LPS BRASIL - CONSULTORIA DE IMOVEIS S.A.	13.69	1.37	6.83	0.73	5.12	85.06	24.21	12.07	1.65	7.47	-1.02	0.44	10.02	5.33	14.06	-0.33	-1.63	0.53	0.47	1.53	0.27	10.78	194297.94	1.45	0.15	290682623.07	Financeiro e Outros	Exploração de Imóveis	Intermediação Imobiliária	\N	2.04
 GBIO33	10.4	BIOTOSCANA INVESTMENTS S.A.	-14.97	1.32	40.09	0.79	47.57	43.48	3.79	-10.14	1.52	7.57	-1.43	0.52	-8.83	-5.29	-0.1	0.25	7.48	0.6	0.4	1.31	0.06	12.83	\N	7.86	-0.69	1108871982.4	Saúde	Comércio e Distribuição	Medicamentos e Outros Produtos	\N	\N
-EQTL3	28.9	EQUATORIAL ENERGIA S.A.	19.79	1.55	4.23	0.33	8.71	30.27	19.84	4.24	0.84	5.36	-0.43	0.39	7.86	1.67	10.48	1.65	4.48	0.21	0.74	1.36	0.89	24.5	211690191.63	18.59	1.46	33269455822.7	Utilidade Pública	Energia Elétrica	Energia Elétrica	11.01	1.56
+EQTL3	33.64	EQUATORIAL ENERGIA S.A.	23.04	1.81	4.92	0.39	9.4	30.27	19.84	4.24	0.98	6.24	-0.5	0.39	7.86	1.67	10.48	1.65	4.48	0.21	0.74	1.36	1.03	24.5	257309207.42	18.59	1.46	38737618976.95	Utilidade Pública	Energia Elétrica	Energia Elétrica	11.01	1.34
 BPAT33	44.05	BCO PATAGONIA S.A.	6.98	0.66	1.8	0.09	1.8	51.56	21.77	5.61	0.39	\N	-0.12	0.24	9.46	1.35	\N	\N	\N	0.14	0.86	\N	-0.11	14.99	\N	66.71	6.31	1533769021	Financeiro e Outros	Intermediários Financeiros	Bancos	-18.89	\N
 MMAQ4	49.73	MINASMAQUINAS S.A.	0.07	0.01	0.05	0	2.6	8.12	4.75	3.09	0	0.01	-0.02	2.05	12.45	6.34	7.38	0.49	2.58	0.51	0.49	1.69	0	25.76	\N	5685.11	707.56	1115195.25	\N	\N	\N	24.18	\N
-EEEL4	410	CIA ESTADUAL GER.TRANS.ENER.ELET-CEEE-GT	6.54	1.97	3.91	0.67	4.62	61.19	54.12	32.4	2.12	5.15	-0.85	0.32	30.08	10.23	19.55	0.9	1.8	0.34	0.66	2.49	-0.21	12.36	\N	208.5	62.71	2840511499.76	Utilidade Pública	Energia Elétrica	Energia Elétrica	28.25	\N
 CORR4	82	CORREA RIBEIRO S.A. COMERCIO E INDUSTRIA	0.26	0.41	0.21	0.12	-1.2	100	2689.16	2211.14	5.72	0.2	-0.48	0.02	157.36	45.49	138.37	-2.58	-1.35	0.29	0.71	4.25	0	-16.36	\N	201.49	317.06	1278894.65	Financeiro e Outros	Exploração de Imóveis	Exploração de Imóveis	\N	\N
+EEEL4	410	CIA ESTADUAL GER.TRANS.ENER.ELET-CEEE-GT	6.54	1.97	3.91	0.67	4.62	61.19	54.12	32.4	2.12	5.15	-0.85	0.32	30.08	10.23	19.55	0.9	1.8	0.34	0.66	2.49	-0.21	12.36	\N	208.5	62.71	2840511499.76	Utilidade Pública	Energia Elétrica	Energia Elétrica	28.25	\N
 FRTA3	1.31	POMIFRUTAS S/A	-0.49	-0.04	-2.17	0.09	-56.86	16.57	-16.43	-72.29	0.36	-0.03	-0.1	0.25	-7.17	-17.77	17.57	\N	-54.68	-2.48	3.48	0.03	-0.11	7.62	5715.83	-36.95	-2.65	2690223.86	Consumo não Cíclico	Agropecuária	Agricultura	\N	\N
-CTSA3	2.19	CIA TECIDOS SANTANENSE	-1.24	0.26	-3.64	0.1	-14.15	-22.39	-15.56	-45.69	0.57	1.18	-0.14	0.17	-21.36	-7.79	-4.49	0.76	-10.51	0.36	0.64	1.37	-0.03	-0.42	12010.51	8.28	-1.77	60936270.39	Consumo Cíclico	Tecidos. Vestuário e Calçados	Fios e Tecidos	\N	\N
-CGRA3	25.45	GRAZZIOTIN S.A.	5.86	0.6	8.89	0.42	6.36	51.6	8.69	13.19	0.77	1.65	-0.76	0.55	10.19	7.24	5.28	-0.18	-2.65	0.71	0.29	2.4	-0.4	7.88	86940.63	42.66	4.35	537692666.98	Consumo Cíclico	Comércio	Tecidos. Vestuário e Calçados	11.01	10.62
-SANB3	13.07	BCO SANTANDER (BRASIL) S.A.	10.3	0.85	7.2	0.09	7.56	37.06	10.58	7.39	0.76	\N	-0.09	0.11	8.23	0.84	\N	\N	\N	0.1	0.9	\N	-0.41	12.73	1343226.06	15.41	1.27	102992323985.49	Financeiro e Outros	Intermediários Financeiros	Bancos	-5.44	5.87
-RADL3	24.81	RAIA DROGASIL S.A.	43.41	7.45	19.98	2.2	21.14	29.81	6.25	2.88	1.25	11.77	-5.28	1.76	17.16	5.07	21.73	0.43	1.16	0.3	0.7	1.47	-30.52	17.08	149190999.86	3.33	0.57	42623758632	Saúde	Comércio e Distribuição	Medicamentos e Outros Produtos	13.95	1.04
-TFCO4	10.02	TRACK & FIELD CO S.A.	82.2	21.88	62.96	13.66	10.73	57.74	21.45	16.43	13.51	28.07	-50.51	1.01	26.61	16.62	23.86	0.05	0.14	0.62	0.38	3	5.91	27.71	2220677.89	0.46	0.12	1600374375.03	Consumo Cíclico	Comércio	Tecidos. Vestuário e Calçados	40.88	1.22
-BSLI4	10.57	BRB BCO DE BRASILIA S.A.	18.73	1.49	29.11	0.08	26.73	30.19	1.88	2.93	0.55	-0.29	-0.09	0.14	7.93	0.42	\N	\N	\N	0.05	0.95	0.26	0.04	25.16	37801.52	7.11	0.56	3523637425	Financeiro e Outros	Intermediários Financeiros	Bancos	-3.73	0.72
+CGRA3	24.92	GRAZZIOTIN S.A.	5.84	0.6	8.88	0.42	6.28	51.6	8.69	13.19	0.77	1.65	-0.76	0.55	10.19	7.24	5.28	-0.18	-2.65	0.71	0.29	2.4	-0.4	7.88	52921.53	42.66	4.35	532987609.08	Consumo Cíclico	Comércio	Tecidos. Vestuário e Calçados	11.01	10.11
+CTSA3	2.48	CIA TECIDOS SANTANENSE	-1.54	0.33	-4.51	0.12	-15.03	-22.39	-15.56	-45.69	0.7	1.47	-0.17	0.17	-21.36	-7.79	-4.49	0.76	-10.51	0.36	0.64	1.37	-0.04	-0.42	8827	8.28	-1.77	75683404.32	Consumo Cíclico	Tecidos. Vestuário e Calçados	Fios e Tecidos	\N	\N
+SANB3	13.48	BCO SANTANDER (BRASIL) S.A.	10.15	0.84	7.09	0.09	7.47	37.06	10.58	7.39	0.75	\N	-0.09	0.11	8.23	0.84	\N	\N	\N	0.1	0.9	\N	-0.4	12.73	1443573.35	15.41	1.27	101755066362.07	Financeiro e Outros	Intermediários Financeiros	Bancos	-5.44	5.96
+RADL3	25.81	RAIA DROGASIL S.A.	44.04	7.56	20.27	2.23	21.46	29.81	6.25	2.88	1.27	11.94	-5.36	1.76	17.16	5.07	21.73	0.43	1.16	0.3	0.7	1.47	-30.97	17.08	135478448.84	3.33	0.57	43293781440	Saúde	Comércio e Distribuição	Medicamentos e Outros Produtos	13.95	0.96
 FNCN3	14.25	FINANSINOS S.A.- CREDITO FINANC E INVEST	12.98	0.91	7.98	0.15	7.98	51.88	22.78	14	1.82	0.82	-0.24	0.08	6.99	1.13	\N	\N	\N	0.16	0.84	1.82	-0.17	18.4	\N	15.71	1.1	13021336.5	Financeiro e Outros	Intermediários Financeiros	Soc. Crédito e Financiamento	\N	\N
-GFSA3	3.43	GAFISA S.A.	-2.17	0.17	32.43	0.06	195.06	-7.07	0.89	-13.29	0.29	0.22	-0.19	0.21	-7.95	-2.76	-0.98	0.87	162.63	0.35	0.65	1.69	-0.11	2.81	11072714.6	19.89	-1.58	306790488.13	Consumo Cíclico	Construção Civil	Incorporações	\N	\N
-RECV3	18.77	PETRORECÔNCAVO S.A.	8.89	1.18	8.49	0.8	8.78	31.33	22.83	21.81	1.94	100.19	-0.97	0.41	13.32	9	11.73	0.04	0.29	0.68	0.32	1.05	-0.26	56.51	46133578.33	15.85	2.11	5507721005.02	Petróleo. Gás e Biocombustíveis	Petróleo. Gás e Biocombustíveis	Exploração. Refino e Distribuição	53.39	10.68
-IGTI3	2.62	JEREISSATI PARTICIPACOES S.A.	9.44	0.75	4.98	0.41	10.74	65.27	54.82	28.88	2.73	3	-0.55	0.15	7.98	4.36	7.75	0.41	2.73	0.55	0.45	2.26	0.03	9.87	114365.23	3.48	0.28	5139561723.8	Financeiro e Outros	Exploração de Imóveis	Exploração de Imóveis	25.13	3.67
-ELET6	38.69	CENTRAIS ELET BRAS S.A. - ELETROBRAS	20.34	0.79	6.68	0.34	9.24	47.75	36.45	11.97	2.43	5.43	-0.41	0.14	3.9	1.66	5.89	0.38	3.21	0.43	0.57	1.57	0.1	8.27	67365986.34	48.8	1.9	80606352629.82	Utilidade Pública	Energia Elétrica	Energia Elétrica	-19.84	4.71
+BSLI4	10.25	BRB BCO DE BRASILIA S.A.	18.43	1.46	28.64	0.08	27.83	30.19	1.88	2.93	0.54	-0.28	-0.09	0.14	7.93	0.42	\N	\N	\N	0.05	0.95	0.26	0.04	25.16	5965.68	7.11	0.56	3669227930	Financeiro e Outros	Intermediários Financeiros	Bancos	-3.73	0.74
+TFCO4	11.48	TRACK & FIELD CO S.A.	93.03	24.76	71.26	15.46	12.19	57.74	21.45	16.43	15.29	31.77	-57.16	1.01	26.61	16.62	23.86	0.05	0.14	0.62	0.38	3	6.68	27.71	2388373.32	0.46	0.12	1820785217.1	Consumo Cíclico	Comércio	Tecidos. Vestuário e Calçados	40.88	1.47
+GFSA3	3.99	GAFISA S.A.	-2.33	0.19	34.79	0.06	195.81	-7.07	0.89	-13.29	0.31	0.23	-0.2	0.21	-7.95	-2.76	-0.98	0.87	162.63	0.35	0.65	1.69	-0.11	2.81	10818952.1	19.89	-1.58	313945951.41	Consumo Cíclico	Construção Civil	Incorporações	\N	\N
+IGTI3	2.73	JEREISSATI PARTICIPACOES S.A.	9.73	0.78	5.13	0.42	11.75	65.27	54.82	28.88	2.81	3.09	-0.56	0.15	7.98	4.36	7.75	0.41	2.73	0.55	0.45	2.26	0.03	9.87	104697.77	3.48	0.28	5786628847.3	Financeiro e Outros	Exploração de Imóveis	Exploração de Imóveis	25.13	3.56
+ELET6	43	CENTRAIS ELET BRAS S.A. - ELETROBRAS	22.46	0.88	7.38	0.37	9.94	47.75	36.45	11.97	2.69	6	-0.45	0.14	3.9	1.66	5.89	0.38	3.21	0.43	0.57	1.57	0.11	8.27	56150213.84	48.8	1.9	89849420226.52	Utilidade Pública	Energia Elétrica	Energia Elétrica	-19.84	4.27
 SEDU3	23.8	SOMOS EDUCAÇÃO S.A.	-13.36	15	-21.89	1.53	-27.94	48.36	-15.73	-25.77	3.44	57.9	-2.27	0.44	-112.29	-11.46	-13.15	4.15	-6.05	0.1	0.9	1.09	0.01	12.49	\N	1.59	-1.78	6238667820	Consumo Cíclico	Diversos	Serviços Educacionais	\N	\N
-CVCB3	1.9	CVC BRASIL OPERADORA E AGÊNCIA DE VIAGENS S.A.	-2.75	1.73	-16.37	0.26	-20.48	88.21	-4.09	-24.37	0.67	-6.23	-0.59	0.39	-62.81	-9.54	-5.03	0.43	-4.11	0.15	0.85	0.93	0.35	-3.28	24974836.97	1.1	-0.69	998623084.3	Consumo Cíclico	Viagens e Lazer	Viagens e Turismo	\N	\N
-EZTC3	12.87	EZ TEC EMPREEND. E PARTICIPACOES S.A.	11.2	0.6	14.82	0.48	15.27	33.05	17.9	23.7	2.65	1.29	-0.84	0.18	5.4	4.32	2.94	0.02	0.44	0.8	0.19	9.13	-3.52	22.62	24956893.51	21.28	1.15	2844129755.61	Consumo Cíclico	Construção Civil	Incorporações	21.09	2.15
-CEDO4	23.22	CIA FIACAO TECIDOS CEDRO CACHOEIRA	2.91	1.09	1.28	0.27	3.29	30.85	17.17	7.54	0.22	1.96	-0.55	1.21	37.29	9.14	28.3	1.64	1.93	0.25	0.75	1.36	0	11.42	40230.1	21.39	7.97	246638973.12	Consumo Cíclico	Tecidos. Vestuário e Calçados	Fios e Tecidos	10.4	\N
-UNIP5	54.15	UNIPAR CARBOCLORO S.A.	10.46	2.44	9.32	0.87	8.82	31.49	14.76	13.16	1.38	2.76	-1.74	0.63	23.37	8.33	8.24	0.15	0.56	0.36	0.64	2.73	-0.22	7.14	17691.15	22.16	5.18	5481209197.59	Materiais Básicos	Químicos	Químicos Diversos	2.3	7.63
-JBSS3	29.54	JBS S.A.	32.16	1.48	6.9	0.32	15.25	11.93	2.59	0.56	0.18	2.15	-0.51	1.79	4.61	1	6.52	1.79	8.35	0.22	0.76	1.68	-0.42	14.9	216189647.11	19.93	0.92	65523157569.8	Consumo não Cíclico	Alimentos Processados	Carnes e Derivados	140.74	3.39
-NEXP3	4.15	NEXPE PARTICIPAÇÕES S.A	-0.25	-0.07	-0.46	0.1	-2.83	51.94	-21.4	-39.03	0.1	-0.18	-0.16	0.98	-28.85	-38.19	28.03	\N	-2.37	-1.32	2.32	0.42	0	0.72	6827.31	-56.56	-16.32	11020611.35	Financeiro e Outros	Exploração de Imóveis	Intermediação Imobiliária	\N	\N
-AHEB6	20	SAO PAULO TURISMO S.A.	1.61	1.5	1.23	0.33	0.9	31.24	21.73	16.68	0.27	1.02	-0.82	1.24	93.37	20.69	98.59	-0.96	-0.79	0.22	0.78	2.2	0.03	50.82	2000	13.32	12.43	233828143.9	Consumo Cíclico	Viagens e Lazer	Produção de Eventos e Shows	\N	\N
-HBRE3	4.96	HBR REALTY EMPREENDIMENTOS IMOBILIARIOS S/A	4.36	0.25	1.23	0.11	4.02	80.28	269.74	76.12	3.32	2.08	-0.12	0.03	5.78	2.44	8.37	0.57	2.79	0.42	0.43	1.85	0.06	21.77	2349528.51	19.67	1.14	511817345.76	Financeiro e Outros	Exploração de Imóveis	Exploração de Imóveis	-7.99	\N
-SAPR11	26.12	CIA SANEAMENTO DO PARANA - SANEPAR	5.05	0.78	3.23	0.4	5.07	60.04	37.33	23.91	1.21	5.71	-0.48	0.33	15.44	7.88	11.44	0.44	1.84	0.51	0.49	1.66	0.16	8.62	21834476.03	33.5	5.17	7894537631.26	Utilidade Pública	Água e Saneamento	Água e Saneamento	11.86	5.8
-TAEE4	11.22	TRANSMISSORA ALIANÇA DE ENERGIA ELÉTRICA S.A.	8.45	1.64	5.01	0.59	8.74	63.14	68.11	40.38	3.41	16.84	-0.71	0.17	19.46	7	13.55	1.23	3.75	0.36	0.64	1.26	0.92	15.51	2678041.26	6.83	1.33	11547603362.64	Utilidade Pública	Energia Elétrica	Energia Elétrica	5.09	11.05
-CTKA3	19.01	KARSTEN S.A.	2.7	-1.16	2.12	0.19	9.71	44.05	8.47	6.65	0.18	0.67	-0.61	1.03	-43.04	6.86	14.06	\N	7.71	-0.16	1.16	1.66	0	16.1	9261.67	-16.37	7.05	111276967.04	Consumo Cíclico	Tecidos. Vestuário e Calçados	Fios e Tecidos	\N	\N
-CPLE3	8.05	CIA PARANAENSE DE ENERGIA - COPEL	12.56	0.98	7	0.43	11.42	21.53	15.88	8.85	1.11	6.25	-0.57	0.39	7.83	3.45	7.72	0.38	2.7	0.44	0.55	1.39	0.17	9.35	57826124.46	8.19	0.64	29899693364.18	Utilidade Pública	Energia Elétrica	Energia Elétrica	13.08	4.29
-WEGE3	40.8	WEG S.A.	33.32	9.84	27.94	5.35	27.32	32.24	19.28	16.17	5.39	17.48	-16.31	0.99	29.52	16.07	24.67	-0.22	-0.63	0.54	0.44	1.84	1.04	22.11	267814611.06	4.15	1.22	171250574318.4	Bens Industriais	Máquinas e Equipamentos	Motores . Compressores e Outros	30.88	1.69
-FRIO3	288.67	METALFRIO SOLUTIONS S.A.	87.1	5.34	13.3	1	17.49	17.86	7.07	1.08	0.94	14.36	-3.3	1.06	6.14	1.15	10.48	1.69	4.19	0.19	0.77	1.11	-0.8	10.44	1142001.29	54.01	3.31	1814664200.31	Bens Industriais	Máquinas e Equipamentos	Máq. e Equip. Industriais	\N	\N
+CVCB3	2.09	CVC BRASIL OPERADORA E AGÊNCIA DE VIAGENS S.A.	-3.11	1.95	-18.53	0.3	-22.64	88.21	-4.09	-24.37	0.76	-7.05	-0.66	0.39	-62.81	-9.54	-5.03	0.43	-4.11	0.15	0.85	0.93	0.39	-3.28	25124361.58	1.1	-0.69	1130020858.55	Consumo Cíclico	Viagens e Lazer	Viagens e Turismo	\N	\N
+EZTC3	14.84	EZ TEC EMPREEND. E PARTICIPACOES S.A.	12.28	0.66	16.25	0.53	16.75	33.05	17.9	23.7	2.91	1.41	-0.92	0.18	5.4	4.32	2.94	0.02	0.44	0.8	0.19	9.13	-3.86	22.62	23269370.94	21.28	1.15	3129205698.48	Consumo Cíclico	Construção Civil	Incorporações	21.09	1.96
+UNIP5	52.18	UNIPAR CARBOCLORO S.A.	9.88	2.31	8.81	0.82	9.44	31.49	14.76	13.16	1.3	2.6	-1.64	0.63	23.37	8.33	8.24	0.15	0.56	0.36	0.64	2.73	-0.21	7.14	34686.8	22.16	5.18	5893055866.55	Materiais Básicos	Químicos	Químicos Diversos	2.3	8.07
+JBSS3	32.03	JBS S.A.	33.87	1.56	7.27	0.34	15.5	11.93	2.59	0.56	0.19	2.26	-0.53	1.79	4.61	1	6.52	1.79	8.35	0.22	0.76	1.68	-0.44	14.9	193743692	19.93	0.92	67918723249.4	Consumo não Cíclico	Alimentos Processados	Carnes e Derivados	140.74	\N
+NEXP3	4.16	NEXPE PARTICIPAÇÕES S.A	-0.25	-0.07	-0.46	0.1	-2.83	51.94	-21.4	-39.03	0.1	-0.18	-0.16	0.98	-28.85	-38.19	28.03	\N	-2.37	-1.32	2.32	0.42	0	0.72	5136.77	-56.56	-16.32	11020611.35	Financeiro e Outros	Exploração de Imóveis	Intermediação Imobiliária	\N	\N
+AHEB6	20	SAO PAULO TURISMO S.A.	1.61	1.5	1.23	0.33	1.36	31.24	21.73	16.68	0.27	1.02	-0.82	1.24	93.37	20.69	98.59	-0.96	-0.79	0.22	0.78	2.2	0.03	50.82	2000	13.32	12.43	296887221.4	Consumo Cíclico	Viagens e Lazer	Produção de Eventos e Shows	\N	\N
+SAPR11	26.8	CIA SANEAMENTO DO PARANA - SANEPAR	5.25	0.81	3.36	0.41	5.19	60.04	37.33	23.91	1.26	5.94	-0.5	0.33	15.44	7.88	11.44	0.44	1.84	0.51	0.49	1.66	0.16	8.62	20730662.97	33.5	5.17	8187711501.94	Utilidade Pública	Água e Saneamento	Água e Saneamento	11.86	5.02
+TAEE4	11.78	TRANSMISSORA ALIANÇA DE ENERGIA ELÉTRICA S.A.	8.8	1.71	5.22	0.62	8.93	63.14	68.11	40.38	3.55	17.54	-0.74	0.17	19.46	7	13.55	1.23	3.75	0.36	0.64	1.26	0.96	15.51	2219808.9	6.83	1.33	11988561963.6	Utilidade Pública	Energia Elétrica	Energia Elétrica	5.09	10.6
+CTKA3	21.59	KARSTEN S.A.	3.07	-1.32	2.41	0.21	10.02	44.05	8.47	6.65	0.2	0.76	-0.69	1.03	-43.04	6.86	14.06	\N	7.71	-0.16	1.16	1.66	0	16.1	2853.86	-16.37	7.05	128712946.4	Consumo Cíclico	Tecidos. Vestuário e Calçados	Fios e Tecidos	\N	\N
+CPLE3	9.01	CIA PARANAENSE DE ENERGIA - COPEL	13.89	1.09	7.74	0.48	11.42	21.53	15.88	8.85	1.23	6.91	-0.64	0.39	7.83	3.45	7.72	0.38	2.7	0.44	0.55	1.39	0.19	9.35	42586181.77	8.19	0.64	29899693364.18	Utilidade Pública	Energia Elétrica	Energia Elétrica	13.08	3.88
+WEGE3	46.5	WEG S.A.	35.98	10.62	30.18	5.78	29.54	32.24	19.28	16.17	5.82	18.88	-17.62	0.99	29.52	16.07	24.67	-0.22	-0.63	0.54	0.44	1.84	1.12	22.11	287478269.23	4.15	1.22	184849884631.92	Bens Industriais	Máquinas e Equipamentos	Motores . Compressores e Outros	30.88	1.58
+FRIO3	245	METALFRIO SOLUTIONS S.A.	75.43	4.63	11.52	0.86	15.71	17.86	7.07	1.08	0.81	12.44	-2.86	1.06	6.14	1.15	10.48	1.69	4.19	0.19	0.77	1.11	-0.69	10.44	1410885.47	54.01	3.31	1571573250	Bens Industriais	Máquinas e Equipamentos	Máq. e Equip. Industriais	\N	\N
+CEBR5	18.11	CIA ENERGETICA DE BRASILIA	7.55	1.25	6.06	0.89	3.46	50.78	61.36	49.19	3.72	1.85	-1.97	0.24	16.6	11.78	11.87	-0.66	-3.19	0.71	0.11	8.05	-0.45	-32.89	42232.29	14.59	2.42	1447641593.25	Utilidade Pública	Energia Elétrica	Energia Elétrica	14.18	10.37
 ELEK4	36.99	ELEKEIROZ S.A.	47.34	5.15	42.48	2.07	38.76	11.39	2.82	2.53	1.2	7.26	-5.02	1.72	10.87	4.36	4.38	0.7	5.75	0.4	0.6	1.94	-0.68	1.48	\N	7.19	0.78	905051916.3	Materiais Básicos	Químicos	Petroquímicos	\N	\N
-CEBR5	18.47	CIA ENERGETICA DE BRASILIA	7.62	1.27	6.11	0.9	3.35	50.78	61.36	49.19	3.75	1.87	-1.99	0.24	16.6	11.78	11.87	-0.66	-3.19	0.71	0.11	8.05	-0.46	-32.89	55922.23	14.59	2.42	1424592189.9	Utilidade Pública	Energia Elétrica	Energia Elétrica	14.18	10.28
-EPAR3	6.09	EMBPAR PARTICIPACOES S.A.	-4.09	1.12	6.22	0.91	6.13	14.78	5.43	-8.26	0.34	4.2	-1.24	2.7	-27.49	-22.34	13.25	-0.02	-0.09	0.81	0.19	5.6	0.03	4.97	93131.54	5.42	-1.49	90500859.12	Financeiro e Outros	Holdings Diversificadas	Holdings Diversificadas	\N	47.18
-UNIP6	48.19	UNIPAR CARBOCLORO S.A.	9.31	2.17	8.3	0.78	8.82	31.49	14.76	13.16	1.23	2.45	-1.55	0.63	23.37	8.33	8.24	0.15	0.56	0.36	0.64	2.73	-0.19	7.14	8545818.94	22.16	5.18	5481209197.59	Materiais Básicos	Químicos	Químicos Diversos	2.3	6.32
-G2DI33	2.26	G2D INVESTMENTS LTD	-2.07	0.36	-2.22	0.32	-3.07	100	114.68	122.76	\N	-3.52	-0.32	-0.12	-17.42	-15.21	-14.28	0.14	-0.85	0.87	0.13	0.01	0.04	\N	889136.06	6.26	-1.09	260027436.88	Financeiro e Outros	Serviços Financeiros Diversos	Gestão de Recursos e Investimentos	\N	\N
-CLSA3	6.81	CLEAR SALE S.A.	-66.48	1.79	-17.49	1.47	-12.43	33.39	-14.9	-3.92	2.61	3.23	-3.84	0.56	-2.7	-2.21	-11.91	-0.52	5.06	0.82	0.18	3.83	-2.52	\N	16091910.94	3.8	-0.1	1279776468.6	Tecnologia da Informação	Programas e Serviços	Programas e Serviços	\N	\N
-AGXY3	0.89	AGROGALAXY PARTICIPAÇÕES S.A.	-0.25	0.18	-1.57	0.02	-13.29	7.73	-1.18	-7.38	0.02	-1.19	-0.07	1.03	-72.33	-7.59	-13.18	1.36	-11.72	0.1	0.89	0.98	0	\N	427566.23	4.91	-3.55	152034240.21	Consumo não Cíclico	Agropecuária	Agricultura	\N	\N
+EPAR3	6.29	EMBPAR PARTICIPACOES S.A.	-4.22	1.16	6.42	0.94	6.34	14.78	5.43	-8.26	0.35	4.34	-1.28	2.7	-27.49	-22.34	13.25	-0.02	-0.09	0.81	0.19	5.6	0.03	4.97	95922.1	5.42	-1.49	93472972.72	Financeiro e Outros	Holdings Diversificadas	Holdings Diversificadas	\N	45.68
+UNIP6	52.19	UNIPAR CARBOCLORO S.A.	10.01	2.34	8.93	0.83	9.44	31.49	14.76	13.16	1.32	2.64	-1.66	0.63	23.37	8.33	8.24	0.15	0.56	0.36	0.64	2.73	-0.21	7.14	7695668.19	22.16	5.18	5893055866.55	Materiais Básicos	Químicos	Químicos Diversos	2.3	5.88
+G2DI33	2.22	G2D INVESTMENTS LTD	-2.09	0.36	-2.24	0.32	-3.08	100	114.68	122.76	\N	-3.55	-0.32	-0.12	-17.42	-15.21	-14.28	0.14	-0.85	0.87	0.13	0.01	0.04	\N	989592.77	6.26	-1.09	261178000.76	Financeiro e Outros	Serviços Financeiros Diversos	Gestão de Recursos e Investimentos	\N	\N
+CLSA3	7.04	CLEAR SALE S.A.	-85.71	2.31	-22.56	1.9	-17.49	33.39	-14.9	-3.92	3.36	4.16	-4.95	0.56	-2.7	-2.21	-11.91	-0.52	5.06	0.82	0.18	3.83	-3.25	\N	15847851.17	3.8	-0.1	1649990806.8	Tecnologia da Informação	Programas e Serviços	Programas e Serviços	\N	\N
 INNT3	0	INTER CONSTRUTORA E INCORPORADORA S.A.	0	0	0	0	4.02	32.63	14.62	9.09	0	0	0	0.45	25.09	4.11	14.35	1.62	4.02	0.16	0.84	1.01	0	18.84	\N	1.96	0.49	0	Consumo Cíclico	Construção Civil	Incorporações	-2.19	\N
-CSMG3	19.93	CIA SANEAMENTO DE MINAS GERAIS-COPASA MG	5.44	0.98	4.19	0.54	6.3	41.34	23.99	18.49	1.01	18.66	-0.64	0.53	17.97	9.85	11.25	0.49	2.11	0.55	0.45	1.21	0.15	9.34	24234290.31	20.39	3.66	7578443665.17	Utilidade Pública	Água e Saneamento	Água e Saneamento	19.21	17.88
-IRBR3	31.32	IRB - BRASIL RESSEGUROS S.A.	18.73	0.58	-49.44	0.17	-49.44	-0.02	-0.93	2.46	0.46	13.99	-0.22	0.37	3.09	0.92	\N	\N	\N	0.3	0.7	1.06	-0.15	0.1	58100587.06	54.18	1.67	2576477535.84	Financeiro e Outros	Previdência e Seguros	Seguradoras	-35.36	\N
-CGAS5	111.95	CIA GAS DE SAO PAULO - COMGAS	5.88	17.22	5.3	0.99	6.96	21.09	18.83	16.98	1	542.85	-1.58	0.99	292.91	16.85	29.34	6.44	1.98	0.06	0.94	1	0.02	17.25	160052.52	6.5	19.05	13922612870.22	Utilidade Pública	Gás	Gás	13.51	10.79
+AGXY3	1.56	AGROGALAXY PARTICIPAÇÕES S.A.	-0.71	0.51	-4.41	0.05	-16.13	7.73	-1.18	-7.38	0.05	-3.36	-0.19	1.03	-72.33	-7.59	-13.18	1.36	-11.72	0.1	0.89	0.98	0	\N	1105842.48	3.29	-2.38	427633207.68	Consumo não Cíclico	Agropecuária	Agricultura	\N	\N
+CSMG3	20.38	CIA SANEAMENTO DE MINAS GERAIS-COPASA MG	5.67	1.02	4.37	0.56	6.48	41.34	23.99	18.49	1.05	19.47	-0.67	0.53	17.97	9.85	11.25	0.49	2.11	0.55	0.45	1.21	0.15	9.34	26860782.06	20.39	3.66	7905461304.51	Utilidade Pública	Água e Saneamento	Água e Saneamento	19.21	17.36
+IRBR3	31.84	IRB - BRASIL RESSEGUROS S.A.	18.56	0.57	-48.99	0.17	-48.83	-0.02	-0.93	2.46	0.46	13.86	-0.22	0.37	3.09	0.92	\N	\N	\N	0.3	0.7	1.06	-0.15	0.1	26136941.43	54.18	1.67	2544394961.16	Financeiro e Outros	Previdência e Seguros	Seguradoras	-35.36	\N
+CGAS5	114.2	CIA GAS DE SAO PAULO - COMGAS	5.93	17.38	5.35	1	7.01	21.09	18.83	16.98	1.01	547.95	-1.6	0.99	292.91	16.85	29.34	6.44	1.98	0.06	0.94	1	0.02	17.25	157174.96	6.5	19.05	14064409898.31	Utilidade Pública	Gás	Gás	13.51	10.69
 MSRO3	702.5	MAESTRO LOCADORA DE VEICULOS S.A.	2516.79	245.28	461.64	56.11	465.45	34.29	22.55	4.14	104.09	1908.69	-86.61	0.54	9.75	2.23	11.77	2.02	3.8	0.23	0.77	1.09	-76.51	22.78	\N	2.86	0.28	18271898550	Consumo Cíclico	Diversos	Aluguel de carros	\N	0.02
-GPAR3	47.5	CIA CELG DE PARTICIPACOES - CELGPAR	93.14	5	235.39	4.63	224.1	57.13	90.1	227.71	212.1	15.96	-6.64	0.02	5.37	4.97	1.66	-0.24	-11.29	0.93	0.07	23.85	-0.98	-9.31	8790.5	9.5	0.51	3784633845	Utilidade Pública	Energia Elétrica	Energia Elétrica	-51.04	\N
-SBSP3	72.05	CIA SANEAMENTO BASICO EST SAO PAULO	15.58	1.61	8.44	0.76	11.16	36.52	23.46	12.71	1.98	25.1	-0.9	0.38	10.3	4.86	7.98	0.52	2.71	0.47	0.53	1.23	12.38	8.59	292966537.43	44.89	4.62	49246886061.45	Utilidade Pública	Água e Saneamento	Água e Saneamento	4.64	\N
-ELET3	34.42	CENTRAIS ELET BRAS S.A. - ELETROBRAS	18.09	0.71	5.94	0.3	9.24	47.75	36.45	11.97	2.17	4.83	-0.36	0.14	3.9	1.66	5.89	0.38	3.21	0.43	0.57	1.57	0.09	8.27	255791161.37	48.8	1.9	80606352629.82	Utilidade Pública	Energia Elétrica	Energia Elétrica	-19.84	1.17
-RANI4	5.5	Irani Papel e Embalagem S.A.	3.87	1.03	2.65	0.38	6.1	41.24	31.72	21.71	0.84	1.59	-0.57	0.45	26.66	9.84	13.63	0.8	2.06	0.37	0.63	3.75	-1.71	11.31	\N	5.34	1.42	2014571319.6	Materiais Básicos	Embalagens	Embalagens	157.54	\N
-CTNM3	8.67	CIA TECIDOS NORTE DE MINAS COTEMINAS	-0.63	1.11	-0.83	0.08	-3.82	14.02	-22.47	-29.57	0.19	-0.26	-0.11	0.43	-175.93	-12.81	-18.67	4.56	-3.41	0.07	0.86	0.49	0	-3.61	4558.91	7.84	-13.8	132999482.18	Consumo Cíclico	Tecidos. Vestuário e Calçados	Fios e Tecidos	\N	\N
-GSHP3	10.5	GENERAL SHOPPING E OUTLETS DO BRASIL S.A.	-0.15	-0.02	0.57	0.01	50.48	69.23	22.39	-84.37	0.13	-0.33	-0.02	0.1	-15.83	-8.5	2.18	\N	49.91	-0.54	1.54	0.81	0	-9.39	3530	-435.81	-68.98	20252074.5	Financeiro e Outros	Exploração de Imóveis	Exploração de Imóveis	\N	\N
+GPAR3	0	CIA CELG DE PARTICIPACOES - CELGPAR	0	0	0	0	-11.29	57.13	90.1	227.71	0	0	0	0.02	5.37	4.97	1.66	-0.24	-11.29	0.93	0.07	23.85	0	-9.31	0	9.5	0.51	0	Utilidade Pública	Energia Elétrica	Energia Elétrica	-51.04	\N
+SBSP3	81.6	CIA SANEAMENTO BASICO EST SAO PAULO	18.48	1.9	10.01	0.9	12.66	36.52	23.46	12.71	2.35	29.76	-1.07	0.38	10.3	4.86	7.98	0.52	2.71	0.47	0.53	1.23	14.68	8.59	421484703.32	44.89	4.62	58009482582.03	Utilidade Pública	Água e Saneamento	Água e Saneamento	4.64	1.69
+CTNM3	8.48	CIA TECIDOS NORTE DE MINAS COTEMINAS	-0.61	1.08	-0.81	0.08	-3.82	14.02	-22.47	-29.57	0.18	-0.26	-0.11	0.43	-175.93	-12.81	-18.67	4.56	-3.41	0.07	0.86	0.49	0	-3.61	3508	7.84	-13.8	130021577.04	Consumo Cíclico	Tecidos. Vestuário e Calçados	Fios e Tecidos	\N	\N
+RANI4	5.5	Irani Papel e Embalagem S.A.	3.87	1.03	2.65	0.38	6.32	41.24	31.72	21.71	0.84	1.59	-0.57	0.45	26.66	9.84	13.63	0.8	2.06	0.37	0.63	3.75	-1.71	11.31	\N	5.34	1.42	2124893082.34	Materiais Básicos	Embalagens	Embalagens	157.54	\N
+GSHP3	10.5	GENERAL SHOPPING E OUTLETS DO BRASIL S.A.	-0.15	-0.02	0.58	0.01	50.49	69.23	22.39	-84.37	0.13	-0.34	-0.02	0.1	-15.83	-8.5	2.18	\N	49.91	-0.54	1.54	0.81	0	-9.39	2251	-435.81	-68.98	20387088.33	Financeiro e Outros	Exploração de Imóveis	Exploração de Imóveis	\N	\N
 RLOG3	23.08	COSAN LOGISTICA S.A.	82.76	4.26	5.17	0.23	12.09	34.71	29.67	1.85	1.53	1.49	-0.31	0.15	5.15	0.28	5.46	5.71	6.92	0.05	0.71	2.64	-2.42	50.58	\N	5.41	0.28	10691215482.28	Bens Industriais	Transporte	Transporte Ferroviário	4.37	\N
-USIM3	7.21	USINAS SID DE MINAS GERAIS S.A.	14.25	0.39	16.21	0.22	17.22	7.54	2.06	2.34	0.33	0.68	-0.42	0.67	2.7	1.58	1.73	0.01	0.63	0.58	0.35	3.43	-0.23	24.78	5294530.46	18.71	0.51	9248349554.04	Materiais Básicos	Siderurgia e Metalurgia	Siderurgia	22.16	3.57
-USIM6	14	USINAS SID DE MINAS GERAIS S.A.	27.68	0.75	31.48	0.44	17.22	7.54	2.06	2.34	0.65	1.31	-0.82	0.67	2.7	1.58	1.73	0.01	0.63	0.58	0.35	3.43	-0.46	24.78	2829	18.71	0.51	9248349554.04	Materiais Básicos	Siderurgia e Metalurgia	Siderurgia	22.16	2.02
-FESA4	7.99	CIA FERRO LIGAS DA BAHIA - FERBASA	7.65	0.87	8.78	0.69	9.58	24.84	13.38	15.35	1.17	2.52	-1.1	0.59	11.41	9.02	7.22	-0.13	-1.35	0.79	0.21	3.82	-0.12	23.14	6122818.03	9.15	1.04	3513958400	Materiais Básicos	Siderurgia e Metalurgia	Siderurgia	6.45	6.48
-MRFG3	11.13	MARFRIG GLOBAL FOODS S.A.	-12.63	1.42	4.74	0.08	20.99	10.98	1.64	-0.62	0.08	0.92	-0.13	1.01	-11.21	-0.63	1.35	4.86	16.25	0.06	0.81	1.27	0.1	34.79	83688189.91	7.86	-0.88	10373160000	Consumo não Cíclico	Alimentos Processados	Carnes e Derivados	\N	\N
-NTCO3	14.87	NATURA &CO HOLDING S.A.	7.66	0.93	-111	0.5	-112.78	64.02	-0.7	10.21	0.78	4.22	-0.78	0.63	12.19	6.46	-0.76	0.02	-1.78	0.53	0.47	1.47	-0.04	14.82	114974446.6	15.91	1.94	20622430741.42	Consumo não Cíclico	Produtos de Uso Pessoal e de Limpeza	Produtos de Uso Pessoal	37.46	4.77
-CEED3	15.21	CIA ESTADUAL DE DISTRIB ENER ELET-CEEE-D	-2.26	-0.31	4.36	0.14	18.39	22.22	4.98	-9.62	0.22	4.75	-0.22	0.62	-13.82	-5.98	16.33	\N	14.02	-0.43	1.43	1.08	-0.03	7.53	6745.25	-48.71	-6.73	1039763182.36	Utilidade Pública	Energia Elétrica	Energia Elétrica	\N	\N
-MELK3	3.52	MELNICK EVEN DESENVOLVIMENTO IMOBILIÁRIO S.A.	6.36	0.59	7.02	0.3	5.47	21.84	9.15	10.1	0.64	0.57	-1.41	0.46	9.23	4.65	4.46	-0.13	-1.55	0.5	0.44	2.94	0.16	14.88	1299190.97	6	0.55	726068080.32	Consumo Cíclico	Construção Civil	Incorporações	17.66	13.83
-SOMA3	5.84	GRUPO DE MODA SOMA S.A.	2.91	0.79	-1.83	0.48	-2.28	56.8	-46.46	29.33	0.85	1.98	-0.82	0.56	27.15	16.44	-46.41	0.19	-0.45	0.61	0.39	2.36	0.01	37.72	73407106.94	7.4	2.01	4582924658.32	Consumo Cíclico	Comércio	Tecidos. Vestuário e Calçados	80.87	1.51
-PATI3	26	PANATLANTICA S.A.	26.44	0.73	9.52	0.39	10.31	10.39	3.55	1.28	0.34	0.87	-1.53	1.15	2.75	1.47	3.36	0.05	0.71	0.54	0.46	2.52	-0.39	12.01	3525.33	35.74	0.98	627255242.54	Materiais Básicos	Siderurgia e Metalurgia	Artefatos de Ferro e Aço	-18.19	0.17
+USIM6	14	USINAS SID DE MINAS GERAIS S.A.	27.68	0.75	31.48	0.44	17.99	7.54	2.06	2.34	0.65	1.31	-0.82	0.67	2.7	1.58	1.73	0.01	0.63	0.58	0.35	3.43	-0.46	24.78	0	18.71	0.51	9675970873.36	Materiais Básicos	Siderurgia e Metalurgia	Siderurgia	22.16	2.02
+USIM3	7.71	USINAS SID DE MINAS GERAIS S.A.	14.99	0.41	17.04	0.24	17.99	7.54	2.06	2.34	0.35	0.71	-0.45	0.67	2.7	1.58	1.73	0.01	0.63	0.58	0.35	3.43	-0.25	24.78	3469449	18.71	0.51	9675970873.36	Materiais Básicos	Siderurgia e Metalurgia	Siderurgia	22.16	3.39
+FESA4	8.8	CIA FERRO LIGAS DA BAHIA - FERBASA	8.55	0.98	9.81	0.77	10.19	24.84	13.38	15.35	1.31	2.82	-1.23	0.59	11.41	9.02	7.22	-0.13	-1.35	0.79	0.21	3.82	-0.13	23.14	5603002.52	9.15	1.04	3709440000	Materiais Básicos	Siderurgia e Metalurgia	Siderurgia	6.45	5.8
+MRFG3	12.35	MARFRIG GLOBAL FOODS S.A.	-13.62	1.53	5.11	0.09	21.33	10.98	1.64	-0.62	0.08	0.99	-0.14	1.01	-11.21	-0.63	1.35	4.86	16.25	0.06	0.81	1.27	0.11	34.79	64536986.74	7.86	-0.88	11128080000	Consumo não Cíclico	Alimentos Processados	Carnes e Derivados	\N	\N
+CEED3	15.21	CIA ESTADUAL DE DISTRIB ENER ELET-CEEE-D	-2.26	-0.31	4.36	0.14	18.39	22.22	4.98	-9.62	0.22	4.75	-0.22	0.62	-13.82	-5.98	16.33	\N	14.02	-0.43	1.43	1.08	-0.03	7.53	3071	-48.71	-6.73	1039763182.36	Utilidade Pública	Energia Elétrica	Energia Elétrica	\N	\N
+NTCO3	15.97	NATURA &CO HOLDING S.A.	8.13	0.99	-117.79	0.53	-120.4	64.02	-0.7	10.21	0.83	4.48	-0.83	0.63	12.19	6.46	-0.76	0.02	-1.78	0.53	0.47	1.47	-0.04	14.82	104522342.68	15.91	1.94	22037015768.74	Consumo não Cíclico	Produtos de Uso Pessoal e de Limpeza	Produtos de Uso Pessoal	37.46	4.49
+MELK3	3.79	MELNICK EVEN DESENVOLVIMENTO IMOBILIÁRIO S.A.	6.82	0.63	7.52	0.32	5.97	21.84	9.15	10.1	0.69	0.61	-1.52	0.46	9.23	4.65	4.46	-0.13	-1.55	0.5	0.44	2.94	0.18	14.88	1400078.16	6	0.55	777635415.57	Consumo Cíclico	Construção Civil	Incorporações	17.66	12.91
+SOMA3	6.47	GRUPO DE MODA SOMA S.A.	3.23	0.88	-2.04	0.53	-2.5	56.8	-46.46	29.33	0.95	2.2	-0.91	0.56	27.15	16.44	-46.41	0.19	-0.45	0.61	0.39	2.36	0.01	37.72	51572678.06	7.4	2.01	5124400345.69	Consumo Cíclico	Comércio	Tecidos. Vestuário e Calçados	80.87	1.36
+PATI3	25	PANATLANTICA S.A.	0	0	0	0	1.2	10.39	3.55	1.28	0	0	0	1.15	2.75	1.47	3.36	0.05	0.71	0.54	0.46	2.52	0	12.01	5588.4	35.74	0.98	31671084.54	Materiais Básicos	Siderurgia e Metalurgia	Artefatos de Ferro e Aço	-18.19	\N
 ANDG3B	28.82	ANDRADE GUTIERREZ CONCESSOES S.A.	59.95	2.23	15.34	1.88	8.6	47.12	179.06	45.82	27.47	-25.32	-1.93	0.07	3.71	3.14	12.68	0.13	0.93	0.85	0.15	0.26	-0.78	10.22	\N	12.94	0.48	1651867985.68	\N	\N	\N	-38.09	\N
-BIOM3	13.9	BIOMM S.A.	-21.38	5.46	-23.61	3.26	-22.6	20.27	-60.97	-67.32	14.4	7.34	-8.23	0.23	-25.53	-15.23	-15.71	-0.23	1.01	0.6	0.4	3.77	2.71	137.44	3384500.51	2.55	-0.65	1763096585.9	Saúde	Comércio e Distribuição	Medicamentos e Outros Produtos	\N	\N
-BOBR3	0	BOMBRIL S.A.	0	0	0	0	2.36	41.73	15.69	6.74	0	0	0	1.69	-237.6	11.37	69.17	\N	1.24	-0.05	1.05	0.88	0	6.3	\N	-0.16	0.37	249475757.86	Consumo não Cíclico	Produtos de Uso Pessoal e de Limpeza	Produtos de Limpeza	6.53	\N
-CAML3	8.48	CAMIL ALIMENTOS S.A.	4.3	0.99	2.59	0.32	5.16	19.82	6.85	4.12	0.18	1.17	-0.72	1.82	23.03	7.5	14.28	0.98	2.57	0.33	0.67	1.99	0.01	18.83	7611416.91	8.57	1.97	2968000000	Consumo não Cíclico	Alimentos Processados	Alimentos Diversos	13.77	3.03
-GOLL4	1.02	GOL LINHAS AEREAS INTELIGENTES S.A.	1.68	-0.17	0.97	0.17	3.81	32.36	18.05	10.48	0.18	-0.27	-0.24	0.96	-10.06	10.07	-60.01	\N	3.68	-1	2	0.32	-0.01	10.47	9172409.77	-6.04	0.61	428822111.7	Bens Industriais	Transporte	Transporte Aéreo	\N	\N
-SAPR3	4.95	CIA SANEAMENTO DO PARANA - SANEPAR	4.79	0.74	3.07	0.38	5.07	60.04	37.33	23.91	1.14	5.41	-0.46	0.33	15.44	7.88	11.44	0.44	1.84	0.51	0.49	1.66	0.15	8.62	1068332.94	6.7	1.03	7894537631.26	Utilidade Pública	Água e Saneamento	Água e Saneamento	11.86	5.67
-LVTC3	3.49	LIVETECH DA BAHIA INDUSTRIA E COMERCIO S.A	-302.11	0.35	5.14	0.16	2.96	22.2	5.07	-0.09	0.26	0.67	-0.27	0.62	-0.12	-0.05	6.71	-0.15	-2.18	0.46	0.54	2.37	2.91	\N	92305.37	9.91	-0.01	225674089.87	Tecnologia da Informação	Programas e Serviços	Programas e Serviços	\N	\N
-FESA3	13.86	CIA FERRO LIGAS DA BAHIA - FERBASA	13.28	1.52	15.23	1.2	9.58	24.84	13.38	15.35	2.04	4.38	-1.9	0.59	11.41	9.02	7.22	-0.13	-1.35	0.79	0.21	3.82	-0.2	23.14	7608.17	9.15	1.04	3513958400	Materiais Básicos	Siderurgia e Metalurgia	Siderurgia	6.45	3.39
-HOOT4	2.51	HOTEIS OTHON S.A.	0.91	-0.36	0.41	0.09	0.02	64.43	76.55	34.13	0.31	-0.27	-0.1	0.28	-39.2	9.72	-66.23	\N	-0.16	-0.25	1.31	0.31	-0.01	13.48	7445.47	-7.02	2.75	19815179.94	Consumo Cíclico	Hoteis e Restaurantes	Hotelaria	\N	\N
+BIOM3	13.2	BIOMM S.A.	-22.35	5.71	-24.68	3.4	-23.85	20.27	-60.97	-67.32	15.05	7.67	-8.6	0.23	-25.53	-15.23	-15.71	-0.23	1.01	0.6	0.4	3.77	2.83	137.44	3212914.13	2.55	-0.65	1856959281.84	Saúde	Comércio e Distribuição	Medicamentos e Outros Produtos	\N	\N
+CAML3	9.25	CAMIL ALIMENTOS S.A.	4.39	1.01	2.64	0.33	5.21	19.82	6.85	4.12	0.18	1.2	-0.74	1.82	23.03	7.5	14.28	0.98	2.57	0.33	0.67	1.99	0.01	18.83	6886863.1	8.57	1.97	3034500000	Consumo não Cíclico	Alimentos Processados	Alimentos Diversos	13.77	2.96
+BOBR3	0	BOMBRIL S.A.	0	0	0	0	2.38	41.73	15.69	6.74	0	0	0	1.69	-237.6	11.37	69.17	\N	1.24	-0.05	1.05	0.88	0	6.3	\N	-0.16	0.37	254391536.34	Consumo não Cíclico	Produtos de Uso Pessoal e de Limpeza	Produtos de Limpeza	6.53	\N
+GOLL4	1.25	GOL LINHAS AEREAS INTELIGENTES S.A.	2.06	-0.21	1.19	0.21	3.84	32.36	18.05	10.48	0.22	-0.33	-0.29	0.96	-10.06	10.07	-60.01	\N	3.68	-1	2	0.32	-0.01	10.47	9317483.65	-6.04	0.61	533925570.45	Bens Industriais	Transporte	Transporte Aéreo	\N	\N
+SAPR3	5.11	CIA SANEAMENTO DO PARANA - SANEPAR	5.01	0.77	3.21	0.39	5.19	60.04	37.33	23.91	1.2	5.66	-0.48	0.33	15.44	7.88	11.44	0.44	1.84	0.51	0.49	1.66	0.15	8.62	995219.19	6.7	1.03	8187711501.94	Utilidade Pública	Água e Saneamento	Água e Saneamento	11.86	4.88
+LVTC3	3.67	LIVETECH DA BAHIA INDUSTRIA E COMERCIO S.A	-316.82	0.37	5.39	0.17	3.21	22.2	5.07	-0.09	0.27	0.7	-0.29	0.62	-0.12	-0.05	6.71	-0.15	-2.18	0.46	0.54	2.37	3.05	\N	62681.71	9.91	-0.01	236666810.58	Tecnologia da Informação	Programas e Serviços	Programas e Serviços	\N	\N
+FESA3	13.9	CIA FERRO LIGAS DA BAHIA - FERBASA	13.1	1.5	15.03	1.18	10.19	24.84	13.38	15.35	2.01	4.32	-1.88	0.59	11.41	9.02	7.22	-0.13	-1.35	0.79	0.21	3.82	-0.2	23.14	5879.47	9.15	1.04	3709440000	Materiais Básicos	Siderurgia e Metalurgia	Siderurgia	6.45	3.44
+HOOT4	2.47	HOTEIS OTHON S.A.	0.93	-0.36	0.42	0.09	0.02	64.43	76.55	34.13	0.32	-0.27	-0.11	0.28	-39.2	9.72	-66.23	\N	-0.16	-0.25	1.31	0.31	-0.01	13.48	4680.25	-7.02	2.75	20209904.64	Consumo Cíclico	Hoteis e Restaurantes	Hotelaria	\N	\N
 CORR3	2.71	CORREA RIBEIRO S.A. COMERCIO E INDUSTRIA	0.01	0.01	0.01	0	-1.2	100	2689.16	2211.14	0.19	0.01	-0.02	0.02	157.36	45.49	138.37	-2.58	-1.35	0.29	0.71	4.25	0	-16.36	\N	201.49	317.06	1278894.65	Financeiro e Outros	Exploração de Imóveis	Exploração de Imóveis	\N	\N
-ATOM3	1.94	ATOM EMPREENDIMENTOS E PARTICIPAÇÕES S.A.	2.39	1.17	-59.36	0.87	-48.62	91.76	-3.39	84.24	2.01	2.62	-1.43	0.43	49.23	36.6	-47.85	-0.21	10.74	0.74	0.21	7.1	0.01	31.18	26350	1.65	0.81	46181502.12	Financeiro e Outros	Outros	Outros	22.25	\N
-UCAS3	2.19	UNICASA INDÚSTRIA DE MÓVEIS S.A.	10.02	0.75	20.27	0.4	21.54	36.8	3.31	6.69	0.67	3.85	-0.63	0.6	7.48	3.99	2.35	0.05	1.27	0.53	0.47	1.4	-0.22	7.8	91147.23	2.92	0.22	144729137.16	Consumo Cíclico	Utilidades Domésticas	Móveis	33.6	9.17
-CEEB6	60.68	CIA ELETRICIDADE EST. DA BAHIA - COELBA	9	2.3	4.13	0.56	6.75	31.68	25.46	11.69	1.05	-18.64	-0.7	0.53	25.59	6.19	16.16	1.94	3.47	0.24	0.76	0.87	0.93	10.41	\N	26.34	6.74	12633002013.48	Utilidade Pública	Energia Elétrica	Energia Elétrica	22.58	8.59
-POMO3	4.9	MARCOPOLO S.A.	6.28	1.65	6.81	0.73	9.37	22.93	12.22	13.25	0.83	2.25	-1.86	0.88	26.29	11.64	13.77	0.31	1.26	0.44	0.55	2.16	0.13	9.75	1645563.91	2.97	0.78	6628158169.1	Bens Industriais	Material de Transporte	Material Rodoviário	36.53	6.94
-CEGR3	66.78	CIA DISTRIB DE GAS DO RIO DE JANEIRO-CEG	29.63	11.94	17.25	3.77	17.98	28.64	18.5	10.77	3.19	79.25	-5.13	1.18	40.29	12.73	27.08	0.51	0.73	0.32	0.68	1.22	0.28	6.17	20932	5.59	2.25	17338607742.96	Utilidade Pública	Gás	Gás	27.58	1.81
-PETR4	36.56	PETROLEO BRASILEIRO S.A. PETROBRAS	4.07	1.17	2.46	0.45	3.71	52.07	39.1	23.67	0.96	39.45	-0.53	0.46	28.77	10.99	19.56	0.56	1.17	0.38	0.62	1.08	-0.11	17.72	1510208602.97	31.25	8.99	490675347923.5	Petróleo. Gás e Biocombustíveis	Petróleo. Gás e Biocombustíveis	Exploração. Refino e Distribuição	\N	17.75
-BBSE3	32.71	BB SEGURIDADE PARTICIPAÇÕES S.A.	8.04	5.44	7.17	3.66	7.17	\N	\N	\N	\N	33.39	-4.95	0	67.7	45.59	\N	\N	\N	0.67	0.33	1.73	0.43	\N	153187220.49	6.01	4.07	65420000000	Financeiro e Outros	Previdência e Seguros	Seguradoras	18.12	8.77
-GPIV33	3.53	GP INVESTMENTS, LTD.	-0.89	0.16	-1	0.09	0.19	100	110.12	123.21	\N	0.89	-0.11	-0.08	-17.95	-10.44	-10.57	-0.19	1.18	0.58	0.14	2.97	0.02	\N	3063570.74	22.08	-3.96	239104151.11	Financeiro e Outros	Serviços Financeiros Diversos	Gestão de Recursos e Investimentos	\N	\N
-VSPT4	0	FERROVIA CENTRO-ATLANTICA S.A.	0	0	0	0	-3.68	19.23	-12.15	-19.77	0	0	0	0.65	-67.01	-12.92	-20.95	0.85	-2.07	0.19	0.81	0.55	0	7.66	\N	7.54	-5.05	712610842.16	Bens Industriais	Transporte	Transporte Ferroviário	\N	\N
+ATOM3	2.02	ATOM EMPREENDIMENTOS E PARTICIPAÇÕES S.A.	2.52	1.24	-62.73	0.92	-51.68	91.76	-3.39	84.24	2.12	2.77	-1.51	0.43	49.23	36.6	-47.85	-0.21	10.74	0.74	0.21	7.1	0.01	31.18	13837.42	1.65	0.81	48561991.92	Financeiro e Outros	Outros	Outros	22.25	\N
+UCAS3	2.4	UNICASA INDÚSTRIA DE MÓVEIS S.A.	10.2	0.76	20.64	0.41	22.09	36.8	3.31	6.69	0.68	3.92	-0.64	0.6	7.48	3.99	2.35	0.05	1.27	0.53	0.47	1.4	-0.23	7.8	89927.97	2.92	0.22	148694319	Consumo Cíclico	Utilidades Domésticas	Móveis	33.6	9.01
 WLMM4	29.99	WLM PART. E COMÉRCIO DE MÁQUINAS E VEÍCULOS S.A.	9.3	1.5	6.28	1.24	5.46	11.5	6.34	4.28	0.4	2.64	-2.88	3.11	16.12	13.3	16.62	-0.04	-0.17	0.82	0.17	5.56	-2.21	25.9	23545.47	20	3.22	979557369.5	Bens Industriais	Comércio	Material de Transporte	48.84	2.43
-SEER3	5.14	SER EDUCACIONAL S.A.	-38.43	0.56	2.94	0.2	5.6	53.01	12.11	-0.93	0.36	13.06	-0.25	0.55	-1.44	-0.51	10.98	0.5	2.66	0.35	0.65	1.07	0.42	7.72	3505798.11	9.26	-0.13	661628818.4	Consumo Cíclico	Diversos	Serviços Educacionais	\N	\N
-CMIG4	10.3	CIA ENERGETICA DE MINAS GERAIS - CEMIG	5.34	1.16	4.18	0.51	5.49	22.34	18.93	14.81	0.79	15.05	-0.69	0.65	21.72	9.61	16.13	0.28	1.01	0.44	0.56	1.15	-0.32	10.6	130117296.09	8.88	1.93	31542613646.26	Utilidade Pública	Energia Elétrica	Energia Elétrica	26.55	15.08
-TXRX3	9.39	TEXTIL RENAUXVIEW S.A.	7.73	-0.11	1.01	0.19	8.08	8.47	34.9	4.58	0.35	-0.19	-0.35	0.53	-1.44	2.44	-64.83	\N	7.57	-1.7	2.7	0.32	0	8.73	933	-84.48	1.22	20123661.57	Consumo Cíclico	Tecidos. Vestuário e Calçados	Fios e Tecidos	\N	\N
-CAMB4	6.25	CAMBUCI S.A.	3.66	1.05	2.65	0.72	4.08	48.26	21.89	15.87	0.58	2.66	-1.41	1.24	28.58	19.76	34.86	-0.11	-0.28	0.69	0.31	2.27	0.89	13.16	\N	5.98	1.71	434587822.4	Consumo Cíclico	Tecidos. Vestuário e Calçados	Calçados	34.14	0.43
+POMO3	5.2	MARCOPOLO S.A.	6.57	1.73	7.12	0.76	9.63	22.93	12.22	13.25	0.87	2.35	-1.94	0.88	26.29	11.64	13.77	0.31	1.26	0.44	0.55	2.16	0.13	9.75	1446443.55	2.97	0.78	6838658164.89	Bens Industriais	Material de Transporte	Material Rodoviário	36.53	6.64
+CEGR3	66.78	CIA DISTRIB DE GAS DO RIO DE JANEIRO-CEG	29.63	11.94	17.25	3.77	17.98	28.64	18.5	10.77	3.19	79.25	-5.13	1.18	40.29	12.73	27.08	0.51	0.73	0.32	0.68	1.22	0.28	6.17	\N	5.59	2.25	17338607742.96	Utilidade Pública	Gás	Gás	27.58	1.81
+PETR4	38.46	PETROLEO BRASILEIRO S.A. PETROBRAS	4.25	1.22	2.57	0.47	3.85	52.07	39.1	23.67	1.01	41.26	-0.55	0.46	28.77	10.99	19.56	0.56	1.17	0.38	0.62	1.08	-0.11	17.72	1222953036.68	31.25	8.99	518042306490.36	Petróleo. Gás e Biocombustíveis	Petróleo. Gás e Biocombustíveis	Exploração. Refino e Distribuição	\N	16.98
+BBSE3	34.04	BB SEGURIDADE PARTICIPAÇÕES S.A.	8.19	5.54	7.31	3.73	7.31	\N	\N	\N	\N	34.02	-5.05	0	67.7	45.59	\N	\N	\N	0.67	0.33	1.73	0.44	\N	138043569.87	6.01	4.07	66640000000	Financeiro e Outros	Previdência e Seguros	Seguradoras	18.12	8.61
+VSPT4	0	FERROVIA CENTRO-ATLANTICA S.A.	0	0	0	0	-3.69	19.23	-12.15	-19.77	0	0	0	0.65	-67.01	-12.92	-20.95	0.85	-2.07	0.19	0.81	0.55	0	7.66	\N	7.54	-5.05	714038920	Bens Industriais	Transporte	Transporte Ferroviário	\N	\N
+GPIV33	3.24	GP INVESTMENTS, LTD.	-0.95	0.17	-1.06	0.1	0.11	100	110.12	123.21	\N	0.95	-0.12	-0.08	-17.95	-10.44	-10.57	-0.19	1.18	0.58	0.14	2.97	0.02	\N	1118418.27	22.08	-3.96	257392570.6	Financeiro e Outros	Serviços Financeiros Diversos	Gestão de Recursos e Investimentos	\N	\N
+SEER3	5.92	SER EDUCACIONAL S.A.	-40.82	0.59	3.12	0.21	5.77	53.01	12.11	-0.93	0.38	13.87	-0.27	0.55	-1.44	-0.51	10.98	0.5	2.66	0.35	0.65	1.07	0.44	7.72	3283606.42	9.26	-0.13	701532502	Consumo Cíclico	Diversos	Serviços Educacionais	\N	\N
+CMIG4	10.74	CIA ENERGETICA DE MINAS GERAIS - CEMIG	5.42	1.18	4.24	0.52	5.57	22.34	18.93	14.81	0.8	15.29	-0.7	0.65	21.72	9.61	16.13	0.28	1.01	0.44	0.56	1.15	-0.32	10.6	119845089.42	8.88	1.93	32153555055.22	Utilidade Pública	Energia Elétrica	Energia Elétrica	26.55	12.99
+CAMB4	6.25	CAMBUCI S.A.	3.66	1.05	2.65	0.72	4.33	48.26	21.89	15.87	0.58	2.66	-1.41	1.24	28.58	19.76	34.86	-0.11	-0.28	0.69	0.31	2.27	0.89	13.16	\N	5.98	1.71	459952870.4	Consumo Cíclico	Tecidos. Vestuário e Calçados	Calçados	34.14	0.43
+TXRX3	9.5	TEXTIL RENAUXVIEW S.A.	7.82	-0.11	1.03	0.19	8.11	8.47	34.9	4.58	0.36	-0.19	-0.36	0.53	-1.44	2.44	-64.83	\N	7.57	-1.7	2.7	0.32	0	8.73	913	-84.48	1.22	21068637.74	Consumo Cíclico	Tecidos. Vestuário e Calçados	Fios e Tecidos	\N	\N
 BRGE6	12.92	CONSORCIO ALFA DE ADMINISTRACAO S.A.	32.46	0.71	-33.53	0.32	19.81	-4115.33	-798.17	824.67	267.65	0.85	-0.72	0	2.19	0.99	-2.79	-1.15	54.17	0.45	0.36	3.13	-0.5	-32.83	5375.5	18.16	0.4	974940393.52	Financeiro e Outros	Previdência e Seguros	Seguradoras	-11.18	\N
 LHER3	0	LOJAS HERING S.A.	0	0	0	0	-3.77	63.41	22.35	10.99	0	0	0	0.06	1.95	0.67	3.94	-0.15	-3.77	0.34	0.66	6.36	0	4.31	\N	141.54	2.76	0	Financeiro e Outros	Exploração de Imóveis	Exploração de Imóveis	-51.59	\N
-GOAU3	10.46	METALURGICA GERDAU S.A.	5.02	0.61	1.22	0.14	1.74	15.28	13.39	3.25	0.16	0.56	-0.23	0.86	12.16	2.78	12.35	0.27	0.54	0.23	0.32	2.82	-0.11	8.35	613336.06	17.13	2.08	10661907843.21	Materiais Básicos	Siderurgia e Metalurgia	Siderurgia	21.91	13.67
 NEMO3	0	SUZANO HOLDING S.A.	0	0	0	0	5.74	34.61	27.57	6.7	0	0	0	0.26	19.82	1.77	7.12	4.68	5.74	0.09	0.69	2.89	0	24.23	\N	18.54	3.67	0	Materiais Básicos	Madeira e Papel	Papel e Celulose	90.81	\N
+GOAU3	11.01	METALURGICA GERDAU S.A.	5.13	0.62	1.24	0.14	1.78	15.28	13.39	3.25	0.17	0.57	-0.23	0.86	12.16	2.78	12.35	0.27	0.54	0.23	0.32	2.82	-0.12	8.35	435405.17	17.13	2.08	10936461020.29	Materiais Básicos	Siderurgia e Metalurgia	Siderurgia	21.91	13.39
 OGXP3	1.63	ÓLEO E GÁS PARTICIPAÇÕES S.A.	-2.15	-0.98	-9.26	0.92	-9.26	\N	\N	\N	\N	-0.98	\N	0	-45.53	-43.02	10.57	\N	0	-0.94	1.94	0.51	0.02	\N	\N	-1.67	-0.76	52747073.84	Petróleo. Gás e Biocombustíveis	Petróleo. Gás e Biocombustíveis	Exploração. Refino e Distribuição	\N	\N
-SANB4	14.44	BCO SANTANDER (BRASIL) S.A.	11.38	0.94	7.95	0.1	7.56	37.06	10.58	7.39	0.84	\N	-0.1	0.11	8.23	0.84	\N	\N	\N	0.1	0.9	\N	-0.45	12.73	1646529.37	15.41	1.27	102992323985.49	Financeiro e Outros	Intermediários Financeiros	Bancos	-5.44	5.85
-GGBR3	15.63	GERDAU S.A.	3.68	0.65	2.68	0.43	3.32	17.21	17.49	12.74	0.47	1.62	-0.72	0.92	17.72	11.74	16.75	0.11	0.44	0.66	0.34	2.93	-0.17	17.42	1254087.11	24	4.25	35453677303.8	Materiais Básicos	Siderurgia e Metalurgia	Siderurgia	\N	8.19
+SANB4	14.9	BCO SANTANDER (BRASIL) S.A.	11.31	0.93	7.9	0.09	7.47	37.06	10.58	7.39	0.84	\N	-0.1	0.11	8.23	0.84	\N	\N	\N	0.1	0.9	\N	-0.45	12.73	1935427.13	15.41	1.27	101755066362.07	Financeiro e Outros	Intermediários Financeiros	Bancos	-5.44	5.89
+GGBR3	16.5	GERDAU S.A.	3.76	0.67	2.74	0.44	3.39	17.21	17.49	12.74	0.48	1.66	-0.74	0.92	17.72	11.74	16.75	0.11	0.44	0.66	0.34	2.93	-0.17	17.42	693348.37	24	4.25	36235951663.2	Materiais Básicos	Siderurgia e Metalurgia	Siderurgia	\N	8
 BRGE8	13.17	CONSORCIO ALFA DE ADMINISTRACAO S.A.	33.08	0.73	-34.18	0.33	19.81	-4115.33	-798.17	824.67	272.83	0.87	-0.74	0	2.19	0.99	-2.79	-1.15	54.17	0.45	0.36	3.13	-0.51	-32.83	5268	18.16	0.4	974940393.52	Financeiro e Outros	Previdência e Seguros	Seguradoras	-11.18	\N
-DASA3	3.06	DIAGNOSTICOS DA AMERICA S.A.	-1.96	0.32	2.53	0.09	13.07	27.01	6.3	-8.14	0.16	1.01	-0.12	0.54	-16.37	-4.37	3.81	1.34	10.54	0.27	0.73	1.4	-0.02	29.37	8041782.77	9.54	-1.56	2303567522.64	Saúde	Serv.Méd.Hospit..Análises e Diagnósticos	Serv.Méd.Hospit..Análises e Diagnósticos	\N	\N
-BMEB3	25.2	BCO MERCANTIL DO BRASIL S.A.	5.42	1.58	4.19	0.13	4.22	55.98	12.65	9.78	0.53	0.89	-0.15	0.24	29.16	2.35	\N	\N	\N	0.08	0.92	\N	0.04	15.64	23936.93	15.96	4.65	2661593734	Financeiro e Outros	Intermediários Financeiros	Bancos	53.7	4.76
+DASA3	3.64	DIAGNOSTICOS DA AMERICA S.A.	-2.31	0.38	2.98	0.1	13.53	27.01	6.3	-8.14	0.19	1.19	-0.14	0.54	-16.37	-4.37	3.81	1.34	10.54	0.27	0.73	1.4	-0.02	29.37	9013751.58	9.54	-1.56	2717607436.84	Saúde	Serv.Méd.Hospit..Análises e Diagnósticos	Serv.Méd.Hospit..Análises e Diagnósticos	\N	\N
 BRGE5	13.18	CONSORCIO ALFA DE ADMINISTRACAO S.A.	33.11	0.73	-34.21	0.33	19.81	-4115.33	-798.17	824.67	273.04	0.87	-0.74	0	2.19	0.99	-2.79	-1.15	54.17	0.45	0.36	3.13	-0.51	-32.83	1960.25	18.16	0.4	974940393.52	Financeiro e Outros	Previdência e Seguros	Seguradoras	-11.18	\N
-CPFE3	32.65	CPFL ENERGIA S.A.	6.71	1.83	3.46	0.5	5.51	34.79	27.17	14	0.94	-24.21	-0.65	0.53	27.31	7.42	17.14	1.09	2.05	0.27	0.71	0.92	21.66	7.15	61674357	17.82	4.87	37621107466	Utilidade Pública	Energia Elétrica	Energia Elétrica	22.2	13.23
-JOPA4	34.98	JOSAPAR-JOAQUIM OLIVEIRA S.A. - PARTICIP	21.28	0.63	2.88	0.16	6.55	21.59	6.07	0.82	0.17	0.42	-0.59	0.94	2.97	0.77	5.87	1.05	4.81	0.26	0.66	2.18	-0.55	13.87	3498	55.36	1.64	224066105.64	Consumo não Cíclico	Alimentos Processados	Alimentos Diversos	-6.33	\N
-TRPL3	33.55	CTEEP - CIA TRANSMISSÃO ENERGIA ELÉTRICA PAULISTA	8.08	1.23	5.75	0.58	6.89	55.72	58.05	41.3	3.34	4.83	-0.71	0.17	15.18	7.21	12.57	0.42	1.98	0.47	0.51	3.08	0.75	14.31	58362.83	27.34	4.15	18877922994.6	Utilidade Pública	Energia Elétrica	Energia Elétrica	7.77	6.57
-WEST3	0.91	WESTWING COMERCIO VAREJISTA S.A.	-1.84	0.4	-1.35	0.29	0.3	39.33	-38.47	-28.21	0.52	0.74	-0.72	0.55	-21.48	-15.62	-28.25	-0.48	1.65	0.73	0.27	2.86	0.36	10.76	69513.31	2.3	-0.49	100930965.59	Consumo Cíclico	Comércio	Produtos Diversos	\N	\N
-ENMT4	62.46	ENERGISA MATO GROSSO-DISTRIBUIDORA DE ENERGIA S/A	8.95	3.59	5.87	1.02	8.45	35.23	29.57	19.41	1.74	22.82	-1.4	0.59	40.09	11.41	21.68	1.14	1.87	0.28	0.72	1.2	0.21	11.58	155388.69	17.41	6.98	15330726156.02	Utilidade Pública	Energia Elétrica	Energia Elétrica	29.05	\N
-DESK3	14.57	DESKTOP - SIGMANET COMUNICAÇÃO MULTIMÍDIA S.A.	16.31	1.33	4.94	0.57	6.96	63.41	33.01	9.99	1.63	-23.96	-0.66	0.35	8.18	3.51	14.89	0.55	2.02	0.43	0.56	0.84	0.21	\N	2894383.91	10.92	0.89	1682842212.15	Comunicações	Telecomunicações	Telecomunicações	\N	\N
-CURY3	18.82	CURY CONSTRUTORA E INCORPORADORA S.A.	10.34	5.46	8.5	1.61	7.87	38	20.66	16.98	1.76	4.31	-5.69	0.92	52.79	15.57	32.32	-0.41	-0.63	0.29	0.66	2.09	0.22	25.68	31995415.66	3.45	1.82	5493089156.16	Consumo Cíclico	Construção Civil	Incorporações	32.31	9.78
-BGIP4	23.46	BCO ESTADO DE SERGIPE S.A. - BANESE	8.5	0.64	6.84	0.04	7.35	36.89	5.2	4.19	0.36	-0.32	-0.09	0.13	7.57	0.52	\N	\N	\N	0.07	0.93	0.78	-0.25	13.8	16433.77	36.47	2.76	468242409.42	Financeiro e Outros	Intermediários Financeiros	Bancos	-3.92	4.91
-CALI4	50	CONSTRUTORA ADOLPHO LINDENBERG S.A.	-160.94	7.65	24.43	0.84	18.46	37.03	10.6	-1.61	2.59	75.08	-1.01	0.32	-4.76	-0.52	7.11	1.81	5.76	0.11	0.89	1.07	1.47	69.63	\N	6.53	-0.31	96745246	Consumo Cíclico	Construção Civil	Incorporações	\N	\N
-BHIA3	5.75	GRUPO CASAS BAHIA S.A.	-0.21	0.17	-0.38	0.02	-5.2	27.46	-5.21	-9.3	0.02	-0.11	-0.03	0.89	-80.86	-8.26	-24.97	2.18	-4.82	0.1	0.9	0.71	0	1.39	31395087.34	33.68	-27.23	546730694.25	Consumo Cíclico	Comércio	Eletrodomésticos	\N	\N
-OIBR4	12.65	OI S.A.	-0.12	-0.03	-0.39	0.03	-11.98	-0.82	-22.86	-74.09	0.09	-0.1	-0.05	0.36	-23.09	-26.56	123.09	\N	-11.83	-1.15	2.15	0.48	0	-15.12	74354.97	-455.93	-105.26	309991449.8	Comunicações	Telecomunicações	Telecomunicações	\N	\N
-QUAL3	1.41	QUALICORP CONSULTORIA E CORRETORA DE SEGUROS S.A.	-4.87	0.31	3.98	0.09	15.67	79.28	5.93	-4.85	0.24	0.97	-0.14	0.37	-6.38	-1.8	1.97	0.91	11.69	0.28	0.71	1.31	0.01	-1.96	7451282.81	4.54	-0.29	400460198.25	Saúde	Serv.Méd.Hospit..Análises e Diagnósticos	Serv.Méd.Hospit..Análises e Diagnósticos	\N	\N
-IGSN3	0	IGUA SANEAMENTO S.A.	0	0	0	0	16.47	32.43	16.27	-15.52	0	0	0	0.2	-14.61	-3.1	1.91	2.52	16.47	0.21	0.79	0.59	0	25.77	\N	5.98	-0.87	0	Utilidade Pública	Água e Saneamento	Água e Saneamento	\N	\N
+BMEB3	26.68	BCO MERCANTIL DO BRASIL S.A.	5.73	1.67	4.43	0.13	4.61	55.98	12.65	9.78	0.56	0.95	-0.16	0.24	29.16	2.35	\N	\N	\N	0.08	0.92	\N	0.04	15.64	28099.59	15.96	4.65	2908934371.2	Financeiro e Outros	Intermediários Financeiros	Bancos	53.7	4.5
+CPFE3	33.28	CPFL ENERGIA S.A.	6.91	1.89	3.56	0.51	5.61	34.79	27.17	14	0.97	-24.93	-0.67	0.53	27.31	7.42	17.14	1.09	2.05	0.27	0.71	0.92	22.3	7.15	45211382.42	17.82	4.87	38738794272.8	Utilidade Pública	Energia Elétrica	Energia Elétrica	22.2	12.85
+JOPA4	0	JOSAPAR-JOAQUIM OLIVEIRA S.A. - PARTICIP	0	0	0	0	6.51	21.59	6.07	0.82	0	0	0	0.94	2.97	0.77	5.87	1.05	4.81	0.26	0.66	2.18	0	13.87	3498	55.36	1.64	219470853	Consumo não Cíclico	Alimentos Processados	Alimentos Diversos	-6.33	\N
+TRPL3	32.96	CTEEP - CIA TRANSMISSÃO ENERGIA ELÉTRICA PAULISTA	8.29	1.26	5.9	0.6	7.17	55.72	58.05	41.3	3.42	4.95	-0.73	0.17	15.18	7.21	12.57	0.42	1.98	0.47	0.51	3.08	0.77	14.31	51939.48	27.34	4.15	19938874988.52	Utilidade Pública	Energia Elétrica	Energia Elétrica	7.77	6.41
 YDUQ3	10.98	ESTACIO PARTICIPACOES S.A.	22.04	1.06	4.28	0.35	9.79	60.35	14.97	2.91	0.64	4.57	-0.47	0.55	4.82	1.6	8.9	1.37	5.51	0.33	0.67	1.48	0.02	7.3	76231939.97	10.34	0.5	3393795583.98	Consumo Cíclico	Diversos	Serviços Educacionais	-24.9	5
-TECN3	4.65	TECHNOS S.A.	5.41	0.81	5.12	0.5	4.77	55.23	17.94	17	0.92	0.97	-1.41	0.54	14.89	9.24	10.32	-0.06	-0.36	0.62	0.38	4.94	0.23	2.29	891009.71	5.77	0.86	319483899.75	Consumo Cíclico	Tecidos. Vestuário e Calçados	Acessórios	32.68	3.28
-VSPT3	4.99	FERROVIA CENTRO-ATLANTICA S.A.	-0.99	0.66	-1.61	0.13	-3.68	19.23	-12.15	-19.77	0.2	-1.27	-0.15	0.65	-67.01	-12.92	-20.95	0.85	-2.07	0.19	0.81	0.55	0.01	7.66	\N	7.54	-5.05	712610842.16	Bens Industriais	Transporte	Transporte Ferroviário	\N	\N
-RSUL3	0	METALURGICA RIOSULENSE S.A.	0	0	0	0	1.22	42.74	24.47	15.7	0	0	0	0.9	26.89	14.15	26.27	-0.28	-0.68	0.53	0.47	2.23	0	18.65	\N	33.65	9.05	162189625	Bens Industriais	Material de Transporte	Material Rodoviário	35.49	\N
-SAPR4	5.34	CIA SANEAMENTO DO PARANA - SANEPAR	5.16	0.8	3.31	0.41	5.07	60.04	37.33	23.91	1.23	5.84	-0.49	0.33	15.44	7.88	11.44	0.44	1.84	0.51	0.49	1.66	0.16	8.62	6909740.43	6.7	1.03	7894537631.26	Utilidade Pública	Água e Saneamento	Água e Saneamento	11.86	5.78
-DTCY3	5.4	DTCOM - DIRECT TO COMPANY S.A.	-15.67	-13.7	-17.77	10.76	-25.78	-8.45	-61.19	-69.38	10.87	-26.26	-18.29	0.99	-87.42	-68.7	141.55	\N	-0.39	-0.79	1.79	0.5	0.02	-18.43	1594	-0.39	-0.34	85885573.4	Bens Industriais	Serviços	Serviços Diversos	\N	\N
-PNVL3	9.55	DIMED S.A. DISTRIBUIDORA DE MEDICAMENTOS	13.27	1.2	8.01	0.45	12.75	31.28	3.85	2.32	0.31	1.9	-1.14	1.45	9.04	3.38	7.47	0.71	4.74	0.37	0.63	1.64	0.46	12.9	3726125.91	7.96	0.72	1436104943.55	Saúde	Comércio e Distribuição	Medicamentos e Outros Produtos	7.62	3.45
-MOAR3	398	MONTEIRO ARANHA S.A.	6.32	3.2	4.63	1.51	4.09	\N	\N	\N	\N	3.85	-3.23	0	50.6	23.83	32.02	-0.37	-0.54	0.47	0.53	3.76	0.03	\N	112061.5	124.41	62.95	4875985958	Financeiro e Outros	Holdings Diversificadas	Holdings Diversificadas	40.43	6.45
-GMAT3	7.12	GRUPO MATEUS S.A.	14.65	1.9	10.17	1.04	11.82	21.85	5.81	4.03	0.59	2.58	-2.74	1.77	12.96	7.13	12.43	0.31	1.64	0.55	0.44	2.9	7.22	30.71	29904315.2	3.75	0.49	15730544082.48	Consumo não Cíclico	Comércio e Distribuição	Alimentos	46.48	2.08
-BPAR3	182.07	BCO ESTADO DO PARA S.A.	5.64	0.94	3.02	0.1	3.02	55.2	18.51	9.89	0.56	6.24	-0.11	0.19	16.66	1.85	\N	\N	\N	0.11	0.89	\N	0.1	13.1	\N	193.58	32.26	1733606633.43	Financeiro e Outros	Intermediários Financeiros	Bancos	-0.08	1.83
+DESK3	15.3	DESKTOP - SIGMANET COMUNICAÇÃO MULTIMÍDIA S.A.	16.7	1.37	5.06	0.59	7.08	63.41	33.01	9.99	1.67	-24.54	-0.67	0.35	8.18	3.51	14.89	0.55	2.02	0.43	0.56	0.84	0.22	\N	5228304.37	10.92	0.89	1723267385.4	Comunicações	Telecomunicações	Telecomunicações	\N	\N
+ENMT4	78.99	ENERGISA MATO GROSSO-DISTRIBUIDORA DE ENERGIA S/A	10.75	4.31	7.05	1.23	9.25	35.23	29.57	19.41	2.09	27.4	-1.68	0.59	40.09	11.41	21.68	1.14	1.87	0.28	0.72	1.2	0.25	11.58	106657.29	17.41	6.98	17175943165	Utilidade Pública	Energia Elétrica	Energia Elétrica	29.05	1.74
+CALI4	50	CONSTRUTORA ADOLPHO LINDENBERG S.A.	-160.94	7.65	24.43	0.84	18.46	37.03	10.6	-1.61	2.59	75.08	-1.01	0.32	-4.76	-0.52	7.11	1.81	5.76	0.11	0.89	1.07	1.47	69.63	\N	6.53	-0.31	96745246	Consumo Cíclico	Construção Civil	Incorporações	\N	\N
+BGIP4	22.9	BCO ESTADO DE SERGIPE S.A. - BANESE	8.39	0.63	6.75	0.04	7	36.89	5.2	4.19	0.35	-0.32	-0.09	0.13	7.57	0.52	\N	\N	\N	0.07	0.93	0.78	-0.25	13.8	14695.48	36.47	2.76	445600485.54	Financeiro e Outros	Intermediários Financeiros	Bancos	-3.92	4.98
+CURY3	21.25	CURY CONSTRUTORA E INCORPORADORA S.A.	11.98	6.32	9.85	1.86	9.21	38	20.66	16.98	2.03	4.99	-6.59	0.92	52.79	15.57	32.32	-0.41	-0.63	0.29	0.66	2.09	0.25	25.68	36850592.42	3.45	1.82	6362876918.4	Consumo Cíclico	Construção Civil	Incorporações	32.31	8.44
+BHIA3	5.73	GRUPO CASAS BAHIA S.A.	-0.21	0.17	-0.38	0.02	-5.2	27.46	-5.21	-9.3	0.02	-0.11	-0.03	0.89	-80.86	-8.26	-24.97	2.18	-4.82	0.1	0.9	0.71	0	1.39	20506256.35	33.68	-27.23	548632366.23	Consumo Cíclico	Comércio	Eletrodomésticos	\N	\N
+IGSN3	0	IGUA SANEAMENTO S.A.	0	0	0	0	16.47	32.43	16.27	-15.52	0	0	0	0.2	-14.61	-3.1	1.91	2.52	16.47	0.21	0.79	0.59	0	25.77	\N	5.98	-0.87	0	Utilidade Pública	Água e Saneamento	Água e Saneamento	\N	\N
+QUAL3	1.82	QUALICORP CONSULTORIA E CORRETORA DE SEGUROS S.A.	-6.49	0.41	5.31	0.12	16.97	79.28	5.93	-4.85	0.31	1.29	-0.19	0.37	-6.38	-1.8	1.97	0.91	11.69	0.28	0.71	1.31	0.02	-1.96	7499581.68	4.54	-0.29	531106787.75	Saúde	Serv.Méd.Hospit..Análises e Diagnósticos	Serv.Méd.Hospit..Análises e Diagnósticos	\N	\N
+OIBR4	15.72	OI S.A.	-0.14	-0.03	-0.47	0.04	-12.03	-0.82	-22.86	-74.09	0.11	-0.12	-0.05	0.36	-23.09	-26.56	123.09	\N	-11.83	-1.15	2.15	0.48	0	-15.12	186124.81	-455.93	-105.26	417388669.62	Comunicações	Telecomunicações	Telecomunicações	\N	\N
+TECN3	5.81	TECHNOS S.A.	6.34	0.94	6.01	0.59	5.56	55.23	17.94	17	1.08	1.14	-1.65	0.54	14.89	9.24	10.32	-0.06	-0.36	0.62	0.38	4.94	0.27	2.29	2139613.87	5.99	0.89	368768617.55	Consumo Cíclico	Tecidos. Vestuário e Calçados	Acessórios	32.68	2.69
+VSPT3	5	FERROVIA CENTRO-ATLANTICA S.A.	-0.99	0.66	-1.61	0.13	-3.69	19.23	-12.15	-19.77	0.2	-1.27	-0.15	0.65	-67.01	-12.92	-20.95	0.85	-2.07	0.19	0.81	0.55	0.01	7.66	\N	7.54	-5.05	714038920	Bens Industriais	Transporte	Transporte Ferroviário	\N	\N
+RSUL3	0	METALURGICA RIOSULENSE S.A.	0	0	0	0	1.3	42.74	24.47	15.7	0	0	0	0.9	26.89	14.15	26.27	-0.28	-0.68	0.53	0.47	2.23	0	18.65	\N	33.65	9.05	169251111.75	Bens Industriais	Material de Transporte	Material Rodoviário	35.49	\N
+DTCY3	6.29	DTCOM - DIRECT TO COMPANY S.A.	-18.11	-15.83	-20.53	12.44	-28.43	-8.45	-61.19	-69.38	12.56	-30.34	-21.14	0.99	-87.42	-68.7	141.55	\N	-0.39	-0.79	1.79	0.5	0.02	-18.43	5825.33	-0.39	-0.34	94857173.24	Bens Industriais	Serviços	Serviços Diversos	\N	\N
+SAPR4	5.46	CIA SANEAMENTO DO PARANA - SANEPAR	5.35	0.83	3.42	0.42	5.19	60.04	37.33	23.91	1.28	6.04	-0.51	0.33	15.44	7.88	11.44	0.44	1.84	0.51	0.49	1.66	0.16	8.62	5271856.97	6.7	1.03	8187711501.94	Utilidade Pública	Água e Saneamento	Água e Saneamento	11.86	5.03
+PNVL3	10.25	DIMED S.A. DISTRIBUIDORA DE MEDICAMENTOS	13.77	1.25	8.31	0.47	13.11	31.28	3.85	2.32	0.32	1.97	-1.19	1.45	9.04	3.38	7.47	0.71	4.74	0.37	0.63	1.64	0.48	12.9	2873955.81	7.96	0.72	1502271035.19	Saúde	Comércio e Distribuição	Medicamentos e Outros Produtos	7.62	4.05
+BPAR3	182.07	BCO ESTADO DO PARA S.A.	5.64	0.94	3.02	0.1	3.02	55.2	18.51	9.89	0.56	6.24	-0.11	0.19	16.66	1.85	\N	\N	\N	0.11	0.89	\N	0.1	13.1	\N	193.58	32.26	1733606633.43	Financeiro e Outros	Intermediários Financeiros	Bancos	-0.08	3.59
+GMAT3	7.29	GRUPO MATEUS S.A.	15.12	1.96	10.5	1.08	12.12	21.85	5.81	4.03	0.61	2.66	-2.82	1.77	12.96	7.13	12.43	0.31	1.64	0.55	0.44	2.9	7.45	30.71	27703731.2	3.75	0.49	16194506759.07	Consumo não Cíclico	Comércio e Distribuição	Alimentos	46.48	2.02
+MOAR3	395	MONTEIRO ARANHA S.A.	6.28	3.18	4.59	1.5	4.05	\N	\N	\N	\N	3.82	-3.2	0	50.6	23.83	32.02	-0.37	-0.54	0.47	0.53	3.76	0.03	\N	234249	124.41	62.95	4839232295	Financeiro e Outros	Holdings Diversificadas	Holdings Diversificadas	40.43	6.5
 ELPL3	8.31	ELETROPAULO METROP. ELET. SAO PAULO S.A.	1.59	1.04	0.63	0.09	2.16	25.99	20.06	7.97	0.13	-1.43	-0.11	0.67	65.14	5.35	34.15	2.51	1.53	0.08	0.92	0.81	0.08	5.85	\N	8.03	5.23	2485315360.74	Utilidade Pública	Energia Elétrica	Energia Elétrica	\N	\N
-ESTR4	1.84	MANUFATURA DE BRINQUEDOS ESTRELA S.A.	-0.77	-0.03	-1.71	0.05	-11.8	42.52	-5.47	-12.15	0.09	-0.02	-0.09	0.56	-3.54	-6.74	1.85	\N	-8.31	-1.91	2.91	0.16	0.01	3.49	2692.58	-67.6	-2.39	30393960	Consumo Cíclico	Viagens e Lazer	Brinquedos e Jogos	\N	\N
-MGEL4	13.97	MANGELS INDUSTRIAL S.A.	4.07	2.39	1.06	0.11	8.67	12.54	8.32	2.16	0.09	0.48	-0.21	1.23	58.79	2.66	9.81	16.92	7.47	0.05	0.95	1.82	-0.05	14.25	33998.46	5.84	3.43	91458445.52	Materiais Básicos	Siderurgia e Metalurgia	Artefatos de Ferro e Aço	\N	\N
-INEP3	1.85	INEPAR S.A. INDUSTRIA E CONSTRUCOES	0.17	-0.07	-0.89	0.07	-10.52	-55.74	-1307.53	6898.98	11.58	-0.08	-0.08	0.01	-41.29	42.28	285.92	\N	-9.66	-1.02	2.02	0.09	0	-33.23	163968.83	-26.69	11.02	79964816.38	Bens Industriais	Máquinas e Equipamentos	Máq. e Equip. Industriais	\N	\N
-ODER4	98	CONSERVAS ODERICH S.A.	12.16	2.18	8.88	1.21	10.3	30.26	16.02	11.7	1.42	2.21	-4.26	0.85	17.92	9.95	13.93	0.35	1.42	0.56	0.44	4.22	-0.57	16.31	\N	44.98	8.06	1106136388	Consumo não Cíclico	Alimentos Processados	Alimentos Diversos	41.72	1.09
-MTSA3	78.55	METISA METALURGICA TIMBOENSE S.A.	9.75	1.55	11.92	1.25	6.75	24.25	11.31	13.83	1.35	2.07	-5.59	0.93	15.85	12.82	8.68	-0.29	-2.23	0.81	0.19	4.52	-0.39	16.17	7895	50.82	8.06	520252995.5	Bens Industriais	Máquinas e Equipamentos	Máq. e Equip. Construção e Agrícolas	34.09	1.4
-MDIA3	30.72	M.DIAS BRANCO S.A. IND COM DE ALIMENTOS	10.7	1.34	8.87	0.84	8.76	35.3	11.19	9.28	0.99	2.97	-1.57	0.85	12.56	7.85	10.68	-0.02	-0.11	0.62	0.38	2.54	0.12	12.46	23368753.8	22.87	2.87	10414080000	Consumo não Cíclico	Alimentos Processados	Alimentos Diversos	6.12	2.12
-TGMA3	23.55	TEGMA GESTAO LOGISTICA S.A.	8.44	1.78	6.66	1.27	6.11	19.88	14.27	11.25	0.95	3.46	-2.61	1.34	21.11	15.07	16.71	-0.14	-0.54	0.71	0.28	3.55	1.62	4.78	5906732.8	13.22	2.79	1554368648.25	Bens Industriais	Transporte	Transporte Rodoviário	11.22	5.48
+ESTR4	1.84	MANUFATURA DE BRINQUEDOS ESTRELA S.A.	-0.77	-0.03	-1.71	0.05	-11.8	42.52	-5.47	-12.15	0.09	-0.02	-0.09	0.56	-3.54	-6.74	1.85	\N	-8.31	-1.91	2.91	0.16	0.01	3.49	1529.1	-67.6	-2.39	30393960	Consumo Cíclico	Viagens e Lazer	Brinquedos e Jogos	\N	\N
+ODER4	98	CONSERVAS ODERICH S.A.	12.16	2.18	8.88	1.21	\N	30.26	16.02	11.7	1.42	2.21	-4.26	0.85	17.92	9.95	13.93	0.35	1.42	0.56	0.44	4.22	-0.57	16.31	\N	44.98	8.06	\N	Consumo não Cíclico	Alimentos Processados	Alimentos Diversos	41.72	1.09
+INEP3	1.92	INEPAR S.A. INDUSTRIA E CONSTRUCOES	0.18	-0.07	-0.93	0.07	-10.6	-55.74	-1307.53	6898.98	12.21	-0.09	-0.08	0.01	-41.29	42.28	285.92	\N	-9.66	-1.02	2.02	0.09	0	-33.23	135071.65	-26.69	11.02	86991079.84	Bens Industriais	Máquinas e Equipamentos	Máq. e Equip. Industriais	\N	\N
+MGEL4	13.68	MANGELS INDUSTRIAL S.A.	3.82	2.25	0.99	0.1	8.11	12.54	8.32	2.16	0.08	0.46	-0.2	1.23	58.79	2.66	9.81	16.92	7.47	0.05	0.95	1.82	-0.04	14.25	26372.95	5.84	3.43	48753513.28	Materiais Básicos	Siderurgia e Metalurgia	Artefatos de Ferro e Aço	\N	\N
 TRPN3	0.71	TARPON INVESTIMENTOS S.A.	0.44	0.54	0.37	0.4	-0.36	100	71.7	59.29	0.26	0.59	-6.13	1.52	122.35	90	90.82	-1.07	-0.72	0.74	0.26	3.61	0	-0.48	\N	1.31	1.6	32162716	\N	\N	\N	-0.38	\N
-TCSA3	1.97	TECNISA S.A.	-1.79	0.28	-2.64	0.09	-12.86	-4.07	-14.28	-21.05	0.38	0.31	-0.2	0.24	-15.76	-5.1	-5.18	1.09	-10.22	0.32	0.68	2.25	0	19.96	244473.74	6.98	-1.1	145029883.1	Consumo Cíclico	Construção Civil	Incorporações	\N	\N
-RAPT4	10.18	RANDON S.A. IMPLEMENTOS E PARTICIPACOES	9.82	1.17	2.85	0.25	5.26	25.51	10.91	3.17	0.31	0.89	-0.61	0.79	11.87	2.52	8.64	1.05	2.58	0.21	0.7	1.89	-0.37	20.63	22984929.43	8.73	1.04	3151012964.23	Bens Industriais	Material de Transporte	Material Rodoviário	17.61	5.71
+TGMA3	25.89	TEGMA GESTAO LOGISTICA S.A.	9.21	1.94	7.26	1.39	6.73	19.88	14.27	11.25	1.04	3.77	-2.85	1.34	21.11	15.07	16.71	-0.14	-0.54	0.71	0.28	3.55	1.77	4.78	5791125.52	13.22	2.79	1698915032.1	Bens Industriais	Transporte	Transporte Rodoviário	11.22	5.02
+TCSA3	2.32	TECNISA S.A.	-1.96	0.31	-2.89	0.1	-13.11	-4.07	-14.28	-21.05	0.41	0.34	-0.22	0.24	-15.76	-5.1	-5.18	1.09	-10.22	0.32	0.68	2.25	0	19.96	149583.84	6.98	-1.1	159017536.8	Consumo Cíclico	Construção Civil	Incorporações	\N	\N
+RAPT4	12.31	RANDON S.A. IMPLEMENTOS E PARTICIPACOES	11.5	1.37	3.34	0.29	5.73	25.51	10.91	3.17	0.36	1.04	-0.71	0.79	11.87	2.52	8.64	1.05	2.58	0.21	0.7	1.89	-0.44	20.63	25022344.03	8.73	1.04	3702314462.48	Bens Industriais	Material de Transporte	Material Rodoviário	17.61	4.88
+AZEV3	1.87	AZEVEDO E TRAVASSOS S.A.	-6.21	0.99	-3.07	0.4	-3.37	11.67	-29.6	-14.63	0.91	-1.73	-0.52	0.44	-15.85	-6.48	-53.35	0.11	-0.35	0.41	0.59	0.5	0.11	54.36	1048036.32	1.6	-0.25	290152788.68	Bens Industriais	Construção e Engenharia	Construção Pesada	\N	\N
 MMXM3	14	MMX MINERACAO E METALICOS S.A.	-2.17	-0.11	-181.31	0.71	-719.57	\N	\N	\N	\N	-0.1	-0.75	0	-4.97	-32.75	0.28	\N	-538.27	-6.58	7.6	0.01	0.03	-6.95	\N	-129.88	-6.46	90834562	Materiais Básicos	Mineração	Minerais Metálicos	\N	\N
-AZEV3	1.38	AZEVEDO E TRAVASSOS S.A.	-4.87	0.77	-2.4	0.32	-2.75	11.67	-29.6	-14.63	0.71	-1.36	-0.41	0.44	-15.85	-6.48	-53.35	0.11	-0.35	0.41	0.59	0.5	0.08	54.36	531841.91	1.79	-0.28	230488931.14	Bens Industriais	Construção e Engenharia	Construção Pesada	\N	\N
 CPRE3	18.23	CPFL ENERGIAS RENOVÁVEIS S.A.	8.3	2.17	5.4	0.96	5.56	66.28	55.87	36.31	3.01	-3.82	-1.1	0.32	26.15	11.61	28.83	0.07	0.17	0.44	0.55	0.33	-1.29	13.45	\N	8.4	2.2	10824655047.92	Utilidade Pública	Energia Elétrica	Energia Elétrica	64.19	\N
+BBDC4	12.62	BCO BRADESCO S.A.	10.17	0.81	16.35	0.07	15.58	30.48	3.75	6.02	0.61	0.75	-0.08	0.11	7.98	0.68	\N	\N	\N	0.08	0.91	7.77	-0.33	14.8	453824759.68	15.59	1.24	128280759596.49	Financeiro e Outros	Intermediários Financeiros	Bancos	-4.42	10.37
 NRTQ3	0	NORTEC QUÍMICA S.A.	0	0	0	0	2.56	23	6.16	7.08	0	0	0	0.62	6.16	4.37	3.54	0.14	2.56	0.71	0.29	4.34	0	3.58	\N	19.47	1.2	0	Saúde	Medicamentos e Outros Produtos	Medicamentos e Outros Produtos	-9.08	\N
-BBDC4	12.42	BCO BRADESCO S.A.	9.99	0.8	16.05	0.07	15.2	30.48	3.75	6.02	0.6	0.74	-0.08	0.11	7.98	0.68	\N	\N	\N	0.08	0.91	7.77	-0.33	14.8	510272369.91	15.59	1.24	125139752052.84	Financeiro e Outros	Intermediários Financeiros	Bancos	-4.42	12.15
-CIEL3	5.63	CIELO S.A.	7.11	1.26	4.67	0.15	5.59	47.03	30.91	20.29	1.44	1.21	-1.38	0.1	17.64	2.09	13.53	0.25	0.92	0.12	0.86	1.16	0.25	-1.93	150106587.43	4.49	0.79	15295668793.43	Financeiro e Outros	Serviços Financeiros Diversos	Serviços Financeiros Diversos	-7.3	6.43
 LAME3	6.6	LOJAS AMERICANAS S.A.	21.15	1.91	11.03	0.28	16.86	32.9	4.35	2.27	0.48	1.2	-0.66	0.59	9.02	1.34	2.89	1.01	5.87	0.15	0.63	1.72	-46.97	3.5	\N	3.46	0.31	12391135396.59	Consumo Cíclico	Comércio	Produtos Diversos	18.61	\N
-BMGB4	3.08	BANCO BMG S.A.	5.5	0.43	7.64	0.04	7.64	39.95	3.15	4.37	0.24	\N	-0.04	0.16	7.76	0.71	\N	\N	\N	0.09	0.91	\N	0.02	20.44	1526345	7.21	0.56	1796355825.88	Financeiro e Outros	Intermediários Financeiros	Bancos	8.26	14.27
-CEBR3	20.21	CIA ENERGETICA DE BRASILIA	8.34	1.39	6.69	0.98	3.35	50.78	61.36	49.19	4.1	2.05	-2.18	0.24	16.6	11.78	11.87	-0.66	-3.19	0.71	0.11	8.05	-0.5	-32.89	164978.46	14.59	2.42	1424592189.9	Utilidade Pública	Energia Elétrica	Energia Elétrica	14.18	9.39
-ECPR4	90.74	EMPRESA NAC COM REDITO PART S.A.ENCORPAR	-9.92	1.22	-17.21	0.62	-17.09	\N	\N	\N	\N	175.57	-0.63	0	-12.28	-6.29	-7.36	-0.01	0.08	0.51	0.49	2.97	0.14	\N	\N	74.46	-9.14	171908947.31	Consumo Cíclico	Tecidos. Vestuário e Calçados	Fios e Tecidos	\N	\N
+CIEL3	5.74	CIELO S.A.	7.24	1.28	4.75	0.15	5.67	47.03	30.91	20.29	1.47	1.24	-1.4	0.1	17.64	2.09	13.53	0.25	0.92	0.12	0.86	1.16	0.25	-1.93	128202052.73	4.49	0.79	15567350299.53	Financeiro e Outros	Serviços Financeiros Diversos	Serviços Financeiros Diversos	-7.3	6.32
+BMGB4	3.66	BANCO BMG S.A.	6.34	0.49	8.81	0.04	8.81	39.95	3.15	4.37	0.28	\N	-0.05	0.16	7.76	0.71	\N	\N	\N	0.09	0.91	\N	0.02	20.44	1733189.42	7.21	0.56	2070475059.05	Financeiro e Outros	Intermediários Financeiros	Bancos	8.26	12.38
 BFRE12	0	BRAZILIAN FINANCE E REAL ESTATE S.A.	0	0	0	0	\N	100	169.82	115.03	0	0	0	0.05	6.9	6.14	\N	\N	\N	0.89	0.1	\N	0	\N	\N	302450.49	20874.48	\N	Financeiro e Outros	Serviços Financeiros Diversos	Gestão de Recursos e Investimentos	6.73	\N
-AFLT3	7.19	AFLUENTE TRANSMISSÃO DE ENERGIA ELÉTRICA S/A	16.21	1.73	14.16	1.52	13.73	60.86	49.28	43.04	6.98	8.87	-1.96	0.22	10.7	9.38	9.82	-0.05	-0.43	0.88	0.12	4.16	-0.21	14.85	4293.78	4.15	0.44	453578993	Utilidade Pública	Energia Elétrica	Energia Elétrica	4.35	\N
-ENGI11	44.02	ENERGISA S.A.	8.41	1.32	3.03	0.28	6.52	28.52	22.18	8	0.67	4.88	-0.39	0.42	15.71	3.38	10.7	1.52	3.49	0.21	0.73	1.28	0.47	12.56	136272306.34	33.3	5.23	20156094733.05	Utilidade Pública	Energia Elétrica	Energia Elétrica	15.85	3.86
-VIVA3	20.28	VIVARA PARTICIPAÇOES S.A	13.07	2.43	10.79	1.49	10.48	69.04	19.81	16.36	2.14	3.61	-3.97	0.7	18.6	11.42	19.04	-0.07	-0.31	0.61	0.39	2.96	3.56	\N	72581573.43	8.34	1.55	4790090755.32	Consumo Cíclico	Tecidos. Vestuário e Calçados	Acessórios	\N	1.84
-LUPA3	1.55	LUPATECH S.A.	1.16	0.42	-2.68	0.13	-8.61	23.01	-24.01	55.4	0.64	1.53	-0.19	0.2	35.85	11.26	-7.78	0.92	-5.93	0.31	0.69	1.36	0.01	-7.38	504076.46	3.72	1.33	64288261.9	Petróleo. Gás e Biocombustíveis	Petróleo. Gás e Biocombustíveis	Equipamentos e Serviços	\N	\N
-SLCE3	17.7	SLC AGRICOLA S.A.	13.54	1.59	5.37	0.51	7.5	25.92	18.03	7.16	0.97	2.64	-0.98	0.53	11.73	3.76	13.16	0.63	2.13	0.32	0.66	1.67	-0.3	26.43	35524979.6	11.15	1.31	7846935973.2	Consumo não Cíclico	Agropecuária	Agricultura	8.74	5
+ECPR4	90.74	EMPRESA NAC COM REDITO PART S.A.ENCORPAR	-9.92	1.22	-17.21	0.62	-17.09	\N	\N	\N	\N	175.57	-0.63	0	-12.28	-6.29	-7.36	-0.01	0.08	0.51	0.49	2.97	0.14	\N	\N	74.46	-9.14	171908947.31	Consumo Cíclico	Tecidos. Vestuário e Calçados	Fios e Tecidos	\N	\N
+AFLT3	7.26	AFLUENTE TRANSMISSÃO DE ENERGIA ELÉTRICA S/A	16.14	1.73	14.1	1.51	13.67	60.86	49.28	43.04	6.95	8.83	-1.95	0.22	10.7	9.38	9.82	-0.05	-0.43	0.88	0.12	4.16	-0.21	14.85	4243.75	4.15	0.44	451686452	Utilidade Pública	Energia Elétrica	Energia Elétrica	4.35	1.78
+ENGI11	47.67	ENERGISA S.A.	9.09	1.43	3.28	0.31	6.77	28.52	22.18	8	0.73	5.28	-0.42	0.42	15.71	3.38	10.7	1.52	3.49	0.21	0.73	1.28	0.5	12.56	119546224.16	33.3	5.23	21790743942.43	Utilidade Pública	Energia Elétrica	Energia Elétrica	15.85	3.57
+LUPA3	1.69	LUPATECH S.A.	1.24	0.45	-2.87	0.14	-8.78	23.01	-24.01	55.4	0.69	1.64	-0.21	0.2	35.85	11.26	-7.78	0.92	-5.93	0.31	0.69	1.36	0.01	-7.38	227417	3.72	1.33	68435891.7	Petróleo. Gás e Biocombustíveis	Petróleo. Gás e Biocombustíveis	Equipamentos e Serviços	\N	\N
+VIVA3	23.56	VIVARA PARTICIPAÇOES S.A	14.34	2.67	11.84	1.64	11.62	69.04	19.81	16.36	2.35	3.97	-4.35	0.7	18.6	11.42	19.04	-0.07	-0.31	0.61	0.39	2.96	3.91	\N	65405390.29	8.34	1.55	5295553980.98	Consumo Cíclico	Tecidos. Vestuário e Calçados	Acessórios	\N	1.68
 CASN3	9.61	CIA CATARINENSE DE AGUAS E SANEAM.-CASAN	157.63	4.88	34.75	2.01	38.62	43.06	16.99	3.74	5.9	80.27	-2.41	0.34	3.1	1.28	6.09	0.86	6.13	0.41	0.59	1.18	34.35	8.52	\N	1.97	0.06	9343450886.5	Utilidade Pública	Água e Saneamento	Água e Saneamento	\N	0.12
-ALUP4	9.85	ALUPAR INVESTIMENTO S/A	13.04	1.23	3.99	0.32	7.78	75.41	71.12	21.74	2.83	4.17	-0.4	0.11	9.42	2.49	8.82	1.15	3.74	0.26	0.62	1.67	936.45	11.95	172043.49	8.02	0.76	9502128341.79	Utilidade Pública	Energia Elétrica	Energia Elétrica	13.18	4.16
-NINJ3	4.5	GETNINJAS S.A.	26.34	0.81	-8.74	0.76	1.83	87.66	-41.91	13.91	3.66	0.83	-24.31	0.21	3.07	2.89	-9.38	-0.98	10.57	0.94	0.06	17.48	-0.16	35.82	251984.46	5.57	0.17	228850722	Tecnologia da Informação	Programas e Serviços	Programas e Serviços	\N	\N
-AZUL4	7.74	AZUL S.A.	4.83	-0.44	4.27	0.47	12.62	21.52	12.23	10.81	0.52	-1.03	-0.61	0.9	-9.06	9.7	43.38	\N	11.44	-1.07	2.07	0.34	-0.03	15.18	115061746.83	-17.69	1.6	2694580355.03	Bens Industriais	Transporte	Transporte Aéreo	36.99	\N
-SEQL3	5.2	SEQUOIA LOGISTICA E TRANSPORTES S.A	-0.13	0.89	-0.15	0.07	-1.13	-11.65	-94.43	-110.4	0.14	-0.23	-0.08	0.48	-699.37	-52.67	-99.53	5.85	-0.98	0.08	0.92	0.42	0	15.49	1382881.09	5.87	-41.03	104205602.8	Bens Industriais	Transporte	Logística	\N	\N
-KLBN4	4.11	KLABIN S.A.	12.99	2.25	7	0.45	12.96	34.78	20.6	11.1	1.44	2.2	-0.65	0.31	17.29	3.44	6.21	1.91	5.96	0.2	0.76	2.79	-0.22	12.47	7511419.6	1.83	0.32	25410852511.47	Materiais Básicos	Madeira e Papel	Papel e Celulose	70.07	5.65
-BRIV4	12.54	BCO ALFA DE INVESTIMENTO S.A.	20.23	0.65	13.35	0.04	13.55	15.61	2.39	1.58	0.32	0.59	-0.05	0.14	3.2	0.22	\N	\N	\N	0.07	0.93	7.22	1.05	20.48	124732.29	19.39	0.62	1128165604.64	Financeiro e Outros	Intermediários Financeiros	Bancos	2.02	2.61
-MILS3	10.49	MILLS ESTRUTURAS E SERVIÇOS DE ENGENHARIA S.A.	9.18	1.69	5.42	0.84	6.39	63.36	33.63	19.85	1.82	3.49	-1.38	0.46	18.47	9.12	13.46	0.3	0.97	0.49	0.51	2.55	0.6	35.27	16820801.29	6.19	1.14	2561141262.6	Bens Industriais	Serviços	Serviços Diversos	\N	2.89
-CCRO3	11.96	CCR S.A.	16.19	1.88	4.16	0.43	8.3	43.39	33.39	8.57	1.39	6.11	-0.55	0.31	11.61	2.64	10.31	1.88	4.15	0.23	0.76	1.47	-0.25	12.68	101563010.09	6.36	0.74	24159200000	Bens Industriais	Transporte	Exploração de Rodovias	-3.66	3.53
-CEDO3	25.75	CIA FIACAO TECIDOS CEDRO CACHOEIRA	3.23	1.2	1.42	0.3	3.29	30.85	17.17	7.54	0.24	2.17	-0.6	1.21	37.29	9.14	28.3	1.64	1.93	0.25	0.75	1.36	0	11.42	12492.05	21.39	7.97	246638973.12	Consumo Cíclico	Tecidos. Vestuário e Calçados	Fios e Tecidos	10.4	\N
+SLCE3	18.97	SLC AGRICOLA S.A.	14.7	1.72	5.83	0.55	7.94	25.92	18.03	7.16	1.05	2.86	-1.06	0.53	11.73	3.76	13.16	0.63	2.13	0.32	0.66	1.67	-0.32	26.43	44480994.9	11.15	1.31	8489764061.4	Consumo não Cíclico	Agropecuária	Agricultura	8.74	4.6
+ALUP4	10.43	ALUPAR INVESTIMENTO S/A	13.83	1.3	4.23	0.34	8	75.41	71.12	21.74	3.01	4.42	-0.43	0.11	9.42	2.49	8.82	1.15	3.74	0.26	0.62	1.67	993.5	11.95	152944	8.02	0.76	10018755066.17	Utilidade Pública	Energia Elétrica	Energia Elétrica	13.18	3.92
+NINJ3	4.5	GETNINJAS S.A.	27.34	0.84	-9.07	0.79	1.45	87.66	-41.91	13.91	3.8	0.86	-25.23	0.21	3.07	2.89	-9.38	-0.98	10.57	0.94	0.06	17.48	-0.17	35.82	164999.68	5.57	0.17	239021865.2	Tecnologia da Informação	Programas e Serviços	Programas e Serviços	\N	\N
+AZUL4	8.98	AZUL S.A.	5.41	-0.49	4.78	0.52	12.76	21.52	12.23	10.81	0.58	-1.15	-0.68	0.9	-9.06	9.7	43.38	\N	11.44	-1.07	2.07	0.34	-0.04	15.18	110289103.23	-17.69	1.6	3025310501.96	Bens Industriais	Transporte	Transporte Aéreo	36.99	\N
+SEQL3	4.85	SEQUOIA LOGISTICA E TRANSPORTES S.A	-0.11	0.8	-0.13	0.06	-1.11	-11.65	-94.43	-110.4	0.13	-0.2	-0.08	0.48	-699.37	-52.67	-99.53	5.85	-0.98	0.08	0.92	0.42	0	15.49	1930252.48	5.87	-41.03	94185833.3	Bens Industriais	Transporte	Logística	\N	\N
+KLBN4	4.26	KLABIN S.A.	13.15	2.27	7.08	0.45	13.03	34.78	20.6	11.1	1.46	2.23	-0.66	0.31	17.29	3.44	6.21	1.91	5.96	0.2	0.76	2.79	-0.23	12.47	6415088.55	1.83	0.32	25670399156.77	Materiais Básicos	Madeira e Papel	Papel e Celulose	70.07	5.58
+MILS3	11.38	MILLS ESTRUTURAS E SERVIÇOS DE ENGENHARIA S.A.	10.07	1.86	5.94	0.92	6.91	63.36	33.63	19.85	2	3.83	-1.52	0.46	18.47	9.12	13.46	0.3	0.97	0.49	0.51	2.55	0.66	35.27	11305431.65	6.19	1.14	2805292002.6	Bens Industriais	Serviços	Serviços Diversos	\N	2.79
+CCRO3	12.84	CCR S.A.	17.21	2	4.42	0.46	8.56	43.39	33.39	8.57	1.47	6.49	-0.58	0.31	11.61	2.64	10.31	1.88	4.15	0.23	0.76	1.47	-0.27	12.68	91888493.74	6.36	0.74	25674200000	Bens Industriais	Transporte	Exploração de Rodovias	-3.66	3.33
 SPRI5	8.52	SPRINGER S.A.	-1.3	0.96	-1.18	0.93	-2.46	\N	\N	\N	\N	1.81	-1.93	0	-73.82	-71.18	-81.66	-0.14	0.17	0.96	0.04	66.47	0	\N	\N	8.86	-6.54	48073731.88	\N	\N	\N	\N	\N
-TASA3	11.22	TAURUS ARMAS S.A.	10.42	1.26	6.52	0.65	7.66	33.77	12.27	7.67	0.8	3.83	-1.46	0.82	12.09	6.26	10.42	0.25	1.28	0.52	0.48	1.45	-0.17	16.08	188018.26	8.91	1.08	1391168375.08	Bens Industriais	Máquinas e Equipamentos	Armas e Munições	\N	3.6
-KEPL3	9.05	KEPLER WEBER S.A.	6.38	2.09	5.2	1.16	4.72	29.87	19.92	16.26	1.04	3.72	-3.32	1.12	32.72	18.15	25.77	-0.19	-0.48	0.55	0.45	1.92	-0.26	21.28	8560549.8	4.34	1.42	1626467176.5	Bens Industriais	Máquinas e Equipamentos	Máq. e Equip. Industriais	98.56	9.37
+TASA3	12.62	TAURUS ARMAS S.A.	11.8	1.43	7.37	0.74	8.61	33.77	12.27	7.67	0.9	4.33	-1.65	0.82	12.09	6.26	10.42	0.25	1.28	0.52	0.48	1.45	-0.19	16.08	133635.55	8.91	1.08	1599353100.7	Bens Industriais	Máquinas e Equipamentos	Armas e Munições	\N	3.18
+KEPL3	10.07	KEPLER WEBER S.A.	6.95	2.27	5.67	1.26	5.17	29.87	19.92	16.26	1.13	4.05	-3.62	1.12	32.72	18.15	25.77	-0.19	-0.48	0.55	0.45	1.92	-0.28	21.28	9549432.58	4.34	1.42	1766648877.9	Bens Industriais	Máquinas e Equipamentos	Máq. e Equip. Industriais	98.56	10.31
 DMMO3	1.76	DOMMO ENERGIA S.A.	-258.65	-1.88	34.96	2.76	32.11	54.54	8.16	-1.1	2.85	9.24	-6.66	0.97	-0.73	-1.07	-5.39	\N	-2.85	-1.47	2.47	2.04	2.52	-1.34	\N	-0.93	-0.01	949254731.04	Petróleo. Gás e Biocombustíveis	Petróleo. Gás e Biocombustíveis	Exploração. Refino e Distribuição	\N	\N
 BOAS3	7.95	BOA VISTA SERVIÇOS S.A.	15.22	1.83	25.6	1.7	18.69	56.53	19.25	32.39	4.93	3.34	-3.8	0.34	12.04	11.16	4.65	-0.5	-6.92	0.93	0.07	12.37	5.59	8.81	53310276.5	4.34	0.52	4212250617.75	Financeiro e Outros	Serviços Financeiros Diversos	Serviços Financeiros Diversos	74.34	\N
-CYRE3	18.6	CYRELA BRAZIL REALTY S.A.EMPREEND E PART	7.11	0.93	5.78	0.43	7.61	32.75	19.67	15.99	1.14	1.13	-0.95	0.37	13.1	5.99	8.21	0.3	1.84	0.46	0.5	3.14	0.25	14.72	103206981.97	19.98	2.62	7435216061.4	Consumo Cíclico	Construção Civil	Incorporações	\N	5
-UGPA3	21.51	ULTRAPAR PARTICIPACOES S.A.	13.54	1.74	6.45	0.66	9.24	6.76	3.02	1.44	0.2	3.58	-1.2	3.36	12.82	4.84	10.31	0.75	2.79	0.38	0.61	1.68	-8.53	12.42	110453807.94	12.4	1.59	23992345804.68	Petróleo. Gás e Biocombustíveis	Petróleo. Gás e Biocombustíveis	Exploração. Refino e Distribuição	2.4	1.16
-IGTI4	8.49	JEREISSATI PARTICIPACOES S.A.	30.6	2.44	16.12	1.33	10.74	65.27	54.82	28.88	8.84	9.71	-1.77	0.15	7.98	4.36	7.75	0.41	2.73	0.55	0.45	2.26	0.08	9.87	8335.68	3.48	0.28	5139561723.8	Financeiro e Outros	Exploração de Imóveis	Exploração de Imóveis	25.13	3.4
+CYRE3	20.5	CYRELA BRAZIL REALTY S.A.EMPREEND E PART	7.8	1.02	6.34	0.47	8.17	32.75	19.67	15.99	1.25	1.24	-1.04	0.37	13.1	5.99	8.21	0.3	1.84	0.46	0.5	3.14	0.27	14.72	116603979.58	19.98	2.62	8154753099.6	Consumo Cíclico	Construção Civil	Incorporações	\N	4.56
+UGPA3	22.41	ULTRAPAR PARTICIPACOES S.A.	14.32	1.84	6.83	0.69	9.71	6.76	3.02	1.44	0.21	3.79	-1.27	3.36	12.82	4.84	10.31	0.75	2.79	0.38	0.61	1.68	-9.03	12.42	85560366.2	12.4	1.59	25732376462.76	Petróleo. Gás e Biocombustíveis	Petróleo. Gás e Biocombustíveis	Exploração. Refino e Distribuição	2.4	1.1
+IGTI4	9.63	JEREISSATI PARTICIPACOES S.A.	34.81	2.78	18.34	1.52	11.75	65.27	54.82	28.88	10.06	11.04	-2.01	0.15	7.98	4.36	7.75	0.41	2.73	0.55	0.45	2.26	0.1	9.87	5595.55	3.48	0.28	5786628847.3	Financeiro e Outros	Exploração de Imóveis	Exploração de Imóveis	25.13	2.99
 FIGE3	11.99	INVESTIMENTOS BEMGE S.A.	2.48	0.17	1.66	0.17	0.55	100	92.3	61.71	1.53	14171.8	-0.17	0.11	7.03	6.91	\N	\N	\N	0.98	0.02	\N	0.18	8.36	\N	68.86	4.84	9497566.76	Financeiro e Outros	Outros	Outros	1.66	0.38
-MODL3	3.08	BANCO MODAL S.A	-29.78	1.82	-31.96	0.29	-29.26	50.83	-5.11	-5.48	1.63	\N	-0.32	0.18	-6.1	-0.97	\N	\N	\N	0.16	0.84	\N	0.19	\N	18194928.05	1.7	-0.1	1985844000	Financeiro e Outros	Intermediários Financeiros	Bancos	\N	\N
-OFSA3	18.7	OURO FINO SAUDE ANIMAL PARTICIPACOES S.A.	-29.92	1.44	8.94	0.78	9.57	46.34	11.83	-3.53	1.06	1.7	-2.19	0.74	-4.8	-2.61	-0.37	0.1	0.64	0.54	0.46	3.48	0.23	9.87	60309.68	13.03	-0.63	1008846412.2	Saúde	Comércio e Distribuição	Medicamentos e Outros Produtos	\N	1.8
-PCAR4	72.11	CIA BRASILEIRA DE DISTRIBUICAO	-10.69	7.05	-67.71	1.56	-7.26	-2.94	-307.06	-1944.12	207.92	18.56	-2.4	0.01	-65.89	-14.57	-10.45	0.46	-4.43	0.22	0.78	1.32	0.04	-17.17	\N	10.23	-6.74	1480328074.18	Consumo não Cíclico	Comércio e Distribuição	Alimentos	\N	\N
-FIQE3	3.35	UNIFIQUE TELECOMUNICAÇÕES S.A.	9.08	1.12	5.42	0.61	5.03	46.43	24.85	14.83	1.35	6.02	-0.87	0.46	12.38	6.77	11.91	-0.08	-0.38	0.55	0.45	1.53	3.51	\N	1054128.17	2.98	0.37	1212866190.15	Comunicações	Telecomunicações	Telecomunicações	\N	8.46
-CEEB5	39	CIA ELETRICIDADE EST. DA BAHIA - COELBA	5.78	1.48	2.66	0.36	6.75	31.68	25.46	11.69	0.68	-11.98	-0.45	0.53	25.59	6.19	16.16	1.94	3.47	0.24	0.76	0.87	0.6	10.41	9654.5	26.34	6.74	12633002013.48	Utilidade Pública	Energia Elétrica	Energia Elétrica	22.58	5.74
-MTSA4	41.37	METISA METALURGICA TIMBOENSE S.A.	5.13	0.81	6.28	0.66	6.75	24.25	11.31	13.83	0.71	1.09	-2.94	0.93	15.85	12.82	8.68	-0.29	-2.23	0.81	0.19	4.52	-0.2	16.17	493931.25	50.82	8.06	520252995.5	Bens Industriais	Máquinas e Equipamentos	Máq. e Equip. Construção e Agrícolas	34.09	2.92
-GUAR3	6.38	GUARARAPES CONFECCOES S.A.	130.46	0.62	5.9	0.23	7.64	58.42	6.02	0.27	0.36	0.92	-0.63	0.66	0.48	0.18	5.55	0.18	1.74	0.37	0.63	1.68	-0.84	4.11	14698802.71	10.23	0.05	3184896000	Consumo Cíclico	Comércio	Tecidos. Vestuário e Calçados	-54.38	1.88
+MODL3	3.08	BANCO MODAL S.A	-29.78	1.82	-31.96	0.29	-29.26	50.83	-5.11	-5.48	1.63	\N	-0.32	0.18	-6.1	-0.97	\N	\N	\N	0.16	0.84	\N	0.19	\N	\N	1.7	-0.1	1985844000	Financeiro e Outros	Intermediários Financeiros	Bancos	\N	\N
+OFSA3	19.06	OURO FINO SAUDE ANIMAL PARTICIPACOES S.A.	-30	1.44	8.96	0.78	9.6	46.34	11.83	-3.53	1.06	1.71	-2.2	0.74	-4.8	-2.61	-0.37	0.1	0.64	0.54	0.46	3.48	0.23	9.87	73291.76	13.03	-0.63	1011543862.5	Saúde	Comércio e Distribuição	Medicamentos e Outros Produtos	\N	1.8
+PCAR4	72.11	CIA BRASILEIRA DE DISTRIBUICAO	-10.69	7.05	-67.71	1.56	-7.48	-2.94	-307.06	-1944.12	207.92	18.56	-2.4	0.01	-65.89	-14.57	-10.45	0.46	-4.43	0.22	0.78	1.32	0.04	-17.17	\N	10.23	-6.74	1593068291.75	Consumo não Cíclico	Comércio e Distribuição	Alimentos	\N	\N
+FIQE3	3.41	UNIFIQUE TELECOMUNICAÇÕES S.A.	9.32	1.15	5.56	0.63	5.18	46.43	24.85	14.83	1.38	6.18	-0.9	0.46	12.38	6.77	11.91	-0.08	-0.38	0.55	0.45	1.53	3.61	\N	1604200.71	2.98	0.37	1245450654.96	Comunicações	Telecomunicações	Telecomunicações	\N	8.23
+CEEB5	39	CIA ELETRICIDADE EST. DA BAHIA - COELBA	5.78	1.48	2.66	0.36	6.76	31.68	25.46	11.69	0.68	-11.98	-0.45	0.53	25.59	6.19	16.16	1.94	3.47	0.24	0.76	0.87	0.6	10.41	9654.5	26.34	6.74	12654281678.74	Utilidade Pública	Energia Elétrica	Energia Elétrica	22.58	6.47
+MTSA4	44.5	METISA METALURGICA TIMBOENSE S.A.	5.61	0.89	6.86	0.72	7.06	24.25	11.31	13.83	0.78	1.19	-3.22	0.93	15.85	12.82	8.68	-0.29	-2.23	0.81	0.19	4.52	-0.22	16.17	521395.93	50.82	8.06	538241391.5	Bens Industriais	Máquinas e Equipamentos	Máq. e Equip. Construção e Agrícolas	34.09	2.68
+GUAR3	7.66	GUARARAPES CONFECCOES S.A.	154.18	0.74	6.98	0.28	8.69	58.42	6.02	0.27	0.42	1.09	-0.75	0.66	0.48	0.18	5.55	0.18	1.74	0.37	0.63	1.68	-0.99	4.11	10196186.29	10.23	0.05	3748992000	Consumo Cíclico	Comércio	Tecidos. Vestuário e Calçados	-54.38	1.59
 IGTA3	33	IGUATEMI EMPRESA DE SHOPPING CENTERS S.A	17.15	1.53	9.69	0.93	11.24	64.44	57.37	32.41	5.56	8.23	-1.24	0.17	8.94	5.44	8.67	0.25	1.55	0.61	0.39	1.85	0.02	7.57	\N	21.52	1.92	5758073079	Financeiro e Outros	Exploração de Imóveis	Exploração de Imóveis	5.54	\N
-ALLD3	7.25	ALLIED TECNOLOGIA S.A.	4.35	0.43	3.19	0.2	4.13	11.35	3.59	2.64	0.11	0.62	-0.6	1.7	9.87	4.5	7.72	0.13	0.94	0.46	0.54	1.89	0.04	16.54	858248.83	16.9	1.67	678952654.5	Consumo Cíclico	Comércio	Eletrodomésticos	20.16	21.41
-OIBR3	4.5	OI S.A.	-0.04	-0.01	-0.14	0.01	-11.98	-0.82	-22.86	-74.09	0.03	-0.04	-0.02	0.36	-23.09	-26.56	123.09	\N	-11.83	-1.15	2.15	0.48	0	-15.12	3308085.11	-455.93	-105.26	309991449.8	Comunicações	Telecomunicações	Telecomunicações	\N	\N
-BEES3	8.69	BANESTES S.A. - BCO EST ESPIRITO SANTO	7.92	1.26	5.83	0.06	5.97	28.7	9.18	6.76	0.54	1.2	-0.07	0.12	15.94	0.81	\N	\N	\N	0.05	0.95	\N	0.9	18.84	124234.37	6.88	1.1	2807264761.2	Financeiro e Outros	Intermediários Financeiros	Bancos	17.64	7.63
-JFEN3	1.1	JOAO FORTES ENGENHARIA S.A.	-2.44	-0.36	-3	0.27	-9.61	-40.82	-152.22	-186.99	4.56	-1.02	-1.56	0.06	-14.75	-10.93	42.78	\N	-6.61	-0.74	1.84	0.76	-0.02	-3.21	79790.86	-3.06	-0.45	271011859.8	Consumo Cíclico	Construção Civil	Incorporações	\N	\N
-CEEB3	39.16	CIA ELETRICIDADE EST. DA BAHIA - COELBA	5.81	1.49	2.67	0.36	6.75	31.68	25.46	11.69	0.68	-12.03	-0.45	0.53	25.59	6.19	16.16	1.94	3.47	0.24	0.76	0.87	0.6	10.41	18862.13	26.34	6.74	12633002013.48	Utilidade Pública	Energia Elétrica	Energia Elétrica	22.58	13.17
-RRRP3	25.54	3R PETROLEUM ÓLEO E GÁS S.A	39.13	1.16	3.61	0.3	8.64	31.26	24.1	2.22	0.87	8.21	-0.37	0.35	2.97	0.78	10.73	1.62	5.03	0.26	0.74	1.27	-0.6	178.26	131518875.49	21.96	0.65	6140557758.22	Petróleo. Gás e Biocombustíveis	Petróleo. Gás e Biocombustíveis	Exploração. Refino e Distribuição	\N	1.51
-MRSA3B	29.5	MRS LOGISTICA S.A.	7.28	1.49	3.59	0.56	4.76	48.65	40.56	20.01	1.46	7.77	-0.74	0.39	20.44	7.75	15.82	0.54	1.3	0.38	0.62	1.44	0.15	11.59	16504.78	19.83	4.05	9617527706.38	Bens Industriais	Transporte	Transporte Ferroviário	21.31	\N
+ALLD3	8.01	ALLIED TECNOLOGIA S.A.	4.69	0.46	3.45	0.21	4.41	11.35	3.59	2.64	0.12	0.67	-0.65	1.7	9.87	4.5	7.72	0.13	0.94	0.46	0.54	1.89	0.04	16.54	808464.1	16.9	1.67	738887785.38	Consumo Cíclico	Comércio	Eletrodomésticos	20.16	19.85
+OIBR3	6.33	OI S.A.	-0.06	-0.01	-0.19	0.02	-12.03	-0.82	-22.86	-74.09	0.04	-0.05	-0.02	0.36	-23.09	-26.56	123.09	\N	-11.83	-1.15	2.15	0.48	0	-15.12	5489856.45	-455.93	-105.26	417388669.62	Comunicações	Telecomunicações	Telecomunicações	\N	\N
+BEES3	9.08	BANESTES S.A. - BCO EST ESPIRITO SANTO	8.2	1.31	6.04	0.07	6.23	28.7	9.18	6.76	0.55	1.24	-0.07	0.12	15.94	0.81	\N	\N	\N	0.05	0.95	\N	0.93	18.84	117996.48	6.88	1.1	2930608407.8	Financeiro e Outros	Intermediários Financeiros	Bancos	17.64	7.28
+JFEN3	0.29	JOAO FORTES ENGENHARIA S.A.	-0.78	-0.11	-0.95	0.08	-7.56	-40.82	-152.22	-186.99	1.45	-0.32	-0.5	0.06	-14.75	-10.93	42.78	\N	-6.61	-0.74	1.84	0.76	-0.01	-3.21	327576.47	-3.06	-0.45	86231046.3	Consumo Cíclico	Construção Civil	Incorporações	\N	\N
+CEEB3	40.15	CIA ELETRICIDADE EST. DA BAHIA - COELBA	5.83	1.49	2.68	0.36	6.76	31.68	25.46	11.69	0.68	-12.08	-0.45	0.53	25.59	6.19	16.16	1.94	3.47	0.24	0.76	0.87	0.6	10.41	19175.09	26.34	6.74	12654281678.74	Utilidade Pública	Energia Elétrica	Energia Elétrica	22.58	12.74
+MRSA3B	0	MRS LOGISTICA S.A.	0	0	0	0	2.85	48.65	40.56	20.01	0	0	0	0.39	20.44	7.75	15.82	0.54	1.3	0.38	0.62	1.44	0	11.59	9446.83	19.83	4.05	4296854313	Bens Industriais	Transporte	Transporte Ferroviário	21.31	\N
 CPLE11	50.12	CIA PARANAENSE DE ENERGIA - COPEL	15.64	1.22	8.72	0.54	11.42	21.53	15.88	8.85	1.39	7.79	-0.72	0.39	7.83	3.45	7.72	0.38	2.7	0.44	0.55	1.39	0.22	9.35	12760068.47	40.93	3.2	29899693364.18	Utilidade Pública	Energia Elétrica	Energia Elétrica	13.08	3.28
 CEPE5	40.12	CIA ENERGETICA DE PERNAMBUCO - CELPE	22.01	1.83	2.65	0.21	14.33	20.59	13.21	1.59	0.35	4.91	-0.29	0.59	8.33	0.94	10.35	4.61	6.66	0.11	0.89	1.17	0.34	8.57	\N	21.87	1.82	8662392210.18	Utilidade Pública	Energia Elétrica	Energia Elétrica	3.98	\N
-CRPG5	29.3	TRONOX PIGMENTOS DO BRASIL S.A.	209.68	1.25	-20.75	0.88	-19	-0.97	-7.63	0.76	1.58	1.62	-2.8	0.56	0.6	0.42	-7.75	-0.17	2.79	0.71	0.29	4.9	-2.19	-1.98	75112.69	23.43	0.14	893117726.66	Materiais Básicos	Químicos	Químicos Diversos	-51.79	0.99
 STTR3	0	STARA S.A. - INDÚSTRIA DE IMPLEMENTOS AGRÍCOLAS	0	0	0	0	-0.22	31.37	17.25	14.11	0	0	0	1.27	32.1	17.86	25.38	-0.09	-0.22	0.56	0.44	2.46	0	22.02	\N	2.91	0.94	0	Bens Industriais	Máquinas e Equipamentos	Máq. e Equip. Construção e Agrícolas	\N	\N
-SMTO3	32.9	SAO MARTINHO S.A.	11.39	1.76	6.37	0.58	10.79	28.49	28.49	15.93	1.81	2.94	-0.86	0.32	15.45	5.13	10.75	1.22	4.42	0.33	0.67	2.6	-1.4	14.04	48939259.49	18.71	2.89	11395739671.4	Consumo não Cíclico	Alimentos Processados	Açucar e Alcool	15.27	3.77
+CRPG5	29.67	TRONOX PIGMENTOS DO BRASIL S.A.	207.75	1.24	-20.56	0.88	-18.87	-0.97	-7.63	0.76	1.57	1.61	-2.78	0.56	0.6	0.42	-7.75	-0.17	2.79	0.71	0.29	4.9	-2.17	-1.98	65697.96	23.43	0.14	888025432.43	Materiais Básicos	Químicos	Químicos Diversos	-51.79	1
+SMTO3	33.48	SAO MARTINHO S.A.	11.27	1.74	6.3	0.58	10.73	28.49	28.49	15.93	1.8	2.91	-0.85	0.32	15.45	5.13	10.75	1.22	4.42	0.33	0.67	2.6	-1.39	14.04	62075943.07	18.71	2.89	11291827151.6	Consumo não Cíclico	Alimentos Processados	Açucar e Alcool	15.27	3.81
 TIET11	12.54	AES TIETE ENERGIA SA	4.38	2.25	3.51	0.46	7.15	74.66	61.76	49.46	2.16	1031.49	-0.52	0.21	51.45	10.47	13.16	2.34	3.64	0.2	0.72	1	0.02	-5.19	\N	5.57	2.87	5004795800.93	Utilidade Pública	Energia Elétrica	Energia Elétrica	23.78	\N
 CSAB3	30.5	CIA SEGUROS ALIANCA DA BAHIA	12.39	1.11	18.86	0.57	24.57	-124	1656.27	2521.73	312.32	3.54	-0.71	0	8.94	4.57	\N	\N	\N	0.51	0.49	4.45	-0.02	-33.4	3075	27.56	2.46	305164800	Financeiro e Outros	Previdência e Seguros	Seguradoras	-1.31	\N
-KLBN3	4.13	KLABIN S.A.	13.05	2.26	7.03	0.45	12.96	34.78	20.6	11.1	1.45	2.21	-0.66	0.31	17.29	3.44	6.21	1.91	5.96	0.2	0.76	2.79	-0.23	12.47	1669090.91	1.83	0.32	25410852511.47	Materiais Básicos	Madeira e Papel	Papel e Celulose	70.07	5.62
-DOTZ3	6.95	Dotz S.A.	-1.67	-0.38	-2.15	0.38	-2.87	84.82	-29.7	-38.16	0.64	-0.47	-0.63	0.6	-22.96	-22.73	29.23	\N	-0.72	-0.99	1.99	0.33	0.04	1.78	106775.83	-18.07	-4.15	92323216.2	Tecnologia da Informação	Programas e Serviços	Programas e Serviços	\N	\N
+KLBN3	4.26	KLABIN S.A.	13.24	2.29	7.13	0.46	13.03	34.78	20.6	11.1	1.47	2.25	-0.67	0.31	17.29	3.44	6.21	1.91	5.96	0.2	0.76	2.79	-0.23	12.47	1426833.13	1.83	0.32	25670399156.77	Materiais Básicos	Madeira e Papel	Papel e Celulose	70.07	5.54
+BRBI11	14.5	BR ADVISORY PARTNERS PARTICIPAÇÕES S.A.	8.84	1.83	61.17	0.14	12.37	100	8.88	61.44	5.43	2.04	-18.19	0.02	20.74	1.53	-0.2	-1.46	-48.8	0.07	0.93	1.07	0.4	-16.03	3996307.61	7.87	1.63	1515088008.72	Financeiro e Outros	Intermediários Financeiros	Bancos	27.88	9.15
 GNDI3	66.95	NOTRE DAME INTERMEDICA PARTICIPACOES SA	-3584.81	5.84	104.45	2.38	109.34	18.55	3.28	-0.1	3.42	79.65	-3.01	0.69	-0.16	-0.07	2.22	0.27	4.9	0.41	0.59	1.17	35.34	29.03	\N	11.47	-0.02	41526443086.05	Saúde	Serv.Méd.Hospit..Análises e Diagnósticos	Serv.Méd.Hospit..Análises e Diagnósticos	\N	\N
-BRBI11	13.25	BR ADVISORY PARTNERS PARTICIPAÇÕES S.A.	8.12	1.68	56.17	0.12	7.37	100	8.88	61.44	4.99	1.87	-16.7	0.02	20.74	1.53	-0.2	-1.46	-48.8	0.07	0.93	1.07	0.36	-16.03	3457446	7.87	1.63	1391193078	Financeiro e Outros	Intermediários Financeiros	Bancos	27.88	9.96
-MGLU3	10.65	MAGAZINE LUIZA S.A.	-14.06	0.72	-299.35	0.21	-464.41	28.28	-0.07	-1.52	0.21	1.9	-0.46	0.99	-5.14	-1.5	-5.33	0.4	-165.06	0.29	0.71	1.26	0.61	18.72	248134759.37	14.75	-0.76	7870299391.2	Consumo Cíclico	Comércio	Eletrodomésticos	\N	\N
+DOTZ3	6.55	Dotz S.A.	-1.56	-0.36	-2	0.35	-2.72	84.82	-29.7	-38.16	0.59	-0.44	-0.59	0.6	-22.96	-22.73	29.23	\N	-0.72	-0.99	1.99	0.33	0.04	1.78	81270.35	-18.07	-4.15	85814097.36	Tecnologia da Informação	Programas e Serviços	Programas e Serviços	\N	\N
 BRML3	8.26	BR MALLS PARTICIPACOES S.A.	2.81	0.52	1.83	0.33	2.23	89.21	238.54	155.2	4.36	-8.14	-0.35	0.08	18.61	11.7	17.24	0.12	0.41	0.63	0.37	0.65	0.01	5.4	\N	15.81	2.94	6841542281.84	Financeiro e Outros	Exploração de Imóveis	Exploração de Imóveis	19.17	\N
-RSUL4	65	METALURGICA RIOSULENSE S.A.	7.18	1.93	4.61	1.02	1.22	42.74	24.47	15.7	1.13	3.37	-2.25	0.9	26.89	14.15	26.27	-0.28	-0.68	0.53	0.47	2.23	-0.37	18.65	70343.41	33.65	9.05	162189625	Bens Industriais	Material de Transporte	Material Rodoviário	35.49	3.27
-SNSY6	13.33	SANSUY S.A. INDUSTRIA DE PLASTICOS	-0.73	-0.05	1.82	0.2	4.38	26.81	6.34	-15.81	0.12	12.03	-0.46	1.7	-7.13	-26.86	-3.04	\N	2.67	-3.77	4.81	1.03	0.01	15.95	\N	-257.12	-18.32	96932450.4	Materiais Básicos	Materiais Diversos	Materiais Diversos	\N	\N
-PCAR3	3.02	CIA BRASILEIRA DE DISTRIBUICAO	-0.45	0.3	-2.84	0.07	-7.26	-2.94	-307.06	-1944.12	8.71	0.78	-0.1	0.01	-65.89	-14.57	-10.45	0.46	-4.43	0.22	0.78	1.32	0	-17.17	36864255.31	10.23	-6.74	1480328074.18	Consumo não Cíclico	Comércio e Distribuição	Alimentos	\N	\N
-BTTL4	11091.73	EMBPAR PARTICIPACOES S.A.	-7449.92	2047.93	11329.26	1664.47	6.13	14.78	5.43	-8.26	615.64	7650.12	-2264.23	2.7	-27.49	-22.34	13.25	-0.02	-0.09	0.81	0.19	5.6	54.81	4.97	\N	5.42	-1.49	90500859.12	Financeiro e Outros	Holdings Diversificadas	Holdings Diversificadas	\N	\N
-VALE3	61.44	VALE S.A.	7.2	1.49	4.4	0.61	5.26	41.35	30.72	18.78	1.35	30.16	-0.75	0.45	20.68	8.45	18	0.29	0.86	0.41	0.57	1.12	-0.14	15.85	1098743604.69	41.24	8.53	278876625715.2	Materiais Básicos	Mineração	Minerais Metálicos	17.04	11.37
+MGLU3	14.32	MAGAZINE LUIZA S.A.	-18.32	0.94	-390.14	0.28	-553.23	28.28	-0.07	-1.52	0.28	2.47	-0.6	0.99	-5.14	-1.5	-5.33	0.4	-165.06	0.29	0.71	1.26	0.79	18.72	273620657.13	14.75	-0.76	10205524374.88	Consumo Cíclico	Comércio	Eletrodomésticos	\N	\N
+RSUL4	68.59	METALURGICA RIOSULENSE S.A.	7.5	2.02	4.81	1.06	1.3	42.74	24.47	15.7	1.18	3.51	-2.34	0.9	26.89	14.15	26.27	-0.28	-0.68	0.53	0.47	2.23	-0.39	18.65	116616.97	33.65	9.05	169251111.75	Bens Industriais	Material de Transporte	Material Rodoviário	35.49	3.14
+SNSY6	11.51	SANSUY S.A. INDUSTRIA DE PLASTICOS	-0.63	-0.04	1.57	0.17	4.33	26.81	6.34	-15.81	0.1	10.39	-0.4	1.7	-7.13	-26.86	-3.04	\N	2.67	-3.77	4.81	1.03	0.01	15.95	\N	-257.12	-18.32	93839232.8	Materiais Básicos	Materiais Diversos	Materiais Diversos	\N	\N
+BTTL4	11091.73	EMBPAR PARTICIPACOES S.A.	-7449.92	2047.93	11329.26	1664.47	6.34	14.78	5.43	-8.26	615.64	7650.12	-2264.23	2.7	-27.49	-22.34	13.25	-0.02	-0.09	0.81	0.19	5.6	54.81	4.97	\N	5.42	-1.49	93472972.72	Financeiro e Outros	Holdings Diversificadas	Holdings Diversificadas	\N	\N
+PCAR3	3.4	CIA BRASILEIRA DE DISTRIBUICAO	-0.49	0.32	-3.11	0.07	-7.48	-2.94	-307.06	-1944.12	9.54	0.85	-0.11	0.01	-65.89	-14.57	-10.45	0.46	-4.43	0.22	0.78	1.32	0	-17.17	41185842.61	10.23	-6.74	1593068291.75	Consumo não Cíclico	Comércio e Distribuição	Alimentos	\N	\N
+VALE3	63.01	VALE S.A.	7.29	1.51	4.46	0.62	5.31	41.35	30.72	18.78	1.37	30.53	-0.76	0.45	20.68	8.45	18	0.29	0.86	0.41	0.57	1.12	-0.14	15.85	1047298776.9	41.24	8.53	282280881400.2	Materiais Básicos	Mineração	Minerais Metálicos	17.04	11.24
 ADHM3	1.56	ADVANCED DIGITAL HEALTH MEDICINA PREVENTIVA S.A.	-4.09	-1.29	-5.69	105.12	-5.69	100	-13548.48	-18860.61	770.9	-1.43	-116.16	0.14	-31.47	-2571.9	22.61	\N	0	-81.72	82.72	0	-0.58	\N	\N	-1.21	-0.38	25439770.2	Saúde	Serv.Méd.Hospit..Análises e Diagnósticos	Serv.Méd.Hospit..Análises e Diagnósticos	\N	\N
-BRAP4	18.18	BRADESPAR S.A.	4.86	0.87	5.07	0.86	4.5	\N	\N	\N	\N	10.94	-0.94	0	17.91	17.78	17.15	-0.09	-0.5	0.99	0.01	12.26	-0.08	\N	66284157.66	20.9	3.74	7056802936.1	Materiais Básicos	Mineração	Minerais Metálicos	4.33	16.36
-BRBI3	0	BR ADVISORY PARTNERS PARTICIPAÇÕES S.A.	0	0	0	0	7.37	100	8.88	61.44	0	0	0	0.02	20.74	1.53	-0.2	-1.46	-48.8	0.07	0.93	1.07	0	-16.03	\N	2.62	0.54	1391193078	Financeiro e Outros	Intermediários Financeiros	Bancos	27.88	\N
-SNSY5	6.15	SANSUY S.A. INDUSTRIA DE PLASTICOS	-0.34	-0.02	0.84	0.09	4.38	26.81	6.34	-15.81	0.05	5.55	-0.21	1.7	-7.13	-26.86	-3.04	\N	2.67	-3.77	4.81	1.03	0.01	15.95	14815.47	-257.12	-18.32	96932450.4	Materiais Básicos	Materiais Diversos	Materiais Diversos	\N	\N
-PDGR3	0.18	PDG REALTY S.A. EMPREEND E PARTICIPACOES	0.01	0	-0.03	0.02	-0.37	41.8	-555.54	1358.75	0.15	-0.02	-0.06	0.14	-38.19	193.42	19.97	\N	-0.34	-5.06	6.18	0.42	0	-15.54	643390.51	-42.64	16.28	14001564.78	Consumo Cíclico	Construção Civil	Incorporações	\N	\N
+BRAP4	19.46	BRADESPAR S.A.	5.09	0.91	5.31	0.9	4.75	\N	\N	\N	\N	11.46	-0.99	0	17.91	17.78	17.15	-0.09	-0.5	0.99	0.01	12.26	-0.09	\N	52288782.1	20.9	3.74	7407285111.52	Materiais Básicos	Mineração	Minerais Metálicos	4.33	15.62
+BRBI3	0	BR ADVISORY PARTNERS PARTICIPAÇÕES S.A.	0	0	0	0	12.37	100	8.88	61.44	0	0	0	0.02	20.74	1.53	-0.2	-1.46	-48.8	0.07	0.93	1.07	0	-16.03	\N	2.62	0.54	1515088008.72	Financeiro e Outros	Intermediários Financeiros	Bancos	27.88	\N
 FBMC3	0	FIBAM COMPANHIA INDUSTRIAL	0	0	0	0	-0.74	-60.76	-92.67	-101.97	0	0	0	0.36	-24.19	-36.57	25.82	\N	-0.67	-1.51	2.51	0.31	0	-18.14	\N	-87.48	-21.16	904253.84	Materiais Básicos	Siderurgia e Metalurgia	Artefatos de Ferro e Aço	\N	\N
-DOHL3	10.5	DOHLER S.A.	-59.96	1.14	-130.38	0.82	-121.18	21.7	-1.04	-2.26	1.36	1.8	-1.85	0.6	-1.9	-1.37	-1.54	0.11	-13.05	0.72	0.28	5.61	0.01	5.16	2264.5	9.23	-0.18	658739716.5	Consumo Cíclico	Tecidos. Vestuário e Calçados	Fios e Tecidos	\N	\N
-RAIZ4	2.76	RAIZEN S.A.	54.87	1.27	3.6	0.23	9.03	7.13	3.6	0.24	0.13	7.22	-0.43	1.76	2.32	0.41	9.35	1.92	5.43	0.18	0.82	1.07	-0.7	\N	43569068.06	2.17	0.05	28572926175.84	Petróleo. Gás e Biocombustíveis	Petróleo. Gás e Biocombustíveis	Exploração. Refino e Distribuição	\N	7.02
+PDGR3	0.19	PDG REALTY S.A. EMPREEND E PARTICIPACOES	0.01	0	-0.03	0.02	-0.37	41.8	-555.54	1358.75	0.16	-0.03	-0.07	0.14	-38.19	193.42	19.97	\N	-0.34	-5.06	6.18	0.42	0	-15.54	557683.7	-42.64	16.28	14001564.78	Consumo Cíclico	Construção Civil	Incorporações	\N	\N
+SNSY5	5.48	SANSUY S.A. INDUSTRIA DE PLASTICOS	-0.33	-0.02	0.82	0.09	4.33	26.81	6.34	-15.81	0.05	5.45	-0.21	1.7	-7.13	-26.86	-3.04	\N	2.67	-3.77	4.81	1.03	0.01	15.95	12808.39	-257.12	-18.32	93839232.8	Materiais Básicos	Materiais Diversos	Materiais Diversos	\N	\N
 SQIA3	27.37	SINQIA S.A.	-110.33	3.7	55.72	1.49	60.18	42.19	6.45	-3.26	3.59	25.87	-1.84	0.41	-3.35	-1.35	3.18	0.3	4.46	0.4	0.58	1.43	0.44	35.51	39651585	7.4	-0.25	2406971773.64	Tecnologia da Informação	Programas e Serviços	Programas e Serviços	\N	\N
-SOND5	54.95	SONDOTECNICA ENGENHARIA SOLOS S.A.	26.37	2.33	10.52	1.4	7.65	32.23	7.82	3.12	0.82	3.82	-4	1.7	8.83	5.31	7.43	-0.5	-2.28	0.6	0.4	2.29	-0.41	27.24	9809.6	23.6	2.08	127408965	Bens Industriais	Construção e Engenharia	Engenharia Consultiva	-5.98	\N
+RAIZ4	3.09	RAIZEN S.A.	59.84	1.39	3.93	0.25	9.35	7.13	3.6	0.24	0.14	7.87	-0.47	1.76	2.32	0.41	9.35	1.92	5.43	0.18	0.82	1.07	-0.76	\N	42889102	2.17	0.05	31057528452	Petróleo. Gás e Biocombustíveis	Petróleo. Gás e Biocombustíveis	Exploração. Refino e Distribuição	\N	6.43
+DOHL3	10.17	DOHLER S.A.	-58.07	1.1	-126.28	0.8	-118.03	21.7	-1.04	-2.26	1.31	1.74	-1.79	0.6	-1.9	-1.37	-1.54	0.11	-13.05	0.72	0.28	5.61	0.01	5.16	3126.6	9.23	-0.18	639494688	Consumo Cíclico	Tecidos. Vestuário e Calçados	Fios e Tecidos	\N	\N
 LTEL3B	86.61	LITEL PARTICIPACOES S.A.	23.9	5.55	24.15	5.24	23.88	\N	\N	\N	\N	692.06	-5.6	0	23.23	21.92	22.97	-0.06	-0.27	0.94	0.06	1.13	-0.48	\N	\N	15.6	3.62	18664056853.83	Materiais Básicos	Mineração	Minerais Metálicos	-31.36	1.4
 PARD3	20.25	INSTITUTO HERMES PARDINI S.A.	36.76	5.3	19.27	2.1	19.93	26.45	13.31	6.98	2.57	-54.06	-3.28	0.82	14.42	5.7	14.8	0.18	0.66	0.4	0.6	0.9	-1.04	13.44	\N	3.82	0.55	5403493010.25	Saúde	Serv.Méd.Hospit..Análises e Diagnósticos	Serv.Méd.Hospit..Análises e Diagnósticos	2.56	\N
-ETER3	5.73	ETERNIT S.A.	3.36	0.5	7.31	0.28	9.5	23.89	4.4	9.59	0.32	1.13	-0.55	0.88	14.84	8.44	-2.27	0.15	2.19	0.57	0.43	2.07	-0.33	16.03	1297812.69	11.5	1.71	353979774.75	Bens Industriais	Construção e Engenharia	Produtos para Construção	\N	4.5
-VIVT3	44.57	TELEFÔNICA BRASIL S.A	17.02	1.07	9.61	0.59	11.14	43.43	14.73	8.32	1.42	308.32	-0.73	0.42	6.3	3.49	7.85	0.17	1.54	0.55	0.45	1.01	-0.75	3.69	130205310.86	41.55	2.62	73655863205.2	Comunicações	Telecomunicações	Telecomunicações	-13.48	3.46
-ENJU3	2.11	ENJOEI.COM.BR ATIVIDADES DE INTERNET S.A.	-7.95	1.29	-5.8	0.96	-2.69	51.91	-33.48	-24.42	1.94	2.26	-2.42	0.5	-16.2	-12.1	-22.39	-0.69	3.11	0.75	0.25	3.4	-0.38	37.91	3640687.43	1.64	-0.27	427550540.68	Tecnologia da Informação	Programas e Serviços	Programas e Serviços	\N	\N
-EKTR4	38.64	ELEKTRO REDES S.A.	7.57	2.31	3.67	0.65	5.97	28.36	22.9	11.09	0.84	11.03	-0.95	0.77	30.57	8.53	17.63	1.46	2.31	0.28	0.72	1.23	-1.06	6.85	39965.17	16.7	5.1	7491452048.2	Utilidade Pública	Energia Elétrica	Energia Elétrica	19.01	24.84
+ETER3	6.29	ETERNIT S.A.	3.68	0.55	8.01	0.31	10.13	23.89	4.4	9.59	0.35	1.24	-0.6	0.88	14.84	8.44	-2.27	0.15	2.19	0.57	0.43	2.07	-0.36	16.03	974461.65	11.5	1.71	384250296.5	Bens Industriais	Construção e Engenharia	Produtos para Construção	\N	4.11
+VIVT3	49	TELEFÔNICA BRASIL S.A	17.95	1.13	10.14	0.63	11.64	43.43	14.73	8.32	1.49	325.2	-0.77	0.42	6.3	3.49	7.85	0.17	1.54	0.55	0.45	1.01	-0.79	3.69	108776931	41.55	2.62	77440290549.6	Comunicações	Telecomunicações	Telecomunicações	-13.48	3.51
+ENJU3	2.07	ENJOEI.COM.BR ATIVIDADES DE INTERNET S.A.	-8.25	1.34	-6.02	1	-2.91	51.91	-33.48	-24.42	2.02	2.35	-2.52	0.5	-16.2	-12.1	-22.39	-0.69	3.11	0.75	0.25	3.4	-0.39	37.91	2460398.29	1.64	-0.27	443760987.72	Tecnologia da Informação	Programas e Serviços	Programas e Serviços	\N	\N
+EKTR4	39.55	ELEKTRO REDES S.A.	7.73	2.36	3.74	0.66	6.01	28.36	22.9	11.09	0.86	11.26	-0.96	0.77	30.57	8.53	17.63	1.46	2.31	0.28	0.72	1.23	-1.08	6.85	41944.5	16.7	5.1	7573973465.53	Utilidade Pública	Energia Elétrica	Energia Elétrica	19.01	23.24
+ARML3	10.35	ARMAC LOCAÇÃO. LOGÍSTICA E SERVIÇOS S.A.	20.1	3.01	7.71	0.81	10.76	45.75	33.99	13.05	2.62	3.46	-1.35	0.31	14.96	4.03	10.82	1.21	3.1	0.27	0.73	2.4	0.73	\N	7023096.81	3.67	0.55	3794110362.15	Bens Industriais	Máquinas e Equipamentos	Máq. e Equip. Industriais	\N	2.2
 TCNO4	0.85	TECNOSOLO ENGENHARIA S.A.	-5.33	-5.95	-4.82	0.02	-34.51	\N	\N	\N	\N	-0.06	-0.03	0	-111.63	-0.45	-3.55	\N	-28.98	0	1	0.28	-0.2	\N	\N	-0.14	-0.16	6451072.5	Bens Industriais	Construção e Engenharia	Engenharia Consultiva	\N	\N
-ARML3	9.77	ARMAC LOCAÇÃO. LOGÍSTICA E SERVIÇOS S.A.	17.8	2.66	6.83	0.72	9.94	45.75	33.99	13.05	2.32	3.06	-1.2	0.31	14.96	4.03	10.82	1.21	3.1	0.27	0.73	2.4	0.65	\N	8568138.09	3.67	0.55	3385247327.69	Bens Industriais	Máquinas e Equipamentos	Máq. e Equip. Industriais	\N	0.71
-SOND6	55	SONDOTECNICA ENGENHARIA SOLOS S.A.	26.4	2.33	10.53	1.4	7.65	32.23	7.82	3.12	0.82	3.82	-4	1.7	8.83	5.31	7.43	-0.5	-2.28	0.6	0.4	2.29	-0.41	27.24	5500	23.6	2.08	127408965	Bens Industriais	Construção e Engenharia	Engenharia Consultiva	-5.98	\N
+SOND6	0	SONDOTECNICA ENGENHARIA SOLOS S.A.	0	0	0	0	0.79	32.23	7.82	3.12	0	0	0	1.7	8.83	5.31	7.43	-0.5	-2.28	0.6	0.4	2.29	0	27.24	5500	23.6	2.08	39384560	Bens Industriais	Construção e Engenharia	Engenharia Consultiva	-5.98	\N
 ECPR3	90.25	EMPRESA NAC COM REDITO PART S.A.ENCORPAR	-9.87	1.21	-17.12	0.62	-17.09	\N	\N	\N	\N	174.62	-0.62	0	-12.28	-6.29	-7.36	-0.01	0.08	0.51	0.49	2.97	0.14	\N	\N	74.46	-9.14	171908947.31	Consumo Cíclico	Tecidos. Vestuário e Calçados	Fios e Tecidos	\N	\N
-RNEW4	0.92	RENOVA ENERGIA S.A.	-8.59	0.26	1.3	0.08	7.46	72.96	86.11	-13.07	1.12	-0.63	-0.08	0.07	-3.07	-0.91	5.93	1.24	6.16	0.3	0.7	0.23	0.08	-20.33	102137.54	3.49	-0.11	228693626.33	Utilidade Pública	Energia Elétrica	Energia Elétrica	\N	\N
-IFCM3	0.33	INFRACOMMERCE CXAAS S.A.	-0.69	0.14	-3.85	0.07	-13.58	38.91	-5.07	-28.34	0.2	2.53	-0.09	0.34	-19.88	-9.55	-2.59	0.35	-9.73	0.48	0.52	1.1	-0.1	60.53	5518500.57	2.41	-0.48	210369511.44	Tecnologia da Informação	Programas e Serviços	Programas e Serviços	\N	\N
-AERI3	5.15	AERIS IND. E COM. DE EQUIP. GERACAO DE ENERGIA S.A	-1.96	0.29	2.08	0.09	7.1	10.43	5.72	-6.07	0.12	0.37	-0.25	0.78	-14.91	-4.71	4.85	0.71	5.03	0.32	0.68	1.64	-0.02	34.34	1854159	17.66	-2.63	319919009.4	Bens Industriais	Máquinas e Equipamentos	Máq. e Equip. Industriais	\N	\N
-HETA3	96	HERCULES S.A. FABRICA DE TALHERES	-58.01	-0.14	21.26	3.55	148.88	100	58.57	-21.46	12.45	-41.35	-4.74	0.28	-0.24	-6.11	-8.35	\N	140.94	-25.46	26.46	0.75	0.58	20.28	\N	-689.47	-1.65	18281473.45	Consumo Cíclico	Utilidades Domésticas	Utensílios Domésticos	\N	\N
-BMEB4	25.7	BCO MERCANTIL DO BRASIL S.A.	5.52	1.61	4.27	0.13	4.22	55.98	12.65	9.78	0.54	0.91	-0.15	0.24	29.16	2.35	\N	\N	\N	0.08	0.92	\N	0.04	15.64	477245.97	15.96	4.65	2661593734	Financeiro e Outros	Intermediários Financeiros	Bancos	53.7	5.13
+RNEW4	0.91	RENOVA ENERGIA S.A.	-8.5	0.26	1.29	0.08	7.45	72.96	86.11	-13.07	1.11	-0.62	-0.08	0.07	-3.07	-0.91	5.93	1.24	6.16	0.3	0.7	0.23	0.08	-20.33	81542.77	3.49	-0.11	227030399.96	Utilidade Pública	Energia Elétrica	Energia Elétrica	\N	\N
+IFCM3	0.42	INFRACOMMERCE CXAAS S.A.	-0.96	0.19	-5.37	0.09	-14.98	38.91	-5.07	-28.34	0.27	3.53	-0.13	0.34	-19.88	-9.55	-2.59	0.35	-9.73	0.48	0.52	1.1	-0.14	60.53	3725975.61	2.41	-0.48	286867515.6	Tecnologia da Informação	Programas e Serviços	Programas e Serviços	\N	\N
+AERI3	6.93	AERIS IND. E COM. DE EQUIP. GERACAO DE ENERGIA S.A	-2.62	0.39	2.78	0.12	7.8	10.43	5.72	-6.07	0.16	0.5	-0.33	0.78	-14.91	-4.71	4.85	0.71	5.03	0.32	0.68	1.64	-0.02	34.34	1633671.1	17.66	-2.63	427386948.48	Bens Industriais	Máquinas e Equipamentos	Máq. e Equip. Industriais	\N	\N
+BMEB4	29.56	BCO MERCANTIL DO BRASIL S.A.	6.34	1.85	4.91	0.15	4.61	55.98	12.65	9.78	0.62	1.05	-0.17	0.24	29.16	2.35	\N	\N	\N	0.08	0.92	\N	0.04	15.64	294492.23	15.96	4.65	2908934371.2	Financeiro e Outros	Intermediários Financeiros	Bancos	53.7	4.47
+HETA3	96	HERCULES S.A. FABRICA DE TALHERES	-58.01	-0.14	21.26	3.55	148.85	100	58.57	-21.46	12.45	-41.35	-4.74	0.28	-0.24	-6.11	-8.35	\N	140.94	-25.46	26.46	0.75	0.58	20.28	\N	-689.47	-1.65	18227265.29	Consumo Cíclico	Utilidades Domésticas	Utensílios Domésticos	\N	\N
 FIBR3	66.3	FIBRIA CELULOSE S.A.	12.03	2.59	5.46	0.9	7.63	45.77	36.8	16.71	2.01	9.59	-1.28	0.45	21.57	7.48	17.1	1.03	2.17	0.35	0.65	1.46	0.07	21.43	\N	25.55	5.51	36712556310.3	\N	\N	\N	\N	\N
-TAEE11	33.52	TRANSMISSORA ALIANÇA DE ENERGIA ELÉTRICA S.A.	8.41	1.64	4.99	0.59	8.74	63.14	68.11	40.38	3.4	16.77	-0.71	0.17	19.46	7	13.55	1.23	3.75	0.36	0.64	1.26	0.92	15.51	83416504.34	20.48	3.99	11547603362.64	Utilidade Pública	Energia Elétrica	Energia Elétrica	5.09	11.09
-ENGI3	13.14	ENERGISA S.A.	12.55	1.97	4.53	0.42	6.52	28.52	22.18	8	1	7.28	-0.58	0.42	15.71	3.38	10.7	1.52	3.49	0.21	0.73	1.28	0.69	12.56	85781.57	6.66	1.05	20156094733.05	Utilidade Pública	Energia Elétrica	Energia Elétrica	15.85	2.59
-NGRD3	0.79	NEOGRID PARTICIPACOES S.A.	-44.1	0.42	-141.44	0.29	-29.91	63.78	-0.5	-1.6	0.71	1.19	-0.48	0.41	-0.95	-0.66	-3.53	-0.33	111.53	0.69	0.31	2.6	0.34	8.67	667419.6	1.88	-0.02	188543240.7	Tecnologia da Informação	Programas e Serviços	Programas e Serviços	\N	0.69
-ENEV3	12.3	ENEVA S.A	-294.86	1.58	7.33	0.45	13.89	37.39	27.6	-0.69	2.02	17.65	-0.52	0.22	-0.54	-0.15	7.19	1.42	6.56	0.29	0.65	1.26	2.54	26.39	87817438.6	7.78	-0.04	19491780123.3	Utilidade Pública	Energia Elétrica	Energia Elétrica	\N	\N
-COGN3	1.61	KROTON EDUCACIONAL S.A.	-5.44	0.26	4.27	0.12	12.76	65.05	11.73	-9.22	0.5	2.53	-0.15	0.24	-4.77	-2.22	1.94	0.51	8.48	0.46	0.49	1.33	-0.27	-0.82	62148082.31	6.21	-0.3	3021335998.1	Consumo Cíclico	Diversos	Serviços Educacionais	\N	\N
-CASH3	5.35	MÉLIUZ S.A.	37.84	0.58	-13.23	0.48	5.99	-11.33	-11.33	3.96	1.5	0.74	-1.96	0.32	1.54	1.26	-4.54	-0.85	19.21	0.82	0.17	6.89	-0.31	48.96	12625980.72	9.18	0.14	465225048.55	Tecnologia da Informação	Programas e Serviços	Programas e Serviços	\N	\N
-MULT3	22.21	MULTIPLAN - EMPREEND IMOBILIARIOS S.A.	12.35	1.88	9.5	1.15	10.92	86.07	67.22	51.72	6.39	21.69	-1.38	0.18	15.24	9.34	12.46	0.28	1.42	0.61	0.39	1.48	0.36	10.55	96764592.17	11.8	1.8	13342899033.75	Financeiro e Outros	Exploração de Imóveis	Exploração de Imóveis	17.96	4.61
-WHRL3	4.49	WHIRLPOOL S.A.	17.41	3.01	5.28	0.75	4.91	16.37	11.01	3.34	0.58	25.98	-2.44	1.29	17.31	4.32	32.24	-0.22	-0.38	0.25	0.75	1.04	2.52	13.15	6854.45	1.49	0.26	6766472571.5	Consumo Cíclico	Comércio	Eletrodomésticos	16.5	7.58
-TRPL4	25.5	CTEEP - CIA TRANSMISSÃO ENERGIA ELÉTRICA PAULISTA	6.14	0.93	4.37	0.44	6.89	55.72	58.05	41.3	2.54	3.67	-0.54	0.17	15.18	7.21	12.57	0.42	1.98	0.47	0.51	3.08	0.57	14.31	83050453.17	27.34	4.15	18877922994.6	Utilidade Pública	Energia Elétrica	Energia Elétrica	7.77	8.64
-AVLL3	3.48	ALPHAVILLE S.A.	-1.43	-8.88	-3.48	0.5	-4.92	36.82	-40.09	-97.66	1.39	-3.62	-0.8	0.36	-621.81	-34.73	-50.61	\N	-1.44	-0.06	1.05	0.73	-0.06	55.58	11986.43	-0.39	-2.44	679748612.28	Consumo Cíclico	Construção Civil	Incorporações	\N	\N
-SBFG3	11.3	GRUPO SBF SA	13.41	1.06	4.98	0.35	9.28	47.18	7.89	2.93	0.39	1.47	-0.72	0.88	7.89	2.59	9.85	0.92	4.31	0.33	0.67	1.84	1.56	25.16	18843056.34	10.69	0.84	2754229953.2	Consumo Cíclico	Comércio	Produtos Diversos	6.91	1.54
+ENGI3	14.83	ENERGISA S.A.	14.56	2.29	5.25	0.49	6.77	28.52	22.18	8	1.16	8.45	-0.67	0.42	15.71	3.38	10.7	1.52	3.49	0.21	0.73	1.28	0.81	12.56	52598.55	6.66	1.05	21790743942.43	Utilidade Pública	Energia Elétrica	Energia Elétrica	15.85	2.23
+TAEE11	35.16	TRANSMISSORA ALIANÇA DE ENERGIA ELÉTRICA S.A.	8.76	1.7	5.19	0.61	8.93	63.14	68.11	40.38	3.54	17.47	-0.74	0.17	19.46	7	13.55	1.23	3.75	0.36	0.64	1.26	0.96	15.51	63573672.9	20.48	3.99	11988561963.6	Utilidade Pública	Energia Elétrica	Energia Elétrica	5.09	10.65
+ENEV3	13.32	ENEVA S.A	-320.75	1.72	7.97	0.49	14.53	37.39	27.6	-0.69	2.2	19.2	-0.56	0.22	-0.54	-0.15	7.19	1.42	6.56	0.29	0.65	1.26	2.77	26.39	70245428.03	7.78	-0.04	21203253499.98	Utilidade Pública	Energia Elétrica	Energia Elétrica	\N	\N
+NGRD3	1.03	NEOGRID PARTICIPACOES S.A.	-52.48	0.5	-168.3	0.35	-56.77	63.78	-0.5	-1.6	0.84	1.41	-0.57	0.41	-0.95	-0.66	-3.53	-0.33	111.53	0.69	0.31	2.6	0.4	8.67	548282.29	1.88	-0.02	224342590.2	Tecnologia da Informação	Programas e Serviços	Programas e Serviços	\N	0.58
+CASH3	5.99	MÉLIUZ S.A.	43.07	0.66	-15.06	0.54	4.16	-11.33	-11.33	3.96	1.71	0.84	-2.23	0.32	1.54	1.26	-4.54	-0.85	19.21	0.82	0.17	6.89	-0.36	48.96	9839597.35	9.18	0.14	529573933.77	Tecnologia da Informação	Programas e Serviços	Programas e Serviços	\N	\N
+COGN3	1.92	KROTON EDUCACIONAL S.A.	-6.31	0.3	4.96	0.14	13.45	65.05	11.73	-9.22	0.58	2.94	-0.17	0.24	-4.77	-2.22	1.94	0.51	8.48	0.46	0.49	1.33	-0.31	-0.82	60540053.63	6.21	-0.3	3509253612.7	Consumo Cíclico	Diversos	Serviços Educacionais	\N	\N
+WHRL3	4.5	WHIRLPOOL S.A.	17.41	3.01	5.28	0.75	4.93	16.37	11.01	3.34	0.58	25.98	-2.44	1.29	17.31	4.32	32.24	-0.22	-0.38	0.25	0.75	1.04	2.52	13.15	5221.26	1.49	0.26	6785435976.06	Consumo Cíclico	Comércio	Eletrodomésticos	16.5	7.58
+TRPL4	25.78	CTEEP - CIA TRANSMISSÃO ENERGIA ELÉTRICA PAULISTA	6.64	1.01	4.72	0.48	7.17	55.72	58.05	41.3	2.74	3.97	-0.58	0.17	15.18	7.21	12.57	0.42	1.98	0.47	0.51	3.08	0.61	14.31	69236230.83	27.34	4.15	19938874988.52	Utilidade Pública	Energia Elétrica	Energia Elétrica	7.77	8
+AVLL3	3.3	ALPHAVILLE S.A.	-1.35	-8.37	-3.28	0.47	-4.72	36.82	-40.09	-97.66	1.31	-3.41	-0.75	0.36	-621.81	-34.73	-50.61	\N	-1.44	-0.06	1.05	0.73	-0.06	55.58	30282.32	-0.39	-2.44	640682600.08	Consumo Cíclico	Construção Civil	Incorporações	\N	\N
 BRPR3	131.17	BR PROPERTIES S.A.	-0.56	0.05	-0.21	0.04	0.06	100	-336.36	-123.98	0.7	1.73	-0.05	0.06	-9.55	-6.86	-29.1	-0.07	0.27	0.72	0.28	1.12	0.01	-7.12	2066991.77	2447.95	-233.75	60919545.44	Financeiro e Outros	Exploração de Imóveis	Exploração de Imóveis	\N	\N
-ENMT3	84.38	ENERGISA MATO GROSSO-DISTRIBUIDORA DE ENERGIA S/A	12.09	4.85	7.94	1.38	8.45	35.23	29.57	19.41	2.35	30.82	-1.89	0.59	40.09	11.41	21.68	1.14	1.87	0.28	0.72	1.2	0.28	11.58	16624	17.41	6.98	15330726156.02	Utilidade Pública	Energia Elétrica	Energia Elétrica	29.05	\N
-CAMB3	10.28	CAMBUCI S.A.	6.01	1.72	4.36	1.19	4.08	48.26	21.89	15.87	0.95	4.37	-2.32	1.24	28.58	19.76	34.86	-0.11	-0.28	0.69	0.31	2.27	1.46	13.16	595577.26	5.98	1.71	434587822.4	Consumo Cíclico	Tecidos. Vestuário e Calçados	Calçados	34.14	1.43
-DMVF3	6.95	D1000 VAREJO FARMA PARTICIPAÇÕES S.A.	14.65	0.4	6.43	0.22	6.22	31.51	2.99	1.32	0.19	5.47	-0.32	1.15	2.75	1.51	5.4	-0.01	-0.21	0.55	0.45	1.15	0.35	332.1	1222014.63	17.23	0.47	351689751.9	Saúde	Comércio e Distribuição	Medicamentos e Outros Produtos	517.16	\N
-CLSC4	70	CENTRAIS ELET DE SANTA CATARINA S.A.	4.73	0.87	3.19	0.22	5.84	16.17	8.12	5.48	0.26	-20.48	-0.3	0.84	18.3	4.59	11.26	0.74	2.72	0.25	0.75	0.96	0.33	6.3	319088.89	80.9	14.8	2641008249.4	Utilidade Pública	Energia Elétrica	Energia Elétrica	28.18	8.81
-HBOR3	2.06	HELBOR EMPREENDIMENTOS S.A.	5.38	0.2	1.14	0.04	7.94	30.11	18.55	3.94	0.21	0.13	-0.11	0.2	3.63	0.81	4.74	1.16	6.8	0.22	0.62	2.35	0.56	15.03	1042702.89	10.56	0.38	275733208.32	Consumo Cíclico	Construção Civil	Incorporações	\N	4.42
-BAHI3	6.7	BAHEMA S.A.	-22.29	1.68	2.28	0.31	3.5	43.98	20.83	-2.13	0.48	-1.52	-0.34	0.66	-7.54	-1.41	32.32	0.9	1.22	0.19	0.81	0.24	0.24	53.65	34445.15	3.98	-0.3	176816899.4	Consumo Cíclico	Diversos	Serviços Educacionais	\N	\N
-PSSA3	29.5	PORTO SEGURO S.A.	7.41	1.53	6.07	0.43	2.28	100	9.4	7.7	0.57	5.47	-1.07	0.75	20.59	5.77	14.21	-0.95	-3.79	0.28	0.72	1.15	0.07	12.7	64679660.77	19.34	3.98	19074288770	Financeiro e Outros	Previdência e Seguros	Seguradoras	14.46	6.12
+SBFG3	13.64	GRUPO SBF SA	15.82	1.25	5.87	0.41	10.21	47.18	7.89	2.93	0.46	1.74	-0.85	0.88	7.89	2.59	9.85	0.92	4.31	0.33	0.67	1.84	1.85	25.16	19533629.9	10.69	0.84	3268515369.24	Consumo Cíclico	Comércio	Produtos Diversos	6.91	1.3
+CAMB3	11.2	CAMBUCI S.A.	6.37	1.82	4.62	1.26	4.33	48.26	21.89	15.87	1.01	4.62	-2.45	1.24	28.58	19.76	34.86	-0.11	-0.28	0.69	0.31	2.27	1.54	13.16	367334.63	5.98	1.71	459952870.4	Consumo Cíclico	Tecidos. Vestuário e Calçados	Calçados	34.14	1.35
+ENMT3	85	ENERGISA MATO GROSSO-DISTRIBUIDORA DE ENERGIA S/A	12.18	4.88	7.99	1.39	9.25	35.23	29.57	19.41	2.36	31.05	-1.9	0.59	40.09	11.41	21.68	1.14	1.87	0.28	0.72	1.2	0.29	11.58	14628.5	17.41	6.98	17175943165	Utilidade Pública	Energia Elétrica	Energia Elétrica	29.05	1.54
+DMVF3	7.87	D1000 VAREJO FARMA PARTICIPAÇÕES S.A.	16.02	0.44	7.04	0.24	6.82	31.51	2.99	1.32	0.21	5.99	-0.35	1.15	2.75	1.51	5.4	-0.01	-0.21	0.55	0.45	1.15	0.38	332.1	491046.45	17.23	0.47	384581599.2	Saúde	Comércio e Distribuição	Medicamentos e Outros Produtos	517.16	\N
+CLSC4	77.68	CENTRAIS ELET DE SANTA CATARINA S.A.	5.24	0.96	3.53	0.24	6.15	16.17	8.12	5.48	0.29	-22.68	-0.34	0.84	18.3	4.59	11.26	0.74	2.72	0.25	0.75	0.96	0.36	6.3	246803	80.9	14.8	2904129493.54	Utilidade Pública	Energia Elétrica	Energia Elétrica	28.18	7.08
+BAHI3	6.65	BAHEMA S.A.	-21.03	1.59	2.15	0.3	3.37	43.98	20.83	-2.13	0.45	-1.44	-0.32	0.66	-7.54	-1.41	32.32	0.9	1.22	0.19	0.81	0.24	0.23	53.65	20835.56	3.98	-0.3	166788478.24	Consumo Cíclico	Diversos	Serviços Educacionais	\N	\N
+HBOR3	2.28	HELBOR EMPREENDIMENTOS S.A.	5.98	0.22	1.27	0.05	8.06	30.11	18.55	3.94	0.24	0.14	-0.12	0.2	3.63	0.81	4.74	1.16	6.8	0.22	0.62	2.35	0.62	15.03	985535.32	10.56	0.38	303841933.44	Consumo Cíclico	Construção Civil	Incorporações	\N	3.97
+PSSA3	30.81	PORTO SEGURO S.A.	7.41	1.53	6.07	0.43	2.28	100	9.4	7.7	0.57	5.47	-1.07	0.75	20.59	5.77	14.21	-0.95	-3.79	0.28	0.72	1.15	0.07	12.7	42412528.47	19.34	3.98	19074288770	Financeiro e Outros	Previdência e Seguros	Seguradoras	14.46	5.2
 SLED4	1.6	SARAIVA S.A. LIVREIROS EDITORES	0.22	-0.04	0.28	0.24	0.95	47.85	73.94	92.71	0.21	-0.1	-0.36	1.15	-18.07	107.04	-15.91	\N	0.65	-5.92	6.92	0.12	-0.01	-45.03	207054.67	-39.57	7.15	16497692.59	Consumo Cíclico	Comércio	Produtos Diversos	\N	\N
-POSI3	8.24	POSITIVO TECNOLOGIA S.A.	3.85	0.71	2.17	0.26	3.6	26.75	12.77	7.19	0.28	0.7	-1.13	0.95	18.4	6.83	17.65	0.47	1.43	0.37	0.63	1.96	0.53	15.01	11415958	11.62	2.14	1168432000	Tecnologia da Informação	Computadores e Equipamentos	Computadores e Equipamentos	\N	5.08
-FLRY3	14.08	FLEURY S.A.	15.09	1.49	7.29	0.67	10.22	28.55	15.85	7.65	1.15	8.37	-0.89	0.58	9.86	4.43	9.82	0.6	2.93	0.45	0.55	1.48	0.23	13.37	34712790.34	9.46	0.93	7704449646.08	Saúde	Serv.Méd.Hospit..Análises e Diagnósticos	Serv.Méd.Hospit..Análises e Diagnósticos	9.75	4.14
-ROMI3	10.17	INDUSTRIAS ROMI S.A.	6.49	0.8	6.35	0.42	9.23	29.1	12.69	12.41	0.81	1.23	-1.09	0.52	12.4	6.46	7.2	0.37	2.89	0.52	0.48	2.25	-0.19	10.54	2047211.09	12.64	1.57	947546496.99	Bens Industriais	Máquinas e Equipamentos	Máq. e Equip. Industriais	11.68	7.32
-RCSL4	1	RECRUSUL S.A.	-4.38	131.5	-8.36	0.52	-13.6	11.6	-7.95	-15.18	0.67	4.47	-0.97	0.78	-3002.48	-11.87	-1592.05	-0.01	0	0	1	1.33	0.1	66.3	544871.34	0.01	-0.23	51763742.12	Bens Industriais	Material de Transporte	Material Rodoviário	\N	\N
-TEKA3	50	TEKA-TECELAGEM KUEHNRICH S.A.	-0.16	-0.01	-3.06	0.02	-70.17	21.92	-2.76	-52.04	0.08	-0.01	-0.02	0.25	-7.35	-13.03	0.61	\N	-67.89	-1.77	2.77	0.04	0.13	14.82	5000	-4189.96	-307.77	18754666	Consumo Cíclico	Tecidos. Vestuário e Calçados	Fios e Tecidos	\N	\N
-TAEE3	11.15	TRANSMISSORA ALIANÇA DE ENERGIA ELÉTRICA S.A.	8.39	1.63	4.98	0.59	8.74	63.14	68.11	40.38	3.39	16.73	-0.71	0.17	19.46	7	13.55	1.23	3.75	0.36	0.64	1.26	0.92	15.51	1428409.91	6.83	1.33	11547603362.64	Utilidade Pública	Energia Elétrica	Energia Elétrica	5.09	11.12
+FLRY3	15.59	FLEURY S.A.	16.58	1.64	8	0.73	10.94	28.55	15.85	7.65	1.27	9.2	-0.97	0.58	9.86	4.43	9.82	0.6	2.93	0.45	0.55	1.48	0.25	13.37	38043085	9.46	0.93	8465045172.22	Saúde	Serv.Méd.Hospit..Análises e Diagnósticos	Serv.Méd.Hospit..Análises e Diagnósticos	9.75	3.76
+POSI3	8.01	POSITIVO TECNOLOGIA S.A.	3.99	0.73	2.25	0.27	3.67	26.75	12.77	7.19	0.29	0.73	-1.17	0.95	18.4	6.83	17.65	0.47	1.43	0.37	0.63	1.96	0.55	15.01	9138388.48	11.62	2.14	1205300000	Tecnologia da Informação	Computadores e Equipamentos	Computadores e Equipamentos	\N	4.9
+TEKA3	42.5	TEKA-TECELAGEM KUEHNRICH S.A.	-0.14	-0.01	-2.6	0.02	-70.05	21.92	-2.76	-52.04	0.07	-0.01	-0.02	0.25	-7.35	-13.03	0.61	\N	-67.89	-1.77	2.77	0.04	0.11	14.82	7125	-4189.96	-307.77	17719914.3	Consumo Cíclico	Tecidos. Vestuário e Calçados	Fios e Tecidos	\N	\N
+RCSL4	1.17	RECRUSUL S.A.	-5.3	159.11	-10.12	0.63	-15.39	11.6	-7.95	-15.18	0.8	5.4	-1.18	0.78	-3002.48	-11.87	-1592.05	-0.01	0	0	1	1.33	0.12	66.3	1034165.84	0.01	-0.23	58556449.3	Bens Industriais	Material de Transporte	Material Rodoviário	\N	\N
+TAEE3	11.63	TRANSMISSORA ALIANÇA DE ENERGIA ELÉTRICA S.A.	8.67	1.69	5.14	0.61	8.93	63.14	68.11	40.38	3.5	17.29	-0.73	0.17	19.46	7	13.55	1.23	3.75	0.36	0.64	1.26	0.95	15.51	1205886.68	6.83	1.33	11988561963.6	Utilidade Pública	Energia Elétrica	Energia Elétrica	5.09	10.76
 EEEL3	294.77	CIA ESTADUAL GER.TRANS.ENER.ELET-CEEE-GT	4.7	1.41	2.81	0.48	4.62	61.19	54.12	32.4	1.52	3.71	-0.61	0.32	30.08	10.23	19.55	0.9	1.8	0.34	0.66	2.49	-0.15	12.36	\N	208.5	62.71	2840511499.76	Utilidade Pública	Energia Elétrica	Energia Elétrica	28.25	\N
-EMBR3	36.28	EMBRAER S.A.	-1561.32	2.11	55.88	0.52	69.23	17.61	2.31	-0.08	1.29	2.31	-1.19	0.4	-0.13	-0.03	1.46	0.5	13.36	0.24	0.73	1.65	15.9	4.54	246799151.51	17.23	-0.02	26864071796.32	Bens Industriais	Material de Transporte	Material Aeronáutico e de Defesa	\N	\N
-CTSA8	0	CIA TECIDOS SANTANENSE	0	0	0	0	-14.15	-22.39	-15.56	-45.69	0	0	0	0.17	-21.36	-7.79	-4.49	0.76	-10.51	0.36	0.64	1.37	0	-0.42	\N	8.28	-1.77	60936270.39	Consumo Cíclico	Tecidos. Vestuário e Calçados	Fios e Tecidos	\N	\N
-MRSA5B	27.16	MRS LOGISTICA S.A.	6.7	1.37	3.3	0.52	4.76	48.65	40.56	20.01	1.34	7.15	-0.68	0.39	20.44	7.75	15.82	0.54	1.3	0.38	0.62	1.44	0.14	11.59	14815.33	19.83	4.05	9617527706.38	Bens Industriais	Transporte	Transporte Ferroviário	21.31	\N
-DOHL4	4.1	DOHLER S.A.	-23.41	0.44	-50.91	0.32	-121.18	21.7	-1.04	-2.26	0.53	0.7	-0.72	0.6	-1.9	-1.37	-1.54	0.11	-13.05	0.72	0.28	5.61	0	5.16	7284	9.23	-0.18	658739716.5	Consumo Cíclico	Tecidos. Vestuário e Calçados	Fios e Tecidos	\N	\N
-LIPR3	48.8	ELETROBRÁS PARTICIPAÇÕES S.A. - ELETROPAR	32.69	2.59	34.34	2.47	30.58	\N	\N	\N	\N	8.21	-3.67	0	7.91	7.56	5.6	-0.28	-3.77	0.96	0.04	12.53	-0.93	\N	4893.67	18.87	1.49	574126583.2	Utilidade Pública	Energia Elétrica	Energia Elétrica	5.92	0.79
-CPLE6	9.04	CIA PARANAENSE DE ENERGIA - COPEL	14.11	1.1	7.86	0.49	11.42	21.53	15.88	8.85	1.25	7.02	-0.65	0.39	7.83	3.45	7.72	0.38	2.7	0.44	0.55	1.39	0.2	9.35	144732659.74	8.19	0.64	29899693364.18	Utilidade Pública	Energia Elétrica	Energia Elétrica	13.08	4.2
-MNPR3	12	MINUPAR PARTICIPACOES S.A.	6.97	-0.26	1.86	0.26	1.86	24.76	12.54	3.34	0.23	-0.23	-0.6	1.1	-3.79	3.67	-13.8	\N	0	-0.97	1.97	0.34	-0.16	13.02	63454.77	-45.41	1.72	85201200	Consumo não Cíclico	Alimentos Processados	Carnes e Derivados	\N	\N
+EMBR3	40.9	EMBRAER S.A.	-1706.35	2.3	61.07	0.56	74.42	17.61	2.31	-0.08	1.41	2.53	-1.3	0.4	-0.13	-0.03	1.46	0.5	13.36	0.24	0.73	1.65	17.38	4.54	253641995.23	17.23	-0.02	29359438994.6	Bens Industriais	Material de Transporte	Material Aeronáutico e de Defesa	\N	\N
+CTSA8	0	CIA TECIDOS SANTANENSE	0	0	0	0	-15.03	-22.39	-15.56	-45.69	0	0	0	0.17	-21.36	-7.79	-4.49	0.76	-10.51	0.36	0.64	1.37	0	-0.42	\N	8.28	-1.77	75683404.32	Consumo Cíclico	Tecidos. Vestuário e Calçados	Fios e Tecidos	\N	\N
+MRSA5B	26.56	MRS LOGISTICA S.A.	7.03	1.44	3.47	0.55	2.85	48.65	40.56	20.01	1.41	7.51	-0.71	0.39	20.44	7.75	15.82	0.54	1.3	0.38	0.62	1.44	0.14	11.59	7316.67	19.83	4.05	4296854313	Bens Industriais	Transporte	Transporte Ferroviário	21.31	\N
+DOHL4	4	DOHLER S.A.	-23.07	0.44	-50.17	0.32	-118.03	21.7	-1.04	-2.26	0.52	0.69	-0.71	0.6	-1.9	-1.37	-1.54	0.11	-13.05	0.72	0.28	5.61	0	5.16	15721.26	9.23	-0.18	639494688	Consumo Cíclico	Tecidos. Vestuário e Calçados	Fios e Tecidos	\N	\N
+LIPR3	48.82	ELETROBRÁS PARTICIPAÇÕES S.A. - ELETROPAR	32.7	2.59	34.36	2.47	30.59	\N	\N	\N	\N	8.21	-3.67	0	7.91	7.56	5.6	-0.28	-3.77	0.96	0.04	12.53	-0.93	\N	4872	18.87	1.49	574361880.98	Utilidade Pública	Energia Elétrica	Energia Elétrica	5.92	0.79
+MNPR3	13.21	MINUPAR PARTICIPACOES S.A.	7.55	-0.29	2.01	0.28	2.01	24.76	12.54	3.34	0.25	-0.25	-0.66	1.1	-3.79	3.67	-13.8	\N	0	-0.97	1.97	0.34	-0.18	13.02	49665.86	-45.41	1.72	92301300	Consumo não Cíclico	Alimentos Processados	Carnes e Derivados	\N	\N
 BLUT4	1.52	BLUE TECH SOLUTIONS E.Q.I. S	-1.66	0.14	-1.82	0.04	-4.91	\N	\N	\N	\N	-0.32	-0.04	0	-8.15	-2.46	-6.65	0.12	-1.59	0.3	0.7	0	0.06	\N	\N	11.21	-0.91	14115600.06	Financeiro e Outros	Holdings Diversificadas	Holdings Diversificadas	\N	\N
 ALSC3	27.75	ALIANSCE SHOPPING CENTERS S.A.	38.57	2.2	16.41	1.2	14.85	75.71	65.32	27.78	10.72	9.41	-1.43	0.11	5.69	3.12	11.21	-0.21	-1.56	0.55	0.44	5.39	0.58	2.54	\N	12.64	0.72	5694242307.75	\N	\N	\N	19.34	\N
-DIRR3	24.88	DIRECIONAL ENGENHARIA S.A.	10.2	2.05	9.03	0.55	9.5	34.36	19.37	17.15	1.75	1.82	-0.95	0.31	20.1	5.37	11.62	0.11	0.47	0.27	0.71	3.39	0.11	15.1	46006029.23	12.13	2.44	4316680000	Consumo Cíclico	Construção Civil	Incorporações	\N	1.89
-EALT4	11.07	ELECTRO ACO ALTONA S.A.	4.59	0.99	3.98	0.44	5.81	25.12	12.16	10.53	0.48	9.99	-0.74	0.9	21.53	9.5	14.81	0.45	1.82	0.44	0.56	1.12	0.08	14.94	138856.94	11.2	2.41	250147500	Bens Industriais	Máquinas e Equipamentos	Máq. e Equip. Industriais	34.67	6.72
-VAMO3	7.38	VAMOS LOCAÇÃO DE CAMINHÕES. MÁQUINAS E EQUIP. S.A.	13.56	1.72	3.73	0.39	8.05	46.88	35.62	9.8	1.33	3.2	-0.55	0.29	12.69	2.89	12.97	1.99	4.32	0.23	0.77	1.75	-0.84	45.32	53767036.66	4.29	0.54	8149915319.22	Bens Industriais	Máquinas e Equipamentos	Máq. e Equip. Construção e Agrícolas	39.7	4.33
-ENGI4	7.65	ENERGISA S.A.	7.31	1.15	2.64	0.25	6.52	28.52	22.18	8	0.58	4.24	-0.34	0.42	15.71	3.38	10.7	1.52	3.49	0.21	0.73	1.28	0.4	12.56	82952.46	6.66	1.05	20156094733.05	Utilidade Pública	Energia Elétrica	Energia Elétrica	15.85	4.44
-AHEB5	19.2	SAO PAULO TURISMO S.A.	1.54	1.44	1.19	0.32	0.9	31.24	21.73	16.68	0.26	0.98	-0.79	1.24	93.37	20.69	98.59	-0.96	-0.79	0.22	0.78	2.2	0.03	50.82	3842	13.32	12.43	233828143.9	Consumo Cíclico	Viagens e Lazer	Produção de Eventos e Shows	\N	\N
-BPAC11	31.82	BCO BTG PACTUAL S.A.	11.55	2.35	9.8	0.25	9.8	20.34	25.92	22	2.54	27.54	-2.57	0.1	20.33	2.17	\N	\N	\N	0.11	0.89	1.01	0.37	43.9	321043463.09	13.55	2.75	122041578702.99	Financeiro e Outros	Intermediários Financeiros	Bancos	52.56	2.45
-INTB3	22.07	INTELBRAS S.A. IND DE TELEC ELETRONICA BRASILEIRA	12.77	2.72	13.38	1.41	12.62	31.7	13.16	13.79	1.76	3.16	-5.55	0.8	21.32	11.06	14.41	-0.16	-0.76	0.52	0.48	2.49	1.22	23.3	20963801.54	8.11	1.73	7230377197.7	Tecnologia da Informação	Computadores e Equipamentos	Computadores e Equipamentos	28.37	0.81
-PTNT4	5.94	PETTENATI S.A. INDUSTRIA TEXTIL	7.91	0.74	4.41	0.34	7	16.9	8.44	4.71	0.37	1.1	-0.69	0.91	9.31	4.27	7.51	0.28	1.67	0.46	0.45	2.5	-0.41	11.78	28058.86	8.07	0.75	345299434.48	Consumo Cíclico	Tecidos. Vestuário e Calçados	Fios e Tecidos	7.9	3.57
-BBAS3	26.39	BCO BRASIL S.A.	4.38	0.87	3.64	0.07	3.64	35.03	15.59	12.98	0.57	2.14	-0.07	0.12	19.77	1.51	\N	\N	\N	0.08	0.92	17.64	0.64	17.16	486511676.43	30.49	6.03	151236710315.6	Financeiro e Outros	Intermediários Financeiros	Bancos	20.11	9.22
-MRVE3	6.59	MRV ENGENHARIA E PARTICIPACOES S.A.	-16.15	0.56	21.22	0.14	64.08	23.9	2.29	-3	0.49	0.62	-0.27	0.29	-3.47	-0.89	0.42	1.13	42.86	0.26	0.71	1.92	2.8	6.52	71460395.89	11.76	-0.41	3709027761.89	Consumo Cíclico	Construção Civil	Incorporações	\N	\N
-MEAL3	1.22	INTERNATIONAL MEAL COMPANY ALIMENTACAO S.A.	-6.64	0.35	4.44	0.13	8.58	34.58	3.52	-2.35	0.16	19.62	-0.16	0.84	-5.23	-1.98	4.63	0.32	4.15	0.38	0.62	1.04	0.03	7.07	1107091.29	3.51	-0.18	349370826.6	Consumo Cíclico	Hoteis e Restaurantes	Restaurante e Similares	\N	\N
-PTBL3	4.05	PBG S/A	-14.01	1.54	3.72	0.18	10.05	38.55	6.89	-1.83	0.26	5.95	-0.28	0.68	-10.98	-1.25	8.04	2.62	6.33	0.11	0.89	1.08	0.1	15.75	3523628.17	2.63	-0.29	570996888.3	Bens Industriais	Construção e Engenharia	Produtos para Construção	\N	\N
+DIRR3	27.72	DIRECIONAL ENGENHARIA S.A.	11.08	2.23	9.8	0.59	10.28	34.36	19.37	17.15	1.9	1.98	-1.04	0.31	20.1	5.37	11.62	0.11	0.47	0.27	0.71	3.39	0.12	15.1	59861648.45	12.13	2.44	4686235000	Consumo Cíclico	Construção Civil	Incorporações	\N	7.66
+EALT4	11.42	ELECTRO ACO ALTONA S.A.	4.65	1	4.03	0.44	5.8	25.12	12.16	10.53	0.49	10.13	-0.75	0.9	21.53	9.5	14.81	0.45	1.82	0.44	0.56	1.12	0.08	14.94	85866.19	11.2	2.41	249622500	Bens Industriais	Máquinas e Equipamentos	Máq. e Equip. Industriais	34.67	4.53
+AHEB5	19.2	SAO PAULO TURISMO S.A.	1.54	1.44	1.19	0.32	1.36	31.24	21.73	16.68	0.26	0.98	-0.79	1.24	93.37	20.69	98.59	-0.96	-0.79	0.22	0.78	2.2	0.03	50.82	3841	13.32	12.43	296887221.4	Consumo Cíclico	Viagens e Lazer	Produção de Eventos e Shows	\N	\N
+ENGI4	8.26	ENERGISA S.A.	7.66	1.2	2.76	0.26	6.77	28.52	22.18	8	0.61	4.45	-0.35	0.42	15.71	3.38	10.7	1.52	3.49	0.21	0.73	1.28	0.42	12.56	62476.97	6.66	1.05	21790743942.43	Utilidade Pública	Energia Elétrica	Energia Elétrica	15.85	4.24
+INTB3	22.68	INTELBRAS S.A. IND DE TELEC ELETRONICA BRASILEIRA	13.37	2.85	14.01	1.48	13.18	31.7	13.16	13.79	1.84	3.31	-5.82	0.8	21.32	11.06	14.41	-0.16	-0.76	0.52	0.48	2.49	1.28	23.3	23288396.17	8.11	1.73	7535055530	Tecnologia da Informação	Computadores e Equipamentos	Computadores e Equipamentos	28.37	0.77
+BPAC11	32.17	BCO BTG PACTUAL S.A.	11.56	2.35	9.81	0.25	9.81	20.34	25.92	22	2.54	27.56	-2.57	0.1	20.33	2.17	\N	\N	\N	0.11	0.89	1.01	0.37	43.9	357646622.52	13.55	2.75	122156639902.27	Financeiro e Outros	Intermediários Financeiros	Bancos	52.56	3.73
+PTNT4	6.26	PETTENATI S.A. INDUSTRIA TEXTIL	8.05	0.75	4.49	0.34	7.01	16.9	8.44	4.71	0.38	1.12	-0.7	0.91	9.31	4.27	7.51	0.28	1.67	0.46	0.45	2.5	-0.41	11.78	31495.55	8.07	0.75	345619301.72	Consumo Cíclico	Tecidos. Vestuário e Calçados	Fios e Tecidos	7.9	3.51
+BBAS3	27	BCO BRASIL S.A.	4.38	0.87	3.65	0.07	3.65	35.03	15.59	12.98	0.57	2.14	-0.07	0.12	19.77	1.51	\N	\N	\N	0.08	0.92	17.64	0.64	17.16	424625092.3	30.49	6.03	151294018656	Financeiro e Outros	Intermediários Financeiros	Bancos	20.11	9.21
+MRVE3	7.18	MRV ENGENHARIA E PARTICIPACOES S.A.	-17.05	0.59	22.41	0.15	65.24	23.9	2.29	-3	0.51	0.66	-0.29	0.29	-3.47	-0.89	0.42	1.13	42.86	0.26	0.71	1.92	2.96	6.52	73013165	11.76	-0.41	3911645363.45	Consumo Cíclico	Construção Civil	Incorporações	\N	\N
+MEAL3	1.62	INTERNATIONAL MEAL COMPANY ALIMENTACAO S.A.	-8.38	0.44	5.6	0.17	9.74	34.58	3.52	-2.35	0.2	24.76	-0.2	0.84	-5.23	-1.98	4.63	0.32	4.15	0.38	0.62	1.04	0.04	7.07	977830.52	3.51	-0.18	441009076.2	Consumo Cíclico	Hoteis e Restaurantes	Restaurante e Similares	\N	\N
+PTBL3	5.12	PBG S/A	-17.02	1.87	4.52	0.21	10.85	38.55	6.89	-1.83	0.31	7.23	-0.34	0.68	-10.98	-1.25	8.04	2.62	6.33	0.11	0.89	1.08	0.12	15.75	2211217.87	2.63	-0.29	693655479.12	Bens Industriais	Construção e Engenharia	Produtos para Construção	\N	\N
 GRAO3	0	HUMBERG AGRIBRASIL COM. E EXPORT. DE GRÃOS S.A.	0	0	0	0	2.15	5.55	3.18	0.32	0	0	0	2.38	4.33	0.75	12.38	0.94	2.15	0.17	0.74	0.88	0	68.24	\N	1.41	0.06	0	Consumo não Cíclico	Agropecuária	Agricultura	\N	\N
 BRGE12	13.47	CONSORCIO ALFA DE ADMINISTRACAO S.A.	33.84	0.74	-34.96	0.34	19.81	-4115.33	-798.17	824.67	279.05	0.89	-0.75	0	2.19	0.99	-2.79	-1.15	54.17	0.45	0.36	3.13	-0.52	-32.83	8735.5	18.16	0.4	974940393.52	Financeiro e Outros	Previdência e Seguros	Seguradoras	-11.18	\N
-WHRL4	4.53	WHIRLPOOL S.A.	17.56	3.04	5.33	0.76	4.91	16.37	11.01	3.34	0.59	26.21	-2.46	1.29	17.31	4.32	32.24	-0.22	-0.38	0.25	0.75	1.04	2.54	13.15	27227.2	1.49	0.26	6766472571.5	Consumo Cíclico	Comércio	Eletrodomésticos	16.5	8.27
-LEVE3	30.66	MAHLE-METAL LEVE S.A.	5.23	2.65	4.39	1.32	4.37	30.46	21.81	18.29	0.96	4.28	-3.74	1.38	50.65	25.23	33.41	-0.01	-0.02	0.5	0.5	1.91	0.13	13.28	12037119.49	11.57	5.86	4155625740	Consumo Cíclico	Automóveis e Motocicletas	Automóveis e Motocicletas	27.34	26.07
-BRFS3	20.32	BRF S.A.	-69.84	2.25	15.08	0.6	19.4	19.3	4.21	-0.91	0.64	4.86	-1.09	0.94	-3.21	-0.85	6.26	0.64	4.32	0.27	0.72	1.37	0.86	12.17	237732000.63	9.05	-0.29	34187856358.72	Consumo não Cíclico	Alimentos Processados	Carnes e Derivados	\N	\N
+LEVE3	34.13	MAHLE-METAL LEVE S.A.	5.68	2.88	4.76	1.43	4.75	30.46	21.81	18.29	1.04	4.65	-4.06	1.38	50.65	25.23	33.41	-0.01	-0.02	0.5	0.5	1.91	0.14	13.28	10754063.39	11.57	5.86	4517514870	Consumo Cíclico	Automóveis e Motocicletas	Automóveis e Motocicletas	27.34	24.01
+WHRL4	4.58	WHIRLPOOL S.A.	17.72	3.07	5.38	0.76	4.93	16.37	11.01	3.34	0.59	26.44	-2.48	1.29	17.31	4.32	32.24	-0.22	-0.38	0.25	0.75	1.04	2.57	13.15	37425.9	1.49	0.26	6785435976.06	Consumo Cíclico	Comércio	Eletrodomésticos	16.5	8.19
+BRFS3	22.51	BRF S.A.	-76.13	2.45	16.43	0.65	20.75	19.3	4.21	-0.91	0.69	5.3	-1.19	0.94	-3.21	-0.85	6.26	0.64	4.32	0.27	0.72	1.37	0.94	12.17	148678799.23	9.05	-0.29	37266782398.9	Consumo não Cíclico	Alimentos Processados	Carnes e Derivados	\N	\N
 ENMA6B	83.99	CIA ENERGETICA DO MARANHAO - CEMAR	17.89	3.52	13.6	1.48	\N	30.35	17.55	13.34	2.39	28.12	-1.96	0.62	19.69	8.28	13.34	0.59	2.28	0.42	0.58	1.27	1.28	8.35	\N	23.85	4.7	\N	Utilidade Pública	Energia Elétrica	Energia Elétrica	2.77	\N
-SGPS3	0.38	SPRINGS GLOBAL PARTICIPACOES S.A.	-0.02	0.11	-0.05	0.01	-2.28	2.36	-39.02	-77.23	0.02	-0.02	-0.01	0.39	-470.13	-30.47	-33.93	5.3	-2.23	0.06	0.94	0.45	0	-2.95	166667.26	3.31	-15.56	19000000	Consumo Cíclico	Tecidos. Vestuário e Calçados	Fios e Tecidos	\N	\N
+SGPS3	2.05	SPRINGS GLOBAL PARTICIPACOES S.A.	-0.03	0.12	-0.05	0.01	-2.28	2.36	-39.02	-77.23	0.02	-0.02	-0.01	0.39	-470.13	-30.47	-33.93	5.3	-2.23	0.06	0.94	0.45	0	-2.95	52212.87	16.55	-77.81	20000000	Consumo Cíclico	Tecidos. Vestuário e Calçados	Fios e Tecidos	\N	\N
 PTCA3	0	PRATICA KLIMAQUIP INDUSTRIA E COMERCIO SA	0	0	0	0	1.25	47.28	15.29	9.17	0	0	0	1.34	35.59	12.27	20.49	0.74	1.25	0.34	0.66	1.71	0	23.19	\N	24.64	8.77	0	Bens Industriais	Máquinas e Equipamentos	Máq. e Equip. Industriais	38.5	\N
-PETR3	38.41	PETROLEO BRASILEIRO S.A. PETROBRAS	4.27	1.23	2.59	0.47	3.71	52.07	39.1	23.67	1.01	41.45	-0.56	0.46	28.77	10.99	19.56	0.56	1.17	0.38	0.62	1.08	-0.11	17.72	492691804.51	31.25	8.99	490675347923.5	Petróleo. Gás e Biocombustíveis	Petróleo. Gás e Biocombustíveis	Exploração. Refino e Distribuição	\N	17.09
 OMGE3	27.57	OMEGA GERAÇÃO S.A.	27.16	1175.11	7.11	433.11	7.11	29.87	28.22	7.38	2.01	7885.66	-509.49	216.02	4327.27	1594.91	6365.01	1.18	0.01	0.37	0.63	1.58	0.73	29.99	\N	0.02	1.02	5521562588.85	Utilidade Pública	Energia Elétrica	Energia Elétrica	37.16	\N
-CLSC3	66.2	CENTRAIS ELET DE SANTA CATARINA S.A.	4.47	0.82	3.02	0.21	5.84	16.17	8.12	5.48	0.24	-19.37	-0.29	0.84	18.3	4.59	11.26	0.74	2.72	0.25	0.75	0.96	0.31	6.3	55174.33	80.9	14.8	2641008249.4	Utilidade Pública	Energia Elétrica	Energia Elétrica	28.18	8.47
-HAPV3	3.64	HAPVIDA PARTICIPACOES E INVESTIMENTOS SA	-60.43	0.56	17.47	0.38	20.01	12.48	5.61	-1.62	0.98	10.38	-0.43	0.38	-0.92	-0.62	2.51	0.08	2.54	0.68	0.32	1.41	1.33	43.42	282406985.06	6.52	-0.06	27443646277.32	Saúde	Serv.Méd.Hospit..Análises e Diagnósticos	Serv.Méd.Hospit..Análises e Diagnósticos	\N	\N
-NORD3	7.01	NORDON INDUSTRIAS METALURGICAS S.A.	-5	-0.28	5157.4	2.42	9371.51	91.22	0.35	-360.37	18.03	-0.28	-2.67	0.13	-5.62	-48.41	-0.01	\N	4214.11	-8.62	9.62	0.01	-0.26	22.14	11299.56	-24.95	-1.4	46416616.86	Bens Industriais	Máquinas e Equipamentos	Máq. e Equip. Industriais	\N	\N
-VVAR11	14.58	GRUPO CASAS BAHIA S.A.	-0.54	0.43	-0.96	0.04	-5.2	27.46	-5.21	-9.3	0.05	-0.27	-0.07	0.89	-80.86	-8.26	-24.97	2.18	-4.82	0.1	0.9	0.71	0	1.39	\N	33.68	-27.23	546730694.25	Consumo Cíclico	Comércio	Eletrodomésticos	\N	\N
-OPCT3	6.5	OCEANPACT SERVICOS MARITIMOS S.A.	13	1.64	4.02	0.54	7.05	24.09	17.93	5.54	0.72	6.25	-0.76	0.75	12.59	4.13	12.91	1.23	3.03	0.33	0.67	1.41	-0.06	40.48	4665252.37	3.97	0.5	1299737101	Bens Industriais	Transporte	Transporte Hidroviário	\N	\N
+PETR3	41.36	PETROLEO BRASILEIRO S.A. PETROBRAS	4.53	1.3	2.74	0.5	3.85	52.07	39.1	23.67	1.07	43.96	-0.59	0.46	28.77	10.99	19.56	0.56	1.17	0.38	0.62	1.08	-0.12	17.72	415895155.29	31.25	8.99	518042306490.36	Petróleo. Gás e Biocombustíveis	Petróleo. Gás e Biocombustíveis	Exploração. Refino e Distribuição	\N	16.11
+ALUP11	31.4	ALUPAR INVESTIMENTO S/A	13.92	1.31	4.25	0.35	8	75.41	71.12	21.74	3.03	4.45	-0.43	0.11	9.42	2.49	8.82	1.15	3.74	0.26	0.62	1.67	999.52	11.95	25430235.52	24.05	2.27	10018755066.17	Utilidade Pública	Energia Elétrica	Energia Elétrica	13.18	3.9
+HAPV3	4.14	HAPVIDA PARTICIPACOES E INVESTIMENTOS SA	-67.41	0.62	19.49	0.42	21.93	12.48	5.61	-1.62	1.09	11.58	-0.48	0.38	-0.92	-0.62	2.51	0.08	2.54	0.68	0.32	1.41	1.48	43.42	194804397	6.52	-0.06	30459431582.52	Saúde	Serv.Méd.Hospit..Análises e Diagnósticos	Serv.Méd.Hospit..Análises e Diagnósticos	\N	\N
+NORD3	5.9	NORDON INDUSTRIAS METALURGICAS S.A.	-3.93	-0.22	4046.46	1.9	8260.57	91.22	0.35	-360.37	14.15	-0.22	-2.09	0.13	-5.62	-48.41	-0.01	\N	4214.11	-8.62	9.62	0.01	-0.21	22.14	5175.55	-24.95	-1.4	36418173	Bens Industriais	Máquinas e Equipamentos	Máq. e Equip. Industriais	\N	\N
+VVAR11	14.58	GRUPO CASAS BAHIA S.A.	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	0	\N	\N	\N	\N	\N	\N
 MPLU3	26.8	MULTIPLUS S.A.	12.2	17.37	10.37	2.68	7.73	95.29	66.35	56.37	6.88	50.65	-23.58	0.39	142.4	21.94	100.98	-4.42	-2.64	0.15	0.85	1.06	-0.39	-17.46	\N	1.54	2.2	4348208156.4	\N	\N	\N	8.96	\N
-ITUB4	32.05	ITAU UNIBANCO HOLDING S.A.	8.84	1.69	7.2	0.12	6.72	40.94	13.75	11.2	0.99	\N	-0.12	0.12	19.17	1.36	\N	\N	\N	0.07	0.93	\N	0.49	18.99	717691065.03	18.93	3.63	293546467106.37	Financeiro e Outros	Intermediários Financeiros	Bancos	7.38	7.32
-AGRO3	25.69	BRASILAGRO - CIA BRAS DE PROP AGRICOLAS	11.14	1.35	15.55	0.79	20.5	27.98	15.46	21.58	2.4	4.24	-1.24	0.33	12.09	7.08	5.06	0.43	4.95	0.59	0.41	2.04	0.04	27.22	5624935.66	19.06	2.31	2637937676.36	Consumo não Cíclico	Agropecuária	Agricultura	13.38	12.5
-TEKA4	30.9	TEKA-TECELAGEM KUEHNRICH S.A.	-0.1	-0.01	-1.89	0.01	-70.17	21.92	-2.76	-52.04	0.05	-0.01	-0.01	0.25	-7.35	-13.03	0.61	\N	-67.89	-1.77	2.77	0.04	0.08	14.82	13450.75	-4189.96	-307.77	18754666	Consumo Cíclico	Tecidos. Vestuário e Calçados	Fios e Tecidos	\N	\N
-BNBR3	114	BCO NORDESTE DO BRASIL S.A.	4.7	0.87	2.8	0.15	2.8	47.13	42.37	25.22	1.18	2.67	-0.16	0.12	18.55	3.14	\N	\N	\N	0.17	0.83	\N	-7.91	10.88	36436.45	130.82	24.27	9846346896	Financeiro e Outros	Intermediários Financeiros	Bancos	23.64	2.77
-TASA4	10.85	TAURUS ARMAS S.A.	10.08	1.22	6.3	0.63	7.66	33.77	12.27	7.67	0.77	3.7	-1.41	0.82	12.09	6.26	10.42	0.25	1.28	0.52	0.48	1.45	-0.16	16.08	4786806.11	8.91	1.08	1391168375.08	Bens Industriais	Máquinas e Equipamentos	Armas e Munições	\N	3.72
-CRFB3	8.92	ATACADÃO S.A.	38.86	0.97	4.46	0.2	8.67	19.35	3.87	0.44	0.17	-223.88	-0.39	1.17	2.51	0.52	7.88	0.92	4.2	0.21	0.77	1	-0.49	15.15	48791798.66	9.15	0.23	18805986146.12	Consumo não Cíclico	Comércio e Distribuição	Alimentos	-21.85	\N
-SUZB3	48.27	SUZANO S.A.	6.94	1.41	6.02	0.44	11.76	34.61	27.58	23.9	1.66	2.68	-0.59	0.26	20.33	6.32	7.13	1.35	5.74	0.31	0.69	2.89	-0.14	24.23	586734193.06	34.2	6.95	62949757276.05	Materiais Básicos	Madeira e Papel	Papel e Celulose	95.4	2.41
-BRKM6	13.75	BRASKEM S.A	-1.79	3.56	-3.29	0.12	-11.69	4.7	-4.82	-8.85	0.16	0.95	-0.2	0.74	-198.12	-6.53	-11.57	7.95	-7.36	0.03	0.97	1.44	-0.03	4	3124.8	3.87	-7.66	14414035917.98	Materiais Básicos	Químicos	Petroquímicos	\N	\N
+OPCT3	6.6	OCEANPACT SERVICOS MARITIMOS S.A.	13.66	1.72	4.22	0.56	7.28	24.09	17.93	5.54	0.76	6.57	-0.8	0.75	12.59	4.13	12.91	1.23	3.03	0.33	0.67	1.41	-0.06	40.48	3070062.39	3.97	0.5	1373722135.98	Bens Industriais	Transporte	Transporte Hidroviário	\N	\N
+ITUB4	33.65	ITAU UNIBANCO HOLDING S.A.	9.18	1.76	7.48	0.13	6.98	40.94	13.75	11.2	1.03	\N	-0.13	0.12	19.17	1.36	\N	\N	\N	0.07	0.93	\N	0.51	18.99	720617217.3	18.93	3.63	304649984971.8	Financeiro e Outros	Intermediários Financeiros	Bancos	7.38	7.05
+AGRO3	27.1	BRASILAGRO - CIA BRAS DE PROP AGRICOLAS	11.67	1.41	16.28	0.83	21.22	27.98	15.46	21.58	2.52	4.44	-1.3	0.33	12.09	7.08	5.06	0.43	4.95	0.59	0.41	2.04	0.04	27.22	6315399	19.06	2.31	2761157809.16	Consumo não Cíclico	Agropecuária	Agricultura	13.38	11.94
+TEKA4	30.59	TEKA-TECELAGEM KUEHNRICH S.A.	-0.1	-0.01	-1.93	0.01	-70.05	21.92	-2.76	-52.04	0.05	-0.01	-0.01	0.25	-7.35	-13.03	0.61	\N	-67.89	-1.77	2.77	0.04	0.08	14.82	8004.8	-4189.96	-307.77	17719914.3	Consumo Cíclico	Tecidos. Vestuário e Calçados	Fios e Tecidos	\N	\N
+BNBR3	111.5	BCO NORDESTE DO BRASIL S.A.	4.78	0.89	2.84	0.15	2.84	47.13	42.37	25.22	1.21	2.71	-0.16	0.12	18.55	3.14	\N	\N	\N	0.17	0.83	\N	-8.05	10.88	26623.33	130.82	24.27	10019089824	Financeiro e Outros	Intermediários Financeiros	Bancos	23.64	2.72
+CRFB3	10.89	ATACADÃO S.A.	45.82	1.15	5.26	0.24	9.47	19.35	3.87	0.44	0.2	-264.04	-0.46	1.17	2.51	0.52	7.88	0.92	4.2	0.21	0.77	1	-0.58	15.15	63342350.71	9.15	0.23	22179257203.72	Consumo não Cíclico	Comércio e Distribuição	Alimentos	-21.85	\N
+TASA4	12.67	TAURUS ARMAS S.A.	11.66	1.41	7.29	0.73	8.61	33.77	12.27	7.67	0.89	4.28	-1.63	0.82	12.09	6.26	10.42	0.25	1.28	0.52	0.48	1.45	-0.19	16.08	3685437.23	8.91	1.08	1599353100.7	Bens Industriais	Máquinas e Equipamentos	Armas e Munições	\N	3.21
+SUZB3	54.21	SUZANO S.A.	7.53	1.53	6.52	0.48	12.26	34.61	27.58	23.9	1.8	2.91	-0.63	0.26	20.33	6.32	7.13	1.35	5.74	0.31	0.69	2.89	-0.15	24.23	490420409.48	34.2	6.95	68218392440.65	Materiais Básicos	Madeira e Papel	Papel e Celulose	95.4	2.22
+BRKM6	15.49	BRASKEM S.A	-2.02	4.01	-3.71	0.13	-11.8	4.7	-4.82	-8.85	0.18	1.07	-0.22	0.74	-198.12	-6.53	-11.57	7.95	-7.36	0.03	0.97	1.44	-0.04	4	6227	3.87	-7.66	14777320865.98	Materiais Básicos	Químicos	Petroquímicos	\N	\N
 BRGE3	13.5	CONSORCIO ALFA DE ADMINISTRACAO S.A.	33.91	0.74	-35.04	0.34	19.81	-4115.33	-798.17	824.67	279.67	0.89	-0.75	0	2.19	0.99	-2.79	-1.15	54.17	0.45	0.36	3.13	-0.52	-32.83	39834.14	18.16	0.4	974940393.52	Financeiro e Outros	Previdência e Seguros	Seguradoras	-11.18	\N
-ALUP11	29.98	ALUPAR INVESTIMENTO S/A	13.23	1.25	4.04	0.33	7.78	75.41	71.12	21.74	2.88	4.23	-0.41	0.11	9.42	2.49	8.82	1.15	3.74	0.26	0.62	1.67	950.08	11.95	36927918.29	24.05	2.27	9502128341.79	Utilidade Pública	Energia Elétrica	Energia Elétrica	13.18	4.1
-RPMG3	2.31	REFINARIA DE PETROLEOS MANGUINHOS S.A.	-0.19	-0.03	-0.15	0.03	-0.16	-13.15	-20.51	-16.72	0.03	-0.03	-0.42	0.83	-16.32	-13.94	20.03	\N	0	-0.85	1.85	0.55	0.02	48.3	195192.57	-74.73	-12.19	156367662.99	Petróleo. Gás e Biocombustíveis	Petróleo. Gás e Biocombustíveis	Exploração. Refino e Distribuição	\N	\N
-LUXM4	13.99	TREVISA INVESTIMENTOS S.A.	15.73	2.41	10.8	1.71	5.64	31.76	19.72	13.54	2.13	-92.19	-1.98	0.8	15.35	10.84	14.64	-0.09	-0.39	0.71	0.29	0.88	0.24	1.03	5770	5.8	0.89	162172080	Bens Industriais	Transporte	Transporte Hidroviário	24.3	\N
-ENAT3	20.39	ENAUTA PARTICIPAÇÕES S.A.	56.31	1.3	21.55	0.62	25.87	31.48	14.15	5.41	3.05	3.89	-0.87	0.2	2.32	1.09	2.75	0.26	4.32	0.47	0.53	2.17	-0.75	34.1	50697167.26	15.63	0.36	5419802792.95	Petróleo. Gás e Biocombustíveis	Petróleo. Gás e Biocombustíveis	Exploração. Refino e Distribuição	-23.08	\N
-EQPA5	8.24	EQUATORIAL PARA DISTRIBUIDORA DE ENERGIA S.A.	8.16	3.59	6.21	1.25	6.33	34.97	28.06	21.37	1.74	12.64	-1.76	0.71	43.96	15.26	25.67	0.72	1.24	0.35	0.65	1.5	0.24	13.58	1800	2.3	1.01	14917885169.87	Utilidade Pública	Energia Elétrica	Energia Elétrica	37.41	\N
-EVEN3	6.2	EVEN CONSTRUTORA E INCORPORADORA S.A.	5.48	0.63	4.13	0.17	5.37	22.32	10.01	7.54	0.41	0.31	-0.67	0.4	11.42	3.05	5.05	0.19	1.23	0.27	0.58	3.55	0.1	15.06	5334698.67	9.9	1.13	1240000000	Consumo Cíclico	Construção Civil	Incorporações	\N	16.23
+LUXM4	0	TREVISA INVESTIMENTOS S.A.	0	0	0	0	-0.39	31.76	19.72	13.54	0	0	0	0.8	15.35	10.84	14.64	-0.09	-0.39	0.71	0.29	0.88	0	1.03	6735	5.8	0.89	0	Bens Industriais	Transporte	Transporte Hidroviário	24.3	\N
+RPMG3	2.87	REFINARIA DE PETROLEOS MANGUINHOS S.A.	-0.22	-0.04	-0.18	0.03	-0.18	-13.15	-20.51	-16.72	0.04	-0.04	-0.48	0.83	-16.32	-13.94	20.03	\N	0	-0.85	1.85	0.55	0.02	48.3	171829.94	-74.73	-12.19	180736649.43	Petróleo. Gás e Biocombustíveis	Petróleo. Gás e Biocombustíveis	Exploração. Refino e Distribuição	\N	\N
+ENAT3	22.2	ENAUTA PARTICIPAÇÕES S.A.	62.44	1.45	23.89	0.68	28.21	31.48	14.15	5.41	3.38	4.32	-0.97	0.2	2.32	1.09	2.75	0.26	4.32	0.47	0.53	2.17	-0.83	34.1	35256698.48	15.63	0.36	6009894122.05	Petróleo. Gás e Biocombustíveis	Petróleo. Gás e Biocombustíveis	Exploração. Refino e Distribuição	-23.08	\N
+EQPA5	8.24	EQUATORIAL PARA DISTRIBUIDORA DE ENERGIA S.A.	8.16	3.59	6.21	1.25	6.56	34.97	28.06	21.37	1.74	12.64	-1.76	0.71	43.96	15.26	25.67	0.72	1.24	0.35	0.65	1.5	0.24	13.58	1800	2.3	1.01	15573749077.45	Utilidade Pública	Energia Elétrica	Energia Elétrica	37.41	\N
+EVEN3	6.46	EVEN CONSTRUTORA E INCORPORADORA S.A.	5.82	0.66	4.39	0.18	5.63	22.32	10.01	7.54	0.44	0.33	-0.72	0.4	11.42	3.05	5.05	0.19	1.23	0.27	0.58	3.55	0.1	15.06	4087804.19	9.9	1.13	1318000000	Consumo Cíclico	Construção Civil	Incorporações	\N	15.29
+CGRA4	25.94	GRAZZIOTIN S.A.	5.9	0.6	8.97	0.43	6.28	51.6	8.69	13.19	0.78	1.66	-0.76	0.55	10.19	7.24	5.28	-0.18	-2.65	0.71	0.29	2.4	-0.41	7.88	144567.19	42.66	4.35	532987609.08	Consumo Cíclico	Comércio	Tecidos. Vestuário e Calçados	11.01	10.01
 PTCA11	0	PRATICA KLIMAQUIP INDUSTRIA E COMERCIO SA	0	0	0	0	1.25	47.28	15.29	9.17	0	0	0	1.34	35.59	12.27	20.49	0.74	1.25	0.34	0.66	1.71	0	23.19	\N	24.64	8.77	0	Bens Industriais	Máquinas e Equipamentos	Máq. e Equip. Industriais	38.5	\N
-CGRA4	26.01	GRAZZIOTIN S.A.	5.98	0.61	9.09	0.43	6.36	51.6	8.69	13.19	0.79	1.69	-0.77	0.55	10.19	7.24	5.28	-0.18	-2.65	0.71	0.29	2.4	-0.41	7.88	111220.49	42.66	4.35	537692666.98	Consumo Cíclico	Comércio	Tecidos. Vestuário e Calçados	11.01	10.39
-RSID3	4.94	ROSSI RESIDENCIAL S.A.	0.35	-0.11	-0.3	0.18	-1.2	1.33	-723.09	612.89	2.17	-0.19	-0.41	0.08	-31.75	51.27	118.36	\N	-0.9	-1.61	2.62	0.37	0	-41.82	426016.14	-43.91	13.94	98800000	Consumo Cíclico	Construção Civil	Incorporações	\N	\N
-EQPA7	8.24	EQUATORIAL PARA DISTRIBUIDORA DE ENERGIA S.A.	8.16	3.59	6.21	1.25	6.33	34.97	28.06	21.37	1.74	12.64	-1.76	0.71	43.96	15.26	25.67	0.72	1.24	0.35	0.65	1.5	0.24	13.58	9000	2.3	1.01	14917885169.87	Utilidade Pública	Energia Elétrica	Energia Elétrica	37.41	\N
-BLAU3	9.41	BLAU FARMACÊUTICA S.A.	7.09	0.84	5.16	0.53	5.64	34.09	22.18	16.14	1.15	1.41	-1.1	0.47	11.78	7.53	9.18	0.08	0.48	0.64	0.36	3.82	-0.22	11.91	2113137.03	11.26	1.33	1688096965.99	Saúde	Medicamentos e Outros Produtos	Medicamentos e Outros Produtos	14.06	3.47
-CESP5	25	CESP - CIA ENERGETICA DE SAO PAULO	-13.55	1.03	14.39	0.6	16.35	39.26	40.55	-43.06	5.84	6.06	-0.69	0.1	-7.57	-4.41	-4.27	0.13	1.76	0.58	0.42	3.77	0.11	-3.19	\N	24.36	-1.84	8302192833.55	Utilidade Pública	Energia Elétrica	Energia Elétrica	\N	\N
-GEPA4	25	RIO PARANAPANEMA ENERGIA S.A.	6.91	1.11	4.77	0.67	5.77	38.61	35.54	24.54	1.7	-5.92	-0.77	0.39	16.09	9.62	13.28	0.22	0.93	0.6	0.4	0.54	0.17	1.08	18541.03	22.48	3.62	2392309836	Utilidade Pública	Energia Elétrica	Energia Elétrica	5.95	16.77
-NAFG3	64.37	NADIR FIGUEIREDO IND E COM S.A.	11.8	2.76	6.68	1.15	5.06	41.15	16.49	9.34	1.1	3.2	-2.87	1.05	23.42	9.77	15.89	0.48	1.17	0.42	0.58	2.52	-1.14	7.87	\N	23.3	5.46	508315292.42	Consumo Cíclico	Utilidades Domésticas	Utensílios Domésticos	35.19	\N
-CRIV3	6.98	FINANCEIRA ALFA S.A.- CRED FINANC E INVS	38.68	0.66	81.37	0.04	80.16	20.26	0.43	0.9	0.35	0.07	-0.09	0.12	1.72	0.11	\N	\N	\N	0.06	0.94	131.56	-0.83	27.56	3478.75	10.5	0.18	707929532	Financeiro e Outros	Intermediários Financeiros	Soc. Crédito e Financiamento	-22.87	\N
-ARZZ3	49.79	AREZZO INDÚSTRIA E COMÉRCIO S.A.	15.76	1.91	10.78	0.98	11.65	53.38	11.41	7.8	1.23	10.82	-1.87	0.8	12.13	6.22	12.43	0.16	0.88	0.51	0.48	1.23	-0.9	25.49	112859392.57	26.05	3.16	5526152566.74	Consumo Cíclico	Comércio	Tecidos. Vestuário e Calçados	17.82	3.88
-VIVT4	45.34	TELEFÔNICA BRASIL S.A	17.31	1.09	9.78	0.6	11.14	43.43	14.73	8.32	1.44	313.65	-0.75	0.42	6.3	3.49	7.85	0.17	1.54	0.55	0.45	1.01	-0.77	3.69	\N	41.55	2.62	73655863205.2	Comunicações	Telecomunicações	Telecomunicações	-13.48	\N
-STBP3	13.1	SANTOS BRASIL PARTICIPACOES S.A.	18.67	5.1	12.03	2.32	12.13	54.02	40	25.76	4.81	-160.99	-2.79	0.48	27.33	12.4	25.39	0.04	0.1	0.45	0.55	0.92	0.3	18.3	59683269.46	2.57	0.7	11320631833.9	Bens Industriais	Transporte	Serviços de Apoio e Armazenagem	189.54	5.07
-RDNI3	3.13	RNI NEGÓCIOS IMOBILIÁRIOS S.A.	-0.56	0.38	-1.01	0.08	-4.96	8.58	-32.6	-58.87	0.33	0.42	-0.14	0.24	-68.5	-13.84	-15.25	1.5	-3.96	0.2	0.79	1.73	0	17.03	18516.2	8.2	-5.62	136999499.04	Consumo Cíclico	Construção Civil	Incorporações	\N	13.58
-SULA3	7.43	SUL AMERICA S.A.	52.32	1.13	-12.95	0.31	6.54	4.25	-3.34	0.83	0.43	0.85	-0.91	0.73	2.17	0.6	-8.72	-1.71	19.47	0.28	0.72	2.29	-0.95	4.58	\N	6.55	0.14	9475042424.17	Financeiro e Outros	Previdência e Seguros	Seguradoras	-23.56	\N
-BBDC3	11.1	BCO BRADESCO S.A.	8.93	0.71	14.35	0.06	15.2	30.48	3.75	6.02	0.54	0.66	-0.07	0.11	7.98	0.68	\N	\N	\N	0.08	0.91	7.77	-0.29	14.8	88973409.03	15.59	1.24	125139752052.84	Financeiro e Outros	Intermediários Financeiros	Bancos	-4.42	12.36
-CASN4	8.37	CIA CATARINENSE DE AGUAS E SANEAM.-CASAN	137.29	4.25	30.26	1.75	38.62	43.06	16.99	3.74	5.14	69.91	-2.1	0.34	3.1	1.28	6.09	0.86	6.13	0.41	0.59	1.18	29.92	8.52	\N	1.97	0.06	9343450886.5	Utilidade Pública	Água e Saneamento	Água e Saneamento	\N	\N
-BPHA3	0.62	BRASIL PHARMA S.A.	0.06	-0.24	0.8	0.99	1.66	98.02	1029.99	13896.67	8.28	-0.38	-1.18	0.12	-402.5	1669.02	-36.75	\N	0.85	-4.15	5.15	0.06	0	-68.85	\N	-2.58	10.4	70110298.74	Saúde	Comércio e Distribuição	Medicamentos e Outros Produtos	\N	\N
-PORT3	14.51	WILSON SONS HOLDINGS BRASIL S.A.	15.17	2.6	9.04	1.07	12.37	45.87	28.29	16.85	2.56	49.93	-1.3	0.42	17.14	7.08	10.54	0.96	3.34	0.41	0.59	1.14	0.27	7.67	12749315.56	5.58	0.96	6384238939	Bens Industriais	Transporte	Serviços de Apoio e Armazenagem	21.77	5.51
-AMAR3	1.44	MARISA LOJAS S.A.	-0.19	211.43	-0.34	0.04	-2.7	49.17	-17.54	-31.64	0.06	-0.15	-0.07	0.67	-111510.06	-21.22	-47.98	1458.18	-2.36	0	1	0.59	-0.01	-9.85	970272.31	0.01	-7.59	98738758.08	Consumo Cíclico	Comércio	Tecidos. Vestuário e Calçados	\N	\N
-TPIS3	3.66	TPI - TRIUNFO PARTICIP. E INVEST. S.A.	2.44	0.19	-15.85	0.06	-165.34	25.3	-0.92	5.95	0.15	-0.42	-0.06	0.39	7.68	2.32	-3.39	1.77	-149.49	0.3	0.7	0.27	-0.01	-2.92	251467.34	19.5	1.5	161040000	Bens Industriais	Transporte	Exploração de Rodovias	\N	\N
+EQPA7	8.24	EQUATORIAL PARA DISTRIBUIDORA DE ENERGIA S.A.	8.16	3.59	6.21	1.25	6.56	34.97	28.06	21.37	1.74	12.64	-1.76	0.71	43.96	15.26	25.67	0.72	1.24	0.35	0.65	1.5	0.24	13.58	1236	2.3	1.01	15573749077.45	Utilidade Pública	Energia Elétrica	Energia Elétrica	37.41	\N
+RSID3	4.93	ROSSI RESIDENCIAL S.A.	0.35	-0.11	-0.3	0.18	-1.2	1.33	-723.09	612.89	2.16	-0.19	-0.41	0.08	-31.75	51.27	118.36	\N	-0.9	-1.61	2.62	0.37	0	-41.82	255359.17	-43.91	13.94	99400000	Consumo Cíclico	Construção Civil	Incorporações	\N	\N
+BLAU3	12.28	BLAU FARMACÊUTICA S.A.	8.94	1.05	6.51	0.67	7.01	34.09	22.18	16.14	1.44	1.77	-1.38	0.47	11.78	7.53	9.18	0.08	0.48	0.64	0.36	3.82	-0.27	11.91	2350401.77	11.26	1.33	2134787874.1	Saúde	Medicamentos e Outros Produtos	Medicamentos e Outros Produtos	14.06	2.36
 CCXC3	1.16	CCX CARVÃO DA COLÔMBIA S.A.	-0.25	-0.03	-3.26	2.44	-3.2	\N	\N	\N	\N	-0.03	\N	0	-11.64	-986.26	0.88	\N	0.05	-84.7	85.81	0.01	0	\N	\N	-40.23	-4.68	1973425.64	Financeiro e Outros	Outros	Outros	\N	\N
 RNEW11	2.75	RENOVA ENERGIA S.A.	-8.56	0.26	1.3	0.08	7.46	72.96	86.11	-13.07	1.12	-0.62	-0.08	0.07	-3.07	-0.91	5.93	1.24	6.16	0.3	0.7	0.23	0.08	-20.33	22499.23	10.47	-0.32	228693626.33	Utilidade Pública	Energia Elétrica	Energia Elétrica	\N	\N
 MTIG4	23	METALGRAFICA IGUACU S.A.	-49.52	-359.15	-87.41	36.91	-1.28	-16.12	-64.07	-113.09	56	-50.93	-50.15	0.66	-725.28	-74.53	-104.33	\N	-1.17	-0.1	1.1	0.27	-0.09	-17.44	\N	-0.06	-0.46	3700608	Materiais Básicos	Embalagens	Embalagens	\N	\N
@@ -2085,6 +2191,20 @@ EMAE3	69.28	EMAE - EMPRESA METROP.AGUAS ENERGIA S.A.	16.61	2.3	28.26	1.21	18.06	
 CSED3	3.64	CRUZEIRO DO SUL EDUCACIONAL S.A.	10.45	0.93	3.01	0.3	3.68	48.64	18.55	5.34	0.56	-7.73	-0.37	0.53	8.91	2.84	19.83	0.21	0.67	0.32	0.68	0.84	0.01	12.85	3581932.63	3.91	0.35	1326934889.28	Consumo Cíclico	Diversos	Serviços Educacionais	1.5	\N
 CEED4	25	CIA ESTADUAL DE DISTRIB ENER ELET-CEEE-D	-3.71	-0.51	7.17	0.22	18.39	22.22	4.98	-9.62	0.36	7.8	-0.36	0.62	-13.82	-5.98	16.33	\N	14.02	-0.43	1.43	1.08	-0.04	7.53	4166.67	-48.71	-6.73	1039763182.36	Utilidade Pública	Energia Elétrica	Energia Elétrica	\N	\N
 FTRT3B	0	FUTURETEL S.A.	0	0	0	0	0	\N	\N	\N	\N	0	0	0	-0.95	-0.9	-2.42	0	0	0.95	0.05	0	0	\N	\N	0.01	0	0	Financeiro e Outros	Outros	Outros	\N	\N
+NAFG3	64.37	NADIR FIGUEIREDO IND E COM S.A.	11.8	2.76	6.68	1.15	5.06	41.15	16.49	9.34	1.1	3.2	-2.87	1.05	23.42	9.77	15.89	0.48	1.17	0.42	0.58	2.52	-1.14	7.87	\N	23.3	5.46	508315292.42	Consumo Cíclico	Utilidades Domésticas	Utensílios Domésticos	35.19	\N
+GEPA4	26.59	RIO PARANAPANEMA ENERGIA S.A.	7.33	1.18	5.06	0.7	5.96	38.61	35.54	24.54	1.8	-6.28	-0.81	0.39	16.09	9.62	13.28	0.22	0.93	0.6	0.4	0.54	0.18	1.08	14648.12	22.48	3.62	2486743119	Utilidade Pública	Energia Elétrica	Energia Elétrica	5.95	15.82
+CRIV3	6.98	FINANCEIRA ALFA S.A.- CRED FINANC E INVS	38.68	0.66	81.37	0.04	80.16	20.26	0.43	0.9	0.35	0.07	-0.09	0.12	1.72	0.11	\N	\N	\N	0.06	0.94	131.56	-0.83	27.56	3478.75	10.5	0.18	707929532	Financeiro e Outros	Intermediários Financeiros	Soc. Crédito e Financiamento	-22.87	\N
+ARZZ3	53.85	AREZZO INDÚSTRIA E COMÉRCIO S.A.	17.17	2.08	11.74	1.07	12.67	53.38	11.41	7.8	1.34	11.79	-2.04	0.8	12.13	6.22	12.43	0.16	0.88	0.51	0.48	1.23	-0.99	25.49	89797425.17	26.05	3.16	6047801834.94	Consumo Cíclico	Comércio	Tecidos. Vestuário e Calçados	17.82	2.99
+VIVT4	45.34	TELEFÔNICA BRASIL S.A	17.31	1.09	9.78	0.6	11.64	43.43	14.73	8.32	1.44	313.65	-0.75	0.42	6.3	3.49	7.85	0.17	1.54	0.55	0.45	1.01	-0.77	3.69	\N	41.55	2.62	77440290549.6	Comunicações	Telecomunicações	Telecomunicações	-13.48	\N
+RDNI3	3.12	RNI NEGÓCIOS IMOBILIÁRIOS S.A.	-0.55	0.38	-1	0.08	-4.95	8.58	-32.6	-58.87	0.32	0.41	-0.14	0.24	-68.5	-13.84	-15.25	1.5	-3.96	0.2	0.79	1.73	0	17.03	16696.87	8.2	-5.62	135686404.8	Consumo Cíclico	Construção Civil	Incorporações	\N	13.71
+STBP3	14.81	SANTOS BRASIL PARTICIPACOES S.A.	20.41	5.58	13.15	2.53	13.31	54.02	40	25.76	5.26	-175.99	-3.04	0.48	27.33	12.4	25.39	0.04	0.1	0.45	0.55	0.92	0.33	18.3	62355733.07	2.57	0.7	12435411609.91	Bens Industriais	Transporte	Serviços de Apoio e Armazenagem	189.54	4.63
+SULA3	7.43	SUL AMERICA S.A.	52.32	1.13	-12.95	0.31	6.54	4.25	-3.34	0.83	0.43	0.85	-0.91	0.73	2.17	0.6	-8.72	-1.71	19.47	0.28	0.72	2.29	-0.95	4.58	\N	6.55	0.14	9475042424.17	Financeiro e Outros	Previdência e Seguros	Seguradoras	-23.56	\N
+BBDC3	11.54	BCO BRADESCO S.A.	9.26	0.74	14.88	0.06	15.58	30.48	3.75	6.02	0.56	0.68	-0.07	0.11	7.98	0.68	\N	\N	\N	0.08	0.91	7.77	-0.3	14.8	82219688.71	15.59	1.24	128280759596.49	Financeiro e Outros	Intermediários Financeiros	Bancos	-4.42	10.36
+CASN4	8.37	CIA CATARINENSE DE AGUAS E SANEAM.-CASAN	137.29	4.25	30.26	1.75	38.62	43.06	16.99	3.74	5.14	69.91	-2.1	0.34	3.1	1.28	6.09	0.86	6.13	0.41	0.59	1.18	29.92	8.52	\N	1.97	0.06	9343450886.5	Utilidade Pública	Água e Saneamento	Água e Saneamento	\N	\N
+BPHA3	0.62	BRASIL PHARMA S.A.	0.06	-0.24	0.8	0.99	1.66	98.02	1029.99	13896.67	8.28	-0.38	-1.18	0.12	-402.5	1669.02	-36.75	\N	0.85	-4.15	5.15	0.06	0	-68.85	\N	-2.58	10.4	70110298.74	Saúde	Comércio e Distribuição	Medicamentos e Outros Produtos	\N	\N
+PORT3	16.19	WILSON SONS HOLDINGS BRASIL S.A.	16.45	2.82	9.8	1.17	13.11	45.87	28.29	16.85	2.77	54.16	-1.41	0.42	17.14	7.08	10.54	0.96	3.34	0.41	0.59	1.14	0.3	7.67	6119023.42	5.58	0.96	6907825730	Bens Industriais	Transporte	Serviços de Apoio e Armazenagem	21.77	5.08
+AMAR3	1.45	MARISA LOJAS S.A.	-0.19	214.37	-0.35	0.04	-2.71	49.17	-17.54	-31.64	0.06	-0.15	-0.07	0.67	-111510.06	-21.22	-47.98	1458.18	-2.36	0	1	0.59	-0.01	-9.85	793689.29	0.01	-7.59	100110129.72	Consumo Cíclico	Comércio	Tecidos. Vestuário e Calçados	\N	\N
+TPIS3	3.95	TPI - TRIUNFO PARTICIP. E INVEST. S.A.	2.55	0.2	-16.54	0.06	-166.21	25.3	-0.92	5.95	0.15	-0.44	-0.06	0.39	7.68	2.32	-3.39	1.77	-149.49	0.3	0.7	0.27	-0.01	-2.92	181987.29	19.5	1.5	169840000	Bens Industriais	Transporte	Exploração de Rodovias	\N	\N
 USIM5	7.6	USINAS SID DE MINAS GERAIS S.A.	15.03	0.41	17.09	0.24	17.22	7.54	2.06	2.34	0.35	0.71	-0.45	0.67	2.7	1.58	1.73	0.01	0.63	0.58	0.35	3.43	-0.25	24.78	74989370.77	18.71	0.51	9248349554.04	Materiais Básicos	Siderurgia e Metalurgia	Siderurgia	22.16	3.72
 VSTE3	17.05	VESTE S.A. ESTILO	177.85	1.87	84.45	1.17	96.23	65.35	2.11	1	1.78	8.95	-1.71	0.66	1.05	0.66	-3.61	0.26	11.78	0.63	0.37	1.72	-1.96	-2.26	213047.21	9.1	0.1	1943708695.5	Consumo Cíclico	Comércio	Tecidos. Vestuário e Calçados	-36.21	0.28
 PGMN3	2.21	EMPREENDIMENTOS PAGUE MENOS S.A.	20.42	0.49	2.78	0.15	5.73	31.68	4.03	0.55	0.11	1.09	-0.29	1.31	2.42	0.72	5.18	0.52	2.95	0.3	0.7	1.38	-0.12	12.4	1392915.4	4.47	0.11	1285591562.19	Saúde	Comércio e Distribuição	Medicamentos e Outros Produtos	-7.5	13.38
@@ -2186,6 +2306,34 @@ ZAMP3	3.22	ZAMP S.A.	-6.65	0.68	12.95	0.19	24.97	66.34	1.72	-3.35	0.22	4.86	-0.2
 CESP6	25.25	CESP - CIA ENERGETICA DE SAO PAULO	-13.69	1.04	14.54	0.6	16.35	39.26	40.55	-43.06	5.89	6.12	-0.7	0.1	-7.57	-4.41	-4.27	0.13	1.76	0.58	0.42	3.77	0.11	-3.19	\N	24.36	-1.84	8302192833.55	Utilidade Pública	Energia Elétrica	Energia Elétrica	\N	\N
 SYNE3	8.75	SYN PROP E TECH S.A.	115.89	0.88	7.13	0.32	9.27	57.56	42.78	2.63	3.05	7.4	-0.38	0.11	0.76	0.28	4.47	0.26	2.14	0.37	0.43	1.38	-0.97	-2.81	2308533.03	9.98	0.08	1335638893.75	Financeiro e Outros	Exploração de Imóveis	Exploração de Imóveis	\N	\N
 CRPG3	33.52	TRONOX PIGMENTOS DO BRASIL S.A.	239.88	1.43	-23.73	1.01	-19	-0.97	-7.63	0.76	1.81	1.85	-3.21	0.56	0.6	0.42	-7.75	-0.17	2.79	0.71	0.29	4.9	-2.5	-1.98	9216.67	23.43	0.14	893117726.66	Materiais Básicos	Químicos	Químicos Diversos	-51.79	0.83
+BIDI3	3.4	BANCO INTER S.A.	-233.49	1.06	-89.46	0.23	-91.21	50.04	-13.62	-5.22	12.19	\N	-0.24	0.02	-0.45	-0.1	\N	\N	\N	0.22	0.78	\N	0.12	5.8	\N	3.22	-0.01	8991139764.53	Financeiro e Outros	Intermediários Financeiros	Bancos	\N	\N
+CTSA4	1.09	CIA TECIDOS SANTANENSE	-0.62	0.13	-1.83	0.05	-15.03	-22.39	-15.56	-45.69	0.28	0.59	-0.07	0.17	-21.36	-7.79	-4.49	0.76	-10.51	0.36	0.64	1.37	-0.01	-0.42	35335.03	8.28	-1.77	75683404.32	Consumo Cíclico	Tecidos. Vestuário e Calçados	Fios e Tecidos	\N	\N
+MTRE3	4.31	MITRE REALTY EMPREENDIMENTOS E PARTICIPAÇÕES S.A.	5.95	0.44	4.84	0.21	9.31	19.59	9.09	7.4	0.44	0.44	-0.94	0.48	7.43	3.52	4.19	0.41	4.51	0.47	0.51	2.61	0.1	43.88	3521842.65	9.23	0.69	428388021	Consumo Cíclico	Construção Civil	Incorporações	36.05	14.38
+BMIN3	20	BCO MERCANTIL DE INVESTIMENTOS S.A.	12.25	0.71	7.4	0.36	7.16	59.53	38.47	23.23	2.85	44.49	-0.37	0.13	5.77	2.96	\N	\N	\N	0.51	0.49	\N	-0.71	19.32	2000	28.28	1.63	93386472.23	Financeiro e Outros	Intermediários Financeiros	Bancos	13.81	6.36
+LOGN3	41.46	LOG-IN LOGISTICA INTERMODAL S.A.	153	4.83	14.3	1.26	17.67	17.49	13.39	1.25	1.91	13.53	-1.79	0.66	3.15	0.83	10.05	1.14	3.37	0.26	0.74	1.47	-1.66	19.06	1090124.58	8.87	0.28	4591644535.94	Bens Industriais	Transporte	Transporte Hidroviário	37.97	\N
+FRAS3	20.37	FRAS-LE S.A.	13.84	2.78	10.69	1.31	10.4	33.38	15.11	11.67	1.61	3.61	-3.37	0.81	20.1	9.5	11.36	-0.07	-0.28	0.47	0.52	2.48	0.28	24.32	6107548.26	7.29	1.47	5470531109.18	Bens Industriais	Material de Transporte	Material Rodoviário	33.49	2.99
+B3SA3	11.45	B3 S.A. - BRASIL, BOLSA, BALCÃO	14.87	2.99	11.6	1.23	10.99	90.08	51.54	40.21	5.98	6.66	-1.99	0.21	20.09	8.27	11.13	-0.14	-0.56	0.41	0.59	1.93	-2.82	15.48	421056036.87	3.58	0.72	59125690000	Financeiro e Outros	Serviços Financeiros Diversos	Serviços Financeiros Diversos	13.85	3.85
+TEND3	13.01	CONSTRUTORA TENDA S.A.	558.08	1.71	23.02	0.32	29.58	24.54	8.62	0.36	1.98	1.25	-0.77	0.16	0.31	0.06	3.09	0.49	6.55	0.19	0.8	1.82	-5.56	11.54	23646927.77	7.02	0.02	1479592836.92	Consumo Cíclico	Construção Civil	Incorporações	-57.9	\N
+PEAB3	46.5	CIA PARTICIPACOES ALIANCA DA BAHIA	45.03	1.01	146.66	0.69	120.08	79.97	10.92	35.56	16.01	3.25	-0.92	0.04	2.23	1.53	0.12	-0.18	-25.81	0.68	0.32	6.46	1.26	-33.28	19692	46.22	1.03	874610725.33	Financeiro e Outros	Holdings Diversificadas	Holdings Diversificadas	-11.17	2.18
+VULC3	15.86	VULCABRAS/AZALEIA S.A.	8.46	2.11	7.74	1.45	7.47	41.86	19.21	17.58	1.49	2.98	-5.32	0.98	24.97	17.2	20.75	-0.07	-0.27	0.69	0.31	3.04	92.07	17.67	8601134.87	7.29	1.82	4232452720.04	Consumo Cíclico	Tecidos. Vestuário e Calçados	Calçados	26.87	19.16
+RECV3	21.1	PETRORECÔNCAVO S.A.	9.77	1.3	9.33	0.88	9.59	31.33	22.83	21.81	2.13	110.07	-1.07	0.41	13.32	9	11.73	0.04	0.29	0.68	0.32	1.05	-0.28	56.51	43881749.65	15.85	2.11	6030194589.3	Petróleo. Gás e Biocombustíveis	Petróleo. Gás e Biocombustíveis	Exploração. Refino e Distribuição	53.39	9.72
+CEDO4	21.4	CIA FIACAO TECIDOS CEDRO CACHOEIRA	2.83	1.06	1.24	0.26	3.32	30.85	17.17	7.54	0.21	1.9	-0.53	1.21	37.29	9.14	28.3	1.64	1.93	0.25	0.75	1.36	0	11.42	23906.7	21.39	7.97	252780459.84	Consumo Cíclico	Tecidos. Vestuário e Calçados	Fios e Tecidos	10.4	\N
+HBRE3	5.9	HBR REALTY EMPREENDIMENTOS IMOBILIARIOS S/A	5.04	0.29	1.42	0.12	4.21	80.28	269.74	76.12	3.84	2.4	-0.14	0.03	5.78	2.44	8.37	0.57	2.79	0.42	0.43	1.85	0.07	21.77	2354523.32	19.67	1.14	588177191.7	Financeiro e Outros	Exploração de Imóveis	Exploração de Imóveis	-7.99	\N
+ELET3	38.81	CENTRAIS ELET BRAS S.A. - ELETROBRAS	20.2	0.79	6.63	0.34	9.94	47.75	36.45	11.97	2.42	5.39	-0.4	0.14	3.9	1.66	5.89	0.38	3.21	0.43	0.57	1.57	0.1	8.27	265516415.6	48.8	1.9	89849420226.52	Utilidade Pública	Energia Elétrica	Energia Elétrica	-19.84	1.05
+CEEB6	60.68	CIA ELETRICIDADE EST. DA BAHIA - COELBA	9	2.3	4.13	0.56	6.76	31.68	25.46	11.69	1.05	-18.64	-0.7	0.53	25.59	6.19	16.16	1.94	3.47	0.24	0.76	0.87	0.93	10.41	\N	26.34	6.74	12654281678.74	Utilidade Pública	Energia Elétrica	Energia Elétrica	22.58	9.11
+WEST3	0.94	WESTWING COMERCIO VAREJISTA S.A.	-1.9	0.41	-1.39	0.3	0.26	39.33	-38.47	-28.21	0.54	0.76	-0.74	0.55	-21.48	-15.62	-28.25	-0.48	1.65	0.73	0.27	2.86	0.37	10.76	58417.9	2.3	-0.49	104258360.06	Consumo Cíclico	Comércio	Produtos Diversos	\N	\N
+MTSA3	78.55	METISA METALURGICA TIMBOENSE S.A.	9.75	1.55	11.92	1.25	7.06	24.25	11.31	13.83	1.35	2.07	-5.59	0.93	15.85	12.82	8.68	-0.29	-2.23	0.81	0.19	4.52	-0.39	16.17	15680	50.82	8.06	538241391.5	Bens Industriais	Máquinas e Equipamentos	Máq. e Equip. Construção e Agrícolas	34.09	1.4
+MDIA3	27.93	M.DIAS BRANCO S.A. IND COM DE ALIMENTOS	9.81	1.23	8.14	0.77	8	35.3	11.19	9.28	0.91	2.73	-1.44	0.85	12.56	7.85	10.68	-0.02	-0.11	0.62	0.38	2.54	0.11	12.46	25045820.1	22.87	2.87	9522510000	Consumo não Cíclico	Alimentos Processados	Alimentos Diversos	6.12	2.31
+CEBR3	21.06	CIA ENERGETICA DE BRASILIA	8.61	1.43	6.9	1.01	3.46	50.78	61.36	49.19	4.23	2.11	-2.25	0.24	16.6	11.78	11.87	-0.66	-3.19	0.71	0.11	8.05	-0.52	-32.89	73844.81	14.59	2.42	1447641593.25	Utilidade Pública	Energia Elétrica	Energia Elétrica	14.18	9.1
+BRIV4	12.54	BCO ALFA DE INVESTIMENTO S.A.	20.23	0.65	13.35	0.04	13.55	15.61	2.39	1.58	0.32	0.59	-0.05	0.14	3.2	0.22	\N	\N	\N	0.07	0.93	7.22	1.05	20.48	124732.29	19.39	0.62	1128165604.64	Financeiro e Outros	Intermediários Financeiros	Bancos	2.02	2.61
+CEDO3	27.3	CIA FIACAO TECIDOS CEDRO CACHOEIRA	3.42	1.28	1.5	0.31	3.32	30.85	17.17	7.54	0.26	2.3	-0.64	1.21	37.29	9.14	28.3	1.64	1.93	0.25	0.75	1.36	0	11.42	13962.73	21.39	7.97	252780459.84	Consumo Cíclico	Tecidos. Vestuário e Calçados	Fios e Tecidos	10.4	\N
+RRRP3	28	3R PETROLEUM ÓLEO E GÁS S.A	42.96	1.28	3.97	0.33	9.01	31.26	24.1	2.22	0.96	9.01	-0.4	0.35	2.97	0.78	10.73	1.62	5.03	0.26	0.74	1.27	-0.66	178.26	95669801.58	21.96	0.65	6765673270.02	Petróleo. Gás e Biocombustíveis	Petróleo. Gás e Biocombustíveis	Exploração. Refino e Distribuição	\N	1.37
+SOND5	54.95	SONDOTECNICA ENGENHARIA SOLOS S.A.	26.37	2.33	10.52	1.4	0.79	32.23	7.82	3.12	0.82	3.82	-4	1.7	8.83	5.31	7.43	-0.5	-2.28	0.6	0.4	2.29	-0.41	27.24	0	23.6	2.08	39384560	Bens Industriais	Construção e Engenharia	Engenharia Consultiva	-5.98	\N
+MULT3	24.68	MULTIPLAN - EMPREEND IMOBILIARIOS S.A.	13.53	2.06	10.41	1.26	11.82	86.07	67.22	51.72	7	23.76	-1.51	0.18	15.24	9.34	12.46	0.28	1.42	0.61	0.39	1.48	0.4	10.55	94622337.35	11.8	1.8	14598489262.5	Financeiro e Outros	Exploração de Imóveis	Exploração de Imóveis	17.96	4.15
+ROMI3	11.13	INDUSTRIAS ROMI S.A.	7.1	0.88	6.94	0.46	9.78	29.1	12.69	12.41	0.88	1.34	-1.19	0.52	12.4	6.46	7.2	0.37	2.89	0.52	0.48	2.25	-0.21	10.54	2019152.1	12.64	1.57	1029536754.35	Bens Industriais	Máquinas e Equipamentos	Máq. e Equip. Industriais	11.68	6.69
+CPLE6	10.15	CIA PARANAENSE DE ENERGIA - COPEL	15.64	1.22	8.72	0.54	11.42	21.53	15.88	8.85	1.38	7.78	-0.72	0.39	7.83	3.45	7.72	0.38	2.7	0.44	0.55	1.39	0.22	9.35	129109620.74	8.19	0.64	29899693364.18	Utilidade Pública	Energia Elétrica	Energia Elétrica	13.08	3.79
+VAMO3	9.28	VAMOS LOCAÇÃO DE CAMINHÕES. MÁQUINAS E EQUIP. S.A.	17.04	2.09	4.69	0.46	9.36	46.88	35.62	9.8	1.67	6.47	-0.64	0.27	12.29	2.69	12.16	2.09	4.68	0.22	0.78	1.34	-1.06	45.32	55366045.1	4.43	0.54	10226045508.94	Bens Industriais	Máquinas e Equipamentos	Máq. e Equip. Construção e Agrícolas	39.7	3.44
+CLSC3	72	CENTRAIS ELET DE SANTA CATARINA S.A.	4.86	0.89	3.28	0.22	6.15	16.17	8.12	5.48	0.27	-21.07	-0.31	0.84	18.3	4.59	11.26	0.74	2.72	0.25	0.75	0.96	0.34	6.3	32316	80.9	14.8	2904129493.54	Utilidade Pública	Energia Elétrica	Energia Elétrica	28.18	7.65
 \.
 
 
@@ -5954,6 +6102,2201 @@ WLMM3	2.54	5.66	1.68	1.45	1.46	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00
 WLMM4	2.07	3.32	1.58	1.11	1.57	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00
 YDUQ3	0.00	1.24	2.28	1.55	1.07	6.98	0.86	8.12	2.36	0.83	1.31	0.49	2.60	0.00	0.00	0.00
 ZAMP3	0.00	0.00	0.00	0.47	0.50	0.23	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00
+\.
+
+
+--
+-- Data for Name: dyfinal; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY public.dyfinal (ticker, "2024", "2023", "2022", "2021", "2020", "2019", "2018", "2017", "2016", "2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008") FROM stdin;
+AALR3	0.00	0.00	0.00	0.00	0.79	0.46	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N	\N	\N
+ABCB4	7.53	5.32	6.79	6.93	0.68	4.28	4.26	4.21	7.81	11.16	4.88	4.77	2.34	4.81	3.69	4.32	9.63
+ABEV3	6.47	5.32	5.34	4.57	2.77	2.79	3.65	2.89	4.28	3.90	5.62	2.19	4.51	4.65	5.71	6.52	9.79
+ADHM3	\N	\N	\N	\N	\N	\N	0.00	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+AERI3	0.00	0.00	1.25	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+AESB3	0.64	0.00	1.12	2.16	6.52	5.74	9.18	8.27	19.61	\N	\N	\N	\N	\N	\N	\N	\N
+AFLT3	\N	3.06	2.55	8.89	6.04	0.95	3.25	11.92	13.27	5.77	9.95	4.08	\N	\N	\N	\N	\N
+AGRO3	12.62	12.02	18.24	10.09	3.27	5.71	5.83	2.36	5.96	16.08	0.00	1.60	0.00	0.00	\N	\N	\N
+AGXY3	0.00	1.10	1.14	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+AHEB3	\N	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+AHEB5	\N	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+AHEB6	\N	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+ALLD3	23.85	8.90	16.69	5.06	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+ALOS3	3.58	1.96	1.51	1.06	0.00	0.92	1.81	1.86	2.77	2.99	2.96	2.24	1.17	0.20	\N	\N	\N
+ALPA3	0.00	0.00	0.00	1.28	0.13	0.00	2.63	1.87	3.18	9.55	4.01	2.10	1.56	2.60	2.01	1.76	5.77
+ALPA4	0.00	0.00	0.00	1.17	0.13	0.00	2.80	2.00	3.07	17.08	3.95	2.17	1.81	2.84	2.45	1.89	4.76
+ALPK3	0.00	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+ALSC3	\N	\N	\N	\N	\N	0.96	0.61	\N	0.76	12.34	1.94	1.89	0.74	0.63	\N	\N	\N
+ALUP11	4.10	5.78	4.50	3.63	2.20	1.71	4.16	2.98	4.48	10.08	13.86	0.00	\N	\N	\N	\N	\N
+ALUP3	4.10	5.80	4.62	3.62	3.65	1.88	3.38	2.01	2.37	0.00	0.00	\N	\N	\N	\N	\N	\N
+ALUP4	4.13	5.72	4.44	3.62	2.23	1.87	4.65	3.44	4.24	0.00	0.00	\N	\N	\N	\N	\N	\N
+AMAR3	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	1.00	0.76	0.63	0.92	4.03	1.20	\N	\N
+AMBP3	0.00	0.82	1.45	0.22	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+AMER3	0.00	0.00	6.43	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	\N	\N	0.62	\N	\N	\N
+ANDG3B	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+ANDG4B	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+ANIM3	0.00	0.00	0.00	0.00	0.00	0.06	2.46	0.36	2.28	5.77	0.54	0.00	\N	\N	\N	\N	\N
+APER3	0.00	0.74	0.26	0.00	0.16	0.00	0.00	0.00	0.00	2.58	134.92	10.07	5.67	0.25	\N	\N	\N
+APTI3	22.22	0.00	0.00	11.12	0.00	0.00	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N	\N
+APTI4	1.38	0.00	0.00	17.48	0.00	0.00	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N	\N
+ARML3	1.80	1.15	3.18	0.28	0.00	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+ARZZ3	3.37	2.58	2.36	1.11	0.79	2.26	2.36	3.91	3.53	4.20	2.37	1.97	0.77	0.83	\N	\N	\N
+ASAI3	0.00	0.37	0.85	1.51	0.00	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+ATMP3	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	7.58	3.18	6.94	8.68	5.96	4.20	3.61
+ATOM3	0.00	15.03	1.85	10.38	0.00	0.00	0.00	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+AURA33	5.08	5.44	4.10	13.39	0.00	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+AURE3	15.49	22.78	0.71	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+AVLL3	\N	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+AZEV3	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	5.08	2.04	0.00	0.00	0.00	\N	\N	\N
+AZEV4	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	5.64	2.89	0.00	0.00	0.00	\N	\N	\N
+AZUL4	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N	\N	\N
+B3SA3	5.04	2.90	3.69	11.18	3.65	2.27	2.79	2.15	3.35	8.38	5.06	7.94	5.25	9.27	6.54	3.43	\N
+BAHI3	\N	0.00	0.00	0.00	0.00	0.00	0.00	1.02	0.00	\N	\N	\N	\N	\N	\N	\N	\N
+BALM3	7.84	5.49	12.84	2.18	5.70	0.00	0.27	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+BALM4	7.76	5.24	27.26	3.16	7.52	0.00	0.21	0.21	3.97	4.23	23.73	1.29	0.29	0.77	\N	\N	\N
+BAUH4	1.04	1.48	0.00	0.00	0.89	0.62	2.40	3.43	2.95	6.25	1.83	\N	\N	\N	\N	\N	\N
+BAZA3	7.62	5.61	10.44	6.30	8.43	3.77	2.65	1.66	7.39	400.98	281.46	348.85	424.47	288.75	457.41	531.82	645.00
+BBAS3	10.84	6.76	9.92	6.54	3.17	3.84	2.71	2.47	2.31	9.97	5.82	7.26	4.75	5.97	2.96	2.39	3.88
+BBDC3	11.88	9.78	2.45	5.47	2.42	4.94	2.66	2.77	1.52	5.29	2.82	1.81	1.94	2.80	1.21	0.70	1.20
+BBDC4	11.63	9.57	2.39	5.28	2.36	5.10	2.51	2.98	2.74	6.18	3.01	2.15	2.06	2.51	1.19	0.66	1.11
+BBML3	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+BBSE3	7.43	10.36	6.03	5.14	12.08	4.59	12.93	6.90	7.47	10.01	5.61	3.50	\N	\N	\N	\N	\N
+BDLL3	\N	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	12.98	\N	\N	\N	\N	\N
+BDLL4	\N	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	31.56	11.36	13.90	8.70	22.34	8.28	\N	\N
+BEEF11	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+BEEF3	3.00	7.37	4.42	10.55	3.17	0.00	0.00	2.68	0.00	0.00	0.00	0.00	3.19	1.37	0.00	0.00	8.96
+BEES3	7.48	6.57	7.49	4.98	3.58	4.78	5.76	3.69	3.75	7.44	13.20	20.00	22.22	1.02	1.80	1.87	2.61
+BEES4	6.16	6.21	5.93	4.19	3.23	4.45	5.06	4.08	4.98	9.11	31.46	21.74	24.49	2.13	1.80	1.86	1.67
+BFRE11	\N	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+BFRE12	\N	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+BGIP3	6.67	10.51	3.78	3.16	1.64	1.29	4.25	10.24	1.18	3.85	0.00	\N	6.66	\N	\N	\N	\N
+BGIP4	7.70	13.76	6.39	5.10	2.89	2.03	4.87	12.08	1.65	4.81	4.33	3.40	7.22	7.05	\N	\N	\N
+BHIA3	0.00	0.00	0.00	0.00	0.00	0.00	0.27	0.34	0.07	11.92	0.00	10.26	0.00	\N	\N	\N	\N
+BIDI11	\N	\N	0.42	0.22	0.17	0.23	0.00	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N
+BIDI3	\N	\N	0.42	0.21	0.17	0.25	0.00	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N
+BIDI4	\N	\N	0.00	0.22	0.17	1.10	6.47	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N
+BIOM3	\N	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.09	0.09	\N	\N	\N	\N
+BLAU3	3.15	2.44	3.27	0.70	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+BLUT3	\N	\N	\N	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+BLUT4	\N	\N	\N	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+BMEB3	4.76	7.02	5.21	9.83	3.78	0.41	0.00	0.00	11.57	4.95	5.39	4.78	3.75	5.76	\N	\N	\N
+BMEB4	5.03	9.36	5.72	8.98	4.22	5.12	19.68	7.35	15.79	26.24	9.03	7.74	5.66	8.01	\N	\N	\N
+BMGB4	14.15	11.53	16.68	10.16	2.87	2.55	0.00	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N
+BMIN3	6.36	3.02	0.00	0.00	7.00	0.24	0.23	5.21	0.18	0.01	0.00	0.55	\N	0.41	\N	\N	\N
+BMIN4	9.15	3.67	6.41	11.34	7.04	7.04	10.20	7.38	1.24	5.33	6.62	4.92	2.21	3.13	\N	\N	\N
+BMKS3	11.93	16.05	5.66	3.33	3.99	3.05	6.31	10.29	7.90	14.59	9.57	10.98	27.12	111.43	\N	\N	\N
+BMOB3	4.01	5.34	0.94	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+BNBR3	2.72	3.24	5.89	6.54	3.54	3.88	4.55	6.14	3.29	20.74	7.88	6.67	0.42	3.12	\N	\N	\N
+BOAS3	\N	\N	3.68	1.45	0.43	0.00	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+BOBR3	\N	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+BOBR4	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00
+BPAC11	2.41	2.07	2.75	2.58	0.96	1.39	2.39	0.45	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+BPAC3	1.67	1.45	1.70	1.40	0.66	0.88	4.12	2.84	2.04	0.00	0.00	\N	\N	\N	\N	\N	\N
+BPAC5	3.26	2.65	3.91	4.02	1.75	2.05	6.20	9.32	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+BPAN4	2.65	2.51	4.60	2.11	3.86	0.73	4.16	0.00	0.18	0.04	0.00	0.00	1.36	0.00	0.25	\N	\N
+BPAR3	2.24	2.57	7.66	8.08	12.56	0.00	0.00	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+BPAT33	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+BPHA3	\N	\N	\N	\N	\N	\N	0.00	0.00	0.00	0.00	\N	\N	0.05	\N	\N	\N	\N
+BRAP3	14.05	12.09	12.25	51.85	3.84	4.43	7.55	5.66	1.07	29.06	18.96	9.00	9.94	8.29	6.03	7.59	16.86
+BRAP4	15.00	11.84	11.61	49.82	3.81	4.51	7.66	5.33	0.99	27.65	16.86	7.93	10.08	9.99	6.65	8.88	17.88
+BRBI11	9.55	8.66	11.51	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+BRBI3	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+BRBI4	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+BRFS3	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	1.58	2.17	1.51	2.04	0.54	2.08	1.22	0.59	\N
+BRGE11	\N	2.40	4.91	4.58	3.50	2.10	7.65	3.42	0.00	0.00	2.54	\N	\N	\N	\N	\N	\N
+BRGE12	\N	0.00	0.00	0.00	\N	0.01	0.03	0.07	0.07	0.59	0.00	0.70	\N	\N	\N	\N	\N
+BRGE3	\N	0.00	0.00	0.01	\N	0.01	0.04	0.16	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+BRGE5	\N	2.03	2.73	2.97	2.41	0.65	11.42	0.00	4.72	0.00	0.00	\N	\N	\N	\N	\N	\N
+BRGE6	\N	2.29	6.30	8.17	3.81	6.10	6.07	6.96	0.00	1695.52	9.93	\N	\N	\N	\N	\N	\N
+BRGE7	\N	0.00	11.06	8.86	\N	0.00	6.12	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+BRGE8	\N	1.00	3.40	3.17	3.68	2.54	7.05	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+BRIN3	\N	\N	\N	\N	\N	\N	\N	\N	\N	0.13	12.84	9.45	4.92	20.53	\N	\N	\N
+BRIT3	2.13	0.86	0.03	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+BRIV3	2.16	1.46	0.58	0.26	0.00	0.00	0.00	2.42	3.32	1.37	1.33	1.19	\N	\N	\N	\N	\N
+BRIV4	2.41	2.88	6.57	8.22	5.30	5.13	7.99	8.41	12.36	6.79	5.84	3.60	\N	\N	\N	\N	\N
+BRKM3	0.00	0.00	6.72	13.47	0.00	2.85	4.48	3.18	9.32	4.48	6.80	0.00	8.55	9.83	0.00	0.00	21.48
+BRKM5	0.00	0.00	7.14	13.26	0.00	3.00	4.29	3.21	8.13	2.55	4.12	0.00	6.20	8.71	0.00	0.00	20.19
+BRKM6	\N	0.00	0.00	1.80	0.00	2.53	0.00	1.37	0.67	1.89	0.00	\N	\N	\N	\N	\N	\N
+BRML3	\N	\N	0.65	0.00	0.00	4.93	0.73	0.52	0.00	4.12	2.86	2.79	0.56	0.91	\N	\N	\N
+BRPR3	\N	\N	1.62	2.69	0.87	0.00	1.99	0.44	0.00	27.82	61.39	5.52	1.52	0.59	\N	\N	\N
+BRQB3	\N	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N	\N
+BRSR3	5.62	6.62	8.23	8.04	4.17	5.44	8.65	1.11	5.89	11.41	6.30	3.10	4.86	5.27	\N	\N	\N
+BRSR5	4.11	5.87	4.47	5.53	2.77	4.08	6.54	2.39	3.18	0.00	1.66	0.00	2.04	0.00	0.00	0.00	0.00
+BRSR6	5.38	7.80	7.95	8.57	3.69	4.51	6.82	3.99	5.80	15.42	5.33	4.30	4.84	3.85	4.08	3.81	12.86
+BSEV3	\N	\N	\N	\N	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.09	\N	\N	\N	\N	\N
+BSLI3	0.74	0.36	5.81	1.86	2.56	0.50	0.00	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+BSLI4	0.74	0.42	8.00	2.99	4.27	0.65	0.00	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+BTTL4	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+CALI3	2.38	2.23	52.30	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+CALI4	\N	0.00	9.46	0.00	0.00	5.58	3.99	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+CAMB3	1.90	2.07	2.57	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00
+CAMB4	0.24	0.00	1.28	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	\N	2.12	\N	\N	\N	\N
+CAML3	3.42	3.48	4.13	2.21	5.47	1.80	2.43	2.27	0.00	\N	\N	\N	\N	\N	\N	\N	\N
+CASH3	44.80	0.00	0.00	0.50	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N
+CASN3	0.12	0.23	0.27	0.00	0.29	0.00	0.00	0.00	0.00	0.00	0.00	\N	0.05	\N	\N	\N	\N
+CASN4	0.18	0.36	0.54	0.00	0.45	0.00	0.00	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+CATA3	18.96	0.00	0.00	15.54	0.00	0.00	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N	\N
+CATA4	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+CBAV3	0.00	6.81	2.49	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+CBEE3	\N	0.00	2.65	0.30	2.00	1.23	0.00	0.00	0.00	0.66	3.78	4.63	0.53	0.70	\N	\N	\N
+CCRO3	3.53	1.39	3.53	1.48	3.67	4.20	5.65	4.28	4.85	5.33	5.90	5.18	3.93	10.47	6.99	6.69	11.88
+CCXC3	\N	\N	\N	\N	0.00	0.00	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N	\N
+CEAB3	0.00	0.00	0.00	0.00	0.00	1.40	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+CEBR3	9.27	15.20	34.76	356.91	1.33	0.09	0.66	0.00	0.00	0.00	0.00	15.41	\N	\N	\N	\N	\N
+CEBR5	10.29	16.68	31.62	360.30	2.53	6.02	11.61	0.00	0.00	0.00	0.00	18.38	\N	\N	\N	\N	\N
+CEBR6	10.74	16.39	38.54	405.84	1.26	0.10	0.66	0.00	0.00	0.00	0.00	22.07	\N	\N	\N	\N	\N
+CEDO3	\N	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	2.38	\N	4.36	19.87	\N	\N	\N
+CEDO4	\N	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	2.06	6.22	5.79	17.70	\N	\N	\N
+CEEB3	13.17	11.21	16.26	19.55	1.12	9.20	1.86	1.98	8.03	4.39	2.53	3.82	\N	4.17	\N	\N	\N
+CEEB5	9.48	8.45	20.57	17.20	1.16	9.45	2.31	0.96	7.55	4.60	2.58	\N	\N	4.35	\N	\N	\N
+CEEB6	8.62	0.00	0.00	11.87	0.90	0.00	0.00	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+CEED3	\N	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+CEED4	\N	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+CEGR3	2.04	1.24	0.81	4.36	0.16	3.56	2.76	0.00	0.00	1.63	4.32	5.00	\N	\N	\N	\N	\N
+CEPE3	\N	0.00	3.34	2.37	1.28	0.00	0.00	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+CEPE5	\N	0.00	11.98	11.55	4.81	4.81	3.74	8.70	1.85	3.33	7.77	1.12	3.79	6.63	\N	\N	\N
+CEPE6	\N	0.00	10.94	10.90	4.73	8.38	5.66	12.03	5.85	5.14	9.67	\N	\N	7.61	\N	\N	\N
+CESP3	\N	0.00	0.00	9.86	8.19	2.73	0.18	4.35	3.86	47.59	14.19	7.12	9.31	2.58	\N	\N	\N
+CESP5	\N	0.00	0.00	4.61	10.32	5.70	13.68	0.00	18.91	27.61	13.77	8.23	9.83	5.42	\N	\N	\N
+CESP6	\N	0.00	0.00	10.09	7.86	2.78	0.17	3.66	3.57	36.23	11.86	6.32	7.92	2.13	\N	\N	\N
+CGAS3	10.46	2.57	10.80	8.58	5.20	14.52	8.65	22.24	37.39	23.44	5.96	4.08	7.03	9.92	37.04	22.81	20.16
+CGAS5	10.61	2.90	12.43	9.75	6.07	16.79	10.76	24.27	40.06	26.73	7.18	4.56	8.20	11.67	44.00	34.82	25.69
+CGRA3	8.56	10.43	12.58	3.08	7.09	5.06	5.64	5.76	8.39	12.57	5.24	4.69	5.00	10.86	10.90	7.97	14.69
+CGRA4	8.29	10.12	14.09	3.22	7.08	5.11	5.41	5.46	8.61	14.33	5.42	4.44	5.04	11.05	10.37	7.93	14.81
+CIEL3	6.42	6.08	4.95	8.19	1.81	6.67	17.81	4.26	2.27	2.57	4.69	4.47	5.24	6.50	16.05	0.00	\N
+CLSA3	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+CLSC3	5.39	5.82	7.28	6.57	3.87	2.72	1.09	0.00	5.07	19.07	0.52	3.96	0.88	0.00	7.65	6.05	2.19
+CLSC4	6.45	6.41	7.60	6.96	5.10	3.40	0.51	0.00	6.31	39.39	1.35	\N	\N	\N	\N	\N	\N
+CMIG3	9.32	6.93	7.91	6.57	3.91	3.95	1.24	4.09	8.89	10.65	27.22	9.48	28.54	12.13	27.94	29.59	17.78
+CMIG4	11.46	9.42	11.78	9.42	4.51	5.66	4.94	4.00	9.52	11.76	30.09	9.93	29.60	10.55	23.89	24.63	14.90
+CMIN3	9.98	10.06	19.59	7.50	0.00	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+CMSA3	\N	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N	\N
+CMSA4	\N	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N	\N
+CNSY3	\N	\N	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N	\N
+COCE3	2.74	0.62	3.40	6.14	2.93	3.60	2.87	4.09	2.20	1.60	2.01	6.16	7.89	13.46	9.67	\N	\N
+COCE5	3.22	0.72	4.36	5.08	3.66	2.00	2.39	3.85	2.00	1.62	2.73	7.57	9.42	15.70	13.32	21.22	31.31
+COCE6	6.28	2.23	13.78	19.69	9.66	0.00	0.00	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+COGN3	0.00	0.00	0.00	0.00	0.00	0.88	4.42	2.35	2.28	1.74	9.81	1.54	0.00	\N	\N	\N	\N
+CORR3	\N	2762.62	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+CORR4	\N	91.30	0.00	8.11	0.00	0.00	6.69	4.38	8.88	5.90	0.00	\N	\N	\N	\N	\N	\N
+CPFE3	11.63	8.72	10.26	14.75	6.26	0.90	1.11	1.31	0.94	0.00	6.53	5.80	9.07	7.75	13.48	14.03	20.00
+CPLE11	4.28	2.42	11.59	11.83	0.00	0.00	0.00	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+CPLE3	3.62	2.70	9.10	19.15	4.34	3.37	4.00	14.19	5.78	6.29	10.62	12.59	4.19	7.04	3.49	9.20	9.68
+CPLE5	3.10	1.83	3.83	3.82	9.07	5.74	10.00	26.34	11.25	5.56	10.59	\N	\N	7.83	\N	\N	\N
+CPLE6	3.56	2.70	8.67	20.03	4.48	3.60	3.17	9.97	4.17	3.43	6.02	9.75	3.33	6.14	2.97	9.04	10.19
+CPRE3	\N	0.00	0.00	0.00	0.00	0.00	0.04	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+CREM3	\N	\N	\N	\N	\N	\N	\N	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N
+CRFB3	0.00	1.16	2.36	4.99	1.32	0.54	1.79	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N
+CRIV3	2.96	0.00	2.77	0.00	0.64	0.34	1.05	0.00	0.00	0.00	0.00	3.71	\N	\N	\N	\N	\N
+CRIV4	3.06	4.13	8.96	7.96	5.36	4.43	6.79	7.94	9.72	9.45	9.50	7.07	\N	\N	\N	\N	\N
+CRPG3	0.83	7.67	9.35	7.60	0.41	2.72	16.11	1.94	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+CRPG5	0.98	10.09	17.31	9.54	0.47	3.31	16.25	3.51	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+CRPG6	0.94	10.34	18.09	9.19	0.48	3.31	17.08	2.61	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+CSAB3	\N	1.97	2.88	2.86	5.64	3.63	5.87	14.12	5.02	3.74	\N	5.55	8.27	\N	\N	\N	\N
+CSAB4	\N	1.35	2.43	4.79	6.83	4.58	6.84	15.91	5.06	5.26	11.49	6.12	9.29	\N	14.22	\N	\N
+CSAN3	3.50	2.21	2.50	4.70	1.98	1.44	3.31	4.49	5.64	3.91	3.85	1.87	1.49	1.82	\N	\N	\N
+CSED3	4.33	3.35	3.48	0.00	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+CSMG3	14.92	13.30	1.63	5.90	28.85	1.91	7.50	5.75	1.64	0.71	5.54	4.74	3.92	6.96	12.50	8.75	2.86
+CSNA3	11.53	9.10	18.75	8.65	0.04	7.73	0.00	0.00	0.00	5.95	15.40	6.99	11.68	12.83	8.25	9.21	15.61
+CSRN3	8.63	7.45	18.92	13.71	0.87	6.25	3.92	4.57	7.40	6.56	5.17	\N	9.81	7.67	\N	\N	\N
+CSRN5	8.97	10.40	23.08	11.35	1.01	7.18	4.79	5.78	4.15	4.21	2.63	\N	10.52	\N	\N	\N	\N
+CSRN6	8.34	8.19	21.21	10.07	1.05	7.58	4.82	0.00	4.18	0.00	2.28	\N	9.81	\N	\N	\N	\N
+CSUD3	5.59	5.95	6.35	3.72	2.02	2.09	5.09	3.68	6.33	5.70	2.88	\N	4.01	7.25	\N	\N	\N
+CTCA3	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+CTKA3	\N	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	\N	\N	4.20	\N	\N	\N
+CTKA4	\N	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	\N	\N	4.73	4.19	\N	\N
+CTNM3	\N	\N	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	\N	\N	0.16	0.16	\N	\N
+CTNM4	\N	\N	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	\N	\N	0.16	0.16	\N	\N
+CTSA3	\N	\N	0.00	0.00	1.21	0.62	46.34	1.00	0.00	0.49	10.16	3.15	3.55	4.02	3.89	\N	\N
+CTSA4	\N	\N	0.00	0.00	1.49	0.63	33.37	1.12	0.00	0.64	10.68	4.01	3.64	4.38	4.24	\N	\N
+CTSA8	\N	\N	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+CURY3	10.91	5.70	4.22	8.64	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+CVCB3	0.00	0.00	0.00	0.00	0.00	1.02	0.82	0.95	3.88	5.66	1.50	0.00	\N	\N	\N	\N	\N
+CXSE3	6.20	7.83	8.08	3.11	0.00	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+CYRE3	4.91	3.54	4.42	7.18	4.57	6.52	7.91	0.79	3.08	3.69	2.55	4.24	2.00	2.86	3.30	1.22	0.69
+DASA3	0.00	0.00	0.71	1.46	0.00	0.65	1.55	0.18	0.57	0.62	0.91	0.48	0.24	0.65	0.61	0.74	1.14
+DESK3	0.27	0.14	0.16	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+DEXP3	5.06	3.05	5.71	4.61	0.55	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	\N
+DEXP4	5.40	3.42	6.52	4.97	3.06	0.00	0.00	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+DIRR3	1.86	2.10	7.54	5.65	6.56	6.36	9.14	0.00	6.92	15.26	9.34	4.27	2.75	4.63	2.05	0.00	\N
+DMMO11	\N	\N	\N	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+DMMO3	\N	\N	\N	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+DMVF3	0.00	0.00	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+DOHL3	\N	0.00	1.20	0.98	2.07	0.00	0.00	0.00	0.00	0.00	0.00	\N	\N	\N	5.93	\N	\N
+DOHL4	\N	0.00	3.06	3.39	8.59	0.00	6.43	6.95	0.00	2.12	4.45	4.36	5.83	6.09	5.22	\N	\N
+DOTZ3	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+DTCY3	\N	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+DTCY4	\N	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+DXCO3	3.99	2.71	7.26	8.25	2.43	1.49	7.11	1.16	0.00	6.27	2.49	1.11	0.96	1.60	0.00	0.00	\N
+EALT3	6.05	4.05	7.86	2.59	0.49	0.91	21.21	161.80	74.67	124.56	262.18	\N	\N	\N	\N	\N	\N
+EALT4	4.82	3.47	14.29	4.67	1.13	2.36	17.33	19.92	29.22	11.33	13.52	2.49	0.00	0.00	0.00	0.00	0.00
+ECOR3	4.41	0.88	0.19	0.00	0.00	0.00	7.80	3.57	1.76	8.80	14.17	6.30	2.50	3.65	2.79	\N	\N
+ECPR3	\N	\N	\N	0.00	0.00	1.40	0.00	0.00	0.00	0.00	0.00	\N	52.71	\N	3.46	\N	\N
+ECPR4	\N	\N	\N	0.00	0.00	1.39	0.00	0.00	0.00	0.00	0.00	\N	59.82	\N	3.58	\N	\N
+EEEL3	\N	0.00	42.83	8.05	3.53	3.61	6.87	12.82	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+EEEL4	\N	0.00	33.87	9.49	5.24	3.38	7.14	14.14	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+EGIE3	5.30	6.47	8.18	4.95	4.24	3.50	11.33	8.76	6.68	4.78	6.51	12.07	8.50	10.85	6.92	8.54	22.99
+EKTR3	20.45	10.91	22.30	6.88	1.42	4.19	0.00	8.15	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+EKTR4	21.15	10.58	22.50	8.34	1.34	4.43	0.00	8.31	8.05	15.81	12.26	6.91	8.93	10.65	\N	\N	\N
+ELEK3	\N	\N	\N	\N	0.34	2.00	9.43	0.00	0.00	0.00	\N	8.55	0.17	1.36	\N	\N	\N
+ELEK4	\N	\N	\N	\N	0.17	2.06	9.39	0.00	0.00	0.00	\N	7.84	0.13	1.58	\N	\N	\N
+ELET3	1.16	0.52	1.24	7.22	5.60	2.27	0.00	0.00	0.00	0.00	14.48	11.35	33.82	6.12	83.19	9.28	\N
+ELET5	2.52	2.41	3.45	4.86	5.00	2.20	0.00	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+ELET6	4.69	3.22	2.44	8.23	6.38	2.76	0.00	8.17	0.00	1.11	43.71	30.72	31.96	10.10	16.06	13.18	\N
+ELMD3	0.48	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+ELPL3	\N	0.00	0.00	0.00	0.00	0.00	0.00	0.77	0.95	0.00	3.38	\N	\N	15.44	\N	\N	\N
+EMAE3	2.75	21.33	4.83	39.40	5.05	0.00	0.00	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+EMAE4	4.42	5.59	1.33	11.00	2.07	1.94	9.08	5.89	1.39	0.00	5.10	0.00	0.00	1.69	0.63	\N	\N
+EMBR3	0.00	0.00	0.00	0.00	0.00	0.03	0.59	1.56	0.63	0.60	1.40	1.37	1.50	2.22	3.38	2.89	6.31
+ENAT3	0.00	0.75	8.44	1.45	9.68	12.50	18.94	1.74	3.56	3.33	2.88	0.00	0.00	0.00	\N	\N	\N
+ENBR3	\N	5.90	10.55	4.78	0.99	2.04	8.20	0.86	8.59	1.36	11.12	7.40	4.03	1.91	\N	\N	\N
+ENEV3	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	1.58	\N
+ENGI11	3.78	4.64	2.67	6.82	1.19	7.45	2.37	2.37	2.51	7.87	6.02	5.89	6.74	7.31	8.89	0.00	\N
+ENGI3	2.54	2.69	1.66	5.31	0.73	8.43	2.13	1.31	2.29	7.12	6.47	5.75	4.60	5.52	8.65	0.00	\N
+ENGI4	4.35	5.61	3.17	10.86	1.51	2.31	2.37	2.93	2.42	8.70	5.63	2.81	1.11	1.87	0.00	0.00	\N
+ENJU3	0.00	0.00	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+ENMA3B	\N	0.00	0.00	9.15	0.61	5.10	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N	\N
+ENMA6B	\N	0.00	0.00	5.50	1.58	0.00	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N	\N
+ENMT3	3.93	3.88	4.34	6.77	0.00	3.54	9.93	0.00	0.01	2.75	0.00	\N	\N	\N	\N	\N	\N
+ENMT4	3.93	3.28	4.32	4.87	1.72	3.46	10.70	2.00	0.02	2.82	0.00	\N	\N	\N	\N	\N	\N
+EPAR3	45.51	16.65	21.57	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+EQPA3	11.00	2.76	7.64	7.98	8.48	3.55	2.69	2.40	0.43	0.00	0.00	\N	\N	\N	\N	\N	\N
+EQPA5	9.21	2.34	5.68	5.89	4.75	2.17	1.34	2.23	2.08	0.00	0.00	\N	\N	\N	\N	\N	\N
+EQPA6	10.83	1.47	4.96	3.84	2.62	1.80	0.48	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+EQPA7	9.21	2.34	6.31	5.99	5.21	1.72	1.70	2.34	1.60	0.00	0.00	\N	\N	\N	\N	\N	\N
+EQTL3	1.54	0.98	2.39	3.24	1.42	1.67	1.94	0.93	1.42	2.91	1.51	1.12	2.68	15.97	5.06	32.38	22.05
+ESPA3	0.00	0.00	0.00	1.70	0.00	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+ESTR3	\N	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+ESTR4	\N	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+ETER3	6.23	3.99	8.57	1.19	0.00	0.00	0.00	0.00	0.00	15.22	16.26	10.97	12.47	13.49	12.47	17.57	38.70
+EUCA3	5.01	9.07	0.00	5.57	0.00	0.07	0.70	0.75	0.24	0.44	0.00	3.30	3.57	5.16	3.78	0.00	\N
+EUCA4	5.66	10.22	0.00	8.47	0.00	0.64	1.77	1.49	0.36	1.70	0.00	3.60	3.58	5.00	5.92	0.00	\N
+EVEN3	14.90	5.19	3.41	13.19	1.29	0.00	0.00	0.00	5.10	9.22	7.82	3.96	3.08	5.38	3.20	1.55	2.94
+EZTC3	2.12	1.09	5.82	2.12	0.70	0.28	2.14	18.11	6.94	9.73	5.07	2.41	2.71	3.32	3.28	2.56	6.14
+FBMC3	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+FBMC4	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	11.91	6.27	8.59	3.73	\N	\N
+FESA3	3.39	3.38	8.25	1.51	2.69	3.68	4.38	6.15	6.25	9.27	0.00	0.88	\N	\N	\N	\N	\N
+FESA4	12.55	9.33	11.69	1.81	5.11	7.02	6.41	6.92	12.10	15.97	4.19	2.19	2.88	6.10	3.82	9.70	16.44
+FHER3	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	1.69
+FIBR3	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+FIEI3	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	37.04	0.00	0.00	1.16	10.69	6.56	0.00	15.12
+FIGE3	0.38	0.33	0.21	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.14	\N	\N	\N	\N	\N	\N
+FIGE4	\N	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.16	\N	\N	\N	\N	\N	\N
+FIQE3	8.48	3.92	2.96	1.30	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+FLEX3	\N	\N	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+FLRY3	4.12	2.43	6.57	5.47	2.85	3.52	4.73	2.12	7.54	0.64	8.92	2.84	1.25	1.21	1.81	0.00	\N
+FNCN3	\N	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N	\N
+FRAS3	3.39	2.79	3.41	1.98	1.15	4.19	5.20	5.79	2.62	3.78	2.97	2.55	1.99	6.89	4.90	4.21	\N
+FRIO3	\N	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	\N	\N	12.41	\N	\N	\N
+FRTA3	\N	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+FTRT3B	\N	\N	\N	\N	\N	\N	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+G2DI33	\N	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+GBIO33	\N	\N	\N	\N	\N	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N	\N	\N
+GEPA3	10.30	11.15	5.38	9.19	5.36	6.20	10.44	10.69	11.57	4.59	0.00	5.76	7.86	\N	\N	\N	\N
+GEPA4	10.65	11.64	4.97	8.88	5.13	6.13	8.88	10.22	10.29	5.21	8.62	5.76	5.77	6.80	\N	\N	\N
+GETT11	\N	\N	8.79	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+GETT3	\N	\N	8.39	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+GETT4	\N	\N	9.02	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+GFSA3	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	1.79	0.00	3.71	4.76	0.00	5.94	1.17	0.84	2.35
+GGBR3	7.99	7.60	15.30	15.07	1.84	1.92	2.78	0.58	0.76	7.61	3.98	2.19	2.66	3.74	4.12	2.51	14.06
+GGBR4	7.22	6.82	12.72	12.21	1.48	1.59	2.23	0.47	0.54	5.49	3.21	1.60	2.16	2.96	2.75	1.71	10.06
+GGPS3	1.84	1.38	0.00	1.20	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+GMAT3	1.77	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+GNDI3	\N	\N	2.41	0.47	0.21	0.22	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+GOAU3	14.55	15.26	11.00	24.30	2.23	2.13	2.25	0.49	0.00	9.12	4.39	1.90	3.26	5.02	4.68	3.56	\N
+GOAU4	14.71	15.57	10.22	22.60	1.92	1.84	2.37	0.42	0.00	8.16	3.29	1.48	2.49	4.15	3.89	2.88	\N
+GOLL4	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	1.52	2.81	0.00	1.89
+GPAR3	\N	\N	33.67	1.18	0.00	0.00	0.00	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+GPIV33	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+GRAO3	\N	0.00	2.11	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+GRND3	5.47	19.90	5.60	11.18	3.69	3.04	8.39	5.39	7.42	6.36	6.84	8.50	9.23	13.87	10.00	10.57	24.49
+GSHP3	0.00	0.00	0.00	0.00	0.00	110.65	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00
+GUAR3	1.56	0.00	2.16	4.58	2.79	3.12	3.57	1.23	2.46	4.34	2.61	2.54	1.13	0.66	1.06	0.87	5.52
+GUAR4	\N	0.00	0.00	0.00	0.00	0.00	1.98	0.68	1.34	1.57	1.58	3.42	1.17	1.64	\N	\N	\N
+HAGA3	\N	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+HAGA4	\N	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+HAPV3	0.00	0.00	0.00	0.62	0.98	0.42	0.62	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N
+HBOR3	4.40	2.60	9.06	1.08	0.00	0.00	0.00	0.00	26.04	26.78	11.81	8.07	6.50	4.90	2.63	2.86	1.97
+HBRE3	\N	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+HBSA3	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N	\N	\N
+HBTS5	1.77	3.99	4.85	0.32	0.20	0.65	0.53	6.64	9.07	23.74	17.72	8.54	21.17	13.77	\N	\N	\N
+HETA3	\N	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+HETA4	\N	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+HGTX3	\N	\N	\N	0.28	1.92	2.74	2.33	6.29	6.74	5.76	4.38	4.24	3.61	1.73	\N	\N	\N
+HOOT3	\N	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+HOOT4	\N	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+HYPE3	5.05	3.49	2.73	4.36	3.43	2.28	3.80	3.09	1.91	0.00	0.00	0.92	\N	1.42	\N	\N	\N
+IDVL3	\N	\N	\N	\N	\N	0.00	0.00	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+IDVL4	\N	\N	\N	\N	\N	0.00	0.00	0.00	0.00	0.00	0.00	\N	1.51	7.84	\N	\N	\N
+IFCM3	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+IGBR3	\N	\N	\N	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+IGSN3	\N	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+IGTA3	\N	0.00	0.00	0.96	1.13	0.80	1.63	1.73	1.27	1.43	1.39	1.80	1.40	1.99	\N	\N	\N
+IGTI11	2.28	1.49	1.24	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+IGTI3	2.45	1.61	1.23	1.53	0.26	0.26	0.44	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+IGTI4	2.22	1.10	1.20	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+INEP3	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	2.83	0.00	0.00	0.00
+INEP4	1.67	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	3.46	0.00	0.00	0.00
+INNT3	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+INTB3	2.11	1.96	2.19	0.60	0.00	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+IRBR3	0.00	0.00	0.00	0.00	0.66	3.71	2.64	1.76	0.00	\N	\N	\N	\N	\N	\N	\N	\N
+ITEC3	\N	\N	\N	\N	\N	\N	0.00	0.00	0.00	0.00	\N	0.05	2.99	\N	\N	\N	\N
+ITSA3	10.41	5.26	5.70	4.51	5.35	9.21	4.87	3.58	5.16	8.37	2.58	2.84	1.78	3.92	2.63	1.95	2.35
+ITSA4	9.06	5.02	5.82	4.50	5.38	8.81	4.61	3.48	4.86	8.34	2.59	4.11	2.68	4.89	2.98	2.34	3.43
+ITUB3	8.43	2.94	3.59	6.36	3.35	6.15	4.62	1.29	2.13	3.71	1.13	2.35	2.54	2.74	1.65	1.00	2.37
+ITUB4	8.62	5.03	7.18	6.88	5.95	7.06	7.44	3.80	6.22	6.60	6.25	2.21	2.38	2.18	1.28	0.78	1.95
+JALL3	5.52	4.33	2.22	2.11	0.00	0.00	0.00	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+JBSS3	3.26	4.01	6.95	8.36	0.83	0.08	0.31	0.24	3.96	1.55	0.80	0.78	0.00	0.00	0.55	0.14	0.27
+JCPC3	\N	\N	0.00	0.00	1.49	0.63	33.37	1.28	0.00	0.64	10.70	\N	\N	\N	\N	\N	\N
+JFEN3	3.51	9.33	12.26	0.00	0.00	0.00	0.00	0.00	0.00	0.00	1.52	2.05	2.26	1.49	\N	\N	\N
+JHSF3	8.43	8.99	4.22	7.26	2.02	3.02	0.00	0.00	0.00	0.00	2.80	4.97	2.50	4.93	6.23	9.16	3.96
+JOPA3	\N	3.91	3.68	2.97	0.82	2.40	\N	3.30	\N	4.81	4.30	24.75	2.56	1.64	\N	\N	\N
+JOPA4	\N	\N	2.43	2.69	0.99	3.10	\N	3.62	4.77	3.53	3.16	21.03	2.43	2.12	\N	\N	\N
+JPSA3	1.15	0.68	1.72	0.77	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+JSLG3	3.37	2.56	8.42	3.58	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+KEPL3	8.58	6.64	8.65	3.14	1.06	0.82	0.00	0.00	0.47	6.40	1.49	2.06	2.25	0.00	0.00	0.00	0.00
+KLBN11	5.27	5.25	6.34	1.91	0.70	3.45	6.13	2.43	2.45	2.54	3.51	\N	\N	\N	\N	\N	\N
+KLBN3	6.13	6.76	7.80	1.38	0.04	3.01	3.45	1.43	1.26	1.23	2.23	1.45	1.18	1.57	0.00	0.00	0.00
+KLBN4	4.50	4.83	7.37	1.03	0.03	3.56	5.40	2.26	3.40	2.17	3.26	3.55	3.35	3.98	5.63	4.84	16.22
+KRSA3	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+LAME3	\N	\N	\N	3.64	0.07	1.23	0.50	0.19	0.91	0.90	0.95	0.77	0.60	0.81	\N	\N	\N
+LAME4	\N	\N	\N	3.65	0.06	0.94	0.38	0.14	0.67	0.58	0.72	0.67	0.58	0.73	\N	\N	\N
+LAND3	0.56	7.93	0.71	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+LAVV3	8.03	7.58	12.63	14.74	0.00	\N	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+LCAM3	25.77	27.96	14.60	3.26	0.85	5.77	3.67	1.95	6.89	6.88	6.76	2.57	1.14	\N	\N	\N	\N
+LEVE3	25.73	25.24	16.95	4.26	1.74	6.65	6.40	3.26	3.77	7.39	10.49	7.33	9.27	17.32	\N	\N	\N
+LHER3	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+LHER4	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+LIGT3	0.09	0.08	3.63	2.53	0.00	0.55	0.59	0.00	0.20	5.39	7.49	4.98	9.87	11.43	23.90	20.42	23.53
+LINX3	\N	\N	\N	1.51	0.30	0.44	0.71	1.05	1.63	1.87	1.26	0.71	\N	\N	\N	\N	\N
+LIPR3	0.79	2.68	2.47	1.72	1.25	2.39	15.85	9.73	0.44	0.00	0.55	2.23	3.90	1.97	\N	\N	\N
+LJQQ3	4.45	2.71	0.00	1.28	0.43	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+LOGG3	3.46	3.85	4.45	1.46	0.44	0.31	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+LOGN3	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.54	1.85
+LPSB3	3.45	2.26	5.51	4.66	3.13	2.33	2.25	2.93	2.43	2.78	17.26	2.25	2.63	2.78	2.45	0.00	12.54
+LREN3	5.77	4.81	3.22	5.91	2.01	2.50	6.83	2.50	2.26	5.33	2.41	3.51	2.94	4.41	3.24	1.54	8.29
+LTEL3B	1.40	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+LUPA3	0.00	0.00	1.40	1.07	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00
+LUXM3	\N	\N	\N	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	\N	1.81	1.43	\N	\N	\N
+LUXM4	\N	0.00	0.42	0.98	3.65	3.60	1.10	0.00	0.00	0.00	4.30	3.10	2.32	2.59	\N	\N	\N
+LVBI3	\N	0.20	9.67	1.63	0.69	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+LVTC3	0.00	0.28	1.48	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+LWSA3	0.00	0.85	0.00	0.00	0.40	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+MAGA3	2.19	0.88	3.43	19.67	56.35	8.93	7.62	5.64	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+MAGG3	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+MANA3	\N	2.33	4.35	12.26	0.84	3.52	5.61	4.41	8.80	3.01	0.00	\N	\N	\N	\N	\N	\N
+MANA4	6.07	4.91	5.00	12.49	4.37	3.38	7.74	4.14	4.94	6.06	4.05	\N	\N	\N	\N	\N	\N
+MAPT3	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+MAPT4	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+MATD3	1.55	0.50	0.84	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+MATD4	\N	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+MBLY3	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+MDIA3	2.18	1.47	9.93	1.65	1.16	0.89	2.11	0.77	0.97	1.33	1.45	1.13	1.44	3.63	6.50	0.83	1.79
+MDNE3	0.00	0.00	0.00	0.00	0.00	\N	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N	\N
+MEAL3	0.48	0.34	0.54	0.46	0.26	5.23	0.36	1.37	0.36	0.77	\N	\N	\N	\N	\N	\N	\N
+MEGA3	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+MELI34	\N	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+MELK3	13.72	12.06	4.66	8.09	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+MERC3	\N	0.00	0.00	0.21	0.62	0.69	2.19	0.71	0.00	0.14	0.24	\N	\N	\N	\N	\N	\N
+MERC4	3.40	3.98	4.20	3.10	2.49	2.10	7.96	4.33	0.00	0.06	0.17	9.29	7.60	11.05	\N	\N	\N
+MGEL3	\N	\N	\N	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+MGEL4	\N	\N	\N	0.00	0.00	0.60	0.00	0.00	0.00	0.00	0.00	\N	\N	6.69	2.34	\N	\N
+MGLU3	1.04	0.80	2.72	0.34	0.66	0.66	0.64	1.16	0.67	3.45	1.92	0.00	0.12	0.00	\N	\N	\N
+MILS3	2.94	2.25	2.32	2.55	0.00	0.00	0.00	0.00	0.00	0.00	2.58	1.53	0.56	1.24	1.10	\N	\N
+MLAS3	0.00	0.00	3.02	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+MMAQ3	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+MMAQ4	\N	503.40	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+MMXM11	\N	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+MMXM3	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	1.29	0.09	\N	\N	\N	\N
+MNDL3	\N	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	31.56	11.97	\N	\N	10.42	\N	\N	\N
+MNPR3	2.06	3.91	3.68	2.97	0.82	2.40	2.24	0.00	0.90	5.01	4.72	\N	\N	\N	\N	\N	\N
+MOAR3	6.45	0.31	1.32	5.58	2.65	7.20	10.10	6.01	4.69	\N	5.07	14.14	5.26	6.83	\N	\N	\N
+MODL11	\N	0.00	0.00	0.98	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+MODL3	1.87	0.79	3.95	1.02	0.00	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+MODL4	\N	\N	6.43	1.07	0.00	0.00	0.00	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+MOSI3	\N	\N	\N	0.01	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+MOVI3	0.00	0.68	12.74	2.36	0.46	0.74	3.08	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N
+MPLU3	\N	\N	\N	\N	\N	\N	8.36	9.48	9.40	4.79	5.85	5.17	5.12	1.70	\N	\N	\N
+MRFG3	1.19	1.05	19.39	9.62	0.00	0.56	0.25	0.49	1.00	0.68	0.52	0.00	0.00	0.08	1.29	3.68	0.00
+MRSA3B	\N	1.19	0.00	0.37	0.47	0.87	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N	\N
+MRSA5B	\N	2.79	2.33	0.35	0.00	0.00	0.00	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+MRSA6B	\N	\N	2.23	0.38	0.00	0.00	0.00	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+MRVE3	5.54	3.79	8.13	7.72	4.47	4.39	9.79	6.41	2.39	4.88	3.12	3.71	3.85	0.84	3.15	1.41	1.43
+MSAN3	3.51	1.25	5.10	2.96	0.00	3.57	4.76	7.55	6.98	6.57	8.06	\N	\N	\N	\N	\N	\N
+MSAN4	\N	0.00	0.00	0.00	0.00	0.00	0.00	0.00	32.06	9.01	0.00	\N	\N	\N	\N	\N	\N
+MSPA3	0.68	0.00	0.00	0.01	2.03	0.40	5.36	6.01	\N	\N	\N	\N	\N	\N	\N	\N	\N
+MSPA4	0.87	\N	\N	\N	\N	0.00	5.88	7.40	0.00	\N	\N	\N	\N	\N	\N	\N	\N
+MSRO3	0.02	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+MTIG3	\N	0.00	0.00	0.00	0.00	0.00	0.00	0.00	\N	0.00	0.00	\N	0.13	\N	\N	\N	\N
+MTIG4	9.56	3.15	3.36	3.74	3.48	1.13	2.04	3.30	2.80	4.53	4.15	\N	0.67	\N	\N	\N	\N
+MTRE3	15.32	9.76	7.29	4.46	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+MTSA3	3.74	4.91	5.00	12.49	4.37	3.38	7.74	4.14	4.94	4.28	4.05	\N	\N	\N	\N	\N	\N
+MTSA4	4.70	3.93	4.37	6.15	1.07	2.31	3.33	5.03	4.74	5.75	5.71	6.71	6.01	4.07	5.71	5.33	5.26
+MULT3	4.59	3.52	3.36	2.77	2.03	1.49	3.57	1.86	0.95	4.18	1.95	2.40	2.32	2.74	1.08	0.65	\N
+MWET3	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+MWET4	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+MYPK3	0.78	2.34	7.19	6.91	1.45	0.90	2.48	0.30	1.63	2.04	2.13	2.55	4.43	3.26	1.27	9.31	10.77
+NAFG3	0.74	0.42	8.00	2.99	4.27	0.65	0.00	0.27	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+NAFG4	43.45	33.31	22.43	0.00	0.00	0.00	0.41	0.00	0.00	0.00	2.45	0.40	0.59	2.41	\N	\N	\N
+NEMO3	\N	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+NEMO5	2.33	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+NEMO6	\N	0.00	42.83	8.05	3.51	3.61	6.87	8.83	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+NEOE3	4.30	3.63	5.16	4.87	1.82	1.34	0.64	0.00	0.00	1.26	0.00	\N	\N	\N	\N	\N	\N
+NEXP3	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	38.05	5.92	5.42	3.84	1.84	0.51	0.00
+NGRD3	0.98	1.00	0.50	0.43	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+NINJ3	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+NORD3	\N	\N	\N	\N	\N	2.00	9.43	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N	\N
+NRTQ3	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+NTCO3	4.79	0.00	1.15	0.00	0.00	0.95	0.00	1.03	1.96	7.37	6.41	5.88	4.32	6.44	4.30	2.94	7.89
+NUTR3	8.77	10.74	9.67	14.95	0.83	3.24	0.18	0.62	2.50	0.00	0.00	\N	\N	\N	\N	\N	\N
+ODER3	\N	\N	\N	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+ODER4	1.09	0.00	0.00	0.00	0.00	0.00	0.00	1.39	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+ODPV3	11.27	2.20	2.36	2.64	2.54	1.38	1.54	2.46	2.14	3.50	3.22	4.42	5.56	2.77	3.26	9.85	4.63
+OFSA3	2.59	0.88	1.89	1.04	0.80	0.35	0.50	0.32	0.56	0.62	0.00	\N	\N	\N	\N	\N	\N
+OGXP3	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+OIBR3	1.32	1.24	2.30	1.05	1.95	0.36	3.13	0.00	0.13	0.00	0.00	22.59	17.86	3.32	0.00	0.00	\N
+OIBR4	0.93	0.00	1.08	2.04	1.36	1.24	1.61	0.58	1.14	2.25	1.23	22.72	19.81	3.69	0.00	0.00	\N
+OMGE3	6.31	4.54	15.86	14.96	2.39	0.84	3.94	31.81	4.63	5.71	0.41	\N	\N	\N	\N	\N	\N
+ONCO3	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+OPCT3	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+ORVR3	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+OSXB3	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	\N	\N
+PARD3	\N	\N	3.03	1.48	1.30	1.69	1.74	4.31	\N	\N	\N	\N	\N	\N	\N	\N	\N
+PATI3	0.17	0.83	4.16	1.69	0.31	1.82	0.66	0.72	0.00	0.81	0.85	\N	2.19	\N	0.95	\N	\N
+PATI4	6.82	0.00	0.00	2.01	3.73	2.78	2.20	0.00	0.00	4.77	3.63	5.70	5.92	7.13	3.69	\N	\N
+PCAR3	1.86	1.20	2.25	7.02	0.70	0.60	0.91	1.13	2.15	3.00	1.35	\N	\N	\N	\N	\N	\N
+PCAR4	\N	\N	\N	\N	\N	1.01	2.13	0.40	0.03	3.24	1.02	0.98	0.92	1.06	\N	\N	\N
+PDGR3	0.00	0.00	2.57	0.87	0.63	1.05	0.96	0.58	4.54	3.44	1.94	0.00	2.25	2.91	1.06	1.84	1.14
+PDTC3	2.63	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	\N
+PEAB3	5.80	8.04	19.10	69.32	28.84	4.18	4.54	3.78	1.95	9.47	0.00	9.54	\N	6.35	0.66	\N	\N
+PEAB4	6.36	8.65	17.14	68.80	33.38	7.38	12.16	4.26	1.99	9.87	0.00	10.50	8.01	6.98	0.75	\N	\N
+PETR3	9.86	13.53	42.40	17.09	2.02	2.31	2.73	0.00	0.00	0.00	5.22	0.85	3.84	5.53	6.42	5.11	1.99
+PETR4	10.14	14.10	48.45	18.69	1.32	3.73	5.94	2.83	2.93	7.76	12.78	2.29	4.12	6.36	8.04	6.51	2.70
+PETZ3	0.19	0.39	0.56	0.25	0.17	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+PFRM3	5.90	4.24	3.17	3.18	0.00	0.00	0.00	0.00	0.00	0.00	1.58	1.17	1.04	1.33	1.84	0.81	1.86
+PGMN3	12.95	4.75	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+PINE3	7.73	1.55	0.00	0.00	0.00	0.00	0.00	0.00	0.00	1.35	0.75	\N	\N	\N	\N	\N	\N
+PINE4	9.43	2.46	12.92	6.47	0.00	0.00	0.00	0.00	7.08	9.78	7.62	6.02	5.26	6.89	4.73	6.51	20.61
+PLAS3	\N	\N	\N	0.00	0.00	0.60	0.00	0.00	0.00	0.00	0.00	\N	3.88	\N	\N	\N	\N
+PLAS4	\N	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N	\N
+PLPL3	5.29	1.41	4.19	6.53	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+PMAM3	0.93	0.00	1.08	2.04	1.36	0.93	1.61	0.58	1.32	2.25	1.23	0.00	0.00	7.79	0.00	0.00	0.00
+PNVL3	2.53	0.98	1.50	0.85	0.40	0.44	0.85	0.54	0.02	0.78	0.24	0.58	0.19	1.13	1.25	\N	\N
+PNVL4	1.55	0.00	0.00	0.00	0.37	0.63	0.81	0.72	0.11	0.44	0.82	1.30	0.72	1.77	1.81	\N	\N
+POMO3	7.19	5.22	5.05	4.20	3.43	1.17	2.79	0.54	4.92	4.07	4.25	1.54	3.27	7.10	9.52	10.29	12.50
+POMO4	6.48	3.52	3.95	2.58	3.14	1.56	3.25	0.63	5.59	5.38	5.07	1.37	2.87	6.16	7.57	8.33	10.53
+PORT3	5.43	3.67	16.20	2.64	3.27	0.00	5.39	5.11	6.62	5.15	0.00	2.18	2.14	0.00	0.00	0.00	0.00
+POSI3	4.90	4.12	3.59	6.58	0.43	1.40	1.99	2.24	3.67	4.96	2.77	4.92	0.00	4.96	7.46	0.00	\N
+POWE3	\N	\N	\N	0.50	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+PPAR3	25.90	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+PPLA11	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+PRIO3	0.17	0.15	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	\N	\N
+PRNR3	0.69	0.00	2.98	0.51	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+PSSA3	6.04	3.29	4.01	6.76	3.19	2.53	5.90	3.32	4.06	3.16	2.02	3.73	4.17	4.93	\N	\N	\N
+PTBL3	3.51	2.03	4.57	7.33	0.29	3.23	5.55	4.47	5.88	16.05	6.01	1.97	1.01	\N	\N	\N	\N
+PTCA11	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+PTCA3	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+PTNT3	2.18	0.00	1.75	0.67	0.00	0.00	1.07	0.00	0.00	0.00	1.56	\N	\N	\N	\N	\N	\N
+PTNT4	3.51	0.00	2.55	1.62	0.00	1.79	2.38	3.57	3.49	3.29	3.78	8.92	\N	\N	\N	\N	\N
+QGEP3	\N	1.03	\N	\N	\N	\N	16.43	1.40	2.81	2.57	2.15	\N	\N	0.00	\N	\N	\N
+QUAL3	0.00	2.34	4.44	12.69	0.68	3.71	6.10	4.91	10.06	3.66	0.00	0.00	0.00	0.00	\N	\N	\N
+QUSW3	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+QVQP3B	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+RADL3	2.68	2.20	3.36	3.88	3.18	1.73	2.04	1.82	1.37	3.01	12.04	0.60	0.50	0.39	\N	\N	\N
+RAIL3	0.46	0.20	0.03	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+RAIZ4	5.44	4.80	4.42	0.30	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+RANI3	8.82	8.04	10.13	5.28	1.49	0.61	0.00	1.30	0.00	4.26	5.11	5.61	29.93	13.88	5.56	0.00	\N
+RANI4	\N	0.00	0.00	0.00	0.63	0.53	\N	1.28	\N	\N	4.19	4.68	\N	\N	\N	\N	\N
+RAPT3	6.76	4.84	11.07	3.91	1.03	2.30	2.00	0.96	0.00	2.68	9.16	3.08	3.20	4.98	4.25	4.40	8.76
+RAPT4	5.70	4.54	10.72	4.49	0.75	1.89	1.44	0.68	0.00	2.02	6.54	2.55	2.35	4.17	3.10	3.60	7.59
+RCSL3	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	\N	\N
+RCSL4	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	\N	\N
+RDNI3	6.24	5.14	0.95	0.07	0.06	0.67	0.00	0.00	4.45	8.89	5.70	9.11	3.09	3.67	1.15	3.08	0.37
+RDOR3	1.88	1.27	1.00	3.18	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+RECV3	11.00	4.74	2.22	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+REDE3	7.07	7.23	5.85	9.21	0.28	1.08	0.13	0.52	2.02	0.00	0.00	0.00	0.00	0.00	0.00	0.00	\N
+RENT3	4.14	2.70	2.51	0.86	0.52	0.90	0.93	1.98	2.25	3.40	1.33	5.10	1.15	1.66	1.34	0.84	4.65
+RLOG3	\N	\N	\N	\N	\N	\N	\N	\N	\N	5.76	\N	\N	\N	\N	\N	\N	\N
+RNEW11	0.00	0.00	0.00	0.00	22.36	0.00	0.00	0.00	0.00	37.04	0.00	0.00	0.00	0.00	0.00	\N	\N
+RNEW3	2.06	2.57	2.54	2.71	1.70	1.77	2.52	1.49	2.08	0.00	0.00	\N	\N	\N	\N	\N	\N
+RNEW4	2.73	3.44	4.54	4.45	2.25	1.96	2.62	2.43	5.88	15.37	5.70	\N	\N	\N	\N	\N	\N
+ROMI3	7.31	4.86	4.04	3.03	11.33	5.28	7.70	0.96	0.77	2.30	0.08	0.00	0.00	6.96	6.64	2.22	13.87
+RPAD3	\N	0.00	0.00	0.00	0.01	0.00	0.00	0.01	0.00	0.29	0.00	\N	\N	\N	\N	\N	\N
+RPAD5	6.03	6.18	8.18	7.06	5.60	3.18	5.33	4.14	4.67	4.89	3.74	2.61	\N	\N	\N	\N	\N
+RPAD6	\N	\N	0.01	\N	0.01	\N	\N	0.01	\N	0.85	\N	\N	\N	\N	\N	\N	\N
+RPMG3	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00
+RRRP3	1.51	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+RSID3	1.09	0.97	1.75	0.67	0.00	1.11	1.10	0.00	0.00	0.00	0.00	0.00	3.51	3.98	1.40	1.04	5.82
+RSUL3	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+RSUL4	3.25	3.81	2.82	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+SANB11	5.90	2.58	6.58	7.40	4.11	4.69	6.24	2.75	3.23	4.47	4.01	\N	2.59	5.59	\N	\N	\N
+SANB3	6.68	6.25	7.47	11.26	6.20	4.84	8.59	4.05	1.64	6.50	12.47	1887.47	1123.53	4.75	\N	\N	\N
+SANB4	6.04	5.49	7.01	10.97	5.67	4.92	9.06	5.64	2.70	8.22	14.91	2076.22	1426.02	5.98	\N	\N	\N
+SAPR11	5.62	4.79	8.79	6.78	3.62	3.21	4.36	1.01	3.67	1.46	0.79	\N	\N	\N	\N	\N	\N
+SAPR3	5.09	5.21	8.95	5.13	3.19	4.20	4.37	5.10	6.36	5.91	2.95	\N	\N	\N	\N	\N	\N
+SAPR4	5.09	5.40	6.21	5.23	3.76	3.64	6.13	5.47	4.32	16.67	12.41	8.69	5.23	6.77	6.98	8.11	14.29
+SBFG3	1.52	1.18	0.46	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+SBSP3	3.89	2.86	3.77	3.84	3.12	2.73	2.38	4.32	0.68	6.31	4.35	3.76	3.84	0.00	6.93	8.29	5.66
+SCAR3	4.91	1.96	1.77	1.61	0.37	1.35	1.12	2.14	0.86	4.03	3.44	3.02	2.52	0.00	4.06	7.03	3.67
+SCAR4	1.36	2.67	2.43	3.59	0.99	3.10	2.97	0.00	1.19	3.66	3.38	\N	\N	\N	\N	\N	\N
+SEDU3	\N	0.00	0.00	0.00	\N	\N	\N	\N	\N	0.33	\N	\N	\N	\N	\N	\N	\N
+SEER3	0.84	0.73	0.85	2.15	0.73	6.40	3.76	0.63	2.09	0.36	0.74	0.00	\N	\N	\N	\N	\N
+SEQL3	0.00	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+SGPS3	4.78	3.15	1.68	1.87	1.74	0.83	1.02	1.65	1.40	2.27	2.08	0.00	0.00	0.00	0.37	0.00	\N
+SHOW3	0.00	0.00	0.00	0.00	0.00	0.95	4.24	1.28	0.55	0.00	0.00	0.00	2.74	0.00	\N	\N	\N
+SHUL3	0.19	0.19	\N	\N	\N	\N	\N	\N	\N	1.93	\N	\N	\N	\N	\N	\N	\N
+SHUL4	4.93	3.66	3.44	1.89	1.15	1.31	4.14	2.57	3.11	6.79	7.10	1.31	2.98	2.54	1.80	1.61	\N
+SIMH3	0.00	0.21	9.73	2.56	0.65	0.29	2.52	0.00	12.00	0.71	0.81	0.98	0.75	2.84	0.00	\N	\N
+SLCE3	3.63	7.98	4.60	3.85	4.02	2.31	4.84	6.50	4.00	2.23	3.17	0.98	4.11	1.35	0.59	1.20	0.94
+SLED3	\N	\N	\N	\N	\N	\N	20.00	3.60	\N	\N	7.39	4.41	\N	\N	\N	\N	\N
+SLED4	\N	\N	\N	\N	\N	\N	20.00	4.25	\N	17.98	13.75	3.40	3.54	4.20	\N	\N	\N
+SMFT3	2.26	1.52	0.85	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+SMLE3	\N	1.09	1.70	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+SMLS3	\N	\N	\N	17.98	5.41	9.42	8.88	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+SMTO3	5.22	5.00	4.35	7.03	2.14	3.02	3.11	1.62	1.78	1.49	1.14	1.08	1.35	1.88	1.69	1.22	\N
+SNSY3	3.42	2.79	3.66	2.24	1.73	5.24	5.03	5.53	2.49	3.49	2.68	\N	\N	\N	\N	\N	\N
+SNSY5	0.00	2.22	4.85	0.32	0.20	0.65	0.53	6.66	9.07	0.00	19.94	\N	\N	\N	\N	\N	\N
+SNSY6	\N	\N	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+SOJA3	6.60	5.92	1.05	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+SOMA3	1.65	1.99	2.65	3.55	1.98	4.64	1.01	0.00	4.66	23.85	0.46	\N	\N	\N	\N	\N	\N
+SOND3	\N	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	2.06	\N	\N	\N	\N	\N	\N
+SOND5	9.27	13.24	28.03	71.31	1.59	0.09	0.66	0.00	0.00	5.17	22.83	156.17	4.19	4.49	\N	\N	\N
+SOND6	10.29	13.96	31.62	120.10	2.42	10.97	10.06	0.00	0.00	5.19	24.43	159.64	\N	4.99	\N	\N	\N
+SPRI3	2.11	0.87	0.04	0.00	\N	\N	\N	\N	\N	\N	\N	20.08	22.20	\N	\N	\N	\N
+SPRI4	\N	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+SPRI5	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	36.21	18.70	22.20	91.44	\N	\N	\N
+SPRI6	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	21.68	28.73	\N	\N	\N	\N
+SPRT3B	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+SQIA3	\N	0.20	0.44	0.12	\N	0.23	0.74	0.35	1.55	6.77	1.79	\N	\N	\N	\N	\N	\N
+STBP3	4.76	2.82	3.90	2.82	0.25	0.02	0.02	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+STKF3	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+STTR3	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+SULA11	16.00	6.14	1.77	7.00	2.68	0.54	1.01	1.62	3.79	4.53	4.16	4.48	3.62	9.36	\N	\N	\N
+SULA3	\N	0.00	0.13	0.67	1.74	0.43	0.80	1.69	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+SULA4	5.30	6.40	4.08	3.03	4.27	2.20	7.61	5.45	5.63	3.65	4.82	\N	\N	\N	\N	\N	\N
+SUZB3	2.10	1.95	4.81	0.64	0.27	1.10	1.01	1.74	2.31	2.07	1.79	1.27	0.00	4.95	4.77	4.86	0.00
+SYNE3	4.78	1.58	9.51	81.42	9.24	0.83	18.88	55.73	1.76	5.91	6.06	8.63	2.80	3.43	\N	\N	\N
+TAEE11	11.04	7.15	13.36	11.10	8.26	5.07	13.47	8.71	16.54	14.93	23.18	25.39	7.67	\N	\N	\N	\N
+TAEE3	11.05	5.17	11.81	9.51	7.84	5.41	9.94	6.68	1.58	2.17	1.49	\N	\N	\N	\N	\N	\N
+TAEE4	8.97	6.12	13.01	12.50	8.99	5.95	11.96	7.74	3.05	7.34	4.11	\N	\N	\N	\N	\N	\N
+TASA3	3.49	6.30	4.09	0.00	0.00	0.00	0.00	0.00	0.00	0.00	\N	1.02	4.14	8.63	\N	\N	\N
+TASA4	3.68	6.21	4.06	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	1.26	4.32	9.81	5.31	2.91	\N
+TCNO3	2.96	0.00	5.06	0.00	0.64	0.34	1.05	0.00	0.00	3.87	0.00	\N	4.62	\N	0.82	\N	\N
+TCNO4	3.06	4.13	8.96	7.96	3.18	4.43	6.91	8.39	9.72	6.81	10.30	\N	5.00	\N	1.19	\N	\N
+TCSA3	0.00	0.00	0.00	0.00	0.15	0.22	0.36	0.53	5.30	5.86	8.99	0.00	4.07	2.84	2.04	1.51	2.04
+TECN3	3.17	2.35	2.63	0.00	0.60	0.31	23.17	0.59	1.42	6.08	6.90	1.11	2.02	0.00	\N	\N	\N
+TEKA3	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+TEKA4	\N	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N	\N	\N
+TELB3	4.09	5.71	4.36	3.50	2.55	1.63	3.93	2.78	2.81	9.13	12.24	\N	\N	\N	\N	\N	\N
+TELB4	\N	4.01	9.10	7.95	2.28	0.01	0.38	0.35	3.67	1.46	0.79	\N	\N	\N	\N	\N	\N
+TEND3	0.00	0.00	0.35	1.29	1.09	1.66	1.96	0.01	0.28	0.31	0.45	0.00	0.00	0.00	0.00	0.00	0.00
+TESA3	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+TFCO4	1.56	0.96	1.44	0.71	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+TGMA3	8.20	6.77	10.13	5.49	0.96	5.37	3.23	1.29	0.00	3.03	6.01	6.24	3.50	4.98	6.13	9.09	35.86
+TIET11	4.34	2.67	5.00	5.81	4.01	3.69	7.24	3.76	7.72	6.50	3.74	\N	\N	\N	\N	\N	\N
+TIET3	\N	0.00	0.00	0.06	3.14	2.45	6.03	4.35	8.26	1.69	13.84	\N	\N	\N	\N	\N	\N
+TIET4	\N	0.00	0.00	0.59	3.98	3.78	4.66	3.20	8.04	0.00	0.00	\N	\N	\N	\N	\N	\N
+TIMP3	5.88	5.22	8.03	10.05	7.44	4.06	3.90	4.11	2.36	5.82	34.80	\N	\N	\N	\N	\N	\N
+TIMS3	6.41	5.14	4.86	3.48	3.66	3.17	2.51	1.36	3.14	2.90	0.00	0.00	3.61	2.97	0.00	0.00	0.00
+TKNO3	\N	0.00	0.00	1.06	1.63	1.98	1.59	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+TKNO4	4.34	3.92	7.53	8.33	2.94	2.23	6.70	1.05	0.00	6.50	3.74	\N	\N	\N	\N	\N	\N
+TMAR5	6.40	6.22	3.67	14.33	4.50	5.49	18.24	5.17	2.55	5.28	3.08	\N	\N	\N	\N	\N	\N
+TMAR8	\N	0.00	5.21	5.33	1.95	5.16	8.34	4.25	3.23	4.47	4.01	\N	\N	\N	\N	\N	\N
+TOTS3	1.48	0.87	0.75	0.73	0.55	0.44	0.81	0.86	2.67	2.58	1.97	2.13	1.75	4.31	1.88	1.46	5.79
+TOYB3	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+TOYB4	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+TPIS3	0.00	0.60	1.38	1.33	0.00	0.00	13.00	0.00	12.78	5.50	0.00	4.32	3.14	2.42	2.66	0.00	\N
+TRAD3	0.00	0.18	0.28	0.43	0.00	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+TRIS3	4.13	3.17	5.35	3.58	1.44	0.77	9.18	56.13	27.97	86.32	174.44	1.28	0.00	4.74	2.34	0.00	\N
+TRPL3	4.42	4.09	3.13	10.62	5.85	4.03	14.23	4.52	2.34	4.92	9.94	5.83	11.05	16.63	19.06	20.89	\N
+TRPL4	7.41	7.43	4.78	11.87	5.02	4.87	22.08	21.97	28.50	8.26	8.46	7.45	15.72	16.29	23.03	23.84	\N
+TRPN3	\N	\N	\N	\N	\N	267.89	2.48	3.81	0.71	3.51	19.29	6.02	2.31	18.76	\N	\N	\N
+TRXF11	\N	0.14	0.18	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+TTEN3	1.18	0.98	0.08	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+TUPY3	2.90	3.85	2.01	3.96	0.57	3.76	4.09	4.54	2.95	5.34	3.24	1.41	3.65	5.06	6.91	9.62	4.62
+TXRX3	\N	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+TXRX4	\N	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+UCAS3	9.41	5.08	4.93	2.70	8.54	1.77	0.00	0.00	2.78	5.36	8.17	12.42	2.25	\N	\N	\N	\N
+UCAS4	\N	\N	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N	\N
+UGPA3	2.08	1.33	4.69	4.59	1.07	2.99	2.96	2.52	2.59	2.82	3.17	2.73	2.62	3.54	3.49	3.24	7.89
+UNIP3	5.28	2.90	9.52	9.49	1.78	0.56	5.21	23.13	3.55	7.57	3.21	1.61	0.48	0.00	0.00	0.91	\N
+UNIP5	7.48	2.25	7.45	7.50	1.54	0.42	3.62	15.72	2.88	4.18	3.90	6.55	0.40	\N	\N	\N	\N
+UNIP6	7.74	5.57	12.60	16.70	2.81	1.51	6.98	28.16	4.58	7.96	7.00	2.24	0.95	0.00	0.00	2.13	\N
+USIM3	4.86	3.44	6.69	7.81	1.56	3.55	1.32	0.57	1.85	3.31	1.37	0.00	0.66	0.91	2.74	3.21	12.03
+USIM5	3.74	2.40	6.83	10.04	0.47	1.52	0.89	0.17	0.01	2.19	0.00	0.00	0.79	1.70	3.48	3.69	13.30
+USIM6	5.19	3.26	4.49	6.13	2.52	5.22	4.97	1.29	4.17	8.85	2.94	\N	0.72	1.49	\N	\N	\N
+VALE3	11.49	5.36	6.07	14.06	2.27	2.24	3.50	3.02	0.62	10.74	8.10	7.42	8.16	11.56	4.08	4.78	9.46
+VAMO3	4.27	2.24	1.40	1.71	0.00	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+VBBR3	5.27	2.87	5.48	7.41	3.05	7.08	5.79	3.77	6.98	6.57	8.06	\N	\N	\N	\N	\N	\N
+VCSA3	4.34	2.67	5.00	11.46	1.64	2.23	6.70	1.05	0.00	6.50	3.74	\N	\N	\N	\N	\N	\N
+VIIA3	0.00	0.00	0.00	0.00	0.00	1.01	0.82	0.94	3.83	5.53	1.45	\N	\N	\N	\N	\N	\N
+VITT3	4.85	2.05	2.73	0.47	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+VIVA3	1.82	0.71	0.16	0.88	0.25	0.62	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+VIVR3	2.93	2.58	3.98	4.73	3.13	2.11	0.56	2.32	0.23	5.14	1.51	0.00	0.00	0.00	\N	\N	\N
+VIVT3	4.18	3.67	8.09	7.81	5.71	4.51	7.29	4.86	4.57	9.42	6.43	17.28	9.32	6.47	8.83	17.85	34.01
+VIVT4	\N	\N	\N	\N	\N	6.38	8.91	5.44	4.79	10.74	6.41	11.54	5.76	1.77	\N	\N	\N
+VLID11	3.08	2.37	2.35	0.86	0.78	2.08	2.28	3.76	3.33	3.77	2.15	\N	\N	\N	\N	\N	\N
+VLID3	9.40	6.14	4.62	3.95	0.51	4.72	5.05	3.57	5.56	5.20	4.14	4.35	4.83	4.85	1.06	\N	\N
+VSPT3	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+VSPT4	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+VSTE3	0.28	0.58	0.00	0.00	0.00	1.40	3.51	0.00	0.00	0.00	3.02	0.97	1.84	\N	3.17	\N	\N
+VULC3	17.46	2.96	2.11	2.77	0.00	0.03	0.28	0.78	0.31	0.30	0.69	0.00	0.00	5.90	1.70	3.12	0.99
+VVAR11	\N	\N	\N	\N	\N	\N	\N	0.33	0.07	15.83	\N	\N	\N	\N	\N	\N	\N
+VVAR3	3.53	3.41	4.41	2.17	5.27	1.58	2.28	2.02	0.00	\N	\N	\N	\N	\N	\N	\N	\N
+VVAR4	\N	\N	\N	\N	\N	\N	\N	0.32	0.07	16.43	\N	\N	\N	\N	\N	\N	\N
+VVEO3	6.81	0.00	2.75	1.36	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+WEGE3	4.08	3.01	2.97	2.60	2.39	3.90	4.08	2.56	4.42	5.58	2.47	2.41	2.08	3.12	3.66	3.47	6.02
+WEST3	0.00	0.00	0.00	0.00	0.00	1.41	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+WHRL3	4.91	3.34	2.66	9.27	14.34	4.86	2.60	10.25	1.93	20.14	20.57	13.57	10.54	9.14	28.06	21.77	\N
+WHRL4	5.41	3.49	2.81	7.07	14.85	6.48	8.42	9.10	9.45	14.41	23.08	14.53	11.07	8.77	30.56	25.42	\N
+WIZC3	4.28	5.79	8.85	8.11	9.03	8.81	8.70	5.94	6.51	\N	\N	\N	\N	\N	\N	\N	\N
+WIZS3	3.08	2.37	2.35	0.86	0.78	2.08	2.28	3.76	3.33	3.77	2.15	\N	\N	\N	\N	\N	\N
+WLMM3	7.74	7.49	11.60	5.39	2.15	3.17	4.88	1.93	3.63	12.67	0.00	\N	\N	\N	\N	\N	\N
+WLMM4	3.00	2.14	1.66	0.79	0.55	0.79	0.00	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+WSON33	11.07	7.59	14.00	12.38	9.63	6.06	11.81	8.27	13.04	11.26	15.57	\N	\N	\N	\N	\N	\N
+YDUQ3	7.97	5.70	4.07	8.35	1.60	1.17	5.40	0.74	7.04	4.03	1.54	0.95	0.58	3.12	2.02	1.37	0.00
+YEPAR5	\N	\N	\N	\N	\N	\N	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N	\N
+ZAMP3	0.00	0.00	0.00	0.00	0.23	0.50	0.23	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+\.
+
+
+--
+-- Data for Name: dyinvest; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY public.dyinvest (ticker, "Atual", "2023", "2022", "2021", "2020", "2019", "2018", "2017", "2016", "2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008") FROM stdin;
+ABCB4	6.44	7.5686	5.9067	25.7816	11.9028	9.3482	9.9162	9.8339	8.7003	5.4968	10.0578	\N	\N	\N	\N	\N	\N
+ADHM3	-4.09	\N	\N	\N	\N	\N	-4.9517	-6.1492	0	0	0	\N	\N	\N	\N	\N	\N
+AESB3	497.21	55.3261	38.8418	14.2311	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+AERI3	-3.51	-10.4926	-15.1437	133.9548	109.7433	0	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+AFLT3	17.88	18.8729	15.6029	43.478	33.2451	27.6659	15.4811	24.2924	11.0381	10.7863	8.7161	\N	\N	\N	\N	\N	\N
+AGRO3	11.75	10.4056	21.6634	4.0784	13.1511	11.0291	15.0931	28.0686	-31.6147	5.4793	6.0891	\N	\N	\N	\N	\N	\N
+AGXY3	-0.43	-1.6574	60.2624	15.4023	0	0	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+AHEB3	2.81	1.5411	2.6396	-10.145	-8.1476	-7.0038	-9.68	-34.1269	-4.6309	-5.7518	0	\N	\N	\N	\N	\N	\N
+AHEB5	1.54	1.6495	2.9035	-8.116	-8.4439	-6.5219	0	0	0	0	0	\N	\N	\N	\N	\N	\N
+AHEB6	1.61	1.6922	2.5485	-18.9988	-7.0015	-11.8751	-9.1787	-24.0041	-5.5386	-4.5853	42.9352	\N	\N	\N	\N	\N	\N
+ALLD3	4.92	5.7359	7.3424	5.5235	0	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+ALOS3	24.21	4.256	59.2466	42.7839	93.674	1235.7175	73.9273	99.4325	97.1322	90.4522	57.0675	\N	\N	\N	\N	\N	\N
+ALPA3	-3.77	-3.8167	66.9228	30.7052	185.6253	68.7299	26.9681	25.7011	13.4202	19.2652	13.0689	\N	\N	\N	\N	\N	\N
+ALPA4	-3.91	-3.7033	84.8063	36.668	204.6263	82.735	28.056	26.3195	15.1279	14.2884	14.1417	\N	\N	\N	\N	\N	\N
+ALPK3	-13.17	-14.0355	-2.1046	-3.9152	-11.8058	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+ALUP11	13.86	13.8358	9.0099	6.3105	8.4263	9.0846	13.8885	16.3399	16.1222	17.2981	13.3788	\N	\N	\N	\N	\N	\N
+ALUP3	14.16	13.7656	8.7674	6.2737	8.361	11.257	17.0481	20.5112	21.6377	0	0	\N	\N	\N	\N	\N	\N
+ALUP4	13.78	13.9895	9.1407	6.3604	8.305	8.344	12.411	14.2144	12.4452	0	0	\N	\N	\N	\N	\N	\N
+AMAR3	-0.19	-0.5069	-1.0962	-18.155	-5.4022	-40.52	62.724	-41.1266	-23.2182	-46.4933	88.4713	\N	\N	\N	\N	\N	\N
+AMBP3	-16.77	-47.7867	54.7318	49.5321	98.466	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+AMER3	-0.03	\N	-0.6746	52.4124	-323.7818	-178.2711	-95.4238	-44.9849	-18.9478	-32.8534	-124.0066	\N	\N	\N	\N	\N	\N
+ANIM3	-8.49	-5.4645	-15.2466	-38.6962	-39.306	-139.3522	339.0991	14.9091	29.3206	9.6454	9.6171	\N	\N	\N	\N	\N	\N
+APER3	-38.07	-134.7072	20.6788	154.2369	-955.3307	237.4832	-2.2418	-3.0199	-4.2742	-3.7602	6.5466	\N	\N	\N	\N	\N	\N
+APTI3	1.63	0	-3.1397	-6.185	1.3461	0	0	0	0	0	\N	\N	\N	\N	\N	\N	\N
+APTI4	1.12	3.5184	-2.1963	-4.3265	0.9956	0	0	0	0	0	\N	\N	\N	\N	\N	\N	\N
+ARML3	19.02	36.1308	27.3581	307.7087	0	0	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+ARZZ3	14.38	17.9322	20.4495	22.7223	155.7367	43.81	42.8414	39.3016	23.9467	19.4778	26.5385	\N	\N	\N	\N	\N	\N
+ASAI3	21.56	25.761	21.5739	10.8818	0	0	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+ATMP3	0.08	0.2037	-0.0751	-0.5096	-0.2861	-0.5621	-3.0124	-7.6317	-96.1982	-0.424	33.0805	\N	\N	\N	\N	\N	\N
+ATOM3	2.48	-103.0578	5.8918	10.3464	5.458	16.5416	7.2769	17.5534	0	0	0	\N	\N	\N	\N	\N	\N
+AURA33	68.01	5.0984	2.0577	3.5506	3.7179	0	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+AURE3	-42.55	-41.8963	5.5079	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+AVLL3	-1.35	-1.6215	-3.3383	-12.4308	-15.0298	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+AZEV4	-6.96	-7.2207	-3.2205	4.282	-16.1774	-23.2762	-6.8017	-11.7771	-24.0078	1018.8526	243.5554	\N	\N	\N	\N	\N	\N
+AZUL4	-4.26	-8.5061	-19.2765	-7.3123	-4.5864	-30.672	108.333	64.3064	0	\N	\N	\N	\N	\N	\N	\N	\N
+B3SA3	16.06	19.5312	17.2587	13.0987	27.5969	29.2702	23.7455	32.4912	21.0927	9.1424	5.5482	\N	\N	\N	\N	\N	\N
+BAHI3	-22.13	-32.2884	-3.0601	-10.6321	-4.9727	-28.0407	-174.1002	-36.4549	48.5418	\N	\N	\N	\N	\N	\N	\N	\N
+BALM3	7.29	6.8405	7.9413	9.573	11.9164	18.0032	39.2	118.6089	0	0	0	\N	\N	\N	\N	\N	\N
+BALM4	5.98	7.1639	6.846	7.9652	9.0294	15.3419	49.7841	125.3825	26.4372	6.2187	9.7574	\N	\N	\N	\N	\N	\N
+BAUH4	21.21	24.1937	-308.0823	103.142	21.5395	14.6255	9.6693	5.8037	6.0787	6.7158	5.2644	\N	\N	\N	\N	\N	\N
+BAZA3	4.3	3.9591	2.4949	3.6603	8.9079	8.1435	12.268	21.7263	12.054	5.6291	7.5218	\N	\N	\N	\N	\N	\N
+BBAS3	4.72	4.9603	3.3339	4.5064	8.3616	8.013	10.532	8.3796	9.2944	2.6735	5.1044	\N	\N	\N	\N	\N	\N
+BBDC3	9.42	11.3666	6.7563	7.6359	12.8633	25.4112	13.4665	11.2158	8.9182	5.6269	9.287	\N	\N	\N	\N	\N	\N
+BBDC4	10.32	12.713	7.599	9.0603	14.426	26.9775	15.3761	11.842	8.8754	5.2921	9.4872	\N	\N	\N	\N	\N	\N
+BBSE3	8.37	8.4684	11.1538	10.5512	15.3912	11.3234	15.5895	14.0717	14.1012	\N	\N	\N	\N	\N	\N	\N	\N
+BDLL3	-0.22	-0.187	0.2923	-1.099	-0.6724	-0.1879	0	0	0	0	0	\N	\N	\N	\N	\N	\N
+BDLL4	-0.17	-0.1411	0.1948	-1.0532	-0.2652	-0.0632	-0.2921	-0.4873	-0.5775	-6.6164	10.5635	\N	\N	\N	\N	\N	\N
+BEEF3	41.58	10.7739	12.0614	10.7487	8.8684	482.6985	-2.3959	-23.0146	37.8617	-10.0873	-14.3748	\N	\N	\N	\N	\N	\N
+BEES3	8.3	9.2978	5.0248	13.1789	7.4276	9.3111	7.2062	6.5087	5.1492	3.7693	0.9451	\N	\N	\N	\N	\N	\N
+BEES4	8.91	9.8442	5.9201	15.6516	8.2181	10.0058	7.4156	6.9234	5.2079	3.6646	0.9688	\N	\N	\N	\N	\N	\N
+BFRE11	8.41	0	0	0	0	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+BFRE12	8.39	0	0	0	0	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+BGIP3	8.76	10.5518	6.4878	13.6437	14.8021	12.2063	10.964	8.0195	4.5707	8.6869	0	\N	\N	\N	\N	\N	\N
+BGIP4	8.3	8.8668	4.2146	9.3043	9.2692	8.5444	10.5337	7.4518	3.6	7.648	60.56	\N	\N	\N	\N	\N	\N
+BHIA3	-0.21	-0.4122	-16.6813	-42.0193	38.2607	-18.529	-39.084	96.1751	-90.0792	229.7854	18.5582	\N	\N	\N	\N	\N	\N
+BIDI11	871.14	\N	871.1385	195.2391	-3945.9083	170.2618	0	0	\N	\N	\N	\N	\N	\N	\N	\N	\N
+BIDI3	864.53	\N	864.5327	244.3735	-3967.9525	162.6273	0	0	\N	\N	\N	\N	\N	\N	\N	\N	\N
+BIDI4	\N	\N	0	195.5808	-3955.9284	174.1339	15.654	0	\N	\N	\N	\N	\N	\N	\N	\N	\N
+BIOM3	-14.63	-6.1172	-6.5362	-14.4097	-20.4086	-19.7916	-17.0046	-21.4058	-12.1515	60.2465	-59.5356	\N	\N	\N	\N	\N	\N
+BLUT3	-5.62	\N	\N	0	0	0	0	0	0	0	0	\N	\N	\N	\N	\N	\N
+BLUT4	-1.66	\N	\N	0	0	0	0	0	0	0	0	\N	\N	\N	\N	\N	\N
+BLAU3	9.26	11.7844	13.0159	20.0785	0	0	0	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+BMEB4	6.34	4.4652	5.256	12.3781	9.1441	9.0729	10.2973	13.3106	19.4401	4.24	-1.5558	\N	\N	\N	\N	\N	\N
+BMGB4	6.58	7.5596	20.9758	7.5222	23.3939	14.7393	0	0	\N	\N	\N	\N	\N	\N	\N	\N	\N
+BMIN3	12.25	13.2816	9.6425	66.9632	39.3056	35.9186	17.1794	-15.1947	1382.0549	16128.4283	0	\N	\N	\N	\N	\N	\N
+BMIN4	9.43	10.9108	6.5619	46.1076	39.109	43.0374	13.25	-5.9443	1019.3069	1418.5502	26.239	\N	\N	\N	\N	\N	\N
+BMKS3	8.43	9.1807	5.4758	26.2489	32.9413	46.5239	\N	18.4692	9.0438	8.2696	8.7284	\N	\N	\N	\N	\N	\N
+BMOB3	14.2	13.9635	14.5481	17.5878	0	0	0	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+BNBR3	4.59	4.5073	3.2143	5.0721	6.4404	4.7242	4.5289	4.2656	3.0015	7.5289	2.5368	\N	\N	\N	\N	\N	\N
+BOAS3	14.81	\N	12.0512	18.4389	348.3634	0	0	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+BOBR3	2.71	2.6008	11.5219	3.894	6.5193	0	0	0	0	0	0	\N	\N	\N	\N	\N	\N
+BOBR4	5.66	5.3056	14.1719	6.5419	14.4728	-13.1255	9.7274	10.1479	8.9542	-1.3685	-10.9633	\N	\N	\N	\N	\N	\N
+BPAC11	11.7	14.5345	11.7088	14.6838	27.478	19.455	17.6614	8.8127	0	0	0	\N	\N	\N	\N	\N	\N
+BPAC5	9.04	11.3733	8.2167	10.908	20.1788	17.4642	16.2215	7.866	0	0	0	\N	\N	\N	\N	\N	\N
+BPAN4	18.48	18.5595	11.527	28.2556	18.4484	26.073	12.4799	21.5546	-11.1992	14.288	36.1449	\N	\N	\N	\N	\N	\N
+BPAR3	3.92	4.3986	7.1947	9.1717	5.3072	0	0	0	0	0	0	\N	\N	\N	\N	\N	\N
+BPHA3	0.96	\N	\N	\N	\N	\N	0.1617	-0.2538	-0.7986	-0.8552	\N	\N	\N	\N	\N	\N	\N
+BRAP3	5.01	4.8396	2.6964	1.0597	11.1582	-24.8246	6.9665	2.9478	5.4532	-0.4416	30.9986	\N	\N	\N	\N	\N	\N
+BRAP4	5.15	5.3183	3.1341	1.2159	12.4194	-27.151	7.6127	3.5276	6.7483	-0.5509	40.2981	\N	\N	\N	\N	\N	\N
+BRBI11	8.99	10.3248	8.561	13.3115	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+BRFS3	-77.33	-11.4539	-4.3996	90.3309	26.8017	198.9888	-8.295	-54.7087	-218.0013	29.9594	47.9704	\N	\N	\N	\N	\N	\N
+BRGE11	33.11	27.6366	6.7615	29.1496	\N	23.487	5.8061	5.5533	3.7311	3.2793	4.697	\N	\N	\N	\N	\N	\N
+BRGE12	33.84	27.6366	8.3226	23.9995	\N	12.0077	4.181	3.9708	3.4783	2.9812	3.962	\N	\N	\N	\N	\N	\N
+BRGE3	33.92	28.2647	8.4629	24.3771	\N	22.0191	5.5839	5.0786	0	0	0	\N	\N	\N	\N	\N	\N
+BRGE5	33.11	27.1843	10.1116	35.3983	\N	63.18	3.1114	0	0	0	0	\N	\N	\N	\N	\N	\N
+BRGE6	32.46	28.8676	10.5326	30.9006	\N	15.7803	14.6265	8.2149	5.5605	4.4259	7.3144	\N	\N	\N	\N	\N	\N
+BRGE7	32.84	27.1843	3.4992	16.6176	\N	0	0	0	0	0	0	\N	\N	\N	\N	\N	\N
+BRGE8	33.09	27.5109	8.1209	33.1323	\N	16.1473	5.2505	3.755	0	0	0	\N	\N	\N	\N	\N	\N
+BRIT3	12.47	10.1869	20.1982	990.4147	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+BRIV3	217.82	183.773	6.9244	17.6332	10.5205	11.2919	8.301	6.782	5.2711	6.6131	6.8445	\N	\N	\N	\N	\N	\N
+BRIV4	212.4	182.7567	6.8873	17.6573	10.6978	11.4463	9.8189	6.6736	6.0512	7.1294	7.8112	\N	\N	\N	\N	\N	\N
+BRKM5	-2.58	-3.8058	-56.4271	3.2852	-2.808	-8.5062	13.1762	8.3704	-66.3565	7.3354	19.4848	\N	\N	\N	\N	\N	\N
+BRKM6	-2.02	-2.7003	-60.5593	1.9034	-2.1527	-6.8391	13.0176	8.6223	0	0	0	\N	\N	\N	\N	\N	\N
+BRML3	13.21	\N	11.9996	36.8132	-27.9022	12.0015	10.6752	-13.2415	23.1205	759.8215	11.1459	\N	\N	\N	\N	\N	\N
+BRPR3	-0.04	\N	-1.991	106.1393	22.2895	21.5991	277.8798	17.7714	120.7195	-5.081	18.0046	\N	\N	\N	\N	\N	\N
+BRQB3	\N	0	0	0	0	0	0	0	0	0	\N	\N	\N	\N	\N	\N	\N
+BRSR3	5.13	5.6033	5.2005	9.1635	8.8543	6.9206	7.8197	8.8278	5.8585	3.3874	5.2939	\N	\N	\N	\N	\N	\N
+BRSR5	6.92	7.2366	8.5364	12.9804	11.1818	7.5746	9.3602	8.5443	6.9434	3.3488	7.9439	\N	\N	\N	\N	\N	\N
+BRSR6	4.84	5.3971	4.7101	7.796	8.191	6.586	8.6504	5.7868	6.3979	2.8236	8.5768	\N	\N	\N	\N	\N	\N
+BSEV3	11.36	\N	\N	\N	50.6255	-3.7184	-2.3322	-4.0498	-26.4622	-8.994	-5.6027	\N	\N	\N	\N	\N	\N
+BSLI3	11.42	14.5807	21.3355	28.417	39.5655	14.2141	14.2672	188.9898	0	0	0	\N	\N	\N	\N	\N	\N
+BSLI4	11.69	13.7706	17.0565	20.6753	26.1234	12.0273	15.6986	170.6892	33.8865	16.4038	10.6955	\N	\N	\N	\N	\N	\N
+CALI3	-83.69	7.6888	4.3933	0	188.312	0	0	0	0	0	0	\N	\N	\N	\N	\N	\N
+CALI4	-147.04	0	24.2959	24.9061	95.9014	-7.5536	107.9083	0	0	0	0	\N	\N	\N	\N	\N	\N
+CAMB3	6.58	6.3129	4.8515	7.5815	10.8855	14.3288	7.0839	0.8128	-0.6338	-1.4738	4.491	\N	\N	\N	\N	\N	\N
+CAMB4	26.33	0	4.7022	7.6123	11.9991	0	0	0	0	0	0	\N	\N	\N	\N	\N	\N
+CAML3	8.45	8.2076	6.0654	8.6084	8.3742	13.1599	6.809	10.9327	0	\N	\N	\N	\N	\N	\N	\N	\N
+CASH3	42.78	-37.2516	-18.129	-74.5354	199.2123	0	0	0	\N	\N	\N	\N	\N	\N	\N	\N	\N
+CASN3	143.85	196.892	144.767	219.3258	132.6138	138.7191	0	0	0	0	0	\N	\N	\N	\N	\N	\N
+CASN4	99.57	135.4273	80.9158	131.2463	92.4138	93.377	0	0	0	0	0	\N	\N	\N	\N	\N	\N
+CATA3	0.89	0	0	0.9416	-2.1265	0	0	0	0	0	\N	\N	\N	\N	\N	\N	\N
+CBAV3	-4.75	-3.6584	8.668	11.3399	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+CBEE3	-15.85	-19.6146	-37.092	-81.2855	103.338	18.0116	38.4213	-63.6462	-49.2422	-256.6736	56.8491	\N	\N	\N	\N	\N	\N
+CCRO3	18.4	16.8601	5.2882	33.6555	142.4352	26.6569	28.9036	18.1494	18.811	28.9934	23.0778	\N	\N	\N	\N	\N	\N
+CCXC3	-0.19	\N	\N	\N	0.3493	-0.821	-3.7319	-1.8327	-0.0815	-0.4043	\N	\N	\N	\N	\N	\N	\N
+CEAB3	15.79	1014.1004	840.3348	5.762	-23.8865	5700.9449	0	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+CEBR3	8.69	6.8543	3.7412	0.9189	4.1655	6.5869	4.4861	2.7637	3.7054	8.2137	-1.3798	\N	\N	\N	\N	\N	\N
+CEBR5	7.47	6.2455	4.112	0.9102	5.1653	7.8961	5.1734	2.5967	0	0	0	\N	\N	\N	\N	\N	\N
+CEBR6	7.98	6.9918	3.7118	0.8889	4.8653	6.4828	4.9347	2.7637	2.9489	9.2276	-1.6233	\N	\N	\N	\N	\N	\N
+CEDO3	3.42	3.4397	-3.5368	46.9935	-2.7814	-5.1253	1.3991	1.3298	-0.4277	-0.8589	-8.7227	\N	\N	\N	\N	\N	\N
+CEDO4	2.68	3.3924	-2.1388	32.6798	-1.357	-4.9431	1.2345	0.8245	-0.2032	-0.846	-10.0623	\N	\N	\N	\N	\N	\N
+CEEB5	5.61	5.5597	5.2402	5.9769	9.0304	9.9724	8.4019	28.3497	19.214	15.266	12.8799	\N	\N	\N	\N	\N	\N
+CEEB6	8.79	0	0	9.5291	13.0468	0	0	0	0	0	0	\N	\N	\N	\N	\N	\N
+CEED3	-2.26	-3.67	-9.7446	-5.7402	-2.4393	-6.3052	-2.5871	-10.2124	-3.8181	-2.6546	-4.8438	\N	\N	\N	\N	\N	\N
+CEED4	-3.71	-3.3254	-8.9752	-6.673	-3.0071	-6.3052	-2.6216	0	0	0	0	\N	\N	\N	\N	\N	\N
+CEGR3	29.63	36.8614	83.7089	60.3059	44.2476	32.5974	46.7201	0	0	0	0	\N	\N	\N	\N	\N	\N
+CEPE3	99.51	0	60.8305	36.8756	44.011	0	0	0	0	0	0	\N	\N	\N	\N	\N	\N
+CEPE5	67.9	0	19.0666	7.5645	11.6904	10.4396	12.002	19.5527	-4313.5291	94.1054	7.0002	\N	\N	\N	\N	\N	\N
+CEPE6	68.41	0	20.4352	8.8178	13.0692	6.2342	8.7148	15.9279	-2858.5874	51.9162	6.5698	\N	\N	\N	\N	\N	\N
+CESP3	-13.85	0	3.4201	16.3447	5.2665	9.1519	23.303	-21.5902	13.4181	-54.4441	13.0969	\N	\N	\N	\N	\N	\N
+CESP5	-10.62	0	3.3465	24.8885	6.748	9.0111	22.2575	-35.9124	20.7175	-69.3896	12.518	\N	\N	\N	\N	\N	\N
+CESP6	-7.04	0	3.38	15.9806	5.4882	8.9942	24.2485	-25.6517	14.4808	-71.5246	15.6753	\N	\N	\N	\N	\N	\N
+CGAS3	5.76	11.5232	9.5103	16.3387	20.0517	13.8494	6.1223	11.3843	5.9606	7.0162	10.4006	\N	\N	\N	\N	\N	\N
+CGAS5	5.96	11.6991	9.4737	16.5603	19.8916	13.8086	5.8126	12.4215	6.7503	7.5092	10.5739	\N	\N	\N	\N	\N	\N
+CGRA3	5.52	5.4378	4.7647	4.5004	9.8984	4.6385	8.4451	8.8736	5.3335	4.4371	5.988	\N	\N	\N	\N	\N	\N
+CGRA4	5.72	5.6037	4.5033	4.3072	9.9013	4.5919	8.8149	9.3478	5.1923	3.8986	5.836	\N	\N	\N	\N	\N	\N
+CIEL3	7.23	6.1052	10.086	6.3826	22.169	14.6945	7.6915	15.754	15.7643	18.0477	20.3472	\N	\N	\N	\N	\N	\N
+CLSA3	-68.63	-25.0123	-28.5466	-31.6194	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+CLSC3	4.86	4.262	3.5891	6.4214	4.4618	6.5276	10.7512	17.4046	-84.4748	8.8552	3.0072	\N	\N	\N	\N	\N	\N
+CLSC4	5.25	4.5251	3.9102	7.2044	4.1956	7.005	11.6557	15.7222	-62.4328	2.9488	1.1202	\N	\N	\N	\N	\N	\N
+CMIG3	6.79	5.7781	8.6865	8.36	8.6909	7.2719	12.8964	9.3418	34.3812	3.8057	6.418	\N	\N	\N	\N	\N	\N
+CMIG4	5.59	4.3842	5.9918	5.9179	7.7205	6.4323	11.8925	10.0122	33.6395	3.6225	6.111	\N	\N	\N	\N	\N	\N
+CMIN3	8.37	12.0351	7.5857	5.8031	11.5581	0	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+CMSA3	-2074.47	0	-6002.4949	-7764.0138	-13691.0711	0	0	0	0	0	\N	\N	\N	\N	\N	\N	\N
+CNSY3	-86.15	\N	0	-33.4843	-20.9699	0	0	0	0	0	\N	\N	\N	\N	\N	\N	\N
+COCE5	6.59	10.7105	5.4766	16.6053	17.615	12	10.2518	9.7814	9.9018	7.7197	12.2404	\N	\N	\N	\N	\N	\N
+COCE6	2.75	3.4057	1.7137	5.2511	6.453	0	0	0	0	0	0	\N	\N	\N	\N	\N	\N
+COGN3	-6.48	-13.2881	-7.5217	-9.4383	-1.4965	91.1818	11.8579	18.3442	13.4156	12.8097	29.07	\N	\N	\N	\N	\N	\N
+CORR3	\N	\N	0	-0.0322	0.0121	0	0	0	0	0	0	\N	\N	\N	\N	\N	\N
+CORR4	\N	\N	0.1279	-0.5969	0.2044	-0.6174	-0.2526	-1.1965	-0.7082	-0.5367	0	\N	\N	\N	\N	\N	\N
+CPFE3	6.87	8.0283	7.5016	6.5111	10.2918	15.1563	16.1525	18.899	32.244	20.162	22.3785	\N	\N	\N	\N	\N	\N
+CPLE11	2.76	13.2369	20.6489	3.8546	0	0	0	0	0	0	0	\N	\N	\N	\N	\N	\N
+CPLE3	12.56	12.5318	18.4279	3.6859	5.348	10.3577	6.3173	6.1755	6.1268	4.0013	6.1587	\N	\N	\N	\N	\N	\N
+CPLE5	19.3	30.0815	62.0163	21.6819	4.6237	10.3007	6.1265	6.3342	7.209	4.784	6.3987	\N	\N	\N	\N	\N	\N
+CPLE6	14.13	13.6806	21.2175	3.8786	5.7254	10.3532	6.4762	7.2	8.7856	6.077	8.8795	\N	\N	\N	\N	\N	\N
+CPRE3	4.55	0	0	7.3979	13.6587	113.6808	87.7685	689.9877	-45.6936	-125.4086	-41.164	\N	\N	\N	\N	\N	\N
+CREM3	\N	\N	\N	\N	\N	\N	\N	0	\N	\N	\N	\N	\N	\N	\N	\N	\N
+CRFB3	-36	-33.0167	17.9187	10.2263	15.3051	48.5969	22.9753	20.1072	\N	\N	\N	\N	\N	\N	\N	\N	\N
+CRIV3	30.81	25.6882	13.8013	12.0808	10.3256	8.8351	6.4737	5.0547	9.4839	6.9574	10.1676	\N	\N	\N	\N	\N	\N
+CRIV4	29.75	25.3351	13.7214	14.5891	12.1979	10.4194	8.2434	6.7978	9.5096	8.644	7.9236	\N	\N	\N	\N	\N	\N
+CRPG3	239.88	32.2135	21.5847	16.0925	5.2857	7.4056	3.9206	3.8997	0	0	0	\N	\N	\N	\N	\N	\N
+CRPG5	212.33	30.4476	12.308	14.64	5.4525	6.6083	5.2165	4.6138	107.7968	-7.6115	0	\N	\N	\N	\N	\N	\N
+CRPG6	211.04	29.6896	11.7986	15.1794	5.4273	6.5898	4.957	4.5845	111.576	-7.5714	0	\N	\N	\N	\N	\N	\N
+CSAB3	12.39	\N	14.8681	53.6198	8.2744	22.8387	23.4172	19.949	0	0	\N	\N	\N	\N	\N	\N	\N
+CSAB4	19.89	\N	19.3748	35.2654	7.5235	19.9186	22.4989	19.3521	0	0	\N	\N	\N	\N	\N	\N	\N
+CSAN3	14.88	33.1527	27.2817	6.6384	41.6515	13.4389	9.4876	14.7822	17.2514	20.3531	46.287	\N	\N	\N	\N	\N	\N
+CSED3	12.23	19.2323	211.4567	33.8353	0	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+CSNA3	958.94	-81.9302	12.4156	2.7033	11.1315	10.4587	2.3103	1080.9988	-15.3925	-4.3689	-70.3251	\N	\N	\N	\N	\N	\N
+CSRN3	6.03	7.9885	6.1907	6.3437	8.5855	11.4218	11.8154	15.756	13.3782	8.0718	5.2965	\N	\N	\N	\N	\N	\N
+CSRN5	5.95	8.0172	5.5832	6.0842	8.8362	10.9849	10.2855	17.1486	0	0	0	\N	\N	\N	\N	\N	\N
+CSRN6	6.91	7.7308	6.075	6.8587	8.4578	10.4064	10.6123	0	0	0	0	\N	\N	\N	\N	\N	\N
+CSUD3	9.2	9.2512	6.931	17.627	13.4836	19.0963	8.7814	9.1085	5.8676	6.5526	11.5585	\N	\N	\N	\N	\N	\N
+CTKA3	3.06	2.2077	-6.2984	3.3434	2.0042	-5.3873	-0.5759	-56.144	0	0	0	\N	\N	\N	\N	\N	\N
+CTKA4	2.84	2.7082	-2.935	1.9206	1.6196	-6.4348	-0.4004	-32.9772	-0.1131	-4.2568	-2.0679	\N	\N	\N	\N	\N	\N
+CTNM3	-0.55	\N	-0.3834	-3.5138	-1.754	-6.1229	1.6841	3.6904	-0.7223	-1.3704	-8.0778	\N	\N	\N	\N	\N	\N
+CTNM4	-0.05	\N	-0.1457	-1.3846	-0.8785	-5.5003	1.5173	3.838	-0.7963	-0.8821	-4.4877	\N	\N	\N	\N	\N	\N
+CTSA3	-2.32	\N	11.9313	7.8061	-74.793	67.1361	7.2566	14.1704	-56.5273	-12.4312	370.6146	\N	\N	\N	\N	\N	\N
+CTSA4	-1.01	\N	7.3839	5.6697	-60.5467	73.6399	10.6213	14.3378	-63.1982	-10.5798	387.8258	\N	\N	\N	\N	\N	\N
+CTSA8	-0.17	\N	0	0.1435	-1.0368	0	0	0	0	0	0	\N	\N	\N	\N	\N	\N
+CURY3	11.75	10.8992	11.2013	6.5727	17855.8879	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+CVCB3	-3.04	-4.0264	-5.4445	-14.8072	-9.0393	510.8941	118.9717	113.8558	70.0906	41.448	55.8948	\N	\N	\N	\N	\N	\N
+CXSE3	12.12	10.8033	8.4834	13.2267	0	0	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+CYRE3	7.86	10.2175	6.4591	6.8988	6.6947	28.54	-73.3051	-55.6274	27.1267	6.6951	6.6836	\N	\N	\N	\N	\N	\N
+DASA3	-2.48	-6.2108	-26.7132	-112.1043	-361.899	348.1933	110.2375	157.4895	140.7377	319.3313	101.8978	\N	\N	\N	\N	\N	\N
+DESK3	17.3	15.9324	19.2544	77.1003	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+DEXP3	5.62	6.0425	4.3215	5.1015	5.817	10.0271	8.664	1.2612	2.8019	-1.03	-7.5782	\N	\N	\N	\N	\N	\N
+DEXP4	5.48	5.8293	3.9013	0	0	0	0	0	0	0	0	\N	\N	\N	\N	\N	\N
+DIRR3	11.45	11.7163	12.9937	13.8247	20.0877	25.9033	-16.7925	-6.8179	-66.7646	4.9251	6.8345	\N	\N	\N	\N	\N	\N
+DMMO11	-49.97	\N	\N	2.4684	-0.9028	-1.8757	0	0	0	0	0	\N	\N	\N	\N	\N	\N
+DMMO3	-6062.17	\N	\N	4.9368	-2.2817	-12.4904	-7.8774	-2.8386	0	0	0	\N	\N	\N	\N	\N	\N
+DMVF3	16.59	14.0471	18.2204	-224.2033	5389.203	0	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+DOHL3	-58.07	1126.6319	216.9351	18.5813	18.0065	18.776	0	0	0	0	0	\N	\N	\N	\N	\N	\N
+DOHL4	-22.84	827.2697	93.499	5.8971	4.7627	14.0523	9.2933	12.4081	21.2844	12.5494	7.8797	\N	\N	\N	\N	\N	\N
+DOTZ3	-1.61	-1.7345	-1.8002	-4.3279	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+DTCY3	-18.25	-12.665	-203.123	-26.9359	342.2826	-4.6329	11.6222	11.9012	-333.9343	-1190.7733	-374.4111	\N	\N	\N	\N	\N	\N
+DTCY4	-322.1	0	-4509.3312	-396.0118	5148.1532	0	0	0	0	0	0	\N	\N	\N	\N	\N	\N
+EALT3	4.48	4.471	5.4733	7.7127	11.4372	18.6922	7.4578	0.2117	-0.6678	9.0369	0.1529	\N	\N	\N	\N	\N	\N
+EALT4	4.74	4.2566	4.0745	4.7082	4.5464	8.7453	7.8802	13.9699	-14.4049	244.5493	6.1485	\N	\N	\N	\N	\N	\N
+ECOR3	7.54	11.5166	12.6117	13.8619	-21.9586	-61.2038	17.4404	21.8225	-5.9482	32.5229	15.7299	\N	\N	\N	\N	\N	\N
+ECPR3	-2.53	\N	\N	-8.739	-2.6433	0	0	0	0	0	0	\N	\N	\N	\N	\N	\N
+ECPR4	-1.09	\N	\N	-9.3855	-2.5729	0	0	0	0	0	0	\N	\N	\N	\N	\N	\N
+EEEL3	0.16	0	3.1349	41.6552	18.1817	9.8747	11.6984	3.6889	0.8627	109.0748	-62.3282	\N	\N	\N	\N	\N	\N
+EEEL4	6.54	0	4.3604	38.8782	19.9133	11.6028	12.3948	2.5324	0.5785	5404.6547	-2564.8328	\N	\N	\N	\N	\N	\N
+EGIE3	8.96	10.7845	11.6059	20.0417	12.8175	17.9439	11.6412	11.5697	14.7651	14.5697	15.9742	\N	\N	\N	\N	\N	\N
+EKTR3	7.8	6.6848	6.3099	19.9496	7.5638	9.6582	7.9359	10.738	0	0	0	\N	\N	\N	\N	\N	\N
+EKTR4	7.97	7.5828	6.8798	16.8295	8.8337	10.0262	8.7637	11.3952	11.0132	10.8682	4.7224	\N	\N	\N	\N	\N	\N
+ELEK3	24.46	\N	\N	\N	\N	9.7672	5.7021	3.9769	-0.339	-15.7856	\N	\N	\N	\N	\N	\N	\N
+ELEK4	12.8	\N	\N	\N	\N	9.4728	5.7259	5.5492	-0.3894	-19.9683	\N	\N	\N	\N	\N	\N	\N
+ELET3	20.37	21.5154	26.7304	13.6518	13.3468	8.1525	3.7434	-25.2972	15.3609	-0.9202	-4.3824	\N	\N	\N	\N	\N	\N
+ELET5	50.76	43.1018	39.6387	26.3556	16.7245	9.0583	4.4108	0	0	0	0	\N	\N	\N	\N	\N	\N
+ELET6	22.63	23.8226	27.4348	13.4884	13.4669	8.2474	4.3521	-29.6922	17.4351	-1.6678	-6.1807	\N	\N	\N	\N	\N	\N
+ELMD3	23.85	32.6659	44.5007	-121.9371	0	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+ELPL3	2.3	0	0	2.9455	1.6932	12.533	-19.6051	-3.8234	235.6616	19.5249	-17.2366	\N	\N	\N	\N	\N	\N
+EMAE3	16.61	3.4399	9.0172	4.5962	4.8418	0	0	0	0	0	0	\N	\N	\N	\N	\N	\N
+EMAE4	12.2	14.4862	36.9324	18.7274	14.0376	14.7286	6.6494	2.5118	5.7658	2.5398	-3.2667	\N	\N	\N	\N	\N	\N
+EMBR3	23.08	21.1596	-11.1111	-66.8741	-1.8122	-11.0947	-23.9949	17.4086	20.2372	92.5313	22.7326	\N	\N	\N	\N	\N	\N
+ENBR3	4.19	11.9347	11.8288	5.6345	7.5728	9.6002	6.7347	13.2977	11.6824	5.5273	7.0114	\N	\N	\N	\N	\N	\N
+ENEV3	-440.46	91.6641	50.3112	19.1113	24.4166	28.8092	7.1795	57.6643	-43.6093	38.885	-10.445	\N	\N	\N	\N	\N	\N
+ENGI11	9.16	13.0122	9.4795	7.2091	16.3212	53.8245	14.7918	22.3774	54.9864	19.7291	22.4473	\N	\N	\N	\N	\N	\N
+ENGI3	14.17	22.4323	15.063	11.1052	26.511	68.4746	16.1474	40.1646	57.7091	21.1384	20.4067	\N	\N	\N	\N	\N	\N
+ENGI4	7.89	10.781	7.9871	6.231	13.2477	51.0292	14.2336	17.2544	54.6017	19.9405	16.6518	\N	\N	\N	\N	\N	\N
+ENJU3	-7.95	-6.4648	-2.9548	-4.8615	-82.992	0	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+ENMA3B	10.75	0	0	20.1225	11.8374	0	0	0	0	0	\N	\N	\N	\N	\N	\N	\N
+ENMA6B	4.16	0	0	33.4737	19.6916	0	0	0	0	0	\N	\N	\N	\N	\N	\N	\N
+ENMT4	11.32	10.7959	15.0778	29.335	10.6569	12.0828	10.1531	340.4336	12.8973	29.469	10.3856	\N	\N	\N	\N	\N	\N
+EPAR3	5.86	7.6561	2.1079	2.6142	0	0	0	0	0	0	0	\N	\N	\N	\N	\N	\N
+EQPA3	7.18	7.578	9.0453	12.6204	10.1659	15.9485	10.8394	6.0251	14.4817	8.4673	8.015	\N	\N	\N	\N	\N	\N
+EQPA5	8.18	8.9404	12.1741	17.1873	16.2039	30.4342	21.8246	8.0816	15.1113	6.3824	7.6944	\N	\N	\N	\N	\N	\N
+EQPA6	6.95	9.9945	13.9377	26.2229	32.9007	47.1848	71.5982	0	0	3.6592	0	\N	\N	\N	\N	\N	\N
+EQPA7	8.18	8.9404	10.951	17.1873	16.5428	32.9822	17.1097	6.1694	11.7742	5.9144	4.4884	\N	\N	\N	\N	\N	\N
+EQTL3	17.75	19.8115	22.6394	7.0451	8.9616	10.8608	18.7014	15.1567	17.5858	9.7508	10	\N	\N	\N	\N	\N	\N
+ESPA3	-16.25	-19.0791	-9.5759	16.6641	0	0	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+ESTR3	-3.18	-4.4474	-6.9816	-11.3652	-10.304	0	0	0	0	0	0	\N	\N	\N	\N	\N	\N
+ESTR4	-0.77	-1.5492	-6.9799	-19.0879	-13.9362	-6.9615	-3.5383	-2.0589	-32.6031	-32.4089	-2.1647	\N	\N	\N	\N	\N	\N
+ETER3	3.7	4.1336	4.7988	4.8067	4.9227	-20.817	-1.158	-1.2338	-12.9825	26.3317	14.1465	\N	\N	\N	\N	\N	\N
+EUCA3	3.91	3.5644	4.2947	2.5731	14.9044	90.0955	30.3806	15.4376	11.253	87.7344	0	\N	\N	\N	\N	\N	\N
+EUCA4	3.72	3.4854	3.0441	1.9066	4.5741	11.7025	13.7832	8.7237	7.7502	24.2482	10.9911	\N	\N	\N	\N	\N	\N
+EVEN3	5.69	7.5927	8.7755	5.7002	163.7602	26.1074	-7.4664	-3.4072	395.5104	8.1285	4.3104	\N	\N	\N	\N	\N	\N
+EZTC3	12.93	17.2567	9.1401	10.5067	23.3963	40.8045	46.7619	10.9999	12.3943	4.6592	7.0278	\N	\N	\N	\N	\N	\N
+FESA3	16.8	14.3682	4.9885	7.8308	39.875	13.2811	6.9558	5.8945	14.7073	4.5886	0	\N	\N	\N	\N	\N	\N
+FESA4	10.61	10.7306	4.4456	6.707	24.1908	7.9902	5.8489	6.6997	9.8387	3.5995	8.3962	\N	\N	\N	\N	\N	\N
+FHER3	-0.58	-1.104	-6.177	1.4828	-0.8004	0.2976	-0.3109	-1.0934	2.5563	-0.2164	35.6433	\N	\N	\N	\N	\N	\N
+FIGE3	2.46	2.3596	2.7429	0	0	0	0	0	0	0	\N	\N	\N	\N	\N	\N	\N
+FIGE4	\N	0	0	0	0	0	0	0	0	0	\N	\N	\N	\N	\N	\N	\N
+FIQE3	7.97	10.0242	10.8446	29.6688	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+FLEX3	\N	\N	0	0	0	0	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+FLRY3	17.15	23.2948	26.1488	26.7924	54.7986	50.9421	31.0872	48.128	40.6086	38.8363	49.4409	\N	\N	\N	\N	\N	\N
+FNCN3	9.08	0	3.4494	-12.1678	0	0	0	0	0	0	\N	\N	\N	\N	\N	\N	\N
+FRAS3	13.86	12.1634	12.6677	17.0909	14.5071	41.7211	13.3098	22.5892	18.1467	19.6752	24.6015	\N	\N	\N	\N	\N	\N
+FRIO3	73.92	-185.6189	-0.9336	-5.0448	-2.6029	17.5982	-20.0807	-11.0378	163.6043	-18.3178	-4.7165	\N	\N	\N	\N	\N	\N
+FRTA3	-0.49	-0.7078	-0.9554	6.4254	11.3221	27.5526	-8.466	-5.307	-1.941	-1.4153	-4.4335	\N	\N	\N	\N	\N	\N
+FTRT3B	-1099.53	\N	\N	\N	\N	\N	0	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+G2DI33	-2.04	-2.0179	-1.2322	1.4762	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+GBIO33	-25.69	\N	\N	\N	\N	662.3911	13.9262	129.6588	0	\N	\N	\N	\N	\N	\N	\N	\N
+GEPA3	7.95	7.5299	9.6677	-343.004	5.6374	18.009	11.7049	13.444	8.6655	46.0737	0	\N	\N	\N	\N	\N	\N
+GETT11	15.72	\N	\N	9.0607	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+GETT3	7.55	\N	\N	9.0372	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+GETT4	7.55	\N	\N	9.0372	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+GFSA3	-2.61	-4.7719	-10.6451	19.9115	-45.7614	-507.9463	-32.4272	-21.6641	-17.3454	354.1266	-561.1778	\N	\N	\N	\N	\N	\N
+GGBR3	5.44	5.0031	3.5898	2.4268	14.3448	23.7857	8.8904	-48.2876	-4.5731	-1.2795	9.5904	\N	\N	\N	\N	\N	\N
+GGBR4	6.13	5.5652	4.3016	2.9441	17.2944	27.8033	10.7644	-57.6472	-6.2518	-1.7096	11.4274	\N	\N	\N	\N	\N	\N
+GGPS3	17.79	19.7946	15.5558	26.7963	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+GMAT3	13.29	12.9934	13.2676	17.6222	25.4476	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+GOAU3	5.29	4.4691	3.3344	2.0918	11.6408	21.0142	9.5385	-25.857	-3.2378	-0.6695	44.0873	\N	\N	\N	\N	\N	\N
+GOAU4	5.29	4.3803	3.583	2.2394	13.3207	22.5447	8.9698	-29.413	-3.5976	-0.736	57.7273	\N	\N	\N	\N	\N	\N
+GOLL4	2.04	-23.5011	-15.0529	-7.5675	-13.3372	-1004.8929	-74.0537	2486.8746	17.4133	-1.809	-39.0077	\N	\N	\N	\N	\N	\N
+GPAR3	266.67	\N	4.7908	20.1748	13.1653	46.3017	11.4734	8.9338	0.4966	-0.5156	-1.0397	\N	\N	\N	\N	\N	\N
+GRAO3	37.12	0	1.6464	0	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+GRND3	9.6	11.4373	9.5771	12.9843	18.6572	22.3829	12.6343	12.9446	8.332	9.1871	9.3852	\N	\N	\N	\N	\N	\N
+GSHP3	-3.46	0.3105	-0.5006	-0.264	-0.2325	-5.6664	-1.2796	1.5767	1.5108	-0.3522	-2.3898	\N	\N	\N	\N	\N	\N
+GUAR3	158.88	-95.2939	62.6161	12.6802	-274.1463	20.3841	8.2101	16.416	11.9474	8.1962	10.7875	\N	\N	\N	\N	\N	\N
+GUAR4	204.48	0	0	0	0	0	0	0	0	0	0	\N	\N	\N	\N	\N	\N
+HAGA3	10.31	13.4598	7.6484	10.2975	7.0376	22.7159	5.6907	-42.198	12.5217	9.0489	3.5599	\N	\N	\N	\N	\N	\N
+HAGA4	3.76	5.6522	2.4707	2.6708	4.3932	11.3818	3.1948	-18.5671	10.8837	6.2471	3.2015	\N	\N	\N	\N	\N	\N
+HAPV3	-100	-45.4016	-47.4854	157.211	146.8495	113.3821	59.7435	0	\N	\N	\N	\N	\N	\N	\N	\N	\N
+HBOR3	6.14	9.2928	5.3489	6.2041	61.7269	-29.2237	-2.4254	-4.2433	-9.986	15.2567	15.0833	\N	\N	\N	\N	\N	\N
+HBRE3	5.22	4.7517	7.3832	5.815	0	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+HBSA3	-41.27	170.2124	-210.622	-6.7489	-49.7123	0	0	0	0	\N	\N	\N	\N	\N	\N	\N	\N
+HBTS5	1.43	1.6377	4.3634	2.406	156.3988	-1.109	-1.3458	-0.6278	-13.7378	7.5938	38.3358	\N	\N	\N	\N	\N	\N
+HETA3	-58.01	-77.2249	0.2404	-30.6004	-0.0119	0	0	0	0	0	0	\N	\N	\N	\N	\N	\N
+HETA4	-3.29	-5.1081	0.0105	-2.5341	-0.0233	1.3381	2.5957	-0.0847	0.699	-0.6196	1.7762	\N	\N	\N	\N	\N	\N
+HGTX3	27.2	\N	\N	\N	8.1371	25.769	19.8417	15.7863	12.3233	8.7926	10.3222	\N	\N	\N	\N	\N	\N
+HOOT3	1.82	0	0.4647	-1.9343	-1.0119	0	0	0	0	0	0	\N	\N	\N	\N	\N	\N
+HOOT4	0.9	0.4299	0.1106	-1.0832	-0.5707	-0.316	-0.3714	-1.2318	-14.4106	-2.6996	-918.621	\N	\N	\N	\N	\N	\N
+IDVL3	-4.71	\N	\N	\N	\N	-34.9539	-42.0943	-19.4669	-12.5458	-9.9512	-477.2326	\N	\N	\N	\N	\N	\N
+IDVL4	-0.38	\N	\N	\N	\N	-38.638	-55.0844	-53.9721	-125.4575	-6.1516	-590.8594	\N	\N	\N	\N	\N	\N
+IFCM3	-0.88	-3.9995	-8.9268	-285.6108	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+IGBR3	0.56	\N	\N	-0.5888	-1.4745	-0.4623	-0.2913	0.3268	-0.1758	-0.4119	-1.6673	\N	\N	\N	\N	\N	\N
+IGSN3	\N	0	0	0	0	0	0	0	0	0	0	\N	\N	\N	\N	\N	\N
+MRSA6B	-1.66	\N	\N	0	0	0	0	0	0	0	0	\N	\N	\N	\N	\N	\N
+IGTI11	29.35	32.39	971.9147	29.5371	0	0	0	0	0	0	0	\N	\N	\N	\N	\N	\N
+IGTI3	10.88	11.9569	425.7147	13.8709	0	0	0	0	0	0	0	\N	\N	\N	\N	\N	\N
+IGTI4	38.38	42.6463	1310.88	0	0	0	0	0	0	0	0	\N	\N	\N	\N	\N	\N
+INEP3	0.18	0.3966	-0.7599	0.2617	-0.2889	-0.186	-0.1927	-0.1001	-0.0678	-5.3265	-1.1563	\N	\N	\N	\N	\N	\N
+INEP4	0.17	0.3201	-0.628	0.2582	-0.2736	-0.1879	-0.1788	-0.0983	-0.0517	-3.8351	-0.9911	\N	\N	\N	\N	\N	\N
+INTB3	13.16	13.2434	20.7716	25.1435	0	0	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+IRBR3	19.1	-29.4245	-3.3671	-14.5317	-13.2701	77.4963	56.0209	30.2353	0	\N	\N	\N	\N	\N	\N	\N	\N
+ITEC3	-13.67	\N	\N	\N	\N	\N	-23.6165	-7.6375	-11.3421	-8.6053	\N	\N	\N	\N	\N	\N	\N
+ITSA3	7.95	8.541	7.2255	6.9941	14.4914	11.5821	11.8286	7.082	7.3827	3.4396	4.4607	\N	\N	\N	\N	\N	\N
+ITSA4	9.26	10.0603	8.2521	7.6755	16.4111	13.4155	13.9739	8.0007	8.3313	3.6843	4.7765	\N	\N	\N	\N	\N	\N
+ITUB3	-0.64	-0.9392	-47.0796	13.2812	16.8828	55.1478	34.9286	71.8275	-47.8073	102.2893	0	\N	\N	\N	\N	\N	\N
+JALL3	10.88	11.9569	425.7147	13.8709	0	0	0	0	0	0	0	\N	\N	\N	\N	\N	\N
+JBSS3	-536.09	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+JCPC3	-1.01	\N	7.3839	5.6697	-60.5467	73.6399	10.6213	14.3378	-63.1982	-10.5798	387.8258	\N	\N	\N	\N	\N	\N
+JFEN3	11.87	12.3987	3.2268	4.1357	7.6234	0	0	0	0	0	0	\N	\N	\N	\N	\N	\N
+JHSF3	5.72	8.3615	5.1946	3.7776	8.242	15.0315	7.1532	-52.5099	-3.6815	7.9604	38.2011	\N	\N	\N	\N	\N	\N
+JOPA3	13.99	13.7979	7.7939	9.9113	11.6326	15.8912	10.0868	13.3951	8.2702	4.8249	5.6391	\N	\N	\N	\N	\N	\N
+JOPA4	21.28	22.2081	12.9552	12.045	10.6555	13.5369	8.3677	13.5112	6.8918	7.2592	8.6752	\N	\N	\N	\N	\N	\N
+JPSA3	94.18	124.6986	103.3199	159.4583	473.7034	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+JSLG3	8.07	10.1371	8.1285	7.9649	17.1624	0	0	0	0	0	0	\N	\N	\N	\N	\N	\N
+KEPL3	-0.58	-1.104	-6.177	1.4828	-0.8004	0.2976	-0.3109	-1.0934	2.5563	-0.2164	35.6433	\N	\N	\N	\N	\N	\N
+KLBN11	13.85	16.7324	17.103	24.8207	14.6612	42.2182	30.8796	38.4353	38.1197	21.0102	25.8111	\N	\N	\N	\N	\N	\N
+KLBN3	35.86	\N	\N	\N	\N	50.6249	82.7275	-54.0584	-10.9144	-254.8273	201.5949	\N	\N	\N	\N	\N	\N
+KLBN4	7.83	5.1508	2.6906	9.0873	-7.1183	-18.3664	155.9992	13.4853	10.9448	-26.3403	-56.1032	\N	\N	\N	\N	\N	\N
+KRSA3	-3.48	-5.9207	-5.6061	-63.1106	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+LAME3	40.46	\N	\N	\N	97.8517	52.752	74.4729	104.1707	111.0734	78.2877	48.1062	\N	\N	\N	\N	\N	\N
+LAME4	32.09	\N	\N	\N	125.7956	69.3809	97.6125	135.2712	151.4232	121.7948	63.3092	\N	\N	\N	\N	\N	\N
+LAND3	42.53	46.7007	20.1676	56.4508	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+LAVV3	-1099.53	\N	\N	\N	\N	\N	0	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+LCAM3	6.04	6.4016	7.3782	7.3644	22.8238	15.0692	11.6729	13.6333	114.1034	16.687	13.6516	\N	\N	\N	\N	\N	\N
+LEVE3	48.73	\N	\N	35.2032	7.5852	18.5519	11.5714	8.8357	8.184	8.0114	7.3455	\N	\N	\N	\N	\N	\N
+LIGT3	8.16	7.9305	9.6857	13.8322	27.6587	9.2754	8.6387	28.6997	1.6082	1.9793	-0.4109	\N	\N	\N	\N	\N	\N
+LINX3	-90.8	\N	\N	\N	-88.6132	172.5576	86.9007	47.8183	47.9737	43.8268	47.178	\N	\N	\N	\N	\N	\N
+LIPR3	6.59	6.5329	8.5796	27.6878	23.4605	5.8765	2.34	2.5062	2.4103	0	\N	\N	\N	\N	\N	\N	\N
+LJQQ3	9.03	62.252	-43.8108	31.9927	46.8784	0	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+LOGG3	17.07	18.946	20.8762	32.8023	0	0	0	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+LOGN3	147.91	68.5605	9.2396	25.9143	133.7615	201.0178	138.968	-0.6174	2.9239	-1.7258	-21.6042	\N	\N	\N	\N	\N	\N
+LPSB3	11.83	13.4481	9.0653	2.3229	18.1415	10.754	12.2349	11.1082	10.2747	5.5413	8.0179	\N	\N	\N	\N	\N	\N
+LREN3	7.94	8.2212	8.4317	6.6792	5.7529	10.2872	6.0306	7.0893	1.9704	14.038	20.0343	\N	\N	\N	\N	\N	\N
+LTEL3B	\N	0	0.0012	0.0021	0.0058	0	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+LUPA3	-26.3	\N	39.1782	20.5034	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+LUXM3	-1.66	\N	\N	0	0	0	0	0	0	0	0	\N	\N	\N	\N	\N	\N
+LVTC3	-317.26	-22.812	16.4329	15.2799	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+LWSA3	-51.12	-49.2597	138.3662	-498.7318	608.3011	0	0	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+MAPT3	-27.24	-115.0546	-4307.3672	-390.7987	-270.3202	-366.4345	0	0	-28.9455	-27.6991	\N	\N	\N	\N	\N	\N	\N
+MAPT4	-51.12	-49.2597	138.3662	-498.7318	608.3011	0	0	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+LVBI3	-11.51	-16.977	12.242	12.4015	28.0476	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+MAGA3	45.03	52.6868	23.5302	84.4538	2.3198	18.0416	22.0406	26.0183	0	0	0	\N	\N	\N	\N	\N	\N
+MANA3	-6.28	-11.7101	17.9622	13.1211	25.3375	26.8279	9.2205	23.7502	13.5088	17.6688	62.6287	\N	\N	\N	\N	\N	\N
+MANA4	7.72	8.2002	13.1899	8.7593	9.3836	14.7079	12.8639	10.669	9.4983	9.2935	11.2214	\N	\N	\N	\N	\N	\N
+MATD3	1.82	0	0.4647	-1.9343	-1.0119	0	0	0	0	0	0	\N	\N	\N	\N	\N	\N
+MATD4	0.9	0.4299	0.1106	-1.0832	-0.5707	-0.316	-0.3714	-1.2318	-14.4106	-2.6996	-918.621	\N	\N	\N	\N	\N	\N
+MBLY3	-3.28	-2.5388	-3.5561	-6.1275	0	0	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+MDIA3	-3.87	-6.6187	4.9748	6.9769	68.6191	30.4079	19.503	38.4268	0	0	\N	\N	\N	\N	\N	\N	\N
+MDNE3	-191.49	\N	\N	\N	\N	\N	-26.2891	-3.6133	-6.1147	-0.7419	\N	\N	\N	\N	\N	\N	\N
+MEAL3	42.03	47.8774	39.3365	53.3844	85.3841	47.7634	37.579	59.3334	45.158	34.497	\N	\N	\N	\N	\N	\N	\N
+MEGA3	115.79	\N	-542.4876	26.5801	0	0	0	0	0	0	0	\N	\N	\N	\N	\N	\N
+MELK3	6.5	8.9922	8.0426	9.5737	37.3138	0	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+MELI34	7.67	11.3456	6.7087	1.3431	3.0031	-1.2698	-0.2417	-0.7986	-1.6258	-320.1129	-1972.2514	\N	\N	\N	\N	\N	\N
+MERC3	13.89	0	0	35.2515	55.0259	28.7314	14.7071	28.9197	22.1064	16.6097	16.7056	\N	\N	\N	\N	\N	\N
+MERC4	14.37	21.6247	17.6605	25.2175	58.373	38.4178	20.6929	33.4589	62.8446	31.833	21.3202	\N	\N	\N	\N	\N	\N
+MGEL3	-59.39	\N	\N	-70.7493	-40.6538	0	0	0	0	0	0	\N	\N	\N	\N	\N	\N
+MGEL4	-136.61	\N	\N	-0.8706	-0.8892	1.2842	53.4431	4.4608	-0.857	-18.2431	-179.8722	\N	\N	\N	\N	\N	\N
+MGLU3	9.78	14.7364	25.2083	17.1114	15.116	23.2238	20.0545	20.9217	16.5682	12.4429	17.1595	\N	\N	\N	\N	\N	\N
+MILS3	10.06	12.035	13.0031	15.3568	-318.9052	-77.7528	-13.8269	-7.3333	-9.688	-6.6991	36.6006	\N	\N	\N	\N	\N	\N
+MLAS3	-3.18	-2.0509	36.7554	7.6788	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+MMXM11	26.33	68.2396	-8.8939	-9.1622	0	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+MMXM3	-2.17	\N	\N	\N	-1.3639	-0.1374	-0.1267	-0.6835	0.0872	9.7184	-1.2979	\N	\N	\N	\N	\N	\N
+MNDL3	-0.17	-0.1411	0.1948	-1.0532	-0.2652	-0.0632	-0.2921	-0.4873	-0.5775	-6.6164	10.5635	\N	\N	\N	\N	\N	\N
+MNPR3	13.99	13.7979	7.7939	9.9113	11.6326	15.8912	10.0868	13.3951	8.2702	4.8249	5.6391	\N	\N	\N	\N	\N	\N
+MOAR3	19.12	30.6651	68.7514	-94.4743	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+MODL11	-1.61	-1.7345	-1.8002	-4.3279	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+MODL3	19.02	36.1308	27.3581	307.7087	0	0	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+MODL4	-0.03	\N	-0.6746	52.4124	-323.7818	-178.2711	-95.4238	-44.9849	-18.9478	-32.8534	-124.0066	\N	\N	\N	\N	\N	\N
+MOSI3	32.29	\N	\N	\N	0	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+MOVI3	-7.39	-16.0437	-26.9037	0	0	0	0	0	\N	\N	\N	\N	\N	\N	\N	\N	\N
+MRSA3B	\N	0	0	0	0	0	0	0	0	0	\N	\N	\N	\N	\N	\N	\N
+MRSA5B	-5.62	\N	\N	0	0	0	0	0	0	0	0	\N	\N	\N	\N	\N	\N
+MSAN3	43.78	38.5875	6.6984	4.6176	13.5976	8.5336	9.6032	6.5581	4.5521	5.2222	9.0905	\N	\N	\N	\N	\N	\N
+MSAN4	-0.1	-0.1968	-0.1088	-0.7956	-0.7317	-73.1375	-4.6399	-12.551	-4.3654	17.493	21.3687	\N	\N	\N	\N	\N	\N
+MSPA3	-2560.26	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+MSPA4	-25.69	\N	\N	\N	\N	662.3911	13.9262	129.6588	0	\N	\N	\N	\N	\N	\N	\N	\N
+MSRO3	2516.44	0	\N	2449.3166	17140.6211	0	0	0	0	0	0	\N	\N	\N	\N	\N	\N
+MTIG3	-0.01	-0.0112	-0.1449	0.1752	-0.0734	-0.0181	-0.0254	-0.0418	\N	-45.8475	-1.9692	\N	\N	\N	\N	\N	\N
+MTRE3	10.01	8.9902	8.4288	31.0176	0	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+MTSA3	7.72	8.2002	13.1899	8.7593	9.3836	14.7079	12.8639	10.669	9.4983	9.2935	11.2214	\N	\N	\N	\N	\N	\N
+MTSA4	-6.28	-11.7101	17.9622	13.1211	25.3375	26.8279	9.2205	23.7502	13.5088	17.6688	62.6287	\N	\N	\N	\N	\N	\N
+MULT3	13.85	16.7324	17.103	24.8207	14.6612	42.2182	30.8796	38.4353	38.1197	21.0102	25.8111	\N	\N	\N	\N	\N	\N
+MWET3	-0.76	-1.0755	2.0621	0.3567	4.8121	-0.3684	-0.4475	0	0	0	0	\N	\N	\N	\N	\N	\N
+MWET4	-0.69	-0.5256	0.6872	0.2708	0.5376	-0.3263	-0.1887	0.8441	-0.1488	-0.0389	-2.4982	\N	\N	\N	\N	\N	\N
+MYPK3	32.09	\N	\N	\N	125.7956	69.3809	97.6125	135.2712	151.4232	121.7948	63.3092	\N	\N	\N	\N	\N	\N
+NAFG3	11.69	13.7706	17.0565	20.6753	26.1234	12.0273	15.6986	170.6892	33.8865	16.4038	10.6955	\N	\N	\N	\N	\N	\N
+NAFG4	5.86	7.6561	2.1079	2.6142	0	0	0	0	0	0	0	\N	\N	\N	\N	\N	\N
+NEOE3	18.19	12.7404	10.4557	2.5986	21.6238	55.524	12.899	48.2926	-8.2298	-1.0029	63.4519	\N	\N	\N	\N	\N	\N
+NEXP3	0.38	0.6362	-0.3073	-1.6382	0	0	0	0	0	0	0	\N	\N	\N	\N	\N	\N
+NGRD3	-55.06	114.1707	24.9899	49.2037	138.0611	0	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+NINJ3	26.33	68.2396	-8.8939	-9.1622	0	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+NEMO3	-2.26	-3.67	-9.7446	-5.7402	-2.4393	-6.3052	-2.5871	-10.2124	-3.8181	-2.6546	-4.8438	\N	\N	\N	\N	\N	\N
+NEMO5	-3.71	-3.3254	-8.9752	-6.673	-3.0071	-6.3052	-2.6216	0	0	0	0	\N	\N	\N	\N	\N	\N
+NEMO6	0.16	0	3.1349	41.6552	18.1817	9.8747	11.6984	3.6889	0.8627	109.0748	-62.3282	\N	\N	\N	\N	\N	\N
+NORD3	24.46	\N	\N	\N	\N	9.7672	5.7021	3.9769	-0.339	-15.7856	\N	\N	\N	\N	\N	\N	\N
+NRTQ3	6.12	0	2.9703	2.4256	2.599	0	0	0	0	0	\N	\N	\N	\N	\N	\N	\N
+NTCO3	8.27	7.8769	-5.6306	33.6535	-111.9802	344.9724	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+NUTR3	7.93	8.4264	7.6674	9.0876	25.861	25.2108	36.6535	55.0156	30.7855	6.2414	1.0361	\N	\N	\N	\N	\N	\N
+ODER3	0.56	\N	\N	-0.5888	-1.4745	-0.4623	-0.2913	0.3268	-0.1758	-0.4119	-1.6673	\N	\N	\N	\N	\N	\N
+ODER4	\N	0	0	0	0	0	0	0	0	0	0	\N	\N	\N	\N	\N	\N
+ODPV3	147.91	68.5605	9.2396	25.9143	133.7615	201.0178	138.968	-0.6174	2.9239	-1.7258	-21.6042	\N	\N	\N	\N	\N	\N
+OFSA3	-3.29	-5.1081	0.0105	-2.5341	-0.0233	1.3381	2.5957	-0.0847	0.699	-0.6196	1.7762	\N	\N	\N	\N	\N	\N
+OIBR3	18.48	18.5595	11.527	28.2556	18.4484	26.073	12.4799	21.5546	-11.1992	14.288	36.1449	\N	\N	\N	\N	\N	\N
+OIBR4	158.88	-95.2939	62.6161	12.6802	-274.1463	20.3841	8.2101	16.416	11.9474	8.1962	10.7875	\N	\N	\N	\N	\N	\N
+ORVR3	-68.63	-25.0123	-28.5466	-31.6194	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+PATI3	2.81	1.5411	2.6396	-10.145	-8.1476	-7.0038	-9.68	-34.1269	-4.6309	-5.7518	0	\N	\N	\N	\N	\N	\N
+PATI4	1.54	1.6495	2.9035	-8.116	-8.4439	-6.5219	0	0	0	0	0	\N	\N	\N	\N	\N	\N
+PCAR3	24.8	37.7567	30.9192	27.798	70.5097	60.9377	46.0708	44.5342	28.4487	20.9872	29.5953	\N	\N	\N	\N	\N	\N
+PDGR3	159.94	0	200.4147	48.4399	191.4291	169.1592	167.2938	642.1036	173.3945	154.2471	144.2887	\N	\N	\N	\N	\N	\N
+PEAB3	8.69	6.8543	3.7412	0.9189	4.1655	6.5869	4.4861	2.7637	3.7054	8.2137	-1.3798	\N	\N	\N	\N	\N	\N
+PEAB4	7.47	6.2455	4.112	0.9102	5.1653	7.8961	5.1734	2.5967	0	0	0	\N	\N	\N	\N	\N	\N
+PETR3	5.18	5.8685	4.5302	9.6701	7.8871	9.4606	6.9423	8.7948	0	0	0	\N	\N	\N	\N	\N	\N
+PETR4	5.27	5.9207	4.79	9.7609	7.7354	9.8319	6.0393	8.5892	8.6387	3.8489	6.9302	\N	\N	\N	\N	\N	\N
+PFRM3	798.79	15.9321	24.9412	21.7725	30.107	47.4773	41.6671	43.8264	3.2491	-4.9351	-117.8547	\N	\N	\N	\N	\N	\N
+PINE3	-0.19	-0.5069	-1.0962	-18.155	-5.4022	-40.52	62.724	-41.1266	-23.2182	-46.4933	88.4713	\N	\N	\N	\N	\N	\N
+PINE4	-13.97	-5.9564	1.9439	4.7373	4.0958	42.5637	3.6472	-14.111	-9.0701	-10.0988	-7.6881	\N	\N	\N	\N	\N	\N
+PLAS3	-136.61	\N	\N	-0.8706	-0.8892	1.2842	53.4431	4.4608	-0.857	-18.2431	-179.8722	\N	\N	\N	\N	\N	\N
+PLAS4	\N	0	0	0	0	0	0	0	0	0	\N	\N	\N	\N	\N	\N	\N
+PMAM3	158.88	-95.2939	62.6161	12.6802	-274.1463	20.3841	8.2101	16.416	11.9474	8.1962	10.7875	\N	\N	\N	\N	\N	\N
+PNVL3	798.79	15.9321	24.9412	21.7725	30.107	47.4773	41.6671	43.8264	3.2491	-4.9351	-117.8547	\N	\N	\N	\N	\N	\N
+PNVL4	10.22	0	4.036	-832.218	-175.2038	0	0	0	0	0	\N	\N	\N	\N	\N	\N	\N
+POMO3	10.06	12.035	13.0031	15.3568	-318.9052	-77.7528	-13.8269	-7.3333	-9.688	-6.6991	36.6006	\N	\N	\N	\N	\N	\N
+POMO4	8.27	7.8769	-5.6306	33.6535	-111.9802	344.9724	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+POSI3	-2.58	-3.8058	-56.4271	3.2852	-2.808	-8.5062	13.1762	8.3704	-66.3565	7.3354	19.4848	\N	\N	\N	\N	\N	\N
+PRIO3	8.16	7.9305	9.6857	13.8322	27.6587	9.2754	8.6387	28.6997	1.6082	1.9793	-0.4109	\N	\N	\N	\N	\N	\N
+PRNR3	31.35	79.9422	-27.5465	-35.4075	0	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+PSSA3	-0.06	-0.0778	-0.0583	-0.5831	-1.3796	-0.6309	0.3356	-3.7657	-2.1632	-20.7929	-13.7073	\N	\N	\N	\N	\N	\N
+PTBL3	43.78	38.5875	6.6984	4.6176	13.5976	8.5336	9.6032	6.5581	4.5521	5.2222	9.0905	\N	\N	\N	\N	\N	\N
+PTNT3	-0.2	-0.1466	-0.1229	-0.5238	-0.4622	-1.517	-1.1431	-2.2668	-0.8634	-0.0252	-0.0947	\N	\N	\N	\N	\N	\N
+PTNT4	-8.5	-33.4878	0.6517	20.079	55.6139	-1.2646	-2.1618	-51.6689	-24.5298	275.891	0	\N	\N	\N	\N	\N	\N
+QUAL3	-6.28	-11.7101	17.9622	13.1211	25.3375	26.8279	9.2205	23.7502	13.5088	17.6688	62.6287	\N	\N	\N	\N	\N	\N
+RADL3	10.63	12.0241	8.0702	1.9574	13.8707	11.2019	12.8368	14.3937	19.1794	6.4763	7.9913	\N	\N	\N	\N	\N	\N
+RAIL3	-0.15	-0.1982	-0.1748	-1.0894	-1.7683	-0.9024	0.3383	-3.5998	-1.8506	-16.8942	-12.8983	\N	\N	\N	\N	\N	\N
+RANI3	6.34	6.8302	5.1047	5.7999	13.9343	-12.0522	234.9712	-4.412	-52.9396	1458.3597	13.8165	\N	\N	\N	\N	\N	\N
+RANI4	-1.35	-1.6215	-3.3383	-12.4308	-15.0298	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+RDNI3	8.27	7.8769	-5.6306	33.6535	-111.9802	344.9724	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+REDE3	-1.12	-0.5086	-0.1689	-1.0195	-2.5917	0	0	0	0	0	0	\N	\N	\N	\N	\N	\N
+RNEW11	-3.36	\N	-6.0507	-5.7604	-4.3426	-9.1705	-3.0759	-15.9679	-1.4335	-1.7637	-3.5939	\N	\N	\N	\N	\N	\N
+RNEW3	6.92	7.2366	8.5364	12.9804	11.1818	7.5746	9.3602	8.5443	6.9434	3.3488	7.9439	\N	\N	\N	\N	\N	\N
+RNEW4	4.84	5.3971	4.7101	7.796	8.191	6.586	8.6504	5.7868	6.3979	2.8236	8.5768	\N	\N	\N	\N	\N	\N
+ROMI3	-4.26	-8.5061	-19.2765	-7.3123	-4.5864	-30.672	108.333	64.3064	0	\N	\N	\N	\N	\N	\N	\N	\N
+RPAD3	-17.84	-4.7646	0.0274	-0.0378	-1.7301	-2.1026	5.4534	-0.1785	-0.1575	-0.0713	-0.1604	\N	\N	\N	\N	\N	\N
+RPAD5	1.83	\N	\N	\N	\N	13.0127	9.2231	0	0	0	0	\N	\N	\N	\N	\N	\N
+RPMG3	7.82	1.0684	61.0461	-6.646	-15.4471	0.6926	-1.2297	0	0	0	0	\N	\N	\N	\N	\N	\N
+SANB11	-17.5	-211.9921	-21.1214	8.3906	19.387	17.5718	10.0774	12.955	11.0521	8.9217	5.8611	\N	\N	\N	\N	\N	\N
+SANB4	7.94	8.2212	8.4317	6.6792	5.7529	10.2872	6.0306	7.0893	1.9704	14.038	20.0343	\N	\N	\N	\N	\N	\N
+SAPR11	34.46	-52.078	3.1554	4.1089	11.413	9.8142	1079.5596	39.6122	104.9372	5.4639	10.5245	\N	\N	\N	\N	\N	\N
+SAPR3	13.78	13.9895	9.1407	6.3604	8.305	8.344	12.411	14.2144	12.4452	0	0	\N	\N	\N	\N	\N	\N
+SAPR4	13.86	13.8358	9.0099	6.3105	8.4263	9.0846	13.8885	16.3399	16.1222	17.2981	13.3788	\N	\N	\N	\N	\N	\N
+SBSP3	11.22	12.7756	8.5525	2.1831	17.3113	11.3162	12.7235	13.3937	15.0951	6.1467	8.9636	\N	\N	\N	\N	\N	\N
+SCAR3	13.99	13.7979	7.7939	9.9113	11.6326	15.8912	10.0868	13.3951	8.2702	4.8249	5.6391	\N	\N	\N	\N	\N	\N
+SCAR4	21.28	22.2081	12.9552	12.045	10.6555	13.5369	8.3677	13.5112	6.8918	7.2592	8.6752	\N	\N	\N	\N	\N	\N
+SEDU3	-68.63	-25.0123	-28.5466	-31.6194	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+SEER3	17.02	20.7525	18.9572	26.9133	40.0332	30.6659	18.6738	11.2908	2.8064	0	0	\N	\N	\N	\N	\N	\N
+SGPS3	12.68	12.5539	11.0335	16.6389	20.2359	29.7558	24.2493	15.8894	29.3004	21.482	25.4333	\N	\N	\N	\N	\N	\N
+SHOW3	2.7	2.4792	-14.5622	-3.9228	-2.4653	-5.9518	59.3682	11.1696	14.1975	9.9751	-2.7666	\N	\N	\N	\N	\N	\N
+SLCE3	18.67	64.4729	6.4862	4.3922	-4.845	10.6507	18.1794	551.568	83.2499	38.3053	27.6686	\N	\N	\N	\N	\N	\N
+SMFT3	-0.43	-1.6574	60.2624	15.4023	0	0	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+SMLE3	-0.43	-1.6574	60.2624	15.4023	0	0	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+SNSY3	13.86	12.1634	12.6677	17.0909	14.5071	41.7211	13.3098	22.5892	18.1467	19.6752	24.6015	\N	\N	\N	\N	\N	\N
+SNSY5	1.43	1.6377	4.3634	2.406	156.3988	-1.109	-1.3458	-0.6278	-13.7378	7.5938	38.3358	\N	\N	\N	\N	\N	\N
+SNSY6	115.79	\N	-542.4876	26.5801	0	0	0	0	0	0	0	\N	\N	\N	\N	\N	\N
+SOMA3	4.86	4.262	3.5891	6.4214	4.4618	6.5276	10.7512	17.4046	-84.4748	8.8552	3.0072	\N	\N	\N	\N	\N	\N
+SOND3	2.68	3.3924	-2.1388	32.6798	-1.357	-4.9431	1.2345	0.8245	-0.2032	-0.846	-10.0623	\N	\N	\N	\N	\N	\N
+SOND5	8.69	6.8543	3.7412	0.9189	4.1655	6.5869	4.4861	2.7637	3.7054	8.2137	-1.3798	\N	\N	\N	\N	\N	\N
+SOND6	7.47	6.2455	4.112	0.9102	5.1653	7.8961	5.1734	2.5967	0	0	0	\N	\N	\N	\N	\N	\N
+SPRI3	12.47	10.1869	20.1982	990.4147	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+SPRI4	-68.63	-25.0123	-28.5466	-31.6194	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+STBP3	-0.01	-0.0112	-0.1449	0.1752	-0.0734	-0.0181	-0.0254	-0.0418	\N	-45.8475	-1.9692	\N	\N	\N	\N	\N	\N
+SULA11	5.69	7.5927	8.7755	5.7002	163.7602	26.1074	-7.4664	-3.4072	395.5104	8.1285	4.3104	\N	\N	\N	\N	\N	\N
+SULA3	-440.46	91.6641	50.3112	19.1113	24.4166	28.8092	7.1795	57.6643	-43.6093	38.885	-10.445	\N	\N	\N	\N	\N	\N
+SULA4	8.96	10.7845	11.6059	20.0417	12.8175	17.9439	11.6412	11.5697	14.7651	14.5697	15.9742	\N	\N	\N	\N	\N	\N
+SUZB3	34.25	27.0293	38.4114	38.6026	67.8939	45.0517	27.505	34.0779	22.3889	20.8764	25.8705	\N	\N	\N	\N	\N	\N
+SYNE3	12.68	12.5539	11.0335	16.6389	20.2359	29.7558	24.2493	15.8894	29.3004	21.482	25.4333	\N	\N	\N	\N	\N	\N
+TAEE11	4.19	11.9347	11.8288	5.6345	7.5728	9.6002	6.7347	13.2977	11.6824	5.5273	7.0114	\N	\N	\N	\N	\N	\N
+TAEE4	16.06	19.5312	17.2587	13.0987	27.5969	29.2702	23.7455	32.4912	21.0927	9.1424	5.5482	\N	\N	\N	\N	\N	\N
+TASA3	-2074.47	0	-6002.4949	-7764.0138	-13691.0711	0	0	0	0	0	\N	\N	\N	\N	\N	\N	\N
+TASA4	-2267.95	0	-6562.3323	-8484.929	-14967.5489	0	0	0	0	0	\N	\N	\N	\N	\N	\N	\N
+TCNO3	30.81	25.6882	13.8013	12.0808	10.3256	8.8351	6.4737	5.0547	9.4839	6.9574	10.1676	\N	\N	\N	\N	\N	\N
+TCNO4	29.75	25.3351	13.7214	14.5891	12.1979	10.4194	8.2434	6.7978	9.5096	8.644	7.9236	\N	\N	\N	\N	\N	\N
+TCSA3	-90.8	\N	\N	\N	-88.6132	172.5576	86.9007	47.8183	47.9737	43.8268	47.178	\N	\N	\N	\N	\N	\N
+TECN3	-2.32	\N	11.9313	7.8061	-74.793	67.1361	7.2566	14.1704	-56.5273	-12.4312	370.6146	\N	\N	\N	\N	\N	\N
+TEKA3	-0.14	-0.0273	-0.0259	-0.1639	-0.1564	-0.0312	-0.0351	-0.0355	0	0	0	\N	\N	\N	\N	\N	\N
+TEKA4	-0.1	-0.0697	-0.0709	-0.0621	-0.061	-0.0312	-0.0351	-0.0355	0	0	0	\N	\N	\N	\N	\N	\N
+TELB3	13.86	13.8358	9.0099	6.3105	8.4263	9.0846	13.8885	16.3399	16.1222	17.2981	13.3788	\N	\N	\N	\N	\N	\N
+TELB4	34.46	-52.078	3.1554	4.1089	11.413	9.8142	1079.5596	39.6122	104.9372	5.4639	10.5245	\N	\N	\N	\N	\N	\N
+TEND3	-2.48	-6.2108	-26.7132	-112.1043	-361.899	348.1933	110.2375	157.4895	140.7377	319.3313	101.8978	\N	\N	\N	\N	\N	\N
+TGMA3	958.94	-81.9302	12.4156	2.7033	11.1315	10.4587	2.3103	1080.9988	-15.3925	-4.3689	-70.3251	\N	\N	\N	\N	\N	\N
+TIET11	9.67	8.3865	7.3604	6.4678	28.6014	27.9582	18.5892	33.7481	195.0697	21.8044	13.9505	\N	\N	\N	\N	\N	\N
+TIET3	-6.48	-13.2881	-7.5217	-9.4383	-1.4965	91.1818	11.8579	18.3442	13.4156	12.8097	29.07	\N	\N	\N	\N	\N	\N
+TIET4	-32.62	-19.0457	-0.9491	-10.7421	18.5523	14.1006	9.8609	11.5376	0	0	0	\N	\N	\N	\N	\N	\N
+TIMP3	10.63	12.0241	8.0702	1.9574	13.8707	11.2019	12.8368	14.3937	19.1794	6.4763	7.9913	\N	\N	\N	\N	\N	\N
+TKNO3	-32.62	-19.0457	-0.9491	-10.7421	18.5523	14.1006	9.8609	11.5376	0	0	0	\N	\N	\N	\N	\N	\N
+TKNO4	9.67	8.3865	7.3604	6.4678	28.6014	27.9582	18.5892	33.7481	195.0697	21.8044	13.9505	\N	\N	\N	\N	\N	\N
+TMAR5	7.94	8.2212	8.4317	6.6792	5.7529	10.2872	6.0306	7.0893	1.9704	14.038	20.0343	\N	\N	\N	\N	\N	\N
+TMAR8	-17.5	-211.9921	-21.1214	8.3906	19.387	17.5718	10.0774	12.955	11.0521	8.9217	5.8611	\N	\N	\N	\N	\N	\N
+TOTS3	-0.15	-0.1982	-0.1748	-1.0894	-1.7683	-0.9024	0.3383	-3.5998	-1.8506	-16.8942	-12.8983	\N	\N	\N	\N	\N	\N
+TPIS3	-1.9	-2.8483	-2.5661	-44.5179	0	0	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+TRAD3	21.56	25.761	21.5739	10.8818	0	0	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+TRIS3	4.48	4.471	5.4733	7.7127	11.4372	18.6922	7.4578	0.2117	-0.6678	9.0369	0.1529	\N	\N	\N	\N	\N	\N
+TRPL3	20.37	21.5154	26.7304	13.6518	13.3468	8.1525	3.7434	-25.2972	15.3609	-0.9202	-4.3824	\N	\N	\N	\N	\N	\N
+TRPL4	4.74	4.2566	4.0745	4.7082	4.5464	8.7453	7.8802	13.9699	-14.4049	244.5493	6.1485	\N	\N	\N	\N	\N	\N
+TRXF11	17.3	15.9324	19.2544	77.1003	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+TUPY3	9.16	13.0122	9.4795	7.2091	16.3212	53.8245	14.7918	22.3774	54.9864	19.7291	22.4473	\N	\N	\N	\N	\N	\N
+TXRX3	7.67	11.3456	6.7087	1.3431	3.0031	-1.2698	-0.2417	-0.7986	-1.6258	-320.1129	-1972.2514	\N	\N	\N	\N	\N	\N
+TXRX4	-17.84	-4.7646	0.0274	-0.0378	-1.7301	-2.1026	5.4534	-0.1785	-0.1575	-0.0713	-0.1604	\N	\N	\N	\N	\N	\N
+UCAS3	-2267.95	0	-6562.3323	-8484.929	-14967.5489	0	0	0	0	0	\N	\N	\N	\N	\N	\N	\N
+UCAS4	-86.15	\N	0	-33.4843	-20.9699	0	0	0	0	0	\N	\N	\N	\N	\N	\N	\N
+UNIP3	-0.97	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+UNIP5	-0.06	-0.0778	-0.0583	-0.5831	-1.3796	-0.6309	0.3356	-3.7657	-2.1632	-20.7929	-13.7073	\N	\N	\N	\N	\N	\N
+UNIP6	7.39	8.7734	4.2057	2.919	14.8595	-36.2633	9.0226	10.367	8.7565	-1.3377	104.2023	\N	\N	\N	\N	\N	\N
+USIM3	9.26	10.0603	8.2521	7.6755	16.4111	13.4155	13.9739	8.0007	8.3313	3.6843	4.7765	\N	\N	\N	\N	\N	\N
+USIM5	-0.64	-0.9392	-47.0796	13.2812	16.8828	55.1478	34.9286	71.8275	-47.8073	102.2893	0	\N	\N	\N	\N	\N	\N
+AALR3	-5.9	-5.3987	-11.2158	-314.537	-13.4782	52.0019	39.2834	263.2682	117.1731	\N	\N	\N	\N	\N	\N	\N	\N
+ABEV3	12.65	14.9189	15.8253	19.1764	21.6714	24.9742	22.0422	46.1308	20.5972	22.64	21.3532	\N	\N	\N	\N	\N	\N
+AZEV3	-7.35	-7.5154	-3.4591	4.8234	-27.9253	-35.1497	-63.1089	-27.554	-58.8427	1132.0585	341.507	\N	\N	\N	\N	\N	\N
+BMEB3	5.73	5.4116	5.2455	13.7129	9.2848	9.1569	11.1568	20.8889	24.1262	7.3794	-2.8606	\N	\N	\N	\N	\N	\N
+BPAC3	17.02	20.7525	18.9572	26.9133	40.0332	30.6659	18.6738	11.2908	2.8064	0	0	\N	\N	\N	\N	\N	\N
+BRKM3	-2.54	-3.7762	-60.0131	3.235	-3.0045	-8.9878	12.6561	8.4934	-58.1031	4.2254	12.0249	\N	\N	\N	\N	\N	\N
+CEEB3	5.82	5.8006	6.6319	5.2608	9.5572	10.245	10.0109	31.8138	17.6538	14.6757	13.0947	\N	\N	\N	\N	\N	\N
+CMSA4	-2267.95	0	-6562.3323	-8484.929	-14967.5489	0	0	0	0	0	\N	\N	\N	\N	\N	\N	\N
+COCE3	6.97	12.3418	6.957	16.8425	21.3112	9.9984	8.116	8.6916	8.339	7.2072	15.1651	\N	\N	\N	\N	\N	\N
+CSMG3	5.56	5.6459	7.0743	8.9902	7.6332	11.4237	13.4767	9.8133	10.656	-169.4825	10.032	\N	\N	\N	\N	\N	\N
+DXCO3	9.67	8.3865	7.3604	6.4678	28.6014	27.9582	18.5892	33.7481	195.0697	21.8044	13.9505	\N	\N	\N	\N	\N	\N
+ENAT3	130.7	-117.638	9.3597	2.4491	27.6421	19.7374	5.8446	7.9956	9.266	16.5554	11.0303	\N	\N	\N	\N	\N	\N
+ENMT3	12.18	10.6991	15.0006	29.4952	9.6558	11.788	10.4351	728.1242	23.6814	30.7756	12.6424	\N	\N	\N	\N	\N	\N
+GEPA4	8.13	7.2148	10.4637	-354.7948	5.8877	18.2121	13.7898	14.1603	9.4161	45.7193	19.48	\N	\N	\N	\N	\N	\N
+HYPE3	10.76	13.7411	16.8743	13.4616	16.7511	19.4208	16.9346	22.778	14.0533	24.562	26.1894	\N	\N	\N	\N	\N	\N
+IGTA3	15.23	0	0	15.0474	32.052	29.7629	28.3132	31.5046	28.7986	17.267	18.7236	\N	\N	\N	\N	\N	\N
+ITUB4	8.93	8.2474	8.2416	5.6599	5.074	10.7215	7.5894	11.34	8.2881	6.3451	7.1729	\N	\N	\N	\N	\N	\N
+LUXM4	-0.62	-10.8484	-6.9792	-6.2598	-31.6258	-4.6352	-10.305	-19.5336	-47.8117	-10.8366	-21.2181	\N	\N	\N	\N	\N	\N
+MRFG3	7.83	5.1508	2.6906	9.0873	-7.1183	-18.3664	155.9992	13.4853	10.9448	-26.3403	-56.1032	\N	\N	\N	\N	\N	\N
+MRVE3	8.87	8.2517	8.2939	5.6583	5.1151	10.6046	7.6505	9.4057	0	0	0	\N	\N	\N	\N	\N	\N
+MTIG4	12.68	12.5539	11.0335	16.6389	20.2359	29.7558	24.2493	15.8894	29.3004	21.482	25.4333	\N	\N	\N	\N	\N	\N
+OMGE3	10.04	10.1026	6.8949	4.9121	13.1477	19.4352	5.6501	3.8854	1.8098	3.6577	5.3166	\N	\N	\N	\N	\N	\N
+RENT3	24.8	37.7567	30.9192	27.798	70.5097	60.9377	46.0708	44.5342	28.4487	20.9872	29.5953	\N	\N	\N	\N	\N	\N
+RSID3	67.9	49.846	9.7636	10.1939	14.6338	13.6709	20.8527	0	0	0	0	\N	\N	\N	\N	\N	\N
+SANB3	6.23	6.1456	6.6988	5.3063	5.451	8.4406	6.056	8.0701	2.1664	14.923	18.0744	\N	\N	\N	\N	\N	\N
+TAEE3	-77.33	-11.4539	-4.3996	90.3309	26.8017	198.9888	-8.295	-54.7087	-218.0013	29.9594	47.9704	\N	\N	\N	\N	\N	\N
+UGPA3	9.67	12.1194	7.8105	19.0697	29.6396	76.0883	25.7904	26.5691	24.4461	22.4237	23.1111	\N	\N	\N	\N	\N	\N
+USIM6	7.95	8.541	7.2255	6.9941	14.4914	11.5821	11.8286	7.082	7.3827	3.4396	4.4607	\N	\N	\N	\N	\N	\N
+VALE3	-0.97	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+VAMO3	-16.25	-19.0791	-9.5759	16.6641	0	0	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+VBBR3	43.78	38.5875	6.6984	4.6176	13.5976	8.5336	9.6032	6.5581	4.5521	5.2222	9.0905	\N	\N	\N	\N	\N	\N
+VCSA3	9.67	8.3865	7.3604	6.4678	28.6014	27.9582	18.5892	33.7481	195.0697	21.8044	13.9505	\N	\N	\N	\N	\N	\N
+VIIA3	-3.04	-4.0264	-5.4445	-14.8072	-9.0393	510.8941	118.9717	113.8558	70.0906	41.448	55.8948	\N	\N	\N	\N	\N	\N
+VITT3	-317.26	-22.812	16.4329	15.2799	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+VIVA3	26.33	68.2396	-8.8939	-9.1622	0	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+VIVR3	11.22	12.7756	8.5525	2.1831	17.3113	11.3162	12.7235	13.3937	15.0951	6.1467	8.9636	\N	\N	\N	\N	\N	\N
+VIVT3	9.95	7.7164	5.7475	1.7531	29.2228	57.9917	19.7278	58.2415	-15.4496	-1.5566	118.9724	\N	\N	\N	\N	\N	\N
+VLID3	6.44	7.5686	5.9067	25.7816	11.9028	9.3482	9.9162	9.8339	8.7003	5.4968	10.0578	\N	\N	\N	\N	\N	\N
+VLID11	14.38	17.9322	20.4495	22.7223	155.7367	43.81	42.8414	39.3016	23.9467	19.4778	26.5385	\N	\N	\N	\N	\N	\N
+VULC3	23.08	21.1596	-11.1111	-66.8741	-1.8122	-11.0947	-23.9949	17.4086	20.2372	92.5313	22.7326	\N	\N	\N	\N	\N	\N
+VVAR3	8.45	8.2076	6.0654	8.6084	8.3742	13.1599	6.809	10.9327	0	\N	\N	\N	\N	\N	\N	\N	\N
+WEGE3	7.45	7.9306	6.5101	6.2595	13.0231	10.0838	10.0452	7.7858	5.7894	4.0801	5.7056	\N	\N	\N	\N	\N	\N
+WEST3	15.79	1014.1004	840.3348	5.762	-23.8865	5700.9449	0	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+WHRL3	-13.85	0	3.4201	16.3447	5.2665	9.1519	23.303	-21.5902	13.4181	-54.4441	13.0969	\N	\N	\N	\N	\N	\N
+WHRL4	-10.62	0	3.3465	24.8885	6.748	9.0111	22.2575	-35.9124	20.7175	-69.3896	12.518	\N	\N	\N	\N	\N	\N
+WIZS3	14.38	17.9322	20.4495	22.7223	155.7367	43.81	42.8414	39.3016	23.9467	19.4778	26.5385	\N	\N	\N	\N	\N	\N
+WLMM3	11.75	10.4056	21.6634	4.0784	13.1511	11.0291	15.0931	28.0686	-31.6147	5.4793	6.0891	\N	\N	\N	\N	\N	\N
+WLMM4	5.51	5.5975	42.2284	135.8783	-33.5905	0	0	0	0	0	0	\N	\N	\N	\N	\N	\N
+WSON33	8.93	8.2474	8.2416	5.6599	5.074	10.7215	7.5894	11.34	8.2881	6.3451	7.1729	\N	\N	\N	\N	\N	\N
+YDUQ3	5.29	4.3803	3.583	2.2394	13.3207	22.5447	8.9698	-29.413	-3.5976	-0.736	57.7273	\N	\N	\N	\N	\N	\N
+YEPAR5	0.96	\N	\N	\N	\N	\N	0.1617	-0.2538	-0.7986	-0.8552	\N	\N	\N	\N	\N	\N	\N
+ZAMP3	13.34	17.319	-6.1506	-20.7499	0	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+\.
+
+
+--
+-- Data for Name: dyoceans; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY public.dyoceans (ticker, "Hoje", "2023", "2022", "2021", "2020", "2019", "2018", "2017", "2016", "2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008", "2007", "2006", "2005", "2004", "2003", "2002", "2001", "2000") FROM stdin;
+APER3	-35.91	-121.26	19.56	102.54	-189.59	166.46	-0.83	-1.13	-1.66	-0.94	18.75	15.8	15.89	13.9	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+ARZZ3	14.58	17.95	20.38	22.23	135.86	35.49	34.53	31.68	18.87	15.4	21.16	23.97	35.75	22.33	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+AURA33	0	15.42	6.26	13.49	11.1	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+BPAC11	11.67	14.54	11.71	12.8	25.91	17.84	16.2	8.22	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+ABEV3	12.27	14.46	15.36	18.5	20.99	24.1	21.25	42.59	19.7	21.74	20.78	23.86	24.59	19.52	17.67	14.14	16.38	26.22	20.08	28.36	56.66	16.74	11.52	17.53	22.96
+AERI3	-3.35	-10.55	-9.31	70.69	66.63	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+AESB3	39.63	22.14	18.11	12.82	7.76	21.31	13.89	16.91	15.52	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+AGRO3	11.65	11.59	11.44	5.65	8.05	9.68	5.02	5.56	22.45	53.52	2.92	-42.47	19.47	-94.06	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+AGXY3	-0.53	-1.7	58.08	15.19	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+ALLD3	4.89	5.68	7.42	5.46	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+ALOS3	19.43	4.36	5.37	17.99	37.82	229.76	5.41	7.69	5.31	6.03	4.59	3.79	7.98	5.03	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+ALPA3	-3.82	-3.82	75.26	25.9	173.68	61.9	23.61	22.84	11.51	16.63	10.68	17.66	20.12	13.77	11.84	14.84	3.83	24.61	17.88	7.76	6.5	4.52	5.05	7.62	4.17
+ALPA4	-3.9	-3.7	95.38	30.93	191.46	74.52	24.56	23.39	12.97	12.34	11.56	20.12	20.67	13.93	12.28	14.09	4.73	18.7	17.95	8.07	7.13	4.54	4.23	6.1	3.61
+ALPK3	-14.88	-15.53	-2.14	-3.92	-10.66	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+ALUP11	8.23	8.33	4.97	3.32	3.86	4.92	7.14	7.65	6.21	4.79	4.87	5.16	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+ALUP3	8.34	8.29	4.84	3.35	3.83	6.1	8.77	9.92	8.85	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+ALUP4	8.2	8.42	5.04	3.33	3.8	4.52	6.38	6.65	4.8	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+AMAR3	0	0	-1.1	-14	-4.12	-31.49	35.31	-25.51	-13.82	-27.49	51.74	39.67	26.12	17.63	22.22	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+AMBP3	-75.09	31.64	21.46	27.86	57.38	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+AMER3	-0.03	-0.05	-0.68	52.52	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+ANIM3	-21.12	-8.46	129.91	-42.41	-363.48	-298.67	329.94	26.64	50.15	17.81	18.42	48.8	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+ARML3	18.91	35.97	27.29	150.92	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+ASAI3	21.46	25.76	21.53	10.84	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+ATMP3	0.08	0.2	-0.08	-0.52	-0.27	-0.06	-0.06	-0.04	-0.52	-0.18	13.66	18.22	30.35	55.33	17.43	11.26	6.36	20.05	15.54	17.93	\N	\N	\N	\N	\N
+ATOM3	2.43	0	5.37	10.45	5.18	11.63	8.6	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+AURE3	-42.8	-41.99	5.5	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+AZEV3	-7.89	-9.09	-1.42	1.4	-0.89	-1.07	-0.37	-0.79	-1.73	20.25	7.74	8.4	30.03	38.61	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+AZEV4	-8.02	-8.73	-1.32	1.25	-0.52	-0.71	-0.04	-0.34	-0.71	18.22	5.52	5.33	5.94	8.06	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+AZUL4	-1.13	-2.26	-5.13	-1.93	-1.2	-8	27.93	16.44	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+BAZA3	4.31	3.96	2.5	1.66	4.72	4.31	6.49	11.58	6.41	2.99	3.98	5.38	6.65	15.2	11.27	75.26	5.52	\N	\N	\N	\N	\N	\N	\N	\N
+BBAS3	4.65	9.44	3.23	4.22	8.89	8.46	10.53	8.38	10.15	2.92	5.88	4.33	5.92	5.55	7.64	7.52	4.28	14.88	8.74	8.12	8.59	7.38	3.54	6.98	4.36
+BBDC4	8.95	12.03	7.79	8.51	14.55	12.92	13.61	15.52	10.68	5.64	9.75	10.16	11.8	10.65	12.26	14.13	9.1	14.35	17.13	6.02	9.96	1.04	7.8	8.3	11.2
+BBSE3	8.39	8.47	11.15	10.55	15.39	11.33	15.59	14.07	14.1	11.57	18.61	4.66	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+BEEF11	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+BEEF3	42.82	11.48	12.03	10.72	7.99	323.89	-1.49	-8.77	14.87	-3.2	-4.22	-5.31	-8.08	13.22	55.74	9.11	-0.64	24.24	\N	\N	\N	\N	\N	\N	\N
+BEES3	7.94	8.14	5.28	6.13	7.45	9.34	7.21	6.52	5.16	3.79	4.75	7.25	10.1	13.15	5.53	7.98	5.41	\N	\N	\N	\N	\N	\N	\N	\N
+BHIA3	-0.01	-0.01	-11.22	-28.26	25.71	-10.13	-21.28	52.54	-48.93	133.72	9.36	25.72	17.98	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+BLAU3	9.22	11.87	13.12	20.15	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+BMGB4	7.84	9.35	5.68	7.55	11.2	16.1	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+BMOB3	14.12	14	14.44	18.22	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+BOBR3	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+BOBR4	5.51	5.26	13.93	6.44	14.11	-12.96	2.02	2.1	1.83	-0.23	-2.34	-2.27	-18.1	-25.04	18.23	1.23	28.05	\N	\N	\N	\N	\N	\N	\N	\N
+BPAC3	16.97	20.75	18.96	23.45	37.75	28.12	17.13	10.53	4.61	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+BPAC5	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+BPAN4	15.11	15.81	10.95	16.63	17.53	24.8	10.07	8.19	-5.06	188.13	545.81	-10.72	-4.57	24.64	-6.97	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+BRAP3	4.98	4.84	2.7	1.06	13.59	-30.55	8.56	3.71	6.99	-0.6	40.87	-150.97	22.39	6.05	8.63	14.38	5.61	\N	\N	\N	\N	\N	\N	\N	\N
+BRAP4	5.16	5.32	3.13	1.22	15.12	-33.06	9.26	4.31	8.25	-0.67	49.49	-186.52	24.06	5.47	8.5	13.86	5.81	\N	\N	\N	\N	\N	\N	\N	\N
+BRBI11	29.69	30.99	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+BRBI3	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+BRBI4	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+BRFS3	-151.62	-12.44	-2.86	41.58	12.87	96.29	-3.99	-27.08	-107.11	14.33	24.73	40.15	44.66	23.16	29.57	144.06	\N	\N	\N	\N	\N	\N	\N	\N	\N
+BRIT3	12.31	10.1	19.46	744	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+BRKM3	-2.53	-3.82	-24.63	3.24	-2.87	-8.68	12.48	8.39	-32.75	4.37	11.81	25.76	-10.36	-18.09	7.54	7.05	-1.16	8.12	45.38	10.98	11.85	7.26	-0.58	\N	\N
+BRKM5	-2.52	-3.85	-23.16	3.29	-2.68	-8.21	12.99	8.27	-37.41	7.58	19.14	32.78	-13.81	-19.66	8.62	7.98	-1.16	7.69	52.36	11.98	16.89	10.33	-0.64	\N	\N
+BRKM6	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+BRSR5	8.23	8.41	10.07	7.25	11.19	7.58	9.37	8.54	6.95	3.35	7.95	8.13	7.95	8.37	9.88	10.1	4.09	5.13	\N	\N	\N	\N	\N	\N	\N
+BRSR6	5.78	6.28	5.56	4.16	8.2	6.59	8.66	5.79	6.4	2.83	8.58	6.51	7.75	9.05	9.74	11.11	3.88	4.91	\N	\N	\N	\N	\N	\N	\N
+CAMB3	6.53	6.13	4.74	7.19	10.85	13.69	63.27	7.21	-6.02	-1.4	3.86	40.29	-6.85	14.52	14.04	3.12	-21.44	\N	\N	\N	\N	\N	\N	\N	\N
+CAMB4	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+CAML3	11.62	10.79	8.16	8.77	8.83	13.89	7.94	12.74	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+CASH3	87.73	-27.53	-17.3	-72.32	95.73	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+CBAV3	-4.72	-3.76	7.18	9.7	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+CCRO3	16.78	15.43	5.19	28.98	312.75	26.85	35.46	15.98	17.19	28.12	20.12	22.9	28.76	23.66	30.44	27.38	13.14	18.69	21.03	14.62	22.09	11.89	-5.14	\N	\N
+CEAB3	15.64	804.52	352.94	5.73	-24.08	5.7	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+CSED3	12.08	18.94	183.27	35	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+CXSE3	12.15	10.8	8.49	13.23	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+DESK3	15.36	13.67	12.24	49.86	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+CGAS5	5.96	11.69	9.47	9.44	19.88	13.79	5.79	12.17	6.48	7.01	9.7	11.26	19	22.05	8.34	11.04	7.68	10.62	9.89	9.45	13.02	20.43	5.89	16.87	\N
+CGRA3	5.46	5.48	4.55	4.38	9.93	4.59	8.46	9.15	5.45	4.91	6.46	6.9	9.41	8.32	9.56	8.78	3.69	16	\N	\N	\N	\N	\N	\N	\N
+CIEL3	7.24	6.1	9.06	6.37	22.13	14.38	7.22	15.75	15.73	18	20.26	19.3	16.12	14.52	10.03	13.64	\N	\N	\N	\N	\N	\N	\N	\N	\N
+CLSA3	-73.48	-25.17	-28.6	-22.86	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+CLSC3	4.85	4.25	3.66	4.14	4.46	6.52	10.69	17.02	-82.93	8.83	3.01	7.71	-5.51	9.76	7.06	9.01	6.36	5.98	\N	\N	\N	\N	\N	\N	\N
+CLSC4	5.25	4.52	3.99	4.65	4.19	6.99	11.59	15.37	-61.29	2.94	1.12	3.55	-4.02	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+CMIG3	5.22	5.77	8.68	8.35	8.69	7.27	12.59	8.05	29.52	3.28	5.53	5.75	4.37	7.7	6.26	6.96	5.23	7.13	8.56	6.47	6.67	5.02	-3.76	9.52	\N
+CMIG4	4.32	4.38	5.99	5.91	7.71	6.43	11.61	8.63	28.89	3.12	5.27	5.68	4.51	9.39	8.06	9.01	6.63	6.85	9.85	7.69	7.61	7.14	-4.24	9.97	\N
+CMIN3	8.21	12.03	7.58	5.8	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+COCE3	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+COCE5	6.71	10.63	5.46	9.23	17.5	11.97	10.18	9.73	9.9	7.7	12.22	20.57	8.32	5.67	4.65	7.11	5.03	6.64	5.83	5.61	15.27	6.74	5.31	5.97	10.92
+COCE6	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+COGN3	-6.23	-12.84	-7.37	-9.03	-1.5	77.34	10.48	16.03	11.62	11	25.12	20.37	30.46	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+CPFE3	6.83	8.01	7.33	6.37	10.11	14.9	13.55	15.83	29.13	17.21	20.04	19.36	16.36	15.8	12.69	13.01	11.25	9.79	10	12.27	24.21	\N	\N	\N	\N
+CPLE11	13.44	12.84	18.33	3.47	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+CPLE3	12.2	12.16	16.36	3.32	4.9	9.16	5.64	5.23	5.5	3.46	5.1	5.54	9.46	7.68	10.29	9.51	5.49	7.09	4.68	7.87	6.76	14	-6.84	\N	\N
+CPLE5	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+CPLE6	13.76	13.27	18.84	3.49	5.24	9.16	5.79	6.1	7.89	5.25	7.36	7.58	11.9	9.05	11.23	9.65	5.99	6.44	5.44	9.47	8	21.89	-8.55	\N	\N
+CRFB3	-52.67	-41.01	15.56	8.99	13.53	34.9	19.26	17.64	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+CRPG3	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+CRPG5	290.09	30.44	12.56	7.2	5.41	6.6	5.17	4.5	1.66	-4.41	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+CRPG6	290.09	29.68	12.04	7.46	5.38	6.58	4.91	4.47	1.71	-4.39	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+CSAN3	5.49	7.43	11.37	6.4	32.81	11.04	7.17	11.2	11.16	10.58	18.21	24.96	18.76	3.68	13.69	15.52	-8.23	46.09	41.59	-68.77	\N	\N	\N	\N	\N
+CSMG3	5.59	5.64	7.07	8.94	7.62	11.38	13.45	9.79	10.61	-168.65	9.45	10.58	10.82	8.24	4.93	7.39	8.09	\N	\N	\N	\N	\N	\N	\N	\N
+CSNA3	23.31	64.69	8.9	2.55	10.29	8.72	2.36	103.82	-17.86	3.36	-68.32	39.11	-36.02	5.95	15.45	15.71	3.81	13.83	14.2	6.47	7.09	10.88	-18.82	8.73	\N
+CSUD3	9.11	9.09	6.71	8.8	13.14	18.3	8.47	8.95	5.69	6.23	10.83	133.85	8.48	8.93	9.66	22.83	\N	\N	\N	\N	\N	\N	\N	\N	\N
+CURY3	11.42	10.54	10.55	6.44	15.89	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+CYRE3	6.73	8.71	6.08	6.2	6.44	22.23	883.59	-480.42	16.69	4.79	5.1	6.47	9.46	10.29	13.45	12.05	9.86	19.13	26.77	33.05	\N	\N	\N	\N	\N
+DASA3	-2.57	-6.42	-19.89	-87.54	-237.09	138.74	45.02	63.07	57.35	120.77	40.73	34.01	47.1	32.98	52.61	38.04	-117.31	36.52	145.58	212	-75.37	\N	\N	\N	\N
+DEXP3	4.85	5.1	3.58	4.22	4750.04	10872.87	6546.13	897.8	2426.39	-0.57	-5.52	-1.55	-1.55	-5	-12.64	-29.9	\N	\N	\N	\N	\N	\N	\N	\N	\N
+DEXP4	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+DIRR3	10.02	10.01	8.41	9.08	13.39	18.19	-15.98	-6.04	0	3.29	5.36	7.77	9.43	8	10.78	17.67	\N	\N	\N	\N	\N	\N	\N	\N	\N
+DMVF3	15.75	13.64	14.78	106.52	0	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+DOTZ3	-1.61	-1.77	-5.51	-4.37	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+DXCO3	9.34	8.16	7.4	6.6	29.04	28.42	18.86	34.4	180.93	20.38	13.48	15.27	17.69	12.97	17.43	65.65	\N	\N	\N	\N	\N	\N	\N	\N	\N
+EALT3	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+EALT4	4.45	4.12	3.87	4.5	4.25	7.76	7.42	2.4	-11.89	29.84	5.2	5.78	6.98	5.32	8.44	18.96	3.44	\N	\N	\N	\N	\N	\N	\N	\N
+ECOR3	7.18	10.97	13.13	13.81	-17.66	-49.23	13.61	16.6	-4.88	24.21	12.46	20.55	22.52	20.09	12	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+EGIE3	8.96	10.78	11.6	20.01	12.81	17.92	11.63	11.55	14.74	14.54	15.94	16.3	14.5	13.49	14.77	12.37	10.84	13.27	11.98	10.65	8.23	10.09	-12.48	\N	\N
+ELET3	20.83	22.27	26.63	9.17	9	4.76	2.46	-15.17	8.78	-0.52	-2.65	-1.26	-1.24	6.41	9.86	32.92	\N	\N	\N	\N	\N	\N	\N	\N	\N
+ELET5	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+ELET6	23.1	24.66	27.33	9.06	9.09	4.81	2.85	-17.81	9.96	-0.94	-3.73	-2.14	-2.05	9.65	11.86	28.73	\N	\N	\N	\N	\N	\N	\N	\N	\N
+EMAE3	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+EMAE4	12.21	14.34	36.94	18.72	14	14.67	6.62	2.85	5.76	2.54	-5.33	3.43	-2.19	-6.19	20.53	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+EMBR3	22.65	21.12	-10.12	-68.83	-1.82	-11.29	-25.02	17.42	20.01	78.9	21.69	17.52	17.09	48.91	14.18	7.48	14.2	22.43	25.37	17.7	8.96	23.38	7.68	6.44	9.16
+ENAT3	128.22	-118.67	9.32	2.45	25.2	19.69	5.85	8	9.2	15.99	11.18	13.18	41.45	47.16	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+ENEV3	143.11	70.92	50.26	15.25	19.48	23.01	5.7	46.09	-25.87	16.41	-0.22	-2.23	-14.86	-15.85	-14.18	-13.92	\N	\N	\N	\N	\N	\N	\N	\N	\N
+ENGI11	6.83	8.49	7.42	5.25	11.81	36.72	11.4	16.48	32.63	10.66	11.12	15.27	9.66	12.1	11.17	7.78	\N	\N	\N	\N	\N	\N	\N	\N	\N
+ENGI3	10.73	14.64	11.79	8.08	19.18	46.72	12.45	29.59	34.25	11.42	10.11	19.23	9.12	11.67	10.66	8.31	\N	\N	\N	\N	\N	\N	\N	\N	\N
+ENGI4	5.83	7.04	6.25	4.53	9.59	34.82	11.25	13.4	32.4	11.01	9.06	13.74	9.46	12.35	10.16	7.67	\N	\N	\N	\N	\N	\N	\N	\N	\N
+ENJU3	-7.6	-6.39	-2.9	-4.78	-61.5	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+EQTL3	12.26	14.24	15.85	5.31	6.79	8.47	12.74	10.82	12.35	7.09	7.34	85.07	15.92	5.11	4.32	5.18	2.04	\N	\N	\N	\N	\N	\N	\N	\N
+ESPA3	-15.96	-18.37	-9.61	11.29	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+ETER3	3.68	4.08	4.75	4.79	4.09	-10.41	-0.56	-0.6	-6.56	12.47	6.69	7.52	6.36	8.13	10.53	10.31	5.65	\N	\N	\N	\N	\N	\N	\N	\N
+EUCA3	3.91	3.57	4.27	2.57	14.92	88.33	30.34	15.41	10.8	83.78	22.71	7.24	7.32	6.19	6.78	1.91	\N	\N	\N	\N	\N	\N	\N	\N	\N
+ITUB3	8.12	8.47	7.3	7.49	14.48	11.81	11.8	10.3	9.03	6.23	8.74	9.31	10.36	8.34	10.57	13.49	11.29	12.16	17.99	9.88	10.5	9.13	7.3	20.96	\N
+EVEN3	3.55	4.8	4.95	4.85	46.33	23.78	-9.23	-3.77	20.3	5.9	4.47	5.78	8.06	6.14	7.78	11.06	7.09	65.99	\N	\N	\N	\N	\N	\N	\N
+EZTC3	12.85	16.73	8.65	10.29	20.62	40.49	40.08	9.84	11.13	4.5	6.81	7.26	11.12	7	8.17	7.43	3.32	28.72	\N	\N	\N	\N	\N	\N	\N
+FESA3	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+FESA4	10.53	10.69	4.44	6.7	23.77	7.96	5.81	6.67	9.65	3.54	8.25	15.74	12.94	7.97	8.79	36.91	1.78	\N	\N	\N	\N	\N	\N	\N	\N
+FIEI3	-2.22	-2.24	-5.54	-5.03	-4.79	-9.53	-46.02	-14.34	-1.36	-1.92	-3.57	-23.01	-10.33	18.93	7.64	16.85	3.9	-113.03	\N	\N	\N	\N	\N	\N	\N
+FIQE3	7.89	9.83	10.78	29.28	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+FLRY3	17.2	23.34	18.24	16.2	33.1	30.7	18.78	28.94	24.25	23.37	28.91	46.38	33.36	32.77	26.92	26.98	\N	\N	\N	\N	\N	\N	\N	\N	\N
+FRAS3	13.45	11.77	12.52	14.3	12.03	35.43	11	17.94	14.46	8.63	11.14	19.14	23.9	7.05	10.86	13.41	\N	\N	\N	\N	\N	\N	\N	\N	\N
+GGBR3	4.53	4.98	3.57	2.48	14.6	24.14	9.05	-52.92	-4.71	-1.28	9.21	15.17	17.5	9.95	10.26	31.29	3.46	6.53	5.88	4.01	3.74	5.97	3.64	\N	\N
+GGBR4	5.1	5.54	4.28	3.01	17.6	28.21	10.96	-63.17	-6.44	-1.71	10.97	18.44	20.37	11.78	13.87	41.15	4.32	7.99	6.59	5.3	4.28	7.05	4.72	\N	\N
+GGPS3	17.37	19.55	15.4	26.35	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+GMAT3	12.97	12.83	13.09	17.3	21.43	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+GOAU3	1.79	1.51	1.09	0.74	4.49	7.84	3.25	-12.44	-1.32	-0.27	3.22	5.15	5.59	3.2	4.25	15.49	\N	\N	\N	\N	\N	\N	\N	\N	\N
+GOAU4	1.77	1.48	1.17	0.8	5.14	8.42	3.05	-14.15	-1.46	-0.3	4.22	6.35	7.09	3.73	4.83	18.04	\N	\N	\N	\N	\N	\N	\N	\N	\N
+GOLL4	0.22	-2.48	-1.59	-0.75	-1.16	55.64	-8.62	10.22	0.85	-0.12	-1.89	-4.01	-2.36	-4.42	31.36	8.05	-1.61	33.03	18.17	30.63	28	\N	\N	\N	\N
+GRND3	9.6	11.41	9.56	12.98	18.67	22.29	12.65	12.96	8.33	9.38	9.45	12.48	11.53	7.53	8.95	10.93	5.23	16.81	16.88	25.82	46.32	\N	\N	\N	\N
+GSHP3	-2.89	0.31	-0.51	-0.27	-0.23	-5.72	-1.28	1.57	1.65	-0.33	-1.5	-4.1	-5.98	-15.49	-60.07	16.6	-19.1	-48.49	\N	\N	\N	\N	\N	\N	\N
+GUAR3	155.95	-98.93	61.41	10.83	-275.67	20.3	8.21	16.37	11.93	8.18	10.75	15.49	20.66	14.19	14.85	21.42	8.2	21.98	33.91	53.59	9.99	13.54	5.66	5.6	5
+GUAR4	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+HAPV3	-92.63	-43.07	-46.82	80.63	72.03	55.72	26.61	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+HBOR3	1.75	2.72	2.48	4.32	25.98	-29.85	-2.04	-2.91	-4.92	5.86	5.83	6.61	8.98	6.3	7.47	7.56	2.6	60.38	\N	\N	\N	\N	\N	\N	\N
+HBSA3	-41.19	157.68	-286.41	-7.67	-50.45	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+HYPE3	10.81	13.72	16.84	13.43	16.74	19.4	16.88	23.54	14.05	24.47	25.99	43.21	50.49	-96.61	46.93	28.33	-12.78	\N	\N	\N	\N	\N	\N	\N	\N
+IFCM3	-0.9	-4.01	-5.14	-128.14	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+IGTI11	3.91	4.74	-59.02	3.09	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+IGTI3	1.44	1.75	-25.36	1.4	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+IGTI4	5.15	6.24	-78.1	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+INEP3	0.03	0.06	-42	0.19	-0.16	-0.14	-0.13	-0.06	-0.94	-0.19	-0.03	-0.56	-1.84	-41.71	11.9	12.13	23.61	\N	\N	\N	\N	\N	\N	\N	\N
+INEP4	0.03	0.05	-34.71	0.19	-0.15	-0.14	-0.12	-0.06	-0.72	-0.13	-0.02	-0.48	-1.88	-37.5	11.82	12.09	18.64	\N	\N	\N	\N	\N	\N	\N	\N
+INTB3	13.09	13.2	20.87	25.17	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+IRBR3	25.41	-29.15	-0.11	-7.45	-6.82	20.66	21.25	11.4	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+ITSA3	7.25	7.64	6.1	6.18	14.13	11.18	11.52	9.23	7.26	5.28	7.25	11.56	13.93	11.82	12.64	4.44	6.93	6.18	5.42	4.22	3.62	3.16	3.35	\N	\N
+ITSA4	7.27	7.66	5.83	5.93	13.43	11.21	10.46	9.49	7.49	5.17	7.02	8.1	9.32	9.26	11.52	3.82	4.9	4.27	4.63	4.13	3.33	3.04	1.91	\N	\N
+ITUB4	9.48	9.98	8.33	8.22	16.4	13.68	13.93	11.64	10.19	6.67	9.36	9.91	11.1	10.49	13.57	17.4	13.7	12.87	21.51	11.84	11.97	10.38	8.03	21.08	\N
+JALL3	98.53	100.45	3.25	7.89	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+JBSS3	28.35	-75.79	3.01	4.39	13.33	10.89	150.6	26.09	46	6.72	13.44	22.48	22.35	-56.15	-67.96	166.58	288.37	-38.71	\N	\N	\N	\N	\N	\N	\N
+JHSF3	5.2	7.58	5.38	3.9	8.38	13.91	5.16	-34.07	-2.95	6.01	22.57	5.75	20.03	10.58	6.94	10.66	4.6	37.12	\N	\N	\N	\N	\N	\N	\N
+JSLG3	8	10.07	8.14	7.82	22.99	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+KEPL3	7.28	8.02	9.47	7.61	14.7	19.37	35.69	-15.11	-21.53	85.25	9.88	16.77	9.68	9.71	16.97	-117.83	-98.2	\N	\N	\N	\N	\N	\N	\N	\N
+KLBN11	11.66	8.77	4.78	8.46	-12.44	27.82	91.88	31.55	6.76	-17.71	18.88	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+KLBN4	11.69	8.7	4.82	8.24	-12.25	26.82	81.87	28.14	5.43	-14.39	18.63	38.66	15.59	39.68	9.21	14.5	-8.93	9.52	10.04	11.3	10.2	3.44	-4.61	\N	\N
+KRSA3	-3.92	-6.39	-6.48	-75.13	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+LAVV3	6.42	7.12	7.21	5.27	16.44	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+LEVE3	6.05	6.41	7	6.95	21.87	14.32	10.96	13.55	532.73	18.25	13.65	17.94	17.82	9.57	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+LIGT3	-8.88	11.6	-0.3	11	10.66	5.44	20.15	27.23	-11.38	51.77	5.23	7.66	10.68	18.82	8.99	8.43	4.43	5.41	-20.68	\N	\N	\N	\N	\N	\N
+LJQQ3	8.9	58.81	-43.7	29.94	44.27	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+LOGG3	10.76	11.94	4.11	6.76	24.61	35.28	26.54	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+LOGN3	139.1	67.55	9.16	25.49	131.29	167.52	49.5	-0.13	0.5	-0.28	-3.51	117.01	-30.5	-7.53	46.86	-103.96	4.65	19.76	\N	\N	\N	\N	\N	\N	\N
+LPSB3	8.22	10.05	9.95	5.42	48.99	-468.73	-16.9	-11.28	-16.22	-0.58	-247.83	10.01	16.47	9.68	16.31	17.74	-6.53	30.61	\N	\N	\N	\N	\N	\N	\N
+LREN3	12.45	17.19	15.7	38.12	31.58	40.6	29.9	34.49	23.82	18.83	20.55	18.78	27.82	17.64	22.33	24.31	11.41	27.19	35.21	\N	\N	\N	\N	\N	\N
+LUPA3	1.03	1.29	2.17	-3.69	3.03	-1.73	-0.29	-6.81	6.31	-0.26	-0.52	-0.28	-0.46	-0.89	-12.78	71.91	-12.95	-60.56	48.67	\N	\N	\N	\N	\N	\N
+LVTC3	-242.49	-24.63	15.87	14.88	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+MATD3	11.94	22.32	22.23	34.64	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+MBLY3	-3.31	-2.54	-3.59	-6.19	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+MDIA3	9.8	14.7	25.15	17.11	15.09	23.22	20.01	20.93	16.56	12.44	17.18	21.57	18.77	14.71	12.66	13.71	10.4	34.53	24.74	\N	\N	\N	\N	\N	\N
+MDNE3	6.84	7.21	4.7	5.77	-9.56	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+NEOE3	5.12	5.71	3.92	4.84	7.36	13.07	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+NGRD3	-48.21	149.16	25.4	36.92	121.89	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+NINJ3	22.95	62.15	-8.7	-6.64	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+NTCO3	8.28	7.87	-5.62	30.77	-109.06	84.96	35.28	21.22	32.09	19.25	18.42	20.88	29.2	18.66	27.58	22.77	15.67	15.74	28.02	21.99	21.33	\N	\N	\N	\N
+ODPV3	13.07	12.51	11.36	17.52	21.47	31.45	25.54	16.8	30.85	22.48	26.52	27.78	39.05	32.19	20.28	45.7	9.98	22	48.45	\N	\N	\N	\N	\N	\N
+OFSA3	-38	-29.23	9.94	11.96	22.53	47.34	25.97	32.37	-302.11	26.58	41.37	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+OIBR3	-0.06	-0.08	-0.06	-0.59	-1.24	-0.56	0.12	-0.45	-0.31	-0.37	-1.78	4.34	9.21	6.99	4.69	-16.26	\N	\N	\N	\N	\N	\N	\N	\N	\N
+OIBR4	-0.15	-0.2	-0.17	-0.99	-1.59	-0.81	0.13	-0.43	-0.26	-0.3	-1.68	4.32	8.37	6.51	3.67	-9.9	\N	\N	\N	\N	\N	\N	\N	\N	\N
+PGMN3	51.34	535.04	7.36	25	41.27	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+MELK3	4.69	6.51	5.43	9.32	27.57	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+MGLU3	-18.09	-14.89	-37.06	82.45	412.59	83.96	57.61	39.1	26.81	-5.94	10.54	11.98	-377.65	136.86	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+MILS3	9.92	11.95	9.23	15.49	-774.76	-59.82	-7.99	-5.28	-6.87	-3.45	18.36	24.16	28.09	23.66	24.62	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+MLAS3	-3.17	-2.05	36.34	8.84	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+MOVI3	-3.99	-6.63	4.96	6.96	55.61	24.96	13.98	22.46	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+MRVE3	-15.21	-285.62	-24.81	6.42	14.68	12.8	7.24	9.54	8.45	6.42	4.45	8.86	9.93	6.28	11.16	17.96	5.22	\N	\N	\N	\N	\N	\N	\N	\N
+MTRE3	5.85	6.79	10.38	31.62	35.96	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+MTSA3	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+MTSA4	5.39	4.91	4.42	7.05	5.03	11.3	7.96	11.35	6.16	4.51	6.71	7.75	8.54	0	12.23	10.94	6.35	\N	\N	\N	\N	\N	\N	\N	\N
+MULT3	15.96	16.71	17.06	24.77	14.66	42.22	30.88	38.48	36.04	19.89	24.36	33.15	27.66	22.12	28.87	35.24	\N	\N	\N	\N	\N	\N	\N	\N	\N
+MYPK3	9.75	18.18	4.46	3.75	-5.69	8.48	11.64	39.85	12.15	9.54	9.7	11.62	24.17	10.62	13.77	21.56	1.93	30.93	13.98	9.47	12.54	-40.58	-2.09	2.29	4.52
+ONCO3	13.61	21.91	25.95	-278.64	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+OPCT3	13.37	17.16	-6.15	-12.76	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+ORVR3	27.83	60.51	-21.24	-34.97	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+OSXB3	-0.01	-0.01	-0.07	0.17	-0.07	-0.02	-0.03	-0.05	-0.03	0	0	0	-97.75	645.32	-1737.41	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+PCAR3	-0.59	-0.51	-1115.67	6.1	8.66	28.49	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+PCAR4	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+PDGR3	0.01	0.02	-0.08	-0.63	-0.07	-0.07	-0.11	0.69	-0.01	-0.03	-2.4	-15.76	-2.03	9.34	14.23	18.69	7.11	34.7	\N	\N	\N	\N	\N	\N	\N
+PDTC3	-1.53	15.3	21.82	10.56	26.92	13.28	9.69	7.72	0.59	-0.87	-9.95	-13.45	-11.01	-14.52	-13.36	-20.92	\N	\N	\N	\N	\N	\N	\N	\N	\N
+PETR3	4.84	4.06	1.94	3.73	60.25	10.19	12.41	585.1	-16.94	-3.18	-5.71	9.07	12.17	9.06	11.1	11	7.48	18.98	8.33	7.03	6	4.71	7.27	5.68	5.28
+PETR4	4.51	3.88	1.69	3.46	59.19	9.61	11.08	557.07	-14.87	-2.48	-5.96	9.68	12.15	8.47	9.92	9.69	6.21	15.98	7.61	6.34	5.47	4.28	6.38	5.54	4.98
+PETZ3	172.82	101.5	54.53	97.78	120.7	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+PFRM3	7.5	9.44	5.22	9.02	11.99	57.22	-54.07	-5.03	-10.94	-10.2	-6.97	28.91	10.72	12.31	14.28	9.76	5.58	36.31	-533.61	\N	\N	\N	\N	\N	\N
+PINE3	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+PINE4	4.21	4.53	7.64	53.04	-5.93	-5.27	-4.54	-1.62	-34.27	10.54	8.14	7.12	8.63	6.92	10.87	10.42	2.32	10.78	\N	\N	\N	\N	\N	\N	\N
+PLPL3	6.83	8.55	6.11	4.85	11.76	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+PMAM3	-0.07	-0.14	-0.07	-0.55	-0.5	-50.5	-2.99	-8.17	-1.31	5.16	6.36	237.56	-7.69	-20.03	34.02	10.88	6.17	\N	\N	\N	\N	\N	\N	\N	\N
+PNVL3	14.36	21.15	17.53	24.84	57.93	34.1	18.29	29.41	55.45	28.17	19.25	17.79	26.11	13.23	12.76	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+PNVL4	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+POMO3	6.58	6.54	5.21	6.61	28.3	19.74	15.71	36.33	8.88	16.64	13.41	14.88	17.49	8.36	9.1	9.18	4.61	10.95	8.48	6.74	7.33	5.83	7.37	5.62	11.88
+POMO4	8.37	8.23	6.15	8.07	29.86	20	19.66	45.02	11.32	18.11	13.17	15.49	19.04	9.2	10.53	10.41	4.91	11.43	10.4	7.14	8.35	6.2	7.81	4.92	9.94
+PORT3	16.36	18.88	13.91	18.03	27.03	25.95	17.17	12.12	8.11	21.15	22.54	20.95	23.22	25.1	19.46	9.67	7.08	\N	\N	\N	\N	\N	\N	\N	\N
+POSI3	3.65	3.92	4.32	7.54	3.67	40.67	98.34	-5.81	22.27	-1.83	7.6	15.45	14	-7.43	9.33	16.13	\N	\N	\N	\N	\N	\N	\N	\N	\N
+PRIO3	7.99	7.89	9.58	13.61	22.37	7.43	6.42	21.58	1.19	1.48	-0.14	-0.12	-5.03	-10.94	-51.72	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+PRNR3	24.69	16.86	3.95	16.09	-168.6	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+PSSA3	7.55	8.03	12.99	8.76	9.38	14.7	12.88	10.7	9.55	9.32	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+PTBL3	-11.46	-30.93	7.53	6.55	8.49	60.79	6.09	13.39	107.24	6.05	8.01	8.61	10.77	10.76	9.22	10.41	\N	\N	\N	\N	\N	\N	\N	\N	\N
+QUAL3	-6.8	-12.88	16.19	12.66	25.02	26.68	9.17	23.15	12.72	15.95	53.91	-599.85	223.47	-136.14	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+RADL3	40.93	46.38	38.57	52.4	83.23	46.75	36.95	59.01	44.63	34.16	37.43	47.87	71.23	62.1	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+RAIL3	41.9	58.88	67.13	209.74	116.15	51.7	96.73	-78.99	-7.82	-3.58	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+RAIZ4	7.67	10.04	15.46	20.54	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+RANI3	6.29	6.99	5.23	6.17	14.72	-8.34	122.96	-3.1	-36.07	250.91	9.37	7.97	9.61	17.12	5.91	8.29	\N	\N	\N	\N	\N	\N	\N	\N	\N
+RANI4	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+RAPT4	6.33	6.35	4.05	4.05	6.67	15.34	14.11	23.61	-108.45	0	5.79	8.99	29.99	5.39	8.44	11.54	3.21	10.92	7.95	6.77	6.11	3.98	4.58	3.15	4.5
+RCSL3	-13.18	-76.37	-5.86	-431.43	0	-44.48	-1.18	-0.41	-2.62	-0.58	-0.22	-2.33	-1.62	-1.32	-18.66	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+RDNI3	-0.56	-1.04	9.42	29.76	101.9	344.91	-8.92	-2.89	-3.18	18.95	5.63	4.73	7.14	9.06	11.11	31.17	4.59	25.06	\N	\N	\N	\N	\N	\N	\N
+RDOR3	25.48	31.13	53.53	53.68	294.14	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+RECV3	10	8.96	8.42	25.96	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+REDE3	5.75	6.08	5.59	6.76	19.15	17.74	24.67	50.57	23.39	4.88	0.83	-3.97	-0.7	-2.34	-4.72	12.3	\N	\N	\N	\N	\N	\N	\N	\N	\N
+RENT3	24.51	37.66	28.41	19.65	49.85	43.01	30.03	28.97	17.63	12.76	18.05	17.98	30.64	17.32	20.67	37.04	10.16	24.12	35.7	18.49	\N	\N	\N	\N	\N
+USIM5	8.92	7.1	4.29	1.89	14.16	31.53	13.92	35.97	-8.93	-0.42	23.86	779.58	-23.84	24.68	11.93	19.68	4.04	8.39	6.96	3.09	3.8	5.42	-3.89	\N	\N
+VBBR3	4.68	5.56	11.79	9.98	6.6	15.84	9.38	17.31	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+RNEW4	-0.84	-3.15	0.06	8.09	8	-0.15	-0.34	-0.67	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+RPMG3	-0.25	-0.17	-0.12	-0.53	-0.46	-1.53	-1.14	-2.27	-0.86	-0.51	-1.91	-0.54	-0.66	-57.93	-3.71	2.7	-1.41	\N	\N	\N	\N	\N	\N	\N	\N
+RSID3	0.34	0.32	-0.13	-0.86	-14.22	-0.5	-0.15	-0.35	-0.09	-0.1	-0.47	14.02	-9.14	26.99	20.93	17.02	5.59	25.2	47.6	36.61	8.48	-42.55	7.21	-5.58	4.32
+SANB11	9.48	11.68	8.55	7.5	11.96	13.18	13.11	14.93	20.09	8.64	23.58	32.44	17.71	15.8	22.05	50.04	\N	\N	\N	\N	\N	\N	\N	\N	\N
+SANB3	9	10.99	8.07	7.11	11.56	13.55	13.65	17.31	26.34	9.51	23.48	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+SANB4	9.96	12.29	9.07	7.98	12.53	12.52	12.61	12.38	13.67	7.79	21.1	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+SAPR11	5.24	5.86	4.73	4.91	7.87	9.44	6.93	8.78	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+SAPR3	5	5.63	4.55	4.87	9.09	8.1	9.45	9.03	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+SAPR4	5.3	5.91	4.78	4.96	7.72	9.81	6.03	8.58	8.62	3.63	6.54	8	11.09	6.7	8.83	7.83	4.49	\N	\N	\N	\N	\N	\N	\N	\N
+SBFG3	16.66	16.81	15.11	10.98	-64.19	23.69	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+SBSP3	15.45	14.61	12.51	11.9	31.15	12.29	7.59	9.31	6.68	24.05	12.83	9.4	10.34	9.68	5.95	5.7	97.3	8.92	10.23	4.96	8.14	5.34	-4.27	17.4	9.49
+SCAR3	4.61	5.19	-12.94	66.11	28.13	30.87	98.7	20.18	18.73	8.05	15.34	8.51	11.7	14.4	14.43	6.7	16.91	\N	\N	\N	\N	\N	\N	\N	\N
+SEER3	-49.34	-37.47	-2.62	25.01	12.04	26.07	10.18	21.94	10.12	5.91	17.31	25.15	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+SEQL3	-0.01	-0.01	-4.02	-115.97	321.97	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+SGPS3	-0.53	\N	-0.36	-1.6	-1.22	13.36	3.08	25.74	-35.42	5.78	-4.27	-6.85	-4.1	-1.12	-45.63	16.64	\N	\N	\N	\N	\N	\N	\N	\N	\N
+SHOW3	2.7	2.41	-23.02	-3.93	-2.46	-5.86	41.51	11.03	13.5	9.96	-2.76	-31.41	-136.79	12.8	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+SHUL3	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+SHUL4	9.29	9.06	6.19	7.71	8.43	9.24	8.67	10.47	8.44	4.95	5.97	10.48	10.69	12.51	11.79	47.22	\N	\N	\N	\N	\N	\N	\N	\N	\N
+SIMH3	-9.35	-12.4	6.02	7.35	18.25	17.3	7.52	92.81	-10.64	30.95	36.1	36.01	38.05	31.56	23.34	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+SLCE3	14.6	8.88	7.45	8.45	10.2	14.96	9.78	7.11	95.4	12.98	19.04	20.29	48.8	9.33	36.51	144.62	29.74	47.64	\N	\N	\N	\N	\N	\N	\N
+SMFT3	12.99	14.62	-89.52	-14.79	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+SMTO3	11.26	10.14	9.23	8.23	10.43	13.14	20.95	14.25	24.91	26.61	14.17	23.85	42.76	14.79	20.65	17.95	\N	\N	\N	\N	\N	\N	\N	\N	\N
+SOJA3	4.98	5.53	6.92	14.29	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+SOMA3	-3	-3.62	23.75	33.3	-91.82	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+STBP3	20.28	16.03	15.69	20.25	-323.43	322.29	704.63	-451.76	-84.14	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+SUZB3	7.89	5.22	2.81	9.47	-7.44	-19.2	132.01	11.43	9.29	-21.99	-46.84	-45.56	-42.04	86.52	7.64	7.16	-8.22	16.85	14.88	6.69	6.44	\N	\N	\N	\N
+SYNE3	48.08	104.45	-20.43	0.78	16.09	42.81	20.02	4.75	78.98	19.06	6.81	9.08	12.03	10.73	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+TAEE11	8.97	9.66	8.24	5.66	5.07	10.71	7.59	11.33	8.28	6.34	7.17	7.02	12.71	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+TAEE3	8.9	9.66	8.29	5.66	5.11	10.59	8.17	11.39	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+TAEE4	9.01	9.69	8.3	5.68	5.11	10.82	7.33	10.83	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+TASA3	11.71	12.22	3.21	4.54	5.78	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+TASA4	11.76	12.42	3.23	4.57	5.64	11.78	-5.05	-0.49	-1.03	-0.18	-0.45	-4.13	-3.57	5.43	7.3	15.06	\N	\N	\N	\N	\N	\N	\N	\N	\N
+TCSA3	-2.2	-5.48	48.77	1.7	-4.46	-5.16	-1.7	-1.28	-1.3	1.66	3.27	5.83	-8.77	12.98	8.05	13.5	6.5	\N	\N	\N	\N	\N	\N	\N	\N
+TECN3	6.71	4.38	3.67	6.28	-3.52	-2.34	13.79	-278.7	-282.62	12.36	12.63	38.11	30.29	13.23	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+TEND3	-28.91	-15.47	-0.79	-8.9	15.67	11.93	8.27	10.2	5.48	104.87	-22.31	-37.91	-26.01	-4.77	15.93	32.89	-12.23	\N	\N	\N	\N	\N	\N	\N	\N
+TFCO4	91.79	122.99	100.68	11.81	34.37	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+TGMA3	9.22	10.26	7.99	9.46	23.42	12.81	16.65	12.69	31.72	25.83	-49.89	28.95	28.49	16.75	14.72	12.94	5.6	34.28	\N	\N	\N	\N	\N	\N	\N
+TIMS3	13.77	15.29	17.95	10.76	19.22	10.47	11.27	25.68	25.17	8.01	18.41	19.77	13.67	17.41	7.62	81.95	63.58	251.35	-97.94	12.79	8.12	7.15	8.4	13.62	88.95
+TOTS3	22.29	27.18	32.66	47.01	55.88	58.65	72.53	52.11	25.86	25.87	21.56	26.91	31.39	31.02	38.25	29.64	23.52	41.44	114.73	\N	\N	\N	\N	\N	\N
+TPIS3	0	0	4.95	74.27	2.43	-1.38	-0.72	-36.96	-1.68	6.64	-2.9	-22	3.54	105.57	47.45	17.71	\N	\N	\N	\N	\N	\N	\N	\N	\N
+TRAD3	-0.8	-1	-7.68	1684.25	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+TRIS3	7.21	8.26	9.04	8.35	12.42	18.78	7.58	8.08	42.37	8.16	6.09	5.15	8.15	-6.48	14.42	9.54	\N	\N	\N	\N	\N	\N	\N	\N	\N
+TRPL3	7.7	8.07	8.22	6.63	5.72	10.18	5.99	6.98	1.96	13.36	19.52	203.55	8.04	9	16.51	9.81	\N	\N	\N	\N	\N	\N	\N	\N	\N
+TRPL4	6.16	6.04	6.53	5.27	5.42	8.35	6.01	7.95	2.16	14.2	17.61	124.53	5.96	9.66	14.89	9.4	\N	\N	\N	\N	\N	\N	\N	\N	\N
+TTEN3	8.65	10.43	8.11	11.18	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+TUPY3	7.73	8.09	7.81	14.1	-39.78	13.03	10.64	17.09	-9.57	12.2	27.97	34.8	83.17	7.81	9.34	4.94	3.74	\N	\N	\N	\N	\N	\N	\N	\N
+UCAS3	12	11.59	4.94	10.3	18.72	17.56	46.76	-23.98	-6.99	8.12	-52.65	27	16.81	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+UNIP3	9.78	9.2	6.38	4.87	12.41	20.92	6.23	4.52	2.23	5.59	0.66	1.39	9.37	71.85	18.28	-2.81	\N	\N	\N	\N	\N	\N	\N	\N	\N
+UNIP5	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+UNIP6	9.9	10.01	6.85	4.87	12.99	20.87	6.12	4.3	2.04	4.11	0.59	1.23	8.15	48.46	15.14	-1.48	\N	\N	\N	\N	\N	\N	\N	\N	\N
+USIM3	8.42	7.03	4.44	1.81	15.21	32.72	17.27	42.81	-18	-1.08	58.12	680.28	-25.46	41.7	13.3	19.96	3.94	8.55	8.3	2.85	3.52	3.91	-3.76	\N	\N
+USIM6	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+VALE3	7.19	8.64	4.41	3.3	18.56	-32.39	10.46	12.04	10.13	-1.46	508.61	-713.28	23.6	5.38	9.42	24.77	6.65	13.29	10.58	9.58	\N	\N	\N	\N	\N
+VAMO3	17.01	18.91	19.37	28.73	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+VITT3	10.36	15.72	12.4	18.92	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+VIVA3	15.32	21.81	14.68	20.09	47.02	26.56	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+AALR3	-6.08	-5.67	-11.67	442.71	-14.43	42.12	30.28	116.71	54.3	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+ABCB4	6.28	6.97	5.55	6.27	10.75	8.35	8.53	8.08	6.25	3.77	6.51	6.79	8.66	7.08	9.73	10.37	4.65	16.57	\N	\N	\N	\N	\N	\N	\N
+B3SA3	16.29	19.88	19.06	14.46	30.74	32.6	26.43	36.19	20.74	8.81	18.17	19.37	25.16	18.03	22.7	27.84	\N	\N	\N	\N	\N	\N	\N	\N	\N
+BBDC3	8.2	10.75	6.93	7.17	12.97	12.17	11.92	14.7	10.73	6	9.54	11.16	11.38	8.76	9.65	11.65	8.05	12.98	16.43	5.73	8.84	0.92	7.2	6.97	9.36
+BEES4	8.51	8.62	6.22	7.28	8.25	10.04	7.42	6.93	5.22	3.69	4.87	6.67	9.17	10.62	5.53	8.03	5.08	\N	\N	\N	\N	\N	\N	\N	\N
+BRSR3	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+CGAS3	5.77	11.51	9.51	9.31	20.04	13.83	6.1	11.16	5.72	6.55	9.54	10.05	17.63	21.39	7.64	9.87	7.43	10.55	8.52	\N	\N	\N	\N	\N	\N
+CGRA4	5.65	5.64	4.3	4.19	9.93	4.54	8.83	9.64	5.31	4.31	6.3	7.34	9.41	8.24	10.2	8.93	3.69	13.69	9.26	6.03	4.26	5.4	4.34	3.5	2.65
+CVCB3	-3.04	-4.03	-2.87	-6.2	-2.9	0	33.7	28.76	16.08	10.3	13.86	17.41	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+ELMD3	19.29	23.08	27.54	-126.5	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+EUCA4	3.75	3.49	3.03	1.9	4.58	11.47	13.77	8.71	7.44	23.15	10.38	6.92	8.13	6.71	5.42	2.34	\N	\N	\N	\N	\N	\N	\N	\N	\N
+FHER3	-0.6	-1.1	-6.2	1.48	-0.81	0.3	-0.31	-1.1	2.51	-0.22	25.54	-10.28	-252.53	8.28	7.13	8.64	-0.68	12.39	\N	\N	\N	\N	\N	\N	\N
+GFSA3	-1.07	-2.03	-4.52	8.27	-17.67	-80.03	-1.75	-0.67	-0.61	12.4	-19.35	1.69	-27.17	-1.97	11.76	16.41	8.16	34.1	70.25	\N	\N	\N	\N	\N	\N
+KLBN3	11.69	8.72	4.83	9.28	-12.67	32.19	127	45.26	11.56	-32.1	21.22	34.69	14.99	34.48	9.76	14.78	-13.52	25.93	15.01	10.62	8.72	3.2	-5.82	\N	\N
+LWSA3	-49.62	-48.12	134.17	-517.26	460.47	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+MEAL3	-9.28	-7	10.84	-8.81	-2.54	-171.82	225.6	497.71	-18.73	-3.5	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+MRFG3	-4.27	-1.77	2.08	2.3	2.28	4.48	1.57	-10.24	-5.07	-6.13	-4.41	-2.32	-17.26	-3.95	38.37	9.64	-80.17	35.34	\N	\N	\N	\N	\N	\N	\N
+RAPT3	5.27	5.95	3.95	4.67	4.85	12.77	10.34	17.29	-78.27	0	4.28	7.74	23.09	4.74	6.52	10	2.97	9.88	6.63	6.38	5.64	3.59	4.39	2.75	5.16
+RCSL4	-5.18	-28	-2.07	-107.67	0	-44.48	-0.56	-0.1	-1.5	-0.4	-0.16	-2	-0.9	-0.56	-11.25	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+RNEW11	-0.85	-3.04	0.06	8.36	8.46	-0.17	-0.35	-0.74	-0.66	23.32	-110.64	472.25	-487.26	-158.14	266.28	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+RNEW3	-0.85	-3.03	0.06	8.72	9.07	-0.21	-0.36	-0.87	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+ROMI3	7.01	7.17	5.67	6.62	6.47	8.49	6.23	13.08	-4.11	16.31	24.67	142.32	-8.96	124.72	15.49	67.45	4.87	15.29	11.89	\N	\N	\N	\N	\N	\N
+RRRP3	37.11	14.84	59.9	453.13	-14.76	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+UGPA3	9.33	11.74	7.64	17.93	28.49	70.18	26.13	26.5	24.23	21.67	22.55	24.38	24.37	20.03	18.4	22.78	16.8	17.42	13.81	8.7	8.38	10.35	6.26	4.35	4.3
+VIVR3	-0.06	-0.12	-6.87	-3.08	-0.69	-0.54	-1.06	-0.07	-0.02	-0.04	-0.14	-0.3	-0.46	-5.01	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+VIVT3	15.88	17.51	15.84	13.08	16.48	16.58	7.82	15.11	15.06	16.78	9.08	12.09	11.01	12.31	8.57	8.83	7.73	9.95	8.5	7.25	10.52	11.34	10.38	7.49	6.03
+VIVT4	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+VLID3	4.32	7.91	18.8	11.76	-3.33	21.99	12.69	44.02	17.92	20.51	21.05	19.25	24.06	10.68	13.02	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+VSTE3	161.63	100.6	32.25	-0.12	-0.17	-6.1	13.05	3.98	-18.12	-35.55	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+VULC3	8.73	9.97	6.5	7.13	59.5	15.81	11.4	11.71	12.01	-6.82	-3.09	-3.82	-1.02	-1.73	16.22	13.76	7.44	\N	\N	\N	\N	\N	\N	\N	\N
+VVEO3	2.43	12.51	17.75	13.63	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+WEGE3	33.13	26.4	37.82	37.84	66.31	44.52	27.35	34.11	22.18	20.66	25.66	22.88	25.21	19.15	25.4	20.33	13.22	26.42	15.65	12.09	11.55	\N	\N	\N	\N
+WEST3	-1.88	-2.87	-2.39	-8.96	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+WHRL3	6.86	7.74	17.1	10.27	15.41	8.43	36.93	16.33	14.31	13.34	8.4	7.12	7.71	11.85	8.21	13.66	\N	\N	\N	\N	\N	\N	\N	\N	\N
+WHRL4	6.89	8.15	17.89	12.24	17.17	8.67	43.8	17.52	15.17	12.05	8.29	7.61	8.05	13.66	8.87	13.62	\N	\N	\N	\N	\N	\N	\N	\N	\N
+WIZC3	3.57	4.89	5.24	6.15	6.36	10.04	6.03	11.43	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+YDUQ3	23.7	44.71	-56.13	39.97	102.78	22.66	11.35	23.9	13.21	8.85	17.46	24.34	30.87	20.78	27.34	29.98	25.85	\N	\N	\N	\N	\N	\N	\N	\N
+ZAMP3	-7.47	-16.18	-27.79	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+\.
+
+
+--
+-- Data for Name: dystatus; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY public.dystatus (ticker, "2024", "2023", "2022", "2021", "2020", "2019", "2018", "2017", "2016", "2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008") FROM stdin;
+ABEV3	12.3431	14.9153	15.8178	19.1603	21.6404	24.9261	21.9925	46.0136	20.5449	22.5825	21.2356	\N	\N	\N	\N	\N	\N
+ADHM3	-4.0874	-4.0874	-4.0874	-4.0874	-4.0874	0.3729	-2.2959	-2.8512	\N	\N	\N	\N	\N	\N	\N	\N	\N
+AERI3	-2.6209	-10.4926	-7.2157	72.5319	67.6873	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+AESB3	496.336	55.3244	38.8418	14.5548	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+AFLT3	16.1432	18.8736	15.5987	5.6064	33.2468	27.6746	15.4811	25.0484	13.334	\N	13.6006	11.3573	10.6978	14.6965	\N	\N	\N
+AGRO3	11.6684	10.6919	11.422	5.6671	4.8879	9.0505	5.0149	5.7702	23.018	\N	\N	\N	\N	\N	\N	\N	\N
+AGXY3	-0.7055	-1.6574	60.2473	15.4025	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+AHEB3	2.8148	1.5412	2.6397	-3.1488	-8.1479	-1.9206	-7.0565	\N	\N	\N	\N	\N	106.0064	\N	\N	\N	\N
+AHEB5	1.5441	\N	\N	-2.519	\N	\N	\N	\N	\N	\N	\N	\N	106.0064	\N	\N	\N	\N
+AHEB6	1.6085	\N	2.5486	\N	-7.0018	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+ALLD3	4.6866	5.71	7.3087	5.4982	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+ALOS3	3.6718	4.8612	29.0027	20.9433	45.8541	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+ALPA3	-3.864	-3.8167	66.9217	26.4352	159.8143	59.1699	4.4416	22.1273	11.5541	16.585	11.2511	17.9206	20.4133	14.0844	\N	\N	\N
+ALPA4	-3.943	-3.7033	84.8049	31.5688	176.1733	71.227	4.6208	22.6597	13.0244	12.3005	12.1747	20.4176	20.9688	14.2569	\N	\N	\N
+ALPK3	-13.4642	-14.0355	-2.0793	-3.9344	-10.5409	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+ALSC3	38.5716	38.5716	38.5716	38.5716	38.5716	36.5775	34.0141	38.6862	-132.3615	13.4163	16.7508	0.7536	26.6424	19.3154	\N	\N	\N
+ALUP11	13.917	13.8358	9.01	6.3315	8.4264	9.0845	13.8885	13.9564	13.7705	13.0954	10.1284	3.0631	\N	\N	\N	\N	\N
+ALUP3	14.0318	13.7656	8.7675	6.3762	8.361	11.2569	17.0481	18.1092	19.617	\N	\N	\N	\N	\N	\N	\N	\N
+ALUP4	13.8332	13.9895	9.1408	6.3368	8.3051	8.344	12.411	12.1409	10.6299	\N	\N	\N	\N	\N	\N	\N	\N
+AMAR3	-0.1922	-0.4898	-0.8251	-10.6875	\N	-24.121	37.3447	-24.4817	-13.8212	-25.1603	52.6648	40.3588	26.2387	17.78	\N	\N	\N
+AMBP3	-16.6246	-47.7884	37.0054	33.0433	66.5661	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+AMER3	-0.0407	-0.0636	-0.6743	-4.5758	-200.8506	-90.3244	-47.9723	-22.5435	-5.4021	-9.3001	-21.8473	-14.9804	-15.9192	-11.4622	\N	\N	\N
+ANDG3B	59.948	59.948	59.948	59.948	59.948	318.2528	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+ANDG4B	0	0	0	0	0	0	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+ANIM3	-10.7163	-19.3052	-15.2463	-38.6984	-117.895	-243.947	611.3095	26.9017	54.1842	17.8116	17.7646	\N	\N	\N	\N	\N	\N
+APER3	-21.7208	\N	\N	\N	\N	89.0337	-0.8442	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+APTI3	0.0751	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+APTI4	1.3297	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+ARML3	20.0964	36.131	27.3614	155.9562	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+ARZZ3	17.1675	18.6203	20.3011	22.1551	139.817	35.6444	34.6493	31.4582	19.1453	15.5632	21.1939	23.8386	36.1485	22.4224	\N	\N	\N
+ASAI3	21.2404	19.3753	21.5314	10.8405	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+ATMP3	0.083	0.2037	0.0751	-0.5096	-0.2643	\N	-0.0258	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+ATOM3	2.5217	-98.4552	5.8895	10.329	5.4578	16.5174	7.2849	17.5829	-6441.4708	-16928.1854	\N	\N	\N	\N	\N	\N	\N
+AURA33	25.8644	9.6722	6.1734	13.2434	3.041	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+AURE3	-42.5477	-41.8963	5.5078	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+AVLL3	-1.3461	-0.2375	-0.3834	-1.6643	-1.7248	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+AZEV3	-6.2135	-6.7382	-1.3994	1.4032	-3.1148	-5.0704	-1.8207	\N	\N	32.5301	\N	8.7562	\N	\N	\N	\N	\N
+AZUL4	5.4088	8.6492	-19.2742	-7.3002	-4.5662	-30.4641	107.3233	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+B3SA3	14.866	19.8833	19.0645	14.4673	30.4683	32.5998	26.4465	36.1871	20.7068	8.9751	19.1545	20.2482	25.8031	19.1139	\N	\N	\N
+BAHI3	-21.0299	-32.2884	-2.8392	-6.2171	-4.2266	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+BALM3	11.6765	11.7301	19.8221	9.5735	11.922	18.0262	39.1573	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+BALM4	9.8661	12.2847	17.0881	7.9657	9.0336	15.3615	49.7297	127.763	26.3846	6.306	10.2288	7.8382	9.2693	5.7248	\N	\N	\N
+BAUH4	33.7607	-150.7394	-308.5156	65.6437	21.544	15.1662	9.8459	6.0975	6.0787	7.0941	5.8615	5.5199	5.5285	7.4777	-3.0487	\N	\N
+BAZA3	4.3611	3.9591	2.4949	1.659	4.7109	4.3067	6.4876	11.4894	637.4648	2.9769	4.0434	5.3607	6.4408	15.0932	\N	\N	\N
+BBAS3	4.3783	4.7855	3.3171	4.1914	8.3637	9.2305	9.635	8.5784	11.4539	3.002	5.7463	6.6982	6.5228	5.3461	\N	\N	\N
+BBDC3	9.2574	11.2125	6.6911	6.73	13.3878	13.0683	13.7161	11.4605	9.0438	5.7078	9.4283	10.8441	11.4965	8.8272	\N	\N	\N
+BBDC4	10.1743	12.5407	7.5256	7.9853	15.0142	13.8738	15.6611	12.1004	9.0003	5.3681	9.6316	9.8734	11.9131	10.733	\N	\N	\N
+BBML3	-2560.5084	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+BBSE3	8.1895	8.4684	10.8805	10.5512	15.3891	11.3234	15.5895	14.0718	14.1012	11.5652	18.6074	\N	\N	\N	\N	\N	\N
+BDLL3	0.2542	0.2135	0.2923	-1.0995	\N	\N	\N	\N	\N	\N	\N	-1.8353	\N	\N	\N	\N	\N
+BDLL4	0.1856	0.1611	0.1949	-1.0537	-0.2652	-0.0632	-0.2921	-0.4873	-0.5775	-6.6104	11.7554	-1.7129	-4.4043	3.6523	22.135	\N	\N
+BEEF11	21.9092	\N	\N	3.6673	3.619	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+BEEF3	40.7317	10.7739	12.0613	10.7384	8.009	299.3855	-0.8823	-8.7111	14.9541	-2.9567	-3.527	-5.3687	-6.0643	12.3535	35.3554	\N	\N
+BEES3	8.1979	9.2978	5.0599	6.6465	7.7676	9.249	8.4869	6.814	5.7006	3.6367	4.423	0.6676	1.1146	14.2472	\N	\N	\N
+BEES4	8.818	9.8441	5.9582	7.8936	8.58	9.939	8.7335	7.2482	5.7656	3.5356	4.5336	0.6142	1.0114	11.511	\N	\N	\N
+BFRE11	0	0	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+BFRE12	0	0	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+BGIP3	9.0129	10.1169	5.3439	6.531	12.1912	\N	9.0308	6.8705	4.3389	\N	\N	\N	5.6918	\N	\N	\N	\N
+BGIP4	8.3896	8.5013	3.4715	4.4538	7.6342	7.038	8.6764	6.4226	3.4175	6.2989	\N	9.0345	5.7744	5.7225	\N	\N	\N
+BHIA3	-0.2123	-0.4122	-11.2171	-28.255	25.7102	-10.0898	-21.244	52.5075	-48.9191	133.6849	10.077	2.0891	18.1111	\N	\N	\N	\N
+BIDI11	-238.0687	-238.0687	\N	-337.9561	-3485.692	19.9988	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+BIDI3	-233.4904	-233.4904	\N	-333.5793	-3505.1651	19.102	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+BIDI4	-234.1772	-234.1772	\N	-338.5475	-3494.5434	20.1833	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+BIOM3	-22.3538	-6.1827	-5.9632	-10.9609	-15.5112	-10.6161	-6.7777	-7.681	-4.3597	20.8444	-20.6114	-17.2199	-5.5793	-12.9439	\N	\N	\N
+BLAU3	8.9415	11.7844	13.0161	20.0784	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+BLUT4	-1.6637	-1.6637	-1.6637	-2.8423	-1.0611	-0.0656	2.4962	-2.8603	-0.0234	-79.2434	-20.3184	1.54	-8.7447	-2.4516	\N	\N	\N
+BMEB3	5.7322	5.4275	5.2455	6.2512	4.7389	6.191	6.5085	4.1236	14.6019	3.1123	-1.5159	6.8733	4.195	7.5112	\N	\N	\N
+BMEB4	6.3447	4.4783	5.256	5.6427	4.6671	6.1342	6.4901	3.1833	11.7658	1.8674	-1.0204	4.6899	3.0583	5.9379	\N	\N	\N
+BMGB4	6.3438	7.1184	21.264	10.7254	11.7474	5.0543	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+BMIN3	12.2483	13.2816	\N	\N	39.3055	\N	17.2145	\N	0.4121	\N	\N	94.5699	\N	57.878	\N	\N	\N
+BMIN4	9.5598	10.9108	6.5612	24.5834	39.1089	43.0953	14.0569	-10.4636	0.1683	5.8471	10.97	22.3529	9.41	12.9374	\N	\N	\N
+BMKS3	8.968	9.1797	5.4745	13.4551	32.9034	46.5585	34.6646	19.5346	8.2449	9.0542	10.5783	19.2074	16.3772	6.3384	\N	\N	\N
+BMOB3	14.1442	14.0185	15.2036	18.3751	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+BOAS3	15.2166	15.2166	12.9771	18.2003	130.1223	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+BOBR3	0	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+BPAC11	11.5622	14.5345	11.7088	9.259	25.9131	17.8366	16.4645	8.3646	\N	\N	\N	\N	\N	\N	\N	\N	\N
+BPAC3	16.9457	20.7525	18.9572	16.9705	37.7532	28.1149	17.4083	10.7167	\N	\N	\N	\N	\N	\N	\N	\N	\N
+BPAC5	8.8758	11.3733	8.2167	6.8781	19.0296	16.1661	15.5416	8.206	\N	\N	\N	\N	\N	\N	\N	\N	\N
+BPAN4	18.089	18.5317	11.5644	17.6913	18.305	19.4642	11.2287	17.4727	-9.0786	10.4596	15.2386	\N	\N	\N	\N	\N	\N
+BPAR3	5.6441	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+BPAT33	6.9786	6.9786	6.9786	6.9786	6.9786	0	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+BPHA3	0.0596	0.0596	0.0596	0.0596	0.0596	0.0596	0.1617	-0.2538	-0.7986	-2.7456	-1.5333	-11.4491	896.3189	\N	\N	\N	\N
+BRAP3	4.9369	4.8396	2.6964	1.0597	13.5793	-30.5301	8.5657	3.7126	6.9874	-0.5992	40.6784	-148.7313	21.9696	6.0472	\N	\N	\N
+BRAP4	5.0866	5.3183	3.1341	1.2159	15.1142	-33.0419	9.2644	4.3116	8.2482	-0.6734	49.2549	-183.7528	23.6093	5.4722	\N	\N	\N
+BRBI11	8.8384	10.3246	8.5581	10.9435	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+BRBI3	0	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+BRBI4	0	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+BRFS3	-76.125	-11.4539	-2.8306	43.6206	12.9426	96.0951	-4.0057	-26.419	-105.2729	15.536	24.8759	40.4444	47.8046	23.2377	\N	\N	\N
+BRGE11	33.1091	27.6328	6.7615	26.1391	18.0447	23.487	\N	6.3018	\N	\N	6.8835	5.3545	\N	\N	\N	\N	\N
+BRGE12	33.8376	27.6328	8.3225	24.0095	11.6475	12.0077	4.1804	3.971	3.4792	2.9814	\N	5.6068	\N	\N	\N	\N	\N
+BRGE3	33.913	28.2608	8.4628	24.3874	18.4031	22.0191	5.5832	5.0789	\N	\N	5.1806	\N	\N	\N	\N	\N	\N
+BRGE5	33.1091	\N	\N	\N	21.8615	63.7672	3.3749	\N	3.0097	\N	\N	\N	\N	\N	\N	\N	\N
+BRGE6	32.456	28.8637	10.5324	30.9136	33.1686	16.4849	\N	\N	\N	6.1921	\N	\N	\N	\N	\N	\N	\N
+BRGE7	32.8328	\N	\N	\N	\N	\N	4.236	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+BRGE8	33.084	27.5072	8.1208	33.1462	14.3354	16.1473	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+BRIN3	-32.475	\N	\N	\N	\N	\N	-0.8559	-1.1355	-21.5953	-18.9994	31.8716	17.4357	17.4516	0.1491	\N	\N	\N
+BRIT3	11.5577	10.1809	20.1958	995.5405	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+BRIV3	20.7462	17.5036	6.9241	8.7543	10.5204	11.2936	8.7861	10.0773	4.8573	6.5328	7.5098	6.7348	\N	\N	\N	\N	\N
+BRIV4	20.23	17.4068	6.8871	8.7663	10.6977	11.4479	10.8781	11.2049	5.5762	7.4159	9.5443	5.6354	\N	\N	\N	\N	\N
+BRKM3	-2.412	-3.7762	-59.9567	3.2351	-3.0046	-8.9879	12.6563	8.494	-58.1084	4.2257	12.0259	25.8092	-10.526	-19.0223	\N	\N	\N
+BRKM5	-2.429	-3.8058	-56.374	3.2852	-2.808	-8.5063	13.1763	8.371	-66.3626	7.336	19.4864	32.8481	-14.0346	-20.6694	\N	\N	\N
+BRKM6	-2.0217	-2.7003	-60.5024	1.9382	-2.154	-6.8392	\N	\N	-87.1723	4.2496	\N	\N	\N	\N	\N	\N	\N
+BRML3	2.8071	\N	11.9994	38.8084	-29.4138	12.6331	11.2574	-9.925	32.5915	1063.0347	15.4956	11.4169	7.0284	15.6329	\N	\N	\N
+BRPR3	-0.5612	-0.5612	-2.0327	108.2617	23.5903	18.9346	243.5979	11.4117	77.5398	-3.2627	12.1203	71.6512	6.5051	7.7084	\N	\N	\N
+BRQB3	0	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+BRSR3	5.0895	5.5988	5.2005	4.4727	10.3916	7.41	9.6405	9.8612	6.3624	4.1839	8.3686	7.1002	6.2799	6.3972	\N	\N	\N
+BRSR5	6.0667	7.2307	8.5365	6.3356	13.0505	8.0221	10.8118	8.2176	6.2894	\N	8.8496	\N	7.8009	\N	\N	\N	\N
+BRSR6	4.7719	5.3928	4.7101	3.6392	9.613	6.975	9.9919	5.5656	5.7953	2.7242	9.5546	6.8818	7.6095	8.7573	\N	\N	\N
+BSEV3	10.2235	10.2235	10.2235	10.2235	33.5985	-1.8618	-2.6049	-0.78	-2.7228	-1.1915	-2.9298	-1.3824	\N	\N	\N	\N	\N
+BSLI3	17.7554	22.6461	21.3357	14.3769	14.6622	4.9016	4.9838	\N	\N	\N	\N	\N	\N	8.4374	\N	\N	\N
+BSLI4	18.4288	21.388	17.0567	9.2423	\N	\N	\N	\N	3.6317	\N	\N	\N	4.9602	8.603	\N	\N	\N
+BTTL4	-7449.9167	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+CALI3	-83.6897	7.6895	4.3907	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+CALI4	-160.9417	\N	\N	\N	9.5759	\N	11.1651	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+CAMB3	6.3652	6.312	4.8518	7.5832	10.8454	1.3066	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+CAML3	4.3935	8.2076	8.4341	8.8128	8.8526	15.4179	7.9773	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+CASH3	43.0688	-37.0878	-18.0344	-68.8653	96.1914	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+CASN3	157.6329	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	200.993	\N	\N	\N	\N
+CASN4	137.2931	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+CATA3	0.8901	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+CATA4	0	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+CBAV3	-4.6348	-3.348	7.9325	10.9632	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+CBEE3	691.7313	-19.6146	-35.0745	45.9532	67.7791	11.8147	25.2025	-982752.5632	-760341.9908	-99081.5453	21944.9897	9824.2056	8983.9047	34870.6205	\N	\N	\N
+CCRO3	17.2081	30.6687	5.2882	33.6555	142.4337	26.657	28.9036	18.1494	16.4418	25.3419	20.1712	23.2233	29.1694	5.9974	\N	\N	\N
+CCXC3	-0.2476	-0.1762	\N	\N	\N	-0.8193	-3.7499	-1.8305	-0.0815	-40.4518	-1.0638	-0.3135	-6.3702	\N	\N	\N	\N
+CEAB3	15.8808	1033.6441	849.4359	5.7619	-23.8876	35.0145	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+CEBR3	8.6059	6.8543	3.741	0.9189	4.1654	6.5866	\N	\N	3.7055	5.2326	\N	-1.5376	2.6578	7.1201	\N	\N	\N
+CEBR5	7.5534	6.2454	4.1118	0.9102	5.1651	7.8957	5.6882	3.2116	3.8439	\N	-1.2063	-2.4029	3.8305	7.8356	\N	\N	\N
+CEBR6	8.0776	6.9918	3.7116	0.8889	4.8652	6.4825	\N	2.7639	2.949	5.8786	-1.034	-1.6404	2.6578	7.2589	\N	\N	\N
+CEDO3	3.4238	3.4398	-3.5376	46.9321	-2.7817	-5.1273	\N	1.33	\N	\N	-8.73	\N	8.4336	7.5743	\N	\N	\N
+CEDO4	2.8331	3.3925	-2.1393	32.6371	-1.3571	-4.945	1.2343	0.8246	-0.2032	\N	-10.0707	8.6512	6.3559	8.5055	\N	\N	\N
+CEEB3	5.8293	5.8006	6.6319	5.2608	9.5572	1.1143	1.2637	25.4029	16.8846	14.5289	10.0661	11.5475	11.7787	12.0355	\N	\N	\N
+CEEB5	5.7848	5.5597	5.2402	\N	9.497	1.0852	\N	\N	18.1165	\N	9.8881	\N	\N	11.534	\N	\N	\N
+CEEB6	9.0006	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+CEED3	-2.2591	-3.67	-9.7444	-8.3104	-0.346	-0.8943	\N	-3.3169	-21.6613	-0.3765	\N	\N	-3.3336	-4.7714	\N	\N	\N
+CEED4	-3.7131	-3.3254	-8.9751	\N	-0.4265	-0.8943	-0.3718	\N	\N	\N	\N	\N	\N	-4.7714	\N	\N	\N
+CEGR3	29.63	\N	\N	31.7149	44.247	32.6533	49.4948	\N	\N	18260.9705	17800.0966	12934.0686	\N	\N	\N	\N	\N
+CEPE3	68.7202	\N	\N	\N	43.7119	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+CEPE5	22.0107	\N	\N	5.0899	11.6904	10.6988	12.0016	20.507	-4145.1327	96.8601	7.9291	10.4963	-52.2728	12.5049	\N	\N	\N
+CEPE6	23.5907	\N	\N	5.9333	13.0692	7.1846	\N	\N	\N	74.2373	\N	\N	\N	11.9784	\N	\N	\N
+CESP3	-13.8525	\N	\N	16.3444	5.2665	9.1519	23.303	-21.5902	11.6674	-54.4441	13.0969	-33.3629	10.709	\N	\N	\N	\N
+CESP5	-13.5543	\N	\N	\N	6.748	9.0111	22.2575	-38.8663	18.0144	-69.3896	14.734	-37.1853	12.0598	\N	\N	\N	\N
+CGAS3	5.572	11.5232	9.5103	9.3166	20.0518	13.8503	6.0993	11.171	5.7263	6.4523	9.5647	10.0693	17.5621	21.5605	\N	\N	\N
+CGAS5	5.9327	11.6991	9.4737	9.4429	19.8917	13.8096	5.7908	12.1888	6.4851	6.9057	9.7242	11.2774	18.9205	22.2252	\N	\N	\N
+CGRA3	5.844	5.4378	4.5901	4.3917	9.9295	4.6327	8.4832	9.2415	5.8225	4.8201	6.5048	7.1158	9.1941	8.4209	\N	\N	\N
+CGRA4	5.9038	5.6037	4.3383	4.2032	9.9323	4.5862	8.8547	9.7354	5.6684	4.2351	6.3397	7.57	9.1884	8.3415	\N	\N	\N
+CIEL3	7.2407	6.1049	10.086	6.3826	22.169	14.3575	7.2272	15.754	15.7643	15.0398	20.3472	19.303	13.3746	14.535	\N	\N	\N
+CLSC3	4.8638	4.262	3.6669	4.1505	4.3421	9.2091	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+CLSC4	5.236	4.5251	3.9959	4.6566	4.1956	9.8826	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+CMIG4	5.4237	4.3842	5.9925	5.9179	7.5882	6.4322	11.8924	8.64	29.0299	3.1261	5.2735	4.3453	4.513	9.3995	\N	\N	\N
+CMIN3	8.0057	12.0351	7.5857	5.9151	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+CMSA3	0	0	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+CMSA4	0	0	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+CNSY3	-86.1931	-86.1931	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+COCE3	4.2563	\N	\N	9.3888	21.3149	9.9986	8.1162	8.6917	\N	7.2072	15.1651	22.1796	8.325	5.2462	4.669	\N	\N
+COCE5	3.9686	10.7105	5.4766	9.2565	17.6156	12.0002	10.252	9.7815	9.9018	7.7197	12.2404	20.8866	8.3416	5.6923	4.6607	\N	\N
+COCE6	2.5067	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+COGN3	-6.3141	-13.288	-7.5216	-9.4382	-1.4965	79.8905	10.3897	15.8951	11.6245	11.0933	4.1624	20.4218	193.0451	\N	\N	\N	\N
+CORR3	0.0085	0.0085	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+CORR4	0.2586	0.2586	\N	\N	\N	\N	\N	-1.9316	\N	-0.9916	\N	\N	\N	\N	\N	\N	\N
+CPFE3	6.9072	8.0283	7.5016	6.5111	10.2949	13.3893	14.2693	16.6956	28.4849	17.4277	9.74	19.5962	17.507	7.9624	\N	\N	\N
+CPLE11	15.6447	14.9419	18.9441	3.5363	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+CPLE3	13.8905	14.1459	16.9065	3.3816	4.9065	9.5026	5.7957	5.6657	5.8289	3.671	5.6503	5.6897	9.8419	7.8053	\N	\N	\N
+CPLE5	21.8501	33.9561	56.8963	19.8919	\N	\N	\N	\N	\N	\N	\N	\N	\N	9.2519	\N	\N	\N
+CPLE6	15.6385	15.4427	19.4658	3.5584	5.2527	9.4984	5.9416	6.6056	8.3584	5.5753	8.1465	7.7895	12.3805	9.1952	\N	\N	\N
+CPRE3	8.3025	\N	\N	\N	\N	96.4577	74.3989	585.1393	-38.7336	-106.3061	-30.606	-100.5418	\N	\N	\N	\N	\N
+CREM3	32.6952	32.6952	32.6952	32.6952	32.6952	32.6952	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+CRFB3	45.8249	-33.0167	17.8792	9.6299	14.4115	45.7215	21.5959	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+CRIV3	38.6769	32.2492	13.7992	6.2902	10.3274	8.8351	6.5141	5.1578	9.5366	7.1482	10.4465	7.8033	\N	\N	\N	\N	\N
+CRIV4	37.347	31.8059	13.7193	7.5963	12.1999	10.4194	8.5592	7.6177	9.5624	9.4497	9.6495	7.8231	\N	\N	\N	\N	\N
+CRPG3	239.8788	32.2099	\N	7.9503	5.2854	5.9247	4.9958	5.9363	\N	\N	\N	\N	\N	\N	\N	\N	\N
+CRPG5	207.747	30.4442	12.3071	7.2327	5.4522	5.2868	5.2165	4.6138	1.6555	-421.9294	\N	\N	\N	\N	\N	\N	\N
+CRPG6	207.6039	29.6863	11.7977	7.4992	5.427	5.272	4.957	4.5845	1.7135	-419.7087	\N	\N	\N	\N	\N	\N	\N
+CSAB3	12.3851	12.4257	14.8738	\N	8.2744	\N	24.3384	21.6659	6.2932	9.146	\N	21.7287	16.7955	8.4539	\N	\N	\N
+CSAN3	14.6079	33.1527	27.2817	6.6384	35.0452	11.4421	8.2602	12.8699	14.9942	17.6902	40.2302	68.8343	27.1406	4.2193	\N	\N	\N
+CSED3	12.0554	19.2332	221.9493	35.4413	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+CSMG3	5.6744	5.6459	7.0743	8.9902	7.6379	11.4238	13.4767	9.8133	10.0619	-160.0335	9.4727	10.6058	10.4716	8.2905	\N	\N	\N
+CSNA3	927.3836	-81.9312	12.4157	2.8286	11.6471	10.9431	2.4173	1131.9559	-16.1056	-4.5713	-77.3202	41.1878	-41.1592	6.105	\N	\N	\N
+CSRN3	5.7824	7.9885	6.1907	5.0107	8.5855	11.5077	11.9267	16.3362	14.1321	8.5775	6.4514	\N	8.4879	10.1368	\N	\N	\N
+CSRN5	5.4483	\N	5.5832	4.8057	8.8411	\N	11.12	\N	13.8573	7.1328	6.2921	\N	8.7086	\N	\N	\N	\N
+CSRN6	6.3529	7.7308	\N	5.4175	8.4578	\N	\N	\N	13.7592	\N	7.2479	\N	9.3367	\N	\N	\N	\N
+CSUD3	9.0423	9.2513	6.9314	9.0243	13.4833	19.0991	8.7808	9.1093	5.8676	6.5526	12.8777	811.7403	8.7917	9.8662	\N	\N	\N
+CTCA3	0	\N	\N	\N	\N	0	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+CTKA3	3.0656	2.2078	-6.2975	3.3431	2.004	-5.3912	\N	\N	-6.4252	\N	-0.2	-0.8292	\N	-0.8299	\N	\N	\N
+CTKA4	2.8385	2.7082	-2.9345	1.9204	1.6194	-6.4395	-0.4005	-32.9771	-1.1308	-0.4257	-0.048	-0.3053	-9.1607	-0.8091	5.1708	\N	\N
+CTNM3	-0.6145	-0.5725	-0.7744	-3.5142	-1.754	-6.1235	1.6839	3.6905	-0.7223	\N	\N	-12.9955	-4.4533	-1.6215	288.8641	\N	\N
+CTNM4	-0.0522	-0.116	-0.2943	-1.3847	-0.8785	-5.5007	1.5172	3.8382	-0.7962	-3.5317	-1.1232	-13.8577	-3.5627	-1.6485	290.4779	\N	\N
+CTSA3	-1.5371	-2.9498	11.9217	7.8012	-74.9898	23.7188	2.562	7.1725	-20.0353	-4.3871	132.7729	6.7977	5.9395	5.2405	4.5484	\N	\N
+CTSA4	-0.6216	-1.2319	7.378	5.6662	-60.4661	26.0166	3.7499	6.6996	-22.3998	-3.7337	138.9198	5.8869	6.3813	5.2889	4.5829	\N	\N
+CTSA8	0	0	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+CURY3	11.9793	10.8992	11.2013	6.816	18.8761	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+CVCB3	-3.1105	-4.0264	-2.872	-6.3371	-2.9724	144.4361	33.1355	29.0989	17.9143	10.5934	13.7973	\N	\N	\N	\N	\N	\N
+CXSE3	11.7812	10.8033	8.3251	13.2268	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+CYRE3	7.7978	10.2175	6.4591	6.8988	6.6947	28.5406	-73.3025	-55.625	27.1246	6.6951	6.9664	8.4738	11.4634	12.6008	\N	\N	\N
+DASA3	-2.311	-6.2108	-19.8921	-81.6011	-231.1574	145.7141	45.6779	65.2342	58.2874	132.2475	42.2108	34.5759	48.2754	33.2264	\N	\N	\N
+DESK3	16.7014	15.904	14.5509	61.8531	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+DEXP3	5.7409	6.847	4.3215	5.1014	5.8169	10.0255	495.7653	72.2068	160.4152	-0.791	-7.1112	-1.8538	-1.5721	-4.9065	-4.3699	\N	\N
+DEXP4	5.7352	6.6054	3.9013	4.4055	6.7027	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+DIRR3	11.0762	11.7163	12.3461	13.0045	17.7583	22.9008	-14.846	-6.0279	-58.9697	4.3546	6.1178	8.1666	9.7649	7.2332	\N	\N	\N
+DMMO11	-49.967	-49.967	-48.4973	1.4191	-0.5155	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+DMMO3	-258.6525	-258.6525	-282.1664	2.8382	-1.3028	-6.2539	-3.893	-0.0636	\N	\N	\N	\N	\N	\N	\N	\N	\N
+DMVF3	16.0216	14.0471	18.2268	107.6493	5257.7587	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+DOHL3	-58.0745	1133.8694	\N	18.5815	18.0074	18.9902	\N	\N	31.2819	\N	\N	\N	\N	\N	12.2384	\N	\N
+DOHL4	-23.0699	832.5841	93.6333	5.8972	4.7629	14.4136	9.5222	10.2807	17.0308	10.0413	6.4473	6.8193	7.9308	0.6794	15.2979	\N	\N
+DOTZ3	-1.5566	-1.7293	-1.7897	-4.3032	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+DTCY3	-18.1069	-12.6586	-204.6164	-17.4429	246.7204	-3.657	9.191	8.3546	-239.6742	-59.2216	-18.8807	-15.4965	5164.1265	-33.8483	\N	\N	\N
+DTCY4	-181.6498	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+EALT3	4.5319	4.4714	5.4727	7.7142	11.4363	18.6933	7.4578	\N	\N	424.1803	7.644	\N	\N	\N	\N	\N	\N
+EALT4	4.6522	4.257	4.0741	4.7091	4.546	8.7458	7.8802	\N	\N	244.5492	6.1484	6.2744	8.1484	6.7257	11.3886	\N	\N
+ECOR3	7.6596	11.5166	12.6119	13.7005	-17.618	-49.1038	13.9932	17.5089	-4.7725	26.0959	12.6208	20.7836	22.9001	20.3486	\N	\N	\N
+ECPR3	-9.8694	-9.8694	-9.8694	\N	\N	-7.7332	\N	\N	\N	\N	\N	\N	-8.5738	\N	4.7201	\N	\N
+ECPR4	-9.923	-9.923	-9.923	\N	\N	-8.5389	\N	\N	\N	\N	\N	\N	-8.3117	\N	5.0247	\N	\N
+EEEL3	4.7006	\N	\N	\N	17.9216	9.8978	11.725	4.043	34.5864	2.7351	-1.5618	-3.2381	-9.2847	11.4184	\N	\N	\N
+EEEL4	6.5381	\N	\N	\N	19.9186	11.6299	12.423	\N	29.3299	4.285	-2.0317	-3.4405	-10.9928	11.638	\N	\N	\N
+EGIE3	8.8691	10.7845	11.6059	20.0417	12.8176	17.9439	9.313	11.5697	14.765	\N	\N	\N	\N	\N	\N	\N	\N
+EKTR3	7.5799	\N	6.3099	8.0332	7.5638	9.7872	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+EKTR4	7.7288	7.5828	6.8798	6.7769	8.8337	10.1748	9.0723	11.7987	11.0133	11.7452	5.8742	10.176	14.9145	9.8368	\N	\N	\N
+ELEK3	24.4556	24.4556	24.4556	24.4556	24.4556	9.7667	5.7023	4.6241	-0.339	\N	-6.8146	7.9932	432.8353	23.3585	\N	\N	\N
+ELET3	20.2	21.5154	26.6624	9.2839	9.0764	4.7797	2.4712	-14.8315	9.006	-0.5395	-2.5883	-1.2833	-1.2447	6.465	\N	\N	\N
+ELET5	50.7601	\N	\N	17.923	11.3734	5.3108	3.0291	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+ELET6	22.4602	23.8226	27.365	9.1727	9.1581	4.8354	2.8731	-17.4083	10.222	-0.9778	-3.6504	-2.171	-2.0607	9.7301	\N	\N	\N
+ELMD3	102.2891	37.6418	44.4869	-121.2168	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+ELPL3	1.5895	\N	\N	\N	\N	\N	-16.6144	-3.1214	-1180.7225	16.5464	\N	\N	\N	4.6921	\N	\N	\N
+EMAE3	16.6114	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+EMAE4	11.3963	14.4862	36.9335	18.7276	14.0372	14.7292	6.6494	2.8219	5.7658	2.5892	-5.1007	5.0569	-3.9837	-6218.9504	\N	\N	\N
+EMBR3	-1706.3489	-405.9305	-11.111	-66.8744	-1.8122	-11.0946	-23.995	17.4084	20.2371	92.5271	22.7325	17.9858	15.3337	55.7136	\N	\N	\N
+ENAT3	62.4385	77.2243	\N	\N	\N	19.7383	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+ENBR3	10.1089	\N	11.8288	5.6345	7.9075	10.0245	7.0324	13.8855	9.5769	4.5311	5.7477	14.39	17.3248	13.3839	\N	\N	\N
+ENEV3	-320.7511	99.0699	50.3027	15.2721	19.4654	22.9061	5.7082	34.8058	-17.807	0.8246	-0.3846	-1.8412	\N	\N	\N	\N	\N
+ENGI11	9.0941	11.5894	8.443	6.2136	12.9359	42.6611	11.1764	16.9077	32.1025	10.7347	12.2136	15.4659	9.7371	12.0954	\N	\N	\N
+ENGI3	14.5612	19.9794	13.4159	9.5717	21.0122	54.2727	12.2006	30.3472	33.6921	11.5014	11.1033	19.487	9.1924	11.67	\N	\N	\N
+ENGI4	7.6628	9.6022	7.1138	5.3705	10.4999	40.4455	11.0257	13.7491	31.8779	11.0797	9.9485	13.9193	9.5329	12.3443	\N	\N	\N
+ENJU3	-8.2537	-6.4648	-2.9202	-4.7471	-80.0714	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+ENMA3B	10.7525	\N	\N	\N	\N	10.2481	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+ENMA6B	17.8867	\N	\N	\N	\N	0	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+ENMT3	12.1798	10.6991	15.0006	17.4628	9.6559	11.4633	10.1477	\N	44.6412	26.9162	\N	\N	\N	\N	\N	\N	\N
+ENMT4	10.7469	10.7959	15.0778	17.368	10.657	11.75	9.8734	\N	\N	26.9162	\N	\N	\N	\N	\N	\N	\N
+EPAR3	-4.2248	\N	\N	\N	10.61	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+EQPA3	6.9811	7.5627	9.0271	11.0503	10.1454	15.9164	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+EQPA5	8.1595	8.9224	12.1496	14.906	16.1712	30.3731	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+EQPA6	6.9316	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+EQPA7	8.1595	8.9224	10.929	14.4321	16.5094	32.9159	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+ESPA3	-16.096	-19.0791	-9.5759	11.4577	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+ESTR3	-3.1795	\N	\N	\N	\N	\N	-0.5661	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+ESTR4	-0.7698	-1.5492	-0.695	\N	-1.3929	-0.6961	-0.3538	-4.1178	-0.163	-0.162	-0.2165	-0.1155	-0.3174	-0.1966	\N	\N	\N
+ETER3	3.6798	4.1336	4.7993	4.8068	4.1177	-10.049	-3.3555	-0.5958	-6.2702	12.7162	3.4157	7.6499	6.4153	8.1955	\N	\N	\N
+EUCA3	3.8196	3.5647	4.2982	2.5732	14.9039	90.1051	\N	15.4376	\N	\N	\N	\N	\N	\N	\N	\N	\N
+EUCA4	3.6546	3.4858	3.0465	1.9066	4.5739	11.7038	13.7794	8.7237	7.7509	24.239	10.9931	7.0875	8.279	6.9221	\N	\N	\N
+EVEN3	5.8176	7.5927	9.3018	6.0424	173.5385	28.3286	-8.4001	-3.8332	\N	\N	5.028	6.7212	8.5356	6.376	\N	\N	\N
+EZTC3	12.2787	17.2571	9.1402	10.7925	24.0326	36.9286	42.3242	9.9554	11.2169	4.5136	6.8053	7.2963	11.2171	7.0426	\N	\N	\N
+FBMC3	0	0	0	0	0	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+FBMC4	-0.0926	-0.0926	-0.0926	-0.0926	-0.0926	\N	\N	-0.0745	\N	\N	\N	-9.0971	-6.7192	807.1032	14.5886	\N	\N
+FESA3	13.1032	11.463	4.9885	7.8308	39.646	13.3053	6.9558	6.2185	14.7073	4.5887	\N	22.8363	\N	\N	\N	\N	\N
+FESA4	8.5535	8.5609	4.4456	6.707	24.1902	7.9904	5.8489	6.6996	9.8387	3.5996	8.3963	15.8532	12.8869	8.0017	\N	\N	\N
+FHER3	-0.578	-1.104	-6.1773	1.4828	-0.8004	0.2976	-0.3109	-1.0934	2.5563	-0.2164	32.0789	-10.0077	-204.8143	8.4212	\N	\N	\N
+FIBR3	12.0294	12.0294	12.0294	12.0294	12.0294	\N	12.2697	24.4233	10.6747	84.0004	115.7472	-21.6815	-17.7412	-7.4376	\N	\N	\N
+FIEI3	-2.3086	13.3391	5.1624	-5.7588	-4.3421	-9.1793	-61.537	-15.9679	-1.4337	-1.7638	-3.5947	-5.8118	-8.8621	38.2892	\N	\N	\N
+FIGE3	2.4756	\N	\N	\N	\N	\N	\N	\N	\N	\N	8.7561	\N	\N	\N	\N	\N	\N
+FIGE4	0	\N	\N	\N	\N	\N	\N	\N	\N	\N	8.7561	\N	\N	\N	\N	\N	\N
+FIQE3	9.3241	11.2507	10.8441	29.6692	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+FLEX3	0	0	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+FLRY3	16.584	26.4343	18.425	16.3458	33.3717	30.9011	18.8093	14.536	24.358	23.2963	29.655	47.034	33.7989	31.8936	\N	\N	\N
+FNCN3	12.9824	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+FRAS3	13.8401	12.1634	12.6678	14.348	11.6887	14.3072	4.5637	7.7468	8.3989	9.1059	11.386	\N	25.1204	7.2073	\N	\N	\N
+FRIO3	75.4331	-121.2624	\N	-3.2956	-1.7005	11.4961	-13.1185	-7.2106	1.5719	-0.7544	-0.775	-5.1948	\N	\N	\N	\N	\N
+FRTA3	-0.4942	-0.7205	-0.9518	36.3659	5.7744	26.9831	-1.3758	-0.8577	-1.916	-0.9389	\N	\N	\N	\N	\N	\N	\N
+FTRT3B	0	0	0	0	0	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+G2DI33	-2.093	-2.0174	-1.2322	1.313	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+GBIO33	-14.9707	-14.9707	-14.9707	-14.9707	-14.9707	661.7603	13.9279	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+GEPA3	7.1872	7.53	9.6675	-343.3938	5.6375	18.0097	11.9928	14.8263	9.1546	\N	\N	14.0075	16.9146	\N	\N	\N	\N
+GEPA4	7.3254	7.2148	10.4635	-355.1979	5.8877	18.2129	14.0777	15.3916	9.4161	20.681	20.3695	13.9962	19.8961	17.1904	\N	\N	\N
+GETT3	7.5465	7.5465	7.5465	7.5266	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+GETT4	7.5465	7.5465	7.5465	7.5266	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+GGBR3	3.762	4.6157	3.5898	2.4939	14.7414	24.4434	9.1362	-49.6239	-4.6995	-1.3148	9.8555	16.3851	18.5882	2.5205	\N	\N	\N
+GGBR4	4.1806	5.1343	4.3016	3.0255	17.7726	28.572	11.062	-59.2425	-6.4246	-1.7569	11.7433	19.9141	21.6279	2.9834	\N	\N	\N
+GGPS3	17.7691	19.7202	15.4374	26.5042	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+GMAT3	15.123	13.8755	13.2676	17.5541	25.4477	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+GNDI3	-3584.8103	-3584.8103	-3584.8103	-3205.2713	64.8893	85.2005	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+GOAU3	5.1269	4.4691	3.3324	2.2826	12.2555	20.0816	9.0821	-24.5517	-2.8615	-0.2676	17.6183	15.4983	16.3092	8.3239	\N	\N	\N
+GOAU4	5.0597	4.3803	3.5808	2.4436	14.0241	21.5442	8.5406	-27.9282	-3.1795	-0.2941	23.0691	19.1176	20.6914	9.7185	\N	\N	\N
+GOLL4	2.0573	-23.4888	-15.0446	-7.4945	-13.0683	-982.7796	-72.3877	4069.8674	28.4851	-2.923	-3.3969	-3.6689	-2.3055	-4.4756	\N	\N	\N
+GPAR3	0	91.4833	4.1296	\N	12.876	\N	\N	\N	0.2043	-0.2121	\N	\N	\N	\N	\N	\N	\N
+GPIV33	-0.9484	-0.2269	-0.1803	0.4911	-0.8358	2.9885	-1.6772	4.9298	10.8938	-3.6026	35.3807	-3.9028	\N	\N	\N	\N	\N
+GRAO3	0	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+GRND3	9.4347	11.2359	9.5771	12.9844	18.6574	22.3829	12.6342	12.9446	8.3321	9.1871	9.3852	12.5479	11.5591	7.571	\N	\N	\N
+GSHP3	-0.1532	-1.7158	-0.5006	-0.264	-0.2325	-5.6662	-1.2796	1.7258	2.067	-0.2561	-1.4918	-3.7657	-5.9688	-15.0774	\N	\N	\N
+GUAR3	154.1788	-95.2939	62.6161	10.8515	-274.1059	20.3841	8.2101	16.416	11.9474	8.1961	10.7875	15.5783	20.7385	14.2344	\N	\N	\N
+GUAR4	3087.6664	\N	\N	\N	\N	\N	8.0894	15.3175	11.2027	8.6326	9.2253	14.1689	18.743	12.5194	\N	\N	\N
+HAPV3	-67.4066	-44.266	-21.1064	81.1468	72.3579	50.5259	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+HBOR3	5.9795	9.2923	5.3485	6.2041	61.7316	\N	-2.0281	-2.0663	-3.8453	5.8744	5.808	6.6094	9.0068	6.3161	\N	\N	\N
+HBRE3	5.0405	4.7517	7.3826	5.8148	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+HBSA3	-41.2722	170.2317	-210.5188	-7.7354	-49.71	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+HETA3	-58.0094	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	-0.5191	\N	\N	\N
+HETA4	-3.1966	-5.108	0.0105	9.1524	-0.0233	1.3388	2.5879	-0.0847	21.003	-18.6198	0.0592	-0.1536	-0.0829	-0.1517	-0.4151	\N	\N
+HGTX3	101.99	101.99	101.99	101.99	8.1369	25.7027	19.758	15.6595	12.2245	8.8593	10.4541	15.4328	22.0745	17.768	\N	\N	\N
+HOOT3	0	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+HOOT4	0.9308	0.4299	0.1106	-1.288	-0.5708	-0.316	-0.3714	-1.232	-144.0035	-26.9978	-92.7453	1.3592	-3.8867	-2.2748	-11.0477	\N	\N
+HYPE3	10.8203	13.7411	16.8743	13.4617	16.7511	\N	\N	23.5875	14.0271	24.5115	26.1351	43.4578	51.1362	-85.2078	47.1284	\N	\N
+IDVL3	-0.9901	-0.9901	-0.9901	-0.9901	-0.9901	-3.3182	-2.2461	-0.9102	-1.8639	-0.8753	\N	\N	\N	\N	\N	\N	\N
+IDVL4	-1.2239	-1.2239	-1.2239	-1.2239	-1.2239	-3.668	-1.01	-0.8658	-1.8639	-0.5411	-94.7859	-3.4416	83.0521	-9.2779	\N	\N	\N
+IFCM3	-0.9605	-3.9986	-5.1186	-110.86	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+IGBR3	0.5625	0.5625	-1.0608	-0.5888	-1.4744	-0.63	-0.2913	0.3268	-0.1758	-0.412	-1.6685	-1.2537	-1.649	-4.7756	-6.4121	\N	\N
+IGSN3	0	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+IGTA3	17.1509	\N	\N	\N	32.4419	30.1254	28.6586	31.8888	29.1505	17.4771	18.9519	19.1451	8.0483	18.0797	\N	\N	\N
+IGTI11	26.2955	32.6656	1004.7779	29.489	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+IGTI3	9.7302	12.0587	431.7829	13.3655	30.204	25.8208	18.1836	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+INEP3	0.1769	0.3966	-0.6259	0.1969	-0.1866	-0.1338	-1.7922	-0.9306	-0.6307	-0.1238	-0.0269	-0.2567	-0.9607	-147.4814	\N	\N	\N
+INEP4	0.1742	0.3201	-0.5173	0.1943	-0.1767	-0.1351	-1.6631	-0.9146	-0.4807	-0.0892	-0.023	-0.2215	-0.9822	-132.5979	\N	\N	\N
+INNT3	0	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+INTB3	13.3671	13.2434	20.7715	25.1433	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+IRBR3	18.5597	-29.424	-5.0444	-7.4658	-6.8176	10.0423	21.365	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+ITEC3	-35.1234	-35.1234	-35.1234	-35.1234	-35.1234	\N	\N	-7.6372	\N	-8.7064	-4.6637	-0.8073	616.1721	7.4844	\N	\N	\N
+ITSA3	7.3392	7.9306	6.3144	6.7321	14.7094	11.4597	10.534	9.7199	7.2663	5.358	7.4919	11.8847	15.4747	13.0225	\N	\N	\N
+ITSA4	7.3319	7.9536	6.0377	6.4643	13.9823	11.4923	9.5678	9.9971	7.4925	5.2436	7.2525	8.3286	10.3485	10.2009	\N	\N	\N
+ITUB4	9.1808	10.0603	8.3919	7.6755	16.4008	13.4155	9.3159	12.0845	9.3659	6.2234	8.8781	9.5975	12.0804	11.2283	\N	\N	\N
+JALL3	4.354	3.7763	11.7207	7.9314	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+JFEN3	-0.7762	-0.9265	-0.5973	-0.5346	\N	-0.7451	-0.8801	-0.501	-1.6163	\N	-3.168	15.7664	20.1358	13.9137	\N	\N	\N
+JHSF3	5.6169	8.3615	5.3096	3.8159	8.3427	11.7286	5.5431	-40.6086	-2.8451	6.152	24.2959	5.7575	13.1775	10.6693	7.021	\N	\N
+JOPA3	12.7762	13.7988	7.7962	9.9132	11.6366	26.7381	\N	13.8137	\N	5.0294	6.1855	9.3698	6.1847	11.3241	\N	\N	\N
+JOPA4	0	\N	12.959	12.0473	10.6592	22.7769	\N	13.8689	6.8938	7.5288	9.2783	12.1256	7.1835	9.6255	\N	\N	\N
+JSLG3	7.7805	10.1371	8.1276	7.9652	16.7762	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+KEPL3	6.9527	7.7271	4.7295	7.6822	14.7798	20.6241	47.4927	-15.0005	-21.4073	68.3361	9.9268	17.2884	510.6188	10.6581	\N	\N	\N
+KLBN11	13.172	9.2654	4.7824	9.5471	-11.9545	29.4734	124.9975	31.3073	6.7586	-17.7009	18.8977	\N	\N	\N	\N	\N	\N
+KLBN3	13.2416	9.2153	4.8255	10.4735	-12.1712	34.1002	172.7768	44.9154	11.5567	-32.0805	21.2421	34.797	15.0107	34.9051	\N	\N	\N
+KLBN4	13.1468	9.1945	4.8136	9.3015	-11.7648	28.4168	111.38	27.9276	5.4351	-14.3796	18.6516	38.7829	15.6087	40.1786	\N	\N	\N
+KRSA3	-3.6365	-5.9977	-5.5986	-62.4805	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+LAME3	21.1512	21.1512	21.1512	18.9399	96.9298	44.7876	56.4097	78.9052	83.1035	60.5547	30.4276	29.2983	43.0397	28.6448	\N	\N	\N
+LAME4	21.055	21.055	21.055	18.8758	124.6104	58.9059	73.9369	102.4626	113.2927	94.207	40.0436	33.7134	44.2715	31.8523	\N	\N	\N
+LAND3	40.8338	46.7007	20.1689	56.8899	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+LAVV3	8.5029	10.0008	8.2843	6.0794	21.0902	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+LCAM3	14.8459	\N	\N	11.9224	38.6644	10.0232	23.286	20.6186	13.4396	11.9555	11.1837	28.0605	213.0279	\N	\N	\N	\N
+LEVE3	5.6793	6.6784	6.9847	6.9716	21.6068	14.2657	11.0503	12.9063	108.0339	15.7972	12.9231	17.449	17.9028	9.6351	\N	\N	\N
+LHER3	0	0	0	0	0	0	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+LHER4	0	0	0	0	0	0	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+LIGT3	-9.0413	11.6806	-0.3041	11.0003	10.674	5.7965	20.2972	27.4	-11.3131	53.3605	5.2366	7.6805	10.7373	17177.111	\N	\N	\N
+LINX3	-90.9474	-90.9474	-90.9474	-90.9474	-88.6088	151.5244	76.2581	41.863	11.9217	32.4683	34.8038	35.7116	\N	\N	\N	\N	\N
+LIPR3	32.7029	44.2798	30.3342	39.3942	20.5353	-370.9516	50.0026	15.8839	18.0239	108.3433	-205.406	172.9925	44.1128	24.2808	\N	\N	\N
+LJQQ3	8.9447	59.7684	-42.0584	30.7177	45.0108	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+LOGG3	10.7437	12.1203	4.2655	7.0025	24.9706	26.5519	28.6208	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+LOGN3	153.0038	68.5605	9.1894	25.6216	131.7902	43.8639	30.354	-0.1347	2.5047	-0.2957	-3.7018	113.2242	-132.3657	-8.1637	\N	\N	\N
+LPSB3	13.6873	15.8296	22.4521	7.5149	-143.3799	-279.9191	-16.982	-11.018	-11.9225	-0.6973	205.8934	10.5271	18.108	0.0117	\N	\N	\N
+LREN3	12.1311	17.1875	15.7159	38.1698	31.6211	40.4916	29.6443	34.447	23.7254	3.7635	20.4427	18.5968	27.5604	17.5803	\N	\N	\N
+LTEL3B	23.9019	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+LUPA3	1.2444	1.7616	2.1797	-3.747	3.0885	-1.2174	-0.2863	-4.9648	1.623	-0.2588	-0.0127	-0.2056	-0.1405	-0.8803	\N	\N	\N
+LUXM3	0	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	18.7595	11.5862	\N	\N	\N
+LUXM4	0	17.9636	37.946	29.6094	39.4931	10.408	15.0077	\N	\N	\N	9.4058	12.8466	16.0628	7.0525	\N	\N	\N
+LVTC3	-316.823	-22.8139	16.4386	15.2002	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+LWSA3	-49.126	-48.5596	147.1164	-492.6594	513.1911	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+MAGG3	-119.9857	-119.9857	-119.9857	-119.9857	-119.9857	\N	\N	-14.0337	2.7639	-0.774	-6.3084	31.0737	40.5503	17.2068	\N	\N	\N
+MAPT3	-26.8649	\N	\N	\N	-270.3173	\N	\N	\N	\N	\N	\N	\N	\N	-25.5249	-206.9583	\N	\N
+MATD3	14.3987	26.6807	26.6325	35.6161	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+MBLY3	-3.2628	-2.5389	-3.5561	-6.1275	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+MDNE3	6.8494	7.2629	4.6576	5.9777	-9.8382	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+MEAL3	-8.3817	-6.915	11.0341	-8.6499	-2.5458	-88.3011	149.5704	394.7517	-10.829	-3.4681	\N	\N	\N	\N	\N	\N	\N
+MEGA3	20.9295	101.1756	-744.3921	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+MELK3	6.815	9.5307	8.109	9.7796	37.6187	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+MERC3	39.883	\N	\N	34.084	50.0083	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+MERC4	22.9693	48.1481	-22.6281	14.4107	23.3688	13.9147	5.0867	3.5123	\N	\N	\N	4.4142	4.1729	9.4907	\N	\N	\N
+MGEL3	0	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+MGEL4	3.8217	2.2591	0.2642	0.5693	-1.5587	-22.106	-1.825	-8.2228	39.5749	-0.321	-0.5581	-0.1874	-0.929	-7.2408	24.3884	\N	\N
+MGLU3	-18.3179	-14.8888	-37.0601	82.4961	413.9507	84.0718	57.7648	4.4591	27.2878	-48.8283	10.8849	12.3722	-335.9389	\N	\N	\N	\N
+MILS3	10.068	12.035	13.003	15.7227	-326.4199	-58.463	-7.9132	-5.2277	-1.8694	-3.4829	18.9446	24.3028	28.3085	24.0978	\N	\N	\N
+MLAS3	-3.2089	-2.0509	36.7554	8.8439	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+MMAQ3	0	0	\N	\N	\N	0	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+MMAQ4	0.0703	0.0669	\N	\N	\N	0	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+MNDL3	-17.1997	-19.0697	0.1097	-0.1513	-6.9196	-8.4096	21.8632	-0.7141	-0.6299	-0.2851	-0.6417	5.9246	-6.4187	-0.5081	\N	\N	\N
+MNPR3	7.5471	11.3446	6.7046	1.3433	3.0025	-1.2695	-0.2417	-0.7986	-162.5774	-3.202	-19.7958	-0.9976	-0.2635	-3.052	-1.2623	\N	\N
+MOAR3	6.2753	5.533	25.3485	8.1829	-294.9601	20.7996	49.9872	12.9632	8.9916	\N	7.7107	18.3769	8.8989	5.4292	\N	\N	\N
+MODL11	-27.265	-27.265	\N	22.3682	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+MODL3	-29.7788	-29.7788	31.8245	25.537	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+MODL4	-26.2981	-26.2981	\N	20.5042	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+MOSI3	32.2856	32.2856	32.2856	33.5786	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+MOVI3	-4.0569	-6.6187	4.9748	6.9769	56.6164	22.1083	11.4928	22.6449	\N	\N	\N	\N	\N	\N	\N	\N	\N
+MPLU3	12.2004	12.2004	12.2004	12.2004	12.2004	12.2004	11.4493	10.9796	10.6732	12.6282	15.9465	20.8798	34.3147	18.9674	\N	\N	\N
+MRFG3	-13.6232	-5.9563	1.3784	3.5142	3.1262	28.3736	2.4312	-9.4065	-5.0689	-5.6427	-4.2957	-2.28	-13.1416	-3.9721	\N	\N	\N
+MRSA3B	0	6.9578	\N	18.8083	28.4465	13.5094	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+MRSA5B	7.0303	6.5329	8.58	22.0791	\N	\N	\N	\N	3.8678	\N	\N	\N	\N	\N	\N	\N	\N
+MRSA6B	0	\N	8.9689	20.4121	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+MRVE3	-17.0545	-211.6696	-20.7903	7.1986	16.6013	13.8664	7.9523	10.2232	8.7215	7.1196	4.9696	9.6259	10.9622	6.7913	\N	\N	\N
+MSPA3	30.0379	\N	\N	-9.5543	\N	-8.7538	65.5937	7.8935	\N	\N	\N	-23.4579	49.0963	\N	\N	\N	\N
+MSPA4	25.797	\N	173.6792	-9.0618	\N	\N	65.9216	7.0537	\N	\N	\N	-23.4579	\N	\N	\N	\N	\N
+MSRO3	2516.7904	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+MTIG3	0	0	\N	\N	\N	\N	\N	\N	\N	\N	-14.2508	-8.1783	-57.4082	418.4687	\N	\N	\N
+MTIG4	-49.5189	-49.5189	\N	-0.9956	-0.8893	1.2847	53.1122	4.4723	-22.1945	-0.5252	-5.1821	-1.6357	-10.764	65.293	\N	\N	\N
+MTRE3	5.9455	7.209	11.0239	36.4021	37.2215	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+MTSA3	9.7497	\N	\N	\N	\N	\N	\N	\N	\N	11.7736	\N	\N	\N	\N	\N	\N	\N
+MULT3	13.5311	16.7324	17.1031	24.8207	14.6612	42.2193	10.2932	38.4351	15.2797	8.4217	10.346	31.4244	27.7993	22.9994	30.2788	\N	\N
+MWET3	0	\N	\N	0.3567	4.8138	\N	\N	\N	\N	\N	\N	\N	\N	-22.2007	\N	\N	\N
+MWET4	-0.6973	-0.5287	0.6872	0.2708	0.5378	\N	\N	0.8437	-0.1488	-0.3893	-0.2498	6.8507	-1.2967	-10.3788	\N	\N	\N
+MYPK3	18.4152	64.4729	6.4864	4.3922	-4.845	10.5553	17.808	497.5401	51.3728	23.6361	17.0756	14.564	38.8028	10.7203	\N	\N	\N
+NAFG3	11.7984	11.7984	11.7984	11.7984	11.7984	\N	\N	4.8973	\N	\N	\N	\N	\N	\N	\N	\N	\N
+NAFG4	3.4862	3.4862	3.4862	3.4862	3.4862	\N	7.5577	\N	\N	\N	12.4145	32.4536	28.5674	6.526	\N	\N	\N
+NEMO3	0	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+NEMO5	14.415	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+NEMO6	0	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+NEOE3	4.8698	4.9899	3.9748	5.0098	7.6138	13.5475	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+NEXP3	-0.2543	-0.271	-0.2713	-1.1843	-0.4481	-2.4015	-2.9796	-1.7983	-2.2714	-2.773	-19.0305	14.002	15.8945	10.0943	\N	\N	\N
+NGRD3	-52.4778	114.1707	24.9882	42.9625	138.0723	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+NINJ3	27.3361	68.1978	-8.7813	-6.6388	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+NORD3	-3.9261	-3.0162	-5.5972	-10.951	-61.5202	-96.5132	\N	\N	\N	-1381.2029	-2748.0751	-5.8805	-4.1024	-1.5016	\N	\N	\N
+NRTQ3	0	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+NTCO3	8.1314	7.8769	-5.6153	33.4742	-111.0257	67.9683	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+NUTR3	12.0601	15.7483	\N	\N	8.2388	0.1671	-1.4117	-0.5396	-0.1521	\N	-5.0974	\N	\N	\N	\N	\N	\N
+ODER4	12.1556	\N	\N	\N	\N	\N	\N	7.5765	\N	\N	\N	\N	\N	\N	\N	\N	\N
+ODPV3	12.5546	12.5539	14.0306	17.6	21.4061	31.4751	25.6513	16.8077	30.9936	22.7238	26.9046	27.7665	39.1629	32.4188	\N	\N	\N
+OFSA3	-29.9983	-28.0783	10.0455	12.0714	22.8496	50.1276	26.4076	\N	-290.1238	27.2783	\N	\N	\N	\N	\N	\N	\N
+OGXP3	-2.1493	-2.1493	-2.1493	-2.1493	-2.1493	\N	\N	28.5393	-79.5183	-0.4125	0.0295	-0.0445	-12.4472	-91.3414	\N	\N	\N
+OIBR3	-0.0584	-0.0778	-0.0583	-0.4807	-1.244	-0.5689	0.042	-0.4709	-0.2705	-0.3986	-3.7306	4.3452	9.2226	\N	\N	\N	\N
+OIBR4	-0.1439	-0.1982	-0.1748	-0.8096	-1.5946	-0.8137	0.0423	-0.4502	-0.2314	-0.3239	-3.5104	4.3211	8.3769	\N	\N	\N	\N
+OMGE3	27.1558	\N	\N	18.0386	160.2134	184.2499	49.0764	54.5002	\N	\N	\N	\N	\N	\N	\N	\N	\N
+ONCO3	20.0968	30.6651	64.5155	-118.8225	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+OPCT3	13.6575	17.319	-6.1509	-12.6615	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+ORVR3	31.4556	79.9422	-16.2524	-30.9861	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+OSXB3	-0.0102	-0.0112	-0.0718	0.1752	-0.0734	-0.0181	-0.0254	-0.0418	-0.0321	-0.0762	-0.0196	-0.0809	-113.5583	4.6562	-19.1919	\N	\N
+PARD3	36.7615	36.7615	15.9675	11.8363	23.3848	22.5445	19.893	33.7722	\N	\N	\N	\N	\N	\N	\N	\N	\N
+PATI3	0	51.9028	15.0402	5.7386	2.9022	23.4714	3.9255	11.1013	\N	16.9482	15.2328	\N	8.6401	\N	10.1704	\N	\N
+PATI4	31.4089	\N	\N	4.8134	3.7542	25.6238	7.4118	\N	\N	17.3903	16.5769	2.8287	10.3865	8.6605	9.9951	\N	\N
+PCAR3	-0.4909	-0.4829	-25.9459	7.2996	9.2427	30.023	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+PCAR4	-10.6949	\N	\N	\N	\N	29.6075	18.0986	36.2326	-30.1834	41.9646	21.6508	26.3261	22.5695	24.2507	\N	\N	\N
+PDGR3	0.0117	0.0311	-0.4929	-0.6	-0.0703	-0.0662	-0.0651	0.6447	-0.011	-0.9051	-2.1503	-8.9472	-1.7402	9.2363	\N	\N	\N
+PEAB3	45.0283	35.7923	15.9916	5.4616	1.5766	13.2453	13.5373	13.2044	5.9653	13.2467	\N	-33.8047	\N	-203.1405	13.3863	\N	\N
+PEAB4	44.5538	55.0545	22.7999	6.7509	1.5212	13.806	\N	12.8882	6.428	13.9787	\N	-33.8047	138.0995	-203.0095	13.0963	\N	\N
+PETR3	4.532	3.7141	1.9422	3.7543	52.9451	10.4	12.8527	-494.5795	-14.9065	-3.2091	-5.795	8.8494	12.0395	9.0062	\N	\N	\N
+PETR4	4.2528	3.5483	1.697	3.4792	52.0092	9.8085	11.4764	-470.8888	-13.085	-2.5088	-6.0548	9.4527	12.021	8.4149	\N	\N	\N
+PETZ3	187.7929	111.748	57.1236	94.9131	121.9714	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+PFRM3	8.8637	10.7286	5.6185	9.3423	14.4315	66.8783	-49.9881	-5.0436	-10.9521	-9.9158	-5.8146	30.7202	11.8965	13.5225	17.1543	\N	\N
+PGMN3	25.3145	9796.5782	7.3721	25.2306	41.6826	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+PINE3	6.0932	5.4971	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+PINE4	4.5804	4.5932	6.4654	107.8059	-5.258	-4.4014	-6.2141	-1.857	-16.8283	11.1489	8.1489	7.1485	7.6218	6.144	\N	\N	\N
+PLAS3	7.033	-127.2126	-1.2154	-1.0948	-0.5989	-13.5633	-0.1623	-0.4007	-0.0845	-2.606	-0.8155	-1.4674	-1.0641	27.1841	\N	\N	\N
+PLPL3	7.6686	8.8835	6.0813	4.9141	11.742	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+PMAM3	-0.0999	-0.1355	-0.0752	-0.5478	-0.5038	5.3345	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+PNVL3	13.7681	21.6247	17.6597	25.2188	58.8106	34.6548	18.8325	30.4981	57.4857	29.2484	19.8878	18.0644	27.1683	13.474	13.729	\N	\N
+PNVL4	25.8689	\N	\N	\N	55.1417	25.8882	13.3655	26.3046	20.1074	15.1285	15.2158	15.4605	16.1069	11.7314	12.2352	\N	\N
+POMO3	6.5668	6.497	5.0601	6.4569	24.7976	20.8762	16.1524	41.2794	8.7896	17.5359	13.6865	7.6111	17.7121	8.4163	\N	\N	\N
+POMO4	8.3367	8.1793	5.9667	7.8774	26.1651	21.1584	20.2153	51.1505	11.2016	19.0832	13.4443	7.9218	19.2815	9.2658	\N	\N	\N
+PORT3	16.4545	19.2445	14.5417	18.8634	28.8781	27.5809	18.1198	12.3534	8.1467	22.334	23.7751	22.9219	\N	\N	\N	\N	\N
+POSI3	3.9896	3.9995	4.3927	7.7181	3.7869	54.3582	-426.6204	-5.7424	27.7169	-1.8685	8.0741	16.1633	14.6576	-7.4732	\N	\N	\N
+POWE3	23.915	23.915	23.915	23.2787	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+PPAR3	1.3265	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+PRIO3	8.0425	7.8876	9.5835	13.6193	22.4299	7.298	6.4578	21.2189	5.9451	0.6601	\N	\N	\N	\N	\N	\N	\N
+PTBL3	-17.0201	-29.9391	7.5789	6.5789	8.4807	64.8296	6.1256	13.5665	151.4031	6.2008	8.1662	8.7503	10.8243	11.4784	\N	\N	\N
+PTCA11	0	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+PTCA3	0	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+PTNT3	12.6848	10.5645	6.271	10.7469	5.2384	\N	13.8552	\N	\N	\N	12.9336	\N	\N	-16.867	\N	\N	\N
+PTNT4	8.0528	8.1783	4.3023	4.4625	4.8674	-108.9369	6.2259	9.3422	3.4851	9.1223	5.3351	7.2957	14.7786	-11.6945	\N	\N	\N
+QGEP3	40.1529	55.8906	\N	\N	\N	\N	5.8447	7.9956	9.266	16.5538	9.8232	0.4528	1.6547	1.8626	\N	\N	\N
+QUAL3	-6.4927	-11.7141	17.9616	13.1211	25.3374	26.7491	9.1933	23.8319	13.0477	17.0664	59.0588	-188.6909	248.2723	\N	\N	\N	\N
+QUSW3	0	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+QVQP3B	0	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+RADL3	44.0372	46.7957	39.3367	53.3849	85.3852	47.7627	37.5792	59.3342	45.1575	34.4559	37.8311	48.3548	72.6909	35.5554	\N	\N	\N
+RAIL3	40.8153	59.1514	67.0095	218.7478	120.0486	52.2852	100.2556	-66.5896	-3.9384	-3.6468	\N	\N	\N	\N	\N	\N	\N
+RAIZ4	59.8428	80.1218	15.8609	21.2046	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+RANI3	6.2433	7.0162	5.2436	6.2085	14.9171	-8.3787	163.3426	-3.0671	-36.8015	1013.7938	9.6062	7.9352	9.8307	16.4707	\N	\N	\N
+RANI4	3.8669	\N	\N	\N	15.2215	-9.0071	160.5741	-2.99	-42.3682	\N	9.6356	7.815	\N	\N	\N	\N	\N
+RAPT3	9.7234	10.3539	5.5782	5.9177	6.0866	13.1454	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+RAPT4	11.4983	11.0442	5.7318	5.1296	8.3651	15.7981	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+RCSL3	-13.6644	-59.0099	-5.0179	-263.8746	-577.279	-38.5914	-1.0827	-2.9847	-15.5765	-40.5378	-0.2184	-2.1176	-0.6402	-1.2689	\N	\N	\N
+RCSL4	-5.2993	-21.6369	-1.771	-65.8527	-98.2484	-38.5914	-0.518	-0.7436	-8.9232	-27.9806	-0.1638	-1.8151	-0.3556	-0.5383	\N	\N	\N
+RDNI3	-0.5518	-1.0392	14.1239	52.7409	344.4764	428.7211	-9.2253	-2.8885	-3.1501	29.3251	6.9619	6.3301	7.2842	9.3386	\N	\N	\N
+RDOR3	25.7191	32.2631	56.6688	57.211	316.574	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+RECV3	9.7678	8.9854	8.4178	26.2708	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+REDE3	8.0647	8.4264	7.6674	10.0959	25.861	24.5844	35.7431	53.6536	6.2233	1.2617	0.2083	-3.9736	-0.7573	-1.8724	\N	\N	\N
+RENT3	24.1372	37.623	28.3886	19.6698	49.8925	41.0661	30.1084	9.7014	21.5657	13.0625	18.4202	18.339	31.3944	17.7057	\N	\N	\N
+RLOG3	82.7609	82.7609	82.7609	82.7609	66.3736	50.2335	80.9865	-0.1816	-25.4588	-14.3259	\N	\N	\N	\N	\N	\N	\N
+RNEW11	-8.4982	-33.6678	0.6357	8.4434	8.6784	-1.6525	-3.5225	-0.6396	-0.5788	23.2848	-80.9381	599.1368	-344.7059	-104.8668	\N	\N	\N
+RNEW3	-8.4982	-33.4878	0.6378	8.8121	9.2983	-2.1147	-3.6151	-0.7473	\N	\N	\N	\N	\N	\N	\N	\N	\N
+RNEW4	-8.4982	-34.8381	0.6378	8.1699	8.2011	-1.5058	-3.4056	-0.5794	\N	\N	\N	\N	\N	\N	\N	\N	\N
+ROMI3	7.0981	7.2518	5.721	6.6254	6.4937	8.5078	6.3081	13.4237	-4.2178	20.7467	29.655	325.8662	-9.0873	141.218	\N	\N	\N
+RPAD3	45.6138	40.4101	9.1071	27.0756	15.0893	12.6568	4.7448	4.4738	\N	3.7956	5.3655	5.806	\N	\N	\N	\N	\N
+RPAD5	44.7806	41.3309	8.801	33.9429	23.4196	16.9862	11.1828	10.6008	7.6873	7.0819	11.6081	12.988	\N	\N	\N	\N	\N
+RPMG3	-0.2189	-0.1738	-0.123	-0.5238	-0.4622	-1.517	-1.1431	-31.1912	-11.8804	-0.3474	-1.3033	-0.5421	-0.6602	-7.9104	\N	\N	\N
+RRRP3	42.9622	15.5634	51.2577	-7510.4948	-15.7139	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+RSID3	0.3529	0.314	-0.1332	-0.8519	7.6102	-0.5028	-0.1481	-0.3639	-0.09	-0.0984	-2.3469	21.289	-5.935	27.2493	\N	\N	\N
+RSUL3	0	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+RSUL4	7.4958	8.5822	6.2587	5.055	-19.1985	4.3294	\N	0.5396	\N	\N	2.2738	\N	-1.5935	\N	\N	\N	\N
+SANB11	10.7304	12.7491	7.3707	7.2242	12.5259	11.3162	12.7235	13.509	15.225	7.4521	477.0082	487.3454	544.7857	385.6792	\N	\N	\N
+SANB3	10.147	11.9992	6.955	6.8482	12.104	11.6315	13.242	15.6701	19.9632	8.2047	474.8818	9.7609	10.9175	8.2498	\N	\N	\N
+SANB4	11.3059	13.4201	7.8126	7.6868	13.1267	10.754	12.2349	11.2039	10.3631	6.718	426.6849	9.7609	9.4619	7.2186	\N	\N	\N
+SAPR11	5.2535	5.8685	4.7402	4.92	7.7597	9.4606	6.9423	8.7948	\N	\N	\N	\N	\N	\N	\N	\N	\N
+SAPR3	5.0079	5.6393	4.5538	4.8764	9.1005	8.1155	9.4653	9.0371	\N	4.3483	8.9087	\N	\N	\N	\N	\N	\N
+SAPR4	5.3463	5.9207	4.79	4.9662	7.5989	9.8319	6.0393	8.5892	8.1737	3.6417	6.5571	6.9681	11.1612	6.7442	\N	\N	\N
+SBFG3	15.8185	16.8995	15.1849	10.9802	-63.758	27.4832	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+SBSP3	18.4754	17.2904	12.5172	11.9102	31.2079	10.8413	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+SCAR3	4.7316	5.2023	-13.0606	78.1818	29.3073	31.4589	119.7974	20.8187	19.1627	8.1412	15.6176	8.5815	11.754	14.9431	\N	\N	\N
+SEDU3	-13.3591	-13.3591	-13.3591	-13.3591	-13.3591	\N	-14.4364	339.5667	-28.9067	-5.8716	\N	\N	\N	\N	\N	\N	\N
+SEER3	-40.8236	-36.0773	-2.5901	25.7281	12.1831	26.1932	10.7241	19.8464	10.1443	5.986	17.3244	\N	\N	\N	\N	\N	\N
+SEQL3	-0.1138	-0.1626	-3.9905	-110.3833	411.5636	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+SGPS3	-0.0257	-0.0848	-0.107	-1.5986	-1.2136	53.7573	12.3691	102.742	-113.606	25.7301	-4.5072	-6.7086	-5.3496	-1.1109	\N	\N	\N
+SHOW3	2.7296	2.4792	-14.5609	-3.9233	-2.4655	-5.9597	59.4173	11.1857	14.2149	0.0674	-0.0187	-28.3002	-0.1369	\N	\N	\N	\N
+SHUL3	145.2925	129.1972	\N	\N	\N	\N	\N	\N	\N	15.9214	\N	\N	\N	\N	\N	\N	\N
+SHUL4	8.4275	8.1405	6.2346	7.7978	8.5048	9.3157	6.3531	10.9596	8.8074	5.1479	6.1848	10.7404	11.1701	13.0082	\N	\N	\N
+SIMH3	-11.8959	-16.3036	11.7566	11.5643	26.4933	21.4079	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+SLCE3	14.699	9.3161	7.862	8.1872	10.7062	15.1735	10.4634	7.4019	47.7892	13.2774	20.5375	21.1096	51.5186	18.7749	\N	\N	\N
+SLED3	0.4489	0.4489	0.5493	0.5357	-0.1723	-0.3946	-0.1929	-2.567	-5.3614	\N	59.6374	43.9163	\N	\N	\N	\N	\N
+SLED4	0.2237	0.2237	0.1989	0.2435	-0.0967	-0.1797	-0.1929	-2.1768	-1.9891	1.5045	32.0551	57.0254	9.636	9.2061	\N	\N	\N
+SMFT3	12.8827	14.7217	-89.0858	-14.7812	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+SMLS3	10.7799	10.7799	10.7799	10.7799	14.858	7.7797	8.4043	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+SMTO3	11.2716	8.5055	9.2429	8.2331	10.4471	13.5121	21.0841	14.2878	7.7851	25.0758	14.3196	24.0228	43.3722	14.9493	\N	\N	\N
+SNSY3	-0.6878	-0.3072	-0.102	-0.6158	-1.5655	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+SNSY5	-0.3297	-0.2171	-0.0781	-0.3578	-0.3467	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+SNSY6	-0.6283	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+SOJA3	5.7566	5.5115	7.1944	14.535	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+SOMA3	3.2287	3.6153	23.7399	33.3228	-91.6422	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+SOND3	22.0832	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+SOND6	0	11.224	\N	\N	4.6595	22.4108	5.6414	11.5034	\N	-5.2524	6.9933	8.6319	\N	11.7921	\N	\N	\N
+SPRI3	-3.3197	-3.3197	-3.3197	-3.3197	-3.3197	-4.4463	\N	-1.1548	-6.6523	-1.4468	-2.2899	-3.4825	-3.5237	0.1615	16.3455	\N	\N
+SPRI5	-1.3022	-1.3022	-1.3022	-1.3022	-1.3022	-4.6647	\N	\N	-5.8039	-2.6766	-3.1295	-3.8694	-3.5237	0.1453	13.2085	\N	\N
+SPRI6	-1.6812	-1.6812	-1.6812	-1.6812	-1.6812	-4.5418	-12.8267	\N	\N	-2.2425	-2.2899	-3.8694	-3.0641	0.1346	11.6234	\N	\N
+SPRT3B	-2026.6796	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	-35.105	\N	\N	\N
+SQIA3	-110.3306	-110.3306	78.747	72.0393	334.5232	-63.0676	109.4402	42.149	19.7118	10.9355	9.0933	\N	\N	\N	\N	\N	\N
+STKF3	0	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+STTR3	0	0	0	0	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+SULA11	52.2265	52.2265	52.2265	35.2026	7.5855	19.9713	12.4567	9.5117	8.8215	8.6356	7.9176	10.4113	10.482	9.5305	\N	\N	\N
+SULA3	52.3204	52.3204	52.3204	36.3038	9.0821	24.7774	15.6797	9.1141	\N	\N	\N	\N	\N	\N	\N	\N	\N
+SULA4	53.7288	53.7288	53.7288	34.7287	6.8449	17.8281	10.2572	9.4811	\N	\N	\N	\N	\N	\N	\N	\N	\N
+SUZB3	7.5263	5.2298	2.8085	9.4855	-7.4303	-19.1711	132.2799	11.4349	\N	\N	\N	\N	\N	\N	\N	\N	\N
+SYNE3	136.5522	-72.8109	-11.1134	0.8542	41.2813	92.6746	-1173.7017	6.1136	-55.5505	\N	10.4979	11.7058	13.521	12.3589	\N	\N	\N
+TAEE11	8.7612	9.6663	8.2415	5.6599	5.074	10.7215	7.589	11.3401	8.2881	6.3451	7.1729	7.0223	3.2499	\N	\N	\N	\N
+TAEE3	8.6709	9.6713	8.2938	5.6584	5.1151	10.6046	8.1711	11.3985	\N	\N	\N	\N	\N	\N	\N	\N	\N
+TAEE4	8.7988	9.694	8.3081	5.6864	5.1106	10.8316	7.3318	10.8406	\N	\N	\N	\N	\N	\N	\N	\N	\N
+TASA3	11.7962	12.3991	3.2268	4.5199	5.3615	10.0337	-5.1762	-0.4388	-2.4308	-0.1075	-0.5796	-4.6838	-3.9211	5.7837	\N	\N	\N
+TASA4	11.6569	12.598	3.2512	4.5475	5.2365	11.7617	-4.3765	-0.4862	-2.7177	-0.0719	-0.3584	-4.0147	-3.4988	5.5191	\N	\N	\N
+TCNO3	-7.5231	-7.5231	-7.5231	-19.6313	-22.1303	\N	-119.2851	-18.1941	-235.8425	32.253	2.7755	1.0699	-0.1842	8.721	-10.0535	\N	\N
+TCNO4	-5.3289	-5.3289	-5.3289	-15.9765	-14.0659	\N	-133.1745	-18.7873	-211.6535	30.3557	1.6961	0.8025	-0.17	5.6756	-6.8845	\N	\N
+TCSA3	-1.9636	-5.269	186.6899	-1.4387	-4.4613	-5.6762	-1.7334	-1.3104	-0.8347	2.0459	4.4609	7.5347	-8.7681	12.8932	\N	\N	\N
+TECN3	6.3432	4.4401	3.9562	6.486	-3.6238	-2.3042	13.4404	-23.0633	-145.9826	12.909	13.02	39.8182	0.362	\N	\N	\N	\N
+TEKA3	-0.1381	\N	\N	\N	-0.1564	\N	\N	\N	-2.2725	-0.0501	-0.156	-0.1462	0.2189	-0.2798	\N	\N	\N
+TEKA4	-0.1026	-0.0697	-0.0709	-0.0621	-0.061	\N	\N	-0.0211	-2.8172	-0.0463	-0.0944	-0.1365	0.1962	-0.2759	\N	\N	\N
+TELB4	-3.6789	-8.899	-5.2048	-7.7594	-19.7284	-6.071	-4.9859	-10.6824	-9.8381	-0.3267	-1.2111	-2.1779	21.5339	-40.0704	\N	\N	\N
+TEND3	558.083	-19.0457	-0.8046	-9.106	15.7258	11.953	8.6573	10.1232	\N	\N	\N	\N	\N	\N	\N	\N	\N
+TESA3	-13.2965	-13.2965	-13.2965	-13.2965	-9.9091	-2.9254	5.1883	36.2913	-1.1758	\N	\N	\N	\N	\N	\N	\N	\N
+TFCO4	93.031	124.7019	103.3285	159.4645	473.685	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+TGMA3	9.2055	10.2927	8.0299	9.5439	24.1776	12.8112	16.7676	12.601	36.7107	31.2401	-45.6749	24.0224	27.71	17.3856	\N	\N	\N
+TIET11	4.3767	4.3767	4.3767	4.3767	7.7796	21.0689	13.6915	16.8194	14.8872	\N	\N	\N	\N	\N	\N	\N	\N
+TIET3	6.0903	6.0903	6.0903	6.0903	7.8831	28.188	13.9374	17.0172	15.8974	\N	\N	\N	\N	\N	\N	\N	\N
+TIET4	6.1252	6.1252	6.1252	6.1252	7.836	19.4694	13.8008	17.0172	14.3023	\N	\N	\N	\N	\N	\N	\N	\N
+TIMS3	13.6849	15.2973	17.9667	10.7649	19.2358	11.3722	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+TKNO3	3.9078	7.654	\N	\N	\N	0	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+TKNO4	5.2184	6.7042	5.0094	3.0786	10.4025	6.4302	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+TOTS3	24.0005	28.2966	34.2208	47.9689	56.2711	50.9634	75.52	53.2465	26.084	\N	21.7575	26.9425	31.1699	30.976	\N	\N	\N
+TOYB3	-43.9352	-43.9352	-43.9352	-43.9352	-43.9352	\N	-26.2773	-0.6358	-1.7206	-51936.6401	-405.7305	-4648.1839	-2553.607	-4590.2028	-31724.1593	\N	\N
+TOYB4	-47.9642	-47.9642	-47.9642	-47.9642	-47.9642	\N	-24.3908	-0.7119	-1.9058	-27823.2	-405.7305	-4648.1839	-3830.4105	-4590.2028	-31724.1593	\N	\N
+TPIS3	2.5498	-23.0395	18.8976	35.1933	2.1657	-1.5441	-0.7461	88.2627	-1.7511	11.9611	-3.1503	-20.5378	3.4926	61.3692	\N	\N	\N
+TRAD3	-0.7548	-1.0019	-7.5606	1402.3729	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+TRIS3	7.5786	8.7373	9.4527	9.2108	13.4402	15.9594	8.3269	8.5394	81.6771	11.9574	12.062	10.387	8.6704	-5.7673	14.7267	\N	\N
+TRPL3	8.2886	8.2212	8.4317	6.6792	5.7529	10.2872	6.0306	7.0894	1.929	13.7433	\N	\N	8.054	8.9579	\N	\N	\N
+TRPL4	6.6386	6.1456	6.6988	5.3063	5.451	8.4406	6.056	8.0701	2.1209	14.6097	16.7509	128.7444	5.9708	9.6197	\N	\N	\N
+TRPN3	0.4428	0.4428	0.4428	0.4428	0.4428	0.4428	1.7425	14.0345	43.194	20.6116	36.2628	9.3381	17.5301	6.0594	\N	\N	\N
+TTEN3	8.4406	10.4287	8.1062	11.1729	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+TUPY3	7.5581	8.251	7.7582	14.0853	-39.672	13.0773	10.6918	17.1527	-9.5427	12.2481	28.8478	13.9006	42.6149	7.8382	\N	\N	\N
+TXRX3	7.819	1.0683	\N	-6.646	-15.46	\N	\N	\N	\N	-0.0629	-0.2656	-0.2801	-0.2124	-1.0989	\N	\N	\N
+TXRX4	2.1235	0.6868	12.2886	-1.5931	-2.3265	\N	\N	1.0173	-1.126	-0.0486	-0.2403	-0.3231	\N	-1.0426	\N	\N	\N
+UCAS3	10.2016	11.4596	5.0948	10.7265	18.9353	18.5574	55.1044	-26.4054	-6.918	8.6737	-65.5924	27.5741	\N	\N	\N	\N	\N
+UGPA3	14.3243	13.6656	7.8088	19.0645	29.6292	75.9101	25.7304	26.5072	24.3893	22.3714	23.0573	36.5345	36.309	20.5307	\N	\N	\N
+UNIP3	9.852	9.2848	6.421	4.9101	12.5597	17.983	5.9335	4.6018	2.2313	5.6028	6.7512	1.3922	9.7839	81.205	\N	\N	\N
+UNIP5	9.879	10.4165	7.3384	4.8959	12.534	18.0584	5.9256	4.5135	2.38	5.2318	7.5155	1.5546	11.06	122.7518	\N	\N	\N
+UNIP6	10.0123	10.1026	6.8949	4.912	13.1479	17.9378	5.8322	4.3755	2.0379	4.1189	5.9869	1.2298	8.5077	54.7662	\N	\N	\N
+USIM3	14.9854	-31.7857	5.7475	2.0045	29.2228	57.9931	19.7276	58.2402	-3.0908	-1.2594	96.2515	-88.729	-19.6141	74.5952	\N	\N	\N
+USIM5	15.7367	-32.0967	5.5536	2.0943	27.2113	55.8778	15.8993	48.9368	-1.5342	-0.4856	39.5179	-101.6806	-18.3658	44.1482	\N	\N	\N
+USIM6	27.6776	-52.481	10.4557	2.6248	21.6238	55.5253	\N	48.9368	\N	\N	\N	-79.6414	-17.218	43.8437	\N	\N	\N
+VAMO3	17.0377	18.946	19.3845	29.0881	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+VBBR3	4.5586	5.5634	11.7864	9.9844	6.6022	15.8442	9.3769	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+VITT3	10.7369	15.6627	12.3973	19.2582	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+VIVA3	14.3401	21.909	14.6816	20.1309	47.4418	23.6298	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+VIVR3	-0.9425	-1.6897	2.8252	-3.1049	-0.687	-0.5377	-0.0102	-0.0509	-0.0153	\N	\N	\N	-0.3929	-4.965	\N	\N	\N
+VIVT3	17.9494	17.5597	15.7431	13.0604	16.4826	16.5818	7.8202	15.1165	15.0669	11.1629	9.0953	12.1165	11.0322	5.5548	\N	\N	\N
+VIVT4	17.3118	\N	\N	\N	\N	19.6047	8.7558	17.8389	18.2458	11.7409	10.6822	13.5795	12.3843	6.0326	\N	\N	\N
+VLID3	4.2749	7.8657	31.4742	11.8251	-3.3035	22.2804	12.8154	47.6943	18.0674	17.8061	21.4614	19.5706	25.0666	11.0443	\N	\N	\N
+VSPT3	-0.9902	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+VSPT4	0	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+VSTE3	151.7712	101.5808	32.0861	-0.1164	-0.17	-4.5452	13.3662	27.0361	-17.9353	-37.589	-291.5028	\N	\N	41.5042	26.4195	\N	\N
+VULC3	8.4591	10.0077	6.527	7.1574	62.1587	15.8037	11.471	35.6902	49.8252	-6.8277	-3.0532	-1.4367	-1.0182	-1.719	\N	\N	\N
+VVAR11	\N	\N	\N	\N	\N	\N	\N	162.025	-146.078	301.4826	30.7795	6.9962	\N	\N	\N	\N	\N
+VVAR4	\N	\N	\N	\N	\N	\N	\N	55.6195	-48.2397	96.8063	\N	\N	\N	\N	\N	\N	\N
+VVEO3	2.782	12.5122	17.7689	13.6634	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+WEGE3	35.9829	27.0293	38.4115	38.6028	67.9031	45.0516	27.505	34.0779	22.389	20.8765	25.8709	22.9379	25.5564	19.8669	\N	\N	\N
+WEST3	-1.9007	-2.8422	-2.4192	-6.3542	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+WHRL3	17.4067	26.2476	17.238	10.2861	15.4419	8.4421	35.7804	16.0326	14.5079	13.624	8.4787	7.1927	7.8576	12.4145	\N	\N	\N
+AALR3	-6.9547	-5.3987	-11.216	-314.8166	-13.4788	52.0145	39.2765	263.1891	\N	\N	\N	\N	\N	\N	\N	\N	\N
+ABCB4	5.4457	6.1178	5.6228	6.3743	10.1599	8.8635	8.2508	7.6366	6.1876	3.5707	6.2095	6.8505	7.95	7.1795	\N	\N	\N
+AZEV4	-6.0562	-6.4739	-1.3029	1.2457	-1.8044	-3.3576	-0.1962	-0.3398	-0.6926	29.2771	7.0219	5.5561	6.0798	0.007	\N	\N	\N
+BLUT3	-5.626	-5.626	-5.626	-7.1056	-1.9287	-0.1031	2.4448	-3.3134	-0.027	-290.2948	-24.4856	1.7769	-13.1171	-2.4516	\N	\N	\N
+BNBR3	4.779	4.5073	3.2143	3.8925	6.4404	4.7242	4.5215	4.4609	3.0015	7.7692	2.8315	6.9388	2.0147	9.6731	\N	\N	\N
+BOBR4	5.6017	5.3056	14.1889	6.5414	14.4742	-2.7241	2.0188	2.1059	1.858	-0.284	-2.2753	-2.2393	-17.5594	-25.483	\N	\N	\N
+CAMB4	3.6565	\N	\N	\N	\N	1.1922	6.4644	0.7412	-5.7798	-1.3443	4.0935	292.6	-2.7104	15.4963	\N	\N	\N
+CESP6	-13.6898	\N	\N	15.9804	5.4882	8.9942	24.2485	-25.6517	12.5914	-71.5246	15.6753	-37.5877	12.5923	\N	\N	\N	\N
+CLSA3	-85.7094	-25.1642	-28.5482	-22.6973	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+CMIG3	6.6267	5.7781	8.6875	8.36	8.6964	7.2718	12.8963	8.0615	29.6699	3.2842	5.5384	4.4042	4.3732	7.7128	\N	\N	\N
+CSAB4	19.8852	19.8852	19.3822	35.2615	7.5235	19.9269	\N	21.2934	6.8655	7.1505	6.8079	21.7577	16.5155	7.8831	9.1674	\N	\N
+DXCO3	10.0819	8.1572	7.5083	6.5979	29.1767	28.5199	18.9627	34.4255	198.94	21.4	13.6916	15.3034	17.7853	13.1111	\N	\N	\N
+ELEK4	47.3372	47.3372	47.3372	47.3372	47.3372	9.4724	5.726	6.3351	-0.3893	\N	-8.3722	8.7206	576.1992	20.152	\N	\N	\N
+EQTL3	23.0396	21.9801	22.2017	6.1844	7.8665	1.9034	16.1431	13.08	15.1684	8.4044	8.6193	66.9326	15.0595	8.6496	\N	\N	\N
+GETT11	15.1245	15.1245	15.1245	15.0924	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+GFSA3	-2.3269	-3.3754	-4.5092	8.3475	-17.0926	-75.7095	-1.803	-0.7546	-0.6043	12.34	-22.5206	1.7634	-16.0483	-1.8843	\N	\N	\N
+HAGA3	8.4683	13.4598	7.6389	10.2948	7.0402	22.6667	5.6851	-42.3284	\N	9.039	3.5599	\N	2.0798	6.7886	12.1788	\N	\N
+HAGA4	3.7566	5.6522	2.4676	2.8778	4.3948	11.3571	3.1916	-18.6245	10.8795	6.2403	3.2015	5.7896	2.3879	8.3726	9.6077	\N	\N
+HBTS5	1.3286	1.6377	4.3635	2.4061	155.9714	-7.2857	-8.8416	-4.1448	-90.2633	55.6456	323.0337	72.4937	1010.0971	45.1679	15.1247	\N	\N
+IGTI4	34.8124	43.0092	1329.5656	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+ITUB3	7.8795	8.541	7.348	6.9941	14.4914	11.5821	7.8857	10.6966	8.3006	5.8097	8.2879	9.0158	11.2808	8.9225	\N	\N	\N
+JBSS3	33.8655	-52.078	3.1554	4.3974	13.4982	11.6014	1255.057	50.1103	139.4406	7.8368	16.1936	27.8515	24.7359	-206.1981	\N	\N	\N
+MAPT4	-37.6492	-48.6832	\N	-139.3829	-259.4527	-183.1589	\N	-22.8095	\N	-1.0992	\N	-46.9811	-26.3459	-15.8011	-153.9769	\N	\N
+MDIA3	9.808	14.7364	25.2084	17.1116	15.1161	23.2236	20.0543	20.9219	16.5683	12.4923	17.2278	21.6349	18.828	14.7638	\N	\N	\N
+MMXM3	-2.1669	-2.1669	-2.1669	-2.1669	-1.3639	-0.1374	-0.1267	-0.6835	0.0872	0.3888	-0.3115	-0.3312	-3.4807	-203.1066	\N	\N	\N
+MTSA4	5.6103	4.8925	4.3687	7.2946	5.1037	11.9236	8.284	11.2279	6.882	4.9449	6.7378	7.884	9.2001	14.8496	\N	\N	\N
+PDTC3	798.7926	15.881	24.6111	21.4931	29.7189	9.7659	8.5752	9.0147	0.6682	-4.4358	-18.1283	-14.4963	-11.5364	-23.9903	\N	\N	\N
+PPLA11	1.6148	1.6711	6642.6118	3371.9699	-1603.2338	-28.0962	-0.8098	-1.9609	\N	\N	\N	\N	\N	\N	\N	\N	\N
+PRNR3	61.0639	33.2258	12.8829	18.869	0	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+PSSA3	7.4076	8.2002	13.1306	8.7593	9.3836	14.7079	12.8639	10.6691	9.4982	9.2935	11.2215	6.8445	11.2753	12.0306	\N	\N	\N
+RPAD6	45.5617	39.8986	8.5332	19.9896	15.2639	18.4155	6.7136	5.2518	4.3356	2.8098	4.798	5.3347	\N	\N	\N	\N	\N
+SOND5	26.3741	11.1826	5.338	6.4165	5.8128	\N	\N	12.278	\N	-5.2781	7.4831	8.8242	1.4654	13.1	\N	\N	\N
+STBP3	20.4134	16.0563	15.7064	21.6376	-329.0467	354.954	946.1311	-424.3626	-57.2629	\N	\N	\N	\N	\N	\N	\N	\N
+TELB3	-5.273	-10.6218	-8.2507	-23.7063	-56.2846	-21.0931	\N	-18.5327	-11.8057	-1.2516	-2.2102	-3.7058	34.1581	-87.0099	\N	\N	\N
+VALE3	7.2922	7.3744	4.428	3.3006	17.2999	-42.2191	10.5045	11.9779	10.1172	-1.5456	123.1724	1664.7263	22.9329	5.5957	\N	\N	\N
+WHRL4	17.7169	27.6196	18.0314	12.2636	17.214	8.6792	42.4372	17.2049	15.3755	12.314	8.3727	7.6919	8.2047	14.3147	\N	\N	\N
+WIZC3	5.7043	8.1884	8.5789	6.7693	6.6024	10.5562	6.3072	11.7567	14.8364	\N	\N	\N	\N	\N	\N	\N	\N
+WLMM3	7.7534	7.0993	6.6746	11.7099	14.726	9.4937	11.3258	-40.3698	\N	\N	\N	\N	\N	\N	\N	\N	\N
+WLMM4	9.7383	9.7484	7.0502	13.7212	21.2188	9.7058	11.4843	-28.6408	\N	\N	\N	\N	\N	\N	\N	\N	\N
+YDUQ3	24.2029	45.4877	-53.9701	40.1772	103.6372	22.7222	11.7127	24.5728	13.6142	10.0328	19.5466	8.1654	31.3544	21.092	\N	\N	\N
+ZAMP3	-7.4913	-16.0441	-26.9008	-6.0131	-6.7355	82.1468	35.9017	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
 \.
 
 
@@ -17890,6 +20233,662 @@ ZAMP3	0.34	0.36	0.41	0.47	0.51	0.68	0.67	0.38	0.37	0.49	0.00	0.00	0.00	0.00	0.00
 
 
 --
+-- Data for Name: plfinal; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY public.plfinal (ticker, "2024", "2023", "2022", "2021", "2020", "2019", "2018", "2017", "2016", "2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008") FROM stdin;
+AALR3	-6.31	-5.49	-11.37	-62.21	-13.80	48.71	36.28	214.39	85.74	\N	\N	\N	\N	\N	\N	\N	\N
+ABCB4	6.06	6.89	5.69	12.81	10.94	8.85	8.90	8.52	7.05	4.28	7.59	6.82	8.31	7.13	9.73	10.37	4.65
+ABEV3	12.42	14.76	15.67	18.95	21.43	24.67	21.76	44.91	20.28	22.32	21.12	23.86	24.59	19.52	17.67	14.14	16.38
+ADHM3	-4.09	-4.09	-4.09	-4.09	-4.09	0.37	-3.62	-4.50	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+AERI3	-3.16	-10.51	-10.56	92.39	81.35	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+AESB3	344.39	44.26	31.93	13.87	7.76	21.31	13.89	16.91	15.52	\N	\N	\N	\N	\N	\N	\N	\N
+AFLT3	17.01	18.87	15.60	24.54	33.25	27.67	15.48	24.67	12.19	10.79	11.16	11.36	10.70	14.70	\N	\N	\N
+AGRO3	11.69	10.90	14.84	5.13	8.70	9.92	8.38	13.13	4.62	29.50	4.50	-42.47	19.47	-94.06	\N	\N	\N
+AGXY3	-0.56	-1.67	59.53	15.33	0.00	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+AHEB3	2.81	1.54	2.64	-6.65	-8.15	-4.46	-8.37	-34.13	-4.63	-5.75	0.00	\N	106.01	\N	\N	\N	\N
+AHEB5	1.54	1.65	2.90	-5.32	-8.44	-6.52	0.00	0.00	0.00	0.00	0.00	\N	106.01	\N	\N	\N	\N
+AHEB6	1.61	1.69	2.55	-19.00	-7.00	-11.88	-9.18	-24.00	-5.54	-4.59	42.94	\N	\N	\N	\N	\N	\N
+ALLD3	4.83	5.71	7.36	5.49	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+ALOS3	15.77	4.49	31.21	27.24	59.12	732.74	39.67	53.56	51.22	48.24	30.83	3.79	7.98	5.03	\N	\N	\N
+ALPA3	-3.82	-3.82	69.70	27.68	173.04	63.27	18.34	23.56	12.16	17.49	11.67	17.79	20.27	13.93	11.84	14.84	3.83
+ALPA4	-3.92	-3.70	88.33	33.06	190.75	76.16	19.08	24.12	13.71	12.98	12.63	20.27	20.82	14.09	12.28	14.09	4.73
+ALPK3	-13.84	-14.53	-2.11	-3.92	-11.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+ALSC3	38.57	38.57	38.57	38.57	38.57	36.58	34.01	38.69	-132.36	13.42	16.75	0.75	26.64	19.32	\N	\N	\N
+ALUP11	12.00	12.00	7.66	5.32	6.90	7.70	11.64	12.65	12.03	11.73	9.46	4.11	\N	\N	\N	\N	\N
+ALUP3	12.18	11.94	7.46	5.33	6.85	9.54	14.29	16.18	16.70	0.00	0.00	\N	\N	\N	\N	\N	\N
+ALUP4	11.94	12.13	7.77	5.34	6.80	7.07	10.40	11.00	9.29	0.00	0.00	\N	\N	\N	\N	\N	\N
+AMAR3	-0.13	-0.33	-1.01	-14.28	-4.76	-32.04	45.13	-30.37	-16.95	-33.05	64.29	40.01	26.18	17.71	22.22	\N	\N
+AMBP3	-36.16	-21.31	37.73	36.81	74.14	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+AMER3	-0.03	-0.06	-0.68	33.45	-262.32	-134.30	-71.70	-33.76	-12.17	-21.08	-72.93	-14.98	-15.92	-11.46	\N	\N	\N
+ANDG3B	59.95	59.95	59.95	59.95	59.95	318.25	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+ANDG4B	0.00	0.00	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+ANIM3	-13.44	-11.08	33.14	-39.93	-173.56	-227.32	426.78	22.82	44.55	15.09	15.27	48.80	\N	\N	\N	\N	\N
+APER3	-31.90	-127.98	20.12	128.39	-572.46	164.33	-1.31	-2.07	-2.97	-2.35	12.65	15.80	15.89	13.90	\N	\N	\N
+APTI3	0.85	0.00	-3.14	-6.19	1.35	0.00	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N	\N
+APTI4	1.22	3.52	-2.20	-4.33	1.00	0.00	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N	\N
+ARML3	19.34	36.08	27.34	204.86	0.00	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+ARZZ3	15.38	18.17	20.38	22.37	143.80	38.31	37.34	34.15	20.65	16.81	22.96	23.90	35.95	22.38	\N	\N	\N
+ASAI3	21.42	23.63	21.55	10.85	0.00	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+ATMP3	0.08	0.20	-0.03	-0.51	-0.27	-0.31	-1.03	-3.84	-48.36	-0.30	23.37	18.22	30.35	55.33	17.43	11.26	6.36
+ATOM3	2.48	-67.17	5.72	10.38	5.37	14.90	7.72	17.57	-3220.74	-8464.09	0.00	\N	\N	\N	\N	\N	\N
+AURA33	31.29	10.06	4.83	10.09	5.95	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+AURE3	-42.63	-41.93	5.51	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+AVLL3	-1.35	-0.93	-1.86	-7.05	-8.38	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+AZEV3	-7.15	-7.78	-2.09	2.54	-10.64	-13.76	-21.77	-14.17	-30.29	394.95	174.62	8.58	30.03	38.61	\N	\N	\N
+AZEV4	-7.01	-7.47	-1.95	2.26	-6.17	-9.11	-2.35	-4.15	-8.47	355.45	85.37	5.44	6.01	4.03	\N	\N	\N
+AZUL4	0.01	-0.71	-14.56	-5.51	-3.45	-23.05	81.20	40.37	0.00	\N	\N	\N	\N	\N	\N	\N	\N
+B3SA3	15.74	19.76	18.46	14.01	29.60	31.49	25.54	34.96	20.85	8.98	14.29	19.81	25.48	18.57	22.70	27.84	\N
+BAHI3	-21.58	-32.29	-2.95	-8.42	-4.60	-28.04	-174.10	-36.45	48.54	\N	\N	\N	\N	\N	\N	\N	\N
+BALM3	9.48	9.29	13.88	9.57	11.92	18.01	39.18	118.61	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+BALM4	7.92	9.72	11.97	7.97	9.03	15.35	49.76	126.57	26.41	6.26	9.99	7.84	9.27	5.72	\N	\N	\N
+BAUH4	27.49	-63.27	-308.30	84.39	21.54	14.90	9.76	5.95	6.08	6.90	5.56	5.52	5.53	7.48	-3.05	\N	\N
+BAZA3	4.32	3.96	2.50	2.33	6.11	5.59	8.42	14.93	218.64	3.87	5.18	5.37	6.55	15.15	11.27	75.26	5.52
+BBAS3	4.58	6.40	3.29	4.31	8.54	8.57	10.23	8.45	10.30	2.87	5.58	5.51	6.22	5.45	7.64	7.52	4.28
+BBDC3	8.96	11.11	6.79	7.18	13.07	16.88	13.03	12.46	9.56	5.78	9.42	11.00	11.44	8.79	9.65	11.65	8.05
+BBDC4	9.81	12.43	7.64	8.52	14.66	17.92	14.88	13.15	9.52	5.43	9.62	10.02	11.86	10.69	12.26	14.13	9.10
+BBML3	-2560.51	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+BBSE3	8.32	8.47	11.06	10.55	15.39	11.33	15.59	14.07	14.10	11.57	18.61	4.66	\N	\N	\N	\N	\N
+BDLL3	0.02	0.01	0.29	-1.10	-0.67	-0.19	0.00	0.00	0.00	0.00	0.00	-1.84	\N	\N	\N	\N	\N
+BDLL4	0.01	0.01	0.19	-1.05	-0.27	-0.06	-0.29	-0.49	-0.58	-6.61	11.16	-1.71	-4.40	3.65	22.14	\N	\N
+BEEF11	21.91	\N	\N	3.67	3.62	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+BEEF3	41.71	11.01	12.05	10.74	8.29	368.66	-1.59	-13.50	22.56	-5.41	-7.37	-5.34	-7.07	12.79	45.55	9.11	-0.64
+BEES3	8.15	8.91	5.12	8.65	7.55	9.30	7.63	6.61	5.34	3.73	3.37	3.96	5.61	13.70	5.53	7.98	5.41
+BEES4	8.75	9.44	6.03	10.28	8.35	9.99	7.86	7.03	5.40	3.63	3.46	3.64	5.09	11.07	5.53	8.03	5.08
+BFRE11	4.21	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+BFRE12	4.20	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+BGIP3	8.89	10.33	5.92	10.09	13.50	12.21	10.00	7.45	4.45	8.69	0.00	\N	5.69	\N	\N	\N	\N
+BGIP4	8.34	8.68	3.84	6.88	8.45	7.79	9.61	6.94	3.51	6.97	60.56	9.03	5.77	5.72	\N	\N	\N
+BHIA3	-0.14	-0.28	-13.04	-32.84	29.89	-12.92	-27.20	67.07	-62.64	165.73	12.67	13.90	18.05	\N	\N	\N	\N
+BIDI11	316.54	-238.07	871.14	-71.36	-3715.80	95.13	0.00	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N
+BIDI3	315.52	-233.49	864.53	-44.60	-3736.56	90.86	0.00	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N
+BIDI4	-234.18	-234.18	0.00	-71.48	-3725.24	97.16	15.65	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N
+BIOM3	-18.49	-6.15	-6.25	-12.69	-17.96	-15.20	-11.89	-14.54	-8.26	40.55	-40.07	-17.22	-5.58	-12.94	\N	\N	\N
+BLAU3	9.14	11.81	13.05	20.10	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+BLUT3	-5.62	-5.63	-5.63	-3.55	-0.96	-0.05	1.22	-1.66	-0.01	-145.15	-12.24	1.78	-13.12	-2.45	\N	\N	\N
+BLUT4	-1.66	-1.66	-1.66	-1.42	-0.53	-0.03	1.25	-1.43	-0.01	-39.62	-10.16	1.54	-8.74	-2.45	\N	\N	\N
+BMEB3	5.73	5.42	5.25	9.98	7.01	7.67	8.83	12.51	19.36	5.25	-2.19	6.87	4.20	7.51	\N	\N	\N
+BMEB4	6.34	4.47	5.26	9.01	6.91	7.60	8.39	8.25	15.60	3.05	-1.29	4.69	3.06	5.94	\N	\N	\N
+BMGB4	6.92	8.01	15.97	8.60	15.45	11.96	0.00	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N
+BMIN3	12.25	13.28	9.64	66.96	39.31	35.92	17.20	-15.19	691.23	16128.43	0.00	94.57	\N	57.88	\N	\N	\N
+BMIN4	9.49	10.91	6.56	35.35	39.11	43.07	13.65	-8.20	509.74	712.20	18.60	22.35	9.41	12.94	\N	\N	\N
+BMKS3	8.70	9.18	5.48	19.85	32.92	46.54	34.66	19.00	8.64	8.66	9.65	19.21	16.38	6.34	\N	\N	\N
+BMOB3	14.15	13.99	14.73	18.06	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+BNBR3	4.68	4.51	3.21	4.48	6.44	4.72	4.53	4.36	3.00	7.65	2.68	6.94	2.01	9.67	\N	\N	\N
+BOAS3	15.01	15.22	12.51	18.32	239.24	0.00	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+BOBR3	1.36	2.60	11.52	3.89	6.52	0.00	0.00	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+BOBR4	5.59	5.29	14.10	6.51	14.35	-9.60	4.59	4.78	4.21	-0.63	-5.19	-2.25	-17.83	-25.26	18.23	1.23	28.05
+BPAC11	11.64	14.54	11.71	12.25	26.43	18.38	16.78	8.47	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+BPAC3	16.98	20.75	18.96	22.44	38.51	28.97	17.74	10.85	3.71	0.00	0.00	\N	\N	\N	\N	\N	\N
+BPAC5	8.96	11.37	8.22	8.89	19.60	16.82	15.88	8.04	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+BPAN4	17.23	17.63	11.35	20.86	18.09	23.45	11.26	15.74	-8.45	70.96	199.06	-10.72	-4.57	24.64	-6.97	\N	\N
+BPAR3	4.78	4.40	7.19	9.17	5.31	0.00	0.00	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+BPAT33	6.98	6.98	6.98	6.98	6.98	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+BPHA3	0.51	0.06	0.06	0.06	0.06	0.06	0.16	-0.25	-0.80	-1.80	-1.53	-11.45	896.32	\N	\N	\N	\N
+BRAP3	4.98	4.84	2.70	1.06	12.78	-28.63	8.03	3.46	6.48	-0.55	37.52	-149.85	22.18	6.05	8.63	14.38	5.61
+BRAP4	5.13	5.32	3.13	1.22	14.22	-31.08	8.71	4.05	7.75	-0.63	46.35	-185.14	23.83	5.47	8.50	13.86	5.81
+BRBI11	15.84	17.21	8.56	12.13	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+BRBI3	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+BRBI4	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+BRFS3	-101.69	-11.78	-3.36	58.51	17.54	130.46	-5.43	-36.07	-143.46	19.94	32.53	40.30	46.23	23.20	29.57	144.06	\N
+BRGE11	33.11	27.63	6.76	27.64	18.04	23.49	5.81	5.93	3.73	3.28	5.79	5.35	\N	\N	\N	\N	\N
+BRGE12	33.84	27.63	8.32	24.00	11.65	12.01	4.18	3.97	3.48	2.98	3.96	5.61	\N	\N	\N	\N	\N
+BRGE3	33.92	28.26	8.46	24.38	18.40	22.02	5.58	5.08	0.00	0.00	2.59	\N	\N	\N	\N	\N	\N
+BRGE5	33.11	27.18	10.11	35.40	21.86	63.47	3.24	0.00	1.50	0.00	0.00	\N	\N	\N	\N	\N	\N
+BRGE6	32.46	28.87	10.53	30.91	33.17	16.13	14.63	8.21	5.56	5.31	7.31	\N	\N	\N	\N	\N	\N
+BRGE7	32.84	27.18	3.50	16.62	\N	0.00	2.12	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+BRGE8	33.09	27.51	8.12	33.14	14.34	16.15	5.25	3.76	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+BRIN3	-32.48	\N	\N	\N	\N	\N	-0.86	-1.14	-21.60	-19.00	31.87	17.44	17.45	0.15	\N	\N	\N
+BRIT3	12.11	10.16	19.95	909.99	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+BRIV3	119.28	100.64	6.92	13.19	10.52	11.29	8.54	8.43	5.06	6.57	7.18	6.73	\N	\N	\N	\N	\N
+BRIV4	116.32	100.08	6.89	13.21	10.70	11.45	10.35	8.94	5.81	7.27	8.68	5.64	\N	\N	\N	\N	\N
+BRKM3	-2.49	-3.79	-48.20	3.24	-2.96	-8.89	12.60	8.46	-49.65	4.27	11.95	25.78	-10.44	-18.56	7.54	7.05	-1.16
+BRKM5	-2.51	-3.82	-45.32	3.29	-2.77	-8.41	13.11	8.34	-56.71	7.42	19.37	32.81	-13.92	-20.16	8.62	7.98	-1.16
+BRKM6	-2.02	-2.70	-60.53	1.92	-2.15	-6.84	13.02	8.62	-43.59	2.12	0.00	\N	\N	\N	\N	\N	\N
+BRML3	8.01	\N	12.00	37.81	-28.66	12.32	10.97	-11.58	27.86	911.43	13.32	11.42	7.03	15.63	\N	\N	\N
+BRPR3	-0.30	-0.56	-2.01	107.20	22.94	20.27	260.74	14.59	99.13	-4.17	15.06	71.65	6.51	7.71	\N	\N	\N
+BRQB3	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N	\N
+BRSR3	5.11	5.60	5.20	6.82	9.62	7.17	8.73	9.34	6.11	3.79	6.83	7.10	6.28	6.40	\N	\N	\N
+BRSR5	7.07	7.63	9.05	8.86	11.81	7.73	9.85	8.43	6.73	3.35	8.25	8.13	7.88	8.37	9.88	10.10	4.09
+BRSR6	5.13	5.69	4.99	5.20	8.67	6.72	9.10	5.71	6.20	2.79	8.90	6.70	7.68	8.90	9.74	11.11	3.88
+BSEV3	10.79	10.22	10.22	10.22	42.11	-2.79	-2.47	-2.41	-14.59	-5.09	-4.27	-1.38	\N	\N	\N	\N	\N
+BSLI3	14.59	18.61	21.34	21.40	27.11	9.56	9.63	188.99	0.00	0.00	0.00	\N	\N	8.44	\N	\N	\N
+BSLI4	15.06	17.58	17.06	14.96	26.12	12.03	15.70	170.69	18.76	16.40	10.70	\N	4.96	8.60	\N	\N	\N
+BTTL4	-7449.92	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+CALI3	-83.69	7.69	4.39	0.00	188.31	0.00	0.00	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+CALI4	-153.99	0.00	24.30	24.91	52.74	-7.55	59.54	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+CAMB3	6.49	6.25	4.81	7.45	10.86	9.78	35.18	4.01	-3.33	-1.44	4.18	40.29	-6.85	14.52	14.04	3.12	-21.44
+CAMB4	14.99	0.00	4.70	7.61	12.00	0.60	3.23	0.37	-2.89	-0.67	2.05	292.60	-2.71	15.50	\N	\N	\N
+CAML3	8.15	9.07	7.55	8.73	8.69	14.16	7.58	11.84	0.00	\N	\N	\N	\N	\N	\N	\N	\N
+CASH3	57.86	-33.96	-17.82	-71.91	130.38	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N
+CASN3	150.74	196.89	144.77	219.33	132.61	138.72	0.00	0.00	0.00	0.00	0.00	\N	200.99	\N	\N	\N	\N
+CASN4	118.43	135.43	80.92	131.25	92.41	93.38	0.00	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+CATA3	0.89	0.00	0.00	0.94	-2.13	0.00	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N	\N
+CATA4	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+CBAV3	-4.70	-3.59	7.93	10.67	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+CBEE3	337.94	-19.61	-36.08	-17.67	85.56	14.91	31.81	-491408.10	-380195.62	-49669.11	11000.92	9824.21	8983.90	34870.62	\N	\N	\N
+CCRO3	17.46	20.99	5.26	32.10	199.21	26.72	31.09	17.43	17.48	27.49	21.12	23.06	28.96	14.83	30.44	27.38	13.14
+CCXC3	-0.22	-0.18	\N	\N	0.35	-0.82	-3.74	-1.83	-0.08	-20.43	-1.06	-0.31	-6.37	\N	\N	\N	\N
+CEAB3	15.77	950.75	680.90	5.75	-23.95	1913.89	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+CEBR3	8.65	6.85	3.74	0.92	4.17	6.59	4.49	2.76	3.71	6.72	-1.38	-1.54	2.66	7.12	\N	\N	\N
+CEBR5	7.51	6.25	4.11	0.91	5.17	7.90	5.43	2.90	1.92	0.00	-0.60	-2.40	3.83	7.84	\N	\N	\N
+CEBR6	8.03	6.99	3.71	0.89	4.87	6.48	4.93	2.76	2.95	7.55	-1.33	-1.64	2.66	7.26	\N	\N	\N
+CEDO3	3.42	3.44	-3.54	46.96	-2.78	-5.13	1.40	1.33	-0.43	-0.86	-8.73	\N	8.43	7.57	\N	\N	\N
+CEDO4	2.76	3.39	-2.14	32.66	-1.36	-4.94	1.23	0.82	-0.20	-0.85	-10.07	8.65	6.36	8.51	\N	\N	\N
+CEEB3	5.82	5.80	6.63	5.26	9.56	5.68	5.64	28.61	17.27	14.60	11.58	11.55	11.78	12.04	\N	\N	\N
+CEEB5	5.70	5.56	5.24	5.98	9.26	5.53	8.40	28.35	18.67	15.27	11.38	\N	\N	11.53	\N	\N	\N
+CEEB6	8.90	0.00	0.00	9.53	13.05	0.00	0.00	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+CEED3	-2.26	-3.67	-9.74	-7.03	-1.39	-3.60	-2.59	-6.76	-12.74	-1.52	-4.84	\N	-3.33	-4.77	\N	\N	\N
+CEED4	-3.71	-3.33	-8.98	-6.67	-1.72	-3.60	-1.50	0.00	0.00	0.00	0.00	\N	\N	-4.77	\N	\N	\N
+CEGR3	29.63	36.86	83.71	46.01	44.25	32.63	48.11	0.00	0.00	9130.49	8900.05	12934.07	\N	\N	\N	\N	\N
+CEPE3	84.12	0.00	60.83	36.88	43.86	0.00	0.00	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+CEPE5	44.96	0.00	19.07	6.33	11.69	10.57	12.00	20.03	-4229.33	95.48	7.46	10.50	-52.27	12.50	\N	\N	\N
+CEPE6	46.00	0.00	20.44	7.38	13.07	6.71	8.71	15.93	-2858.59	63.08	6.57	\N	\N	11.98	\N	\N	\N
+CESP3	-13.85	0.00	3.42	16.34	5.27	9.15	23.30	-21.59	12.54	-54.44	13.10	-33.36	10.71	\N	\N	\N	\N
+CESP5	-12.09	0.00	3.35	24.89	6.75	9.01	22.26	-37.39	19.37	-69.39	13.63	-37.19	12.06	\N	\N	\N	\N
+CESP6	-10.36	0.00	3.38	15.98	5.49	8.99	24.25	-25.65	13.54	-71.52	15.68	-37.59	12.59	\N	\N	\N	\N
+CGAS3	5.70	11.52	9.51	11.66	20.05	13.84	6.11	11.24	5.80	6.67	9.84	10.06	17.60	21.48	7.64	9.87	7.43
+CGAS5	5.95	11.70	9.47	11.81	19.89	13.80	5.80	12.26	6.57	7.14	10.00	11.27	18.96	22.14	8.34	11.04	7.68
+CGRA3	5.61	5.45	4.63	4.42	9.92	4.62	8.46	9.09	5.54	4.72	6.32	7.01	9.30	8.37	9.56	8.78	3.69
+CGRA4	5.76	5.62	4.38	4.23	9.92	4.57	8.83	9.57	5.39	4.15	6.16	7.46	9.30	8.29	10.20	8.93	3.69
+CIEL3	7.24	6.10	9.74	6.38	22.16	14.48	7.38	15.75	15.75	17.03	20.32	19.30	14.75	14.53	10.03	13.64	\N
+CLSA3	-75.94	-25.12	-28.56	-25.73	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+CLSC3	4.86	4.26	3.64	4.90	4.42	7.42	10.72	17.21	-83.70	8.84	3.01	7.71	-5.51	9.76	7.06	9.01	6.36
+CLSC4	5.25	4.52	3.97	5.50	4.19	7.96	11.62	15.55	-61.86	2.94	1.12	3.55	-4.02	\N	\N	\N	\N
+CMIG3	6.21	5.78	8.68	8.36	8.69	7.27	12.79	8.48	31.19	3.46	5.83	5.08	4.37	7.71	6.26	6.96	5.23
+CMIG4	5.11	4.38	5.99	5.92	7.67	6.43	11.80	9.09	30.52	3.29	5.55	5.01	4.51	9.39	8.06	9.01	6.63
+CMIN3	8.20	12.03	7.58	5.84	11.56	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+CMSA3	-1037.24	0.00	-6002.49	-7764.01	-13691.07	0.00	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N	\N
+CMSA4	-1133.98	0.00	-6562.33	-8484.93	-14967.55	0.00	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N	\N
+CNSY3	-86.17	-86.19	0.00	-33.48	-20.97	0.00	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N	\N
+COCE3	5.61	12.34	6.96	13.12	21.31	10.00	8.12	8.69	8.34	7.21	15.17	22.18	8.33	5.25	4.67	\N	\N
+COCE5	5.76	10.68	5.47	11.70	17.58	11.99	10.23	9.76	9.90	7.71	12.23	20.73	8.33	5.68	4.66	7.11	5.03
+COCE6	2.63	3.41	1.71	5.25	6.45	0.00	0.00	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+COGN3	-6.34	-13.14	-7.47	-9.30	-1.50	82.80	10.91	16.76	12.22	11.63	19.45	20.40	111.75	\N	\N	\N	\N
+CORR3	0.01	0.01	0.00	-0.03	0.01	0.00	0.00	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+CORR4	0.26	0.26	0.13	-0.60	0.20	-0.62	-0.25	-1.56	-0.71	-0.76	0.00	\N	\N	\N	\N	\N	\N
+CPFE3	6.87	8.02	7.44	6.46	10.23	14.48	14.66	17.14	29.95	18.27	17.39	19.48	16.93	11.88	12.69	13.01	11.25
+CPLE11	10.61	13.67	19.31	3.62	0.00	0.00	0.00	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+CPLE3	12.88	12.95	17.23	3.46	5.05	9.67	5.92	5.69	5.82	3.71	5.64	5.61	9.65	7.74	10.29	9.51	5.49
+CPLE5	20.58	32.02	59.46	20.79	4.62	10.30	6.13	6.33	7.21	4.78	6.40	\N	\N	9.25	\N	\N	\N
+CPLE6	14.51	14.13	19.84	3.64	5.41	9.67	6.07	6.64	8.34	5.63	8.13	7.68	12.14	9.12	11.23	9.65	5.99
+CPRE3	6.43	0.00	0.00	7.40	13.66	105.07	81.08	637.56	-42.21	-115.86	-35.89	-100.54	\N	\N	\N	\N	\N
+CREM3	32.70	32.70	32.70	32.70	32.70	32.70	\N	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N
+CRFB3	-14.28	-35.68	17.12	9.62	14.42	43.07	21.28	18.87	\N	\N	\N	\N	\N	\N	\N	\N	\N
+CRIV3	34.74	28.97	13.80	9.19	10.33	8.84	6.49	5.11	9.51	7.05	10.31	7.80	\N	\N	\N	\N	\N
+CRIV4	33.55	28.57	13.72	11.09	12.20	10.42	8.40	7.21	9.54	9.05	8.79	7.82	\N	\N	\N	\N	\N
+CRPG3	239.88	32.21	21.58	12.02	5.29	6.67	4.46	4.92	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+CRPG5	236.72	30.44	12.39	9.69	5.44	6.17	5.20	4.58	37.04	-144.65	0.00	\N	\N	\N	\N	\N	\N
+CRPG6	236.24	29.69	11.88	10.05	5.41	6.15	4.94	4.55	38.33	-143.89	0.00	\N	\N	\N	\N	\N	\N
+CSAB3	12.39	12.43	14.87	53.62	8.27	22.84	23.88	20.81	3.15	4.57	\N	21.73	16.80	8.45	\N	\N	\N
+CSAB4	19.89	19.89	19.38	35.26	7.52	19.92	22.50	20.32	3.43	3.58	6.81	21.76	16.52	7.88	9.17	\N	\N
+CSAN3	11.66	24.58	21.98	6.56	36.50	11.97	8.31	12.95	14.47	16.21	34.91	46.90	22.95	3.95	13.69	15.52	-8.23
+CSED3	12.12	19.14	205.56	34.76	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+CSMG3	5.61	5.64	7.07	8.97	7.63	11.41	13.47	9.81	10.44	-166.06	9.65	10.59	10.65	8.27	4.93	7.39	8.09
+CSNA3	636.54	-33.06	11.24	2.69	11.02	10.04	2.36	772.26	-16.45	-1.86	-71.99	40.15	-38.59	6.03	15.45	15.71	3.81
+CSRN3	5.91	7.99	6.19	5.68	8.59	11.46	11.87	16.05	13.76	8.32	5.87	\N	8.49	10.14	\N	\N	\N
+CSRN5	5.70	8.02	5.58	5.44	8.84	10.98	10.70	17.15	6.93	3.57	3.15	\N	8.71	\N	\N	\N	\N
+CSRN6	6.63	7.73	6.08	6.14	8.46	10.41	10.61	0.00	6.88	0.00	3.62	\N	9.34	\N	\N	\N	\N
+CSUD3	9.12	9.20	6.86	11.82	13.37	18.83	8.68	9.06	5.81	6.45	11.76	472.80	8.64	9.40	9.66	22.83	\N
+CTCA3	0.00	\N	\N	\N	\N	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+CTKA3	3.06	2.21	-6.30	3.34	2.00	-5.39	-0.58	-56.14	-3.21	0.00	-0.10	-0.83	\N	-0.83	\N	\N	\N
+CTKA4	2.84	2.71	-2.93	1.92	1.62	-6.44	-0.40	-32.98	-0.62	-2.34	-1.06	-0.31	-9.16	-0.81	5.17	\N	\N
+CTNM3	-0.58	-0.57	-0.58	-3.51	-1.75	-6.12	1.68	3.69	-0.72	-1.37	-8.08	-13.00	-4.45	-1.62	288.86	\N	\N
+CTNM4	-0.05	-0.12	-0.22	-1.38	-0.88	-5.50	1.52	3.84	-0.80	-2.21	-2.81	-13.86	-3.56	-1.65	290.48	\N	\N
+CTSA3	-1.93	-2.95	11.93	7.80	-74.89	45.43	4.91	10.67	-38.28	-8.41	251.69	6.80	5.94	5.24	4.55	\N	\N
+CTSA4	-0.82	-1.23	7.38	5.67	-60.51	49.83	7.19	10.52	-42.80	-7.16	263.37	5.89	6.38	5.29	4.58	\N	\N
+CTSA8	-0.09	0.00	0.00	0.14	-1.04	0.00	0.00	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+CURY3	11.72	10.78	10.98	6.61	5963.55	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+CVCB3	-3.06	-4.03	-3.73	-9.11	-4.97	218.44	61.94	57.24	34.69	20.78	27.85	17.41	\N	\N	\N	\N	\N
+CXSE3	12.02	10.80	8.43	13.23	0.00	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+CYRE3	7.46	9.72	6.33	6.67	6.61	26.44	245.66	-197.22	23.65	6.06	6.25	7.47	10.46	11.45	13.45	12.05	9.86
+DASA3	-2.45	-6.28	-22.17	-93.75	-276.72	210.88	66.98	95.26	85.46	190.78	61.61	34.29	47.69	33.10	52.61	38.04	-117.31
+DESK3	16.45	15.17	15.35	62.94	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+DEXP3	5.40	6.00	4.07	4.81	1587.22	3630.97	2350.19	323.76	863.20	-0.80	-6.74	-1.70	-1.56	-4.95	-8.50	-29.90	\N
+DEXP4	5.61	6.22	3.90	2.20	3.35	0.00	0.00	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+DIRR3	10.85	11.15	11.25	11.97	17.08	22.33	-15.87	-6.30	-41.91	4.19	6.10	7.97	9.60	7.62	10.78	17.67	\N
+DMMO11	-49.97	-49.97	-48.50	1.94	-0.71	-1.88	0.00	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+DMMO3	-3160.41	-258.65	-282.17	3.89	-1.79	-9.37	-5.89	-1.45	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+DMVF3	16.12	13.91	17.08	-3.34	3548.99	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+DOHL3	-58.07	1130.25	216.94	18.58	18.01	18.88	0.00	0.00	15.64	0.00	0.00	\N	\N	\N	12.24	\N	\N
+DOHL4	-22.95	829.93	93.57	5.90	4.76	14.23	9.41	11.34	19.16	11.30	7.16	6.82	7.93	0.68	15.30	\N	\N
+DOTZ3	-1.59	-1.74	-3.03	-4.33	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+DTCY3	-18.18	-12.66	-203.87	-22.19	294.50	-4.14	10.41	10.13	-286.80	-625.00	-196.65	-15.50	5164.13	-33.85	\N	\N	\N
+DTCY4	-251.87	0.00	-4509.33	-396.01	5148.15	0.00	0.00	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+DXCO3	9.70	8.23	7.42	6.56	28.94	28.30	18.80	34.19	191.65	21.19	13.71	15.29	17.74	13.04	17.43	65.65	\N
+EALT3	4.51	4.47	5.47	7.71	11.44	18.69	7.46	0.21	-0.67	216.61	3.90	\N	\N	\N	\N	\N	\N
+EALT4	4.61	4.21	4.01	4.64	4.45	8.42	7.73	8.18	-13.15	172.98	5.83	6.03	7.56	6.02	9.91	18.96	3.44
+ECOR3	7.46	11.33	12.78	13.79	-19.08	-53.18	15.01	18.64	-5.20	27.61	13.60	20.67	22.71	20.22	12.00	\N	\N
+ECPR3	-6.20	-9.87	-9.87	-8.74	-2.64	-3.87	0.00	0.00	0.00	0.00	0.00	\N	-8.57	\N	4.72	\N	\N
+ECPR4	-5.51	-9.92	-9.92	-9.39	-2.57	-4.27	0.00	0.00	0.00	0.00	0.00	\N	-8.31	\N	5.02	\N	\N
+EEEL3	2.43	0.00	3.13	41.66	18.05	9.89	11.71	3.87	17.72	55.90	-31.95	-3.24	-9.28	11.42	\N	\N	\N
+EEEL4	6.54	0.00	4.36	38.88	19.92	11.62	12.41	2.53	14.95	2704.47	-1283.43	-3.44	-10.99	11.64	\N	\N	\N
+EGIE3	8.93	10.78	11.60	20.03	12.82	17.94	10.86	11.56	14.76	14.55	15.96	16.30	14.50	13.49	14.77	12.37	10.84
+EKTR3	7.69	6.68	6.31	13.99	7.56	9.72	7.94	10.74	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+EKTR4	7.85	7.58	6.88	11.80	8.83	10.10	8.92	11.60	11.01	11.31	5.30	10.18	14.91	9.84	\N	\N	\N
+ELEK3	24.46	24.46	24.46	24.46	24.46	9.77	5.70	4.30	-0.34	-15.79	-6.81	7.99	432.84	23.36	\N	\N	\N
+ELEK4	30.07	47.34	47.34	47.34	47.34	9.47	5.73	5.94	-0.39	-19.97	-8.37	8.72	576.20	20.15	\N	\N	\N
+ELET3	20.47	21.77	26.67	10.70	10.47	5.90	2.89	-18.43	11.05	-0.66	-3.21	-1.27	-1.24	6.44	9.86	32.92	\N
+ELET5	50.76	43.10	39.64	22.14	14.05	7.18	3.72	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+ELET6	22.73	24.10	27.38	10.57	10.57	5.96	3.36	-21.64	12.54	-1.20	-4.52	-2.16	-2.06	9.69	11.86	28.73	\N
+ELMD3	48.48	31.13	38.84	-123.22	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+ELPL3	1.94	0.00	0.00	2.95	1.69	12.53	-18.11	-3.47	-472.53	18.04	-17.24	\N	\N	4.69	\N	\N	\N
+EMAE3	16.61	3.44	9.02	4.60	4.84	0.00	0.00	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+EMAE4	11.94	14.44	36.94	18.73	14.02	14.71	6.64	2.73	5.76	2.56	-4.57	4.24	-3.09	-3112.57	20.53	\N	\N
+EMBR3	-553.54	-121.22	-10.78	-67.53	-1.81	-11.16	-24.34	17.41	20.16	87.99	22.39	17.75	16.21	52.31	14.18	7.48	14.20
+ENAT3	107.12	-53.03	9.34	2.45	26.42	19.72	5.85	8.00	9.23	16.27	11.11	13.18	41.45	47.16	\N	\N	\N
+ENBR3	7.15	11.93	11.83	5.63	7.74	9.81	6.88	13.59	10.63	5.03	6.38	14.39	17.32	13.38	\N	\N	\N
+ENEV3	-206.03	87.22	50.29	16.54	21.12	24.91	6.20	46.19	-29.10	18.71	-3.68	-2.04	-14.86	-15.85	-14.18	-13.92	\N
+ENGI11	8.36	11.03	8.45	6.22	13.69	44.40	12.46	18.59	39.91	13.71	15.26	15.37	9.70	12.10	11.17	7.78	\N
+ENGI3	13.15	19.02	13.42	9.59	22.23	56.49	13.60	33.37	41.88	14.69	13.87	19.36	9.16	11.67	10.66	8.31	\N
+ENGI4	7.13	9.14	7.12	5.38	11.11	42.10	12.17	14.80	39.63	14.01	11.89	13.83	9.50	12.35	10.16	7.67	\N
+ENJU3	-7.93	-6.44	-2.93	-4.80	-74.85	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+ENMA3B	10.75	0.00	0.00	20.12	11.84	5.12	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N	\N
+ENMA6B	11.02	0.00	0.00	33.47	19.69	0.00	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N	\N
+ENMT3	12.18	10.70	15.00	23.48	9.66	11.63	10.29	728.12	34.16	28.85	12.64	\N	\N	\N	\N	\N	\N
+ENMT4	11.03	10.80	15.08	23.35	10.66	11.92	10.01	340.43	12.90	28.19	10.39	\N	\N	\N	\N	\N	\N
+EPAR3	0.82	7.66	2.11	2.61	5.31	0.00	0.00	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+EQPA3	7.08	7.57	9.04	11.84	10.16	15.93	10.84	6.03	14.48	8.47	8.02	\N	\N	\N	\N	\N	\N
+EQPA5	8.17	8.93	12.16	16.05	16.19	30.40	21.82	8.08	15.11	6.38	7.69	\N	\N	\N	\N	\N	\N
+EQPA6	6.94	9.99	13.94	26.22	32.90	47.18	71.60	0.00	0.00	3.66	0.00	\N	\N	\N	\N	\N	\N
+EQPA7	8.17	8.93	10.94	15.81	16.53	32.95	17.11	6.17	11.77	5.91	4.49	\N	\N	\N	\N	\N	\N
+EQTL3	17.68	18.68	20.23	6.18	7.87	7.08	15.86	13.02	15.03	8.42	8.65	76.00	15.49	6.88	4.32	5.18	2.04
+ESPA3	-16.10	-18.84	-9.59	13.14	0.00	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+ESTR3	-3.18	-4.45	-6.98	-11.37	-10.30	0.00	-0.28	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+ESTR4	-0.77	-1.55	-3.84	-19.09	-7.66	-3.83	-1.95	-3.09	-16.38	-16.29	-1.19	-0.12	-0.32	-0.20	\N	\N	\N
+ETER3	3.69	4.12	4.78	4.80	4.38	-13.76	-1.69	-0.81	-8.60	17.17	8.08	7.58	6.39	8.16	10.53	10.31	5.65
+EUCA3	3.88	3.57	4.29	2.57	14.91	89.51	30.36	15.43	11.03	85.76	11.36	7.24	7.32	6.19	6.78	1.91	\N
+EUCA4	3.71	3.49	3.04	1.90	4.58	11.63	13.78	8.72	7.65	23.88	10.79	7.00	8.20	6.82	5.42	2.34	\N
+EVEN3	5.02	6.66	7.68	5.53	127.88	26.07	-8.37	-3.67	207.91	7.01	4.60	6.25	8.30	6.26	7.78	11.06	7.09
+EZTC3	12.69	17.08	8.98	10.53	22.68	39.41	43.06	10.27	11.58	4.56	6.88	7.28	11.17	7.02	8.17	7.43	3.32
+FBMC3	0.00	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+FBMC4	-0.09	-0.09	-0.09	-0.09	-0.09	\N	\N	-0.07	\N	\N	\N	-9.10	-6.72	807.10	14.59	\N	\N
+FESA3	14.95	12.92	4.99	7.83	39.76	13.29	6.96	6.06	14.71	4.59	0.00	22.84	\N	\N	\N	\N	\N
+FESA4	9.90	9.99	4.44	6.70	24.05	7.98	5.84	6.69	9.78	3.58	8.35	15.80	12.91	7.99	8.79	36.91	1.78
+FHER3	-0.59	-1.10	-6.18	1.48	-0.80	0.30	-0.31	-1.10	2.54	-0.22	31.09	-10.14	-228.67	8.35	7.13	8.64	-0.68
+FIBR3	12.03	12.03	12.03	12.03	12.03	\N	12.27	24.42	10.67	84.00	115.75	-21.68	-17.74	-7.44	\N	\N	\N
+FIEI3	-2.26	5.55	-0.19	-5.39	-4.57	-9.35	-53.78	-15.15	-1.40	-1.84	-3.58	-14.41	-9.60	28.61	7.64	16.85	3.90
+FIGE3	2.47	2.36	2.74	0.00	0.00	0.00	0.00	0.00	0.00	0.00	8.76	\N	\N	\N	\N	\N	\N
+FIGE4	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	8.76	\N	\N	\N	\N	\N	\N
+FIQE3	8.39	10.37	10.82	29.54	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+FLEX3	0.00	0.00	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+FLRY3	16.98	24.36	20.94	19.78	40.42	37.51	22.89	30.53	29.74	28.50	36.00	46.71	33.58	32.33	26.92	26.98	\N
+FNCN3	11.03	0.00	3.45	-12.17	0.00	0.00	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N	\N
+FRAS3	13.72	12.03	12.62	15.25	12.74	30.49	9.62	16.09	13.67	12.47	15.71	19.14	24.51	7.13	10.86	13.41	\N
+FRIO3	74.68	-153.44	-0.93	-4.17	-2.15	14.55	-16.60	-9.12	82.59	-9.54	-2.75	-5.19	\N	\N	\N	\N	\N
+FRTA3	-0.49	-0.71	-0.95	21.40	8.55	27.27	-4.92	-3.08	-1.93	-1.18	-4.43	\N	\N	\N	\N	\N	\N
+FTRT3B	-549.77	0.00	0.00	0.00	0.00	\N	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+G2DI33	-2.07	-2.02	-1.23	1.39	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+GBIO33	-20.33	-14.97	-14.97	-14.97	-14.97	662.08	13.93	129.66	0.00	\N	\N	\N	\N	\N	\N	\N	\N
+GEPA3	7.57	7.53	9.67	-343.20	5.64	18.01	11.85	14.14	8.91	46.07	0.00	14.01	16.91	\N	\N	\N	\N
+GEPA4	7.73	7.21	10.46	-355.00	5.89	18.21	13.93	14.78	9.42	33.20	19.92	14.00	19.90	17.19	\N	\N	\N
+GETT11	15.42	15.12	15.12	12.08	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+GETT3	7.55	7.55	7.55	8.28	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+GETT4	7.55	7.55	7.55	8.28	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+GFSA3	-2.00	-3.39	-6.56	12.18	-26.84	-221.23	-11.99	-7.70	-6.19	126.29	-201.02	1.73	-21.61	-1.93	11.76	16.41	8.16
+GGBR3	4.58	4.87	3.58	2.47	14.56	24.12	9.03	-50.28	-4.66	-1.29	9.55	15.78	18.04	6.24	10.26	31.29	3.46
+GGBR4	5.14	5.41	4.29	2.99	17.56	28.20	10.93	-60.02	-6.37	-1.73	11.38	19.18	21.00	7.38	13.87	41.15	4.32
+GGPS3	17.64	19.69	15.46	26.55	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+GMAT3	13.79	13.23	13.21	17.49	24.11	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+GNDI3	-3584.81	-3584.81	-3584.81	-3205.27	64.89	85.20	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+GOAU3	4.07	3.48	2.59	1.70	9.46	16.31	7.29	-20.95	-2.47	-0.40	21.64	10.32	10.95	5.76	4.25	15.49	\N
+GOAU4	4.04	3.41	2.78	1.83	10.83	17.50	6.85	-23.83	-2.75	-0.44	28.34	12.73	13.89	6.72	4.83	18.04	\N
+GOLL4	1.44	-16.49	-10.56	-5.27	-9.19	-644.01	-51.69	2188.99	15.58	-1.62	-14.76	-3.84	-2.33	-4.45	31.36	8.05	-1.61
+GPAR3	133.34	91.48	4.46	20.17	13.02	46.30	11.47	8.93	0.35	-0.36	-1.04	\N	\N	\N	\N	\N	\N
+GPIV33	-0.95	-0.23	-0.18	0.49	-0.84	2.99	-1.68	4.93	10.89	-3.60	35.38	-3.90	\N	\N	\N	\N	\N
+GRAO3	18.56	0.00	1.65	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+GRND3	9.54	11.36	9.57	12.98	18.66	22.35	12.64	12.95	8.33	9.25	9.41	12.51	11.54	7.55	8.95	10.93	5.23
+GSHP3	-2.17	-0.37	-0.50	-0.27	-0.23	-5.68	-1.28	1.62	1.74	-0.31	-1.79	-3.93	-5.97	-15.28	-60.07	16.60	-19.10
+GUAR3	156.34	-96.51	62.21	11.45	-274.64	20.36	8.21	16.40	11.94	8.19	10.78	15.53	20.70	14.21	14.85	21.42	8.20
+GUAR4	1646.07	0.00	0.00	0.00	0.00	0.00	4.04	7.66	5.60	4.32	4.61	14.17	18.74	12.52	\N	\N	\N
+HAGA3	9.39	13.46	7.64	10.30	7.04	22.69	5.69	-42.26	12.52	9.04	3.56	\N	2.08	6.79	12.18	\N	\N
+HAGA4	3.76	5.65	2.47	2.77	4.39	11.37	3.19	-18.60	10.88	6.24	3.20	5.79	2.39	8.37	9.61	\N	\N
+HAPV3	-86.68	-44.25	-38.47	106.33	97.08	73.21	43.18	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N
+HBOR3	4.62	7.10	4.39	5.58	49.81	-29.54	-2.16	-3.07	-6.25	9.00	8.91	6.61	8.99	6.31	7.47	7.56	2.60
+HBRE3	5.13	4.75	7.38	5.81	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+HBSA3	-41.24	166.04	-235.85	-7.38	-49.96	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N	\N	\N
+HBTS5	1.38	1.64	4.36	2.41	156.19	-4.20	-5.09	-2.39	-52.00	31.62	180.68	72.49	1010.10	45.17	15.12	\N	\N
+HETA3	-58.01	-77.22	0.24	-30.60	-0.01	0.00	0.00	0.00	0.00	0.00	0.00	\N	\N	-0.52	\N	\N	\N
+HETA4	-3.24	-5.11	0.01	3.31	-0.02	1.34	2.59	-0.08	10.85	-9.62	0.92	-0.15	-0.08	-0.15	-0.42	\N	\N
+HGTX3	64.60	101.99	101.99	101.99	8.14	25.74	19.80	15.72	12.27	8.83	10.39	15.43	22.07	17.77	\N	\N	\N
+HOOT3	0.91	0.00	0.46	-1.93	-1.01	0.00	0.00	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+HOOT4	0.92	0.43	0.11	-1.19	-0.57	-0.32	-0.37	-1.23	-79.21	-14.85	-505.68	1.36	-3.89	-2.27	-11.05	\N	\N
+HYPE3	10.80	13.73	16.86	13.45	16.75	19.41	16.91	23.30	14.04	24.51	26.10	43.33	50.81	-90.91	47.03	28.33	-12.78
+IDVL3	-2.85	-0.99	-0.99	-0.99	-0.99	-19.14	-22.17	-10.19	-7.20	-5.41	-477.23	\N	\N	\N	\N	\N	\N
+IDVL4	-0.80	-1.22	-1.22	-1.22	-1.22	-21.15	-28.05	-27.42	-63.66	-3.35	-342.82	-3.44	83.05	-9.28	\N	\N	\N
+IFCM3	-0.91	-4.00	-6.40	-174.87	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+IGBR3	0.56	0.56	-1.06	-0.59	-1.47	-0.55	-0.29	0.33	-0.18	-0.41	-1.67	-1.25	-1.65	-4.78	-6.41	\N	\N
+IGSN3	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+IGTA3	16.19	0.00	0.00	15.05	32.25	29.94	28.49	31.70	28.97	17.37	18.84	19.15	8.05	18.08	\N	\N	\N
+IGTI11	19.85	23.27	639.22	20.71	0.00	0.00	0.00	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+IGTI3	7.35	8.59	277.38	9.55	15.10	12.91	9.09	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+IGTI4	26.11	30.63	854.12	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+INEP3	0.13	0.28	-14.46	0.22	-0.21	-0.15	-0.70	-0.36	-0.55	-1.88	-0.40	-0.41	-1.40	-94.60	11.90	12.13	23.61
+INEP4	0.12	0.23	-11.95	0.21	-0.20	-0.15	-0.65	-0.36	-0.42	-1.35	-0.34	-0.35	-1.43	-85.05	11.82	12.09	18.64
+INNT3	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+INTB3	13.21	13.23	20.80	25.15	0.00	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+IRBR3	21.02	-29.33	-2.84	-9.82	-8.97	36.07	32.88	20.82	0.00	\N	\N	\N	\N	\N	\N	\N	\N
+ITEC3	-24.40	-35.12	-35.12	-35.12	-35.12	\N	-23.62	-7.64	-11.34	-8.66	-4.66	-0.81	616.17	7.48	\N	\N	\N
+ITSA3	7.51	8.04	6.55	6.64	14.44	11.41	11.29	8.68	7.30	4.69	6.40	11.72	14.70	12.42	12.64	4.44	6.93
+ITSA4	7.95	8.56	6.71	6.69	14.61	12.04	11.33	9.16	7.77	4.70	6.35	8.21	9.83	9.73	11.52	3.82	4.90
+ITUB3	5.12	5.36	-10.81	9.26	15.28	26.18	18.20	30.94	-10.16	38.11	5.68	9.16	10.82	8.63	10.57	13.49	11.29
+ITUB4	9.20	9.43	8.32	7.19	12.62	12.61	10.28	11.69	9.28	6.41	8.47	9.75	11.59	10.86	13.57	17.40	13.70
+JALL3	37.92	38.73	146.90	9.90	0.00	0.00	0.00	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+JBSS3	-157.96	-63.93	3.08	4.39	13.41	11.25	702.83	38.10	92.72	7.28	14.82	25.17	23.54	-131.17	-67.96	166.58	288.37
+JCPC3	-1.01	\N	7.38	5.67	-60.55	73.64	10.62	14.34	-63.20	-10.58	387.83	\N	\N	\N	\N	\N	\N
+JFEN3	5.55	5.74	1.31	1.80	7.62	-0.37	-0.44	-0.25	-0.81	0.00	-1.58	15.77	20.14	13.91	\N	\N	\N
+JHSF3	5.51	8.10	5.29	3.83	8.32	13.56	5.95	-42.40	-3.16	6.71	28.36	5.75	16.60	10.62	6.98	10.66	4.60
+JOPA3	13.38	13.80	7.80	9.91	11.63	21.31	10.09	13.60	8.27	4.93	5.91	9.37	6.18	11.32	\N	\N	\N
+JOPA4	10.64	22.21	12.96	12.05	10.66	18.16	8.37	13.69	6.89	7.39	8.98	12.13	7.18	9.63	\N	\N	\N
+JPSA3	94.18	124.70	103.32	159.46	473.70	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+JSLG3	7.95	10.11	8.13	7.92	18.98	0.00	0.00	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+KEPL3	4.55	4.88	2.67	5.59	9.56	13.43	27.62	-10.40	-13.46	51.12	18.48	17.03	260.15	10.18	16.97	-117.83	-98.20
+KLBN11	12.89	11.59	8.89	14.28	-3.24	33.17	82.59	33.76	17.21	-4.80	21.20	\N	\N	\N	\N	\N	\N
+KLBN3	20.26	8.97	4.83	9.88	-12.42	38.97	127.50	12.04	4.07	-106.34	81.35	34.74	15.00	34.69	9.76	14.78	-13.52
+KLBN4	10.89	7.68	4.11	8.88	-10.38	12.29	116.42	23.18	7.27	-18.37	-6.27	38.72	15.60	39.93	9.21	14.50	-8.93
+KRSA3	-3.68	-6.10	-5.89	-66.91	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+LAME3	30.81	21.15	21.15	18.94	97.39	48.77	65.44	91.54	97.09	69.42	39.27	29.30	43.04	28.64	\N	\N	\N
+LAME4	26.57	21.06	21.06	18.88	125.20	64.14	85.77	118.87	132.36	108.00	51.68	33.71	44.27	31.85	\N	\N	\N
+LAND3	41.68	46.70	20.17	56.67	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+LAVV3	-361.54	8.56	7.75	5.67	18.77	\N	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+LCAM3	10.44	6.40	7.38	9.64	30.74	12.55	17.48	17.13	63.77	14.32	12.42	28.06	213.03	\N	\N	\N	\N
+LEVE3	20.15	6.54	6.99	16.37	17.02	15.71	11.19	11.76	216.32	14.02	11.31	17.69	17.86	9.60	\N	\N	\N
+LHER3	0.00	0.00	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+LHER4	0.00	0.00	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+LIGT3	-3.25	10.40	3.03	11.94	16.33	6.84	16.36	27.78	-7.03	35.70	3.35	7.67	10.71	8597.97	8.99	8.43	4.43
+LINX3	-90.87	-90.95	-90.95	-90.95	-88.61	162.04	81.58	44.84	29.95	38.15	40.99	35.71	\N	\N	\N	\N	\N
+LIPR3	19.65	25.41	19.46	33.54	22.00	-182.54	26.17	9.20	10.22	54.17	-205.41	172.99	44.11	24.28	\N	\N	\N
+LJQQ3	8.96	60.28	-43.19	30.88	45.39	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+LOGG3	12.86	14.34	9.75	15.52	16.53	20.61	18.39	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+LOGN3	146.67	68.22	9.20	25.68	132.28	137.47	72.94	-0.29	1.98	-0.77	-9.61	115.12	-81.43	-7.85	46.86	-103.96	4.65
+LPSB3	11.25	13.11	13.82	5.09	-25.42	-245.97	-7.22	-3.73	-5.96	1.42	-11.31	10.27	17.29	4.85	16.31	17.74	-6.53
+LREN3	10.84	14.20	13.28	27.66	22.98	30.46	21.86	25.34	16.51	12.21	20.34	18.69	27.69	17.61	22.33	24.31	11.41
+LTEL3B	23.90	0.00	0.00	0.00	0.01	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+LUPA3	-8.01	1.53	14.51	4.36	3.06	-1.47	-0.29	-5.89	3.97	-0.26	-0.27	-0.24	-0.30	-0.89	-12.78	71.91	-12.95
+LUXM3	-0.83	\N	\N	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	\N	18.76	11.59	\N	\N	\N
+LUXM4	-0.31	3.56	15.48	11.67	3.93	2.89	2.35	-19.53	-47.81	-10.84	-5.91	12.85	16.06	7.05	\N	\N	\N
+LVBI3	-11.51	-16.98	12.24	12.40	28.05	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+LVTC3	-292.19	-23.42	16.25	15.12	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+LWSA3	-49.96	-48.65	139.88	-502.88	527.32	0.00	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+MAGA3	45.03	52.69	23.53	84.45	2.32	18.04	22.04	26.02	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+MAGG3	-119.99	-119.99	-119.99	-119.99	-119.99	\N	\N	-14.03	2.76	-0.77	-6.31	31.07	40.55	17.21	\N	\N	\N
+MANA3	-6.28	-11.71	17.96	13.12	25.34	26.83	9.22	23.75	13.51	17.67	62.63	\N	\N	\N	\N	\N	\N
+MANA4	7.72	8.20	13.19	8.76	9.38	14.71	12.86	10.67	9.50	9.29	11.22	\N	\N	\N	\N	\N	\N
+MAPT3	-27.05	-115.05	-4307.37	-390.80	-270.32	-366.43	0.00	0.00	-28.95	-27.70	\N	\N	\N	-25.52	-206.96	\N	\N
+MAPT4	-44.38	-48.97	138.37	-319.06	174.42	-91.58	0.00	-22.81	\N	-1.10	\N	-46.98	-26.35	-15.80	-153.98	\N	\N
+MATD3	9.39	16.33	16.44	22.77	-1.01	0.00	0.00	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+MATD4	0.90	0.43	0.11	-1.08	-0.57	-0.32	-0.37	-1.23	-14.41	-2.70	-918.62	\N	\N	\N	\N	\N	\N
+MBLY3	-3.28	-2.54	-3.57	-6.15	0.00	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+MDIA3	5.25	7.61	18.44	13.73	32.94	25.62	19.86	26.76	11.04	8.31	17.20	21.60	18.80	14.74	12.66	13.71	10.40
+MDNE3	-59.27	7.24	4.68	5.87	-9.70	\N	-26.29	-3.61	-6.11	-0.74	\N	\N	\N	\N	\N	\N	\N
+MEAL3	8.12	11.32	20.40	11.97	26.77	-70.79	137.58	317.27	5.20	9.18	\N	\N	\N	\N	\N	\N	\N
+MEGA3	68.36	101.18	-643.44	26.58	0.00	0.00	0.00	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+MELI34	7.67	11.35	6.71	1.34	3.00	-1.27	-0.24	-0.80	-1.63	-320.11	-1972.25	\N	\N	\N	\N	\N	\N
+MELK3	6.00	8.34	7.19	9.56	34.17	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+MERC3	26.89	0.00	0.00	34.67	52.52	28.73	14.71	28.92	22.11	16.61	16.71	\N	\N	\N	\N	\N	\N
+MERC4	18.67	34.89	-2.48	19.81	40.87	26.17	12.89	18.49	62.84	31.83	21.32	4.41	4.17	9.49	\N	\N	\N
+MGEL3	-29.70	\N	\N	-70.75	-40.65	0.00	0.00	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+MGEL4	-66.39	2.26	0.26	-0.15	-1.22	-10.41	25.81	-1.88	19.36	-9.28	-90.22	-0.19	-0.93	-7.24	24.39	\N	\N
+MGLU3	-8.88	-5.01	-16.30	60.69	280.55	63.75	45.14	21.49	23.56	-14.11	12.86	12.18	-356.79	136.86	\N	\N	\N
+MILS3	10.02	12.01	11.75	15.52	-473.36	-65.35	-9.91	-5.95	-6.14	-4.54	24.64	24.23	28.20	23.88	24.62	\N	\N
+MLAS3	-3.19	-2.05	36.62	8.45	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+MMAQ3	0.00	0.00	\N	\N	\N	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+MMAQ4	0.07	0.07	\N	\N	\N	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+MMXM11	26.33	68.24	-8.89	-9.16	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+MMXM3	-2.17	-2.17	-2.17	-2.17	-1.36	-0.14	-0.13	-0.68	0.09	5.05	-0.80	-0.33	-3.48	-203.11	\N	\N	\N
+MNDL3	-8.68	-9.61	0.15	-0.60	-3.59	-4.24	10.79	-0.60	-0.60	-3.45	4.96	5.92	-6.42	-0.51	\N	\N	\N
+MNPR3	10.77	12.57	7.25	5.63	7.32	7.31	4.92	6.30	-77.15	0.81	-7.08	-1.00	-0.26	-3.05	-1.26	\N	\N
+MOAR3	12.70	18.10	47.05	-43.15	-294.96	20.80	49.99	12.96	8.99	\N	7.71	18.38	8.90	5.43	\N	\N	\N
+MODL11	-14.44	-14.50	-1.80	9.02	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+MODL3	-5.38	3.18	29.59	166.62	0.00	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+MODL4	-13.16	-26.30	-0.67	36.46	-323.78	-178.27	-95.42	-44.98	-18.95	-32.85	-124.01	\N	\N	\N	\N	\N	\N
+MOSI3	32.29	32.29	32.29	33.58	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+MOVI3	-5.15	-9.76	-5.66	4.65	37.41	15.69	8.49	15.03	\N	\N	\N	\N	\N	\N	\N	\N	\N
+MPLU3	12.20	12.20	12.20	12.20	12.20	12.20	11.45	10.98	10.67	12.63	15.95	20.88	34.31	18.97	\N	\N	\N
+MRFG3	-3.35	-0.86	2.05	4.97	-0.57	4.83	53.33	-2.05	0.27	-12.70	-21.60	-2.30	-15.20	-3.96	38.37	9.64	-80.17
+MRSA3B	0.00	3.48	0.00	9.40	14.22	6.75	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N	\N
+MRSA5B	0.71	6.53	8.58	11.04	0.00	0.00	0.00	0.00	1.93	0.00	0.00	\N	\N	\N	\N	\N	\N
+MRSA6B	-0.83	\N	8.97	10.21	0.00	0.00	0.00	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+MRVE3	-7.80	-163.01	-12.44	6.43	12.13	12.42	7.61	9.72	5.72	4.51	3.14	9.24	10.45	6.54	11.16	17.96	5.22
+MSAN3	43.78	38.59	6.70	4.62	13.60	8.53	9.60	6.56	4.55	5.22	9.09	\N	\N	\N	\N	\N	\N
+MSAN4	-0.10	-0.20	-0.11	-0.80	-0.73	-73.14	-4.64	-12.55	-4.37	17.49	21.37	\N	\N	\N	\N	\N	\N
+MSPA3	-1265.11	\N	\N	-9.55	\N	-8.75	65.59	7.89	\N	\N	\N	-23.46	49.10	\N	\N	\N	\N
+MSPA4	0.05	\N	173.68	-9.06	\N	662.39	39.92	68.36	0.00	\N	\N	-23.46	\N	\N	\N	\N	\N
+MSRO3	2516.62	0.00	\N	2449.32	17140.62	0.00	0.00	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+MTIG3	-0.01	-0.01	-0.14	0.18	-0.07	-0.02	-0.03	-0.04	\N	-45.85	-8.11	-8.18	-57.41	418.47	\N	\N	\N
+MTIG4	-18.42	-18.48	11.03	7.82	9.67	15.52	38.68	10.18	3.55	10.48	10.13	-1.64	-10.76	65.29	\N	\N	\N
+MTRE3	7.27	7.66	9.94	33.01	24.39	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+MTSA3	8.73	8.20	13.19	8.76	9.38	14.71	12.86	10.67	9.50	10.53	11.22	\N	\N	\N	\N	\N	\N
+MTSA4	1.57	-0.64	8.92	9.16	11.82	16.68	8.49	15.44	8.85	9.04	25.36	7.82	8.87	7.42	12.23	10.94	6.35
+MULT3	14.45	16.72	17.09	24.80	14.66	42.22	24.02	38.45	29.81	16.44	20.17	32.29	27.73	22.56	29.57	35.24	\N
+MWET3	-0.38	-1.08	2.06	0.36	4.81	-0.37	-0.45	0.00	0.00	0.00	0.00	\N	\N	-22.20	\N	\N	\N
+MWET4	-0.69	-0.53	0.69	0.27	0.54	-0.33	-0.19	0.84	-0.15	-0.21	-1.37	6.85	-1.30	-10.38	\N	\N	\N
+MYPK3	20.09	41.33	5.47	4.07	38.42	29.47	42.35	224.22	71.65	51.66	30.03	13.09	31.49	10.67	13.77	21.56	1.93
+NAFG3	11.74	12.78	14.43	16.24	18.96	12.03	15.70	87.79	33.89	16.40	10.70	\N	\N	\N	\N	\N	\N
+NAFG4	4.67	5.57	2.80	3.05	1.74	0.00	3.78	0.00	0.00	0.00	6.21	32.45	28.57	6.53	\N	\N	\N
+NEMO3	-1.13	-3.67	-9.74	-5.74	-2.44	-6.31	-2.59	-10.21	-3.82	-2.65	-4.84	\N	\N	\N	\N	\N	\N
+NEMO5	5.35	-3.33	-8.98	-6.67	-3.01	-6.31	-2.62	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+NEMO6	0.08	0.00	3.13	41.66	18.18	9.87	11.70	3.69	0.86	109.07	-62.33	\N	\N	\N	\N	\N	\N
+NEOE3	9.39	7.81	6.12	4.15	12.20	27.38	12.90	48.29	-8.23	-1.00	63.45	\N	\N	\N	\N	\N	\N
+NEXP3	0.06	0.18	-0.29	-1.41	-0.22	-1.20	-1.49	-0.90	-1.14	-1.39	-9.52	14.00	15.89	10.09	\N	\N	\N
+NGRD3	-51.92	125.83	25.13	43.03	132.67	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+NINJ3	25.54	66.20	-8.79	-7.48	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+NORD3	10.27	-3.02	-5.60	-10.95	-61.52	-43.37	5.70	3.98	-0.34	-698.49	-2748.08	-5.88	-4.10	-1.50	\N	\N	\N
+NRTQ3	3.06	0.00	2.97	2.43	2.60	0.00	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N	\N
+NTCO3	8.23	7.87	-5.62	32.63	-110.69	165.97	35.28	21.22	32.09	19.25	18.42	20.88	29.20	18.66	27.58	22.77	15.67
+NUTR3	10.00	12.09	7.67	9.09	17.05	12.69	17.62	27.24	15.32	6.24	-2.03	\N	\N	\N	\N	\N	\N
+ODER3	0.56	\N	\N	-0.59	-1.47	-0.46	-0.29	0.33	-0.18	-0.41	-1.67	\N	\N	\N	\N	\N	\N
+ODER4	12.16	0.00	0.00	0.00	0.00	0.00	0.00	3.79	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+ODPV3	57.84	31.21	11.54	20.34	58.88	87.98	63.39	11.00	21.59	14.49	10.61	27.77	39.11	32.30	20.28	45.70	9.98
+OFSA3	-23.76	-20.81	6.67	7.17	15.12	32.94	18.32	16.14	-197.18	17.75	21.57	\N	\N	\N	\N	\N	\N
+OGXP3	-2.15	-2.15	-2.15	-2.15	-2.15	\N	\N	28.54	-79.52	-0.41	0.03	-0.04	-12.45	-91.34	\N	\N	\N
+OIBR3	6.12	6.13	3.80	9.06	5.32	8.31	4.21	6.88	-3.93	4.51	10.21	4.34	9.22	6.99	4.69	-16.26	\N
+OIBR4	52.86	-31.90	20.76	3.63	-92.44	6.25	2.79	5.18	3.82	2.52	1.87	4.32	8.37	6.51	3.67	-9.90	\N
+OMGE3	18.60	10.10	6.89	11.48	86.68	101.84	27.36	29.19	1.81	3.66	5.32	\N	\N	\N	\N	\N	\N
+ONCO3	16.85	26.29	45.23	-198.73	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+OPCT3	13.51	17.24	-6.15	-12.71	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+ORVR3	-3.11	38.48	-22.01	-32.53	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+OSXB3	-0.01	-0.01	-0.07	0.17	-0.07	-0.02	-0.03	-0.05	-0.03	-0.04	-0.01	-0.04	-105.65	324.99	-878.30	\N	\N
+PARD3	36.76	36.76	15.97	11.84	23.38	22.54	19.89	33.77	\N	\N	\N	\N	\N	\N	\N	\N	\N
+PATI3	1.41	26.72	8.84	-2.20	-2.62	8.23	-2.88	-11.51	-4.63	5.60	7.62	\N	8.64	\N	10.17	\N	\N
+PATI4	16.47	1.65	2.90	-1.65	-2.34	9.55	3.71	0.00	0.00	8.70	8.29	2.83	10.39	8.66	10.00	\N	\N
+PCAR3	7.91	12.25	-370.23	13.73	29.47	39.82	46.07	44.53	28.45	20.99	29.60	\N	\N	\N	\N	\N	\N
+PCAR4	-10.69	\N	\N	\N	\N	29.61	18.10	36.23	-30.18	41.96	21.65	26.33	22.57	24.25	\N	\N	\N
+PDGR3	53.32	0.02	66.61	15.74	63.76	56.34	55.71	214.48	57.79	51.10	46.58	-12.35	-1.89	9.29	14.23	18.69	7.11
+PDTC3	398.63	15.59	23.22	16.03	28.32	11.52	9.13	8.37	0.63	-2.65	-14.04	-13.97	-11.27	-19.26	-13.36	-20.92	\N
+PEAB3	26.86	21.32	9.87	3.19	2.87	9.92	9.01	7.98	4.84	10.73	-1.38	-33.80	\N	-203.14	13.39	\N	\N
+PEAB4	26.01	30.65	13.46	3.83	3.34	10.85	5.17	7.74	3.21	6.99	0.00	-33.80	138.10	-203.01	13.10	\N	\N
+PETR3	4.85	4.55	2.80	5.72	40.36	10.02	10.74	33.11	-10.62	-2.13	-3.84	8.96	12.10	9.03	11.10	11.00	7.48
+PETR4	4.68	4.45	2.73	5.57	39.64	9.75	9.53	31.59	-6.44	-0.38	-1.69	9.57	12.09	8.44	9.92	9.69	6.21
+PETZ3	180.31	106.62	55.83	96.35	121.34	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+PFRM3	271.72	12.03	11.93	13.38	18.84	57.19	-20.80	11.25	-6.21	-8.35	-43.55	29.82	11.31	12.92	15.72	9.76	5.58
+PGMN3	38.33	5165.81	7.37	25.12	41.48	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+PINE3	2.95	2.50	-1.10	-18.16	-5.40	-40.52	62.72	-41.13	-23.22	-46.49	88.47	\N	\N	\N	\N	\N	\N
+PINE4	-1.73	1.06	5.35	55.19	-2.36	10.96	-2.37	-5.86	-20.06	3.86	2.87	7.13	8.13	6.53	10.87	10.42	2.32
+PLAS3	-64.79	-127.21	-1.22	-0.98	-0.74	-6.14	26.64	2.03	-0.47	-10.42	-90.34	-1.47	-1.06	27.18	\N	\N	\N
+PLAS4	\N	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N	\N
+PLPL3	7.25	8.72	6.10	4.88	11.75	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+PMAM3	52.90	-31.86	20.82	3.86	-91.72	-8.26	2.61	4.12	5.32	6.68	8.57	237.56	-7.69	-20.03	34.02	10.88	6.17
+PNVL3	275.64	19.57	20.04	23.94	48.95	38.74	26.26	34.58	38.73	17.49	-26.24	17.93	26.64	13.35	13.24	\N	\N
+PNVL4	18.04	0.00	4.04	-832.22	-60.03	12.94	6.68	13.15	10.05	7.56	15.22	15.46	16.11	11.73	12.24	\N	\N
+POMO3	7.74	8.36	7.76	9.47	-88.60	-12.38	6.01	23.43	2.66	9.16	21.23	11.25	17.60	8.39	9.10	9.18	4.61
+POMO4	8.33	8.10	2.16	16.53	-18.65	128.71	19.94	48.09	11.26	18.60	13.31	11.71	19.16	9.23	10.53	10.41	4.91
+PORT3	16.41	19.06	14.23	18.45	27.95	26.77	17.64	12.24	8.13	21.74	23.16	21.94	23.22	25.10	19.46	9.67	7.08
+POSI3	1.69	1.37	-15.90	6.18	1.55	28.84	-105.03	-1.06	-5.46	1.21	11.72	15.81	14.33	-7.45	9.33	16.13	\N
+POWE3	23.92	23.92	23.92	23.28	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+PPAR3	1.33	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+PPLA11	1.61	1.67	6642.61	3371.97	-1603.23	-28.10	-0.81	-1.96	\N	\N	\N	\N	\N	\N	\N	\N	\N
+PRIO3	8.06	7.90	9.62	13.69	24.15	8.00	7.17	23.83	2.91	1.37	-0.28	-0.12	-5.03	-10.94	-51.72	\N	\N
+PRNR3	39.03	43.34	-3.57	-0.15	-56.20	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+PSSA3	4.97	5.38	8.69	5.65	5.79	9.59	8.69	5.87	5.63	-0.73	-1.24	6.84	11.28	12.03	\N	\N	\N
+PTBL3	5.10	-7.43	7.27	5.92	10.19	44.72	7.27	11.17	87.73	5.82	8.42	8.68	10.80	11.12	9.22	10.41	\N
+PTCA11	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+PTCA3	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+PTNT3	6.24	5.21	3.07	5.11	2.39	-1.52	6.36	-2.27	-0.86	-0.03	6.42	\N	\N	-16.87	\N	\N	\N
+PTNT4	-0.22	-12.65	2.48	12.27	30.24	-55.10	2.03	-21.16	-10.52	142.51	2.67	7.30	14.78	-11.69	\N	\N	\N
+QGEP3	40.15	55.89	\N	\N	\N	\N	5.84	8.00	9.27	16.55	9.82	0.45	1.65	1.86	\N	\N	\N
+QUAL3	-6.52	-12.10	17.37	12.97	25.23	26.75	9.19	23.58	13.09	16.90	58.53	-394.27	235.87	-136.14	\N	\N	\N
+QUSW3	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+QVQP3B	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+RADL3	31.87	35.07	28.66	35.91	60.83	35.24	29.12	44.25	36.32	25.03	27.75	48.11	71.96	48.83	\N	\N	\N
+RAIL3	27.52	39.28	44.65	142.47	78.14	34.36	65.77	-49.73	-4.54	-8.04	-12.90	\N	\N	\N	\N	\N	\N
+RAIZ4	33.76	45.08	15.66	20.87	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+RANI3	6.29	6.95	5.19	6.06	14.52	-9.59	173.76	-3.53	-41.94	907.69	10.93	7.95	9.72	16.80	5.91	8.29	\N
+RANI4	1.26	-1.62	-3.34	-12.43	0.10	-9.01	160.57	-2.99	-42.37	\N	9.64	7.82	\N	\N	\N	\N	\N
+RAPT3	7.50	8.15	4.76	5.29	5.47	12.96	10.34	17.29	-78.27	0.00	4.28	7.74	23.09	4.74	6.52	10.00	2.97
+RAPT4	8.91	8.70	4.89	4.59	7.52	15.57	14.11	23.61	-108.45	0.00	5.79	8.99	29.99	5.39	8.44	11.54	3.21
+RCSL3	-13.42	-67.69	-5.44	-347.65	-288.64	-41.54	-1.13	-1.70	-9.10	-20.56	-0.22	-2.22	-1.13	-1.29	-18.66	\N	\N
+RCSL4	-5.24	-24.82	-1.92	-86.76	-49.12	-41.54	-0.54	-0.42	-5.21	-14.19	-0.16	-1.91	-0.63	-0.55	-11.25	\N	\N
+RDNI3	2.39	1.93	5.97	38.72	111.47	372.87	-9.07	-2.89	-3.17	24.14	6.30	5.53	7.21	9.20	11.11	31.17	4.59
+RDOR3	25.60	31.70	55.10	55.45	305.36	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+RECV3	9.88	8.97	8.42	26.12	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+REDE3	4.23	4.67	4.36	5.28	14.14	14.11	20.14	34.74	9.87	2.05	0.35	-3.97	-0.73	-2.11	-4.72	12.30	\N
+RENT3	24.48	37.68	29.24	22.37	56.75	48.34	35.40	27.74	22.55	15.60	22.02	18.16	31.02	17.51	20.67	37.04	10.16
+RLOG3	82.76	82.76	82.76	82.76	66.37	50.23	80.99	-0.18	-25.46	-14.33	\N	\N	\N	\N	\N	\N	\N
+RNEW11	-4.24	-18.35	-1.79	3.68	4.27	-3.66	-2.32	-5.78	-0.89	14.95	-65.06	535.69	-415.98	-131.50	266.28	\N	\N
+RNEW3	-0.81	-9.76	3.08	10.17	9.85	1.75	1.80	2.31	6.94	3.35	7.94	\N	\N	\N	\N	\N	\N
+RNEW4	-1.50	-10.86	1.80	8.02	8.13	1.64	1.63	1.51	6.40	2.82	8.58	\N	\N	\N	\N	\N	\N
+ROMI3	3.28	1.97	-2.63	1.98	2.79	-4.56	40.29	30.27	-2.78	18.53	27.16	234.09	-9.02	132.97	15.49	67.45	4.87
+RPAD3	13.89	17.82	4.57	13.52	6.68	5.28	5.10	2.15	-0.16	1.86	2.60	5.81	\N	\N	\N	\N	\N
+RPAD5	23.31	41.33	8.80	33.94	23.42	15.00	10.20	5.30	3.84	3.54	5.80	12.99	\N	\N	\N	\N	\N
+RPAD6	45.56	39.90	8.53	19.99	15.26	18.42	6.71	5.25	4.34	2.81	4.80	5.33	\N	\N	\N	\N	\N
+RPMG3	2.45	0.24	20.27	-2.57	-5.46	-0.78	-1.17	-11.15	-4.25	-0.29	-1.07	-0.54	-0.66	-32.92	-3.71	2.70	-1.41
+RRRP3	40.04	15.20	55.58	-3528.68	-15.24	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+RSID3	22.86	16.83	3.17	2.83	2.67	4.22	6.85	-0.24	-0.06	-0.07	-0.94	17.65	-7.54	27.12	20.93	17.02	5.59
+RSUL3	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+RSUL4	7.50	8.58	6.26	5.06	-19.20	4.33	\N	0.54	\N	\N	2.27	\N	-1.59	\N	\N	\N	\N
+SANB11	0.90	-62.52	-1.73	7.70	14.62	14.02	11.97	13.80	15.46	8.34	168.82	259.89	281.25	200.74	22.05	50.04	\N
+SANB3	8.46	9.71	7.24	6.42	9.71	11.21	10.98	13.68	16.16	10.88	172.15	9.76	10.92	8.25	\N	\N	\N
+SANB4	9.74	11.31	8.44	7.45	10.47	11.19	10.29	10.22	8.67	9.52	155.94	9.76	9.46	7.22	\N	\N	\N
+SAPR11	14.98	-13.45	4.21	4.65	9.01	9.57	364.48	19.06	104.94	5.46	10.52	\N	\N	\N	\N	\N	\N
+SAPR3	7.93	8.42	6.08	5.37	8.83	8.19	10.44	10.76	12.45	2.17	4.45	\N	\N	\N	\N	\N	\N
+SAPR4	8.17	8.56	6.19	5.41	7.92	9.58	8.65	11.17	10.97	8.19	8.83	7.48	11.13	6.72	8.83	7.83	4.49
+SBFG3	16.24	16.85	15.15	10.98	-63.97	25.59	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+SBSP3	15.05	14.89	11.19	8.66	26.56	11.48	10.16	11.35	10.89	15.10	10.90	9.40	10.34	9.68	5.95	5.70	97.30
+SCAR3	7.78	8.06	-6.07	51.40	23.02	26.07	76.19	18.13	15.39	7.01	12.20	8.55	11.73	14.67	14.43	6.70	16.91
+SCAR4	21.28	22.21	12.96	12.05	10.66	13.54	8.37	13.51	6.89	7.26	8.68	\N	\N	\N	\N	\N	\N
+SEDU3	-40.99	-19.19	-20.95	-22.49	-13.36	\N	-14.44	339.57	-28.91	-5.87	\N	\N	\N	\N	\N	\N	\N
+SEER3	-24.38	-17.60	4.58	25.88	21.42	27.64	13.19	17.69	7.69	3.97	11.54	25.15	\N	\N	\N	\N	\N
+SEQL3	-0.06	-0.09	-4.01	-113.18	366.77	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+SGPS3	4.04	6.23	3.52	4.48	5.93	32.29	13.23	48.12	-39.91	17.66	5.55	-6.78	-4.72	-1.12	-45.63	16.64	\N
+SHOW3	2.71	2.46	-17.38	-3.93	-2.46	-5.92	53.43	11.13	13.97	6.67	-1.85	-29.86	-68.46	12.80	\N	\N	\N
+SHUL3	145.29	129.20	\N	\N	\N	\N	\N	\N	\N	15.92	\N	\N	\N	\N	\N	\N	\N
+SHUL4	8.86	8.60	6.21	7.75	8.47	9.28	7.51	10.71	8.62	5.05	6.08	10.61	10.93	12.76	11.79	47.22	\N
+SIMH3	-10.62	-14.35	8.89	9.46	22.37	19.35	7.52	92.81	-10.64	30.95	36.10	36.01	38.05	31.56	23.34	\N	\N
+SLCE3	15.99	27.56	7.27	7.01	5.35	13.59	12.81	188.69	75.48	21.52	22.42	20.70	50.16	14.05	36.51	144.62	29.74
+SLED3	0.45	0.45	0.55	0.54	-0.17	-0.39	-0.19	-2.57	-5.36	\N	59.64	43.92	\N	\N	\N	\N	\N
+SLED4	0.22	0.22	0.20	0.24	-0.10	-0.18	-0.19	-2.18	-1.99	1.50	32.06	57.03	9.64	9.21	\N	\N	\N
+SMFT3	8.48	9.23	-39.45	-4.72	0.00	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+SMLE3	-0.43	-1.66	60.26	15.40	0.00	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+SMLS3	10.78	10.78	10.78	10.78	14.86	7.78	8.40	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+SMTO3	11.27	9.32	9.24	8.23	10.44	13.33	21.02	14.27	16.35	25.84	14.24	23.94	43.07	14.87	20.65	17.95	\N
+SNSY3	6.59	5.93	6.28	8.24	6.47	41.72	13.31	22.59	18.15	19.68	24.60	\N	\N	\N	\N	\N	\N
+SNSY5	0.55	0.71	2.14	1.02	78.03	-1.11	-1.35	-0.63	-13.74	7.59	38.34	\N	\N	\N	\N	\N	\N
+SNSY6	57.58	\N	-542.49	26.58	0.00	0.00	0.00	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+SOJA3	5.37	5.52	7.06	14.41	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+SOMA3	1.70	1.42	17.03	24.35	-59.67	6.53	10.75	17.40	-84.47	8.86	3.01	\N	\N	\N	\N	\N	\N
+SOND3	12.38	3.39	-2.14	32.68	-1.36	-4.94	1.23	0.82	-0.20	-0.85	-10.06	\N	\N	\N	\N	\N	\N
+SOND5	17.53	9.02	4.54	3.67	4.99	6.59	4.49	7.52	3.71	1.47	3.05	8.82	1.47	13.10	\N	\N	\N
+SOND6	3.74	8.73	4.11	0.91	4.91	15.15	5.41	7.05	0.00	-2.63	3.50	8.63	\N	11.79	\N	\N	\N
+SPRI3	4.58	3.43	8.44	493.55	-3.32	-4.45	\N	-1.15	-6.65	-1.45	-2.29	-3.48	-3.52	0.16	16.35	\N	\N
+SPRI4	-68.63	-25.01	-28.55	-31.62	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+SPRI5	-1.30	-1.30	-1.30	-1.30	-1.30	-4.66	\N	\N	-5.80	-2.68	-3.13	-3.87	-3.52	0.15	13.21	\N	\N
+SPRI6	-1.68	-1.68	-1.68	-1.68	-1.68	-4.54	-12.83	\N	\N	-2.24	-2.29	-3.87	-3.06	0.13	11.62	\N	\N
+SPRT3B	-2026.68	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	-35.11	\N	\N	\N
+SQIA3	-110.33	-110.33	78.75	72.04	334.52	-63.07	109.44	42.15	19.71	10.94	9.09	\N	\N	\N	\N	\N	\N
+STBP3	13.56	10.69	10.42	14.02	-217.52	225.74	550.25	-292.05	-70.70	-45.85	-1.97	\N	\N	\N	\N	\N	\N
+STKF3	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+STTR3	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+SULA11	28.96	29.91	30.50	20.45	85.67	23.04	2.50	3.05	202.17	8.38	6.11	10.41	10.48	9.53	\N	\N	\N
+SULA3	-194.07	71.99	51.32	27.71	16.75	26.79	11.43	33.39	-43.61	38.89	-10.45	\N	\N	\N	\N	\N	\N
+SULA4	31.34	32.26	32.67	27.39	9.83	17.89	10.95	10.53	14.77	14.57	15.97	\N	\N	\N	\N	\N	\N
+SUZB3	16.56	12.49	14.68	19.19	17.67	2.23	97.26	18.98	15.84	-0.56	-10.48	-45.56	-42.04	86.52	7.64	7.16	-8.22
+SYNE3	65.77	14.73	-6.84	6.09	25.87	55.08	-376.48	8.92	17.58	20.27	14.25	10.39	12.78	11.54	\N	\N	\N
+TAEE11	7.31	10.42	9.44	5.65	5.91	10.34	7.30	11.99	9.42	6.07	7.12	7.02	7.98	\N	\N	\N	\N
+TAEE3	-19.92	2.63	4.06	33.88	12.34	73.39	2.68	-10.64	-218.00	29.96	47.97	\N	\N	\N	\N	\N	\N
+TAEE4	11.29	12.97	11.29	8.16	12.61	16.97	12.80	18.05	21.09	9.14	5.55	\N	\N	\N	\N	\N	\N
+TASA3	-683.65	8.21	-1998.69	-2584.98	-4559.98	5.02	-2.59	-0.22	-1.22	-0.05	-0.58	-4.68	-3.92	5.78	\N	\N	\N
+TASA4	-748.18	8.34	-2185.28	-2825.27	-4985.56	7.85	-3.14	-0.33	-1.25	-0.08	-0.40	-4.07	-3.53	5.47	7.30	15.06	\N
+TCNO3	11.64	9.08	3.14	-3.78	-5.90	8.84	-56.41	-6.57	-113.18	19.61	6.47	1.07	-0.18	8.72	-10.05	\N	\N
+TCNO4	12.21	10.00	4.20	-0.69	-0.93	10.42	-62.47	-5.99	-101.07	19.50	4.81	0.80	-0.17	5.68	-6.88	\N	\N
+TCSA3	-31.65	-5.37	117.73	0.13	-32.51	53.91	27.82	15.08	15.28	15.84	18.30	6.68	-8.77	12.94	8.05	13.50	6.50
+TECN3	3.58	4.41	6.52	6.86	-27.31	20.83	11.50	-95.86	-161.71	4.28	132.09	38.96	15.33	13.23	\N	\N	\N
+TEKA3	-0.14	-0.03	-0.03	-0.16	-0.16	-0.03	-0.04	-0.04	-1.14	-0.03	-0.08	-0.15	0.22	-0.28	\N	\N	\N
+TEKA4	-0.10	-0.07	-0.07	-0.06	-0.06	-0.03	-0.04	-0.03	-1.41	-0.02	-0.05	-0.14	0.20	-0.28	\N	\N	\N
+TELB3	4.29	1.61	0.38	-8.70	-23.93	-6.00	13.89	-1.10	2.16	8.02	5.58	-3.71	34.16	-87.01	\N	\N	\N
+TELB4	15.39	-30.49	-1.02	-1.83	-4.16	1.87	537.29	14.46	47.55	2.57	4.66	-2.18	21.53	-40.07	\N	\N	\N
+TEND3	175.56	-13.58	-9.44	-43.37	-110.17	124.03	42.39	59.27	73.11	212.10	39.79	-37.91	-26.01	-4.77	15.93	32.89	-12.23
+TESA3	-13.30	-13.30	-13.30	-13.30	-9.91	-2.93	5.19	36.29	-1.18	\N	\N	\N	\N	\N	\N	\N	\N
+TFCO4	92.41	123.85	102.00	85.64	254.03	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+TGMA3	325.79	-20.46	9.48	7.24	19.58	12.03	11.91	368.76	17.68	17.57	-55.30	26.49	28.10	17.07	14.72	12.94	5.60
+TIET11	7.02	6.38	5.87	5.42	18.19	24.51	16.14	25.28	104.98	21.80	13.95	\N	\N	\N	\N	\N	\N
+TIET3	-0.19	-3.60	-0.72	-1.67	3.19	59.68	12.90	17.68	14.66	12.81	29.07	\N	\N	\N	\N	\N	\N
+TIET4	-13.25	-6.46	2.59	-2.31	13.19	16.79	11.83	14.28	7.15	0.00	0.00	\N	\N	\N	\N	\N	\N
+TIMP3	10.63	12.02	8.07	1.96	13.87	11.20	12.84	14.39	19.18	6.48	7.99	\N	\N	\N	\N	\N	\N
+TIMS3	13.73	15.29	17.96	10.76	19.23	10.92	11.27	25.68	25.17	8.01	18.41	19.77	13.67	17.41	7.62	81.95	63.58
+TKNO3	-14.36	-5.70	-0.95	-10.74	18.55	7.05	9.86	11.54	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+TKNO4	7.44	7.55	6.18	4.77	19.50	17.19	18.59	33.75	195.07	21.80	13.95	\N	\N	\N	\N	\N	\N
+TMAR5	7.94	8.22	8.43	6.68	5.75	10.29	6.03	7.09	1.97	14.04	20.03	\N	\N	\N	\N	\N	\N
+TMAR8	-17.50	-211.99	-21.12	8.39	19.39	17.57	10.08	12.96	11.05	8.92	5.86	\N	\N	\N	\N	\N	\N
+TOTS3	15.38	18.43	22.24	31.30	36.79	36.24	49.46	33.92	16.70	4.49	10.14	26.93	31.28	31.00	38.25	29.64	23.52
+TOYB3	-43.94	-43.94	-43.94	-43.94	-43.94	\N	-26.28	-0.64	-1.72	-51936.64	-405.73	-4648.18	-2553.61	-4590.20	-31724.16	\N	\N
+TOYB4	-47.96	-47.96	-47.96	-47.96	-47.96	\N	-24.39	-0.71	-1.91	-27823.20	-405.73	-4648.18	-3830.41	-4590.20	-31724.16	\N	\N
+TPIS3	0.22	-8.63	7.09	21.65	1.53	-0.97	-0.73	25.65	-1.72	9.30	-3.03	-21.27	3.52	83.47	47.45	17.71	\N
+TRAD3	6.67	7.92	2.11	1032.50	0.00	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+TRIS3	6.42	7.16	7.99	8.42	12.43	17.81	7.79	5.61	41.13	9.72	6.10	7.77	8.41	-6.12	14.57	9.54	\N
+TRPL3	12.12	12.60	14.46	8.99	8.27	9.54	5.25	-3.74	6.42	8.73	7.57	203.55	8.05	8.98	16.51	9.81	\N
+TRPL4	5.85	5.48	5.77	5.09	5.14	8.51	6.65	10.00	-3.37	91.12	13.50	126.64	5.97	9.64	14.89	9.40	\N
+TRPN3	0.44	0.44	0.44	0.44	0.44	0.44	1.74	14.03	43.19	20.61	36.26	9.34	17.53	6.06	\N	\N	\N
+TRXF11	17.30	15.93	19.25	77.10	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+TTEN3	8.55	10.43	8.11	11.18	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+TUPY3	8.15	9.78	8.35	11.80	-21.04	26.64	12.04	18.87	11.96	14.73	26.42	24.35	62.89	7.82	9.34	4.94	3.74
+TXRX3	7.74	6.21	6.71	-2.65	-6.23	-1.27	-0.24	-0.80	-1.63	-160.09	-986.26	-0.28	-0.21	-1.10	\N	\N	\N
+TXRX4	-7.86	-2.04	6.16	-0.82	-2.03	-2.10	5.45	0.42	-0.64	-0.06	-0.20	-0.32	\N	-1.04	\N	\N	\N
+UCAS3	-748.58	7.68	-2184.10	-2821.30	-4976.63	12.04	33.95	-16.80	-4.64	5.60	-59.12	27.29	16.81	\N	\N	\N	\N
+UCAS4	-86.15	\N	0.00	-33.48	-20.97	0.00	0.00	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N	\N
+UGPA3	11.11	12.51	7.75	18.69	29.25	74.06	25.88	26.53	24.36	22.16	22.91	30.46	30.34	20.28	18.40	22.78	16.80
+UNIP3	6.22	9.24	6.40	4.89	12.48	19.45	6.08	4.56	2.23	5.60	3.71	1.39	9.58	76.53	18.28	-2.81	\N
+UNIP5	4.91	5.17	3.64	2.16	5.58	8.71	3.13	0.37	0.11	-7.78	-3.10	1.55	11.06	122.75	\N	\N	\N
+UNIP6	9.10	9.63	5.98	4.23	13.67	0.85	6.99	6.35	4.28	2.30	36.93	1.23	8.33	51.61	15.14	-1.48	\N
+USIM3	10.89	-4.90	6.15	3.83	20.28	34.71	16.99	36.35	-4.25	0.45	53.05	295.78	-22.54	58.15	13.30	19.96	3.94
+USIM5	8.01	-8.65	-12.41	5.76	19.42	47.52	21.58	52.24	-19.42	33.79	21.13	338.95	-21.10	34.41	11.93	19.68	4.04
+USIM6	17.81	-21.97	8.84	4.81	18.06	33.55	11.83	28.01	7.38	3.44	4.46	-79.64	-17.22	43.84	\N	\N	\N
+VALE3	4.50	8.01	4.42	3.30	17.93	-37.30	10.48	12.01	10.12	-1.50	315.89	475.72	23.27	5.49	9.42	24.77	6.65
+VAMO3	5.93	6.26	9.73	24.83	0.00	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+VBBR3	17.67	16.57	10.09	8.19	8.93	13.41	9.45	11.93	4.55	5.22	9.09	\N	\N	\N	\N	\N	\N
+VCSA3	9.67	8.39	7.36	6.47	28.60	27.96	18.59	33.75	195.07	21.80	13.95	\N	\N	\N	\N	\N	\N
+VIIA3	-3.04	-4.03	-5.44	-14.81	-9.04	510.89	118.97	113.86	70.09	41.45	55.89	\N	\N	\N	\N	\N	\N
+VITT3	-98.72	2.86	13.74	17.82	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+VIVA3	18.66	37.32	6.82	10.35	31.49	25.09	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+VIVR3	3.41	3.66	1.50	-1.33	5.31	3.41	3.88	4.42	5.02	3.05	4.41	-0.30	-0.43	-4.99	\N	\N	\N
+VIVT3	14.59	14.26	12.44	9.30	20.73	30.38	11.79	29.49	4.89	8.80	45.72	12.10	11.02	8.93	8.57	8.83	7.73
+VIVT4	17.31	\N	\N	\N	\N	19.60	8.76	17.84	18.25	11.74	10.68	13.58	12.38	6.03	\N	\N	\N
+VLID11	14.38	17.93	20.45	22.72	155.74	43.81	42.84	39.30	23.95	19.48	26.54	\N	\N	\N	\N	\N	\N
+VLID3	5.01	7.78	18.73	16.46	1.76	17.87	11.81	33.85	14.90	14.60	17.52	19.41	24.56	10.86	13.02	\N	\N
+VSPT3	-0.99	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+VSPT4	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+VSTE3	156.70	101.09	32.17	-0.12	-0.17	-5.32	13.21	15.51	-18.03	-36.57	-291.50	\N	\N	41.50	26.42	\N	\N
+VULC3	13.42	13.71	0.64	-17.53	39.95	6.84	-0.37	21.60	27.36	26.29	5.53	-2.63	-1.02	-1.72	16.22	13.76	7.44
+VVAR11	\N	\N	\N	\N	\N	\N	\N	162.03	-146.08	301.48	30.78	7.00	\N	\N	\N	\N	\N
+VVAR3	8.45	8.21	6.07	8.61	8.37	13.16	6.81	10.93	0.00	\N	\N	\N	\N	\N	\N	\N	\N
+VVAR4	\N	\N	\N	\N	\N	\N	\N	55.62	-48.24	96.81	\N	\N	\N	\N	\N	\N	\N
+VVEO3	2.61	12.51	17.76	13.65	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+WEGE3	25.52	20.45	27.58	27.57	49.08	33.22	21.63	25.32	16.79	15.21	19.08	22.91	25.38	19.51	25.40	20.33	13.22
+WEST3	4.00	336.13	278.51	-3.18	-23.89	5700.94	0.00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+WHRL3	3.47	11.33	12.59	12.30	12.04	8.67	32.00	3.59	14.08	-9.16	9.99	7.16	7.78	12.13	8.21	13.66	\N
+WHRL4	4.66	11.92	13.09	16.46	13.71	8.79	36.16	-0.40	17.09	-15.01	9.73	7.65	8.13	13.99	8.87	13.62	\N
+WIZC3	4.64	6.54	6.91	6.46	6.48	10.30	6.17	11.59	14.84	\N	\N	\N	\N	\N	\N	\N	\N
+WIZS3	14.38	17.93	20.45	22.72	155.74	43.81	42.84	39.30	23.95	19.48	26.54	\N	\N	\N	\N	\N	\N
+WLMM3	9.75	8.75	14.17	7.89	13.94	10.26	13.21	-6.15	-31.61	5.48	6.09	\N	\N	\N	\N	\N	\N
+WLMM4	7.62	7.67	24.64	74.80	-6.19	4.85	5.74	-14.32	0.00	0.00	0.00	\N	\N	\N	\N	\N	\N
+WSON33	8.93	8.25	8.24	5.66	5.07	10.72	7.59	11.34	8.29	6.35	7.17	\N	\N	\N	\N	\N	\N
+YDUQ3	17.73	31.53	-35.51	27.46	73.25	22.64	10.68	6.35	7.74	6.05	31.58	16.25	31.11	20.94	27.34	29.98	25.85
+YEPAR5	0.96	\N	\N	\N	\N	\N	0.16	-0.25	-0.80	-0.86	\N	\N	\N	\N	\N	\N	\N
+ZAMP3	-0.54	-4.97	-20.28	-13.38	-3.37	82.15	35.90	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+\.
+
+
+--
 -- Data for Name: pvp; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -21112,6 +24111,38 @@ ALTER TABLE ONLY public.dy
 
 
 --
+-- Name: dyfinal dyfinal_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.dyfinal
+    ADD CONSTRAINT dyfinal_pkey PRIMARY KEY (ticker);
+
+
+--
+-- Name: dyinvest dyinvest_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.dyinvest
+    ADD CONSTRAINT dyinvest_pkey PRIMARY KEY (ticker);
+
+
+--
+-- Name: dyoceans dyoceans_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.dyoceans
+    ADD CONSTRAINT dyoceans_pkey PRIMARY KEY (ticker);
+
+
+--
+-- Name: dystatus dystatus_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.dystatus
+    ADD CONSTRAINT dystatus_pkey PRIMARY KEY (ticker);
+
+
+--
 -- Name: ev_ebit evebit_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -21245,6 +24276,14 @@ ALTER TABLE ONLY public.p_ebitda
 
 ALTER TABLE ONLY public.pl_ativos
     ADD CONSTRAINT pl_ativos_pkey PRIMARY KEY (ticker);
+
+
+--
+-- Name: plfinal plfinal_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.plfinal
+    ADD CONSTRAINT plfinal_pkey PRIMARY KEY (ticker);
 
 
 --

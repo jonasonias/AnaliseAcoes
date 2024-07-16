@@ -70,7 +70,7 @@ async function updateDatabaseWithAPIData() {
         const tickers = res.rows.map(row => row.ticker);
 
         for (const ticker of tickers) {
-            const data = await fetchJSON(ticker, 'dy');
+            const data = await fetchJSON(ticker, 'p_l');
 
             if (data) {
                 // Colunas da tabela "dystatus" para os anos de 2008 a 2024

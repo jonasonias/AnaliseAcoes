@@ -593,7 +593,7 @@ async function fetchData(ticker, number) {
     const responseData = response.data;
 
     // Filtrar e formatar os dados desejados apenas para o grupo "DIVIDEND YIELD (DY)"
-    const data = responseData['DIVIDEND YIELD (DY)'].reduce((acc, item) => {
+    const data = responseData['P/L'].reduce((acc, item) => {
       let value = item.value;
 
       // Verifica se o valor é uma string e se contém "-"
