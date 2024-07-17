@@ -64,7 +64,7 @@ async function fetchAPI(tickerCompleto, baseUrl, retryCount = { 429: 8, 403: 8, 
                     item.saida.forEach((saidaObj) => {
                         if (parseInt(saidaObj.periodo) >= 2000 || saidaObj.periodo === "Hoje") {
                             const year = saidaObj.periodo === "Hoje" ? 'Hoje' : parseInt(saidaObj.periodo);
-                            dataToInsert[year] = saidaObj.pl;
+                            dataToInsert[year] = saidaObj.pEbit;
                         }
                     });
                 }

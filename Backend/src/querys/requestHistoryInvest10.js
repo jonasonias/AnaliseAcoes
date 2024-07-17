@@ -593,7 +593,7 @@ async function fetchData(ticker, number) {
     const responseData = response.data;
 
     // Filtrar e formatar os dados desejados apenas para o grupo "DIVIDEND YIELD (DY)"
-    const data = responseData['P/L'].reduce((acc, item) => {
+    const data = responseData['P/EBIT'].reduce((acc, item) => {
       let value = item.value;
 
       // Verifica se o valor é uma string e se contém "-"
@@ -654,3 +654,34 @@ async function processTickers() {
 }
 
 processTickers();
+
+/*P/L
+P/RECEITA (PSR)
+P/VP
+DIVIDEND YIELD (DY)
+PAYOUT
+MARGEM LÍQUIDA
+MARGEM BRUTA
+MARGEM EBIT
+MARGEM EBITDA
+EV/EBITDA
+EV/EBIT
+P/EBITDA
+P/EBIT
+P/ATIVO
+P/CAP.GIRO
+P/ATIVO CIRC LIQ
+VPA
+LPA
+GIRO ATIVOS
+ROE
+ROIC
+ROA
+DÍVIDA LÍQUIDA / EBITDA
+DÍVIDA LÍQUIDA / EBIT
+DÍVIDA BRUTA / PATRIMÔNIO
+PATRIMÔNIO / ATIVOS
+PASSIVOS / ATIVOS
+LIQUIDEZ CORRENTE
+CAGR RECEITAS 5 ANOS
+CAGR LUCROS 5 ANOS*/
