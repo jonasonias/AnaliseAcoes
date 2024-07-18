@@ -593,7 +593,7 @@ async function fetchData(ticker, number) {
     const responseData = response.data;
 
     // Filtrar e formatar os dados desejados apenas para o grupo "DIVIDEND YIELD (DY)"
-    const data = responseData['P/EBIT'].reduce((acc, item) => {
+    const data = responseData['P/CAP.GIRO'].reduce((acc, item) => {
       let value = item.value;
 
       // Verifica se o valor é uma string e se contém "-"
@@ -648,6 +648,7 @@ async function processTickers() {
     if (data) {
       await insertData(data);
     }
+    await new Promise(resolve => setTimeout(resolve, 1000));
   }
 
   await pool.end();
