@@ -1,4 +1,4 @@
-CREATE TABLE p_capgiroFinal AS
+CREATE TABLE cagr_lucros5anosFinal AS
 SELECT 
     ticker,
     ROUND(SUM(COALESCE("2024", 0))::numeric / NULLIF(COUNT("2024"), 0), 2) AS "2024",
