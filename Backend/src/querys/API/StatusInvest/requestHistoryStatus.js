@@ -66,7 +66,7 @@ async function updateDatabaseWithAPIData() {
 
     try {
         // Obtenha os tickers em ordem alfabética
-        const res = await client.query('SELECT ticker FROM dy ORDER BY ticker ASC');
+        const res = await client.query('SELECT ticker FROM dyfinal ORDER BY ticker ASC');
         const tickers = res.rows.map(row => row.ticker);
 
         for (const ticker of tickers) {

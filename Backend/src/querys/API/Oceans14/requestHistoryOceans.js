@@ -122,7 +122,7 @@ async function fetchAllTickersAndFetchAPI() {
         await client.connect();
 
         const query = `
-            SELECT ticker FROM dy ORDER BY ticker;
+            SELECT ticker FROM dyfinal ORDER BY ticker;
         `;
 
         const result = await client.query(query);
@@ -174,7 +174,7 @@ async function fetchAllTickersAndFetchAPI() {
         }
 
     } catch (error) {
-        console.error('Erro ao buscar tickers da tabela dy:', error.message);
+        console.error('Erro ao buscar tickers da tabela dyfinal:', error.message);
     } finally {
         await client.end();
     }

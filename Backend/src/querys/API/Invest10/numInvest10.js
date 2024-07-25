@@ -12,7 +12,7 @@ const client = new Client({
 
 async function fetchTickers() {
     await client.connect();
-    const res = await client.query('SELECT ticker FROM acoes');
+    const res = await client.query('SELECT ticker FROM dyfinal');
     await client.end();
     return res.rows.map(row => row.ticker);
 }
