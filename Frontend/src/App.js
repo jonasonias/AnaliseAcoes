@@ -6,7 +6,7 @@ import AboutPage from './pages/AboutPage';
 import ProfilePage from './pages/ProfilePage';
 import AcoesPage from './pages/AcoesPage';
 import AcoesDetailPage from './pages/AcoesDetailPage';
-import NotFoundPage from './pages/NotFoundPage'; // Importe a página NotFoundPage
+import NotFoundPage from './pages/NotFoundPage';
 import Footer from './components/Footer';
 import { AuthProvider } from './contexts/AuthContext';
 import './styles/General.css';

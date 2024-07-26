@@ -10,7 +10,7 @@ const app = express();
 app.use(cors({ origin: true, credentials: true }));
 app.use(express.json());
 
-app.use(serveFavicon('C:\\Users\\jonas\\Documents\\stocksSiteAWS\\Backend\\public\\favicon.ico'));
+app.use(serveFavicon('C:\\Users\\jonas\\Documents\\VSCode\\AnaliseAcoes\\Backend\\public\\favicon.ico'));
 
 app.get('/', (req, res) => {
     res.send('Servidor Express está funcionando!');
