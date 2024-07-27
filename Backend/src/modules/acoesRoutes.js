@@ -3,19 +3,41 @@ const Acoes = require('../models/Acoes');
 
 const router = express.Router();
 
-router.get('/', async (req, res) => {
+router.get('/setores', async (req, res) => {
     try {
-        const acoes = await Acoes.findAll();
+        const acoes = await Acoes.findAll_Setores();
         res.json(acoes);
     } catch (err) {
         res.status(500).send('Erro ao obter ações');
     }
 });
 
-router.get('/:ticker', async (req, res) => {
+router.get('/setores/:ticker', async (req, res) => {
     const { ticker } = req.params;
     try {
-        const acao = await Acoes.findOne(ticker);
+        const acao = await Acoes.findOne_Setores(ticker);
+        if (!acao) {
+            return res.status(404).send('Ação não encontrada');
+        }
+        res.json(acao);
+    } catch (err) {
+        res.status(500).send('Erro ao obter ação');
+    }
+});
+
+router.get('/atual', async (req, res) => {
+    try {
+        const acoes = await Acoes.findAll_Atual();
+        res.json(acoes);
+    } catch (err) {
+        res.status(500).send('Erro ao obter ações');
+    }
+});
+
+router.get('/atual/:ticker', async (req, res) => {
+    const { ticker } = req.params;
+    try {
+        const acao = await Acoes.findOne_Atual(ticker);
         if (!acao) {
             return res.status(404).send('Ação não encontrada');
         }

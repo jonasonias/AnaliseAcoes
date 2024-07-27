@@ -5,6 +5,7 @@ import CustomAlert from '../CustomAlert';
 
 const GetAllAcoes = () => {
     const [acoes, setAcoes] = useState([]);
+    const [valoresMercado, setValoresMercado] = useState({});
     const [alertMessage, setAlertMessage] = useState('');
     const [alertType, setAlertType] = useState('');
     const [sortConfig, setSortConfig] = useState({ key: 'ticker', direction: 'ascending' });
@@ -13,7 +14,7 @@ const GetAllAcoes = () => {
 
     const fetchAcoes = async () => {
         try {
-            const response = await fetch(`${API_BASE_URL}/acoes`);
+            const response = await fetch(`${API_BASE_URL}/acoes/setores`);
             if (response.ok) {
                 const data = await response.json();
                 setAcoes(data);
@@ -27,12 +28,33 @@ const GetAllAcoes = () => {
         }
     };
 
+    const fetchValoresMercado = async () => {
+        try {
+            const response = await fetch(`${API_BASE_URL}/acoes/atual`);
+            if (response.ok) {
+                const data = await response.json();
+                const valores = data.reduce((acc, acao) => {
+                    acc[acao.ticker] = acao.valormercado;
+                    return acc;
+                }, {});
+                setValoresMercado(valores);
+            } else {
+                throw new Error('Erro ao buscar valores de mercado');
+            }
+        } catch (error) {
+            console.error('Erro ao buscar valores de mercado:', error);
+            setAlertMessage('Erro ao buscar valores de mercado');
+            setAlertType('error');
+        }
+    };
+
     const handleTickerClick = (ticker) => {
         navigate(`/acoes/${ticker}`);
     };
 
     useEffect(() => {
         fetchAcoes();
+        fetchValoresMercado();
     }, []);
 
     const requestSort = (key) => {
@@ -61,8 +83,14 @@ const GetAllAcoes = () => {
 
     const sortedAcoes = filteredAcoes.sort((a, b) => {
         if (sortConfig.direction === 'ascending') {
+            if (sortConfig.key === 'valormercado') {
+                return (valoresMercado[a.ticker] || 0) - (valoresMercado[b.ticker] || 0);
+            }
             return a[sortConfig.key] > b[sortConfig.key] ? 1 : -1;
         } else {
+            if (sortConfig.key === 'valormercado') {
+                return (valoresMercado[b.ticker] || 0) - (valoresMercado[a.ticker] || 0);
+            }
             return a[sortConfig.key] < b[sortConfig.key] ? 1 : -1;
         }
     });
@@ -72,6 +100,14 @@ const GetAllAcoes = () => {
             return sortConfig.direction === 'ascending' ? '↑' : '↓';
         }
         return '';
+    };
+
+    const formatNumber = (number) => {
+        return new Intl.NumberFormat('pt-BR', {
+            style: 'currency',
+            currency: 'BRL',
+            minimumFractionDigits: 2,
+        }).format(number);  // Não remova o símbolo "R$"
     };
 
     return (
@@ -86,13 +122,13 @@ const GetAllAcoes = () => {
             <table style={{ width: '100%', borderCollapse: 'collapse', marginTop: '20px' }}>
                 <thead>
                     <tr>
-                        {['ticker', 'nome', 'setor', 'subsetor', 'segmento'].map((col) => (
+                        {['ticker', 'nome', 'setor', 'subsetor', 'segmento', 'valormercado'].map((col) => (
                             <th
                                 key={col}
                                 style={{ border: '1px solid black', padding: '8px', textAlign: 'center', cursor: 'pointer' }}
                                 onClick={() => requestSort(col)}
                             >
-                                {col.charAt(0).toUpperCase() + col.slice(1)} {getSortIndicator(col)}
+                                {col === 'valormercado' ? 'Valor de Mercado' : col.charAt(0).toUpperCase() + col.slice(1)} {getSortIndicator(col)}
                             </th>
                         ))}
                     </tr>
@@ -109,6 +145,11 @@ const GetAllAcoes = () => {
                                     {acao[col]}
                                 </td>
                             ))}
+                            <td
+                                style={{ border: '1px solid black', padding: '8px', textAlign: 'center' }}
+                            >
+                                {valoresMercado[acao.ticker] && !isNaN(valoresMercado[acao.ticker]) ? formatNumber(valoresMercado[acao.ticker]) : ''}
+                            </td>
                         </tr>
                     ))}
                 </tbody>

@@ -30,10 +30,10 @@ const App = () => {
           <PopupLogin />
           <Routes>
             <Route exact path="/" element={<HomePage />} />
-            <Route path="/about" element={<AboutPage />} />
-            <Route path="/profile" element={<ProfilePage />} />
-            <Route path="/acoes" element={<AcoesPage />} />
-            <Route path="/acoes/:code" element={<AcoesDetailPage />} />
+            <Route path="/About" element={<AboutPage />} />
+            <Route path="/Profile" element={<ProfilePage />} />
+            <Route path="/Acoes" element={<AcoesPage />} />
+            <Route path="/Acoes/:code" element={<AcoesDetailPage />} />
             <Route path="*" element={<NotFoundPage />} />
           </Routes>
           <Footer />
