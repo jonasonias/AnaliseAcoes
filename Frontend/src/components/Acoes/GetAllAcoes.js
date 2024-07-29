@@ -82,16 +82,24 @@ const GetAllAcoes = () => {
     });
 
     const sortedAcoes = filteredAcoes.sort((a, b) => {
-        if (sortConfig.direction === 'ascending') {
-            if (sortConfig.key === 'valormercado') {
+        const compare = (aVal, bVal) => {
+            if (aVal < bVal) return -1;
+            if (aVal > bVal) return 1;
+            return 0;
+        };
+
+        if (sortConfig.key === 'valormercado') {
+            if (sortConfig.direction === 'ascending') {
                 return (valoresMercado[a.ticker] || 0) - (valoresMercado[b.ticker] || 0);
-            }
-            return a[sortConfig.key] > b[sortConfig.key] ? 1 : -1;
-        } else {
-            if (sortConfig.key === 'valormercado') {
+            } else {
                 return (valoresMercado[b.ticker] || 0) - (valoresMercado[a.ticker] || 0);
             }
-            return a[sortConfig.key] < b[sortConfig.key] ? 1 : -1;
+        } else {
+            if (sortConfig.direction === 'ascending') {
+                return compare(a[sortConfig.key], b[sortConfig.key]);
+            } else {
+                return compare(b[sortConfig.key], a[sortConfig.key]);
+            }
         }
     });
 

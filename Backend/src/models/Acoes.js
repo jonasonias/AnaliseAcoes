@@ -19,7 +19,6 @@ class Acoes {
         const res = await pool.query('SELECT * FROM acoes_atualfinal WHERE ticker = $1', [ticker]);
         return res.rows[0];
     }
-
 }
 
 module.exports = Acoes;

@@ -406,4 +406,30 @@ router.get('/cagr_lucros5anos/:ticker', async (req, res) => {
     }
 });
 
+router.get('/proventos/:ticker', async (req, res) => {
+    const { ticker } = req.params;
+    try {
+        const proventosData = await Multiplos.findOne(ticker, 'proventosfinal');
+        if (!proventosData) {
+            return res.status(404).send('Dados não encontrados');
+        }
+        res.json(proventosData);
+    } catch (err) {
+        res.status(500).send('Erro ao obter dados históricos');
+    }
+});
+
+router.get('/payout/:ticker', async (req, res) => {
+    const { ticker } = req.params;
+    try {
+        const payoutData = await Multiplos.findOne(ticker, 'payoutfinal');
+        if (!payoutData) {
+            return res.status(404).send('Dados não encontrados');
+        }
+        res.json(payoutData);
+    } catch (err) {
+        res.status(500).send('Erro ao obter dados históricos');
+    }
+});
+
 module.exports = router;
