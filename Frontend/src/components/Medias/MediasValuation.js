@@ -131,6 +131,12 @@ const MediasValuation = ({ ticker }) => {
     return averages;
   };
 
+  // Function to format DY values with percentage symbol
+  const formatValue = (value, tableName) => {
+    if (value === null || value === undefined || isNaN(value)) return '-';
+    return tableName === 'DY' ? `${value.toFixed(2)}%` : value.toFixed(2);
+  };
+
   return (
     <div style={{ display: 'flex', justifyContent: 'center' }}>
       <div style={{ width: '70%', maxWidth: '1200px' }}>
@@ -156,7 +162,7 @@ const MediasValuation = ({ ticker }) => {
                   <td style={{ padding: '4px', textAlign: 'center', fontWeight: 'bold' }}>{row.table}</td>
                   {averages.map((avg, avgIndex) => (
                     <td key={avgIndex} style={{ padding: '4px', textAlign: 'center' }}>
-                      {typeof avg === 'number' && !isNaN(avg) ? avg.toFixed(2) : '-'}
+                      {formatValue(avg, row.table)}
                     </td>
                   ))}
                 </tr>

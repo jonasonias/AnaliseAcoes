@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import API_BASE_URL from '../../apiConfig';
+import { Tooltip } from 'react-tooltip';
 
 const AnaliseAcao = ({ ticker }) => {
   const [data, setData] = useState([]);
@@ -109,7 +110,7 @@ const AnaliseAcao = ({ ticker }) => {
   };
 
   return (
-    <div style={{ paddingLeft: '0px', marginLeft: '0px' }}>
+    <div style={{ paddingLeft: '0px', marginLeft: '0px', overflowX: 'auto' }}>
       <h2 style={{ textAlign: 'center', marginBottom: '20px' }}>Análise de Ação - Preço</h2>
       {error ? (
         <p>{error}</p>
@@ -125,7 +126,7 @@ const AnaliseAcao = ({ ticker }) => {
           </thead>
           <tbody>
             <tr>
-              <td style={{ padding: '8px', textAlign: 'center', minWidth: '70px', width: '0px', fontSize: '0.9rem' }}><strong>Valor Intrínseco</strong></td>
+              <td data-tooltip-id="tooltip" data-tooltip-content="Valor Intrínseco = √(22.5 * LPA * VPA)" style={{ padding: '8px', textAlign: 'center', minWidth: '70px', fontSize: '0.9rem' }}><strong>Valor Intrínseco</strong></td>
               {data.map(row => (
                 <td key={row.year} style={{ padding: '8px', textAlign: 'center', fontSize: '0.8rem' }}>
                   {row.valorIntrinseco !== null ? formatCurrency(row.valorIntrinseco) : '-'}
@@ -133,7 +134,7 @@ const AnaliseAcao = ({ ticker }) => {
               ))}
             </tr>
             <tr>
-              <td style={{ padding: '8px', textAlign: 'center', minWidth: '70px', width: '0px', fontSize: '0.9rem' }}><strong>P/E</strong></td>
+              <td data-tooltip-id="tooltip" data-tooltip-content="P/E = PL * LPA" style={{ padding: '8px', textAlign: 'center', minWidth: '70px', fontSize: '0.9rem' }}><strong>P/E</strong></td>
               {plLpaData.map(row => (
                 <td key={row.year} style={{ padding: '8px', textAlign: 'center', fontSize: '0.8rem' }}>
                   {row.plLpa !== null ? formatCurrency(row.plLpa) : '-'}
@@ -141,7 +142,7 @@ const AnaliseAcao = ({ ticker }) => {
               ))}
             </tr>
             <tr>
-              <td style={{ padding: '8px', textAlign: 'center', minWidth: '70px', width: '0px', fontSize: '0.9rem' }}><strong>P/BV</strong></td>
+              <td data-tooltip-id="tooltip" data-tooltip-content="P/BV = PVP * VPA" style={{ padding: '8px', textAlign: 'center', minWidth: '70px', fontSize: '0.9rem' }}><strong>P/BV</strong></td>
               {pvpVpaData.map(row => (
                 <td key={row.year} style={{ padding: '8px', textAlign: 'center', fontSize: '0.8rem' }}>
                   {row.pvpVpa !== null ? formatCurrency(row.pvpVpa) : '-'}
@@ -149,7 +150,7 @@ const AnaliseAcao = ({ ticker }) => {
               ))}
             </tr>
             <tr>
-              <td style={{ padding: '8px', textAlign: 'center', minWidth: '70px', width: '0px', fontSize: '0.9rem' }}><strong>Teto Barsi</strong></td>
+              <td data-tooltip-id="tooltip" data-tooltip-content="Teto Barsi = Proventos / 0.065" style={{ padding: '8px', textAlign: 'center', minWidth: '70px', fontSize: '0.9rem' }}><strong>Teto Barsi</strong></td>
               {proventos.map(row => (
                 <td key={row.year} style={{ padding: '8px', textAlign: 'center', fontSize: '0.8rem' }}>
                   {row.tetoBarsi !== null ? formatCurrency(row.tetoBarsi) : '-'}
@@ -157,7 +158,7 @@ const AnaliseAcao = ({ ticker }) => {
               ))}
             </tr>
             <tr>
-              <td style={{ padding: '8px', textAlign: 'center', minWidth: '70px', width: '0px', fontSize: '0.9rem' }}><strong>Teto GPT</strong></td>
+              <td data-tooltip-id="tooltip" data-tooltip-content="Teto GPT = Proventos * (1 + Taxa Crescimento) / (Taxa de Retorno - Taxa de Crescimento)" style={{ padding: '8px', textAlign: 'center', minWidth: '70px', fontSize: '0.9rem' }}><strong>Teto GPT</strong></td>
               {precoTeto.map(row => (
                 <td key={row.year} style={{ padding: '8px', textAlign: 'center', fontSize: '0.8rem' }}>
                   {row.precoTeto !== null ? formatCurrency(row.precoTeto) : '-'}
@@ -165,7 +166,7 @@ const AnaliseAcao = ({ ticker }) => {
               ))}
             </tr>
             <tr>
-              <td style={{ padding: '8px', textAlign: 'center', minWidth: '70px', width: '0px', fontSize: '0.9rem' }}><strong>Gordon</strong></td>
+              <td data-tooltip-id="tooltip" data-tooltip-content="Gordon = Proventos / ((0.0626 * 1.3) - 0.01)" style={{ padding: '8px', textAlign: 'center', minWidth: '70px', fontSize: '0.9rem' }}><strong>Gordon</strong></td>
               {gordonData.map(row => (
                 <td key={row.year} style={{ padding: '8px', textAlign: 'center', fontSize: '0.8rem' }}>
                   {row.gordon !== null ? formatCurrency(row.gordon) : '-'}
@@ -175,6 +176,7 @@ const AnaliseAcao = ({ ticker }) => {
           </tbody>
         </table>
       )}
+      <Tooltip id="tooltip" />
     </div>
   );
 };

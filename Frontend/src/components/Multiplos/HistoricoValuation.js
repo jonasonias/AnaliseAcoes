@@ -79,7 +79,11 @@ const HistoricoValuation = ({ ticker }) => {
               <td style={{ padding: '0px', textAlign: 'Center', fontWeight: 'bold', minWidth: '10px', width: '150px' }}>{row.table}</td>
               {years.map(year => (
                 <td key={year} style={{ padding: '8px', textAlign: 'center' }}>
-                  {row[year] !== undefined && row[year] !== null ? row[year] : '-'}
+                  {row.table === 'DY' && row[year] !== undefined && row[year] !== null
+                    ? `${row[year]}%`
+                    : row[year] !== undefined && row[year] !== null
+                      ? row[year]
+                      : '-'}
                 </td>
               ))}
             </tr>
