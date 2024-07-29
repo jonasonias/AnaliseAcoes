@@ -111,7 +111,7 @@ const AnaliseAcao = ({ ticker }) => {
 
   return (
     <div style={{ paddingLeft: '0px', marginLeft: '0px', overflowX: 'auto' }}>
-      <h2 style={{ textAlign: 'center', marginBottom: '20px' }}>Análise de Ação - Preço</h2>
+      <h2 style={{ textAlign: 'center', marginBottom: '20px' }}>Análise de Preço</h2>
       {error ? (
         <p>{error}</p>
       ) : (

@@ -9,6 +9,10 @@ import HistoricoCrescimento from '../components/Multiplos/HistoricoCrescimento';
 import HistoricoProventos from '../components/Multiplos/HistoricoProventos';
 import AnaliseAcao from '../components/Acoes/AnaliseAcao';
 import MediasValuation from '../components/Medias/MediasValuation';
+import MediasEndividamento from '../components/Medias/MediasEndividamento';
+import MediasEficiencia from '../components/Medias/MediasEficiencia';
+import MediasRentabilidade from '../components/Medias/MediasRentabilidade';
+import MediasCrescimento from '../components/Medias/MediasCrescimento';
 
 const AcoesDetailPage = () => {
   const { code } = useParams(); // Obtém o parâmetro 'code' da URL
@@ -35,8 +39,12 @@ const AcoesDetailPage = () => {
         </>
       ) : (
         <>
-          <AnaliseAcao ticker={code} />
           <MediasValuation ticker={code} />
+          <MediasEndividamento ticker={code} />
+          <MediasEficiencia ticker={code} />
+          <MediasRentabilidade ticker={code} />
+          <MediasCrescimento ticker={code} />
+          <AnaliseAcao ticker={code} />
         </>
         
       )}
