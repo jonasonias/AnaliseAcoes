@@ -2,14 +2,14 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import API_BASE_URL from '../../apiConfig';
 
-const NotaValuation = ({ ticker }) => {
+const NotaEndividamento = ({ ticker }) => {
   const [data, setData] = useState([]);
   const [mediaNota, setMediaNota] = useState(0);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`${API_BASE_URL}/acoes/nota/valuation/${ticker}`);
+        const response = await axios.get(`${API_BASE_URL}/acoes/nota/endividamento/${ticker}`);
         const newData = response.data.map(item => {
           const nota = (item.count_limite * 10) / (35 - item.count_null);
           return { ...item, nota: isNaN(nota) ? 0 : nota }; // Tratar NaN como 0
@@ -31,7 +31,7 @@ const NotaValuation = ({ ticker }) => {
 
   return (
     <div>
-      <h2 style={{ marginLeft: '30%' }}>Nota de Valuation</h2>
+      <h2 style={{ marginLeft: '30%' }}>Nota de Endividamento</h2>
       <table style={{ width: '110%', borderCollapse: 'collapse', margin: '0 0' }}>
         <thead>
           <tr>
@@ -59,4 +59,4 @@ const NotaValuation = ({ ticker }) => {
   );
 };
 
-export default NotaValuation;
+export default NotaEndividamento;

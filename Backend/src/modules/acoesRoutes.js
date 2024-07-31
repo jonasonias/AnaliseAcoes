@@ -57,4 +57,14 @@ router.get('/nota/valuation/:ticker', async (req, res) => {
     }
 });
 
+router.get('/nota/endividamento/:ticker', async (req, res) => {
+    try {
+        const ticker = req.params.ticker;
+        const contagem = await Acoes.countIndicadoresEndividamento(ticker);
+        res.json(contagem);
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+});
+
 module.exports = router;

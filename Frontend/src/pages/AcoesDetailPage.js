@@ -14,10 +14,11 @@ import MediasEficiencia from '../components/Medias/MediasEficiencia';
 import MediasRentabilidade from '../components/Medias/MediasRentabilidade';
 import MediasCrescimento from '../components/Medias/MediasCrescimento';
 import NotaValuation from '../components/Notas/NotaValuation';
+import NotaEndividamento from '../components/Notas/NotaEndividamento';
 
 const AcoesDetailPage = () => {
   const { code } = useParams(); // Obtém o parâmetro 'code' da URL
-  const [view, setView] = useState('historico'); // 'historico', 'analise', or 'nota'
+  const [view, setView] = useState('historico'); // 'historico', 'analise', ou 'nota'
 
   return (
     <div className="page-container">
@@ -49,9 +50,18 @@ const AcoesDetailPage = () => {
           <AnaliseAcao ticker={code} />
         </>
       ) : (
-        <>
-          <NotaValuation ticker={code} />
-        </>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
+          <div style={{ flex: 3, minWidth: '300px', maxWidth: '45%', display: 'flex', justifyContent: 'left' }}>
+            <NotaValuation ticker={code} />
+          </div>
+          <div style={{ flex: 3, minWidth: '300px', maxWidth: '45%', display: 'flex', justifyContent: 'left' }}>
+            <NotaEndividamento ticker={code} />
+          </div>
+          <div style={{ flex: 3, minWidth: '300px', maxWidth: '45%', display: 'flex', justifyContent: 'center' }}>
+            {/* Placeholder para o terceiro componente futuro */}
+            {/* Exemplo: <NovoComponente ticker={code} /> */}
+          </div>
+        </div>
       )}
     </div>
   );
