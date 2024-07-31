@@ -13,10 +13,11 @@ import MediasEndividamento from '../components/Medias/MediasEndividamento';
 import MediasEficiencia from '../components/Medias/MediasEficiencia';
 import MediasRentabilidade from '../components/Medias/MediasRentabilidade';
 import MediasCrescimento from '../components/Medias/MediasCrescimento';
+import NotaValuation from '../components/Notas/NotaValuation';
 
 const AcoesDetailPage = () => {
   const { code } = useParams(); // Obtém o parâmetro 'code' da URL
-  const [view, setView] = useState('historico'); // 'historico' or 'analise'
+  const [view, setView] = useState('historico'); // 'historico', 'analise', or 'nota'
 
   return (
     <div className="page-container">
@@ -25,7 +26,8 @@ const AcoesDetailPage = () => {
 
       <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '20px' }}>
         <button onClick={() => setView('historico')} style={{ marginRight: '10px' }}>Ver Histórico</button>
-        <button onClick={() => setView('analise')}>Ver Análise</button>
+        <button onClick={() => setView('analise')} style={{ marginRight: '10px' }}>Ver Análise</button>
+        <button onClick={() => setView('nota')}>Ver Nota</button>
       </div>
 
       {view === 'historico' ? (
@@ -37,7 +39,7 @@ const AcoesDetailPage = () => {
           <HistoricoCrescimento ticker={code} />
           <HistoricoProventos ticker={code} />
         </>
-      ) : (
+      ) : view === 'analise' ? (
         <>
           <MediasValuation ticker={code} />
           <MediasEndividamento ticker={code} />
@@ -46,7 +48,10 @@ const AcoesDetailPage = () => {
           <MediasCrescimento ticker={code} />
           <AnaliseAcao ticker={code} />
         </>
-        
+      ) : (
+        <>
+          <NotaValuation ticker={code} />
+        </>
       )}
     </div>
   );

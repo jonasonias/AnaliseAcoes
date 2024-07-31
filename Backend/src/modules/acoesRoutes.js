@@ -47,4 +47,14 @@ router.get('/atual/:ticker', async (req, res) => {
     }
 });
 
+router.get('/nota/valuation/:ticker', async (req, res) => {
+    try {
+        const ticker = req.params.ticker;
+        const contagem = await Acoes.countIndicadoresValuation(ticker);
+        res.json(contagem);
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+});
+
 module.exports = router;

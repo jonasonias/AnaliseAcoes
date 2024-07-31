@@ -91,7 +91,7 @@ const MediasCrescimento = ({ ticker }) => {
         <table style={{ width: '100%', borderCollapse: 'collapse' }}>
           <thead>
             <tr>
-              <th style={{ padding: '8px', textAlign: 'center', minWidth: '120px', width: '140px' }}></th>
+              <th style={{ padding: '8px', textAlign: 'center', minWidth: '120px', width: '150px' }}></th>
               <th style={{ padding: '4px', textAlign: 'center' }}>Atual</th>
               <th style={{ padding: '4px', textAlign: 'center' }}>2024</th>
               <th style={{ padding: '4px', textAlign: 'center' }}>2024 a 2023</th>
