@@ -67,4 +67,34 @@ router.get('/nota/endividamento/:ticker', async (req, res) => {
     }
 });
 
+router.get('/nota/eficiencia/:ticker', async (req, res) => {
+    try {
+        const ticker = req.params.ticker;
+        const contagem = await Acoes.countIndicadoresEficiencia(ticker);
+        res.json(contagem);
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+});
+
+router.get('/nota/rentabilidade/:ticker', async (req, res) => {
+    try {
+        const ticker = req.params.ticker;
+        const contagem = await Acoes.countIndicadoresRentabilidade(ticker);
+        res.json(contagem);
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+});
+
+router.get('/nota/crescimento/:ticker', async (req, res) => {
+    try {
+        const ticker = req.params.ticker;
+        const contagem = await Acoes.countIndicadoresCrescimento(ticker);
+        res.json(contagem);
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+});
+
 module.exports = router;

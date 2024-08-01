@@ -1319,6 +1319,734 @@ class Acoes {
             throw new Error('Erro ao executar a consulta');
         }
     }
+
+    static async countIndicadoresEficiencia(ticker) {
+        const query = `
+            -- Consulta para o indicador Margem Bruta
+            SELECT
+                'Margem Bruta' AS indicador,
+                -- Contagem de valores entre x e y
+                (CASE WHEN atual.margembruta BETWEEN 20 AND 70 THEN 1 ELSE 0 END +
+                CASE WHEN x."2024" BETWEEN 20 AND 70 THEN 1 ELSE 0 END +
+                CASE WHEN x."2023" BETWEEN 20 AND 70 THEN 1 ELSE 0 END +
+                CASE WHEN x."2022" BETWEEN 20 AND 70 THEN 1 ELSE 0 END +
+                CASE WHEN x."2021" BETWEEN 20 AND 70 THEN 1 ELSE 0 END +
+                CASE WHEN x."2020" BETWEEN 20 AND 70 THEN 1 ELSE 0 END +
+                CASE WHEN x."2019" BETWEEN 20 AND 70 THEN 1 ELSE 0 END +
+                CASE WHEN x."2018" BETWEEN 20 AND 70 THEN 1 ELSE 0 END +
+                CASE WHEN x."2017" BETWEEN 20 AND 70 THEN 1 ELSE 0 END +
+                CASE WHEN x."2016" BETWEEN 20 AND 70 THEN 1 ELSE 0 END +
+                CASE WHEN x."2015" BETWEEN 20 AND 70 THEN 1 ELSE 0 END +
+                CASE WHEN x."2014" BETWEEN 20 AND 70 THEN 1 ELSE 0 END +
+                CASE WHEN x."2013" BETWEEN 20 AND 70 THEN 1 ELSE 0 END +
+                CASE WHEN x."2012" BETWEEN 20 AND 70 THEN 1 ELSE 0 END +
+                CASE WHEN x."2011" BETWEEN 20 AND 70 THEN 1 ELSE 0 END +
+                CASE WHEN x."2010" BETWEEN 20 AND 70 THEN 1 ELSE 0 END +
+                CASE WHEN x."2009" BETWEEN 20 AND 70 THEN 1 ELSE 0 END +
+                CASE WHEN x."2008" BETWEEN 20 AND 70 THEN 1 ELSE 0 END
+                ) +
+                -- Contagem de vezes em que o valor atual é maior que os anos anteriores
+                (
+                CASE WHEN atual.margembruta < x."2024" AND atual.margembruta BETWEEN 20 AND 70 THEN 1 ELSE 0 END +
+                CASE WHEN atual.margembruta < x."2023" AND atual.margembruta BETWEEN 20 AND 70 THEN 1 ELSE 0 END +
+                CASE WHEN atual.margembruta < x."2022" AND atual.margembruta BETWEEN 20 AND 70 THEN 1 ELSE 0 END +
+                CASE WHEN atual.margembruta < x."2021" AND atual.margembruta BETWEEN 20 AND 70 THEN 1 ELSE 0 END +
+                CASE WHEN atual.margembruta < x."2020" AND atual.margembruta BETWEEN 20 AND 70 THEN 1 ELSE 0 END +
+                CASE WHEN atual.margembruta < x."2019" AND atual.margembruta BETWEEN 20 AND 70 THEN 1 ELSE 0 END +
+                CASE WHEN atual.margembruta < x."2018" AND atual.margembruta BETWEEN 20 AND 70 THEN 1 ELSE 0 END +
+                CASE WHEN atual.margembruta < x."2017" AND atual.margembruta BETWEEN 20 AND 70 THEN 1 ELSE 0 END +
+                CASE WHEN atual.margembruta < x."2016" AND atual.margembruta BETWEEN 20 AND 70 THEN 1 ELSE 0 END +
+                CASE WHEN atual.margembruta < x."2015" AND atual.margembruta BETWEEN 20 AND 70 THEN 1 ELSE 0 END +
+                CASE WHEN atual.margembruta < x."2014" AND atual.margembruta BETWEEN 20 AND 70 THEN 1 ELSE 0 END +
+                CASE WHEN atual.margembruta < x."2013" AND atual.margembruta BETWEEN 20 AND 70 THEN 1 ELSE 0 END +
+                CASE WHEN atual.margembruta < x."2012" AND atual.margembruta BETWEEN 20 AND 70 THEN 1 ELSE 0 END +
+                CASE WHEN atual.margembruta < x."2011" AND atual.margembruta BETWEEN 20 AND 70 THEN 1 ELSE 0 END +
+                CASE WHEN atual.margembruta < x."2010" AND atual.margembruta BETWEEN 20 AND 70 THEN 1 ELSE 0 END +
+                CASE WHEN atual.margembruta < x."2009" AND atual.margembruta BETWEEN 20 AND 70 THEN 1 ELSE 0 END +
+                CASE WHEN atual.margembruta < x."2008" AND atual.margembruta BETWEEN 20 AND 70 THEN 1 ELSE 0 END
+                ) AS count_Limite,
+                -- Contagem de valores NULL
+                (CASE WHEN atual.margembruta IS NULL THEN 1 ELSE 0 END +
+                CASE WHEN x."2024" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2023" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2022" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2021" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2020" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2019" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2018" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2017" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2016" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2015" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2014" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2013" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2012" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2011" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2010" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2009" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2008" IS NULL THEN 2 ELSE 0 END 
+                ) AS count_Null
+            FROM
+                acoes_atualfinal atual
+            JOIN
+                m_brutafinal x ON atual.ticker = x.ticker
+            WHERE
+                atual.ticker = $1
+
+            UNION ALL
+
+            -- Consulta para o indicador Margem EBIT
+            SELECT
+                'Margem EBIT' AS indicador,
+                -- Contagem de valores entre x e y
+                (CASE WHEN atual.margemebit BETWEEN 10 AND 40 THEN 1 ELSE 0 END +
+                CASE WHEN x."2024" BETWEEN 10 AND 40 THEN 1 ELSE 0 END +
+                CASE WHEN x."2023" BETWEEN 10 AND 40 THEN 1 ELSE 0 END +
+                CASE WHEN x."2022" BETWEEN 10 AND 40 THEN 1 ELSE 0 END +
+                CASE WHEN x."2021" BETWEEN 10 AND 40 THEN 1 ELSE 0 END +
+                CASE WHEN x."2020" BETWEEN 10 AND 40 THEN 1 ELSE 0 END +
+                CASE WHEN x."2019" BETWEEN 10 AND 40 THEN 1 ELSE 0 END +
+                CASE WHEN x."2018" BETWEEN 10 AND 40 THEN 1 ELSE 0 END +
+                CASE WHEN x."2017" BETWEEN 10 AND 40 THEN 1 ELSE 0 END +
+                CASE WHEN x."2016" BETWEEN 10 AND 40 THEN 1 ELSE 0 END +
+                CASE WHEN x."2015" BETWEEN 10 AND 40 THEN 1 ELSE 0 END +
+                CASE WHEN x."2014" BETWEEN 10 AND 40 THEN 1 ELSE 0 END +
+                CASE WHEN x."2013" BETWEEN 10 AND 40 THEN 1 ELSE 0 END +
+                CASE WHEN x."2012" BETWEEN 10 AND 40 THEN 1 ELSE 0 END +
+                CASE WHEN x."2011" BETWEEN 10 AND 40 THEN 1 ELSE 0 END +
+                CASE WHEN x."2010" BETWEEN 10 AND 40 THEN 1 ELSE 0 END +
+                CASE WHEN x."2009" BETWEEN 10 AND 40 THEN 1 ELSE 0 END +
+                CASE WHEN x."2008" BETWEEN 10 AND 40 THEN 1 ELSE 0 END
+                ) +
+                -- Contagem de vezes em que o valor atual é maior que os anos anteriores
+                (
+                CASE WHEN atual.margemebit < x."2024" AND atual.margemebit BETWEEN 10 AND 40 THEN 1 ELSE 0 END +
+                CASE WHEN atual.margemebit < x."2023" AND atual.margemebit BETWEEN 10 AND 40 THEN 1 ELSE 0 END +
+                CASE WHEN atual.margemebit < x."2022" AND atual.margemebit BETWEEN 10 AND 40 THEN 1 ELSE 0 END +
+                CASE WHEN atual.margemebit < x."2021" AND atual.margemebit BETWEEN 10 AND 40 THEN 1 ELSE 0 END +
+                CASE WHEN atual.margemebit < x."2020" AND atual.margemebit BETWEEN 10 AND 40 THEN 1 ELSE 0 END +
+                CASE WHEN atual.margemebit < x."2019" AND atual.margemebit BETWEEN 10 AND 40 THEN 1 ELSE 0 END +
+                CASE WHEN atual.margemebit < x."2018" AND atual.margemebit BETWEEN 10 AND 40 THEN 1 ELSE 0 END +
+                CASE WHEN atual.margemebit < x."2017" AND atual.margemebit BETWEEN 10 AND 40 THEN 1 ELSE 0 END +
+                CASE WHEN atual.margemebit < x."2016" AND atual.margemebit BETWEEN 10 AND 40 THEN 1 ELSE 0 END +
+                CASE WHEN atual.margemebit < x."2015" AND atual.margemebit BETWEEN 10 AND 40 THEN 1 ELSE 0 END +
+                CASE WHEN atual.margemebit < x."2014" AND atual.margemebit BETWEEN 10 AND 40 THEN 1 ELSE 0 END +
+                CASE WHEN atual.margemebit < x."2013" AND atual.margemebit BETWEEN 10 AND 40 THEN 1 ELSE 0 END +
+                CASE WHEN atual.margemebit < x."2012" AND atual.margemebit BETWEEN 10 AND 40 THEN 1 ELSE 0 END +
+                CASE WHEN atual.margemebit < x."2011" AND atual.margemebit BETWEEN 10 AND 40 THEN 1 ELSE 0 END +
+                CASE WHEN atual.margemebit < x."2010" AND atual.margemebit BETWEEN 10 AND 40 THEN 1 ELSE 0 END +
+                CASE WHEN atual.margemebit < x."2009" AND atual.margemebit BETWEEN 10 AND 40 THEN 1 ELSE 0 END +
+                CASE WHEN atual.margemebit < x."2008" AND atual.margemebit BETWEEN 10 AND 40 THEN 1 ELSE 0 END
+                ) AS count_Limite,
+                -- Contagem de valores NULL
+                (CASE WHEN atual.margemebit IS NULL THEN 1 ELSE 0 END +
+                CASE WHEN x."2024" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2023" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2022" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2021" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2020" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2019" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2018" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2017" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2016" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2015" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2014" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2013" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2012" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2011" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2010" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2009" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2008" IS NULL THEN 2 ELSE 0 END 
+                ) AS count_Null
+            FROM
+                acoes_atualfinal atual
+            JOIN
+                m_ebitfinal x ON atual.ticker = x.ticker
+            WHERE
+                atual.ticker = $1
+
+            UNION ALL
+
+            -- Consulta para o indicador Margem EBITDA
+            SELECT
+                'Margem EBITDA' AS indicador,
+                -- Contagem de valores entre x e y
+                (CASE WHEN x."2024" BETWEEN 15 AND 40 THEN 1 ELSE 0 END +
+                CASE WHEN x."2023" BETWEEN 15 AND 40 THEN 1 ELSE 0 END +
+                CASE WHEN x."2022" BETWEEN 15 AND 40 THEN 1 ELSE 0 END +
+                CASE WHEN x."2021" BETWEEN 15 AND 40 THEN 1 ELSE 0 END +
+                CASE WHEN x."2020" BETWEEN 15 AND 40 THEN 1 ELSE 0 END +
+                CASE WHEN x."2019" BETWEEN 15 AND 40 THEN 1 ELSE 0 END +
+                CASE WHEN x."2018" BETWEEN 15 AND 40 THEN 1 ELSE 0 END +
+                CASE WHEN x."2017" BETWEEN 15 AND 40 THEN 1 ELSE 0 END +
+                CASE WHEN x."2016" BETWEEN 15 AND 40 THEN 1 ELSE 0 END +
+                CASE WHEN x."2015" BETWEEN 15 AND 40 THEN 1 ELSE 0 END +
+                CASE WHEN x."2014" BETWEEN 15 AND 40 THEN 1 ELSE 0 END +
+                CASE WHEN x."2013" BETWEEN 15 AND 40 THEN 1 ELSE 0 END +
+                CASE WHEN x."2012" BETWEEN 15 AND 40 THEN 1 ELSE 0 END +
+                CASE WHEN x."2011" BETWEEN 15 AND 40 THEN 1 ELSE 0 END +
+                CASE WHEN x."2010" BETWEEN 15 AND 40 THEN 1 ELSE 0 END +
+                CASE WHEN x."2009" BETWEEN 15 AND 40 THEN 1 ELSE 0 END +
+                CASE WHEN x."2008" BETWEEN 15 AND 40 THEN 1 ELSE 0 END
+                ) AS count_Limite,
+                -- Contagem de valores NULL
+                (18 + CASE WHEN x."2024" IS NULL THEN 1 ELSE 0 END +
+                CASE WHEN x."2023" IS NULL THEN 1 ELSE 0 END +
+                CASE WHEN x."2022" IS NULL THEN 1 ELSE 0 END +
+                CASE WHEN x."2021" IS NULL THEN 1 ELSE 0 END +
+                CASE WHEN x."2020" IS NULL THEN 1 ELSE 0 END +
+                CASE WHEN x."2019" IS NULL THEN 1 ELSE 0 END +
+                CASE WHEN x."2018" IS NULL THEN 1 ELSE 0 END +
+                CASE WHEN x."2017" IS NULL THEN 1 ELSE 0 END +
+                CASE WHEN x."2016" IS NULL THEN 1 ELSE 0 END +
+                CASE WHEN x."2015" IS NULL THEN 1 ELSE 0 END +
+                CASE WHEN x."2014" IS NULL THEN 1 ELSE 0 END +
+                CASE WHEN x."2013" IS NULL THEN 1 ELSE 0 END +
+                CASE WHEN x."2012" IS NULL THEN 1 ELSE 0 END +
+                CASE WHEN x."2011" IS NULL THEN 1 ELSE 0 END +
+                CASE WHEN x."2010" IS NULL THEN 1 ELSE 0 END +
+                CASE WHEN x."2009" IS NULL THEN 1 ELSE 0 END +
+                CASE WHEN x."2008" IS NULL THEN 1 ELSE 0 END 
+                ) AS count_Null
+            FROM
+                acoes_atualfinal atual
+            JOIN
+                m_ebitdafinal x ON atual.ticker = x.ticker
+            WHERE
+                atual.ticker = $1
+
+            UNION ALL
+
+            -- Consulta para o indicador Margem Líquida
+            SELECT
+                'Margem Líquida' AS indicador,
+                -- Contagem de valores entre x e y
+                (CASE WHEN atual.margemliquida BETWEEN 5 AND 25 THEN 1 ELSE 0 END +
+                CASE WHEN x."2024" BETWEEN 5 AND 25 THEN 1 ELSE 0 END +
+                CASE WHEN x."2023" BETWEEN 5 AND 25 THEN 1 ELSE 0 END +
+                CASE WHEN x."2022" BETWEEN 5 AND 25 THEN 1 ELSE 0 END +
+                CASE WHEN x."2021" BETWEEN 5 AND 25 THEN 1 ELSE 0 END +
+                CASE WHEN x."2020" BETWEEN 5 AND 25 THEN 1 ELSE 0 END +
+                CASE WHEN x."2019" BETWEEN 5 AND 25 THEN 1 ELSE 0 END +
+                CASE WHEN x."2018" BETWEEN 5 AND 25 THEN 1 ELSE 0 END +
+                CASE WHEN x."2017" BETWEEN 5 AND 25 THEN 1 ELSE 0 END +
+                CASE WHEN x."2016" BETWEEN 5 AND 25 THEN 1 ELSE 0 END +
+                CASE WHEN x."2015" BETWEEN 5 AND 25 THEN 1 ELSE 0 END +
+                CASE WHEN x."2014" BETWEEN 5 AND 25 THEN 1 ELSE 0 END +
+                CASE WHEN x."2013" BETWEEN 5 AND 25 THEN 1 ELSE 0 END +
+                CASE WHEN x."2012" BETWEEN 5 AND 25 THEN 1 ELSE 0 END +
+                CASE WHEN x."2011" BETWEEN 5 AND 25 THEN 1 ELSE 0 END +
+                CASE WHEN x."2010" BETWEEN 5 AND 25 THEN 1 ELSE 0 END +
+                CASE WHEN x."2009" BETWEEN 5 AND 25 THEN 1 ELSE 0 END +
+                CASE WHEN x."2008" BETWEEN 5 AND 25 THEN 1 ELSE 0 END
+                ) +
+                -- Contagem de vezes em que o valor atual é maior que os anos anteriores
+                (
+                CASE WHEN atual.margemliquida < x."2024" AND atual.margemliquida BETWEEN 5 AND 25 THEN 1 ELSE 0 END +
+                CASE WHEN atual.margemliquida < x."2023" AND atual.margemliquida BETWEEN 5 AND 25 THEN 1 ELSE 0 END +
+                CASE WHEN atual.margemliquida < x."2022" AND atual.margemliquida BETWEEN 5 AND 25 THEN 1 ELSE 0 END +
+                CASE WHEN atual.margemliquida < x."2021" AND atual.margemliquida BETWEEN 5 AND 25 THEN 1 ELSE 0 END +
+                CASE WHEN atual.margemliquida < x."2020" AND atual.margemliquida BETWEEN 5 AND 25 THEN 1 ELSE 0 END +
+                CASE WHEN atual.margemliquida < x."2019" AND atual.margemliquida BETWEEN 5 AND 25 THEN 1 ELSE 0 END +
+                CASE WHEN atual.margemliquida < x."2018" AND atual.margemliquida BETWEEN 5 AND 25 THEN 1 ELSE 0 END +
+                CASE WHEN atual.margemliquida < x."2017" AND atual.margemliquida BETWEEN 5 AND 25 THEN 1 ELSE 0 END +
+                CASE WHEN atual.margemliquida < x."2016" AND atual.margemliquida BETWEEN 5 AND 25 THEN 1 ELSE 0 END +
+                CASE WHEN atual.margemliquida < x."2015" AND atual.margemliquida BETWEEN 5 AND 25 THEN 1 ELSE 0 END +
+                CASE WHEN atual.margemliquida < x."2014" AND atual.margemliquida BETWEEN 5 AND 25 THEN 1 ELSE 0 END +
+                CASE WHEN atual.margemliquida < x."2013" AND atual.margemliquida BETWEEN 5 AND 25 THEN 1 ELSE 0 END +
+                CASE WHEN atual.margemliquida < x."2012" AND atual.margemliquida BETWEEN 5 AND 25 THEN 1 ELSE 0 END +
+                CASE WHEN atual.margemliquida < x."2011" AND atual.margemliquida BETWEEN 5 AND 25 THEN 1 ELSE 0 END +
+                CASE WHEN atual.margemliquida < x."2010" AND atual.margemliquida BETWEEN 5 AND 25 THEN 1 ELSE 0 END +
+                CASE WHEN atual.margemliquida < x."2009" AND atual.margemliquida BETWEEN 5 AND 25 THEN 1 ELSE 0 END +
+                CASE WHEN atual.margemliquida < x."2008" AND atual.margemliquida BETWEEN 5 AND 25 THEN 1 ELSE 0 END
+                ) AS count_Limite,
+                -- Contagem de valores NULL
+                (CASE WHEN atual.margemliquida IS NULL THEN 1 ELSE 0 END +
+                CASE WHEN x."2024" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2023" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2022" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2021" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2020" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2019" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2018" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2017" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2016" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2015" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2014" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2013" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2012" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2011" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2010" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2009" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2008" IS NULL THEN 2 ELSE 0 END 
+                ) AS count_Null
+            FROM
+                acoes_atualfinal atual
+            JOIN
+                m_liquidafinal x ON atual.ticker = x.ticker
+            WHERE
+                atual.ticker = $1
+        `;
+
+        try {
+            const result = await pool.query(query, [ticker]);
+            return result.rows;
+        } catch (error) {
+            console.error('Erro ao executar a consulta', error);
+            throw new Error('Erro ao executar a consulta');
+        }
+    }
+
+    static async countIndicadoresRentabilidade(ticker) {
+        const query = `
+            -- Consulta para o indicador ROE
+            SELECT
+                'ROE' AS indicador,
+                -- Contagem de valores entre x e y
+                (CASE WHEN atual.roe BETWEEN 15 AND 40 THEN 1 ELSE 0 END +
+                CASE WHEN x."2024" BETWEEN 15 AND 40 THEN 1 ELSE 0 END +
+                CASE WHEN x."2023" BETWEEN 15 AND 40 THEN 1 ELSE 0 END +
+                CASE WHEN x."2022" BETWEEN 15 AND 40 THEN 1 ELSE 0 END +
+                CASE WHEN x."2021" BETWEEN 15 AND 40 THEN 1 ELSE 0 END +
+                CASE WHEN x."2020" BETWEEN 15 AND 40 THEN 1 ELSE 0 END +
+                CASE WHEN x."2019" BETWEEN 15 AND 40 THEN 1 ELSE 0 END +
+                CASE WHEN x."2018" BETWEEN 15 AND 40 THEN 1 ELSE 0 END +
+                CASE WHEN x."2017" BETWEEN 15 AND 40 THEN 1 ELSE 0 END +
+                CASE WHEN x."2016" BETWEEN 15 AND 40 THEN 1 ELSE 0 END +
+                CASE WHEN x."2015" BETWEEN 15 AND 40 THEN 1 ELSE 0 END +
+                CASE WHEN x."2014" BETWEEN 15 AND 40 THEN 1 ELSE 0 END +
+                CASE WHEN x."2013" BETWEEN 15 AND 40 THEN 1 ELSE 0 END +
+                CASE WHEN x."2012" BETWEEN 15 AND 40 THEN 1 ELSE 0 END +
+                CASE WHEN x."2011" BETWEEN 15 AND 40 THEN 1 ELSE 0 END +
+                CASE WHEN x."2010" BETWEEN 15 AND 40 THEN 1 ELSE 0 END +
+                CASE WHEN x."2009" BETWEEN 15 AND 40 THEN 1 ELSE 0 END +
+                CASE WHEN x."2008" BETWEEN 15 AND 40 THEN 1 ELSE 0 END
+                ) +
+                -- Contagem de vezes em que o valor atual é maior que os anos anteriores
+                (
+                CASE WHEN atual.roe > x."2024" AND atual.roe BETWEEN 15 AND 40 THEN 1 ELSE 0 END +
+                CASE WHEN atual.roe > x."2023" AND atual.roe BETWEEN 15 AND 40 THEN 1 ELSE 0 END +
+                CASE WHEN atual.roe > x."2022" AND atual.roe BETWEEN 15 AND 40 THEN 1 ELSE 0 END +
+                CASE WHEN atual.roe > x."2021" AND atual.roe BETWEEN 15 AND 40 THEN 1 ELSE 0 END +
+                CASE WHEN atual.roe > x."2020" AND atual.roe BETWEEN 15 AND 40 THEN 1 ELSE 0 END +
+                CASE WHEN atual.roe > x."2019" AND atual.roe BETWEEN 15 AND 40 THEN 1 ELSE 0 END +
+                CASE WHEN atual.roe > x."2018" AND atual.roe BETWEEN 15 AND 40 THEN 1 ELSE 0 END +
+                CASE WHEN atual.roe > x."2017" AND atual.roe BETWEEN 15 AND 40 THEN 1 ELSE 0 END +
+                CASE WHEN atual.roe > x."2016" AND atual.roe BETWEEN 15 AND 40 THEN 1 ELSE 0 END +
+                CASE WHEN atual.roe > x."2015" AND atual.roe BETWEEN 15 AND 40 THEN 1 ELSE 0 END +
+                CASE WHEN atual.roe > x."2014" AND atual.roe BETWEEN 15 AND 40 THEN 1 ELSE 0 END +
+                CASE WHEN atual.roe > x."2013" AND atual.roe BETWEEN 15 AND 40 THEN 1 ELSE 0 END +
+                CASE WHEN atual.roe > x."2012" AND atual.roe BETWEEN 15 AND 40 THEN 1 ELSE 0 END +
+                CASE WHEN atual.roe > x."2011" AND atual.roe BETWEEN 15 AND 40 THEN 1 ELSE 0 END +
+                CASE WHEN atual.roe > x."2010" AND atual.roe BETWEEN 15 AND 40 THEN 1 ELSE 0 END +
+                CASE WHEN atual.roe > x."2009" AND atual.roe BETWEEN 15 AND 40 THEN 1 ELSE 0 END +
+                CASE WHEN atual.roe > x."2008" AND atual.roe BETWEEN 15 AND 40 THEN 1 ELSE 0 END
+                ) AS count_Limite,
+                -- Contagem de valores NULL
+                (CASE WHEN atual.roe IS NULL THEN 1 ELSE 0 END +
+                CASE WHEN x."2024" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2023" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2022" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2021" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2020" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2019" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2018" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2017" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2016" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2015" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2014" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2013" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2012" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2011" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2010" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2009" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2008" IS NULL THEN 2 ELSE 0 END 
+                ) AS count_Null
+            FROM
+                acoes_atualfinal atual
+            JOIN
+                roefinal x ON atual.ticker = x.ticker
+            WHERE
+                atual.ticker = $1
+
+            UNION ALL
+
+            -- Consulta para o indicador ROA
+            SELECT
+                'ROA' AS indicador,
+                -- Contagem de valores entre x e y
+                (CASE WHEN atual.roa BETWEEN 5 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN x."2024" BETWEEN 5 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN x."2023" BETWEEN 5 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN x."2022" BETWEEN 5 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN x."2021" BETWEEN 5 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN x."2020" BETWEEN 5 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN x."2019" BETWEEN 5 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN x."2018" BETWEEN 5 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN x."2017" BETWEEN 5 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN x."2016" BETWEEN 5 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN x."2015" BETWEEN 5 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN x."2014" BETWEEN 5 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN x."2013" BETWEEN 5 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN x."2012" BETWEEN 5 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN x."2011" BETWEEN 5 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN x."2010" BETWEEN 5 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN x."2009" BETWEEN 5 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN x."2008" BETWEEN 5 AND 20 THEN 1 ELSE 0 END
+                ) +
+                -- Contagem de vezes em que o valor atual é maior que os anos anteriores
+                (
+                CASE WHEN atual.roa > x."2024" AND atual.roa BETWEEN 5 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN atual.roa > x."2023" AND atual.roa BETWEEN 5 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN atual.roa > x."2022" AND atual.roa BETWEEN 5 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN atual.roa > x."2021" AND atual.roa BETWEEN 5 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN atual.roa > x."2020" AND atual.roa BETWEEN 5 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN atual.roa > x."2019" AND atual.roa BETWEEN 5 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN atual.roa > x."2018" AND atual.roa BETWEEN 5 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN atual.roa > x."2017" AND atual.roa BETWEEN 5 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN atual.roa > x."2016" AND atual.roa BETWEEN 5 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN atual.roa > x."2015" AND atual.roa BETWEEN 5 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN atual.roa > x."2014" AND atual.roa BETWEEN 5 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN atual.roa > x."2013" AND atual.roa BETWEEN 5 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN atual.roa > x."2012" AND atual.roa BETWEEN 5 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN atual.roa > x."2011" AND atual.roa BETWEEN 5 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN atual.roa > x."2010" AND atual.roa BETWEEN 5 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN atual.roa > x."2009" AND atual.roa BETWEEN 5 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN atual.roa > x."2008" AND atual.roa BETWEEN 5 AND 20 THEN 1 ELSE 0 END
+                ) AS count_Limite,
+                -- Contagem de valores NULL
+                (CASE WHEN atual.roa IS NULL THEN 1 ELSE 0 END +
+                CASE WHEN x."2024" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2023" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2022" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2021" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2020" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2019" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2018" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2017" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2016" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2015" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2014" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2013" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2012" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2011" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2010" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2009" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2008" IS NULL THEN 2 ELSE 0 END 
+                ) AS count_Null
+            FROM
+                acoes_atualfinal atual
+            JOIN
+                roafinal x ON atual.ticker = x.ticker
+            WHERE
+                atual.ticker = $1
+
+            UNION ALL
+
+            -- Consulta para o indicador ROIC
+            SELECT
+                'ROiC' AS indicador,
+                -- Contagem de valores entre x e y
+                (CASE WHEN atual.roic BETWEEN 10 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN x."2024" BETWEEN 10 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN x."2023" BETWEEN 10 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN x."2022" BETWEEN 10 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN x."2021" BETWEEN 10 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN x."2020" BETWEEN 10 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN x."2019" BETWEEN 10 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN x."2018" BETWEEN 10 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN x."2017" BETWEEN 10 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN x."2016" BETWEEN 10 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN x."2015" BETWEEN 10 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN x."2014" BETWEEN 10 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN x."2013" BETWEEN 10 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN x."2012" BETWEEN 10 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN x."2011" BETWEEN 10 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN x."2010" BETWEEN 10 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN x."2009" BETWEEN 10 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN x."2008" BETWEEN 10 AND 20 THEN 1 ELSE 0 END
+                ) +
+                -- Contagem de vezes em que o valor atual é maior que os anos anteriores
+                (
+                CASE WHEN atual.roic > x."2024" AND atual.roic BETWEEN 10 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN atual.roic > x."2023" AND atual.roic BETWEEN 10 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN atual.roic > x."2022" AND atual.roic BETWEEN 10 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN atual.roic > x."2021" AND atual.roic BETWEEN 10 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN atual.roic > x."2020" AND atual.roic BETWEEN 10 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN atual.roic > x."2019" AND atual.roic BETWEEN 10 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN atual.roic > x."2018" AND atual.roic BETWEEN 10 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN atual.roic > x."2017" AND atual.roic BETWEEN 10 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN atual.roic > x."2016" AND atual.roic BETWEEN 10 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN atual.roic > x."2015" AND atual.roic BETWEEN 10 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN atual.roic > x."2014" AND atual.roic BETWEEN 10 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN atual.roic > x."2013" AND atual.roic BETWEEN 10 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN atual.roic > x."2012" AND atual.roic BETWEEN 10 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN atual.roic > x."2011" AND atual.roic BETWEEN 10 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN atual.roic > x."2010" AND atual.roic BETWEEN 10 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN atual.roic > x."2009" AND atual.roic BETWEEN 10 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN atual.roic > x."2008" AND atual.roic BETWEEN 10 AND 20 THEN 1 ELSE 0 END
+                ) AS count_Limite,
+                -- Contagem de valores NULL
+                (CASE WHEN atual.roic IS NULL THEN 1 ELSE 0 END +
+                CASE WHEN x."2024" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2023" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2022" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2021" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2020" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2019" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2018" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2017" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2016" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2015" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2014" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2013" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2012" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2011" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2010" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2009" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2008" IS NULL THEN 2 ELSE 0 END 
+                ) AS count_Null
+            FROM
+                acoes_atualfinal atual
+            JOIN
+                roicfinal x ON atual.ticker = x.ticker
+            WHERE
+                atual.ticker = $1
+
+            UNION ALL
+
+            -- Consulta para o indicador Giro Ativos
+            SELECT
+                'Giro Ativos' AS indicador,
+                -- Contagem de valores entre x e y
+                (CASE WHEN atual.giroativos BETWEEN 0.4 AND 2 THEN 1 ELSE 0 END +
+                CASE WHEN x."2024" BETWEEN 0.4 AND 2 THEN 1 ELSE 0 END +
+                CASE WHEN x."2023" BETWEEN 0.4 AND 2 THEN 1 ELSE 0 END +
+                CASE WHEN x."2022" BETWEEN 0.4 AND 2 THEN 1 ELSE 0 END +
+                CASE WHEN x."2021" BETWEEN 0.4 AND 2 THEN 1 ELSE 0 END +
+                CASE WHEN x."2020" BETWEEN 0.4 AND 2 THEN 1 ELSE 0 END +
+                CASE WHEN x."2019" BETWEEN 0.4 AND 2 THEN 1 ELSE 0 END +
+                CASE WHEN x."2018" BETWEEN 0.4 AND 2 THEN 1 ELSE 0 END +
+                CASE WHEN x."2017" BETWEEN 0.4 AND 2 THEN 1 ELSE 0 END +
+                CASE WHEN x."2016" BETWEEN 0.4 AND 2 THEN 1 ELSE 0 END +
+                CASE WHEN x."2015" BETWEEN 0.4 AND 2 THEN 1 ELSE 0 END +
+                CASE WHEN x."2014" BETWEEN 0.4 AND 2 THEN 1 ELSE 0 END +
+                CASE WHEN x."2013" BETWEEN 0.4 AND 2 THEN 1 ELSE 0 END +
+                CASE WHEN x."2012" BETWEEN 0.4 AND 2 THEN 1 ELSE 0 END +
+                CASE WHEN x."2011" BETWEEN 0.4 AND 2 THEN 1 ELSE 0 END +
+                CASE WHEN x."2010" BETWEEN 0.4 AND 2 THEN 1 ELSE 0 END +
+                CASE WHEN x."2009" BETWEEN 0.4 AND 2 THEN 1 ELSE 0 END +
+                CASE WHEN x."2008" BETWEEN 0.4 AND 2 THEN 1 ELSE 0 END
+                ) +
+                -- Contagem de vezes em que o valor atual é maior que os anos anteriores
+                (
+                CASE WHEN atual.giroativos > x."2024" AND atual.giroativos BETWEEN 0.4 AND 2 THEN 1 ELSE 0 END +
+                CASE WHEN atual.giroativos > x."2023" AND atual.giroativos BETWEEN 0.4 AND 2 THEN 1 ELSE 0 END +
+                CASE WHEN atual.giroativos > x."2022" AND atual.giroativos BETWEEN 0.4 AND 2 THEN 1 ELSE 0 END +
+                CASE WHEN atual.giroativos > x."2021" AND atual.giroativos BETWEEN 0.4 AND 2 THEN 1 ELSE 0 END +
+                CASE WHEN atual.giroativos > x."2020" AND atual.giroativos BETWEEN 0.4 AND 2 THEN 1 ELSE 0 END +
+                CASE WHEN atual.giroativos > x."2019" AND atual.giroativos BETWEEN 0.4 AND 2 THEN 1 ELSE 0 END +
+                CASE WHEN atual.giroativos > x."2018" AND atual.giroativos BETWEEN 0.4 AND 2 THEN 1 ELSE 0 END +
+                CASE WHEN atual.giroativos > x."2017" AND atual.giroativos BETWEEN 0.4 AND 2 THEN 1 ELSE 0 END +
+                CASE WHEN atual.giroativos > x."2016" AND atual.giroativos BETWEEN 0.4 AND 2 THEN 1 ELSE 0 END +
+                CASE WHEN atual.giroativos > x."2015" AND atual.giroativos BETWEEN 0.4 AND 2 THEN 1 ELSE 0 END +
+                CASE WHEN atual.giroativos > x."2014" AND atual.giroativos BETWEEN 0.4 AND 2 THEN 1 ELSE 0 END +
+                CASE WHEN atual.giroativos > x."2013" AND atual.giroativos BETWEEN 0.4 AND 2 THEN 1 ELSE 0 END +
+                CASE WHEN atual.giroativos > x."2012" AND atual.giroativos BETWEEN 0.4 AND 2 THEN 1 ELSE 0 END +
+                CASE WHEN atual.giroativos > x."2011" AND atual.giroativos BETWEEN 0.4 AND 2 THEN 1 ELSE 0 END +
+                CASE WHEN atual.giroativos > x."2010" AND atual.giroativos BETWEEN 0.4 AND 2 THEN 1 ELSE 0 END +
+                CASE WHEN atual.giroativos > x."2009" AND atual.giroativos BETWEEN 0.4 AND 2 THEN 1 ELSE 0 END +
+                CASE WHEN atual.giroativos > x."2008" AND atual.giroativos BETWEEN 0.4 AND 2 THEN 1 ELSE 0 END
+                ) AS count_Limite,
+                -- Contagem de valores NULL
+                (CASE WHEN atual.giroativos IS NULL THEN 1 ELSE 0 END +
+                CASE WHEN x."2024" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2023" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2022" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2021" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2020" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2019" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2018" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2017" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2016" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2015" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2014" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2013" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2012" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2011" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2010" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2009" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2008" IS NULL THEN 2 ELSE 0 END 
+                ) AS count_Null
+            FROM
+                acoes_atualfinal atual
+            JOIN
+                giro_ativosfinal x ON atual.ticker = x.ticker
+            WHERE
+                atual.ticker = $1
+        `;
+
+        try {
+            const result = await pool.query(query, [ticker]);
+            return result.rows;
+        } catch (error) {
+            console.error('Erro ao executar a consulta', error);
+            throw new Error('Erro ao executar a consulta');
+        }
+    }
+
+    static async countIndicadoresCrescimento(ticker) {
+        const query = `
+            -- Consulta para o indicador CAGR Receitas 5 anos
+            SELECT
+                'CAGR Receitas 5 anos' AS indicador,
+                -- Contagem de valores entre x e y
+                (CASE WHEN atual.receitas_cagr5 BETWEEN 5 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN x."2024" BETWEEN 5 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN x."2023" BETWEEN 5 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN x."2022" BETWEEN 5 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN x."2021" BETWEEN 5 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN x."2020" BETWEEN 5 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN x."2019" BETWEEN 5 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN x."2018" BETWEEN 5 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN x."2017" BETWEEN 5 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN x."2016" BETWEEN 5 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN x."2015" BETWEEN 5 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN x."2014" BETWEEN 5 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN x."2013" BETWEEN 5 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN x."2012" BETWEEN 5 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN x."2011" BETWEEN 5 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN x."2010" BETWEEN 5 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN x."2009" BETWEEN 5 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN x."2008" BETWEEN 5 AND 20 THEN 1 ELSE 0 END
+                ) +
+                -- Contagem de vezes em que o valor atual é maior que os anos anteriores
+                (
+                CASE WHEN atual.receitas_cagr5 > x."2024" AND atual.receitas_cagr5 BETWEEN 5 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN atual.receitas_cagr5 > x."2023" AND atual.receitas_cagr5 BETWEEN 5 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN atual.receitas_cagr5 > x."2022" AND atual.receitas_cagr5 BETWEEN 5 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN atual.receitas_cagr5 > x."2021" AND atual.receitas_cagr5 BETWEEN 5 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN atual.receitas_cagr5 > x."2020" AND atual.receitas_cagr5 BETWEEN 5 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN atual.receitas_cagr5 > x."2019" AND atual.receitas_cagr5 BETWEEN 5 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN atual.receitas_cagr5 > x."2018" AND atual.receitas_cagr5 BETWEEN 5 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN atual.receitas_cagr5 > x."2017" AND atual.receitas_cagr5 BETWEEN 5 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN atual.receitas_cagr5 > x."2016" AND atual.receitas_cagr5 BETWEEN 5 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN atual.receitas_cagr5 > x."2015" AND atual.receitas_cagr5 BETWEEN 5 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN atual.receitas_cagr5 > x."2014" AND atual.receitas_cagr5 BETWEEN 5 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN atual.receitas_cagr5 > x."2013" AND atual.receitas_cagr5 BETWEEN 5 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN atual.receitas_cagr5 > x."2012" AND atual.receitas_cagr5 BETWEEN 5 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN atual.receitas_cagr5 > x."2011" AND atual.receitas_cagr5 BETWEEN 5 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN atual.receitas_cagr5 > x."2010" AND atual.receitas_cagr5 BETWEEN 5 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN atual.receitas_cagr5 > x."2009" AND atual.receitas_cagr5 BETWEEN 5 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN atual.receitas_cagr5 > x."2008" AND atual.receitas_cagr5 BETWEEN 5 AND 20 THEN 1 ELSE 0 END
+                ) AS count_Limite,
+                -- Contagem de valores NULL
+                (CASE WHEN atual.receitas_cagr5 IS NULL THEN 1 ELSE 0 END +
+                CASE WHEN x."2024" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2023" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2022" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2021" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2020" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2019" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2018" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2017" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2016" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2015" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2014" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2013" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2012" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2011" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2010" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2009" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2008" IS NULL THEN 2 ELSE 0 END 
+                ) AS count_Null
+            FROM
+                acoes_atualfinal atual
+            JOIN
+                cagr_receita5anosfinal x ON atual.ticker = x.ticker
+            WHERE
+                atual.ticker = $1
+
+            UNION ALL
+
+            -- Consulta para o indicador CAGR Lucros 5 anos
+            SELECT
+                'CAGR Lucros 5 anos' AS indicador,
+                -- Contagem de valores entre x e y
+                (CASE WHEN atual.lucros_cagr5 BETWEEN 5 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN x."2024" BETWEEN 5 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN x."2023" BETWEEN 5 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN x."2022" BETWEEN 5 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN x."2021" BETWEEN 5 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN x."2020" BETWEEN 5 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN x."2019" BETWEEN 5 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN x."2018" BETWEEN 5 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN x."2017" BETWEEN 5 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN x."2016" BETWEEN 5 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN x."2015" BETWEEN 5 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN x."2014" BETWEEN 5 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN x."2013" BETWEEN 5 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN x."2012" BETWEEN 5 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN x."2011" BETWEEN 5 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN x."2010" BETWEEN 5 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN x."2009" BETWEEN 5 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN x."2008" BETWEEN 5 AND 20 THEN 1 ELSE 0 END
+                ) +
+                -- Contagem de vezes em que o valor atual é maior que os anos anteriores
+                (
+                CASE WHEN atual.lucros_cagr5 > x."2024" AND atual.lucros_cagr5 BETWEEN 5 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN atual.lucros_cagr5 > x."2023" AND atual.lucros_cagr5 BETWEEN 5 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN atual.lucros_cagr5 > x."2022" AND atual.lucros_cagr5 BETWEEN 5 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN atual.lucros_cagr5 > x."2021" AND atual.lucros_cagr5 BETWEEN 5 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN atual.lucros_cagr5 > x."2020" AND atual.lucros_cagr5 BETWEEN 5 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN atual.lucros_cagr5 > x."2019" AND atual.lucros_cagr5 BETWEEN 5 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN atual.lucros_cagr5 > x."2018" AND atual.lucros_cagr5 BETWEEN 5 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN atual.lucros_cagr5 > x."2017" AND atual.lucros_cagr5 BETWEEN 5 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN atual.lucros_cagr5 > x."2016" AND atual.lucros_cagr5 BETWEEN 5 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN atual.lucros_cagr5 > x."2015" AND atual.lucros_cagr5 BETWEEN 5 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN atual.lucros_cagr5 > x."2014" AND atual.lucros_cagr5 BETWEEN 5 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN atual.lucros_cagr5 > x."2013" AND atual.lucros_cagr5 BETWEEN 5 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN atual.lucros_cagr5 > x."2012" AND atual.lucros_cagr5 BETWEEN 5 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN atual.lucros_cagr5 > x."2011" AND atual.lucros_cagr5 BETWEEN 5 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN atual.lucros_cagr5 > x."2010" AND atual.lucros_cagr5 BETWEEN 5 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN atual.lucros_cagr5 > x."2009" AND atual.lucros_cagr5 BETWEEN 5 AND 20 THEN 1 ELSE 0 END +
+                CASE WHEN atual.lucros_cagr5 > x."2008" AND atual.lucros_cagr5 BETWEEN 5 AND 20 THEN 1 ELSE 0 END
+                ) AS count_Limite,
+                -- Contagem de valores NULL
+                (CASE WHEN atual.lucros_cagr5 IS NULL THEN 1 ELSE 0 END +
+                CASE WHEN x."2024" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2023" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2022" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2021" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2020" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2019" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2018" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2017" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2016" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2015" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2014" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2013" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2012" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2011" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2010" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2009" IS NULL THEN 2 ELSE 0 END +
+                CASE WHEN x."2008" IS NULL THEN 2 ELSE 0 END 
+                ) AS count_Null
+            FROM
+                acoes_atualfinal atual
+            JOIN
+                cagr_lucros5anosfinal x ON atual.ticker = x.ticker
+            WHERE
+                atual.ticker = $1
+        `;
+
+        try {
+            const result = await pool.query(query, [ticker]);
+            return result.rows;
+        } catch (error) {
+            console.error('Erro ao executar a consulta', error);
+            throw new Error('Erro ao executar a consulta');
+        }
+    }
 }
 
 module.exports = Acoes;
