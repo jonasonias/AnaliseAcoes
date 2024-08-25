@@ -1744,7 +1744,7 @@ class Acoes {
 
             -- Consulta para o indicador ROIC
             SELECT
-                'ROiC' AS indicador,
+                'ROIC' AS indicador,
                 -- Contagem de valores entre x e y
                 (CASE WHEN atual.roic BETWEEN 10 AND 20 THEN 1 ELSE 0 END +
                 CASE WHEN x."2024" BETWEEN 10 AND 20 THEN 1 ELSE 0 END +

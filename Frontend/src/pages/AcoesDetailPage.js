@@ -18,6 +18,7 @@ import NotaEndividamento from '../components/Notas/NotaEndividamento';
 import NotaEficiencia from '../components/Notas/NotaEficiencia';
 import NotaRentabilidade from '../components/Notas/NotaRentabilidade';
 import NotaCrescimento from '../components/Notas/NotaCrescimento';
+import NotaPreco from '../components/Notas/NotaPreco';
 
 const AcoesDetailPage = () => {
   const { code } = useParams(); // Obtém o parâmetro 'code' da URL
@@ -73,7 +74,7 @@ const AcoesDetailPage = () => {
               <NotaCrescimento ticker={code} />
             </div>
             <div style={{ flex: 3, minWidth: '300px', maxWidth: '45%', display: 'flex', justifyContent: 'center' }}>
-              <NotaEficiencia ticker={code} />
+              <NotaPreco ticker={code} />
             </div>
           </div>
         </div>
