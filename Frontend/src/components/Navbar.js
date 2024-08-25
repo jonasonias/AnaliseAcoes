@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
 import '../styles/Navbar.css';
 
 const Navbar = ({ togglePopup }) => {
   const { userInfo } = useAuth();
+  const [isSubmenuOpen, setSubmenuOpen] = useState(false);
 
   return (
     <nav className="navbar">
@@ -17,8 +18,18 @@ const Navbar = ({ togglePopup }) => {
         <li className="navbar-item">
           <Link to="/about" className="navbar-link">About</Link>
         </li>
-        <li className="navbar-item">
-          <Link to="/acoes" className="navbar-link">Ações</Link>
+        <li 
+          className="navbar-item dropdown" 
+          onMouseEnter={() => setSubmenuOpen(true)} 
+          onMouseLeave={() => setSubmenuOpen(false)}
+        >
+          <span className="navbar-link">Ações</span>
+          {isSubmenuOpen && (
+            <ul className="submenu">
+              <li><Link to="/acoes" className="submenu-link">Lista de Ações</Link></li>
+              <li><Link to="/acoes/nota" className="submenu-link">Notas Ações</Link></li>
+            </ul>
+          )}
         </li>
         <li className="navbar-item">
           {userInfo ? (

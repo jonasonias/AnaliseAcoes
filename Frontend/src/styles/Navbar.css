@@ -1,44 +1,82 @@
 .navbar {
-    background-color: #333; /* Plano de fundo da navbar */
-    padding: 10px 20px; /* Espaçamento interno */
-    border-radius: 5px;
-  }
-  
-  .navbar-list {
-    list-style-type: none; /* Remove os marcadores das listas */
-    margin: 0;
-    padding: 0;
-    display: flex; /* Exibe os itens horizontalmente */
-    justify-content: center; /* Centraliza os itens na navbar */
-  }
-  
-  .navbar-item {
-    margin: 0 2px; /* Espaçamento entre os itens */
-  }
-  
-  .navbar-link {
-    color: white;
-    text-decoration: none;
-    padding: 12px 20px; /* Padding padrão */
-    border-radius: 8px; /* Borda arredondada padrão */
-    font-family: 'Roboto', sans-serif; /* Altere 'Roboto' para a fonte desejada */
-    font-size: 16px;
-    transition: background-color 0.3s, color 0.3s;
-  }
-  
-  .navbar-link:hover {
-    background-color: rgba(255, 255, 255, 0.2); /* Esbranquiçado ao redor do texto */
-    color: white; /* A cor do texto permanece branca */
-  }
+  background-color: #333; /* Plano de fundo da navbar */
+  padding: 10px 20px; /* Espaçamento interno */
+  border-radius: 5px;
+}
 
-  .fa-home{
-    color: white;
-    transition: color 0.3s ease;
-    justify-content: center;
-    margin-right: 20px;
-    margin-top: 1px;
-  }
+.navbar-list {
+  list-style-type: none; /* Remove os marcadores das listas */
+  margin: 0;
+  padding: 0;
+  display: flex; /* Exibe os itens horizontalmente */
+  justify-content: center; /* Centraliza os itens na navbar */
+}
 
-  .fa-home:hover{
-    color: rgb(98, 98, 98);
-  }
+.navbar-item {
+  margin: 0 2px; /* Espaçamento entre os itens */
+  position: relative; /* Para que o submenu possa ser posicionado corretamente */
+}
+
+.navbar-link {
+  color: white;
+  text-decoration: none;
+  padding: 12px 20px; /* Padding padrão */
+  border-radius: 8px; /* Borda arredondada padrão */
+  font-family: 'Roboto', sans-serif; /* Altere 'Roboto' para a fonte desejada */
+  font-size: 16px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar-link:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* Esbranquiçado ao redor do texto */
+  color: white; /* A cor do texto permanece branca */
+}
+
+.fa-home {
+  color: white;
+  transition: color 0.3s ease;
+  justify-content: center;
+  margin-right: 20px;
+  margin-top: 1px;
+}
+
+.fa-home:hover {
+  color: rgb(98, 98, 98);
+}
+
+/* Novo CSS para o submenu */
+.dropdown:hover .submenu {
+  display: block; /* Exibe o submenu quando o item pai é hovered */
+}
+
+.submenu {
+  display: none; /* Inicialmente escondido */
+  position: absolute;
+  top: 150%; /* Ajusta a distância do submenu em relação ao item pai */
+  left: 0;
+  background-color: #333;
+  list-style: none; /* Remove a bolinha do marcador */
+  padding: 0;
+  margin: 0;
+  width: 140px; /* Ajuste a largura conforme necessário */
+  border-radius: 5px; /* Adiciona bordas arredondadas */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra leve */
+}
+
+.submenu-link {
+  display: block;
+  padding: 12px 16px; /* Ajusta o padding horizontal */
+  color: white;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Linha separadora entre itens */
+}
+
+.submenu-link:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.submenu-link:last-child {
+  border-bottom: none; /* Remove a linha separadora do último item */
+}
