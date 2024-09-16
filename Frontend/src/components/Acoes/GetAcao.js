@@ -77,7 +77,7 @@ const GetAcao = ({ code }) => {
                     fontWeight: 'bold' 
                   }}>
                      {price ? formatNumber(price) : 'N/A'}
-                     <div style={{textAlign: 'center', fontSize: '12px', fontStyle: 'italic', fontWeight: 'normal'}}>28/07/2024</div>
+                     <div style={{textAlign: 'center', fontSize: '12px', fontStyle: 'italic', fontWeight: 'normal'}}>16/09/2024</div>
                   </div>
                 </div>
               </td>

@@ -231,31 +231,31 @@ const NotaAcoes = () => {
               style={{ border: '1px solid black', padding: '8px', textAlign: 'center', cursor: 'pointer' }}
               onClick={() => requestSort('mediaNotaValuation')}
             >
-              Nota Valuation {getSortIndicator('mediaNotaValuation')}
+              Valuation {getSortIndicator('mediaNotaValuation')}
             </th>
             <th
               style={{ border: '1px solid black', padding: '8px', textAlign: 'center', cursor: 'pointer' }}
               onClick={() => requestSort('mediaNotaEndividamento')}
             >
-              Nota Endividamento {getSortIndicator('mediaNotaEndividamento')}
+              Endividamento {getSortIndicator('mediaNotaEndividamento')}
             </th>
             <th
               style={{ border: '1px solid black', padding: '8px', textAlign: 'center', cursor: 'pointer' }}
               onClick={() => requestSort('mediaNotaEficiencia')}
             >
-              Nota Eficiência {getSortIndicator('mediaNotaEficiencia')}
+              Eficiência {getSortIndicator('mediaNotaEficiencia')}
             </th>
             <th
               style={{ border: '1px solid black', padding: '8px', textAlign: 'center', cursor: 'pointer' }}
               onClick={() => requestSort('mediaNotaRentabilidade')}
             >
-              Nota Rentabilidade {getSortIndicator('mediaNotaRentabilidade')}
+              Rentabilidade {getSortIndicator('mediaNotaRentabilidade')}
             </th>
             <th
               style={{ border: '1px solid black', padding: '8px', textAlign: 'center', cursor: 'pointer' }}
               onClick={() => requestSort('mediaNotaCrescimento')}
             >
-              Nota Crescimento {getSortIndicator('mediaNotaCrescimento')}
+              Crescimento {getSortIndicator('mediaNotaCrescimento')}
             </th>
             <th
               style={{ border: '1px solid black', padding: '8px', textAlign: 'center', cursor: 'pointer' }}
@@ -267,25 +267,36 @@ const NotaAcoes = () => {
         </thead>
         <tbody>
           {sortedAcoes.map((acao) => (
-            <tr key={acao.ticker} onClick={() => handleTickerClick(acao.ticker)} style={{ cursor: 'pointer' }}>
-              <td style={{ border: '1px solid black', padding: '8px', textAlign: 'center' }}>{acao.ticker}</td>
-              <td style={{ border: '1px solid black', padding: '8px', textAlign: 'center' }}>{notasValuation[acao.ticker]?.toFixed(2) || '-'}</td>
-              <td style={{ border: '1px solid black', padding: '8px', textAlign: 'center' }}>{notasEndividamento[acao.ticker]?.toFixed(2) || '-'}</td>
-              <td style={{ border: '1px solid black', padding: '8px', textAlign: 'center' }}>{notasEficiencia[acao.ticker]?.toFixed(2) || '-'}</td>
-              <td style={{ border: '1px solid black', padding: '8px', textAlign: 'center' }}>{notasRentabilidade[acao.ticker]?.toFixed(2) || '-'}</td>
-              <td style={{ border: '1px solid black', padding: '8px', textAlign: 'center' }}>{notasCrescimento[acao.ticker]?.toFixed(2) || '-'}</td>
-              <td style={{ border: '1px solid black', padding: '8px', textAlign: 'center' }}>{calculateNotaFinal(acao.ticker).toFixed(2)}</td>
+            <tr key={acao.ticker}>
+              <td
+                style={{ border: '1px solid black', padding: '8px', textAlign: 'center', cursor: 'pointer' }}
+                onClick={() => handleTickerClick(acao.ticker)}
+              >
+                {acao.ticker}
+              </td>
+              <td style={{ border: '1px solid black', padding: '8px', textAlign: 'center' }}>
+                {notasValuation[acao.ticker] ? notasValuation[acao.ticker].toFixed(2) : 'N/A'}
+              </td>
+              <td style={{ border: '1px solid black', padding: '8px', textAlign: 'center' }}>
+                {notasEndividamento[acao.ticker] ? notasEndividamento[acao.ticker].toFixed(2) : 'N/A'}
+              </td>
+              <td style={{ border: '1px solid black', padding: '8px', textAlign: 'center' }}>
+                {notasEficiencia[acao.ticker] ? notasEficiencia[acao.ticker].toFixed(2) : 'N/A'}
+              </td>
+              <td style={{ border: '1px solid black', padding: '8px', textAlign: 'center' }}>
+                {notasRentabilidade[acao.ticker] ? notasRentabilidade[acao.ticker].toFixed(2) : 'N/A'}
+              </td>
+              <td style={{ border: '1px solid black', padding: '8px', textAlign: 'center' }}>
+                {notasCrescimento[acao.ticker] ? notasCrescimento[acao.ticker].toFixed(2) : 'N/A'}
+              </td>
+              <td style={{ border: '1px solid black', padding: '8px', textAlign: 'center' }}>
+                {calculateNotaFinal(acao.ticker).toFixed(2)}
+              </td>
             </tr>
           ))}
         </tbody>
       </table>
-      {alertMessage && (
-        <CustomAlert
-          message={alertMessage}
-          type={alertType}
-          onClose={handleCloseAlert}
-        />
-      )}
+      {alertMessage && <CustomAlert message={alertMessage} type={alertType} onClose={handleCloseAlert} />}
     </div>
   );
 };
